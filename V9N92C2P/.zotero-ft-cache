@@ -1,0 +1,72 @@
+SIGN UP
+SIGN IN
+Published 02/15/2012
+Improved Break-Out Detection for Small-Hole EDM
+
+The Current EDM RT6050 features software and hardware upgrades that improve the ability to detect when the electrode breaks out of the bottom of a hole.
+
+EDM
+MACHINES
+MARK ALBERT
+Editor Emeritus, Modern Machine Shop
+
+Holes in turbine blades are critical because they provide the cooling airflow that prevents the parts from overheating during operation.
+
+Previous
+Next
+Share
+ 
+ 
+ 
+ 
+ 
+
+Quickly and precisely drilling small holes in very hard material is a strength of the electrical discharge machining (EDM) process. A long, slender electrode (0.015 inch in diameter or smaller) can penetrate tough aerospace alloys and other difficult-to-machine materials as fast as 20 inches per minute. One of the most important applications for this process is producing critical cooling holes in turbine and jet engine components. However, one persistent problem when producing these holes has been difficulty controlling the process to avoid over-drilling and striking the back wall of an internal cavity or passageway. At worst, “back-striking” can damage this wall and possibly cause a costly part to be scrapped. In any case, it slows the holemaking process and makes it less efficient.
+
+Current EDM, a supplier of Japanese-built, three- and five-axis EDM drilling equipment, recently unveiled software and hardware upgrades that improve the ability of its equipment to detect when the electrode breaks out of the bottom of a hole. This enables the machine to control drilling depth more accurately and to reduce or eliminate instances of back-striking. It also improves drilling rates and reduces electrode wear, resulting in more holes per electrode. These improvements are part of the company’s software and hardware upgrades to the Siemens 840Di control unit and EDM power supply. One customer using the improved breakout detection and depth control reportedly experienced a 10 to 20 percent decrease in overall cycle time, one or two fewer electrode changes per part and reduced electrode wear—with no other changes in programming or setup.
+ 
+The term “breakout detection” has been used in the EDM industry for many years to describe various approaches (some more successful than others) for improving the hole drilling process, says Steve Bond, EDM national sales manager for Methods Machine Tools, Inc. (Sudbury, Massachusetts), the North American distributor of the Current EDM product line. What is certain, he says, is that the demands of the aerospace and power generation turbine industries require better and more consistent EDM drilling results.
+ 
+To perform more efficiently, the latest turbine designs are intended to operate at temperatures that approach the melting points of the various metals used in their components. These difficult-to-machine materials are treated with heat-resistant coatings, but they also require numerous passages so that cool air can be pumped through the hollow part and out the holes so it fans over the outer surfaces to draw away excess heat. Turbine airfoil vanes, for example, are often produced as hollow castings to provide these interior cavities, some of which are only 0.03 inch wide. When drilling cooling holes to reach this cavity with EDM, it has been difficult to monitor and control the process to keep the electrode from abruptly entering the interior and striking the opposite wall.
+ 
+Mr. Bond says this application requires monitoring all of the EDM drilling parameters and conditions while machining with very high electrode wear settings at extremely steep approach angles. Advances in servo sensing enable Current EDM’s enhanced system to detect changes in electrical resistance occurring in the spark gap, while more efficient algorithms and improved processing speed result in a faster servo response. The system also monitors drill depth more precisely. Together, these improvements make breakthrough detection more accurate and reliable.
+ 
+Although these improvements and faster drilling cycles are important benefits in applications involving a large number of holes, such as turbine blades, these advances also benefit other small-hole applications, Mr. Bond explains. “Even in small lot sizes, cycle time is important. Much of the time spent EDM-drilling a hole occurs in the last 2 or 3 percent of the hole’s depth. Once the electrode breaks out of the hole on the back side of a workpiece, it will jump up and down many times in an effort to fully break the spark gap, signaling that the hole is complete,” he says. The new system, he points out, does not need this procedure.
+ 
+Other new features of the software and hardware package include an improved programmable servo control function that reduces flexing of small-diameter electrodes. This enables a long electrode with a diameter as small as 0.0125 inch to drill faster, straighter and with less chance of back-striking. Likewise, new power supply capabilities reduce wear at the tip of the electrode, thus improving hole roundness and depth consistency, the company says. In addition, a Process Tracing Function records a depth control graphing log that helps the operator review and analyze depth control performance. The log includes information about the influence of variables not under programmed command, such as conductivity and temperature of the dielectric fluid.
+
+Modern Machine Shop is the leading publication and media brand in North America devoted to CNC machining. MMS combines unprecedented editorial access to manufacturing facilities with decades of experience to provide long-form content that is both insightful and impactful. All original technical content on our sites and in our publications is created by Gardner Business Media staff and contributing writers. About Us 
+
+FOLLOW US
+   
+TOPICS
+Machines
+Tooling
+Software
+Measurement
+Additive
+Automation
+View All
+RESOURCES
+Find a Supplier
+Videos
+News
+Products
+Webinars
+Events
+Podcast
+Ask the Expert
+MAGAZINE
+Latest Issue
+Archives
+Subscribe
+Renew Subscription
+Subscription Customer Service
+MORE
+About Us
+Contact Us
+Advertise
+Privacy Policy
+CHANNEL PARTNERS
+© 2026 Gardner Business Media, Inc. | 6915 Valley Ave | Cincinnati, OH | 45244 USA | PH (513) 527-8800
+Advertise Privacy Policy Site Map [Sign In] [Sign Up]

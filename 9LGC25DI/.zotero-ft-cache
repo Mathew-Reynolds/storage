@@ -1,0 +1,352 @@
+This website utilises technologies such as cookies to enable essential site functionality, as well as for analytics, personalisation, and targeted advertising. You may change your settings at any time or accept the default settings. You may close this banner to continue with only essential cookies. Privacy Policy
+Manage Preferences
+Accept All
+Reject Non-Essential
+Skip to Article Content
+Skip to Article Information
+Advances in Materials Science and Engineering
+Review Article
+Open Access
+The Current State of the Art and Advancements, Challenges, and Future of Additive Manufacturing in Aerospace Applications
+First published: 30 September 2023
+https://doi.org/10.1155/2023/8817006
+Academic Editor: A. Rajesh Kannan
+Sections
+PDF
+Tools Share
+Abstract
+
+Additive manufacturing has revolutionized the manufacturing industry, particularly in aerospace. This paper provides an overview of the advancements, state-of-the-art, challenges, and future of additive manufacturing in the aerospace industry. It begins by discussing the workflow of additive manufacturing and the comparison of software required for modeling and slicing the designed models. Various types of additive manufacturing processes used in the aerospace industry with their postprocessing challenges and solutions are also presented in detail. Besides, the challenges and limitations that come with the use of additive manufacturing in aerospace are also outlined. The paper investigated that the use of additive manufacturing in aerospace has given several advantages such as the ability to produce complex geometries, reduce material waste, and improve design flexibility. The future of additive manufacturing in aerospace looks promising, with the potential for even more cost-effective and efficient production. The paper concludes that additive manufacturing has proven to be a game-changer in aerospace presenting different advanced aerospace components in detail, with continued research and development shaping the future of manufacturing and production. With advancements in technology and processes, additive manufacturing for aerospace can overcome the challenges and become a reliable and cost-effective alternative to traditional manufacturing methods.
+
+1. Introduction
+
+The main idea or concept of the 3D printing (additive manufacturing) technology has been persisted since many decades ago [1]. The interest in this rapid prototyping technology shot up throughout because of its flexibility, cost-effectiveness, and well-established advantages from the production point of view [1–3]. Additive manufacturing can be expressed as a method of layer-by-layer addition of materials to build three-dimensional components progressively [1, 2]. The additive manufacturing process works in opposition to traditional subtractive manufacturing processes in which material removal process is carried out by turning, milling, and drilling [2–4]. This special characteristic eliminates the need for numerous standard processing steps and enables the manufacturing of intricate or bespoke parts straight from the design without the use of costly tooling or forms such as punches, dies, or casting molds. Without the restriction of conventional processing methods, intricate pieces that are true to their design can be produced in a single step [3–5].
+
+Due to the aforementioned advantages, additive manufacturing became an interesting area of research in different sectors such as aerospace, automotive, and medical devices [2, 6, 7]. Additive manufacturing also has a benefit in terms of the material’s point of view, in addition to design freedom and increased shape complexity. The use of numerous technical materials, including polymers, metals, ceramics, and composites, in additive manufacturing, can already be used to realize the complicated designs [8, 9]. Nowadays, additive manufacturing uses numerous types of materials depending on the required objective of the product going to be produced [10]. Depending on the application areas such as aerospace, automotive, and other industrial areas, the material type varies from one to the other [8, 10].
+
+Furthermore, additive manufacturing has brought about a revolution in the world of metamaterials, leading to significant achievements. It enables the creation of lighter, multiphysics, and sustainable systems with unconventional sound-absorbing performances. This technology has paved the way for groundbreaking advancements in the field of manufacturing, thereby reshaping traditional manufacturing processes and offering new possibilities for material design and engineering [11, 12]. The ability of this additive manufacturing technology to multimaterial additive manufacturing (AM) processes has gained significant attention in recent years due to its potential for fabricating complex structures with tailored material properties [13, 14]. By combining different materials in a single build, multimaterial AM enables the production of components with an enhanced functionality and performance. However, this approach also introduces several challenges, including interface delamination and compatibility issues [2, 15].
+
+Interface delamination occurs when there is a weak bond between the adjacent materials in a multimaterial structure. This can lead to reduced structural integrity and compromised performance of the final product. The mismatch in material properties, such as coefficients of thermal expansion and mechanical behaviors, can result in stress concentrations at the material interfaces, leading to delamination [16, 17]. Compatibility issues arise when materials used in a multimaterial AM process have different processing requirements. For example, materials may have different melting temperatures or cooling rates, making it difficult to find optimal process parameters that satisfy the requirements of all materials simultaneously. This can lead to defects, such as voids, porosity, or inconsistent material properties, further impacting the performance of the component [16, 17].
+
+To address these challenges, researchers have introduced tessellation-based morphological innovations in multimaterial AM processes [17, 18]. Tessellation involves modifying the internal structure of a single material to mimic the properties of multiple materials. By carefully designing the internal geometry, such as lattice structures, gradients, or cellular architectures, the material can exhibit different functionalities in different regions. Tessellation-based approaches offer several benefits in multimaterial AM. First, they eliminate the need for multiple materials, thus simplifying the fabrication process and reducing material waste. Second, by using a single material, the compatibility issues between different materials are eliminated, resulting in an improved material compatibility and enhanced structural integrity. Lastly, the tessellation-based morphological innovations enable the production of components with complex internal architectures, offering enhanced mechanical properties, such as improved strength-to-weight ratios and increased energy absorption capabilities [18].
+
+Researchers have also proposed various nesting strategies to overcome the challenges associated with multimaterial AM [16]. Nesting refers to the arrangement of different materials within a build volume to optimize the material usage and minimize interface delamination. These strategies involve placing materials with similar processing requirements nearby, reducing the potential for thermal stress and delamination. In addition, nesting strategies consider the mechanical compatibility of materials, ensuring that the adjacent regions have compatible mechanical properties to minimize stress concentrations. In the aerospace industry, the adoption of nesting strategies in multimaterial AM processes can greatly reduce the fabrication complexity of various components. For example, in the production of aircraft engine components, nesting can be used to optimize the placement of different materials with specific properties, such as high-temperature resistance or lightweight characteristics. This not only simplifies the manufacturing process but also improves the overall performance and reliability of the components. Thus, tessellation-based morphological innovations offer a promising solution to simplify fabrication complexity and enhance the performance of aerospace components in multimaterial AM processes. By modifying the internal structure of a single material, multimaterial-like properties can be achieved without the need for multiple materials. In addition, nesting strategies further optimize the placement of materials, thereby reducing interface delamination and improving compatibility. These advancements have the potential to revolutionize the aerospace industry by enabling the production of complex, high-performance components [14, 16, 17].
+
+As it is obvious, the main issue in the aerospace industry is material complexity to balance the weight and strength of the aircraft in addition to the manufacturing complexity. Thanks to 3D printing, different metallic components have now been 3D printed such as engine components, interior components, and structural components [2, 15, 19, 20]. This review paper is intended to present the state-of-the-art of additive manufacturing in aerospace industries starting from the basic additive manufacturing process to components made by the technology. As stated, various scholars tried to put different printable materials and their challenges in different application areas.
+
+The main need of this review paper is to assess the advancement and challenges of additive manufacturing in the aerospace industry and comparison of software used to model and slice the desired model. It is also helpful for upcoming scholars who intend to know about the different types of 3D printing processes and their postprocessing challenges in the aerospace industry. The authors are hopeful that this paper will help the future scholars, technicians, and designers by giving much information on software selection and additive manufacturing types with their postprocessing challenges and solutions.
+
+The timing of the review paper on additive manufacturing is highly relevant and beneficial for researchers, technicians, and authors in the field. With additive manufacturing being a current area of interest and needing further exploration, this review paper provides valuable insights and analysis that would aid in advancing the knowledge and understanding of the subject. In recent years, additive manufacturing has reached a level of maturity in research, where significant advancements have been made and its potential is being recognized across various industries. Particularly in the aerospace industry, additive manufacturing has gained substantial attention and has been lauded for its achievements. The review paper captures these developments and highlights the impact that additive manufacturing has had in this specific industry.
+
+By providing a comprehensive overview of the current state-of-the-art, challenges, and potential future advancements, this review paper fills a critical knowledge gap and serves as a valuable resource for individuals involved in additive manufacturing research and application. It not only enhances the understanding of the subject matter but also aids in identifying areas that require further work and exploration. In conclusion, given the current maturity level of additive manufacturing research and its significant attention in the aerospace industry, the timing of this review paper is ideal and highly valuable. It offers insights and information that researchers, technicians, and authors can utilize to further their understanding and advancement in the field of additive manufacturing in the aerospace industry.
+
+2. Workflow of Additive Manufacturing (3D Printing)
+
+3D printing is the process of creating three-dimensional objects from a digital file. The process involves layering materials to create a physical object. This huge task passes various steps from the very beginning of the design to finishing the final printed part. The general workflow of 3D printing is shown in Figure 1.
+
+Figure 1
+Open in figure viewer
+PowerPoint
+The general workflow of additive manufacturing [21].
+2.1. Designing the Object and Modeling
+
+The first step in 3D printing is designing the object. This can be performed using CAD (computer-aided design), SolidWorks, CATIA, and any other modeling software [1, 3]. The software allows the user to create a 3D model of the object they want to print. The model can be adjusted and edited until it is perfect. There are various types of software recommended for additive manufacturing purposes. Among the various interesting designing and modeling software programs recommended for the model design by Siemens NX NX is shown in Figure 2 as a sample and many others are discussed and compared in Table 1.
+
+Figure 2
+Open in figure viewer
+PowerPoint
+Modeled design on Siemens NX.
+Table 1. Comparison of modeling software programs for 3D printing.
+Type of software	Feature	Pros	Cons	Price
+Ansys	Process simulation	
+Simulate complex mechanical systems Accurate Fast Availability of various materials react to various loading conditions Priceless stress analysis
+	
+The user interface is not easy High computing computer is required Occasional rashes have been reported
+	
+A free trial is available Free for students at all levels
+
+Topology optimization
+Printability checking
+Data acquisition and management
+Structural analysis of the object being printed
+Direct energy deposition printing preparation
+  
+3D systems	Rapid prototyping	Offers stepping zone for medical devices	Due to the high complexity supporting feature, it is time-consuming	 
+Multimaterial printing	Clean process
+Connectivity	Particle free components
+Requirement driven orientation	All-in-one program
+Direct metal printing	Various materials
+  
+Siemens NX AM	
+Integrated build tools Structure validation Quality and analytics
+	More friendly	
+Less suitable for small projects Needs improvement in revision control
+	Intermediate
+Customizable
+Provides a history of changes
+More interaction with users during the process’s downstream phases
+  
+Autodesk Netfabb	Automatic file preparation	
+Easier to use than other software programs Allows for the repair of broken 3D prints More affordable than some other software programs
+	
+Usage of RAM is high Occasionally causes lag in operation File conversion can be difficult Support from customer service can be spotty
+	Free trial: available
+Support for multiple file formats
+Wide range of printing options
+Selective structures
+Optimization
+  
+AutoCAD	Design of 3D objects	
+Easier to use More affordable
+	
+Limited material No postprocessing
+	Intermediate
+Modeling objects
+STL file format
+
+Designing and modeling software programs are very important tools to make the desired geometry or part of its specifications. The selection of software for designing and modeling may depend on the designers’ criteria. The modeling software programs with their features, advantages, and shortcomings are summarized in Table 1.
+
+There are also various types of software which are used to model the designed component, which is going to be sliced and finally printed. These are the main and most frequently used ones. As compared with the above, one can use one software based on his requirement and computer computational capacity.
+
+2.2. Preparing the File for Printing
+
+Once the design is complete, the file needs to be prepared for printing. This involves converting the 3D model into a format which the 3D printer can understand. The most commonly used format is STL (stereolithography). An STL is a triangulated representation of a 3D model [21]. The other common format is the AMF (additive manufacturing) file format, which is also understood by the slicing software.
+
+2.3. Slicing the Model
+
+After the file is prepared, the 3D model needs to be sliced. Slicing is the process of dividing the 3D model into thin layers. This is performed by using the slicing software. The thickness of the layers depends on the resolution of the printer. The slicing of the model is a very important step next to the modeling. This is because all parameters for printing that determine the quality and strength of the printed product depend on the setting of the slicing software. Nowadays, various types of software have been used as slicing software for 3D printing [22–24]. Among those are Cura, PrusaSlicer, Slic3r, Simplify3D, OctoPrint, AstroPrint, and Netfabb. They have their advantages and shortcomings. Based on the type of the printer and quality as well as price, one can choose one of them.
+
+The slicing step is also responsible for making support structures when necessary. Not only support but also other parameters, which are crucially important for the strength and quality of the product. The sample model and sliced bracket model in Figure 3 are prepared by the Netfabb software.
+
+Figure 3
+Open in figure viewer
+PowerPoint
+A bracket prepared for direct metal laser sintering on Netfabb [23].
+2.4. Printing the Object
+
+Before the printing step, once the slicing is complete, the printer needs to be set up. This involves loading the material into the printer and calibrating the printer. The printer needs to be leveled and the print bed needs to be adjusted to the correct height. After the printer is set up, the printing process can begin [21, 23]. The printer will start by heating the material and then extruding it through a nozzle. The nozzle moves back and forth, laying down the material layer by layer until the object is complete as shown in Figure 4 for metal printing and the same is true for other types of printing.
+
+Figure 4
+Open in figure viewer
+PowerPoint
+Printed aircraft bracket model using direct metal laser sintering [25].
+2.5. Postprocessing of the Printed Object
+
+Once the object is printed, it may need to be finished. This involves removing any support structures that were used during the printing process. The object may also need to be sanded or polished to give it a smooth finish. Overall, 3D printing is a complex process that requires careful planning and execution. However, with the right tools and knowledge, anyone can create amazing 3D objects from the comfort of their own home or office.
+
+3. Additive Manufacturing Types Used in Aerospace Applications
+
+Additive manufacturing has revolutionized the aerospace industry by providing new production options that are faster, more flexible, and more cost-effective than conventional manufacturing. Additive manufacturing has a wide range of applications in the aerospace industry, from prototyping to manufacturing production parts. Several types of additive manufacturing methods are used for aerospace applications, including fused deposition modeling (FDM), stereolithography (SLA), selective laser sintering (SLS), direct metal laser sintering (DMLS), and electron beam melting (EBM) [8, 9, 22, 26].
+
+Each type of additive manufacturing has its own set of advantages and disadvantages, and engineers choose the most appropriate method based on the specific requirements of the part they want to produce. Additive manufacturing is rapidly becoming the go-to method for aerospace manufacturing as it offers the potential for reduced production costs, improved design flexibility, and faster production times.
+
+3.1. Stereolithography (SLA)
+
+Stereolithography is a type of additive manufacturing process that uses ultraviolet light to solidify layers of resin to create three-dimensional objects as shown in Figure 5. SLA is a popular prototyping technology that has made significant advancements in the aerospace industry [28–30]. It is widely used for producing various complex aerospace products, including engine components, aircraft structures, and space vehicles. With the precision and versatility that stereolithography provides, aerospace engineers can design intricate parts that fit the complicated and precisely engineered requirements of aerospace products [20, 24, 31].
+
+Figure 5
+Open in figure viewer
+PowerPoint
+SLA printing intricate parts [27].
+
+The stereolithography technology allows for the production of lightweight, high-performance components with fast production times and low production costs. Furthermore, the materials used in stereolithography are highly suitable for use in harsh environments and can withstand extreme pressures, temperatures, and other significant stress factors associated with the aerospace industry. The use of stereolithography for the production of aerospace products helps to improve the quality, reliability, and safety of these critical components [15].
+
+The aerospace industry is one of the many industries that utilize stereolithography for the rapid production of various components [13, 28, 30, 32]. Some of the aerospace components that can be manufactured using stereolithography include the following:
+(i)
+
+Ducting components: stereolithography can produce intricate ducting components for aerospace systems such as air conditioning, ventilation, and fluid systems
+
+(ii)
+
+Intake and exhaust components: stereolithography can create complex intake and exhaust components for engines that are lightweight and durable
+
+(iii)
+
+Actuator components: stereolithography can produce high-precision components for actuators used in aerospace systems
+
+(iv)
+
+Aerospace brackets: stereolithography can create custom brackets that are used to mount equipment and systems in aircraft
+
+(v)
+
+Electrical connectors: stereolithography can create electrical connectors that are used in aerospace systems for communication, power transmission, and control
+
+(vi)
+
+Fuel system components: stereolithography can produce intricate fuel system components that are lightweight and perform effectively in harsh environments
+
+(vii)
+
+Aerospace housings: stereolithography can create robust and durable housings for components used in various aerospace systems
+
+Overall, stereolithography is a valuable tool for the aerospace industry as it can produce intricate components with a high accuracy, precision, and speed.
+
+Stereolithography (SLA) faces several challenges in postprocessing for aircraft components made from different materials. These challenges include achieving uniform surface finishes, joining components made from different materials, and ensuring dimensional accuracy and structural integrity. To address these challenges, specialized postprocessing techniques such as sanding, polishing, and chemical treatments are employed to improve surface quality. Innovative bonding techniques and assembly methods are used to join components made from different materials. Meticulous quality control measures and testing methodologies are implemented to ensure dimensional accuracy and structural integrity. By developing efficient postprocessing solutions, SLA can fully utilize its potential in manufacturing aircraft components with diverse materials [33, 34].
+
+3.2. Fused Deposition Modeling (FDM)
+
+Fused deposition modeling (FDM) is a 3D printing technology widely used in the aerospace industry. FDM printing involves the layer-by-layer deposition of melted thermoplastic material to create a component as depicted in Figure 6. FDM is used to create large parts with complex geometries and is commonly used for prototyping aircraft components. One of the significant advantages of FDM printing for aerospace applications is its ability to produce lightweight, strong, and highly complex geometries [36, 37].
+
+Figure 6
+Open in figure viewer
+PowerPoint
+FDM printing parts [35].
+
+Fused deposition modeling (FDM) is rapidly becoming one of the most widely used types of 3D printing in the aerospace industry. FDM 3D printers use a thermoplastic filament that is melted and extruded in a controlled manner to create complex shapes. Since FDM technology produces durable and resilient parts, it is ideally suited for the production of aerospace components [29, 32, 38]. The aerospace industry is increasingly turning to FDM printers to produce lightweight structural components, ducting, engine components, and even entire airframes. Thanks to the precision, speed, and cost-effectiveness offered by FDM, many aerospace companies are now able to produce parts that would have been too complex or expensive to create using traditional manufacturing methods. Overall, FDM printing is revolutionizing the aerospace industry by enabling the production of sophisticated aerospace components with greater speed, precision, and reliability than ever before [36, 37].
+
+Several aerospace components can be produced by using FDM printing technology [1, 23, 31, 39]. These include the following:
+(i)
+
+Prototype models: FDM printing enables rapid prototyping, enabling engineers to test and validate new designs before creating a final part
+
+(ii)
+
+Ducting: FDM technology can produce ducting with complex shapes and geometries that can be used in aircraft air conditioning systems
+
+(iii)
+
+Tooling: FDM can produce functional toolings used in aerospace manufacturing, such as drilling jigs, caps, and brackets
+
+(iv)
+
+Interior components: FDM printing can produce interior components for aircraft such as armrests, tray tables, and overhead bins
+
+(v)
+
+Engine parts: FDM technology can produce engine parts such as brackets and housings
+
+(vi)
+
+UAV components: FDM printing can produce lightweight components for unmanned aerial vehicles, including wings, frames, and landing gear
+
+Therefore, FDM technology has revolutionized the production of various aerospace components by enabling the creation of strong, lightweight, and complex designs.
+
+Fused deposition modeling (FDM) presents several challenges in postprocessing for aircraft components made from different materials. These challenges include achieving smooth surface finishes, joining components made from different materials, and ensuring dimensional accuracy and structural integrity. To tackle these issues, specialized postprocessing techniques such as sanding, polishing, and chemical treatments are employed to enhance surface quality. Innovative bonding techniques and assembly methods are utilized to join components made from different materials effectively. In addition, meticulous quality control measures and testing methodologies are implemented to ensure the desired dimensional accuracy and structural integrity. By addressing these challenges and developing efficient postprocessing solutions, FDM can fully harness its potential in manufacturing aircraft components with diverse materials [33, 40].
+
+3.3. Selective Laser Sintering (SLS)
+
+Selective laser sintering (SLS) is a 3D printing technology that has gained popularity in the aerospace industry due to its ability to produce complex geometries with a high accuracy and strength. SLS is particularly useful for manufacturing aircraft components that require high strength-to-weight ratios and resistance to extreme temperatures and pressures. Some of the aircraft components that are commonly manufactured using SLS include turbine blades, ducting systems, brackets, and engine components [19, 41]. SLS is also used for prototyping and testing aerospace parts, allowing engineers to quickly iterate and refine their designs before moving to production. Overall, SLS is a valuable tool for the aerospace industry, enabling the production of high-quality, lightweight components that are critical for the safe and efficient operation of the aircraft [24, 36]. The melting step within the metal powder is shown in Figure 7.
+
+Figure 7
+Open in figure viewer
+PowerPoint
+SLS printing complex metallic component [42].
+
+Selective laser sintering (SLS) poses postprocessing challenges for different aircraft components. One major limitation is the poor surface finishing of the fabricated parts, which requires additional procedures to improve the surfaces [43]. To address this, specialized techniques such sanding, polishing, and chemical treatments are employed to enhance the surface quality. Moreover, joining components made from different materials is another challenge. Innovative bonding techniques and assembly methods are used to overcome this obstacle. In addition, meticulous quality control measures and testing methodologies are implemented to ensure dimensional accuracy and structural integrity of the components. By addressing these challenges and developing efficient postprocessing solutions, SLS can fully utilize its potential in manufacturing aircraft components with diverse materials [34, 44].
+
+3.4. Direct Metal Laser Sintering (DMLS)
+
+Direct metal laser sintering (DMLS) is a 3D printing technology that has revolutionized the aerospace industry by enabling the production of high-performance metal parts with complex geometries as shown in Figure 8. DMLS is particularly useful for manufacturing aircraft components that require high strength, durability, and resistance to extreme temperatures and pressures [2, 6, 7, 10, 46]. Some of the aircraft components that are commonly manufactured using DMLS include turbine blades, engine components, heat exchangers, and brackets. DMLS is also used for prototyping and testing aerospace parts, allowing engineers to quickly iterate and refine their designs before moving to production. Overall, DMLS is a valuable tool for the aerospace industry, enabling the production of high-quality, lightweight components that are critical for the safe and efficient operation of the aircraft [5, 19].
+
+Figure 8
+Open in figure viewer
+PowerPoint
+Strong and irregular components printed using DMLS [45].
+
+Postprocessing challenges in direct metal laser sintering (DMLS) additive manufacturing for aircraft components involve achieving dimensional accuracy and surface quality. DMLS can result in rough surface finishes and dimensional inconsistencies due to the nature of the process. To address these issues, specialized postprocessing techniques such as sanding, polishing, and chemical treatments are employed. These techniques help to improve the surface quality by achieving a uniform finish and eliminating surface defects. In terms of dimensional accuracy, meticulous quality control measures, and testing methodologies are implemented to ensure that the printed components meet the required specifications. By developing efficient postprocessing solutions, DMLS can overcome these challenges and produce aircraft components with excellent dimensional accuracy and surface quality [33, 44].
+
+4. Aerospace Components Manufactured Using Additive Manufacturing
+
+Additive manufacturing technologies have opened up new possibilities for the aerospace industry by enabling the production of complex geometries with a high accuracy and strength. Aerospace components that are commonly manufactured using additive manufacturing technologies include turbine blades, engine components, ducting systems, heat exchangers, brackets, and interior components. These components require high strength-to-weight ratios, resistance to extreme temperatures and pressures, and intricate designs that are difficult to produce using traditional manufacturing methods. Additive manufacturing technologies such as fused deposition modeling (FDM), selective laser sintering (SLS), and direct metal laser sintering (DMLS) are particularly useful for prototyping, testing, and producing these components. By leveraging these technologies, aerospace engineers can create innovative designs that can improve the performance, safety, and efficiency of the aircraft [19, 24].
+
+4.1. Engine Components
+
+Additive manufacturing technologies have revolutionized the way in which the engine components are manufactured for the aircraft. Direct metal laser sintering (DMLS) is one of the additive manufacturing technologies that is commonly used to produce engine components for the aircraft. Some of the engine components that are manufactured using DMLS as shown in Figure 9 include turbine blades, fuel nozzles, combustion liners, and heat exchangers [1, 5]. These components require high strength, durability, and resistance to extreme temperatures and pressures, making DMLS an ideal manufacturing technology for these applications. DMLS enables the production of complex geometries with a high accuracy and strength, allowing for the creation of innovative designs that improve the performance and efficiency of aircraft engines. By leveraging additive manufacturing technologies such as DMLS, the aerospace industry can produce high-quality engine components that are critical for the safe and efficient operation of the aircraft [1, 5].
+
+Figure 9
+Open in figure viewer
+PowerPoint
+3D printed aircraft engine components [47].
+4.2. Interior Components
+
+Additive manufacturing technologies have also been used to produce interior components for aircraft, offering a range of benefits including the ability to create lightweight, durable, and complex parts. Fused deposition modeling (FDM) is a 3D printing technology that is commonly used to manufacture interior components such as air ducts, brackets, and panels [1, 5, 7, 15]. FDM is particularly useful for producing low-stress components that require less strength than engine components, and it allows for the creation of complex geometries that are difficult or impossible to produce using traditional manufacturing methods. In addition, FDM enables the production of customized interior components as shown in Figure 10, allowing for greater flexibility in aircraft design [1, 2, 5, 7]. By leveraging additive manufacturing technologies such as FDM, the aerospace industry can create innovative interior designs that improve passenger comfort and safety while reducing weight and costs.
+
+Figure 10
+Open in figure viewer
+PowerPoint
+3D printed aircraft interior component [48].
+4.3. Aircraft Structures
+
+Additive manufacturing technologies have also been used to manufacture aircraft structures, offering a range of benefits including the ability to create lightweight, strong, and complex parts. Selective laser sintering (SLS) is a 3D printing technology that is commonly used to manufacture aircraft structures such as brackets, wing components, and fuselage parts. SLS enables the production of parts with high strength-to-weight ratios and resistance to extreme temperatures and pressures, making it ideal for aerospace applications [1, 2]. In addition, SLS allows for the creation of complex geometries with a high accuracy and precision, enabling the production of innovative designs that improve the performance and efficiency of aircraft structures [1, 2, 10]. By leveraging additive manufacturing technologies such as SLS, the aerospace industry can create aircraft structures that are stronger, lighter, and more efficient than traditional manufacturing methods. Among the many components in the aerospace industry, aircraft flap lever, satellite antenna, turbo-generator casing, RF feed antenna, and rocket brackets are the most common ones which are being manufactured using additive manufacturing [1, 49]. Figure 11 shows different aircraft structural components being manufactured by additive manufacturing.
+
+Figure 11
+Open in figure viewer
+PowerPoint
+Aircraft fitting structure design to be printed [49].
+4.4. 3D Printed Converging-Diverging Rocket Nozzles
+
+3D-printed converging-diverging rocket nozzles are a significant application of the additive manufacturing technology in the aerospace industry [50]. By utilizing additive manufacturing techniques such as stereolithography (SLA), fused deposition modeling (FDM), selective laser sintering (SLS), and direct metal laser sintering (DMLS), these nozzles shown in Figure 12 can be designed and fabricated with precision and efficiency [51, 52]. The use of CAD software enables the optimization of the nozzle design by considering factors such as cooling and thrust performance [50]. Additive manufacturing allows for a quick demonstration and verification of novel ideas and concepts, revolutionizing the manufacturing process in the aerospace industry [52]. However, concerns regarding surface roughness and nozzle strength need to be addressed through comprehensive testing at large Reynolds numbers [52]. Overall, 3D-printed converging-diverging rocket nozzles demonstrate the potential of additive manufacturing in enhancing the performance and efficiency of aerospace components.
+
+Figure 12
+Open in figure viewer
+PowerPoint
+3D printed rocket nozzle [51].
+4.5. Additive Manufacturing Enabled Anti-icing Systems in Airplanes
+
+Additive manufacturing has played a significant role in the development of advanced anti-icing systems for airplanes, revolutionizing aerospace applications. These systems offer enhanced energy efficiency, accurate monitoring, and improved safety and performance in harsh weather conditions [53, 54]. One example of an additive manufacturing-enabled anti-icing system is the smart deicing system. This system incorporates sensors and actuators into the aircraft’s structure, allowing for real-time monitoring and precise control of the deicing process. By detecting ice formation and delivering targeted heat or deicing fluids to critical areas, the smart deicing system ensures efficient ice removal while minimizing energy consumption [55].
+
+Another example is the thermal anti-ice system, which utilizes additive manufacturing techniques to fabricate components with complex geometries and optimized designs. Through techniques such as stereolithography (SLA) and fused deposition modeling (FDM), converging-diverging rocket nozzles with precise cooling and thrust performance can be produced [53, 55]. These components effectively prevent ice buildup by providing continuous heating and airflow. These additive manufacturing-enabled anti-icing systems have been successfully applied in the aerospace industry, particularly in commercial aircraft. For instance, the Boeing 737-300/400/500 utilizes a hot bleed air anti-ice system [54]. This system uses hot air from the engine’s compressor stages to warm up the wing’s leading edge, preventing ice formation. The hot bleed air is distributed through the aircraft’s pneumatic system and is guided to specific areas, ensuring effective anti-icing [54, 55].
+
+Thus, additive manufacturing has enabled the development of advanced anti-icing systems in airplanes, offering improved energy efficiency, precise monitoring, and enhanced safety. With the ability to fabricate complex components and optimize designs, additive manufacturing continues to revolutionize aerospace applications, ensuring optimal performance in challenging weather conditions.
+
+4.6. Additive Manufacturing Designed Lattice Heat Sinks
+
+Additive manufacturing has revolutionized the design and production of heat sinks, particularly lattice heat sinks. These heat sinks utilize the capabilities of additive manufacturing to create intricate lattice structures, offering improved thermal management and performance [56, 57]. For instance, in a study analyzing additively manufactured heat sinks, researchers focused on the variation of chip temperature and pressure drop for different designs. The findings highlighted the thermal performance improvement achieved through additive manufacturing, emphasizing the importance of specific design features for enhanced cooling [57, 58].
+
+Moreover, additive manufacturing enables the production of complex lattice structures that cannot be easily manufactured using traditional methods [59]. These lattice heat sinks exhibit superior heat dissipation capabilities due to their increased surface area and improved airflow. By utilizing additive manufacturing techniques such as direct metal laser sintering (DMLS), heat sinks can be printed with precision and efficiency [56, 60]. This technology allows for the creation of intricate lattice designs with optimized thermal properties, ensuring efficient heat transfer and cooling in various applications [56, 58, 59].
+
+Therefore, the combination of additive manufacturing and lattice design in heat sinks offers significant advantages in terms of thermal management and performance. The innovative solutions stated above provide improved heat dissipation, enhanced airflow, and optimized cooling efficiency than the previous for a wide range of industries and applications. Additive manufacturing continues to revolutionize the field of thermal management and ensures optimal performance in heat sink design.
+
+5. Challenges and Limitations of Additive Manufacturing in Aerospace Application
+
+Additive manufacturing technologies have revolutionized the aerospace industry by enabling the production of high-quality, lightweight components with complex geometries [61, 62]. However, there are still some challenges and limitations associated with the use of additive manufacturing in aerospace. One major challenge is the need for high-quality materials that meet the strict safety and performance standards required by the aerospace industry [13, 61, 62]. Another challenge is the need for consistent and reliable manufacturing processes that can produce parts with a high accuracy and repeatability. In addition, the cost of additive manufacturing equipment and materials can be a limitation for some companies [38, 42, 47, 63]. Despite these challenges and limitations, the aerospace industry is continuing to invest in additive manufacturing technologies and is finding ways to overcome these obstacles to take advantage of the benefits that additive manufacturing offers.
+
+Additive manufacturing has also some limitations in the aerospace industry. One of the major limitations is the size of the parts that can be produced [17, 30, 49]. Currently, most additive manufacturing machines have a limited build volume, which can restrict the size of the parts that can be produced. In addition, the speed of production is slower compared to traditional manufacturing methods, which can be a limitation for high-volume production runs [17, 30, 49, 64]. Furthermore, the quality of the parts produced can be affected by factors such as porosity and surface finish, which can influence the strength and durability of the final product. These limitations can make it difficult to produce certain types of aerospace components using additive manufacturing technologies. However, ongoing research and development are addressing these limitations, and additive manufacturing is expected to play an increasingly important role in the aerospace industry in the future.
+
+6. Future of Additive Manufacturing in Aerospace Application
+
+Additive manufacturing technologies have already made a significant impact on the aerospace industry, and the future of this technology in this field is promising. The ability to create complex geometries and lightweight structures with a high accuracy and precision has already led to the production of innovative aircraft components and structures [32, 49, 62, 65]. In the future, additive manufacturing is expected to play an even larger role in the aerospace industry.
+
+One area where additive manufacturing is expected to have a significant impact is in the production of engine components. The ability to produce parts with intricate internal geometries and high strength-to-weight ratios will allow for the creation of more efficient and powerful engines [30, 32, 62, 65]. This will lead to improved fuel efficiency, reduced emissions, and increased performance. Additive manufacturing is also expected to play a major role in the production of interior components for aircraft. The ability to create customized, lightweight, and durable parts will allow for the creation of more comfortable and safe aircraft interiors [1, 2]. This could lead to improved passenger experiences and increased safety.
+
+Another area where additive manufacturing is expected to make a significant impact is in the production of space vehicles and satellites. The lightweight and durable structures produced using additive manufacturing will allow for the creation of more efficient and cost-effective space vehicles [38, 64]. In addition, the ability to produce complex geometries will enable the creation of more advanced and sophisticated satellites. However, there are still challenges that need to be addressed to realize the potential of additive manufacturing in the aerospace industry. These challenges include the need for high-quality materials, consistent and reliable manufacturing processes, and the ability to produce large parts at a reasonable cost.
+
+Therefore, additive manufacturing technologies have already made significant contributions to the aerospace industry, and the future of this technology in this field is promising. The ability to produce lightweight, strong, and complex parts will lead to the creation of more efficient and advanced aircraft components and structures. In addition, the ability to create customized and innovative designs will lead to improved passenger experiences and increased safety. Ongoing research and development will address the challenges associated with additive manufacturing, and this technology is expected to play an increasingly important role in the aerospace industry in the future.
+
+7. Conclusion
+
+In general, additive manufacturing has revolutionized the aerospace industry in many ways. The technology has helped reduce manufacturing time and costs while improving the quality of parts produced. The state-of-the-art in additive manufacturing is impressive, with advancements in materials, processes, and machines being made constantly. However, there are still challenges that need to be addressed, such as the need for standardized processes and certification, as well as the development of new materials that are suitable for aerospace applications. Despite these challenges, the future of additive manufacturing in the aerospace industry looks promising, with the potential for even more cost-effective and efficient production of parts.
+
+Furthermore, additive manufacturing has proven to be a game-changer in the aerospace industry, with its ability to produce complex interior and structural parts and reduce manufacturing time and costs. The advancements in technology and materials have made it possible to create parts with a high precision and accuracy, which has improved the quality of aerospace components. With continued research and development, it is clear that additive manufacturing will continue to play a significant role in the aerospace industry, shaping the future of manufacturing and production.
+
+Conflicts of Interest
+
+The authors declare that they have no conflicts of interest.
+
+Open Research
+References
+Download PDF
+ Back
+Additional links
+ABOUT WILEY ONLINE LIBRARY
+Privacy Policy
+Terms of Use
+About Cookies
+Manage Cookies
+Accessibility
+Wiley Research DE&I Statement and Publishing Policies
+Developing World Access
+HELP & SUPPORT
+Contact Us
+Training and Support
+DMCA & Reporting Piracy
+Sitemap
+OPPORTUNITIES
+Subscription Agents
+Advertisers & Corporate Partners
+CONNECT WITH WILEY
+The Wiley Network
+Wiley Press Room
+
+Copyright © 1999-2025 John Wiley & Sons, Inc or related companies. All rights reserved, including rights for text and data mining and training of artificial intelligence technologies or similar technologies.

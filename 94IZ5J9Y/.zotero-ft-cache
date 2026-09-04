@@ -1,0 +1,3473 @@
+CHARACTERISATION AND INVESTIGATION OF THE
+EXTERNAL FLOW OVER THE STEVE AND CLV
+LAUNCH VEHICLES
+Brent Ross Yelland
+Submitted in fulfilment of the academic requirements for the degree of Master of Science in
+Mechanical Engineering, College of Agriculture, Engineering and Science, University of
+KwaZulu-Natal.
+Durban, South Africa
+January 2025
+Supervisor: Prof Glen C. Snedden
+Co-Supervisor: Prof Michael J. Brooks
+
+
+i
+Declaration 1 - Plagiarism
+I, Brent Ross Yelland, declare that
+1. The research reported in this thesis, except where otherwise indicated, is my
+original research.
+2. This thesis has not been submitted for any degree or examination at any other
+university.
+3. This thesis does not contain other persons’ data, pictures, graphs or other
+information, unless specifically acknowledged as being sourced from other
+persons.
+4. This thesis does not contain other persons’ writing, unless specifically
+acknowledged as being sourced from other researchers. Where other written
+sources have been quoted, then:
+a. Their words have been re-written but the general information attributed to them
+has been referenced.
+b. Where their exact words have been used, then their writing has been placed in
+italics and inside quotation marks, and referenced.
+5. This thesis does not contain text, graphics or tables copied and pasted from the
+internet, unless specifically acknowledged, and the source being details in the
+thesis and in the References sections.
+Signed:................................................... Date: 14 January 2025
+Mr Brent Ross Yelland
+As the candidate’s supervisor I agree/do not agree to the submission of this thesis
+Signed:................................................... Date: 14 January 2025
+Prof Glen C. Snedden
+As the candidate’s co-supervisor I agree/do not agree to the submission of this thesis
+Signed:................................................... Date: 14 January 2025
+Prof Michael J. Brooks
+
+
+ii
+Declaration 2 - Publications
+Signed:......... .......................................... Date: 14 January 2025
+Mr Brent Ross Yelland
+
+
+iii
+Abstract
+ASRI (Aerospace Systems Research Institute) is developing a sub-orbital rocket (STeVe) and
+an orbital rocket (CLV). In this study, the external airflow around these rockets was
+characterised. Characterisation entailed determining the static aerodynamic coefficients for
+varying Mach numbers and angles of attack using CFD and semi-empirical methods (RASAero
+and Missile Datcom).
+To ensure the characterisation was accurate, five separate cases were used to validate the CFD
+model and confirm the accuracy and limitations of the semi-empirical methods. In the
+validation chapter, both semi-empirical methods and the CFD model were shown to perform
+well compared to experimental results. In general, for all flow regimes, excluding outliers, the
+CFD and the semi-empirical methods were within 15% of the experimental wind tunnel results.
+In most cases, the CFD and the semi-empirical methods were within 5% of the experimental
+wind tunnel results.
+Using the validated model, various aerodynamic coefficients were determined for both launch
+vehicles. Using these aerodynamic characterisation results, the drag force was determined for
+STeVe and CLV for a given flight trajectory, comparing the results from CFD and semi
+empirical inputs. For STeVe, Missile Datcom predicted a lower peak drag force by 4.8%, while
+RASAero predicted a higher peak drag force by 7.5%, when compared to CFD. For CLV,
+Missile Datcom and RASAero both predicted a higher peak drag force by 2.7% and 24.2%
+respectively, when compared to CFD.
+The aerodynamic heating effects on the STeVe nose cone were investigated, in which CFD
+results were compared with analytical heat transfer calculations. The CFD and analytical
+temperature results differed by less than 1%. Different nose cone tip radii were simulated to
+determine the effect on heat transfer, where negligible surface temperature differences were
+observed. However, the maximum heat transfer coefficient decreased as nose tip radius
+increased. Missile Datcom was used to modify the STeVe and CLV fuselage geometry,
+comparing the effects on CdA and drag force. For STeVe, increasing the diameter by 21%
+increased the peak drag force by 19%. For CLV, increasing the diameter by 15% increased the
+peak drag force by 37%.
+
+
+iv
+Acknowledgements
+I would like to thank the following people and organisations for contributing in a significant
+manner to my university studies:
+• Professor Glen Snedden, for supervising both my final year project and my master’s
+studies, and for being an invaluable source of knowledge and guidance throughout my
+studies.
+• Professor Michael Brooks, for co-supervising my final year project, and for introducing
+me to this academic journey at UKZN.
+• The South African National Space Agency (SANSA), for awarding me a bursary to
+support my master’s studies.
+• CHPC (Centre for High Performance Computing), for providing access to the
+supercomputing cluster during my studies.
+
+
+v
+Table of Contents
+Abstract .........................................................................................................................iii
+Acknowledgements ....................................................................................................... iv
+Table of Contents...........................................................................................................v
+Nomenclature ..............................................................................................................viii
+Abbreviations ................................................................................................................. x
+List of Figures ...............................................................................................................xi
+List of Tables ..............................................................................................................xiv
+1. Introduction ............................................................................................................1
+1.1 Background of ASRI ................................................................................................1
+1.2 STeVe (Sub-orbital Test Vehicle) and CLV (Commercial Launch Vehicle) ............1
+1.3 Motivation of the Study ............................................................................................2
+1.4 Aims and Objectives.................................................................................................3
+1.5 Methodology and Thesis Layout...............................................................................3
+2. Literature Review and Theory................................................................................5
+2.1 Turbulence Modelling...............................................................................................5
+2.1.1 Reynolds Number .............................................................................................5
+2.1.2 Boundary Layer ................................................................................................5
+2.1.3 y+ and Wall Functions......................................................................................6
+2.1.4 Prism Layers (Inflation Layers) ........................................................................9
+2.1.5 Turbulence Modelling..................................................................................... 12
+2.1.6 Closing the Turbulence Model........................................................................ 14
+2.1.7 Eddy Viscosity Models ................................................................................... 15
+2.1.8 Transition Zone Modelling ............................................................................. 16
+2.1.9 Coupled and Segregated Flow Solvers............................................................ 16
+2.2 Aerodynamics......................................................................................................... 17
+2.2.1 Drag ................................................................................................................ 17
+2.2.2 Lift .................................................................................................................. 19
+2.2.3 Angle of Attack............................................................................................... 19
+2.2.4 Axial and Normal Force.................................................................................. 19
+2.2.5 Aerodynamic Coefficients .............................................................................. 20
+2.2.6 Dynamic Pressure ........................................................................................... 20
+2.2.7 Shock Waves .................................................................................................. 21
+2.3 Aerodynamic Heating ............................................................................................. 22
+2.3.1 Thermal Boundary Layer ................................................................................ 22
+
+
+vi
+2.3.2 Thermal Boundary Condition ......................................................................... 22
+2.3.3 Heat Transfer Coefficient................................................................................ 23
+2.3.4 Recovery Factor.............................................................................................. 25
+2.4 Meshing .................................................................................................................. 26
+2.4.1 Types of Mesh Elements................................................................................. 26
+2.4.2 Difference in Software Approach ................................................................... 28
+2.4.3 Mesh Domain Construction ............................................................................ 31
+2.5 Semi-Empirical Aeroprediction Codes ................................................................... 34
+2.5.1 RASAero ........................................................................................................ 34
+2.5.2 Missile Datcom ............................................................................................... 36
+3. Model Validation..................................................................................................39
+3.1 Validation and Verification..................................................................................... 39
+3.2 Geometry Description............................................................................................. 40
+3.2.1 Dunn Spinner .................................................................................................. 40
+3.2.2 Dunn Finner.................................................................................................... 41
+3.2.3 Dunn Modified Finner .................................................................................... 41
+3.2.4 Shantz Finner .................................................................................................. 42
+3.2.5 Hammargren Maxus ....................................................................................... 43
+3.3 Physics Modelling .................................................................................................. 44
+3.4 Results .................................................................................................................... 46
+3.4.1 Dunn Spinner (Drag Coefficient vs. Mach Number)....................................... 46
+3.4.2 Dunn Finner (Drag Coefficient vs. Mach Number)......................................... 52
+3.4.3 Dunn Modified Finner (Normal Force Coefficient vs. Angle of Attack) ........ 53
+3.4.4 Shantz Finner (Normal Force Coefficient vs. Angle of Attack) ...................... 54
+3.4.5 Hammargren Maxus (Drag Coefficient vs. Mach Number) ............................ 56
+3.5 Conclusion.............................................................................................................. 57
+4. Computational Aerodynamic Analysis of the Launch Vehicles ..........................59
+4.1 Geometry ................................................................................................................ 59
+4.2 Fluid Domain.......................................................................................................... 60
+4.3 Meshing .................................................................................................................. 61
+4.4 Fluid Properties and Flow Modelling ..................................................................... 62
+4.5 Boundary Conditions .............................................................................................. 63
+4.6 Semi-Empirical Methods ........................................................................................ 63
+5. Aerodynamic Characterisation Results ................................................................65
+5.1 Mesh Independence ................................................................................................ 65
+5.2 Static Aerodynamic Coefficients ............................................................................ 69
+
+
+vii
+5.3 Flight Trajectory ..................................................................................................... 75
+6. Aerodynamic Heating...........................................................................................79
+6.1 Introduction ............................................................................................................ 79
+6.2 CFD Setup .............................................................................................................. 79
+6.3 Results .................................................................................................................... 80
+6.3.1 Analytical Calculation Comparison ................................................................ 80
+6.3.2 Nose Cone Geometry Variation ...................................................................... 84
+7. Geometry Modification ........................................................................................91
+7.1 CLV Geometry Modification.................................................................................. 91
+7.2 STeVe Geometry Modification............................................................................... 95
+8. Conclusion ............................................................................................................99
+8.1 Achieving the Aims ................................................................................................ 99
+8.2 General Findings..................................................................................................... 99
+8.3 Recommendations................................................................................................. 101
+8.4 Future Work.......................................................................................................... 101
+9. References ..........................................................................................................102
+Appendix A: Drawings ..............................................................................................105
+Appendix B: Semi-Empirical Input Data...................................................................114
+
+
+viii
+Nomenclature
+English
+Symbol Description Unit
+A Area m2
+Cd Drag Coefficient 
+Cl Lift Coefficient 
+Cp Heat Capacity at Constant Pressure J/kg.K
+DEXIT Exit Diameter m
+FA Axial Force N
+FD Drag Force N
+FL Lift Force N
+FN Normal Force N
+ffl First Layer Height Factor 
+ftl Total Prism Layer Thickness Factor 
+G Growth Rate 
+h Convective Heat Transfer Coefficient W/m2.K
+k Thermal Conductivity W/m.K
+k Turbulent Kinetic Energy J/kg
+M Mach Number 
+N Number of Prism Layers 
+p Pressure Pa
+p0 Stagnation Pressure Pa
+Q Heat Transfer Rate W
+Q Rate of Heat Transfer W
+q Heat Flux W/m2
+q Dynamic Pressure Pa
+Re Reynolds Number 
+r Recovery Factor 
+S Sutherland Temperature K
+T Temperature K
+T0 Stagnation Temperature K
+Taw Adiabatic Wall Temperature K
+Tc Near Wall Cell Temperature K
+Ts Surface (Wall) Temperature K
+T∞ Free Stream Temperature K
+T+ Dimensionless Temperature 
+u Velocity m/s
+u∞ Free Stream Velocity m/s
+
+
+ix
+u+ Dimensionless Velocity 
+u∗ Friction Velocity (Shear Velocity) m/s
+V Volume m3
+Ypl Total Prism Layer Thickness m
+Ypl,adjusted New Total Prism Layer Thickness m
+yc First Cell Layer Distance to Centre of Cell m
+yt,adjusted New First Layer Height m
+yt First Layer Height m
+y+ Dimensionless Distance away from the Wall 
+Greek
+α Angle of Attack °
+δ99 Boundary Layer Thickness m
+ε Turbulence Dissipation Rate J/kg.s
+μ Dynamic Viscosity Pa.s
+μt Eddy Viscosity (Turbulent Viscosity) Pa.s
+ν Kinematic Viscosity m2/s
+ρ Density kg/m3
+φ Roll °
+ω Specific Turbulence Dissipation Rate s-1
+Subscripts
+0 Stagnation
+c Cell
+s Surface
+∞ Free Stream
+
+
+x
+Abbreviations
+AEDC Arnold Engineering and Development Center
+AIAA American Institute of Aeronautics and Astronautics
+ASReG Aerospace Systems Research Group
+ASRI Aerospace Systems Research Institute
+CFD Computational Fluid Dynamics
+CLV Commercial Launch Vehicle
+DNS Direct Numerical Simulation
+FEA Finite Element Analysis
+HEEDS Hierarchical Evolutionary Engineering Design System
+HyROPS Hybrid Rocket Performance Simulator
+LES Large Eddy Simulation
+Missile Datcom Missile Data compendium
+NSWC Naval Surface Warfare Center
+NOL Naval Ordnance Laboratory
+OTR Overberg Test Range
+PyROPS Python Rocket Performance Simulator
+RANS Reynolds-Averaged Navier-Stokes
+SAFFIRE South AFrican First Integrated Rocket Engine
+SST Shear Stress Transport
+STeVe Sub-orbital Test Vehicle
+UKZN University of KwaZulu-Natal
+
+
+xi
+List of Figures
+Figure 1. STeVe Sounding Rocket (Mk 1 Configuration) ........................................................2
+Figure 2. Commercial Launch Vehicle .....................................................................................2
+Figure 3. Laminar to Turbulent Transition Over a Flat Plate (Cengel and Cimbala, 2014) ......5
+Figure 4. Boundary Layer Formation .......................................................................................6
+Figure 5. Graph of Different Wall Functions............................................................................7
+Figure 6. Resolving the Boundary Layer ..................................................................................8
+Figure 7. Prism Layer Formulation with the Boundary Layer Thickness Overlayed ................9
+Figure 8. Boundary Layer Formation Over Prism Layers....................................................... 10
+Figure 9. Instantaneous Velocity Profile at Two Different Timepoints in Steady Flow ......... 13
+Figure 10. Reynolds Decomposition of Instantaneous Velocity for Flow Over a Flat Plate ... 13
+Figure 11. k − ω Blending Function ...................................................................................... 16
+Figure 12. Pressure Drag ........................................................................................................ 18
+Figure 13. Positive Angle of Attack ....................................................................................... 19
+Figure 14. Aerofoil at a Non-Zero Angle of Attack................................................................ 20
+Figure 15. Shock Wave Flow Properties ................................................................................ 21
+Figure 16. Types of Shocks .................................................................................................... 21
+Figure 17. Temperature Profile and Thermal Boundary Layer for a Flat Plate ....................... 22
+Figure 18. Hexahedral (left), tetrahedral (middle), and polyhedral (right) mesh elements (Sosnowski et al., 2019) ......................................................................................................... 26
+Figure 19. Flow through a Cube Residuals (Balafas, 2014).................................................... 27
+Figure 20. Flow around a cylinder, residuals for 45k – 65k elements (Balafas, 2014) ........... 27
+Figure 21. Ansys Poly-hexcore mesh (Ansys, 2020) .............................................................. 29
+Figure 22. Graph of Lift Coefficient vs. Number of Iterations (Zore et al., 2019).................. 30
+Figure 23. Graph of Drag Coefficient vs. Angle of Attack (Zore et al., 2019) ....................... 30
+Figure 24. Spinner and 0.75 Power Law Nose Cone Geometry.............................................. 35
+Figure 25. Missile Datcom Geometry Input (Air Force Research Laboratory, 1998) ............. 37
+Figure 26. Fin Placement (Air Force Research Laboratory, 1998) ......................................... 37
+Figure 27. Fin Cross Section (Air Force Research Laboratory, 1998) .................................... 38
+Figure 28. Dunn Spinner, Dimensions in Calibres (Dunn, 1989) ........................................... 40
+Figure 29. Weinacht and Danberg Spinner (Weinacht and Danberg, 2005) ........................... 40
+Figure 30. Dunn Finner (Dunn, 1989) .................................................................................... 41
+Figure 31. Dunn Modified Finner (Dunn, 1989)..................................................................... 41
+Figure 32. Bhagwandin Modified Finner (Bhagwandin, 2016) .............................................. 42
+Figure 33. Shantz Finner (Shantz and Groves, 1960) ............................................................. 42
+Figure 34. Elvemar Maxus Sketch (Elvemar, 1990) ............................................................... 43
+Figure 35. Anderson Maxis Nose Geometry (Andersson, 1990) ............................................ 43
+Figure 36. Maxus RASAero Nose Cone................................................................................. 44
+Figure 37. Boundary Conditions for Bullet Fluid Domain...................................................... 45
+Figure 38. Graph of Drag Coefficient vs. Mach Number for the Dunn Spinner Validation.... 47
+Figure 39. Star-CCM+ Spinner Mesh at Mach 0.6 ................................................................. 48
+Figure 40. Ansys Fluent Spinner Mesh at Mach 0.6 ............................................................... 48
+Figure 41. Mach Number Plots............................................................................................... 48
+Figure 42. Static Pressure Plots .............................................................................................. 48
+
+
+xii
+Figure 43. Graph of Dunn Spinner Domain Independence at Mach 0.6 ................................. 49
+Figure 44. Graph of Dunn Spinner Mesh Independence at Mach 0.6 ..................................... 49
+Figure 45. Drag Coefficient vs. Mach Number for the Dunn Finner ...................................... 52
+Figure 46. Normal Force Coefficient vs. Angle of Attack for the Dunn Modified Finner ...... 53
+Figure 47. Graph of Normal Force Coefficient vs. Angle of Attack at Mach 1.58 and 0° Roll ............................................................................................................................................... 54
+Figure 48. Graph of Normal Force Coefficient vs. Angle of Attack at Mach 1.58 and 45° Roll ............................................................................................................................................... 55
+Figure 49. Graph of Normal Force Coefficient vs. Angle of Attack at Mach 3.86 and 0° Roll ............................................................................................................................................... 55
+Figure 50. Graph of Drag Coefficient vs. Mach Number........................................................ 56
+Figure 51. STeVe Geometry, as of June 2024 ........................................................................ 59
+Figure 52. Commercial Launch Vehicle ................................................................................. 59
+Figure 53. STeVe Fluid Domain Dimensions......................................................................... 60
+Figure 54. CLV Fluid Domain Dimensions............................................................................ 60
+Figure 55. Meshing Areas ...................................................................................................... 61
+Figure 56. Wake Meshing Areas ............................................................................................ 62
+Figure 57. Boundary Conditions for Bullet Fluid Domain...................................................... 63
+Figure 58. CLV Mesh Independence at Mach 0.6 .................................................................. 65
+Figure 59. CLV Mesh Independence at Mach 1.25 ................................................................ 65
+Figure 60. CLV Mesh Independence at Mach 3 ..................................................................... 66
+Figure 61. CLV Mesh Independence Summary...................................................................... 66
+Figure 62. STeVe Mesh Independence at Mach 0.6 ............................................................... 67
+Figure 63. STeVe Mesh Independence at Mach 1.25 ............................................................. 67
+Figure 64. STeVe Mesh Independence Summary................................................................... 68
+Figure 65. Drag Coefficient vs. Mach Number for STeVe ..................................................... 69
+Figure 66. Drag Coefficient vs. Angle of Attack for STeVe................................................... 70
+Figure 67. Lift Coefficient vs. Angle of Attack for STeVe..................................................... 70
+Figure 68. STeVe Drag Coefficient Summary........................................................................ 71
+Figure 69. Mach Number Plot at Mach 0.6............................................................................. 71
+Figure 70. STeVe Mach Number Plot at Mach 1.25............................................................... 72
+Figure 71. STeVe Mach Number Plot at Mach 3.................................................................... 72
+Figure 72. STeVe Mach Number Plot at Mach 4.3 and 30° Angle of Attack ......................... 72
+Figure 73. CLV Drag Coefficient vs. Mach Number.............................................................. 73
+Figure 74. CLV Drag Breakdown........................................................................................... 74
+Figure 75. Mach Number Plot of CLV at Mach 3.5 ............................................................... 75
+Figure 76. CLV Velocity vs. Time ......................................................................................... 75
+Figure 77. CLV Mach Number and Dynamic Pressure .......................................................... 76
+Figure 78. CLV Drag Force vs. Altitude ................................................................................ 76
+Figure 79. STeVe Velocity vs. Time ...................................................................................... 77
+Figure 80. STeVe Mach Number and Dynamic Pressure ....................................................... 78
+Figure 81. STeVe Drag Force vs. Altitude ............................................................................. 78
+Figure 82. Heat Transfer Coefficient at Mach 0.6 .................................................................. 81
+Figure 83. Heat Transfer Coefficient at Mach 1.5 .................................................................. 81
+Figure 84. Heat Transfer Coefficient at Mach 3 ..................................................................... 82
+
+
+xiii
+Figure 85. Surface Temperature at Mach 0.6.......................................................................... 82
+Figure 86. Surface Temperature at Mach 1.5.......................................................................... 83
+Figure 87. Surface Temperature at Mach 3............................................................................. 83
+Figure 88. Von Kármán Nose Cone Variations ...................................................................... 84
+Figure 89. Heat Transfer Coefficient at Mach 0.6 .................................................................. 84
+Figure 90. Heat Transfer Coefficient at Mach 1.5 .................................................................. 85
+Figure 91. Heat Transfer Coefficient at Mach 3 ..................................................................... 85
+Figure 92. Surface Temperature at Mach 0.6.......................................................................... 86
+Figure 93. Surface Temperature at Mach 1.5.......................................................................... 86
+Figure 94. Surface Temperature at Mach 3............................................................................. 87
+Figure 95. Drag Coefficient for Different Geometries ............................................................ 88
+Figure 96. Mach Number Contour Plots at Mach 0.6 ............................................................. 88
+Figure 97. Mach Number Contour Plots at Mach 1.25 ........................................................... 89
+Figure 98. Mach Number Contour Plots at Mach 3 ................................................................ 89
+Figure 99. Temperature Contour Plots at Mach 3................................................................... 90
+Figure 100. CdA Changing Diameter ..................................................................................... 91
+Figure 101. CdA Changing Length ........................................................................................ 92
+Figure 102. CdA Constant Volume ........................................................................................ 93
+Figure 103. CLV Geometry Comparison................................................................................ 94
+Figure 104. CdA Changing Diameter ..................................................................................... 95
+Figure 105. CdA Changing Length......................................................................................... 96
+Figure 106. CdA Constant Fuselage Volume.......................................................................... 97
+Figure 107. Drag Force Geometry Comparison...................................................................... 98
+Figure 108. Dunn Spinner RASAero STeVe Geometry ....................................................... 114
+Figure 109. Missile Datcom Dunn Spinner Geometry.......................................................... 115
+Figure 110. Dunn Finner RASAero STeVe Geometry ......................................................... 116
+Figure 111. Missile Datcom Dunn Finner Geometry............................................................ 116
+Figure 112. Dunn Modified Finner RASAero STeVe Geometry.......................................... 117
+Figure 113. Missile Datcom Dunn Modified Finner Geometry ............................................ 118
+Figure 114. Shantz Finner RASAero STeVe Geometry ....................................................... 119
+Figure 115. Missile Datcom Shantz Finner Geometry.......................................................... 120
+Figure 116. Hammargren Maxus RASAero STeVe Geometry ............................................. 121
+Figure 117. Missile Datcom Hammargren Maxus Geometry ............................................... 122
+Figure 118. STeVe RASAero STeVe Geometry .................................................................. 123
+Figure 119. Missile Datcom STeVe Geometry ..................................................................... 124
+Figure 120. RASAero CLV Geometry ................................................................................. 124
+Figure 121. Missile Datcom CLV Geometry ........................................................................ 125
+
+
+xiv
+List of Tables
+Table 1. Flow Solver Differences ........................................................................................... 17
+Table 2. Star-CCM+ Thermal Boundary Conditions .............................................................. 23
+Table 3. Iterations required to achieve the same level of convergence (Balafas, 2014) .......... 26
+Table 4. Advantages and Disadvantages of the Different Mesh Elements .............................. 28
+Table 5. Summarised Results from Zore et al. (2019) ............................................................ 30
+Table 6. Literature Details ...................................................................................................... 32
+Table 7. Summary of Mesh Details from the Chosen Literature............................................. 33
+Table 8. RASAero Surface Roughness Options...................................................................... 36
+Table 9. Missile Datcom Surface Roughness Options ............................................................ 38
+Table 10. Missile Datcom Recommended RHR Values ......................................................... 38
+Table 11. Properties of Air for the Validation Cases .............................................................. 44
+Table 12. Turbulence Models for the Validation Cases .......................................................... 45
+Table 13. Boundary Conditions .............................................................................................. 45
+Table 14. Table of the Validation Results............................................................................... 46
+Table 15. Mesh Comparison Table for the Mach 0.6 Mesh .................................................... 47
+Table 16. Key Differences Between Star-CCM+ and Ansys Fluent ....................................... 51
+Table 17. Shantz Finner Validation Data................................................................................ 56
+Table 18. Air Properties for STeVe and CLV CFD ................................................................ 62
+Table 19. Boundary Conditions for STeVe and CLV ............................................................. 63
+Table 20. Elements Required to Achieve Convergence for CLV ........................................... 67
+Table 21. Discretisation Error Factor...................................................................................... 68
+Table 22. CdA Comparison Changing Diameter .................................................................... 92
+Table 23. CdA Comparison Changing Length ........................................................................ 92
+Table 24. CdA Comparison Constant Volume........................................................................ 93
+Table 25. Drag Force Comparison for a Constant Volume..................................................... 94
+Table 26. CdA Comparison Changing Diameter .................................................................... 95
+Table 27. CdA Comparison Changing Length ........................................................................ 96
+Table 28. CdA Comparison for Constant volume ................................................................... 97
+Table 29. Drag Force Comparison for a Constant Volume..................................................... 98
+Table 30. Dunn Spinner RASAero Nose Cone Geometry .................................................... 114
+Table 31. Dunn Spinner RASAero Body Tube Geometry .................................................... 114
+Table 32. Dunn Finner RASAero Nose Cone Geometry ...................................................... 115
+Table 33. Dunn Finner RASAero Body Tube Geometry ...................................................... 115
+Table 34. Dunn Finner RASAero Fin Geometry .................................................................. 115
+Table 35. Dunn Modified Finner RASAero Nose Cone Geometry....................................... 117
+Table 36. Dunn Modified Finner RASAero Body Tube Geometry ...................................... 117
+Table 37. Dunn Modified Finner RASAero Fin Geometry................................................... 117
+Table 38. Shantz Finner RASAero Nose Cone Geometry .................................................... 118
+Table 39. Shantz Finner RASAero Body Tube Geometry .................................................... 118
+Table 40. Shantz Finner RASAero Fin Geometry ................................................................ 119
+Table 41. Hammargren Maxus RASAero Nose Cone Geometry.......................................... 120
+Table 42. Hammargren Maxus RASAero Transition 1 Geometry ........................................ 120
+Table 43. Hammargren Maxus RASAero Body Tube 1 Geometry....................................... 120
+
+
+xv
+Table 44. Hammargren Maxus RASAero Transition 2 Geometry ........................................ 120
+Table 45. Hammargren Maxus RASAero Body Tube 2 Geometry....................................... 120
+Table 46. Hammargren Maxus RASAero Transition 3 Geometry ........................................ 121
+Table 47. Hammargren Maxus RASAero Fin Geometry ...................................................... 121
+Table 48. STeVe RASAero Nose Cone Geometry ............................................................... 122
+Table 49. STeVe RASAero Body Tube Geometry ............................................................... 122
+Table 50. STeVe RASAero Boat Tail and Fin Geometry ..................................................... 123
+Table 51. CLV RASAero Nose Cone Geometry .................................................................. 124
+Table 52. CLV RASAero Body Tube Geometry .................................................................. 124
+
+
+1
+1. Introduction
+The introduction presents a brief background on ASRI, along with an overview of the STeVe
+and CLV rockets. It also outlines the aims, objectives, and structure of the thesis.
+1.1 Background of ASRI
+ASRI (Aerospace Systems Research Institute) was founded in 2009 as a research group,
+formally ASReG (Aerospace Systems Research Group), and is now a research institute based
+within the University of KwaZulu-Natal’s (UKZN) Discipline of Mechanical Engineering. The
+institute has three aims (ASRI, 2024),
+1) “to become a global centre of excellence in aerospace propulsion research and
+development”
+2) “to support South Africa’s space engineering economy”
+3) “to develop skilled human capital in aerospace propulsion engineering.”
+Since its inception in 2009, ASRI has developed a Phoenix series of rockets, which have
+achieved multiple successful launches from the Overberg Test Range (OTR). In March 2021,
+the Phoenix-1B Mk 2-R achieved an apogee of 17.9 km (ASRI, 2021), setting a new African maximum altitude record for a hybrid rocket. The institute has been successful in developing
+rockets, human capital, test facilities, and launch facilities.
+ASRI is currently developing two rockets, namely a Commercial Launch Vehicle (CLV) and a
+sub-orbital sounding rocket, STeVe (Sub-orbital Test Vehicle). STeVe will test the components
+and sub-systems that will later be used in CLV. CLV is an orbital rocket that will carry and
+deploy satellites, representing ASRI’s primary objective. On the path to developing the CLV
+and STeVe launch vehicles, ASRI is also developing a liquid rocket engine called SAFFIRE
+(South AFrican First Integrated Rocket Engine) and a permanent test and launch facility at the
+Overberg Test Range (OTR), among other projects.
+1.2 STeVe (Sub-orbital Test Vehicle) and CLV (Commercial Launch Vehicle)
+STeVe is a single-stage, sub-orbital sounding rocket, powered by a single SAFFIRE liquid
+rocket engine. A sounding rocket is a sub-orbital research rocket, usually with the aim of testing
+equipment and recording measurements. These rockets will carry a payload (such as satellites,
+or scientific instruments), gaining valuable information during launch and in free fall (near the
+apogee of flight).
+STeVe, shown in Figure 1, aims to enable testing of several systems, including the SAFFIRE
+rocket engines, propellant tank and aerostructure technologies, and CLV subsystems. It will
+also build OTR’s space launch capacity, and reach space by achieving an apogee above 100 km.
+STeVe consists of a Von Kármán nose cone, a cylindrical fuselage, and four hexagonal cross
+sectional fins.
+
+
+2
+Figure 1. STeVe Sounding Rocket (Mk 1 Configuration)
+CLV, shown in Figure 2, is a two-stage rocket, powered by nine SAFFIRE engines in the first
+stage and a single SAFFIRE engine in the second stage, designed to orbit the Earth for satellite
+deployment.
+Figure 2. Commercial Launch Vehicle
+At the start of this study, both STeVe and CLV were still in the design phase and both
+geometries were not yet finalised. Notably, for STeVe, the fuselage diameter was yet to be
+confirmed. By July 2024, the initial Computational Fluid Dynamics (CFD) simulations were
+started for both launch vehicles and the respective geometries were used throughout the thesis.
+1.3 Motivation of the Study
+Obtaining the aerodynamic coefficients of a rocket is important to predict the flight trajectory
+and the forces acting on the rocket structure. The aerodynamic coefficients can be accurately
+determined using CFD software, which was the main goal of this study. An external CFD
+simulation to obtain the aerodynamic coefficients had not been performed on STeVe or CLV
+prior to this work.
+The aerodynamic coefficients can also be obtained using semi-empirical methods, such as those
+employed by Missile Datcom or RASAero. The advantage of semi-empirical methods is that
+they have virtually zero computational cost, however, some accuracy is lost when compared to
+CFD simulations. A secondary goal of this study was to compare the semi-empirical methods
+to empirical and CFD results to validate the accuracy and observe the deficiencies of the semi
+empirical methods.
+Both STeVe and CLV will travel at close to hypersonic speeds, where aerodynamic heating
+effects will cause substantial increases in rocket surface temperatures, especially at the nose
+cone. These temperatures must be known and mitigated; therefore, the effects of aerodynamic
+heating were investigated here.
+Since both the launch vehicles were in the design phase during this thesis, the geometries had
+scope to be modified. Both geometries were changed, analysing the effects on drag and heat
+transfer.
+
+
+3
+1.4 Aims and Objectives
+The study had the following aims:
+• Characterise the external flow over the STeVe sounding rocket and CLV rocket using
+CFD and semi-empirical methods.
+• Compare the accuracy of various semi-empirical methods in determining aerodynamic
+coefficients.
+• Investigate the effects of aerodynamic heating on STeVe.
+• Alter the geometry of the launch vehicles to reduce drag and heat transfer.
+The study had the following objectives:
+• Conduct a literature review on external flow theory and CFD, with a specific focus on
+meshing and turbulence modelling.
+• Compare different CFD software options to determine the optimal software to use for
+the study.
+• Create and validate CFD models using existing wind tunnel experimental data, semi
+empirical methods, and other CFD results.
+• Use the validation cases to assess the accuracy of the various semi-empirical methods.
+• Characterise the external flow over the launch vehicles using the validated CFD model
+and semi-empirical methods. ‘Characterise’ entails determining the static aerodynamic
+coefficients for varying Mach numbers and angles of attack.
+• Determine the maximum aerodynamic force acting on STeVe and CLV for a given
+flight trajectory using results from the CFD and semi-empirical results.
+• Determine the surface temperature along the nose cone of STeVe using CFD, and
+compare the results with analytical aerodynamic heating calculations.
+• Alter the geometry of the STeVe nose cone, analysing the effects on surface
+temperature and heat transfer.
+• Alter the geometry of the launch vehicles to analyse the effect on drag.
+1.5 Methodology and Thesis Layout
+The following methodological approach and layout were used for the thesis:
+Literature Review and Theory: Research was done to understand useful concepts for the
+study. This included literature on the entire CFD process (fluid domain creation, meshing,
+choosing physics models), fluid mechanics, turbulence modelling, aerodynamics, and heat
+transfer.
+Model Validation: A CFD model was created for different rocket geometries, and validated
+against wind tunnel experimental data, semi-empirical codes, and other CFD results. Various
+meshing techniques and flow model options were tested in this chapter. The entire method used
+to create the CFD model became part of the process that was later used for simulating STeVe
+and CLV.
+Computational Aerodynamic Analysis of the Launch Vehicles: The launch vehicles were
+simulated using CFD, capturing the static aerodynamic coefficients at desired Mach numbers
+and angles of attack. The entire CFD process is detailed in this chapter.
+
+
+4
+Aerodynamic Characterisation Results: The STeVe and CLV CFD and semi-empirical
+results are presented and discussed, including the static aerodynamic coefficients, and the drag
+forces based on a given trajectory.
+Aerodynamic Heating: CFD methods were used to obtain the heat transfer coefficient and
+surface temperature, which were compared against analytical heat transfer calculations. The impact of changing the STeVe nose cone geometry on heat transfer was then analysed using
+CFD.
+Geometry Modification: Missile Datcom was used to observe trends in drag, when the
+fuselage geometries were varied.
+Conclusion: The main findings and recommendations are discussed, followed by a list of
+potential future work related to this master’s topic.
+
+
+5
+2. Literature Review and Theory
+This chapter discusses important literature and theory regarding the topics of turbulence
+modelling, aerodynamics, aerodynamic heating, meshing, and semi-empirical aeroprediction
+codes.
+2.1 Turbulence Modelling
+Due to the high-speed nature of rocket flight, there will be turbulent flow. This chapter discusses
+when turbulence will occur and how to model turbulent flow using CFD.
+2.1.1 Reynolds Number
+The Reynolds number, Re, is a dimensionless number, defined by the ratio of the inertial forces
+over the viscous forces,
+Rex = ρ ∙ u ∙ x
+μ 2.1
+where ρ is the density (kg/m3),
+u is the fluid velocity (m/s),
+x is the distance along the plate (m), and
+μ is the dynamic viscosity (Pa.s).
+The Reynolds number is used to determine whether a flow is turbulent or not. For external fluid
+flow over a flat plate, after some distance, laminar flow transitions to turbulent flow. This is
+known as the transitional zone, and begins at a Reynolds number of ~5 × 105 for flow over a
+flat plate. After a further distance, the flow leaves the transitional zone and becomes fully
+turbulent. Figure 3 shows the laminar flow transitioning to turbulent flow, indicating the
+boundary layer thickness (δ) and velocity profile.
+Figure 3. Laminar to Turbulent Transition Over a Flat Plate (Cengel and Cimbala, 2014)
+2.1.2 Boundary Layer
+The no-slip condition is a boundary condition in fluid dynamics which states that at a solid
+boundary (a wall), the fluid velocity relative to that wall is zero. At some distance away from
+the wall, the velocity will reach a free stream value (denoted by subscript ∞). The distance away
+from the wall at which the velocity is 99% of the maximum velocity, is called the boundary
+layer thickness, δ99. In other words, when
+
+
+6
+y = δ99 2.2
+the fluid velocity, u, is
+u = 0.99 ∙ u∞ 2.3
+where u∞ is the free stream velocity.
+Therefore, it can be concluded that there exists a velocity gradient in the distance from the
+surface to the free stream, indicated by the blue line in Figure 4. This region, from the surface
+to the free stream, is defined as the boundary layer. It is important to note that there are large
+changes in velocity, temperature, and other flow properties in the boundary layer. The changes
+in flow properties are larger, closer to the surface. These large changes must be accurately
+captured using CFD, which is described in Chapter 2.1.4.
+Figure 4. Boundary Layer Formation
+The total boundary layer thickness can be estimated for external fluid flow using equations for
+flow over a flat plate. The boundary layer has a different thickness for laminar and turbulent
+flow, and that is why it is important to know what type of flow is present. The total boundary
+layer thickness for laminar flow, Re < 5 × 105, can be calculated using the Blasius solution
+(Schlichting, 1979),
+δ99 = 5.0 ∙ x
+√Re 2.4
+The total boundary layer thickness for turbulent flow, Re > 5 × 105, can be calculated using
+the following equation (Cengel and Cimbala, 2014),
+δ99 = 0.38 ∙ x
+Re1
+5
+2.5
+2.1.3 y+ and Wall Functions
+y+ is a dimensionless number that represents the perpendicular distance away from the wall
+used to characterise the regions of flow through the boundary layer. It exists in both reality and
+in CFD, with slightly differing definitions in each context. In reality, y+ is defined as
+y+ = u∗ ∙ ρ ∙ y
+μ 2.6
+where u∗ (m/s) is the friction velocity, and
+y (m) is a perpendicular distance away from the wall.
+99
+ree Stream
+oundary ayer
+
+
+7
+In CFD, the y+ definition uses the distance from the wall to the centre of the first cell as shown
+in Equation 2.7,
+y+ = u∗ ∙ ρ ∙ yc
+μ 2.7
+where yc (m) is the distance from the wall surface to the cell centre, shown later in Figure 8.
+It must be noted that y+ is an output value from a CFD simulation. An initial guess can be made
+for the first layer height, to achieve a desired y+ value. However, it is crucial to remember that
+this is just an initial guess, and the y+ values from the simulation must be monitored, so the
+first layer height can be updated.
+Before discussing the importance of y+, the dimensionless velocity, u+, should be defined,
+u+ = u
+u∗ 2.8
+A graph of u+ vs. y+, highlighting the different wall functions is shown in Figure 5.
+Figure 5. Graph of Different Wall Functions
+In Figure 5, u+ is the non-dimensional velocity tangential to the surface, and y+ is the non
+dimensional perpendicular distance away from the surface. The red line indicates a typical
+velocity profile that would occur in reality. The dashed lines indicate the different relationships
+that aim to fit the typical velocity profile, and are known as ‘wall functions’.
+For y+ values less than 5, the yc value is reduced to resolve the boundary layer without using
+empirical equations. This region is known as the viscous sublayer and the wall function is the
+linear function defined by
+u+ = y+ 2.9
+5 30
+0
+5
+10
+15
+20
+25
+0 1 10 100 1 000
+u+
+y+
+Typical Velocity Profile
+Viscous Sublayer
+Logarithmic Law
+Buffer Layer
+Viscous Sublayer Logarithmic Layer
+y+ = u+
+u+ = 1
+0.41 ln y+ + 5.15
+
+
+8
+For y+ values greater than 30, an empirical equation can be used to fit the velocity profile. This
+region is known as the logarithmic layer and the empirical equation, known as the ‘logarithmic
+law’, is a logarithmic function defined by
+u+ = 1
+K ln y+ + C 2.10
+where K and C are dimensionless constants.
+For y+ values above 5 and below 30, the two discussed wall functions do not fit the velocity
+profile. This region is known as the buffer region. Other wall functions, proprietary to CFD
+solvers, can be used to fit the velocity profile in this region, as well as in the viscous sublayer
+and logarithmic layer. One such unified wall function was developed by Spalding (1961) and
+is defined as follows
+y+ = u+ + e−KC (eKu+ − 1 − Ku+ − 1
+2 (Ku+)2 − 1
+6 (Ku+)3) 2.11
+CFD solvers can automatically switch between wall functions, depending on the y+ value. In
+Star-CCM+ the ‘all y+’ option can be selected, which automatically chooses the correct wall
+function to apply depending on the y+. Star-CCM+ will change the y+ as the solution develops
+to a steady state.
+The difference in how the wall functions resolve the velocity gradient can be shown graphically,
+in Figure 6. The blue points represent a flow property (such as velocity) at the centre of each
+cell.
+Figure 6. Resolving the Boundary Layer
+In the viscous sublayer, the boundary layer is resolved by linearly interpolating values between
+neighbouring cells. The cells must be small enough so that the linear connections between cells
+appear smooth, and that is why the y+ is limited to 5 in this region. For y+ values greater than
+30, the ‘logarithmic law’ resolves the boundary layer by using a non-linear empirical equation
+to interpolate between cells.
+The empirical equations for the y+ regions were developed based on data from flow over a flat
+plate. Therefore, inaccuracies are likely to occur in flows involving adverse pressure gradients,
+flow separation, and curvature. It can be concluded that it is most accurate to aim for y+ values
+less than 5, as empirical equations are not used in this region. However, based on trial and error
+iscous Sublayer
++<5
+ogarithmic ayer
++ > 30
+
+
+9
+from industry, a y+ value of ~1 is targeted, to accurately resolve the boundary layer. This is
+because the transition from the viscous sublayer to the buffer zone varies for different cases (if
+there is flow separation for example). It is therefore a good idea to aim for a y+ further away
+from the transition point to the buffer zone at ~y+ of 5. It is also important to not have a y+
+value that is too small, as this wastes computational resources and may cause problems when
+trying to model turbulent structures near the wall.
+2.1.4 Prism Layers (Inflation Layers)
+Prism layers (sometimes called inflation layers) are small cells near the surface of objects that
+aim to capture the boundary layer formation as described in Chapter 2.1.2. Due to the large
+velocity and temperature gradients near the surface, the cells must be small to capture these
+changes in flow properties. Figure 7 shows a diagram of the prism layers (grey cells) and
+boundary layer thickness (red line) and is useful for the following explanation.
+Figure 7. Prism Layer Formulation with the Boundary Layer Thickness Overlayed
+There is a crucial difference between the total prism layer thickness and the boundary layer
+thickness. The total prism layer thickness, Ypl, is a result of the mesh and only exists in CFD.
+In contrast, the boundary layer thickness, δ99, is a flow phenomenon and exists in reality.
+99
+
+
+10
+Figure 8 shows an exaggerated view of the first few prism cells, and is useful for the following
+explanation.
+Figure 8. Boundary Layer Formation Over Prism Layers
+The prism layer thickness is directly related to y+. Equation 2.7 can be rearranged to calculate
+the distance from the surface to the centre of the first cell, yc, as shown below.
+yc = y+ ∙ μ
+ρ ∙ u∗ 2.12
+CFD software specifies the input of the first layer as the total thickness of the first cell. To
+obtain the total first cell height (yt), yc is doubled, as shown in Equation 2.13:
+yt = 2 ∙ yc 2.13
+The next parameter related to prism layers is the total prism layer thickness, Ypl. The total height
+of all the prism layers should be at least the height of the boundary layer thickness (Figure 7),
+to adequately capture the boundary layer formation. To calculate the total prism layer thickness,
+the growth rate, G, must be defined. The growth rate is the ratio of a larger cell's thickness, to
+its neighbouring smaller cell’s thickness and is constant for all prism layers. Growth rate is
+defined according to Equation 2.14, in terms of the thickness of the nth prism layer.
+G = yt,n
+yt,n−1 2.14
+The total prism layer thickness, Ypl, can be calculated by summing the thickness of each prism
+layer, resulting in a geometric series, as shown in Equation 2.15:
+Ypl = yt,1 + yt,2 + yt,3 + ⋯ + yt,N−1 + yt,N
+= yt,1 + G ∙ yt,1 + G ∙ yt,2 + ⋯ + G ∙ yt,N−2 + G ∙ yt,N−1
+= yt,1 + G ∙ yt,1 + G2 ∙ yt,1 + ⋯ + GN−2 ∙ yt,1 + GN−1 ∙ yt,1
+= ∑ ytGk
+N−1
+k=0
+= yt
+1 − GN 1 − G 2.15
+where N is the number of prism layers,
+yt is the first layer height, and
+
+
+11
+the numbered subscripts denote the nth prism layer.
+The total prism layer thickness can be equated to the total boundary layer thickness, forming
+an equation to calculate G and N, as shown in Equation 2.16:
+Ypl = δ99(L)
+Ypl − δ99(L) = 0
+yt
+1 − GN
+1 − G − 0.38 ∙ x
+Re1
+5
+=0
+2.16
+Since G and N are the only unknows in Equation 2.16, N can be varied while G automatically
+changes to satisfy Equation 2.16.
+All the calculations for first layer height, number of prism layers, and growth rate are based on
+theory from a flat plate and are used as an initial guess. Therefore, it is likely that all those
+parameters should be adjusted for following simulation runs, to achieve the desired distance
+from the wall to the centre of the first cell, or in CFD parlance, y+. This is achieved using two
+new factors: the first layer height factor, ffl, and total prism layer thickness factor, ftl. The first
+layer height factor adjusts the theoretical calculation for the first layer height as shown in
+Equation 2.17:
+yt,adjusted = ffl ∙ 2 ∙ yc 2.17
+where yt,adjusted is the new first prism layer height.
+If ffl is 1, there is no adjustment. If ffl is less than one, then the first cell thickness would be
+smaller than the theoretical value. If ffl is greater than one, then the first cell thickness would
+be larger than the theoretical value. The first layer factor can be increased to increase y+, and
+decreased to decrease y+.
+The total prism layer calculation is affected by the first layer factor as shown in Equation 2.18:
+Ypl,adjusted = yt,adjusted
+1 − GN
+1 − G 2.18
+where Ypl.adjusted is the new total prism layer thickness based on the first layer height factor.
+The total prism layer thickness factor adjusts the theoretical calculation for the total boundary
+layer thickness as shown in Equation 2.19:
+δ99,adjusted(L) = ftl
+0.38 ∙ L
+Re1
+5
+2.19
+where δ99,adjusted(L) is the new total boundary layer thickness, based on the total layer height
+factor.
+This adjusted total boundary layer thickness and adjusted boundary layer thickness can be
+equated to form Equation 2.20:
+Ypl,adjusted = δ99,adjusted(L)
+Ypl,adjusted − δ99,adjusted(L) = 0
+yt,adjusted
+1 − GN
+1 − G − ftl
+0.38 ∙ L
+Re1
+5
+= 0 2.20
+
+
+12
+As shown in Equation 2.18, the total prism layer thickness is a function of G and N. An Excel
+solver was created to satisfy Equation 2.20, while adjusting G, for a user input of N. If ftl is
+less than 1, then Ypl,adjusted decreases and G decreases, and vice versa. If N is decreased, then
+G increases, and vice versa.
+In summary, the user can input the number of prism layers, the first layer height factor, and the
+total layer height factor. The changes in growth rate, first layer height, and total prism layer
+thickness can then be observed. Based on the y+ results from CFD, the user inputs can then be
+adjusted to achieve the desired y+ value.
+2.1.5 Turbulence Modelling
+The Navier-Stokes equations describe all fluid flow, including turbulence and instantaneous
+velocity fluctuations. However, the equations have no analytical solution due to their
+complexity. There are two methods to apply the Navier-Stokes equations in CFD: either solving
+them numerically or reducing and simplifying them before solving. This chapter examines these
+methods to simulate turbulent flow.
+Due to the high Reynolds number flow that occurs in external airflow over rockets, there will
+be turbulent flow, which CFD turbulence models aim to capture. Three main approaches are
+used to model turbulence: Direct Numerical Simulation (DNS), Large Eddy Simulation (LES),
+and Reynolds Averaged Navier-Stokes (RANS).
+DNS: It is possible to model turbulent flow by solving the Navier-Stokes equations numerically,
+and not rely on turbulence modelling. This is the principle behind DNS, which requires large
+computational resources. No information is available regarding the exact computational cost of
+DNS, except that the computational cost is orders of magnitude larger than RANS. Therefore,
+DNS was not chosen for this study.
+LES: LES is a simpler version of DNS, as it separates the flow into large and small-scale
+turbulent structures. LES aims to capture the larger turbulent structures, while ignoring the
+smaller turbulent structures. This reduces mesh size, since the smaller cells required to model
+smaller turbulent structures are ignored. However, solution accuracy is not sacrificed, since
+most of the turbulent kinetic energy is contained in the large turbulent structures. Even though
+computational resources are saved using this method, LES is still far too computationally
+demanding for this study.
+RANS: RANS differs from DNS and LES, as it aims to model the entire flow, and not directly
+resolve the turbulent structures. In reality, for steady, turbulent flow, the velocity profile in a
+specific area at a point in time is never going to be exactly the same as the velocity profile in
+that same area at a different point in time. The velocity profile at a point in time is defined as
+the instantaneous velocity profile. In other words, the instantaneous velocity profile varies with
+time in steady flow, as shown for steady flow over a flat plate at two time points, t1 and t2, in
+Figure 9.
+
+
+13
+Figure 9. Instantaneous Velocity Profile at Two Different Timepoints in Steady Flow
+When analysing fluid flow, the instantaneous velocity profile is not useful; rather, it is the
+average velocity profile that is used for analysis. The average velocity profile is obtained by
+averaging all instantaneous velocity profiles over time. This can be determined using Reynolds
+decomposition, which splits the instantaneous velocity into its average and fluctuating components,
+u = ̅u + u′ 2.21
+where u is the instantaneous velocity,
+̅u is the average velocity component, and
+u′ is the fluctuating velocity component.
+The instantaneous velocity can be rewritten in vector form,
+⃗u = [
+u v w
+]=[
+̅u + u′ v̅ + v′ ̅w + w′
+] 2.22
+The Reynolds decomposition can be represented graphically as shown in Figure 10.
+Figure 10. Reynolds Decomposition of Instantaneous Velocity for Flow Over a Flat Plate
+For this explanation of Reynolds decomposition, velocity was used; however, other flow
+variables (pressure, density, or temperature) can also be used. Reynolds decomposition of the
+instantaneous velocity can be applied to the Navier-Stokes Equations to obtain the Reynolds
+Averaged Navier-Stokes (RANS) set of equations, which are listed below:
+12
++=
+
+
+14
+The conservation of mass (continuity equation):
+∇ ∙ ⃗̅u = 0 ∂ ̅u
+∂x + ∂v̅
+∂y + ∂ ̅w
+∂z = 0 2.23
+∇ ∙ ⃗ ⃗u⃗ ′ = 0 ∂u′
+∂x + ∂v′
+∂y + ∂w′
+∂z = 0 2.24
+The conservation of momentum (momentum equation) in the x direction only:
+ρ (∂ ̅u
+∂t + ̅u ∂ ̅u
+∂x + v̅ ∂ ̅u
+∂y + ̅w ∂ ̅u
+∂z + ∂u′u′
+̅̅̅̅̅
+∂x + ∂u′v′
+̅̅̅̅̅
+∂y + ∂u′w′
+̅̅̅̅̅̅
+∂z )
+= − ∂p̅
+∂x + μ (∂2 ̅u
+∂x2 + ∂2 ̅u
+∂y2 + ∂2 ̅u
+∂z2) + ρax
+2.25
+where ⃗u is the flow velocity vector, defined in terms of the cartesian velocity components, and
+⃗u = uxî + uyĵ + uz ̂k 2.26
+∇ is the standard derivative of a vector,
+∇= ∂
+∂x î + ∂
+∂y ĵ + ∂
+∂z ̂k 2.27
+The momentum equation contains three terms,
+∂u′u′
+̅̅̅̅̅
+∂x + ∂u′v′
+̅̅̅̅̅
+∂y + ∂u′w′
+̅̅̅̅̅̅
+∂z 2.28
+which are referred to as the ‘Reynolds stresses’. Unlike the other terms in the momentum
+equation, the Reynolds stresses depend on the turbulent velocity fluctuations. The process of
+approximating the Reynolds stresses is referred to as ‘closing the turbulence model’, which is
+described in the following chapter.
+2.1.6 Closing the Turbulence Model
+The turbulence model in the RANS momentum equation must be closed. To do this, the
+Reynolds stresses are approximated using one of three broad models: the Eddy-Viscosity
+Model, the Non-Linear Eddy-Viscosity Model, or the Reynolds Stress Model.
+Eddy-Viscosity Model: The Eddy Viscosity Model introduces a term called the eddy viscosity,
+μt, (also known as the turbulent viscosity) to determine the Reynolds stresses. Boussinesq,
+1877, pioneered this method, and showed that the Reynolds stresses can be determined using
+the following equation,
+−ρu′u′
+̅ ̅ ̅ ̅ ̅ ̅ = μt [(∇⃗u) + (∇⃗u)T − 1
+3 (∇ ∙ ⃗u)I] − 2
+3 ρkI 2.29
+where k is the turbulent kinetic energy in J/kg, and
+I is the identity matrix.
+To calculate the Reynolds stresses, the eddy viscosity term must first be calculated. There are various methods to calculate the eddy viscosity term, which are discussed later in Chapter 2.1.7.
+
+
+15
+Reynolds Stress Model (RSM): The RSM (also known as the Reynolds Stress Transport
+Model) does not assume a linear or non-linear relationship to calculate the Reynolds stresses,
+unlike the eddy viscosity models. The RSM uses a separate transport equation to solve for each
+Reynolds stress term. The RSM is physics based and can be highly accurate; however, the RSM
+is resource intensive.
+Non-Linear Eddy Viscosity Model: The non-linear eddy viscosity model uses the same
+principles as the eddy viscosity model. However, the equation used to determine the Reynolds
+stresses uses a non-linear function. The standard Eddy Viscosity Model uses a linear function,
+as shown in Equation 2.29.
+Due to the higher computational resources required to use Reynolds stress transport models and
+non-linear eddy viscosity models; eddy viscosity models were chosen for use in this study.
+2.1.7 Eddy Viscosity Models
+Eddy viscosity models are a class of turbulence model that approximate the eddy viscosity term,
+to determine the Reynolds stress terms. There are three broad categories of eddy viscosity
+models: Algebraic models, one equation models, and two equation models.
+Algebraic Models (Zero Equation Models): Solutions to additional equations are not
+required. The eddy viscosity term can be directly calculated using flow variables. These models
+are too simple for most flow cases. Two common algebraic models are the ‘ aldwin- omax’ model and the ‘Cebeci-Smith’ model.
+One Equation Models: One additional transport equation is introduced. The most common
+one equation model is ‘Spalart-Allmaras’, which solves for the turbulent kinematic viscosity,
+νt. Spalart Allmaras was developed for the aerospace industry involving wall-bounded and
+aerodynamic flows, and can also perform well with adverse pressure gradients. It is
+recommended to aim for a y+ of ~1 when using Spalart Allmaras.
+Two Equation Models: Two additional transport equations are introduced. The three most
+popular two equation models (which have become the industry standard turbulence models) are
+the k − ε, k − ω, and the k − ω SST (Shear Stress Transport) models.
+k − ε is most accurate in modelling flow in the free stream; however, it is inaccurate when
+modelling adverse pressure gradients and shock waves. Two variables, k and ε, must be
+determined to calculate the eddy viscosity,
+μt = Cμ
+ρk2
+ε 2.30
+where Cμ is a model coefficient, and
+ε is the turbulence dissipation rate (J/kg.s).
+k − ω is most accurate in modelling flow near the wall, separation, and adverse pressure
+gradients. ω (s-1) is the specific turbulence dissipation rate and is related to ε by
+ω= ε
+Cμk 2.31
+Here, ε and ω describe the same flow principle, the turbulence dissipation rate. The two
+transport equations for k − ω and k − ε are very similar. However, for the second transport
+equation, k − ω solves for ω, and k − ε solves for ε. The main difference between the two
+
+
+16
+models is that k − ε requires the use of damping functions in the viscous sublayer, and these
+damping functions do not perform well for adverse pressure gradients and flow separation.
+k − ω SST is a two-equation model that is the most widely used turbulence model in industry.
+k − ω SST is a combination of the k − ω and k − ε models, where k − ε is used to model flow
+in the free stream and k − ω is used to model flow near the wall. To transition between k − ω
+near the wall and k − ε in the free stream, a blending function is introduced. The blending
+function, F, has a value of 0 near the wall, and a value of 1 in the free stream, and (in Star
+CCM+) is defined as follows,
+F = tanh(arg) 2.32
+where F is the blending function, and
+arg is a function that is analogous to the distance away from the wall, and is not
+discussed in this thesis.
+The operation of the blending function is shown in Figure 11. For values close to the wall, k −
+ω is used, and for values in the free stream, k − ε is used.
+Figure 11. k − ω Blending Function
+2.1.8 Transition Zone Modelling
+Transition zone models aim to improve the accuracy of simulations in the transition region
+(Re ≅ 5 × 105), where the flow is neither fully turbulent nor laminar. These models are most
+useful for flow that transitions at a point further from the ends of a body. For example, flow at
+Mach 2 will enter the transition zone after ~11 mm. In this case, the flow will become turbulent
+so quickly that it becomes unnecessary to accurately model the transition zone, as the flow will
+be turbulent for over 99% of a 5 m long rocket. Therefore, for high-speed external flows,
+transition zone models are not required.
+2.1.9 Coupled and Segregated Flow Solvers
+Flow solvers in CFD affect how the governing (transport) equations are solved, which in turn
+affects solution speed, accuracy, and the resources required. Two types of flow solvers can be
+used: segregated and coupled solvers. Segregated solvers (pressure-based solvers) solve the
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+01234
+F
+arg
+k − ω close to the wall
+k − ε in the free stream
+
+
+17
+transport equations sequentially, while coupled solvers (density-based solvers) solve the
+transport equations simultaneously. The differences between coupled and segregated solvers
+are summarised in Table 1.
+Table 1. Flow Solver Differences
+Segregated (Pressure-Based) Solver Coupled (Density-Based) Solver
+Less memory More memory
+Incompressible flows Compressible flows
+Low-speed flows High-speed flows
+Simple geometries Complex geometries
+Less robust: Can encounter instabilities as
+the problem's complexity increases.
+More robust: Unlikely to encounter
+instabilities as the problem's complexity
+increases.
+Solves faster, in general. Unless the problem
+is complex
+Solves slower, in general. Unless the
+problem is complex
+More iterations are required to achieve
+convergence
+Fewer iterations are required to achieve
+convergence
+Does not solve any equation simultaneously
+Solves the continuity, momentum, and
+energy equations simultaneously (coupled)
+Solves the turbulence equations sequentially
+(segregated)
+A coupled solver was used for this study as coupled solvers are suited for high-speed external
+aerodynamics. If there was difficulty in achieving convergence for an initial run, then a
+segregated solver was used to obtain an initial solution, before switching to a coupled solver to
+obtain the final results.
+2.2 Aerodynamics
+Aerodynamics is the study of the interaction of air flowing over bodies. The following chapters
+describe important concepts in aerodynamics, relevant to this study.
+2.2.1 Drag
+Drag is the force that acts parallel and opposite to the relative motion of the fluid around an
+object, through the centre of pressure of the object. Three factors affect drag: the object
+geometry, the relative velocity of the object in the fluid, and the fluid properties. Multiple kinds
+of drag force arise when analysing rocket flight, which are described below. Firstly, the total
+drag can be decomposed into skin friction drag and pressure drag.
+Skin friction drag: this is a result of the friction between the fluid and the object moving
+through the fluid. Due to the differences in velocity between the fluid layers (in the boundary
+layer), there are viscous shear forces between the layers, resulting in friction drag.
+Pressure drag (form drag): This is caused by the pressure difference between the leading and
+trailing sections of an object. There is a stagnation point at the leading edge of an object, where
+the dynamic pressure is converted into static pressure, resulting in a high pressure zone at the
+
+
+18
+leading edge. Often there are sharp angles at the trailing section of objects, where the fluid
+separates from the object's surface. This creates a wake (recirculation zone) at the trailing
+section of the object, resulting in a low static pressure. Due to the pressure difference, the object
+is ‘pushed’ in the direction of high-to-low pressure, which opposes the motion of the object, as
+shown in Figure 12. Pressure drag can also be decomposed further into wave drag and base
+drag.
+Figure 12. Pressure Drag
+Wave drag: This is a type of pressure drag caused by shock wave formation in transonic and
+supersonic flight. Wave drag is a sudden and large increase in drag when shock waves are
+present (typically around Mach 0.8), and the onset of wave drag can easily be seen in drag
+coefficient vs. Mach number plots. Wave drag is directly proportional the cross-sectional area
+of the object (Whitcomb, 1960) and is independent of viscous effects in the fluid. To reduce
+wave drag, the object’s cross-sectional area should ideally be as small as possible and have
+smooth changes in cross-sectional area along the length of the object.
+Base drag: This is a type of pressure drag that is caused by sharp angles at the trailing edges
+of objects. When objects have blunt trailing edges, a wake forms behind the trailing face of the
+object, creating an area of low static pressure. This pressure difference typically exerts a force
+in a direction opposite to that of the object’s travel. Base drag can be reduced by creating a
+‘boat tail’ shape at the trailing edge of an object to reduce flow separation.
+There are two additional kinds of drag: lift induced drag and interference drag. These kinds of
+drag both form part of pressure and skin friction drag; however, neither fits entirely into a single
+category.
+Lift induced drag: This is a result of lift and occurs at the rocket fins at a non-zero angle of
+attack. Due to the angled fins, on one side of the fin there is a high-pressure zone, and a low
+pressure zone on the other side of the fin. This creates a flow from the high-pressure side, along
+the fin, towards the tip, around the tip, and along the low-pressure side of the fin. This results
+in vortices at the fin tip, which forces the fluid near the fin tip from the high-pressure side to
+the low-pressure side of the fin. Lift induced drag in rockets is only a concern if the fins are
+canted or the rocket is at a non-zero angle of attack.
+Interference drag: This is when fluid flowing across one section of the aircraft mixes with
+fluid flowing from another section of the aircraft. This occurs when there are junctions between
+different geometries, such as the junction of the fins and the rocket body in rockets.
+igh Static ressure ow Static ressure
+Drag orce
+igh to ow
+
+
+19
+2.2.2 Lift
+Lift acts perpendicular to the relative motion of the fluid around an object, through the centre
+of pressure. In rocketry, lift will only occur at non-zero angles of attack.
+2.2.3 Angle of Attack
+The angle of attack, α, is the difference in the angle between the relative fluid velocity and the
+axial line through the rocket body (or chord line). A positive angle of attack is when the aircraft
+is pitched up, relative to the fluid velocity, and a negative angle of attack is when the aircraft is
+pitched down, relative to the fluid velocity. Figure 13 shows a positive angle of attack for a
+rocket.
+Figure 13. Positive Angle of Attack
+2.2.4 Axial and Normal Force
+The drag force acts parallel with the relative motion of the fluid around an object, through the
+centre of pressure. In contrast, the axial force acts parallel with the length of the object (or chord
+line), through the centre of pressure. The lift force acts perpendicular to the relative motion of
+the fluid around an object, through the centre of pressure. In contrast, the normal force acts
+perpendicular to the length of the object (or chord line), through the centre of pressure.
+At 0° angle of attack, the axial force is equal to the drag force, and the normal force is equal to
+the lift force. When the angle of attack changes, the lift, drag, normal, and axial forces are
+related by the following set of equations:
+FL = FN cos(α) − FA sin(α) 2.33
+FD = FN sin(α) + FA cos(α) 2.34
+FN = FL cos(α) + FD sin(α) 2.35
+FA = −FL sin(α) + FD cos(α) 2.36
+where FL, FD, FN, and FA are the lift, drag, normal, and axial force respectively.
+Figure 14 shows a labelled aerofoil, indicating the normal, axial, drag and lift forces when the
+aerofoil is pitched to a certain angle of attack.
+cog
+cop cog - centre of gravity
+cop - centre of pressure
+
+
+20
+Figure 14. Aerofoil at a Non-Zero Angle of Attack
+2.2.5 Aerodynamic Coefficients
+Aerodynamic coefficients can be categorised into either static or dynamic coefficients. Static
+coefficients characterise the aircraft aerodynamics at constant and steady flow properties. These
+coefficients can be used for the initial response of the aircraft, or if the aircraft only makes
+gradual changes in its orientation during its flight. Dynamic coefficients characterise the aircraft
+aerodynamics in unsteady flow conditions and relate to aircraft stability.
+If an aircraft is performing a rapid manoeuvre, the next iteration depends not only on the current
+flow properties, but also on the flow properties of the previous iteration. This is where dynamic
+coefficients, such as the roll/pitch/yaw damping moment coefficients are used. Dynamic
+coefficients were outside of the scope of this study, therefore only static coefficients were
+analysed.
+The drag, lift, normal, and axial force coefficients are non-dimensional, static coefficients used
+to characterise aircraft performance and are calculated using the same equation,
+Cx = 2 ∙ Fx
+ρ ∙ A ∙ u2 2.37
+where Fx (N) is the chosen force to analyse,
+Cx is the corresponding coefficient, and
+A (m2) is the object’s reference area (often the largest fuselage section, in rocketry).
+2.2.6 Dynamic Pressure
+Dynamic pressure is the pressure as a result of a fluid’s velocity, and is defined by
+q=1
+2 ∙ ρ ∙ u2 2.38
+The dynamic pressure is a non-negative quantity, as fluid density and velocity are non-negative
+quantities. At take-off, the rocket velocity is at zero, so according to Equation 2.38, the dynamic
+pressure is zero. Once the rocket reaches space, the fluid density is zero, so according to
+Equation 2.38, the dynamic pressure is zero. Therefore, there exists a point in the rocket flight
+where there is a maximum dynamic pressure. This point is known as ‘max q’.
+Max q is the limiting factor for the structural design of the rocket, because the maximum
+mechanical stress occurs at max q. Determining max q and the maximum stress on the rocket
+is crucial for designing its structure. If the maximum stress is under-predicted, then the rocket
+could undergo catastrophic failure during flight. If the maximum stress is over-predicted, then
+cop
+
+
+21
+the rocket structure would be over-engineered, resulting in a lower payload capacity than what
+could have been achieved. CFD can be used to determine the forces that the rocket would
+undergo during flight.
+2.2.7 Shock Waves
+Qualitative analysis can be very useful when analysing the flow phenomena in high-speed
+external aerodynamics. In supersonic flight, the flow phenomenon that is largely responsible
+for drag is shock waves, which are unavoidable when travelling at supersonic speeds. A shock
+wave can be characterised by a discontinuous and abrupt increase in the Mach number, pressure,
+temperature, and density shown in Figure 15.
+Figure 15. Shock Wave Flow Properties
+Shock waves can be categorised into three types, by the shape formed: Normal, oblique, and
+bow shocks, as pictured in Figure 16. Normal shocks propagate perpendicular to the flow
+direction. Oblique shocks propagate at some angle (0° < θ < 90°) to the flow direction, and
+form at the nose tip, leading edges, or any sharp geometric change on a rocket body. Bow
+shocks (detached shocks) form at a distance from the leading edge of an object, due to the large
+rounded leading edge of the object, and unlike normal and oblique shocks, bow shocks are
+curved.
+Figure 16. Types of Shocks
+The rocket geometry can be adjusted to allow for the formation of either oblique or bow shocks.
+Bow shocks produce greater drag than oblique shocks, and this can be useful when slowing
+down an object, such as for capsule re-entry. However, this is extremely detrimental for STeVe
+and CLV.
+p stream Down stream
+Shock ave
+low Direction
+1>1
+1 1 1 1
+2< 1
+2> 1 2> 1 2> 1
+2< 1
+12
+1 2 12
+low Direction
+Normal Shock Oblique Shock ow Shock
+
+
+22
+2.3 Aerodynamic Heating
+Aerodynamic heating is when the temperature of the air surrounding an object increases due to
+stagnation and viscous effects.
+• Stagnation effects: When a fluid is slowed down, the fluid’s kinetic energy is
+transferred into thermal energy (heat) into the surrounding fluid.
+• Viscous effects: In the boundary layer, the flow increases in velocity as the distance
+away from the wall increases. Due to this velocity difference, there is friction between
+neighbouring fluid layers, which causes the surrounding fluid to be heated.
+The impact of aerodynamic heating becomes more of a problem as the velocity increases,
+because stagnation and viscous heating effects both increase with velocity. The areas on a
+rocket where aerodynamic heating would be greatest are the parts that first contact the
+oncoming flow, such as the nose cone and fins. This is because stagnation heating contributes
+more to the maximum temperature than viscous heating.
+As a part of this master's study, the heat transfer and surface temperature distribution were
+analysed for the nose cone of STeVe. The effects of aerodynamic heating were analysed using
+CFD, with the required theory detailed in this chapter.
+2.3.1 Thermal Boundary Layer
+Previous mention of boundary layer theory in Chapter 2.1.2 only discussed the velocity profile.
+However, similarly to the velocity boundary layer, there also exists a thermal boundary layer,
+and temperature profile, as shown in Figure 17.
+Figure 17. Temperature Profile and Thermal Boundary Layer for a Flat Plate
+Unlike the velocity profile, which has a zero velocity at the wall, the temperature is at a
+maximum at the wall. For clarification, the temperature at the wall refers to the temperature of
+the first cell, nearest the wall, which is different to the wall temperature, which is the
+temperature of the solid wall. In reality, there is a temperature gradient across the wall.
+However, for this analysis, the temperature across the wall will be considered uniform.
+2.3.2 Thermal Boundary Condition
+In reality, heat is transferred via convection from the fluid to the rocket body, and heat is
+transferred via conduction through the rocket wall. A transient conjugate heat transfer analysis should be performed to simulate this accurately. This would require meshing the rocket shell
+along with the fluid domain. The rocket surface temperature, as well as the heat flux into the
+99
+ree Stream
+oundary ayer
+
+
+23
+rocket surface, could then be determined. However, performing such a simulation would be
+computationally intensive, and would still require an assumption of what the inner rocket
+temperature would be during flight. Therefore, only the fluid was simulated, with a thermal
+boundary condition on the rocket surface. The following thermal boundary conditions, shown
+in Table 2, are available for selection in Star-CCM+:
+Table 2. Star-CCM+ Thermal Boundary Conditions
+Thermal Boundary Condition Specification
+Heat flux The amount of energy flowing across the boundary in
+W/m2.
+Heat source The heat source in W.
+Temperature The boundary temperature in K.
+Adiabatic There is no energy flowing across the boundary.
+Therefore, there is no heat flux.
+Convection
+The convection flux across the boundary in W/m2. The
+ambient temperature, heat transfer coefficient, and
+thermal resistance are required as input.
+2.3.3 Heat Transfer Coefficient
+There are three modes of heat transfer: convection, conduction, and radiation. Due to the high
+velocity flow present is aerodynamic heating, forced convection is the dominant heat transfer
+mode. The convective heat transfer coefficient can be determined using CFD as follows.
+Newton’s law of cooling, for convection, provides the equation for the rate of heat transfer,
+Q = h ∙ A ∙ (Ts − Tref) 2.39
+where Q is the rate of heat transfer in W,
+h is the convective heat transfer coefficient in W/m2.K,
+A is the cross-sectional area where heat transfer occurs in m2,
+Tref is the reference temperature in K, and
+Ts is the surface (wall) temperature in K.
+A more useful quantity, called the heat flux, can be defined to represent the rate of heat transfer
+per unit area,
+q=Q
+A = h ∙ (Ts − Tref) 2.40
+where q is the heat flux in W/m2.
+In Star-CCM+, the convective heat transfer is modelled locally based on the following equation,
+q = ρ ∙ Cp ∙ u∗
+T+ ∙ (Ts − Tc) 2.41
+where Tc is the near wall cell temperature in K, and
+T+ is the dimensionless temperature. T+ is a function of y+ and the Prandtl number,
+and is calculated differently, depending on the chosen wall function and y+ value.
+
+
+24
+In Star-CCM+, the heat transfer coefficient can be obtained using four methods, each described
+below.
+1) Local heat transfer coefficient:
+Equation 2.40 and 2.41 can be equated to solve for h.
+h1 = ρ ∙ Cp ∙ u∗
+T+ 2.42
+Equation 2.40 can be used to solve for the reference (free stream) temperature,
+Tref,1 = Ts − q
+h1 2.43
+T+ is dependent on the near wall y+ for this method, and is therefore sensitive to any mesh
+changes.
+2) Specified y+heat transfer coefficient:
+This method calculates h and Tref using the same as method one. However, the y+ value is
+user inputted. This gives the user more control when setting a reference temperature. For
+completeness, the equations for h2 and Tref,2 are provided below
+h2 = ρ ∙ Cp ∙ u∗
+T+ 2.44
+Tref,2 = Ts − q
+h2 2.45
+According to the Star-CCM+ user’s manual, this method is less dependent on the mesh than
+method one, and the user specified y+ value should be less than 150 (with a y+ of 100 shown
+to work well).
+3) Heat transfer coefficient:
+This method calculates the local heat flux using Equation 2.41. Equation 2.40 can then be used
+to calculate the heat transfer coefficient based on a user specified reference temperature, Tref,3
+h3 = q
+Ts − Tref,3 2.46
+Since q is calculated first, h will be zero when using an adiabatic thermal boundary condition
+with this method. This is because Ts = Tc for an adiabatic thermal boundary condition, and
+therefore q = 0. According to the Star-CCM+ user’s manual, this method is “primarily used
+for comparing the heat transfer coefficients to experimental data and or other previous work”.
+4) Virtual local heat transfer coefficient:
+The energy equation is not solved, and only flow field values are used in calculating the heat
+transfer coefficient
+h4 = ρ ∙ Cp,user ∙ u∗
+T+ 2.47
+The user inputs the fluid specific heat ratio and the Prandtl number. According to the Star
+CCM+ user’s manual, this method should not be used for laminar flows.
+
+
+25
+There are two important facts to remember when choosing a heat transfer coefficient and a
+reference temperature. Firstly, “there is an infinite number of heat transfer coefficient and
+reference temperature combinations that give the same surface heat flux upon convergence”
+(Siemens, 2023b). Secondly, the choice of heat transfer coefficient will not affect the rest of the
+simulation.
+Since there is an infinite number of heat transfer coefficient and reference temperature pairs, a
+user specified h or Tref can be used to find a ‘complete pair’ based on an existing pair.
+q1 = q2
+h1(Ts − Tref,1) = h2(Ts − Tref,2) 2.48
+This also means that comparing heat transfer coefficients between different methods is not
+useful, unless the heat transfer coefficient and reference temperature pairs are known, and there
+is heat transfer occurring (q ≠ 0).
+2.3.4 Recovery Factor
+When free stream flow contacts a surface, the fluid is slowed down. The kinetic energy of the
+fluid is converted into thermal energy (heat), and the temperature near the surface increases.
+The stagnation temperature, T0, is defined as the temperature the fluid would be if it is slowed
+down to zero velocity. In this case, all the kinetic energy from the fluid is converted into thermal
+energy.
+T0 = T∞ (1 + γ − 1
+2 ∙ M∞) 2.49
+In reality, it is not possible for all the kinetic energy from the fluid to be converted into heat. In
+other words, the stagnation temperature will never be reached. The actual temperature at an
+adiabatic wall is defined as the adiabatic wall temperature, Taw.
+Based on the previous definitions, a parameter called the recovery factor, r, can be defined as
+r = Taw − T∞
+T0 − T∞
+2.50
+The recovery factor can be thought of as how close the actual temperature is to the stagnation
+temperature or how much of the kinetic energy has been recovered as thermal energy. Using
+the recovery factor and stagnation temperature definitions, the adiabatic wall temperature can
+be written in terms of M∞ and T∞,
+Taw = r ∙ (T0 − T∞) + T∞
+Taw = r ∙ (T∞ (1 + γ − 1
+2 ∙ M∞) − T∞) + T∞
+Taw = r ∙ T∞ ∙ (1 + γ − 1
+2 ∙ M∞ − 1) + T∞
+Taw = r ∙ T∞ ∙ M∞ ∙ γ − 1
+2 + T∞
+Taw = T∞ ∙ (r ∙ M∞ ∙ γ − 1
+2 + 1) 2.51
+The recovery factor from CFD can be used to approximate the wall temperature at flight
+conditions, based only on the free stream temperature at which that Mach number occurs. The
+application of this method is shown in Chapter 6.
+
+
+26
+2.4 Meshing
+Creating a mesh is one step, if not the most crucial in the CFD process. CFD functions by
+dividing the fluid volume into a finite number of small elements, called a mesh. The mesh will
+influence convergence, accuracy, precision, and the speed of the simulation. Due to the
+importance of mesh selection, this chapter of the literature review presents and analyses
+research on different elements, methods, and software that can be used in the meshing process.
+2.4.1 Types of Mesh Elements
+The most common three-dimensional meshing elements available are hexahedral, tetrahedral,
+and polyhedral elements, as shown in Figure 18 (Sosnowski et al., 2019). In this chapter,
+literature examining the effectiveness of the different meshing elements is provided, beginning
+with a brief description of the elements:
+1) Hexahedral: Elements with 6 quadrilateral faces, 8 vertices, and 12 edges.
+2) Tetrahedral: Elements with 4 triangular faces, 4 vertices, and 6 edges.
+3) Polyhedral: Elements with more than 4 polygonal faces.
+Figure 18. Hexahedral (left), tetrahedral (middle), and polyhedral (right) mesh elements
+(Sosnowski et al., 2019)
+Balafas (2014) analysed hexahedral, tetrahedral, and polyhedral mesh generation for CFD
+applications, to determine the efficiency and quality of polyhedral elements. He used two cases
+to compare the different meshes: laminar flow through a cube, and laminar flow around a
+cylinder. The number of iterations required to achieve a certain level of convergence was
+determined for the flow through the cube, and is shown in Table 3. The tetrahedral mesh took
+roughly 9.5 times the number of iterations to achieve a solution, compared to the hexahedral
+mesh. The tetrahedral mesh also had roughly 4.6 times the number of elements, compared to
+the hexahedral mesh. The hexahedral mesh had ~0.4% fewer elements and took ~17% fewer
+iterations to converge, compared to the polyhedral mesh.
+Table 3. Iterations required to achieve the same level of convergence (Balafas, 2014)
+Mesh type Number of Cells Iterations to Convergence
+Tetrahedral 6168 229
+Polyhedral 1336 28
+Hexahedral 1331 24
+A residual is the leftover value that arises when solving the governing equations in CFD. It is a
+measure of the convergence of the solution, where a low residual indicates that the solution has
+
+
+27
+converged and there is a low convergence error. In a simulation, each cell contains a residual
+value for each governing equation; however, the residuals for each governing equation are
+averaged (using various methods) over the entire fluid domain to easily assess convergence.
+Figures 19 and 20 show the residuals for the flow through the cube and around the cylinder
+respectively. The residuals for the polyhedral and hexahedral meshes were both similar, while
+the tetrahedral mesh residuals were much higher.
+Figure 19. Flow through a Cube Residuals (Balafas, 2014)
+Figure 20. Flow around a cylinder, residuals for 45k – 65k elements (Balafas, 2014)
+Based on the results from Balafas, tetrahedral elements are unsuitable for CFD meshing and
+should not be used. It can also be concluded that polyhedral elements can be a suitable
+replacement for hexahedral elements, as the mesh sizes and convergence were similar for both.
+This is useful for complex geometries, where hexahedral mesh elements often cannot be used.
+Ibraheem (2021) evaluated the efficiency of polyhedral elements, compared to tetrahedral
+elements, for flow around a ship’s rudder. He found that the polyhedral mesh converged almost
+three times quicker than the tetrahedral mesh. The polyhedral and tetrahedral mesh had a
+percentage error of 2.4% and 4.7% respectively for the lift coefficient, and 5.6% and 15%
+respectively for the drag coefficient. This confirms the increased accuracy and quicker solution
+time of the polyhedral mesh, when compared to the tetrahedral mesh.
+
+
+28
+Table 4 summarises the advantages and disadvantages of the different elements, based on the
+literature.
+Table 4. Advantages and Disadvantages of the Different Mesh Elements
+Element Type Advantages Disadvantages
+Hexahedral
+• Fewer elements are required
+than tetrahedral.
+• Better convergence than
+tetrahedral.
+• Regular and structured
+elements provide accurate and
+fast solutions.
+• Difficult to generate mesh for
+complex geometries.
+Tetrahedral
+• Flexible, will generate a mesh
+for almost any geometry.
+• Greater number of elements
+required than hexahedral and
+polyhedral.
+• May be difficult to reach
+convergence.
+• Higher probability of low
+quality elements, which could
+cause poor convergence.
+Polyhedral
+• Flexible, will generate a mesh
+for almost any geometry.
+• Fewer elements are required
+than tetrahedral.
+• Improve the quality in the
+transition zone between
+different elements.
+• Each element has many
+neighbouring elements,
+resulting in greater accuracy.
+• Less sensitive to stretching
+than tetrahedral elements.
+• Could lead to higher
+computational cost, due to
+increased complexity in
+solving the equations (due to
+more neighbouring elements).
+• Chance to generate low-quality
+elements in complex
+geometries.
+2.4.2 Difference in Software Approach
+Each CFD software approaches meshing differently. In this study, Ansys Fluent meshing and
+Star-CCM+ were chosen for comparison, with the optimal meshing software chosen to use for
+the rest of the study.
+Ansys Fluent meshing uses a proprietary meshing technique called Mosaic meshing. According
+to Ansys, Mosaic meshing “accelerates the meshing process with a reduced face count, higher
+quality cells and efficient parallel scalability" (Ansys, no date). Mosaic meshing uses
+polyhedral elements to connect different element types to each other. Due to the complex nature
+of the rocket geometry, with thin fins and a sharp nose cone; a purely hexahedral element type
+is not possible. Ansys Fluent meshing can be used to create a poly-hexcore mesh (as shown in
+Figure 21), which comprises of three different mesh types:
+
+
+29
+1) Poly-prism elements in the boundary layer, near the object surface.
+2) Structured hexahedral elements in the main fluid domain.
+3) Polyhedral elements connecting the prism layer elements to the main fluid domain.
+Figure 21. Ansys Poly-hexcore mesh (Ansys, 2020)
+Ansys Fluent meshing has four element options for meshing the volume. These options are
+explained below as background to the following sections:
+1) Polyhedral: The entire fluid domain is filled with polyhedral elements.
+2) Poly-hexcore: The bulk of the fluid domain is filled with high-quality hexahedral
+elements with poly-prism elements in the boundary layer. In the transition regions
+between the boundary layer and the bulk mesh, polyhedral elements are used.
+3) Hexcore: The entire fluid domain is filled with hexahedral elements. Often this is not
+possible due to complex geometry, so tetrahedral elements are used in combination
+with the hexahedral elements.
+4) Tetrahedral: The entire fluid domain is filled with tetrahedral elements.
+Zore et al. (2019) analysed the effectiveness of a poly-hexcore mesh, compared to a hexcore
+mesh, for a 100-passenger jet airliner. It was found that (in general) using a poly-hexcore mesh
+reduces the total element count by 20% to 50%, when compared to a hexcore mesh. This in turn
+speeds up the Fluent solver by 10% to 50%. When comparing poly-hex with hexcore in terms
+of the jet airliner: the total element count was reduced by 48%, and the computational time was
+reduced by 41%. For the lift coefficient at an 18.58° angle of attack, the poly-hexcore and
+hexcore mesh were, respectively, ~1.5% and ~0.4% higher than wind tunnel data, as shown in
+Figure 22. This confirms the accuracy of both meshes, with the hexcore mesh being slightly
+closer to the experimental results, than the poly-hexcore mesh.
+Poly-Prism elements
+Polyhedral elements
+Hexahedral elements
+
+
+30
+Figure 22. Graph of Lift Coefficient vs. Number of Iterations (Zore et al., 2019)
+Figure 23 shows the graph of the drag coefficient vs. angle of attack. The drag coefficient results
+from the poly-hexcore, hexcore, and experimental data are similar in value.
+Figure 23. Graph of Drag Coefficient vs. Angle of Attack (Zore et al., 2019)
+It must be noted that Zore (2019) works as a Senior R&D Engineer at Ansys, and more research
+is required to determine the downsides of poly-hexcore meshes. The results from Zore’s report
+are summarised in Table 5.
+Table 5. Summarised Results from Zore et al. (2019)
+Variable Poly-hexcore Hexcore
+Total element count Reduced by 48% 
+Computational time Reduced by 41% 
+Lift coefficient ~1.5% greater than
+wind tunnel data
+~0.4% greater than
+wind tunnel data
+The following information regarding meshing is from an Ansys white paper report (Ansys,
+2020). Ansys developed Mosaic meshing technology to connect one type of mesh accurately
+and efficiently to another type of mesh. This technology forms the basis for the poly-hexcore
+mesh, as the prism layers are connected to the hexcore elements, using polyhedral elements.
+
+
+31
+Ansys (2020) states that simulations using poly-hexcore meshes are “faster with greater
+solution accuracy while using less RAM”. Ansys simulated a ormula One wing using poly
+hexcore and standard tet-hexcore meshing. The poly-hexcore mesh was 46% smaller in element
+size and had greater quality than the tet-hexcore mesh. Ansys then compared a poly-hexcore
+mesh with an all-polyhedral mesh on a triangular prism bluff body flame holder. The poly
+hexcore mesh had 19% fewer elements, was 47% faster, and used 34% less RAM when
+compared to the all-polyhedral mesh.
+The other CFD software option was Star-CCM+, which has three meshing options for the
+volume mesh:
+1) Trimmed cell: A trimmed cell mesh is a structured mesh that uses entirely hexahedral
+elements in the volume. However, in some cases with complex geometries, in the
+transition between the prism layers and the volume, some tetrahedral and polyhedral
+elements are generated. Trimmed cell meshes are fast and efficient to generate.
+2) Polyhedral: An unstructured mesh where only polyhedral elements are used. Polyhedral
+meshes are suitable for complex geometries.
+3) Tetrahedral: An unstructured mesh where only tetrahedral elements are used.
+Each of these volume mesh options can be combined with one of the following prism layer
+meshing options:
+1) Prism layer mesher: This generates a volume around the surface based on the total
+specified prism layer thickness. Each prism layer is then generated until that volume is
+filled.
+2) Advancing layer mesher: This generates each entire layer successively, starting with
+the prism layer closest to the surface. Each prism layer is generated until the total
+number of prism layers specified is reached.
+Both the prism layer meshing options seem similar; however, there are some key differences.
+The advancing layer mesher keeps the total prism layer thickness and the first layer thickness
+constant over the entire model geometry. This can result in some poor prism cells over curves,
+as there might be a large volume change between neighbouring cells in the prism layer. The
+advancing layer mesher also takes a substantially longer time to generate a mesh, compared to
+the prism layer mesher. In contrast, the prism layer mesher has many input parameters that can
+be used to adapt sections of the prism layer to capture complex features in the model. The prism
+layers can be adapted to fit certain geometric features or be removed entirely for areas where
+prism layers are not required, which is not possible when using the advancing layer mesher.
+Star-CCM+ and Ansys Fluent both use different approaches to meshing. As discussed above,
+there is positive literature regarding the accuracy and efficiency of Ansys poly-hexcore meshes.
+However, due to the limited literature available comparing Star-CCM+ and Ansys Fluent
+meshing, it was decided to use the first validation case to compare the two meshing options.
+The optimal meshing option was then used for the rest of the study.
+2.4.3 Mesh Domain Construction
+There are no exact guidelines on mesh domain construction for high-speed external airflow.
+Therefore, the mesh domains from previous CFD studies on external rocket aerodynamics are
+presented and discussed in this chapter of the literature review, to build a catalogue and create
+
+
+32
+guidelines to start a mesh. In total, 14 papers were researched, with the literature and mesh
+details summarised in Tables 6 and 7:
+Table 6. Literature Details
+Number Author/s Year of
+Publish Rocket Geometry Software
+1 Moore, McInville and
+Robinson 1999 Multi-fin weapon 
+2 Fujimoto and Fujii 2005 Apollo configuration 
+3 Gülay et al. 2011 Modified finner Ansys Fluent
+4 Allen and Ghoreyshi 2018 Basic finner 
+5 Dahalan et al. 2017 Curved fin rocket Ansys Fluent
+6 Ocokoljić, Rašuo and
+Bengin 2017 Guided missile Ansys Fluent
+7 Runduo and Xiaobing 2018 Guided rocket Ansys Fluent
+8 Shelton, Martin and
+Silva 2018 Basic finner NASA
+FUN3D
+9 Hammargren 2018 Maxus sounding rocket Ansys CFX
+10 Sahbon et al. 2022 Sounding rocket Ansys Fluent
+11 Sankalp et al. 2022 Sounding rocket Ansys Fluent
+12 Milne et al. 2023 Sounding rocket Ansys Fluent
+13 Bunescu et al. 2023 Basic finner 
+14 Żurawka et al. 2023 Grot sounding rocket Ansys Fluent
+
+
+33
+Table 7. Summary of Mesh Details from the Chosen Literature
+Number Element
+type Domain Shape Domain Dimensions
+Number
+of
+Prism
+Layers
+Number
+of
+Elements
+(106)
+1 Hexahedral
+Bullet (with a
+full symmetry
+plane)
+25D diameter
+0.59L behind
+L ahead
+Radial: 51
+Circumferential: 54
+Axial: 165
+-
+2 Hexahedral
+Sphere (with a
+full symmetry
+plane)
+21D diameter
+Radial: 117
+Circumferential: 85
+Axial: 91
+-
+3 Tetrahedral - 15L ahead
+24L behind 24 
+4 Tetrahedral - - - 20.7
+5 Tetrahedral Cylinder 28.5D diameter
+2.86L length - 
+6 Tetrahedral Ellipsoid
+3L major axis
+16D minor axis
+4.34L length
+15D ahead
+17D behind
+13 2.6
+7 Hexahedral Cylinder 20D diameter
+10L length - 5
+8 Tetrahedral
+Cube (with a
+full symmetry
+plane)
+120D lengths
+12L lengths 20 65
+9
+Hexahedral
+and
+tetrahedral
+Cylinder - - 
+10 Tetrahedral Bullet
+30D diameter
+4L length from base to
+centre of hemisphere
+10 
+11 Tetrahedral Cuboid - - 4.2
+12 Tetrahedral - - 15 0.43
+13 Polyhedral Cylinder 1667D diameter - 9
+14
+Tetrahedral
+and
+hexcore
+Cylinder
+4L (102D) diameter
+5L behind
+2L ahead
+30 to
+300 2.5
+
+
+34
+The following observations were made based on the researched literature:
+Software: The most common CFD software used was Ansys Fluent, with 57% of the literature
+using it.
+Domain shape: The most common domain shape was the cylinder. The second most common
+domain shape was the bullet (cylinder with a hemisphere at the inlet) geometries. A bullet shape
+was chosen, as it has fewer elements when compared to a cylindrical shape of the same length.
+Number of elements: There was a large variation in the number of elements, ranging from
+400 000 elements to 65 million elements.
+Element type: Tetrahedral and hexahedral elements were the most common element type, with
+only the most recent report (2023) using polyhedral elements.
+Prism layers: When the y-plus was mentioned, all reports aimed to have a y-plus of around 1.
+The number of boundary layers ranged from 10 to 24, when mentioned.
+Domain dimensions: The total length of the domains ranged from 2.86 to 16 model lengths.
+The domain diameters ranged from 21 to 30 model diameters, in most cases. One paper
+mentioned the distance in front of the model to be 2 model lengths, and the distance behind the
+model to be 5 model lengths.
+2.5 Semi-Empirical Aeroprediction Codes
+Semi-empirical aeroprediction codes determine the aerodynamic coefficients of rocket
+geometries using a combination of analytical calculations and experimental data. Two semi
+empirical codes, RASAero and Missile Datcom, were used in this research project as another
+data source to compare with the CFD model and to investigate the accuracy of the semi
+empirical codes.
+Engineers at ASRI use RASAero and Missile Datcom to determine the aerodynamic
+coefficients of rockets being developed, within an in-house six-degree-of-freedom code called
+PyROPS. The coefficients are supplied to the in-house software to determine the rocket flight
+path, apogee, and impact points. ASRI has not validated the aerodynamic coefficients from the
+semi-empirical methods against CFD data. It would be useful to know the accuracy of various
+aerodynamic coefficients at different Mach numbers and angle of attacks for future use.
+2.5.1 RASAero
+RASAero (Rogers AeroScience Aero) is a free software application that can perform
+aerodynamic analyses and flight simulations for model rockets to sounding rockets. It uses
+empirical wind tunnel and free flight data combined with analytical calculations to determine
+the aerodynamic coefficients. A large database of interference effects between different bodies
+is used to obtain results for different geometry combinations. RASAero has been calibrated
+against “NACA and NASA wind tunnel model data, free-flight model data and sounding rocket
+data, missile aerodynamic data, and professional engineering method missile aerodynamic
+analysis programs, against which in comparison tests RASAero has demonstrated equivalent
+numerical accuracy” (Rogers and Cooper, 2019b). The latest RASAero software (version
+1.0.2.0) was used in this study.
+
+
+35
+The following paragraphs explain some of the features and limitations of the RASAero
+software, referencing the RASAero user manual (Rogers and Cooper, 2019a).
+Geometry Creation: RASAero has five input parts for geometry creation, which can all be
+combined in different orders: Nose cone, body tube (fins), transition, fin canister, and boattail.
+There are seven nose cone inputs: Conical, tangent ogive, Von Kármán ogive, power law, LV
+Haack, parabolic, and elliptical. All nose cone profiles, bar the power law, are tangential to the
+body tube, which is a major limitation of the RASAero software. For the spinner validation
+geometry, the nose cone is an arc with a constant radius that is not tangential to the body tube
+(secant ogive). This nose cone shape cannot be created directly using RASAero. To bypass this
+limitation, the closest power law nose cone shape was fitted to the spinner nose cone. The 0.75
+power law profile fits the spinner nose cone geometry closely, as shown in Figure 24, and was
+used for validation.
+Figure 24. Spinner and 0.75 Power Law Nose Cone Geometry
+The body tube is a simple cylinder with the diameter being equal to the diameter at the end of
+the previous geometry item. Fins can be added to the base of the tube. The following fin options
+are available for use: hexagonal, NACA, double-wedge, biconvex, hexagonal blunt-base, single
+wedge, rounded, and square aerofoils. RASAero covers all fin geometries. However, there is
+no option to add fin cant in RASAero. This is a limitation, as STeVe contains fins with cant, so
+there will be some inaccuracy present.
+The transition allows for a length and an end diameter to be inputted, to create a truncated
+cylinder profile. This part can be used to create a step if a small length (0.0001 in) is inputted.
+The fin canister part is effectively a transition part and a body tube part combined. The boattail
+part is effectively a transition part, where the end diameter must be less than the start diameter.
+Actual Spinner Nose Cone
+0.75 Power Law Nose Cone
+
+
+36
+Modelling Options: RASAero has three main modelling options that can be selected for
+various reasons: surface finish, Rogers modified Barrowman, and all turbulent flow.
+Table 8 shows the following surface roughness options that can be selected.
+Table 8. RASAero Surface Roughness Options
+Surface Finish Selection Equivalent Sand Roughness (in)
+Smooth 0
+Polished 0.00005
+Sheet metal 0.00016
+Smooth paint 0.00025
+Camouflage paint 0.0004
+Rough camouflage paint 0.0012
+Galvanized metal 0.006
+Cast iron (very rough) 0.01
+Either the Barrowman method (Barrowman, no date) or the Rogers Modified Barrowman
+method (Rogers and Cooper, 2019a) can be used for calculating the subsonic centre of pressure.
+According to the RASAero documentation, the Rogers Modified Barrowman method includes
+several factors left out by the original Barrowman method. These factors improve the accuracy
+of the centre of pressure calculations.
+The equations to determine the skin friction coefficient depend on whether the flow is laminar
+or turbulent. Therefore, the skin friction coefficient depends on the Reynolds number. RASAero
+calculates the Reynolds number of the flow along the rocket body. If the Reynolds number is
+less than 5 × 105, the laminar skin friction calculations are performed and if the Reynolds
+number is greater than 5 × 105, the turbulent skin friction calculations are performed. If the ‘all
+turbulent’ option is selected, RASAero immediately transitions to turbulent flow for the skin
+friction calculations.
+Aerodynamic Coefficients: The aerodynamic coefficients can be generated by observing the
+‘aero plots’. RASAero uses the largest cross-sectional area of the geometry when calculating
+the aerodynamic coefficients. This does not include the cross-sectional area of the fins. The
+drag, lift, normal force, and axial force coefficients, along with the centre of pressure can be
+obtained from Mach 0.01 to 25 in 0.01 increments. The angle of attack can also be varied;
+however, this is limited. The angle of attack can only be varied up to 16° for Mach 0.1, 0.5, 1.1,
+2, and 5. For Mach numbers not in this selection, the aerodynamic coefficients can only be
+determined at 0°, 2°, and 4° angles of attack.
+2.5.2 Missile Datcom
+Missile Datcom is a semi-empirical aeroprediction code, similar to RASAero, that was
+developed in Fortran by the United States Air Force. Initially released in 1985, it is continuously
+updated to this day. The information in this chapter is sourced from the Missile Datcom 1998
+user’s manual (Air Force Research Laboratory, 1998).
+Geometry Creation: Missile Datcom does not have some of the geometry limitations that
+RASAero has. For example, fin cant and roll angles can be added. Additionally custom nose
+
+
+37
+cone geometries can be created based on specified points. However, like RASAero, Missile
+Datcom can not generate a secant ogive nose cone as part of the default nose cones. In the user's
+manual, it states that if “a secant ogive cannot be defined, it is recommended that the nose be
+approximated with a O ER nose.” In this study, a power law nose cone approximation was
+used, consistent with the approach taken in RASAero. Figure 25 shows a summary of geometry
+input in Missile Datcom. DEXIT was always set to 0 to account for the full effects of base drag.
+Figure 25. Missile Datcom Geometry Input (Air Force Research Laboratory, 1998)
+Fins are constructed by specifying chord cross sections at varying spanwise locations. Figures
+26 and 27 show how to specify Missile Datcom fin geometry.
+Figure 26. Fin Placement (Air Force Research Laboratory, 1998)
+
+
+38
+Figure 27. Fin Cross Section (Air Force Research Laboratory, 1998)
+Modelling Options: The various roughness options that can be selected in Missile Datcom are
+shown in Table 9, with the recommended RHR values for different materials shown in Table
+10. ‘R R’ is the value written in the Missile Datcom input file.
+Table 9. Missile Datcom Surface Roughness Options
+Surface Finish Selection Equivalent Sand
+Roughness (in) RHR
+Aerodynamically Smooth 0 0
+Polished Metal or Wood 0.00002 to 0.00008 6 to 26
+Natural Sheet metal 0.00016 53
+Smooth matte paint,
+carefully applied 0.00025 83
+Camouflage paint,
+average application 0.0004 133
+Camouflage paint, mass
+production spray 0.0012 400
+Dip galvanized metal
+surface 0.006 2000
+Natural surface or cast
+iron 0.01 3333
+Table 10. Missile Datcom Recommended RHR Values
+Application RHR
+Steel structural parts 250
+Aluminium and titanium
+structural parts 125
+Close tolerance surfaces 63
+Seals 32
+Aerodynamic Coefficients: Missile Datcom has a larger number of outputs, and fewer
+restrictions, when compared to RASAero. It can output all static and dynamic aerodynamic
+coefficients at any combination of Mach number, roll angle, and angle of attack.
+
+
+39
+3. Model Validation
+When designing any aerial vehicle, it is important to predict the aerodynamic performance
+under varying conditions, such as Mach number, altitude, and angle of attack. To achieve this,
+the aerodynamic characteristics must be determined. Aerodynamic characteristics refer to the
+properties of an aircraft that influence the surrounding air flow. These characteristics can be
+determined experimentally (wind tunnel testing), using CFD simulations, semi-empirical
+aeroprediction codes, or analytical calculations. CFD simulations are a relatively inexpensive
+and quick method to obtain these aerodynamic coefficients. However, the results from the CFD
+simulations must be validated to ensure accurate and reliable results.
+Chapter 3.1 explains fully the process of validation, and how it differs from verification. The
+rest of this chapter then addresses the entire validation process done in this study, from defining
+the geometry to creating the flow models, and finally discusses the results.
+3.1 Validation and Verification
+Since validation is a fundamental part of this study, this chapter clarifies the subject of
+validation and how it differs from verification.
+When discussing validation and verification, the concepts of error, accuracy, and precision must
+first be mentioned. Error is defined as “a recognisable deficiency in any phase or activity of
+modelling and simulation that is not due to lack of knowledge.” (AIAA G-077-1998). Accuracy
+and precision are two measures used to observe and analyse errors in results. Accuracy is a
+measure of the difference between the obtained results and the actual results, while precision is
+a measure of the difference between just the obtained results. Since semi-empirical methods
+and most CFD codes are deterministic in nature, precision is not of importance in this study.
+However, measuring accuracy must be discussed further.
+Validation and verification are both parameters used to assess the accuracy of a solution.
+erification is “The process of determining that a model implementation accurately represents
+the developer's conceptual description of the model and the solution to the model.” (AIAA G
+077-1998). Since a CFD code is not being created or modified in this study, verification was
+not required. alidation is “the process of determining the degree to which a model is an
+accurate representation of the real world from the perspective of the intended uses of the
+model.” (AIAA G-077-1998). Validation compares results with experimental data, and in the
+case of this study, CFD results were validated by comparing them with experimental wind
+tunnel data.
+To confirm that the results from the CFD model are accurate to reality, the results must be
+validated against experimental data from wind tunnel testing as wind tunnels capture flow
+phenomena in reality. Comparing against other CFD simulations, semi-empirical
+aeroprediction codes, or analytical calculations is also important and was done in this study;
+however, technically speaking, this would not be considered validation.
+In this study, five different validation cases were used to test various parameters that would
+affect the accuracy of the CFD model. Some of the parameters were the domain size, meshing
+techniques, mesh independence, flow models, geometry complexity, different CFD
+applications, and the accuracy of various semi-empirical methods, among other options. The
+
+
+40
+different effects of these parameters can then be observed, and this information can be used to
+validate the CFD models for the STeVe and CLV rockets.
+3.2 Geometry Description
+The geometry, as specified by the author, for each validation case is shown below. Often the
+dimensions provided by the authors were incomplete, so assumptions were provided where
+necessary. Appendix A shows the labelled orthographic and isometric drawings for each
+validation geometry and fluid domain.
+3.2.1 Dunn Spinner
+Figure 28 shows the geometry of the Army Navy spinner, as provided by Dunn (1989) with the
+dimensions are given in terms of calibre units.
+Figure 28. Dunn Spinner, Dimensions in Calibres (Dunn, 1989)
+The calibre diameter or Reynolds number used for the wind tunnel tests were not provided by
+Dunn. The ogive nose shape was also not described in enough detail to accurately replicate. A
+paper by Weinacht and Danberg, 2005, used the Army Navy spinner, as shown in Figure 29,
+with a calibre of 20 mm for CFD simulations. The calibre and ogive shape used by Weinacht,
+were used for the Dunn spinner validation. A small radius of 0.001D was added to the spinner
+nose, as sharp points cause problems when meshing and could create poor-quality cells. The
+reference area for the aerodynamic coefficients was the largest cross-sectional area, 314.16
+mm2.
+Figure 29. Weinacht and Danberg Spinner (Weinacht and Danberg, 2005)
+Due to reasons discussed in Chapter 2.5, a secant ogive nose cone cannot be created in
+RASAero or Missile Datcom. Therefore, for the Dunn Spinner, a 0.75 power law nose cone
+geometry was used as it fits the Dunn Spinner’s ogive nose cone well, as shown in Figure 24.
+
+
+41
+3.2.2 Dunn Finner
+The basic finner geometry used by Dunn (1989) is shown in Figure 30, with the dimensions
+given in calibres. A small radius of 0.001D and 0.0005D was applied to the nose cone tip and
+fin leading edges respectively. The Reynolds number and calibre were not given in the report,
+so a diameter of 20 mm was chosen, to maintain consistency with the Dunn spinner. The
+reference area for the aerodynamic coefficients was the largest fuselage cross-sectional area,
+314.16 mm2.
+Figure 30. Dunn Finner (Dunn, 1989)
+3.2.3 Dunn Modified Finner
+The geometry Dunn used for the modified finner (air slew demonstrator) is shown in Figure 31
+(Dunn, 1989), with dimensions given in inches. Dunn mentioned that a “tangent ogive body”
+was used for the nose shape. Not enough information was given for the fin geometry to replicate
+accurately. A calibre size of 426.72 mm (16.8 in) was used. The reference area for the
+aerodynamic coefficients was the largest fuselage cross-sectional area, 1.43 × 105 mm2.
+Figure 31. Dunn Modified Finner (Dunn, 1989)
+A small radius of 0.001D and 0.0005D was applied to the nose cone tip and fin leading and
+trailing edges respectively. The fin geometry from a modified finner used in a report by
+Bhagwandin (2016) is shown in Figure 32, and was used to supplement the geometry given by
+Dunn.
+
+
+42
+Figure 32. Bhagwandin Modified Finner (Bhagwandin, 2016)
+3.2.4 Shantz Finner
+The finner geometry provided by Shantz is shown in Figure 33 (Shantz and Groves, 1960), with
+some minor modifications made to improve legibility. This geometry is identical to the finner
+used by Dunn. Therefore, the same geometry as described in Chapter 3.2.2 was used for
+validation, with the only difference being the calibre. The calibre was specified to be 25.4 mm
+(1 in) by Shantz. The reference area for the aerodynamic coefficients was the largest cross
+sectional area, 506.71 mm2.
+Figure 33. Shantz Finner (Shantz and Groves, 1960)
+
+
+43
+3.2.5 Hammargren Maxus
+The final validation case used was a previously launched sounding rocket, the Maxus. The
+overall geometry is shown in Figure 34, and is an extract from a report by Elvemar (1990) at
+Saab.
+Figure 34. Elvemar Maxus Sketch (Elvemar, 1990)
+The nose cone geometry as shown in Figure 35 is from a report by Andersson (1990) and is a
+secant ogive shape.
+Figure 35. Anderson Maxis Nose Geometry (Andersson, 1990)
+
+
+44
+A small radius of 0.001D was applied to the nose cone tip. The reference area for the
+aerodynamic coefficients was the largest cross-sectional area (the base area), 1.219 m2.
+Due to reasons discussed in Chapter 2.5, a non-tangent, ogive nose cone cannot be created in
+RASAero or Missile Datcom. Therefore, for the Hammargren Maxus, a 0.73 power law nose
+cone geometry was used as it fits the Hammargren Maxus’s ogive nose cone well, as shown in
+Figure 36.
+Figure 36. Maxus RASAero Nose Cone
+3.3 Physics Modelling
+This chapter summarises the fluid properties, turbulence models, and boundary conditions
+chosen for each validation case. An ideal gas (air) was used with the following properties:
+Table 11. Properties of Air for the Validation Cases
+Description Variable Value
+Dynamic viscosity* μ 8.1332 × 10-5 Pa.s
+Temperature T 293.15 K
+Heat capacity at constant pressure Cp 1003.62 J/kg.K
+Molar Mass M 28.97 kg/kmol
+* The dynamic viscosity was calculated using Sutherland’s aw. If a gas is pure and non
+reacting, the viscosity is only dependent on temperature (Anderson, 2006). Since air is roughly
+99% nitrogen and oxygen (Walker, 1977), which have similar properties, air can be considered
+a pure and non-reacting gas. Sutherland's law is an approximation that can be used to calculate
+the dynamic viscosity based on the temperature for pure and non-reacting gases. The equation
+for Sutherland’s law is
+μ = μref ( T
+Tref
+)
+3 2
+∙ Tref + Sμ
+T + Sμ
+3.1
+where the Sutherland temperature, Sμ = 110.4 K (for air),
+the reference temperature, Tref = 273.15 K, and
+the reference viscosity, μref = 1.716 × 10-5 Pa.s.
+Actual Maxus Nose Cone 0.73 Power Law Nose Cone
+
+
+45
+The reference values for air were obtained from White (1992). The viscosity values calculated
+using Sutherland’s law had a % error for a temperature range of 70 K to 900 K, according
+to White (1992).
+Table 12 shows the types of eddy viscosity and transition zone models used for each validation
+case.
+Table 12. Turbulence Models for the Validation Cases
+Validation Case Eddy Viscosity Model Transition Zone Model
+Dunn Spinner k − ω SST None
+Dunn Finner k − ω SST γ − Reθ
+Dunn Modified Finner k − ω SST γ − Reθ
+Shantz Finner Mach 1.58 k − ω SST γ − Reθ
+Shantz Finner Mach 3.86 Spalart Allmaras None
+A bullet domain was chosen, as discussed in Chapter 2.4.3. A simplified cross-sectional view
+of the bullet domain is shown in Figure 37, with the labelled boundary conditions listed in Table
+13.
+Figure 37. Boundary Conditions for Bullet Fluid Domain
+Table 13. Boundary Conditions
+Number Description Boundary Condition Variable Value
+1 Inlet
+Free Stream
+Temperature 293.15 K
+2 Wall Mach Number 
+3 Outlet Static Pressure
+(Gauge) 0 Pa
+4
+Rocket Surface
+(Broken up further for complex geometries)
+Wall (No Slip) - 
+. Inlet
+. all
+. Outlet
+. Rocket Surface
+
+
+46
+3.4 Results
+The results obtained for each validation case are summarised in Table 14, where the Mach
+numbers and angles of attack are inputs for the discrete CFD results. The results are then
+described in the following chapters, where the experimental data are understood to represent
+the benchmark against which all modelled and CFD results are compared. The RASAero and
+Missile Datcom input parameters for the validation cases are shown in Appendix B.
+Table 14. Table of the Validation Results
+Model
+Geometry Author Methods (from
+Author)
+Mach Number/s
+Angle/s of Attack
+Output Parameter
+Spinner
+Dunn (1989)
+NSWC code, Missile Datcom, wind tunnel
+0.6, 0.8, 0.95, 1.05, 1.2, 1.5, 2, 2.5, 3, 3.5, 4
+0° Drag
+coefficient
+Finner
+0.5, 0.75, 0.9, 1, 1.1, 1.25, 1.5, 2, 2.5, 3
+0° Drag
+coefficient
+Modified
+finner 1.3
+0°, 10°, 20°, 30°, 40°, 50°
+Normal force coefficient
+Finner * Shantz
+(1960) Wind tunnel 1.58, 3.86
+0°, 4°, 8°, 12°, 16°, 20°
+Normal force coefficient
+Maxus sounding rocket
+Hammargren (2018)
+Analytical methods, CFD
+0.5, 0.8, 1, 1.2,
+1.5, 2, 3, 4, 5 0° Drag
+coefficient
+* The Shantz finner case varied the roll angle between 0° and 45°.
+3.4.1 Dunn Spinner (Drag Coefficient vs. Mach Number)
+Figure 38 shows the drag coefficient vs. Mach Number for the Dunn spinner validation case.
+Dunn (1989) provided the experimental wind tunnel results and results from the Naval Surface
+Warfare Center (NSWC) code. The Star-CCM+, Ansys Fluent, Missile Datcom, and RASAero
+results were generated as part of this study.
+
+
+47
+Figure 38. Graph of Drag Coefficient vs. Mach Number for the Dunn Spinner Validation
+Table 15 shows the mesh comparison between Ansys Fluent and Star-CCM+ for the Dunn
+Spinner at Mach 0.6.
+Table 15. Mesh Comparison Table for the Mach 0.6 Mesh
+Ansys Fluent Star-CCM+
+Number of Elements 3 837 556 3 876 367
+Minimum Orthogonality 0.1646 
+Average Orthogonality 0.979 
+Average Cell Aspect Ratio - 0.9385
+Minimum Cell Aspect Ratio - 0.01175
+Maximum Cell Aspect Ratio 259.76 1
+Average Surface Skewness 0.002277 24.43°
+Minimum Surface Skewness 4.59 × 10-8 0°
+Maximum Surface Skewness 0.6991 85.18°
+Average Volume Change 2.448 0.5982
+Minimum Volume Change 0.010 0.005486
+Maximum Volume Change 776.67 1
+Average Cell Quality - 0.7082
+Face Validity - 1
+Chevron Quality Indicator - 0
+* Even though some of the mesh metrics have the same name between different applications, the metrics are defined differently depending on the software.
+0.15
+0.20
+0.25
+0.30
+0.35
+0.40
+0.45
+0.50
+0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0
+Drag Coefficient
+Mach Number (Dunn Spinner)
+NSWC
+Star-CCM+
+Ansys Fluent
+Missile DATCOM
+RASAero
+Experimental Data
+
+
+48
+Images of the Star-CCM+ and Ansys Fluent spinner mesh at Mach 0.6 are shown in Figures 39
+and 40.
+Figure 39. Star-CCM+ Spinner Mesh at Mach 0.6
+Figure 40. Ansys Fluent Spinner Mesh at Mach 0.6
+Finally, a qualitative comparison was done between Star-CCM+ and Ansys Fluent. The Mach
+number and static pressure plots are shown at Mach 0.6 and Mach 4, in Figures 41 and 42.
+Figure 41. Mach Number Plots
+Figure 42. Static Pressure Plots
+Star-CCM+
+Star-CCM+
+Ansys Fluent
+Ansys Fluent
+Mach 0.6 Mach 0.6
+Mach 4 Mach 4
+Star-CCM+
+Star-CCM+
+Ansys Fluent
+Ansys Fluent
+Mach 0.6 Mach 0.6
+Mach 4 Mach 4
+
+
+49
+A domain size independence study was conducted by changing the size of the domain ahead,
+behind, and around the spinner by a constant factor, obtaining the results shown in Figure 43.
+Figure 43. Graph of Dunn Spinner Domain Independence at Mach 0.6
+A mesh independence study was done at Mach 0.6, as shown in Figure 44. The prism layer
+mesh properties were not changed during the independence study.
+Figure 44. Graph of Dunn Spinner Mesh Independence at Mach 0.6
+Firstly, the Star-CCM+ drag results are compared to the Ansys Fluent results. In the subsonic
+region, the Star-CCM+ and Ansys drag coefficients were nearly identical (2.3% difference at
+most). There was only one experimental data point in the subsonic region, which lay on the
+Ansys and Star-CCM+ curves. In the transonic region, Ansys overpredicted the peak drag
+coefficient by 4.9%, while Star-CCM+ overpredicted the peak drag coefficient by 0.5%.
+Accurately predicting the peak drag is crucial for rocket design, as peak drag directly relates to
+the maximum force and is crucial in designing the rocket structure. In the supersonic region,
+0.22
+0.23
+0.24
+0.25
+0.26
+0.27
+0.28
+0.29
+0.30
+3.5E+6 4.0E+6 4.5E+6 5.0E+6 5.5E+6 6.0E+6
+Drag Coefficient (Mach 0.6)
+Number of Elements (Dunn Spinner)
+0.19
+0.21
+0.23
+0.25
+0.27
+0.29
+0.31
+0.33
+0.0E+0 5.0E+6 1.0E+7 1.5E+7 2.0E+7 2.5E+7 3.0E+7
+Drag Coefficient (Mach 0.6)
+Number of Elements (Dunn Spinner)
+
+
+50
+Ansys and Star-CCM+ underpredicted the drag coefficient by 5.9% and 10.7% at most,
+respectively. When comparing the data from Star-CCM+ and Ansys with the NSWC code, the
+CFD data was more accurate in the subsonic and transonic regions. In contrast, the NSWC code
+was more accurate in the supersonic region. Overall, the difference between Star-CCM+ and
+Ansys was negligible. However, Star-CCM+ predicted the drag coefficient more accurately
+when compared to Ansys, which is important for determining the maximum aerodynamic forces
+on the rocket.
+The two semi-empirical methods were close to the experimental data. RASAero underpredicted
+the drag in the subsonic region by 15.2%, overpredicted the drag in the transonic region by
+3.4%, and underpredicted the drag in the supersonic region by 4.4%. Missile Datcom
+underpredicted the drag in the subsonic region by 10.5%, underpredicted the drag in the
+transonic region by 2.1%, and overpredicted the drag in the supersonic region by 3.6%. This
+confirmed the accuracy of RASAero and Missile Datcom, especially in the transonic and
+supersonic regions, and coupled with the small computational cost, semi-empirical methods are
+a useful tool for obtaining aerodynamic coefficients. At Mach 2, there is a kink in the Missile
+Datcom graph. This could be due to the software changing methods to solve in the supersonic
+region, not the transonic region.
+It is not straightforward to compare two meshes from different software. This is because
+different software uses different methods to calculate mesh metrics. Even though the mesh
+metrics might have the same name, they are calculated using different formulae. Therefore, to
+compare the meshes, the recommended mesh metrics for the Ansys mesh and the Star-CCM+
+mesh are analysed below (for the Mach 0.6 mesh). The recommended values provided are not
+‘hard’ limits, and it can be justified if certain cells are outside recommended limits by small
+amounts.
+Ansys mesh:
+• The minimum orthogonal quality was 0.1646, which is considered ‘bad’ according to
+the Ansys guidelines. The average orthogonal quality was 0.98, which is well within the
+‘excellent’ category according to Ansys guidelines (Ansys, 2023).
+• The maximum aspect ratio was 259.76, with the high aspect ratio cells in the boundary
+layer. In the boundary layer, the cells are longer in the direction of fluid flow (small to
+no velocity change), and shorter in the direction perpendicular to fluid flow (large
+velocity change). Therefore, having large aspect ratio cells in the boundary layer should
+not cause errors.
+• The maximum skewness was 0.6991, which is in the ‘fair’ category specified by Ansys.
+The average skewness was 0.002277, which is well into the ‘excellent’ category (Ansys,
+2023).
+• The maximum volume change was 776.67 and the average 2.448. These values are quite
+large. The large average value could be due to the hexcore section of the mesh. Due to
+the definition of hexcore, when a small hexahedral element transitions to a larger
+hexahedral element, the side length doubles, and the volume increases by a factor of 8.
+Star-CCM+ mesh:
+• The average and minimum aspect ratios were 0.9385 and 0.01175 respectively. No
+guidelines were provided by Star-CCM+ for the cell aspect ratio, except that values
+closer to 1 are preferred, which was achieved in this mesh.
+
+
+51
+• The maximum skewness angle was 85.18°, which is 0.18% greater than the Star-CCM+
+recommended maximum skewness angle of 85° (Siemens, 2023a).
+• The minimum volume change was 0.005486, which is 45% below the Star-CCM+
+minimum recommended value of 0.01 (Siemens, 2023a).
+• The minimum cell quality was 2 × 10−5, which is double the Star-CCM+ minimum
+recommended value of 1 × 10−5 (Siemens, 2023a).
+• The face validity was 1, which confirms that all the faces were valid.
+• The chevron quality indicator was 0, which confirms that there were no chevron cells.
+The meshes both satisfied some criteria and failed other criteria. Both meshes had well above
+acceptable cell quality on average; however, there were regions with high volume change. It
+can be concluded that both meshes were of acceptable quality and had no substantial
+quantitative differences in mesh metrics between each other. However, qualitatively, there were
+differences between the meshes, as seen in Figures 39 and 40. Ansys Fluent poly-hexcore
+meshing aims to connect a structured hexagonal mesh in the main fluid domain to the prism layers, using polyhedral elements. This resulted in some poor-quality cells in the region
+between the prism layers and the fluid domain. Star-CCM+ meshing created orthogonal prism
+layers and filled the rest of the fluid domain with polyhedral elements. Ansys Fluent does have
+the option to have a completely polyhedral domain. However, a poly-hex mesh was used to test
+a different meshing technique compared to the standard polyhedral mesh in Star-CCM+. Some
+of the key differences between Star-CCM+ and Ansys Fluent are shown in Table 16.
+Table 16. Key Differences Between Star-CCM+ and Ansys Fluent
+Star-CCM+ Ansys Fluent
+Has built in macro functionality using
+JavaScript programming.
+Can download a Pyfluent extension to create
+journal files using the Python programming
+language.
+Has the ability to view updated scalar and
+vector plots while the solution is progressing.
+Has proprietary meshing technology, called
+Mosaic meshing, which can generate
+polyhedral elements between the prism
+layers and the rest of the mesh.
+One application for geometry importing,
+modifying, mesh generation, and CFD
+modelling. This improves workflow by
+reducing the time to switch between
+applications.
+Easy integration with other Ansys
+applications. For example, a Finite Element
+Analysis (FEA) can be conducted on the
+same geometry block that is already being
+used for Fluent CFD.
+A qualitative comparison was done between Star-CCM+ and Ansys Fluent, plotting the Mach
+number and static pressure at Mach 0.6 and Mach 4, as shown in Figures 41 to 42. The shock
+waves formed at the same angle and the wake had the same shape between the CFD codes. At
+Mach 4, there was a slightly lower static pressure (shown by the dark blue zone) for Star-CCM+,
+than compared to Ansys Fluent. In summary, the plots were practically identical between
+different software options.
+A domain size independence study was then conducted at Mach 0.6, as shown in Figure 43.
+Initially, a large enough domain size was chosen based on research from the literature, as
+
+
+52
+discussed in Chapter 2.4.3. The domain was defined based on three dimensions: Distance in
+front of the spinner, distance behind the spinner, and the domain diameter. Each of these
+dimensions was changed by a constant factor and the drag coefficient was monitored. It was
+clear that there was a point where the domain size did not affect the results. This point was
+roughly when the domain was 20 model diameters in front of the spinner, 35 model diameters
+behind the model, and 25 model diameters in diameter.
+A mesh independence study was conducted at Mach 0.6, as shown in Figure 44. When
+performing a mesh independence study, the prism layer specifications were not changed. This
+is because correctly sizing the y+ and boundary layer thickness are independent of other mesh
+independence studies. It was observed that the drag coefficient only started converging at
+around 20 million elements, which was larger than initially predicted. There was an 11.2%
+difference between the fully converged value and the mesh at ~4 million elements. For all the
+validation cases, mesh sizes of roughly 4 to 10 million elements were used. Validation aimed
+to see the effects of changes made to the CFD model, by comparing CFD results to existing
+data. It was not an effective use of computational resources to do a complete mesh independence
+study for each validation case, when the main aim of the study was to create an accurate CFD
+model for STeVe and CLV.
+3.4.2 Dunn Finner (Drag Coefficient vs. Mach Number)
+Figure 45 shows the drag coefficient vs. Mach Number for the Dunn finner validation case.
+Dunn (1989) provided the experimental wind tunnel results and results from the NSWC code.
+The Star-CCM+, Missile Datcom, and RASAero results were generated as part of this study.
+Figure 45. Drag Coefficient vs. Mach Number for the Dunn Finner
+The drag coefficient results from the CFD simulation, shown in Figure 45, are discussed below.
+The peak drag coefficient predicted by Star-CCM+ was within the range of peak drag from the
+0.25
+0.35
+0.45
+0.55
+0.65
+0.75
+0.85
+0.95
+1.05
+1.15
+1.25
+0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5
+Drag Coefficient
+Mach Number (Dunn Finner)
+NSWC Code
+Star-CCM+
+Missile Datcom
+RASAero
+Experimental Data
+
+
+53
+experimental data. At Mach 1.25, Star-CCM+ overpredicted the drag coefficient by 0.34%. At
+Mach 2.5, Star-CCM+ underpredicted the drag coefficient by 15.63%. There was no
+experimental data for the subsonic region; however, in the CFD results were within 12% of the
+NSWC code, in this region. In the supersonic region, the CFD results were within 2.19% of the
+NSWC code.
+RASAero underpredicted the drag coefficient in the subsonic region by 20% at most, compared
+to CFD results. In the transonic and supersonic region, the RASAero data was accurate,
+compared to the experimental data. RASAero underpredicted the peak drag coefficient by 6%,
+and underpredicted the drag coefficient by 6% at Mach 2.5.
+In the subsonic region, Missile Datcom underpredicted the drag by 3.4% at most, when
+compared to the CFD data. The data from Missile Datcom overpredicted the peak drag by
+28.9%, which can be seen as a substantial spike in the drag plot. At Mach 2.5, the experimental
+data lay on the Missile Datcom curve.
+3.4.3 Dunn Modified Finner (Normal Force Coefficient vs. Angle of Attack)
+Figure 46 shows the normal force coefficient vs. angle of attack for the Dunn modified finner
+validation case. Dunn (1989) provided the experimental wind tunnel results, results from the
+NSWC code, and Missile Datcom. The Star-CCM+, Missile Datcom, and RASAero results
+were generated as part of this study.
+Figure 46. Normal Force Coefficient vs. Angle of Attack for the Dunn Modified Finner
+The normal force coefficient was plotted against angle of attack, as shown in Figure 46. In
+terms of the experimental data, Star-CCM+ underpredicted the normal force coefficient by
+31%, 15%, 11%, and 16% for 10°, 20°, 30°, and 40° angles of attack respectively. In terms of
+the NSWC code, Star-CCM+ varied at most by 15.5% for angles of attack up to 50°.
+0
+2
+4
+6
+8
+10
+12
+14
+16
+0 10 20 30 40 50
+Normal Force Coefficient
+Angle of Attack (°) (Dunn Modified Finner)
+NSWC Code
+Experimental Data
+Star-CCM+
+Missile DATCOM *
+Missile DATCOM
+RASAero
+* Missile Datcom Data from Dunn
+
+
+54
+In terms of the experimental data, Missile Datcom overpredicted the normal force coefficient
+by 4%, 22%, 31%, and 12% for 10°, 20°, 30°, and 40° angles of attack respectively. Due to the
+limitations discussed previously regarding RASAero, the normal force coefficient could only
+be plotted up to an angle of attack of 4°. The Star-CCM+ and RASAero data agreed well up to
+this point.
+It can be observed that Star-CCM+ predicted the normal force coefficient well, considering the
+high angles of attack that were simulated. At high angles of attack, there is extreme flow
+separation, which should be difficult for the CFD software to capture accurately.
+3.4.4 Shantz Finner (Normal Force Coefficient vs. Angle of Attack)
+The normal force coefficient was plotted against the angle of attack at Mach 1.58 and Mach
+3.86, for 0° and 45° roll angles for the Shantz finner validation case. Shantz (1960) provided
+the experimental data; while the Star-CCM+, Missile Datcom, and RASAero data were
+generated as part of this study. The results are shown in Figures 47 to 49 and discussed below.
+Figure 47. Graph of Normal Force Coefficient vs. Angle of Attack at Mach 1.58 and 0° Roll
+y = 0.2766x
+y = 0.2832x
+y = 0.2685x
+-2
+-1
+0
+1
+2
+3
+4
+5
+6
+7
+-10 -5 0 5 10 15 20 25
+Normal Force Coefficient (Mach 1.58, 0° Roll)
+Angle of Attack (°) (Shantz Finner)
+Star-CCM+
+Experimental Data
+Missile DATCOM
+RASAero
+
+
+55
+Figure 48. Graph of Normal Force Coefficient vs. Angle of Attack at Mach 1.58 and 45° Roll
+Figure 49. Graph of Normal Force Coefficient vs. Angle of Attack at Mach 3.86 and 0° Roll
+Due to the low angles of attacks analysed, a linear trendline can be plotted. The gradients of the
+trendlines are used to obtain an average output for each data source, as shown in Table 17.
+y = 0.2875x
+y = 0.2834x
+y = 0.2625x
+-2
+-1
+0
+1
+2
+3
+4
+5
+6
+7
+8
+-10 -5 0 5 10 15 20 25
+Normal Force Coefficient (Mach 1.58, 45° Roll)
+Angle of Attack (°) (Shantz Finner)
+Star-CCM+
+Experimental Data
+Missile DATCOM
+y = 0.2150x
+y = 0.1805x
+y = 0.1868x
+-2
+-1
+0
+1
+2
+3
+4
+5
+6
+-10 -5 0 5 10 15 20 25
+Normal Force Coefficient (Mach 3.86, 0° Roll)
+Angle of Attack (°) (Shantz Finner)
+Experimental Data
+Star-CCM+
+Missile DATCOM
+RASAero
+
+
+56
+Table 17. Shantz Finner Validation Data
+Mach Roll Data Source Gradient % Difference
+1.58 0°
+Experimental Data 0.2832 
+CFD 0.2766 -2.33%
+Missile Datcom 0.2685 -5.19%
+1.58 45°
+Experimental Data 0.2834 
+CFD 0.2875 +1.45%
+Missile Datcom 0.2625 -7.37%
+3.86 0°
+Experimental Data 0.2150 
+CFD 0.1805 -16.05%
+Missile Datcom 0.1868 -13.12%
+At the lower Mach number (1.58), the CFD results are extremely close to the experimental
+results, with the Missile Datcom results less accurate. At the higher Mach number (3.86), the
+CFD results become more inaccurate. At Mach 3.86, the Spalart Allmaras turbulence model
+was used as there were convergence problems with the k − ω SST model at this high Mach
+number. This could be why the values at Mach 3.86 were more inaccurate. The finner at 45°
+roll and Mach 3.86 was not analysed as the solution did not converge fully. The RASAero data
+were only available for angles of attack up to 4°, where it was accurate.
+3.4.5 Hammargren Maxus (Drag Coefficient vs. Mach Number)
+Figure 50 shows the drag coefficient vs. Mach number for the Hammargren Maxus validation
+case. Hammargren provided the pre-existing data, and CFD simulation data. The Star-CCM+
+and RASAero results were generated as part of this study.
+Figure 50. Graph of Drag Coefficient vs. Mach Number
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0 1 2 3 4 5 6 7 8 9 10
+Drag Coefficient
+Mach Number (Hammargren Maxus)
+Pre-Existing Data
+Hammargren Simulation Data
+Star-CCM+
+RASAero
+
+
+57
+The drag coefficient was plotted against Mach numbers up to Mach 10, as shown in Figure 50.
+For the Star-CCM+ model, the drag coefficient was only plotted up to Mach 5, as above Mach
+5, the flow becomes hypersonic. This means a purely aerodynamic analysis cannot be
+performed, but rather an aerothermodynamic analysis must be performed in which the air’s
+chemical composition and effects such as dissociation and ionisation are taken into account.
+This was not in the scope of this research, so the CFD results were not obtained above Mach 5.
+The reference area used in calculating the drag coefficient was the larger ‘skirt’ diameter at the
+base of the rocket.
+In terms of the pre-existing data, Star-CCM+ overpredicted the peak drag coefficient by 9.9%.
+In the supersonic region, Star-CCM+ underpredicted the drag coefficient by at most 25.7%. In
+the subsonic region, Star-CCM+ underpredicted the drag coefficient by at most 13.4%. When
+compared to ammargren’s C D data, the Star-CCM+ data were very similar. The peak drag
+coefficient differed by 1.6% between the two.
+The RASAero data showed an underprediction in the peak drag by 5.3%. In the subsonic region,
+RASAero underpredicted the drag by 41.3%. This underprediction in the subsonic region is
+consistent with previous validation results. In the supersonic region, RASAero underpredicted
+the drag by 18.5%. The Missile Datcom data were so inaccurate (pronounced overprediction)
+it was left out of the analysis. In Missile Datcom, the Maxus geometry had to be created using
+a custom set of points, which was not done previously and could have caused the inaccurate
+results.
+3.5 Conclusion
+In summary, validation began by researching different rocket geometries that had wind tunnel
+data available. Five different validation cases were used, of varying geometry complexities: the
+spinner, finner, modified finner, and Maxus rocket.
+The Dunn spinner case was used to compare the differences between Star-CCM+ and Ansys
+Fluent. It was decided to use Star-CCM+ for the rest of the study due to the better workflow
+with JavaScript macros and slightly more accurate peak drag prediction.
+A mesh independence and domain independence study were conducted at Mach 0.6 for the
+Dunn Spinner validation. The number of elements it took to achieve convergence was larger
+than expected. It was confirmed that the domain size chosen was already in the converged
+region.
+For low angles of attack, the drag and normal force coefficients were predicted accurately for
+all validation cases. The only substantial inaccuracies occurred when simulating at large angles
+of attack (>15°) at high Mach numbers (>3.86). However, these large angles of attack and Mach
+number combinations are unrealistic for real rocket flight.
+Missile Datcom and RASAero were close to experimental data in terms of predicting
+aerodynamic coefficients. Both methods were more accurate in the transonic and supersonic
+regions, than the subsonic region. RASAero consistently underpredicted drag in the subsonic
+region. A noticeable problem with Missile Datcom is that there are often significant unrealistic
+jumps in values between adjacent Mach numbers, as observed in the Dunn Spinner and Dunn
+Finner validation cases. This is likely due to the code changing correlations from the transonic
+to supersonic region. In the Missile Datcom user’s manual (Air Force Research Laboratory,
+
+
+58
+1998) it is stated that the body alone aerodynamic methodology switches from
+subsonic/transonic correlations to supersonic correlations at Mach 1.2. The fin alone
+aerodynamic methodology switches from transonic correlations to supersonic correlations at
+Mach 1.4. It therefore makes sense, that in some instances there might be substantial changes
+around this transition point between correlations. Missile Datcom also overpredicted the drag
+for the Maxus rocket by a substantial amount.
+In summary, the CFD model created in Star-CCM+ was close to experimental data for existing
+rocket geometries. This was true for varying geometry complexities, Mach numbers, and angles
+of attack, when measuring the drag and normal force coefficients. Both semi-empirical methods
+(RASAero and Missile Datcom) were accurate, besides for occasional flaws in the Missile
+Datcom results. The same methods used to create the validation simulations were used for the
+STeVe and CLV simulations, to maintain accuracy.
+
+
+59
+4. Computational Aerodynamic Analysis of the Launch Vehicles
+The following chapter describes the implementation of computational analyses for the
+determination of the aerodynamic performance of the STeVe and CLV launch vehicles. This
+includes the creation of the vehicle geometries and meshes, the selection of the appropriate
+physics models, and the generation of a set of data in which ASRI engineers can have
+confidence given the validation of the process in Chapter 3. The results of this chapter will
+serve as crucial inputs to the design cycle of both vehicles as their development progresses.
+4.1 Geometry
+STeVe was still in the design phase at the start of this thesis; therefore, in June 2024, the latest
+geometry was chosen to be used throughout the thesis. The detailed geometry is shown in
+Appendix A, with a rendered image shown below in Figure 51.
+Figure 51. STeVe Geometry, as of June 2024
+STeVe has four hexagonal cross-section fins (canted at 0.7°), a boat tail, and a Von Kármán
+nose cone. The geometry used for the CFD had to be simplified, resulting in a constant diameter
+cylinder for the body tube section. The boat tail was also adjusted to start at the same point as
+the fins. The nose cone tip was given a 0.4 mm radius round, and the leading and trailing edges
+of the fins were both given 0.75 mm radius rounds to represent the as-machined components
+and to assist with meshing at sharp edges.
+CLV was still in the design phase at the start of this study; therefore, in June 2024, the latest
+geometry was chosen to be used throughout the study. The detailed geometry is shown in
+Appendix A, with a rendered image shown below in Figure 52.
+Figure 52. Commercial Launch Vehicle
+CLV is a two-stage rocket, in which only the first phase configuration (two stages attached)
+was analysed in this study. To simplify the CFD, the launch lugs were removed from the rocket
+body, and the rocket was smooth with a constant diameter.
+
+
+60
+4.2 Fluid Domain
+Based on the research conducted in the literature review, Chapter 2.4.3, a bullet shaped mesh
+domain was used for both launch vehicle simulations. The domain dimensions for STeVe and
+CLV are shown in Figures 53 and 54, as well as in Appendix A.
+Figure 53. STeVe Fluid Domain Dimensions
+Figure 54. CLV Fluid Domain Dimensions
+
+
+61
+4.3 Meshing
+When dealing with high-speed external flow over rockets, meshing can be broken down into
+three areas of importance: The boundary layer, the wake, and the free stream, as shown in
+Figure 55. Each of these areas contributes differently to solution accuracy and computational
+time; therefore, each area is meshed differently to optimise performance.
+Figure 55. Meshing Areas
+Boundary layer: The meshing technique used in the boundary layer is to create small,
+structured cells (prism layers or inflation layers) near the rocket surface to adequately capture
+the boundary layer formation. The process of correctly sizing the boundary layer is described
+in Chapter 2.1.4. A y+ of 1 was targeted to adequately resolve the boundary layer without the
+use of non-linear wall functions. ‘Sizing the boundary layer’ involved determining the first cell
+height, the boundary layer thickness, the total prism layer thickness, and the growth rate. In the
+boundary layer, there are some areas where the prism layers need to be small, and some areas
+where prism layers do not need to be small, or might not be required at all. In the direction of
+the flow, the cells can be large; and perpendicular to the direction of flow, the cells must be
+small. This is because changes in flow properties are greater perpendicular to the direction of
+flow in the boundary layer. On the fuselage, small prism layers are crucial. However, in the
+areas of stagnation and recirculation (nose cone tip, fin leading and trailing edges, rocket base)
+there is not the same boundary layer profile that is seen on the fuselage body. Therefore,
+structured prism layers are not as important in the areas of stagnation and recirculation. In these
+areas, structured prism layers often create poor quality cells due to the sharp rocket geometry.
+By removing the prism layers in those areas, the main cause of many meshing and convergence
+problems are also removed, and small polyhedral cells can be used instead.
+Wake: The wake resolution has a significant impact on the upstream flow. To capture the wake
+effectively, the wake refinement was split into three regions: The plume, wake 1, and wake 2,
+as shown in Figure 56. The plume aimed to just capture the plume and recirculation at the base
+of the rocket, and was the finest region. Wake 1 captured the wake from the plume to roughly
+halfway to the domain outlet, and was coarser. Wake 2 captured the wake to the domain outlet,
+and was even coarser.
+ree Stream ake oundary ayer
+
+
+62
+Figure 56. Wake Meshing Areas
+Free stream: The free stream area is the coarsest as there is usually no change in flow properties
+between adjacent cells, so small cells are not required. This is not the case when there is shock
+wave formation, as the shock waves propagate into the free stream and there are large changes
+in flow properties across the shock waves. Shock wave refinement was dealt with in the following manner. As part of the general mesh refinement, the free stream was refined, and
+therefore the shock waves were refined. At supersonic speeds, convergence was observed, as
+shown in the Chapter 5.1. This showed that a standard mesh refinement can be used to account
+for shock waves in the free stream.
+4.4 Fluid Properties and Flow Modelling
+Air was modelled as an ideal gas for the launch vehicle simulations, with the properties
+summarised in Table 18.
+Table 18. Air Properties for STeVe and CLV CFD
+Description Variable Value
+Dynamic viscosity * μ 8.1332 × 10−5 Pa.s
+Temperature T 293.15 K
+Heat capacity at
+constant pressure Cp 1003.62 J/kg.K
+Molar mass M 28.97 kg/kmol
+* Sutherland’s Law was used to calculate the viscosity, as described in Chapter 3.3
+The flow was modelled as an ideal gas, in 3D, using a steady solver. A coupled flow solver was
+chosen. The k − ω SST, RANS, turbulent flow solver was chosen with all y+ wall treatment.
+k − ω SST was used as the turbulence model, due to positive research for high-speed external
+flow. k − ω SST also provided accurate results when compared to experimental data, as
+highlighted in the validation cases, shown in Chapter 3. A transition zone model was not
+selected, as the air flow quickly reaches very high Reynolds numbers, so modelling the
+transition zone becomes less important for accuracy (as discussed in detail in Chapter 2.1.8).
+ake lume
+ake
+
+
+63
+4.5 Boundary Conditions
+The same boundary conditions were used as the boundary conditions in the validation cases.
+The boundary conditions are shown and described in Figure 57 and Table 19.
+Figure 57. Boundary Conditions for Bullet Fluid Domain
+Table 19. Boundary Conditions for STeVe and CLV
+Number Description Boundary Condition Variable Value
+1 Inlet
+Free Stream
+Temperature 293.15 K
+2 Wall Mach Number x
+3 Outlet Static Pressure
+(Gauge) 0 Pa
+4 Rocket Surface Wall (No Slip) - 
+Another method that was tested, was using a velocity inlet boundary at the inlet, free stream at
+the domain walls, and a pressure outlet at the outlet. This worked for some Mach numbers,
+however in the transonic region, it was difficult, and in some cases impossible, to achieve
+convergence. When a slip wall boundary condition was used for the outer walls, a noticeable
+shock reflection was observed. Therefore, free stream boundary conditions were used.
+4.6 Semi-Empirical Methods
+RASAero and Missile Datcom were used to generate comparative data points and as a means
+to assess confidence in the CFD results. In RASAero, the ‘All Turbulent low’ and the ‘Rogers
+Modified arrowman’ options were selected, for reasons discussed in Chapter 2.5. A smooth
+surface finish (zero surface roughness) was used. It is not defined in the RASAero
+documentation whether the nose cone tip is measured from the tip before or after a round is
+applied. The nose cone length without the rounded tip was used as the length input into
+RASAero, as the results more closely resembled the CFD results and the RASAero graphics
+output matched the nose cone curve. The RASAero input data and geometry for STeVe and
+CLV are shown in Appendix B.
+. all . Inle t
+. Outlet
+. Rocket Surface
+1. Inlet
+4. Rocket Surface
+3. Outlet
+2. Wall
+
+
+64
+Missile Datcom was used as another data point to increase confidence in the CFD results. 20
+discrete Mach numbers were used to characterise the flow for each angle of attack. A smooth
+surface finish (zero surface roughness) was used. Unlike RASAero, Missile Datcom has the
+ability to account for fin cant, which was done for STeVe. The Missile Datcom ‘.mis’ input
+files and geometry for STeVe and CLV are shown in Appendix B.
+
+
+65
+5. Aerodynamic Characterisation Results
+The aerodynamic characterisation results for both STeVe and CLV are shown in this chapter.
+This includes a section on mesh independence, static aerodynamic coefficients, and the flight
+trajectory.
+5.1 Mesh Independence
+A mesh independence study was conducted by varying the base cell size (keeping the prism
+layers unchanged) and obtaining a graph of drag coefficient vs. number of elements. A mesh
+independence study was conducted for CLV at Mach 0.6, 1.25, and 3, as shown in Figures 58
+to 60.
+Figure 58. CLV Mesh Independence at Mach 0.6
+Figure 59. CLV Mesh Independence at Mach 1.25
+0.20
+0.22
+0.24
+0.26
+0.28
+0.30
+0.32
+0.34
+0E+0 1E+7 2E+7 3E+7 4E+7
+Drag Coefficient (Mach 0.6)
+Number of Elements (CLV)
+0.50
+0.52
+0.54
+0.56
+0.58
+0.60
+0.62
+0E+0 1E+7 2E+7 3E+7 4E+7
+Drag Coefficient (Mach 1.25)
+Number of Elements (CLV)
+
+
+66
+Figure 60. CLV Mesh Independence at Mach 3
+To compare mesh independence between different Mach numbers, the percentage difference
+from the converged value was plotted, and shown in Figure 61.
+Figure 61. CLV Mesh Independence Summary
+As shown above, the drag readings showed asymptotic convergence at all three Mach numbers
+for CLV. An interesting observation is that convergence occurred at a lower number of elements
+for the higher Mach numbers (1.25 and 3), while convergence was more difficult to achieve at
+Mach 0.6. This observation is shown in Figure 61. Table 20 shows the number of elements
+required to achieve convergence for the CLV simulation, further highlighting this observation.
+0.36
+0.37
+0.38
+0.39
+0.40
+0.41
+0E+0 1E+7 2E+7 3E+7 4E+7
+Drag Coefficient (Mach 3)
+Number of Elements (CLV)
+0%
+10%
+20%
+30%
+40%
+50%
+0E+0 1E+7 2E+7 3E+7 4E+7
+% Difference from Converged Value
+Number of Elements (CLV)
+Mach 0.6
+Mach 1.25
+Mach 3
+
+
+67
+Table 20. Elements Required to Achieve Convergence for CLV
+Mach Number
+Number of Elements
+to fall within 10% of
+Converged Value
+Number of Elements
+to fall within 5% of
+Converged Value
+0.6 4.6 × 106 8.7 × 106
+1.25 1.7 × 106 1.9 × 106
+3 1.4 × 106 1.8 × 106
+A mesh independence study was conducted for STeVe at Mach 0.6 and Mach 1.25, as shown
+in Figures 62 and 63.
+Figure 62. STeVe Mesh Independence at Mach 0.6
+Figure 63. STeVe Mesh Independence at Mach 1.25
+0.260
+0.265
+0.270
+0.275
+0.280
+0.285
+0E+0 1E+7 2E+7 3E+7 4E+7 5E+7 6E+7
+Drag Coefficient (Mach 0.6)
+Number of Elements (STeVe)
+0.40
+0.41
+0.42
+0.43
+0.44
+0.45
+0.46
+0.47
+0E+0 1E+7 2E+7 3E+7 4E+7 5E+7 6E+7
+Drag Coefficient (Mach 1.25)
+Number of Elements (STeVe)
+
+
+68
+To compare mesh independence between different Mach numbers, the percentage difference
+from the converged value was plotted, and is shown in Figure 64.
+Figure 64. STeVe Mesh Independence Summary
+Convergence was achieved, as shown by the asymptotic nature of the drag coefficient vs.
+number of elements plots. However, the convergence was not achieved as easily as compared
+to CLV. The convergence graphs for STeVe do not show as smooth of an asymptotic
+relationship as was shown for CLV. This could be a result of STeVe having a complex
+geometry, containing fins, which are difficult to mesh, and could have interfered with
+convergence.
+Based on the mesh independence results, the factors in Table 21 were applied to the STeVe and
+CLV data points to account for the discretisation error, present in CFD.
+Table 21. Discretisation Error Factor
+Mach Number
+Range
+STeVe
+~10.7 million elements
+CLV
+~10.6 million elements
+M ≤ 1 0.967 0.981
+M > 1 0.920 0.990
+0%
+2%
+4%
+6%
+8%
+10%
+12%
+14%
+16%
+0E+0 1E+7 2E+7 3E+7 4E+7 5E+7 6E+7
+% Difference from Converged Value
+Number of Elements (STeVe)
+Mach 0.6
+Mach 1.25
+
+
+69
+5.2 Static Aerodynamic Coefficients
+The drag and lift coefficients were then obtained from CFD, taking into account the
+discretisation error. The drag coefficient vs. Mach number plot for STeVe is shown in Figure
+65.
+Figure 65. Drag Coefficient vs. Mach Number for STeVe
+Due to the limitations of RASAero geometry creation, fin cant could not be added. To analyse
+if this would have a large effect on the results, a 0° and a 0.7° fin cant simulation were
+performed in CFD. As shown in the CFD results, there was less than 1% difference for all Mach
+numbers. It can be concluded that small fin cant angles, less than 0.7°, have a negligible effect
+on drag, and RASAero results can be used without any adjustment.
+Both Missile Datcom and RASAero overpredicted the CFD results by roughly 15.6% in the
+subsonic region. RASAero overpredicted the peak drag coefficient by 14.6%, as well as shifting
+the Mach number at which peak drag occurred from Mach 1.1 to Mach 1.33. Missile Datcom
+overpredicted the peak drag by 1.6%. In the supersonic region, RASAero was within 8.5% of
+the CFD, while Missile Datcom was within 5.0% of the CFD. These results indicate that Missile
+Datcom is closer to the CFD results than RASAero.
+0.10
+0.15
+0.20
+0.25
+0.30
+0.35
+0.40
+0.45
+0.50
+0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5
+Drag Coefficient
+Mach Number (STeVe)
+Missile DATCOM
+RASAero (0° Fin Cant)
+0° Fin Cant CFD
+CFD
+
+
+70
+The drag and lift coefficients were plotted as a function of angle of attack at Mach 4.3, as shown
+in Figures 66 and 67.
+Figure 66. Drag Coefficient vs. Angle of Attack for STeVe
+Figure 67. Lift Coefficient vs. Angle of Attack for STeVe
+For the drag coefficient, the CFD and Missile Datcom results were within 11.6% up to 15°
+angle of attack and within 2.4% from 15° to 30° angle of attack. For the lift coefficient, the
+CFD and Missile Datcom results were within 13.6% up to 15° angle of attack and within 3.1%
+from 15° to 30° angle of attack. Due to reasons previously discussed in Chapter 2.5.1, RASAero
+is limited in varying angles of attack. In comparison to the limited RASAero data, the CFD data
+0
+1
+2
+3
+4
+5
+6
+7
+0 5 10 15 20 25 30
+Drag Coefficient (Mach 4.3)
+Angle of Attack (°) (STeVe)
+Mach 2 RASAero 0° AoA Mach 5 RASAero 0° AoA Missile Datcom CFD
+0
+2
+4
+6
+8
+10
+12
+0 5 10 15 20 25 30
+Lift Coefficient (Mach 4.3)
+Angle of Attack (°) (STeVe)
+Mach 2 RASAero 0° AoA
+Mach 5 RASAero 0° AoA
+Missile Datcom
+CFD
+
+
+71
+were accurate. The CFD and semi-empirical methods are remarkably accurate for high angles
+of attack and Mach numbers, when simulating STeVe.
+A breakdown of the total drag (using CFD and Missile Datcom) into pressure and friction drag
+for STeVe is shown in Figure 68.
+Figure 68. STeVe Drag Coefficient Summary
+The friction drag from CFD and Missile Datcom showed a noticeable difference (33% at Mach
+4.3). However, because the friction drag values are relatively small (compared to the pressure
+drag values), this difference did not have a considerable effect on the total drag. The friction
+drag shows a decreasing, largely linear relationship. The relationship is linear because the
+friction drag is unaffected by the substantial spike due to wave drag that is shown in the pressure
+drag graph. There was a smaller discrepancy in the pressure drag readings (11.2% at most) than
+the friction drag readings.
+The grayscale Mach number plots for various Mach numbers and angle of attack over the
+vehicles are shown in Figures 69 to 72 below, to clearly see the shock wave formation. The
+higher Mach numbers are indicated by lighter shades.
+Figure 69. Mach Number Plot at Mach 0.6
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5
+Drag Coefficient
+Mach Number (for STeVe)
+Total Drag (Datcom)
+Pressure Drag (Datcom)
+Friction Drag (Datcom)
+Total Drag (CFD)
+Pressure Drag (CFD)
+Friction Drag (CFD)
+
+
+72
+Figure 70. STeVe Mach Number Plot at Mach 1.25
+Figure 71. STeVe Mach Number Plot at Mach 3
+Figure 72. STeVe Mach Number Plot at Mach 4.3 and 30° Angle of Attack
+In subsonic flow, there are no shock waves, resulting in no wave drag and a lower pressure
+drag. There is a stagnation point at the nose tip, contributing to pressure drag. At Mach 1.25,
+there is clear shock wave formation at the nose tip, the fin leading edge, and the plume. At
+Mach 3, there are more shock waves forming at the fin tip. The shock angle is also more acute
+at Mach 3, than at Mach 1.25. For 0° angle of attack flow, the boundary layer growth can clearly
+be seen. The boundary layer (indicated by the dark zone) grows in thickness as the distance
+down the rocket body increases. For the flow at 30° angle of attack, there is not the classic
+shock wave formation seen in 0° angle of attack flow. At this extreme angle of attack, the base
+drag accounts for most of the pressure drag. The whole side of the rocket acts as a stagnation
+zone on the leading side, and a low-pressure zone on the trailing side. This results in substantial
+base drag.
+Direction of Airflow
+
+
+73
+A characterisation of the drag coefficient versus Mach number for CLV is given in Figure 73.
+Figure 73. CLV Drag Coefficient vs. Mach Number
+CLV was only simulated at a 0° angle of attack, monitoring the drag coefficient vs. Mach
+number. In the subsonic region, the CFD and semi-empirical data were all close to each other.
+Missile Datcom and RASAero overpredicted the peak drag coefficient by 10.5% and 29.7%
+respectively. This is quite a large overprediction, when compared to the STeVe simulation and
+other validation simulations. In the supersonic region (Mach 3.5), RASAero and Missile
+Datcom overpredict the drag coefficient by 23.3% and 6.4% respectively. This again, is quite a
+large overprediction. CLV is a simple rocket geometry, so it was expected to produce close
+results between the CFD and semi-empirical methods (as shown in the Dunn spinner validation
+case, Chapter 3.4.1). The only noticeable geometric difference in CLV is the large radius on the
+nose cone tip, which could be causing the differences seen in RASAero and Missile Datcom.
+For the Missile Datcom data between Mach 1.5 and Mach 2, there was a noticeable drop in
+drag, followed by an increase around Mach 2. This behaviour is unrealistic; however, these
+sharp changes are not uncommon to see when plotting drag from Missile Datcom. This is due
+to the Missile Datcom code switching from subsonic/transonic correlations to supersonic
+correlations around Mach 1.2.
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+012345
+Drag Coefficient
+Mach Number (CLV)
+RASAero
+CFD
+Missile DATCOM
+
+
+74
+Figure 74 shows a drag breakdown (using CFD and Missile Datcom) of the total drag into
+friction and pressure drag for CLV.
+Figure 74. CLV Drag Breakdown
+Missile Datcom consistently overpredicts the skin friction drag by 75% when compared to
+CFD. There was also a large discrepancy in the pressure drag, with a 23% error at Mach 1.5.
+Missile Datcom showed an unrealistic drop in pressure drag around Mach 1.5, followed by an
+increase in pressure drag around Mach 2.
+The general behaviour of the drag coefficient vs. Mach number plot follows the same shape, as
+shown in the validation cases, as well as in Figures 65 and 73. The drag coefficient remains
+relatively constant until roughly Mach 0.8. At this point, there is a substantial increase until a
+peak is reached somewhere between Mach 1.05 to Mach 1.25. The point at which the drag
+coefficient rapidly increases is called drag divergence. For the region up until drag divergence,
+the skin friction drag, pressure drag, and total drag increase with Mach number at similar rates
+to the dynamic pressure. This is shown by the relatively constant Cd values up to drag
+divergence. At the drag divergence, there is shock wave formation, which greatly increases
+wave drag (a type of pressure drag). The pressure drag increases at much higher rates compared
+to the dynamic pressure, up until a peak Cd is reached. After the peak Cd, the dynamic pressure
+increases at slightly higher rates than the pressure drag, shown by slowly decreasing Cd values.
+The rate that the skin friction coefficient changes with Mach number stays relatively constant
+as it is not affected by the onset of wave drag.
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0
+Drag Coefficeint
+Mach Number (CLV)
+Total Drag (Datcom)
+Pressure Drag (Datcom)
+Friction Drag (Datcom)
+Total Drag (CFD)
+Pressure Drag (CFD)
+Friction Drag (CFD)
+
+
+75
+Figure 75 shows a greyscale Mach number plot of CLV at Mach 3.5. Shock wave formation
+can be seen at the nose cone tip, as well as on the rocket plume.
+Figure 75. Mach Number Plot of CLV at Mach 3.5
+5.3 Flight Trajectory
+One of the main objectives of determining the aerodynamic coefficients is to accurately
+determine the flight trajectory and the aerodynamic forces acting on the rocket. Determining
+the change in Mach number with altitude allows for the calculation of the dynamic pressure and
+therefore, the drag force on the rocket. The drag force can then be used to perform stress
+analyses on the rocket structure.
+The trajectory of CLV was determined using the velocity vs. time graph, shown in Figure 76.
+This approximate trajectory was generated using a two degree of freedom code with a simple
+gravity turn at 0° angle of attack (Wunderlin, 2024).
+Figure 76. CLV Velocity vs. Time
+The velocity vs. time graph was used to determine the altitude vs. time graph. The standard
+atmospheric temperature and static pressure tables were then used to determine the dynamic
+pressure and Mach number for the flight trajectory, as shown in Figure 77.
+0
+2000
+4000
+6000
+8000
+10000
+12000
+0 50 100 150 200 250 300 350 400 450
+Velocity (m/s)
+Time (s) (CLV)
+
+
+76
+Figure 77. CLV Mach Number and Dynamic Pressure
+The drag coefficient vs. Mach number plots (for CFD, Missile Datcom, and RASAero) can be
+used with the dynamic pressure plots to determine the drag force for the flight trajectory, as
+shown in Figure 78.
+Figure 78. CLV Drag Force vs. Altitude
+It is useful to see the effects that different aeroprediction tools have on the maximum drag force.
+The rocket must be designed using some maximum force, making the choice of software used
+to determine this force critical. The maximum force will determine the maximum stresses on
+the rocket, and therefore the minimum rocket wall thickness required to withstand those
+stresses. If the maximum drag force is overpredicted, then the rocket will be over-engineered,
+0
+10000
+20000
+30000
+40000
+50000
+60000
+0
+1
+2
+3
+4
+5
+6
+0 10000 20000 30000 40000 50000 60000 70000
+Dynamic Pressure (Pa)
+Mach Number
+Altitude (m) (CLV)
+Mach Number
+Dynamic Pressure
+0
+5000
+10000
+15000
+20000
+25000
+30000
+35000
+40000
+45000
+50000
+0 10000 20000 30000 40000 50000 60000 70000
+Drag Force (N)
+Altitude (m) (CLV)
+Missile DATCOM
+RASAero
+CFD
+
+
+77
+reducing payload capacity. If the maximum drag force is underpredicted, then the rocket might
+catastrophically fail under the maximum drag force. Predicting the drag force accurately is also
+crucial as it directly affects the expected apogee, and it determines the thrust required to reach
+that apogee. During flight, rocket thrust can be modulated to manage structural loads. Since the
+dynamic pressure is directly proportional to the drag force, decreasing the thrust near the point
+of maximum dynamic pressure will decrease the forces acting on the structure.
+For CLV, RASAero overpredicted the maximum drag force by 24.2% compared to the CFD,
+while Missile Datcom only overpredicted the maximum drag force by 2.7% when compared to
+the CFD. For altitudes less than 4.5 km and greater than 25 km, there was a negligible difference
+in the drag force between the various aeroprediction tools. RASAero predicted the shape of the
+drag force graph much better than Missile Datcom.
+The same flight trajectory analysis was performed for STeVe, but instead using HyROPS
+(Hybrid Rocket Performance Simulator) to determine the flight trajectory. HyROPS
+(Chowdhury, 2012) is a 6 degree of freedom flight code, developed by ASRI, that determines
+the flight trajectory of a rocket with more accuracy than the CLV trajectory prediction. The
+velocity vs. time graph for STeVe is shown in Figure 79.
+Figure 79. STeVe Velocity vs. Time
+Unlike the data from CLV, HyROPS contained the dynamic pressure and Mach number in the
+output, so no further calculations were required. The dynamic pressure and Mach number graph
+is shown in Figure 80.
+0
+200
+400
+600
+800
+1000
+1200
+1400
+1600
+0 20 40 60 80 100
+Velocity (m/s)
+Time (s) (STeVe)
+
+
+78
+Figure 80. STeVe Mach Number and Dynamic Pressure
+The drag coefficient vs. Mach number plots (for CFD, Missile Datcom, and RASAero) were
+then used along with the dynamic pressure to determine the drag force for the flight trajectory,
+as shown in Figure 81.
+Figure 81. STeVe Drag Force vs. Altitude
+RASAero overpredicted the CFD maximum drag force by 7.5%, and Missile Datcom
+underpredicted the maximum drag force by 4.8%. For altitudes less than 3.2 km and greater
+than 13.5 km, there were negligible differences in the drag force, between various
+aeroprediction tools.
+0
+30000
+60000
+90000
+120000
+150000
+0
+1
+2
+3
+4
+5
+0 10000 20000 30000 40000 50000 60000 70000
+Dynamic Pressure (Pa)
+Mach Number
+Altitude (m) (STeVe)
+Mach Number
+Dynamic Pressure
+0
+1000
+2000
+3000
+4000
+5000
+6000
+7000
+0 10000 20000 30000 40000 50000 60000 70000
+Drag Force (N)
+Altitude (m) (STeVe)
+CFD
+RASAero
+Missile Datcom
+
+
+79
+6. Aerodynamic Heating
+This chapter addresses the process and results of the aerodynamic heating analysis for this
+study. The important theory regarding aerodynamic heating is found in Chapter 2.3.
+6.1 Introduction
+In this study, the heat transfer coefficient and surface temperature were analysed for the nose
+cone of STeVe. As part of previous work done at ASRI, Sabbagha (2024) analytically
+determined the heat transfer coefficient and temperature along STe e’s nose cone. He
+approximated the nose cone as a flat plate parallel to the oncoming flow, where forced
+convection heat transfer dominated. For the nose cone tip temperature, equations from Jerger
+(1960) were used. Sabbagha (2024) concluded that with a pointed nose cone, virtually no
+material could withstand the temperatures at the nose cone tip. Therefore, further analysis was
+required on using rounded nose cone tips to reduce the temperature. The aerodynamic heating
+analysis in this study had the following aims:
+1) Compare the analytical heat transfer coefficient and surface temperature results with
+CFD results.
+2) Determine the heat transfer coefficient and surface temperature for varying nose cone
+tip radii.
+6.2 CFD Setup
+An identical setup to the other STeVe simulations was used, with the process described in
+Chapter 4. The only change was inputting the thermal conductivity, k, to a value of
+2.5695 W/m.K using Sutherland’s aw.
+Sutherland’s aw can be used to define the thermal conductivity of pure and non-reacting gases
+as a function of temperature.
+k = kref ( T
+Tref
+)
+3 2
+∙ Tref + Sk
+T + Sk
+6.1
+where k is the thermal conductivity, in W/m.K,
+the Sutherland temperature, Sk = 194 K (for air),
+the reference temperature, Tref = 273.15 K, and
+the reference thermal conductivity, kref = 0.0241 W/m.K.
+The thermal boundary condition on the rocket surface was set to adiabatic. The ‘specified y+
+heat transfer coefficient’ method was used to determine the heat transfer coefficient. A user
+specified y+ value of 100 was used to obtain the heat transfer coefficient, as recommended in
+the Star-CCM+ user’s manual (Siemens, 2023b). All CFD simulations were run at sea-level
+atmospheric conditions. This means that the raw heat transfer coefficients and temperatures
+obtained from CFD could not be compared to analytical calculations, as the analytical
+calculations were based on HyROPS flight data. The following methods were used to obtain
+comparable results between CFD and the analytical results for the heat transfer coefficient and
+the surface temperature.
+
+
+80
+Heat Transfer Coefficient: Comparing the heat transfer coefficient between different methods
+is a futile exercise, as “there is an infinite number of heat transfer coefficient and reference
+temperature combinations that give the same surface heat flux upon convergence.” (Siemens,
+2023b). Therefore, comparing the trend of heat transfer coefficient is more important than
+comparing the absolute values. The input conditions for the analytical calculator were changed
+to sea-level conditions to act as a fairer comparison with the CFD results.
+Surface Temperature: To obtain the nose cone surface temperature at flight conditions using
+CFD, the following method based on theory from Chapter 2.3 was used.
+1) The adiabatic wall temperature, Taw, was obtained using CFD at sea level atmospheric
+conditions, at a desired Mach number.
+2) The recovery factor, r, for the CFD result was obtained using
+r = Taw − T∞
+T0 − T∞
+6.2
+where the stagnation temperature is
+T0 = T∞ (1 + γ − 1
+2 ∙ M∞) 6.3
+3) The adiabatic wall temperature at the desired flight condition was then obtained using
+the following equation,
+Taw = T∞ ∙ (r ∙ γ − 1
+2 ∙ M2∞ + 1) 6.4
+where T∞ is the free stream temperature at the desired flight condition.
+No literature was found regarding the accuracy of this method. So first, this method was
+compared with the analytical results.
+6.3 Results
+The aerodynamic heating results are presented and discussed in two parts. Firstly, the analytical
+calculations were compared to the CFD simulation results. Secondly, the performance of
+various nose cone geometries was then evaluated using CFD.
+6.3.1 Analytical Calculation Comparison
+Since no experimental temperature data were available, the CFD results were compared to the
+analytical results as an initial check of accuracy. The heat transfer coefficient was plotted
+against distance along the nose cone for three Mach numbers, as shown in Figures 82 to 84. As
+sea-level atmospheric conditions were used in the CFD, the same conditions were inputted into
+the analytical calculator.
+
+
+81
+Figure 82. Heat Transfer Coefficient at Mach 0.6
+Figure 83. Heat Transfer Coefficient at Mach 1.5
+0
+500
+1000
+1500
+2000
+2500
+0.0 0.2 0.4 0.6 0.8 1.0
+h (W/m2.K) (Mach 0.6)
+Distance Along Nose Cone (x/L)
+CFD Results
+Analytical Results
+0
+1000
+2000
+3000
+4000
+5000
+0.0 0.2 0.4 0.6 0.8 1.0
+h (W/m2.K) (Mach 1.5)
+Distance Along Nose Cone (x/L)
+CFD Results
+Analytical Results
+
+
+82
+Figure 84. Heat Transfer Coefficient at Mach 3
+CFD predicted a higher peak heat transfer coefficient by 14.6%, 33.7%, and 52.8% at Mach
+0.6, 1.5, and 3 respectively. CFD predicted a higher heat transfer coefficient along the main nose cone surface by roughly 65.5%, 61.7%, and 18.4% at Mach 0.6, 1.5, and 3 respectively.
+These results show a noticeable difference between the CFD and analytical results for the heat
+transfer coefficient. However, this difference is expected as there is a pressure gradient present
+in the CFD. In the flat plate correlation, there is no pressure gradient, so the analytical results
+should be more inaccurate. If only the trend is analysed, the trends shown by the CFD and
+analytical results are similar.
+The surface temperature, at flight conditions, was plotted against distance along the nose cone
+at Mach 0.6, 1.5 and 3, as shown in Figures 85 to 87.
+Figure 85. Surface Temperature at Mach 0.6
+0
+2000
+4000
+6000
+8000
+10000
+0.0 0.2 0.4 0.6 0.8 1.0
+h (W/m2.K) (Mach 3)
+Distance Along Nose Cone (x/L)
+CFD Results
+Analytical Results
+300
+301
+302
+303
+304
+0.0 0.2 0.4 0.6 0.8 1.0
+Surface Temperature (K) (Mach 0.6)
+Distance Along Nose Cone (x/L)
+CFD Results
+Analytical Results
+
+
+83
+Figure 86. Surface Temperature at Mach 1.5
+Figure 87. Surface Temperature at Mach 3
+CFD predicted a higher peak surface temperature by 0.1%, 0.3%, and 0.9% at Mach 0.6, 1.5,
+and 3 respectively. Between 10% to 100% of the nose cone length, CFD varied by a maximum
+of 0.1% for all three Mach numbers. The CFD and analytical results for the heat transfer
+coefficient were close. Therefore, It would appear that using the recovery factor to convert
+adiabatic wall temperatures from CFD at sea level conditions to surface temperatures at flight
+conditions yields reasonable results.
+355
+360
+365
+370
+375
+380
+0.0 0.2 0.4 0.6 0.8 1.0
+Surface Temperature (K) (Mach 1.5)
+Distance Along Nose Cone (x/L)
+CFD Results
+Analytical Results
+540
+550
+560
+570
+580
+590
+600
+610
+0.0 0.2 0.4 0.6 0.8 1.0
+Surface Temperature (K) (Mach 3)
+Distance Along Nose Cone (x/L)
+CFD Results
+Analytical Results
+
+
+84
+6.3.2 Nose Cone Geometry Variation
+STeVe was simulated with a Von Kármán nose cone with various tip radii, as shown in Figure
+88.
+Figure 88. Von Kármán Nose Cone Variations
+The heat transfer coefficient was plotted against distance along the nose cone for three Mach
+numbers, as shown in Figures 89 to 91.
+Figure 89. Heat Transfer Coefficient at Mach 0.6
+0
+500
+1000
+1500
+2000
+2500
+0.0 0.2 0.4 0.6 0.8 1.0
+h (W/m2.K) (Mach 0.6)
+Distance Along Nose Cone (x/L)
+0 mm Radius
+10 mm Radius
+30 mm Radius
+100 mm Radius
+Geometry 1:
+0.4 mm Radius, 2.31 m Length
+Geometry 2:
+10 mm Radius, 2.28 m Length
+Geometry 3:
+30 mm Radius, 2.23 m Length
+Geometry 4:
+100 mm Radius, 1.90 m Length

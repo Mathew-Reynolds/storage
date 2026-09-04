@@ -1,0 +1,198 @@
+Skip to Main Content
+Open Menu
+Skip Nav Destination
+Volume 146, Issue 5
+May 2024
+Previous Article
+Next Article
+Article Contents
+Abstract
+References
+RESEARCH PAPERS
+Roughness Related to Cooling Performance of Channels Made Through Additive Manufacturing
+Available to Purchase
+Alexander J. Wildgoose,Karen A. Thole,Erika Tuneskog,Lieke Wang
+Author and Article Information
+J. Turbomach. May 2024, 146(5): 051008 (12 pages)
+Paper No: TURBO-23-1279 https://doi.org/10.1115/1.4064310
+Published Online: January 16, 2024
+Article history
+Share 
+Cite
+Permissions
+Search Site
+Abstract
+
+The complex surface morphology and multiscale surface features inherent in additively manufactured (AM) components contribute to the overall flow characteristics and heat transfer of cooling passages. As the AM process and cooling data in the literature continue to evolve, so does the need for more accurate heat transfer and pressure loss correlations for AM cooling schemes. This study improves the predictability of pressure loss and heat transfer for AM cooling passages by fabricating a range of coupons and investigating samples in the literature. Twenty-seven test coupons were manufactured using direct metal laser sintering in an assortment of build directions and build locations that produced a variety of surface morphologies. Nondestructive evaluation, computed tomography scanning, was used to quantify the surface morphology as well as capture the as-built geometric dimensions of the cooling schemes. The friction factor and bulk Nusselt number of the coupons were measured using an experimental rig. Pressure loss and heat transfer correlations in the literature were compared with the experimental results from the current coupons and datasets from the literature. Arithmetic mean roughness correlations in the literature struggled to predict the cooling performance of AM channels since the bulk roughness statistic did not capture the overall form of the surface morphology. A combination of root mean square roughness and skewness of the roughness was able to best predict pressure loss and heat transfer for the present samples and those in the literature while being independent of build location, build direction, material, machine, and laser parameters. The maximum absolute error was 25% and the average absolute error was 12% for the friction factor correlation. The maximum absolute error was 39% and the average absolute error was 8% for the Nusselt Number correlation.
+
+Issue Section:
+Research Papers
+Keywords:
+heat transfer, friction factor, roughness, additive manufacturing
+Topics:
+Friction, Heat transfer, Pressure, Surface roughness, Cooling, Additive manufacturing
+References
+1.
+Ventola, L., Robotti, F., Dialameh, M., Calignano, F., Manfredi, D., Chiavazzo, E., and Asinari, P., 2014, “Rough Surfaces With Enhanced Heat Transfer for Electronics Cooling by Direct Metal Laser Sintering,” Int. J. Heat Mass Transfer, 75, pp. 58–74.
+2.
+Stimpson, C. K., Snyder, J. C., Thole, K. A., and Mongillo, D., 2016, “Scaling Roughness Effects on Pressure Loss and Heat Transfer of Additively Manufactured Channels,” ASME J. Turbomach., 139(2), p. 021003.
+3.
+Snyder, J. C., Stimpson, C. K., Thole, K. A., and Mongillo, D. J., 2015, “Build Direction Effects on Microchannel Tolerance and Surface Roughness,” ASME J. Mech. Des., 137(11), p. 111411.
+4.
+Snyder, J. C., and Thole, K. A., 2020, “Tailoring Surface Roughness Using Additive Manufacturing to Improve Internal Cooling,” ASME J. Turbomach., 142(7), p. 071004.
+5.
+Yeung, H., Lane, B., and Fox, J., 2019, “Part Geometry and Conduction-Based Laser Power Control for Powder Bed Fusion Additive Manufacturing,” Addit. Manuf., 30, p. 100844.
+6.
+Kleszczynski, S., Ladewig, A., Friedberger, K., zur Jacobsmuhlen, J., Merhof, D., and Witt, G., 2015, “Position Dependency of Surface Roughness in Parts From Laser Beam,” Proceedings of the 2015 International Solid Freeform Fabrication Symposium, Austin, TX, Aug. 10–12, pp. 360–370.
+7.
+Subramanian, R., Rule, D., and Nazik, O., 2021, “Dependence of LPBF Surface Roughness on Laser Incidence Angle and Component Build Orientation,” ASME Turbo Expo 2021: Turbomachinery Technical Conference and Exposition, Virtual, Online.
+8.
+Wang, P., Yang, M., Wang, Z., and Zhang, Y., 2014, “A New Heat Transfer Correlation for Turbulent Flow of Air With Variable Properties in Noncircular Ducts,” ASME J. Heat Transfer, 136(10), p. 101701.
+9.
+Snyder, J. C., and Thole, K. A., 2020, “Effect of Additive Manufacturing Process Parameters on Turbine Cooling,” ASME J. Turbomach., 142(5), p. 051007.
+10.
+Kandlikar, S. G., Schmitt, D., Carrano, A. L., and Taylor, J. B., 2005, “Characterization of Surface Roughness Effects on Pressure Drop in Single-Phase Flow in Minichannels,” Phys. Fluids, 17(10), p. 100606.
+11.
+Nikuradse, J., 1950, “Laws of Flow in Rough Pipes,” J. Appl. Phys., 3(Nov.), p. 399.
+12.
+Mazzei, L., Da Soghe, R., and Bianchini, C., 2022, “Calibration of a CFD Methodology for the Simulation of Additively Manufactured Components Accounting for the Effects of Diameter and Printing Direction on Friction and Heat Transfer,” ASME J. Turbomach., 144(8).
+13.
+Thole, K. A., Lynch, S., and Wildgoose, A. J., 2021, “Review of Advances in Convective Heat Transfer Developed Through Additive Manufacturing,” Adv. Heat Transfer, 53, pp. 249–325.
+14.
+Zhou, L., Zhu, Y., Liu, H., He, T., Zhang, C., and Yang, H., 2021, “A Comprehensive Model to Predict Friction Factors of Fluid Channels Fabricated Using Laser Powder Bed Fusion Additive Manufacturing,” Addit. Manuf., 47, p. 102212.
+15.
+Goodhand, M. N., Walton, K., Blunt, L., Lung, H. W., Miller, R. J., and Marsden, R., 2016, “The Limitations of Using ‘Ra’ to Describe Surface Roughness,” ASME J. Turbomach., 138(10), p. 101003.
+16.
+Van Rij, J. A., Belnap, B. J., and Ligrani, P. M., 2002, “Analysis and Experiments on Three-Dimensional, Irregular Surface Roughness,” ASME J. Fluids Eng., 124(3), pp. 671–677.
+17.
+Forooghi, P., Stroh, A., Magagnato, F., Jakirlić, S., and Frohnapfel, B., 2017, “Toward a Universal Roughness Correlation,” ASME J. Fluids Eng., 139(12), p. 121201.
+18.
+Flack, K. A., and Schultz, M. P., 2010, “Review of Hydraulic Roughness Scales in the Fully Rough Regime,” ASME J. Fluids Eng., 132(4), p. 041203.
+19.
+Sigal, A., and Danberg, J. E., 1990, “New Correlation of Roughness Density Effect on the Turbulent Boundary Layer,” AIAA J., 28(3), pp. 554–556.
+20.
+Stimpson, C. K., Snyder, J. C., Thole, K. A., and Mongillo, D., 2016, “Roughness Effects on Flow and Heat Transfer for Additively Manufactured Channels,” ASME J. Turbomach., 138(5), p. 051008.
+21.
+Mazzei, L., Da Soghe, R., and Bianchini, C., 2022, “Calibration of a Computational Fluid Dynamics Methodology for the Simulation of Roughness Effects on Friction and Heat Transfer in Additive Manufactured Components,” ASME J. Turbomach., 144(8), p. 081002.
+22.
+Snyder, J. C., Stimpson, C. K., Thole, K. A., and Mongillo, D., 2016, “Build Direction Effects on Additively Manufactured Channels,” ASME J. Turbomach., 138(5), p. 051006.
+23.
+Wildgoose, A. J., Thole, K. A., Sanders, P., and Wang, L., 2021, “Impact of Additive Manufacturing on Internal Cooling Channels With Varying Diameters and Build Directions,” ASME J. Turbomach., 143(7), p. 071003.
+24.
+Wildgoose, A. J., and Thole, K. A., 2023, “Heat Transfer and Pressure Loss of Additively Manufactured Internal Cooling Channels With Various Shapes,” ASME J. Turbomach., 145(7), p. 071011.
+25.
+Wildgoose, A. J., Thole, K. A., Subramanian, R., Kerating, L., and Kulkarni, A., 2023, “Impacts of the Additive Manufacturing Process on the Roughness of Engine Scale Vanes and Cooling Channels,” ASME J. Turbomach., 145(4), p. 041013.
+26.
+Kamat, A. M., and Pei, Y., 2019, “An Analytical Method to Predict and Compensate for Residual Stress-Induced Deformation in Overhanging Regions of Internal Channels Fabricated Using Powder Bed Fusion,” Addit. Manuf., 29, p. 100796.
+27.
+Segersäll, M., 2013, Nickel-Based Single-Crystal Superalloys—The Crystal Orientation Influence on High Temperature Properties, Vol. 1568, Linköping Studies in Science and Technology Licentiate Thesis.
+28.
+Volume Graphics, 2021, VGStudio MAX.
+29.
+Reinhart, C., 2011, Industrial CT & Precision, Volume Graphics GmbH, Heidelberg, Germany.
+30.
+Wildgoose, A. J., and Thole, K. A., 2022, “Variability in Additively Manufactured Turbine Cooling Features,” J. Glob. Power Propuls. Soc.
+31.
+Klingaa, C. G., Bjerre, M. K., Baier, S., De Chiffre, L., Mohanty, S., and Hattel, J. H., 2019, “Roughness Investigation of SLM Manufactured Conformal Cooling Channels Using X-Ray Computed Tomography,” Proceedings of the 9th Conference on Industrial Computer Tomography, Padova, Italy, Feb. 13–15.
+32.
+Munson, R., Young, B., and Okiishi, D. F., and H, T., 1990, Fundamentals of Fluid Mechanics, Wiley & Sons, Hoboken, NJ.
+33.
+Figliola, R. S., and Beasley, D. E., 2005, Theory and Design for Mechanical Measurments, Wiley & Sons, Hoboken, NJ.
+34.
+Molitor, V. D., 2018, Experimental Study on Pressure Losses in Additive Manufactured Channels, RWTH, Aachen.
+35.
+Nambisan, J., 2020, “Experimental Study on Pressure Losses in Additively Manufactured and Machined Orifices,” Master's Thesis, Linköping University, Linköping, Sweden.
+Copyright © 2024 by ASME
+You do not currently have access to this content.
+Sign In
+Sign In Or Register For Account
+Sign in via your Institution
+Purchase this Content
+$25.00
+Purchase
+Learn about subscription and purchase options
+8
+View Metrics
+Get Email Alerts
+Article Activity Alert
+Accepted Manuscript Alert
+New Issue Alert
+Cited By
+Web Of Science (12)
+Google Scholar
+CrossRef (11)
+Latest
+Most Read
+Most Cited
+Effect of Purge-Mainstream Density Ratio on the Secondary Flow Field of a Turbine Blade Row
+J. Turbomach
+Partial Admission Loss Modelling of Radial Inflow Turbines
+J. Turbomach
+A novel cooling design and improvement of a radial-inflow turbine rotor blade
+J. Turbomach
+Comparisons of Measured Blade Temperatures with Predictions Using Available Correlations
+J. Turbomach
+Related Articles
+Impact of Additive Manufacturing on Internal Cooling Channels With Varying Diameters and Build Directions
+J. Turbomach (July,2021)
+Systematic Numerical Investigation on the Surface Roughness Effects on the Friction and Heat Transfer of Additively Manufactured Components
+J. Turbomach (February,2026)
+Calibration of a Computational Fluid Dynamics Methodology for the Simulation of Roughness Effects on Friction and Heat Transfer in Additive Manufactured Components
+J. Turbomach (August,2022)
+Build Direction Effects on Additively Manufactured Channels
+J. Turbomach (May,2016)
+Related Proceedings Papers
+Systematic Numerical Investigation on the Surface Roughness Effects on the Friction and Heat Transfer of Additively Manufactured Components
+GT2025
+Calibration of a CFD Methodology for the Simulation of Additively Manufactured Components Accounting for the Effects of Diameter and Printing Direction on Friction and Heat Transfer
+GT2022
+Calibration of a CFD Methodology for the Simulation of Roughness Effects on Friction and Heat Transfer in Additive Manufactured Components
+GT2021
+Related Chapters
+Thermal Interface Resistance
+Thermal Management of Microelectronic Equipment
+Additive Manufactured Multifunctional Thin Film Methodologies
+Advanced Synthesis of Multi-scale and Multifunctional Coatings
+Thermal Design Guide of Liquid Cooled Systems
+Thermal Design of Liquid Cooled Microelectronic Equipment
+Issues
+Accepted Manuscripts
+All Years
+Purchase
+Twitter
+About the Journal
+Editorial Board
+Information for Authors
+Call for Papers
+Rights and Permission
+Online ISSN 1528-8900Print ISSN 0889-504X
+ASME Journals
+About ASME Journals
+Information for Authors
+Submit a Paper
+Call for Papers
+Title History
+ASME Conference Proceedings
+About ASME Conference Publications and Proceedings
+Conference Proceedings Author Guidelines
+ASME eBooks
+About ASME eBooks
+ASME Press Advisory & Oversight Committee
+Book Proposal Guidelines
+Resources
+Contact Us
+Authors
+Librarians
+Frequently Asked Questions
+Publication Permissions & Reprints
+ASME Membership
+Opportunities
+Faculty Positions
+LinkedIn
+Twitter
+Facebook
+ASME Instagram
+Accessibility Privacy Statement Terms of Use Get Adobe Acrobat Reader
+Copyright © 2025 The American Society of Mechanical Engineers
+This site uses cookies. By continuing to use our website, you are agreeing to our privacy policy.
+Accept

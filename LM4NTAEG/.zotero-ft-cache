@@ -1,0 +1,175 @@
+7TH EUROPEAN CONFERENCE FOR AERONAUTICS AND SPACE SCIENCES (EUCASS)
+Copyright  2015 by First Author and Second Author. Published by the EUCASS association with permission.
+An Experimental Study on Pressure Loss in Spiral Cooling Channels
+Wonjae Yoon* and Kyubok Ahn** *School of Mechanical Engineering, Chungbuk National University 1 Chungdae-ro, Seowon-gu, Cheongju, Chungbuk 28644, Korea *School of Mechanical Engineering, Chungbuk National University 1 Chungdae-ro, Seowon-gu, Cheongju, Chungbuk 28644, Korea
+Abstract
+Regeneratively-cooled channels have been used for cooling a combustion chamber of a liquid rocket engine. Spiral cooling channels which had five different geometric shapes and two different spiral angles were manufactured with end mill tools. By changing fluid velocity and pressure in the channels, hydraulic tests were performed to study the effects of channel shape, spiral angle, and flow condition on friction pressure loss. The friction coefficients obtained from the present experiments have been compared with the friction coefficients calculated by the previous empirical equations and the lookup table. It was found that the present experimental friction coefficients were 10 to 50% greater than those from the previous empirical lookup table.
+1. Introduction
+Proper cooling in a combustion chamber is inevitable for stable operation of a combustion device. Especially a liquid rocket engine thrust chamber needs complex cooling methods since it is exposed to combustion gas with extreme high temperature and pressure. Thus it uses independently or simultaneously several methods such as regenerative cooling, film cooling, thermal barrier coating, and so on [1-3]. For regenerative cooling, tubular wall (the F-1 engine) and channel wall designs for combustion chambers have been used. Nowadays the channel wall is more preferred in the RD-107, RD-170, and SSME engines. A channel wall combustion chamber consists of an inner wall with high conductivity material and an outer jacket with high strength material. One or them of propellants flows through rectangular slots, or channels between the inner wall and outer jacket as a coolant, and subtracts heat from the inner wall to decrease the temperature of the wall [4-6]. To improve heat transfer from an inner wall to a coolant, the velocity in channels, and surface area between the coolant and inner wall should be increased. However, higher velocity causes larger pressure loss through the cooling channels, which requires greater discharge pressure from a turbopump in a turbopump-fed engine. To enlarge the surface area, the number of cooling channels and channel height should be increased, which adversely affects manufacturing cost and time. Thus the design of cooling channels needs to be optimized considering heat transfer, pressure loss, manufacturing, weight [7-9]. Wang et al. [10] experimentally investigated heat transfer and pressure drop of kerosene at supercritical pressure in square and circular tube with artificial roughness. They showed that the ribbed roughness could improve the heat transfer performance and weaken the coking though the pressure loss was increased. By examining the effects of channel aspect ratio, Wadel [11] suggested that the optimization between pressure loss and cooling capacity might be possible. From the point of fluid dynamics, velocity, channel cross-sectional area/length, and surface roughness are known to affect pressure loss in cooling channels. Though a lot of textbooks and papers suggest empirical equations for friction loss coefficients in circular channels, there may be some deviations in applying them to a rectangular cooling channel. To design a combustion chamber with regeneratively-cooled channels, one should be able to exactly expect the pressure loss in the cooling channels before manufacturing it. However, experimental data on pressure loss in cooling channels of full-scale liquid rocket engines are hardly to find in open literature. Kim et al. [12] studied the local resistance pressure loss in the branching and merging of channels, and analyzed the data obtained from the analytical, numerical, and experimental methods. Ahn et al. [13] showed that the analytically-expected pressure losses were up to totally 11% lower than the experimentally-measured ones in the full-scale combustion chamber. This casted doubt on applying previous empirical pressure loss coefficients for calculating pressure loss in the milled rectangular cooling channels.
+DOI: 10.13009/EUCASS2017-77
+
+
+First Author, Second Author
+2
+Yoon et al. [14] conducted the experimental study on the pressure loss in the straight cooling channels with different channel geometries, respectively manufactured from cutter and endmill tools. They showed that manufacturing method, operating condition, and geometric shape affected the difference between the measured friction coefficient and the friction coefficient calculated from the previous empirical look-up table. Since a combustion chamber generally has spiral cooling channels, there may be another problem in applying their experimental data to spiral cooling channels. Though several researchers studied the heat transfer characteristics in spiral cooling channels, experimental research on the pressure loss in spiral cooling channels is seldom. Therefore, the first objective of this research is to extend the previous research in straight cooling channels to spiral cooling channels. The second objective is to investigate the effects of spiral angle, channel shape, and operating condition on the friction coefficient.
+2. Basic Theory
+The total pressure loss (ΔPov) in a circular tube or channel is represented by the function of fluid velocity (V), density (ρ) and pressure loss coefficient (ζov) as Eq. 1. The pressure loss coefficient is divided as the friction loss coefficient due to friction at the wall (ζfr) and the local resistance coefficient (ζloc) due to the dramatic change of flow path or area. Although both losses occur in a regeneratively-cooled channel, the friction pressure loss is generally much larger than the local resistance pressure loss since a cooling channel has small cross-sectional area as well as long length. Therefore, we focused only on the friction loss in a cooling channel in this study. The study about the local resistance requires another research method.
+∆PPoooo = ζζoooo
+ρρVV22
+22 (ζζoooo = ζζllooll + ζζffff) (1)
+ζζffff = ff(∆, DD, RRRR) = λλnnoonn,llccff
+LL
+DDhh (2)
+∆PPffff = kknnoonn,llccffλλllccff
+LL
+DDhh
+ρρVV22
+22 (3)
+The friction loss coefficient is expressed as Eq. 2. It is the function of flow conditions such as Reynolds number, viscosity and temperature, and geometric features of the channel such as surface roughness and channel diameter. Since a regenerative cooling channel has a rectangular shape, the hydraulic diameter (Dh) is used instead of the diameter of circular pipe, and dimension correlation factor (knon,cir) is used for non-circular channel to calculate the friction coefficient. Finally, the pressure loss by the friction is expressed as Eq. 3 in a non-circular channel.
+λλllccff = 00.33333333
+RRRR00.2222 �3344330033 < RRRR < 330022� (4)
+λλllccff = 33
+(33.88lloo88RRRR−33.3333)22 �RRRR > 330022� (5)
+λλllccff = 00. 3333 �∆� + 3388
+RRRR�
+00.2222
+, ∆�= ∆/DDhh (6)
+The friction coefficient is affected by the roughness of channel surface, which is normally considered as smooth wall and uniform roughness wall. Empirically, the friction coefficient at smooth wall is expressed as Eq. 4 and the friction coefficient at uniform roughness wall is expressed as Eq. 5. The roughness (∆�) in Eq. 5 means the relative roughness normalized by the channel diameter or the hydraulic diameter. Since Eq. 5 is empirically fitted equation, it might be the cause of error. More accurate friction coefficient data is obtained from the Table by the relative roughness and Reynolds number. Also, the roughness (∆) has different meaning with generally measured roughness such as Ra, Ry, Rz, etc. We assumed the surface roughness as the Rz times 0.978 [11,20].
+3. Experimental Apparatus and Conditions
+3.1 Design and manufacture of cooling channel
+The helical cooling channels in this study were manufactured by the same manufacturing process of a regenerative cooling channel for a liquid rocket engine. The cooling channels have five different dimensions, and the channels were
+DOI: 10.13009/EUCASS2017-77
+
+
+INSTRUCTIONS FOR THE PREPARATION OF PAPERS
+3
+cut as the rectangular shape on a circular cylinder using endmill tool, and it had two different helical angles of 15° and 30° respectively as shown Fig. 1.
+Figure 1: 2D drawing and 3D model of the helical cooling channel
+The dimensions of each channel were measured using Vernier calipers at the end of channels. Detailed geometric information is in Table 1. CH1, CH2 and CH3 had the same channel widths but different channel heights. CH2, CH4 and CH5 had the same channel heights but different channel widths. The influences of channel dimensions on the pressure loss can be investigated through the comparison of the results. Since the channels were deeply and narrowly cut, it was impossible to measure the surface roughness of channels directly. In order to measure the roughness data of channels, the plane metal was cut using the endmill tool, which was used to manufacture the channels, and then its roughness was measured. Table 2 shows measured roughness. Normally, four types of roughness were measured, but only Rz was used here.
+Table 1: Designed and measured geometric dimensions of the cooling channels
+Specification CH1 CH2 CH3 CH4 CH5 Wde [mm] 2.0 2.0 2.0 1.0 3.0 Hde [mm] 1.5 2.0 2.5 2.0 2.0 Ade [mm2] 3.0 4.0 5.0 2.0 6.0 ARde [mm] 0.8 1.0 1.3 2.0 0.7 Dh,de [mm] 1.71 2.00 2.22 1.33 2.40 Helical angle 15° Wme [mm] 2.02 2.02 2.0 1.01 3.03 Hme [mm] 1.52 1.96 2.48 2.03 2.0 Dh,me [mm] 1.73 1.99 2.21 1.35 2.41 Helical angle 30° Wme [mm] 1.98 2.02 2.01 1.02 3.01 Hme [mm] 1.54 2.07 2.56 2.08 2.04 Dh,me [mm] 1.73 2.04 2.25 1.37 2.43 Channel length Axially 15° 30° L [mm] 100.0 103.5 115.5
+DOI: 10.13009/EUCASS2017-77
+
+
+First Author, Second Author
+4
+Table 2: Surface roughness measurement data
+Items Ra [μm] Ry [μm] Rz [μm] Rq [μm] △[μm]
+Wde [mm] 0.40 2.76 1.78 0.54 1.74 Hde [mm] 0.44 2.47 1.64 0.53 1.60 Ade [mm2] 0.41 2.48 1.89 0.50 1.85
+ARde [mm] 0.417 2.570 1.770 0.523 1.731
+The helical channels were made by two different cylinder metals. Inner and outer cylinder were STS30400 and STS31800, respectively. The channels were cut on inner metal and outer cylinder covered channels, and both cylinders were vacuum-brazed. In actual cooling channel, the copper alloy was used for the inner cylinder due to the heat transfer, and stainless steel was used for the outer cylinder due to the strength of combustion chamber. However, this study only focused on the pressure loss in a channel so general stainless steels were used for inner and outer cylinders, respectively. In each channel of outer cylinder, four ports were brazed. Two ports in end of the channel were inlet and outlet, and the pressures in the channel were measured in two inner ports. The axial length between inner two ports was 100 mm but actual channel lengths were 103.5 mm and 115.5 mm at 15° and 30° helical angle channels respectively. Fig. 2 shows the inner cylinder in which the channels were cut, and the brazed helical channels.
+Figure 2: Photographs of the manufactured helical cooling channel (upper: 15° lower: 30°)
+3.2 Experimental Conditions
+In order to investigate the influence of the fluid velocity and fluid pressure on the pressure loss, the experiment was conducted in 10, 20 and 30 m/s of fluid velocity and 10, 30 and 50 bar of pressure conditions at the outlet. The test was performed using tap water as a simulant instead of kerosene, which is used as the fuel in a liquid rocket engine. The experimental apparatuses were installed as shown in Fig. 3. Turbine flow meter (Kometer, NK-250) was used to measure the volume flow rate in a channel, and two pressure transducers (Sensys, PSH model), which can measure the pressure up to 100 bar, were used to measure the upstream and downstream pressure between the channel. Also, Ktype thermocouple was used to measure the fluid temperature. Sensing data were recorded by NI-cDAQ with 500 Hz sampling rate for 0.4 second. The test was conducted twice in each test condition. Prior to conducting the experiment, the friction loss coefficient and the pressure loss by the test conditions were anticipated at the smooth wall and uniform roughness wall condition using designed geometric information and previous empirical equations. Table 3 shows calculated friction coefficient and pressure loss data.
+DOI: 10.13009/EUCASS2017-77
+
+
+INSTRUCTIONS FOR THE PREPARATION OF PAPERS
+5
+Figure 3: Experimental apparatus
+4. Results and Discussion
+The pressure loss by the fluid velocity in each channel is shown in Fig. 4. Since the pressure loss was proportional to the square of velocity, it was greatly increased as the fluid velocity was increased. Also, the pressure loss at CH4 was the largest and CH5 was the smallest because it was inversely proportional to the hydraulic diameter. CH4 had the smallest hydraulic diameter, and CH5 had the largest hydraulic diameter. It was expected that the pressure loss was different by the helical angle. From the results, it was found that 30° helical channel had larger pressure loss than 15° helical channel. There were two reasons why the pressure loss was affected by the helical angle. First is the change of the channel length. Although the axial length between two pressure transducers were the same in all channels, actual flow lengths were different. Since 30° channels were more curved than 15° channel, flow lengths were longer as the helical angle increased. The pressure loss was proportional to the channel distance. Therefore, the pressure loss at 30° channel was obviously larger than 15° channel. The second reason was differences of fluid velocity components. The fluid velocity means averaged fluid velocity at the cross-section of channel but actual velocity components is not the same with the averaged velocity. Accordingly, if the channel shape is curved, the velocity components in the channel might be different.
+Figure 4 Pressure loss data as a function of the coolant velocity (upper: 15° lower: 30°)
+Fig. 5 shows the velocity components in CH5 at v = 30 m/s condition by CFD analysis for preceding research. Although the average velocity in the channel was the same, the fluid velocity was relatively faster (red color) at outcurve of 30° channel. The pressure loss is proportional to the square of velocity so it caused larger friction loss. Therefore, it was larger at 30° channel than 15° channel. To investigate the pressure loss by the friction without the effect of channel length, the friction coefficient and the ratio of friction coefficient were used. Fig. 6 shows the ratio of friction coefficient by hydraulic diameter. Although the test
+V [m/s]
+∆P [bar]
+5 10 15 20 25 30 35
+0
+2
+4
+6
+8
+10
+12
+CH115deg
+CH215deg
+CH315deg
+CH415deg
+CH515deg
+V [m/s]
+∆P [bar]
+5 10 15 20 25 30 35
+0
+2
+4
+6
+8
+10
+12
+14
+CH130deg
+CH230deg
+CH330deg
+CH430deg
+CH530deg
+DOI: 10.13009/EUCASS2017-77
+
+
+First Author, Second Author
+6
+was conducted at the velocity of 10 m/s, its data was not used since the error range of pressure transducer and measured pressure loss were similar. If the ratio of friction coefficient is 1, it means that the friction coefficient from experiment was the same with the estimation, and if it is over 1, it means that more pressure loss occurred than the estimation. The ratio of friction coefficients was over 1 in all test condition. Therefore, it was concluded that the actual pressure loss in the channel was always larger than the estimation.
+Figure 5: Velocity components in the channel at 30 m/s by CFD analysis (left : 15°, right : 30°)
+Figure 6 Ratio of friction coefficient measured from the present tests by friction coefficient obtained from the Table (upper: 15° lower: 30°)
+The ratio of friction coefficients was generally decreased as the hydraulic diameter was increased. It means that if channel area was increased, the difference between the estimation and measurement data were decreased. One of the reasons of differences was assumed that it was hard to manufacture exactly if channel area is smaller. Although the dimensions of channel were measured using Vernier calipers at the end of channel, the dimensions inside the channel were surely different. Also, the curved channel became one of the reasons why the channel was inexactly manufactured. From these reasons, the friction coefficient was generally larger at 30° channel than 15° channel. Therefore, it was recommended that the hydraulic diameter of the channel was over certain value to decrease the unexpected pressure loss. Figure 7 shows the effect of fluid velocity, pressure level and surface roughness at CH2 by the friction coefficient by Table and equation. At the same pressure level, the ratio of friction coefficient increased as the velocity increased in equation and Table. It means that it was underestimated compared than the actual pressure loss. Especially, the differences in the velocity were larger in the equation. It was assumed that the equation is from empirically fitted results. Accordingly, using Table was more accurate than using equation to estimate the friction coefficient, but it should be considered that it was also underestimated. Similarly, it could be known the effect of the roughness through
+Dh,me [mm]
+λcir,me/λcir,Table
+1.2 1.4 1.6 1.8 2 2.2 2.4 2.6
+1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+CH115deg
+CH215deg
+CH315deg
+CH415deg
+CH515deg
+Dh,me [mm]
+λcir,me/λcir,Table
+1.2 1.4 1.6 1.8 2 2.2 2.4 2.6
+1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+CH130deg
+CH230deg
+CH330deg
+CH430deg
+CH530deg
+DOI: 10.13009/EUCASS2017-77
+
+
+INSTRUCTIONS FOR THE PREPARATION OF PAPERS
+7
+the comparison of results of Eq. 4 and Eq. 5. The ratio of friction coefficient in Eq. 4 was larger than in Eq. 5. Surely there was larger pressure loss in Eq. 5 since the channel had roughed wall. There were also differences in the pressure level. Commonly, the liquid is considered as incompressible, but its density is slightly changed by the pressure level. However, there was no consideration about the pressure change in equation, and we used the viscosity and density value from experimental results at some certain circumstance. It might be one of the reasons for differences in the pressure.
+Figure 7: Ratio of friction coefficient measured from the present tests by analytical friction coefficients at CH2
+5. Conclusion
+To investigate the effects of channel shape, spiral angle, fluid velocity, and fluid pressure on pressure losses, hydraulic tests were extensively carried out. Two cylinders with five different cooling channels of 15 ̊ and 30 ̊ spiral angles were manufactured using end mill tools. The heights and widths of the channels perpendicular to the flow direction were 1.5/2.0/2.5 mm and 1.0/2.0/3.0 mm, respectively. The flow velocities and pressures were 10/20/30 m/s and 10/30/50 bar. The friction coefficients were obtained from the present experimental data and were compared with those from the previous empirical equations and the lookup table. It was found that as the flow velocity was faster, the fluid pressure increased, the spiral angle was larger, and the hydraulic diameter of the channel decreased, the measured friction coefficients generally became greater than those anticipated from the previous lookup table. It means that the previous equations and the lookup table for the friction coefficient may underestimate pressure loss in analyzing cooling channels. The present research only implies that there needs to be a fair margin in designing a cooling channel and estimating pressure loss from the previous empirical coefficients.
+Acknowledgement
+This research is supported by the National Research Foundation (NRF-2015M1A3A3A02011346 and NRF2017R1A1A1A05001237) funded by the Ministry of Science, ICT and Future Planning, South Korea. The authors would like to thank the MSIP for its support.
+References
+[1] Huzel, D. K., and Huang, D. H., Modern Engineering for Design of Liquid-Propellant Rocket Engines, Progress in Astronautics and Aeronautics, Vol. 147, AIAA, Washington, DC, 1992. [2] Sutton, G. P., Rocket Propulsion Elements, 8th Edition, John Wiley & Sons, Inc., New Jersey, 2010. [3] Batakis, A. P., and Vogan, J. W., Rocket Thrust Chamber Thermal Barrier Coating, NASA CR-1750222, 1985. [4] Ahn, K., Kim, J. G., Choi, H. S., “Effects of Injector Recess on Heat Flux in a Combustion Chamber”, Aerospace Science and Technology, Vol. 37, pp. 110-116, 2014. [5] Ulas, A., and Boysan, E., “Numerical Analysis of Regenerative Cooling in Liquid Propellant Rocket Engines”, Aerospace Science and Technology, Vol. 24, Issue 1, pp. 187-197, 2013.
+Pdown [bar]
+λcir,me/λcir,Table or λcir,me/λcir,Eq
+0 10 20 30 40 50 60
+0.9
+1.0
+1.1
+1.2
+1.3
+1.4
+1.5
+1.6 CH215deg,V = 20 m/s, Table CH215deg,V = 30 m/s, Table CH215deg,V = 20 m/s, Eq. 5 CH215deg,V = 30 m/s, Eq. 5 CH215deg,V = 20 m/s, Eq. 4 CH215deg,V = 30 m/s, Eq. 4
+DOI: 10.13009/EUCASS2017-77
+
+
+First Author, Second Author
+8
+[6] Yang, W., and Sun, B., “Numerical Simulation of Liquid Film and Regenerative Cooling in a Liquid Rocket”, Applied Thermal Engineering, Vol. 54, Issue 2, pp. 460-469, 2013. [7] Pizzarelli, M., Nasuti, F., and Onofri, M., “Trade-Off Analysis of High-Aspect-Ratio-Cooling-Channels for Rocket Engines”, International Journal of Heat and Fluid Flow, Vol. 44, pp. 458-467, 2013. [8] Lee, J., and Kim, J., “A System Analysis of the Turbopump Type Liquid Rocket Engine”, The Korean Society For Aeronautical And Space Sciences, Vol. 32, No. 5, pp. 109-115, 2004.
+[9] Ryu, C. S., Choi, H. S., and Lee, D. J., “Structure Design of Regenerative Cooling Chamber of Liquid Rocket Thrust Chamber”, The Korean Society For Aeronautical And Space Sciences, Vol. 33, No. 12, pp. 109-116, 2005. [10] Wang, H., Luo, Y., Gu, H., Li, H., Chen, T., Chen, J., and Wu, H., “Experimental Investigation on Heat Transfer and Pressure Drop of Kerosene at Supercritical Pressure in Square and Circular Tube with Artificial Roughness”, Experimental Thermal and Fluid Science, Vol. 42, pp. 16-24, 2012.
+[11] Wadel, M. F., Comparison of High Aspect Ratio Cooling Channel Designs for a Rocket Combustion Chamber with Development of an Optimized Design, NASA TM-1998-206313, 1998.
+[12] Kim, H. J., Kim, S. K., and Choi, H. S., “Hydraulic Characteristics of Branching and Merging of Channels in Regenerative Cooling Passage in Liquid Rocket Combustors”, The Korean Society For Aeronautical And Space Sciences, Vol. 36, No. 11, pp. 1087-1093, 2008. [13] Ahn, K., Kim, J. G., Lim, B., Kim, M., Kang, D., Kim, S. K., and Choi, H. S., “Fuel-Side ColdFlow Test and Pressure Drop Analysis on Technology Demonstration Model of 75 Ton-Class Regeneratively-Cooled Combustion Chamber”, Journal of the Korean Society of Propulsion Engineers, Vol. 16, No. 6, pp. 56-61, 2012. [14] Yoon, W., Ahn, K., and Kim, H. J., “An Experimental Study on Pressure Loss in Straight Cooling Channels”, Journal of the Korean Society of Propulsion Engineers, Vol. 20, No. 4, pp. 94-103, 2016.
+DOI: 10.13009/EUCASS2017-77

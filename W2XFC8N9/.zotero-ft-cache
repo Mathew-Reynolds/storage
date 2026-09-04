@@ -1,0 +1,378 @@
+Aerospace Science and Technology 24 (2013) 187–197
+Contents lists available at SciVerse ScienceDirect
+Aerospace Science and Technology
+www.elsevier.com/locate/aescte
+Numerical analysis of regenerative cooling in liquid propellant rocket engines
+A. Ulas ∗, E. Boysan
+Department of Mechanical Engineering, Middle East Technical University, 06800, Ankara, Turkey
+article info abstract
+Article history:
+Received 24 August 2011 Received in revised form 1 November 2011 Accepted 4 November 2011 Available online 18 November 2011
+Keywords:
+Liquid propellant rocket engines Regenerative cooling Cooling efficiency Cooling channel Liquid oxygen Kerosene
+High combustion temperatures and long operation durations require the use of cooling techniques in liquid propellant rocket engines (LPRE). For high-pressure and high-thrust rocket engines, regenerative cooling is the most preferred cooling method. Traditionally, approximately square cross sectional cooling channels have been used. However, recent studies have shown that by increasing the coolant channel height-to-width aspect ratio and changing the cross sectional area in non-critical regions for heat flux, the rocket combustion chamber gas-side wall temperature can be reduced significantly without an increase in the coolant pressure drop. In this study, the regenerative cooling of a liquid propellant rocket engine has been numerically simulated. The engine has been modeled to operate on a LOX/kerosene mixture at a chamber pressure of 60 bar with 300 kN thrust and kerosene is considered as the coolant. A numerical investigation was performed to determine the effect of different aspect ratio and number of cooling channels on gas-side wall and coolant temperatures and pressure drop in cooling channels. © 2011 Elsevier Masson SAS. All rights reserved.
+1. Introduction
+Regenerative cooling is one of the most widely applied cooling techniques used in LPRE [7]. It has been effective in applications with high chamber pressure and for long durations with a heat flux range 1.6 to 160 MW/m2 [12]. In LPRE, the nozzle throat region usually has the highest heat flux and is therefore the most difficult region to cool. Recent studies [2,14,13] have shown that by increasing the coolant channel height-to-width aspect ratio and changing the cross sectional area in non-critical regions for heat flux, the rocket combustion chamber wall temperatures can be reduced significantly without an increase in the coolant pressure drop. In regenerative cooling process, the coolant, generally the fuel, enters passages at nozzle exit of the thrust chamber, passes by the throat region and exits near the injector face. The passages formed either by brazing cooling tubes to the thrust chamber or by milling channels along the wall of the thrust chamber. The crosssections of the rectangular passages are smaller in the high heat flux regions to increase the velocity of the coolant. In 1990, by conventional manufacturing techniques, aspect ratios (ratio of channel height to channel width) as high as 8 could be manufactured and by introducing the platelet technology aspect ratio of cooling channels is increased as high as 15 [2]. Today, improvements in manufacturing technologies have shown that by conventional manufacturing methods, cooling channels with an aspect ratio 16 (8 mm height and 0.5 mm width) can be milled [8].
+* Corresponding author. Tel.: +90 312 210 5260; fax: +90 312 210 2536. E-mail address: aulas@metu.edu.tr (A. Ulas).
+The heat transfer analysis in regenerative cooling is simply based on convection and radiation heat transfer for gas domain, conduction heat transfer for solid domain and convection heat transfer for liquid domain. Several different computational fluid dynamics (CFD) computer programs have been used for the analysis of thrust chamber steady-state heat transfer, with different chamber geometries or different materials with temperature variable properties. Rocket thermal evaluation (RTE) code [9] and twodimensional kinetics (TDK) nozzle performance code [4] are examples for such CFD tools, which are developed for the analysis of liquid propellant rocket engines with regenerative cooling. In this study, the effects of geometry (i.e. aspect ratio) and number of cooling channels on cooling efficiency are investigated in terms of the maximum temperature of thrust chamber wall and coolant, and the pressure drop in cooling channel.
+2. Mathematical description and solution method
+2.1. Mathematical description
+The solution domain used in this study consists of 3 medium: coolant, thrust chamber, and chamber jacket. Because of the symmetry characteristic of the system, the domain is divided by two symmetry planes (Fig. 1). In this study the fluid flow and heat transfer in the cooling channel was assumed to be three-dimensional, steady-state, and turbulent flow. The conservation equations of fluid flow and heat transfer are expressed as:
+∇ · (ρ−V→φ) = ∇ · (Γφ∇φ) + Sφ (1)
+1270-9638/$ – see front matter © 2011 Elsevier Masson SAS. All rights reserved. doi:10.1016/j.ast.2011.11.006
+
+
+188 A. Ulas, E. Boysan / Aerospace Science and Technology 24 (2013) 187–197
+Nomenclature
+A Area . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . m2 C ∗ Characteristic velocity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . m/s C1 Constant in turbulence model C2 Constant in turbulence model Cμ Constant in turbulence model Cp Specific heat at constant pressure . . . . . . . . . . . . . . . J/kg K D Diameter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . m Dh Hydraulic diameter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . m H Heat transfer coefficient . . . . . . . . . . . . . . . . . . . . . . . W/m2 K m ̇ Mass flow rate . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . kg/s n Normal outward direction P Pressure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . bar Pr Prantl number q ̇ Heat flux . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . W/m2 r Recovery factor M Mach number T Temperature . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . K u Velocity along x direction . . . . . . . . . . . . . . . . . . . . . . . . . m/s v Velocity along y direction . . . . . . . . . . . . . . . . . . . . . . . . . m/s ω Velocity along z direction . . . . . . . . . . . . . . . . . . . . . . . . . m/s
+Other symbols
+σκ Turbulent Prandtl numbers for κ σε Turbulent Prandtl numbers for ε σT Turbulent Prandtl numbers for T ρ Density . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . kg/m3 γ Specific heat ratio μ Viscosity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . kg/m s μeff Effective turbulence viscosity . . . . . . . . . . . . . . . . . . . kg/m s μt Turbulence viscosity . . . . . . . . . . . . . . . . . . . . . . . . . . . . kg/m s
+Subscripts
+aw Adiabatic wall temperature c Chamber conv Convection CO2 Carbon dioxide H2O Water vapor g Gas domain pr Propellant rad Radiation t Throat wg Gas side wall
+Fig. 1. Schematic view of solution domain.
+where the expressions of φ, Γφ and Sφ for different variables are given in Table 1. The effect of heat transfer from hot combustion gases to the solution domain is considered in two parts: convection and radiation heat transfers. Convection heat flux can be given as:
+q ̇conv = hg(Taw − Twg) (2)
+Heat transfer coefficient is calculated using Bartz Correlation [1] as:
+hg = 0.026
+dt0.2
+( μc0.2Cp,c Prc0.6
+)( Pc
+C∗
+)0.8( At
+A
+)0.9
+σ (3)
+σ=
+[
+0.5 Twg
+Tc
+(
+1+ γ −1
+2 M2
+)
++ 0.5
+]−0.68
+×
+(
+1+ γ −1
+2 M2
+)−0.12 (4)
+T aw = T c
+[ 1 + r( γ −1
+2 )M2
+1 + ( γ −1
+2 )M2
+]
+(5)
+where r = (Prc)0.33 for turbulent flows. For the propellants containing only carbon, hydrogen, oxygen, and nitrogen atoms, the total radiation heat flux, can be approximated as [3]:
+q ̇rad ≈ q ̇rad,CO2 + q ̇rad,H2O (6)
+q ̇ rad,CO2 = 3 3 √pCO2 Le
+[( Taw
+100
+)3.5
+−
+( T wg 100
+)3.5 ] (7)
+q ̇ rad,H2O = 3p0.8
+H2O L0.6
+e
+[( Taw
+100
+)3 −
+( T wg 100
+)3 ]
+(8)
+2.2. Solution method
+FLUENT [5], a pressure based segregated solver, is used for the solution of the governing equations. Standard k–ε two-equation
+
+
+A. Ulas, E. Boysan / Aerospace Science and Technology 24 (2013) 187–197 189
+Table 1
+Conservation equation variables.
+Equations φ Γφ Sφ
+Continuity 1 0 0
+u u μeff − ∂ p
+∂x + ∂
+∂x
+(μeff ∂u
+∂x
+)+ ∂
+∂y
+(μeff ∂ v
+∂x
+)+ ∂
+∂z
+(μeff ∂ω
+∂x
+)
+v v μeff − ∂ p
+∂y + ∂
+∂x
+(μeff ∂u
+∂y
+)+ ∂
+∂y
+(μeff ∂ v
+∂y
+)+ ∂
+∂z
+(μeff ∂ω
+∂z
+)
+ω ω μeff − ∂ p
+∂z + ∂
+∂x
+(μeff ∂u
+∂z
+)+ ∂
+∂y
+(μeff ∂ v
+∂z
+)+ ∂
+∂x
+(μeff ∂ω
+∂z
+)
+Energy T μ/Pr + μ/σT 0
+k k μ + (μ/σk) ρGk − ρε
+ε ε μ + (μ/σε) ε
+k (C1ρGk − C2ρε)
+Gk = ( μt
+ρ
+)[( ∂u
+∂x
+)2 + ( ∂ω
+∂y
+)2 + ( ∂ω
+∂z
+)2] + (( ∂u
+∂y
+) + (∂v
+∂x
+))2 + (( ∂u
+∂z
+) + ( ∂ω
+∂x
+))2 + (( ∂ v
+∂z
+) + ( ∂ω
+∂y
+))2
+Cμ = 0.09 C1 = 1.44 C2 = 1.92 σk = 1.0 σε = 1.3 σT = 0.85
+Fig. 2. Schematic view of solution method.
+turbulence model is employed with standard wall functions. SIMPLE algorithm is used to get the pressure field. NASA computer program CEA [10] is used to obtain the thermal properties of the combustion gas mixture. A User Defined Function (UDF), which is coupled with the solver, calculates the heat flux from combusted gases to the solution domain in terms of Twg using Eqs. (2) and (6). Thermal properties of combusted gases are given as an input data from the CEA code. The UDF gets the coordinates of the nodes from the solver to calculate Mach number and area which are used in Eq. (3). GAMBIT [6] is used for grid generation. The grid is generated by hexahedral elements in consideration of structured mesh. Solution method used in this study is given in a schematic view in Fig. 2.
+3. Validation of the solver
+Validation of the solution method was performed using the experimental study of Wadel and Meyer [14] and numerical study of Wadel [13]. They used an 89-kN thrust engine having gaseous hydrogen (GH2) fuel and liquid oxygen (LOX) oxidizer in their experimental studies [14]. The coolant was liquid hydrogen (LH2). The thrust chamber consisted of oxygen free high conductivity (OFHC) copper inner wall with INCONEL-718 outer shell. Chamber liner was milled with 100 conventional coolant channels. These channels had an aspect ratio of 2.5. In the critical heat flux area (nozzle throat region) cooling channels were bifurcated into 200 channels and aspect ratio was increased up to 8. For bifurcated
+channel cooling systems, channels were split into two channels and combined back to a single channel. To get the temperature values on the hot-gas-side wall, nine thermocouples were inserted into holes drilled in the centre of the coolant channel ribs. Also pressure taps were placed in the locations of coolant channel inlet and outlet. The tests were performed for different mass flow rates in cooling channels. Gas side wall temperature distributions and pressure drops in the channels were obtained [14]. The numerical solution method [13] was validated with the experiments explained above. For numerical analysis, RTE and TDK codes were used. Radiation effects were not considered in the analysis. After the validation of numerical method, Wadel performed a numerical study for comparison of high aspect ratio cooling channel designs [13]. In this study seven different cooling channel designs were compared according to their cooling efficiencies. First design was called as “Baseline” and had 100 continuous cooling channels with an aspect ratio of 2.5 and constant cross-sectional area. Fifth design was the bifurcated model which corresponded to the experimental data performed by Wadel and Meyer [14]. For the validation of solution method used in this study these two models are considered.
+3.1. Baseline solution
+3.1.1. Grid convergence
+The solution domain consist of 3 sub-domains; inner wall, outer shell and coolant. To obtain grid independent results, solution do
+
+
+190 A. Ulas, E. Boysan / Aerospace Science and Technology 24 (2013) 187–197
+Table 2
+Grid specifications.
+CASE 01 CASE 02 CASE 03 CASE 04 CASE 05
+Grid type (inner wall) Tetrahedral Tetrahedral Tetrahedral Tetrahedral Tetrahedral # of elements (inner wall) 56,672 56,672 56,672 56,672 56,672 Grid type (outer shell) Tetrahedral Tetrahedral Tetrahedral Tetrahedral Tetrahedral # of elements (outer shell) 104,026 104,026 104,026 104,026 104,026 Grid type (coolant) Hexahedral Hexahedral Hexahedral Hexahedral Hexahedral # of elements (coolant) 82,134 167,112 450,400 1,014,000 4,563,000 Thickness of first row (coolant) 10 μm 5 μm 1 μm 0.5 μm 0.1 μm Total number of elements 211,832 296,810 580,098 1,143,698 4,692,698
+Fig. 3. Cross-sectional view of solution domains.
+Fig. 4. Convergence history of pressure drop.
+main is generated for 5 cases having different number of elements in the coolant domain. For solid domains tetrahedral elements and for coolant domain hexahedral elements are used. Between the sub-domains non-conformal grid boundary is used. The specifications of the grid for 5 cases are given in Table 2 and the crosssection of the solution domains are given in Fig. 3.
+3.1.2. Baseline solution results
+Convergence histories of temperature rise and pressure drop in cooling channels with respect to number of elements are obtained. Fig. 4 shows the pressure drop in the channel versus number of elements. Solution results of the five cases along with the Wadel’s solution [13] are given in Table 3.
+As can be seen from these results, as the number of elements increased the solution is converged. The results for CASE 04 and CASE 05 are quite similar and at this point the grid specifications for CASE 04 are enough to get grid independent solutions. Therefore for the following analysis in this study, grids will be generated according to the grid specifications of CASE 04.
+3.2. Bifurcation channel solution results
+By using the grid specifications of CASE 04, the solution domain is generated for bifurcation channel. Results are obtained by present solution method and compared with the numerical
+
+
+A. Ulas, E. Boysan / Aerospace Science and Technology 24 (2013) 187–197 191
+Table 3
+Results of baseline solution.
+Tmax on gas side wall [K]
+Pressure drop in channel P [bar]
+Temperature rise in channel T [K]
+CASE 01 882.7 53.8 216.8 CASE 02 816.9 51.4 229.8 CASE 03 783.2 45.7 265.4 CASE 04 755.07 40.5 297.8 CASE 05 748.4 40.1 302.8 Wadel’s solution [13]
+764 37 
+Table 4
+Comparison of pressure values for bifurcation channel solution.
+P inlet [bar] P outlet [bar] P [bar]
+Present numerical solution
+175.0 138.3 36.7
+Wadel’s numerical solution [13]
+175.0 135.5 40.0
+Wadel and Mayer’s experimental data [14]
+175.0 125.0 50.0
+and experimental solutions of Wadel and Meyer in Table 4 and Fig. 5. The numerical results from this study are quite similar with the numerical [13] and experimental results found in literature [14]. Although there are some differences between temperature and pressure values, these differences are acceptable. The reasons for the differences could be the uncertainties on cooling channel geometry, which are given roughly in the literature [14,13], and differences in material thermal properties used in the solutions. In this study, the main aim is to see the effect of different aspect ratio and number of cooling channels on cooling efficiency, therefore, the present solution method is considered to be suitable and sufficient to understand the effect of these parameters on cooling efficiency.
+Table 5
+LPRE specifications.
+Thrust [kN] 300 Combustion chamber pressure [bar] 60 Exit pressure [bar] 1.5 Ambient pressure [bar] 1 Fuel Kerosene (RP-1) Oxidizer LOX Oxidizer-to-fuel ratio 7:3 Theoretical specific impulse at sea level [s] 295 Adiabatic Falme temperature [K] 3570 Oxidizer mass flow rate [kg/s] 72.7 Fuel mass flow rate [kg/s] 31.1 Nozzle expansion area ratio 6.573 Throat diameter [mm] 200 Nozzle exit diameter [mm] 512 Chamber dameter [mm] 306
+4. Results and discussions
+Numerical analyses are performed in this study for a thrust chamber with specifications given in Table 5. NCDT (Nozzle Contour Design Tool) code [11] is used to estimate the nozzle contour for diverging part. Materials used in the analysis are defined as kerosene (RP-1) for the coolant, OFHC copper for the inner wall and INCONEL-718 for the outer shell. Surface roughness for metal structures is taken as 3.5 μm.
+4.1. Boundary conditions
+Boundary conditions for solution domain (Fig. 6) are given in Tables 6, 7, and 8.
+4.2. Effect of radiation heat transfer
+To examine the radiation heat transfer effect, two analyses are performed with the same cooling channel geometry under different heat flux boundary conditions. Analysis parameters are given in Table 9.
+Fig. 5. Temperature distributions on gas-side wall for bifurcation channel solution.
+
+
+192 A. Ulas, E. Boysan / Aerospace Science and Technology 24 (2013) 187–197
+Fig. 6. Designations of the boundaries of solution domain.
+Table 6
+Boundary conditions for inner wall.
+Plane ABGFDC ∂ T
+∂n = 0
+Plane JKPOML ∂ T
+∂n = 0
+Plane BGPK ∂ T
+∂n = 0
+Plane ACLJ ∂ T
+∂n = 0
+Plane ABKJ ∂(kT )
+∂n = q ̇g
+Table 7
+Boundary conditions for outer shell.
+Plane EFGIH ∂ T
+∂n = 0
+Plane NOPRS ∂ T
+∂n = 0
+Plane EHRN ∂ T
+∂n = 0
+Plane GISP ∂ T
+∂n = 0
+Plane HIRS ∂ T
+∂n = 0
+Table 8
+Boundary conditions for coolant.
+Plane LMONa m ̇ = m ̇ pr
+2×N , T = T inlet
+Plane CDFEb P = Pc
+Plane CENL ∂u
+∂n = ∂v
+∂n = ∂w
+∂n = ∂T
+∂n = 0
+a N refers to number of cooling channels. Tinlet is the initial temperature of coolant and 300 K for all analyses. b Pressure loses in injector are neglected. Therefore coolant exit pressure should be at combustion chamber pressure in ideal conditions. For all analyses exit pressure of coolant is 60 bar.
+Table 9
+Parameters for radiation heat transfer investigation.
+4 × 4 × 100 (no radiation)
+4 × 4 × 100
+Channel height [mm] 4 4 Channel width [mm] 4 4 # of cooling channels 100 100 Heat flux (q ̇g) Convection Convection, radiation Coolant mass flow rate (per channel) [kg/s]
+0.311 0.311
+Table 10
+Results for radiation heat transfer investigation.
+4 × 4 × 100 (no radiation)
+4 × 4 × 100
+Maximum heat flux on gas side wall [MW/m2]
+28.43 29.32
+Maximum wall temperature on gas side [K]
+783.7 801.8
+Maximum coolant temperature [K]
+647.1 669.8
+Required pressure inlet for coolant [bar]
+78.1 77.8
+Pressure drop in channel [bar] 18.1 17.8
+Numerical results are given in Table 10. Radiation heat transfer increases the maximum temperature on the gas side wall by only about 2%, which is quite small; therefore, one could ignore the radiation heat transfer in the numerical analysis. However, in our following analyses, the sum of radiation and convection heat flux is still used as a boundary condition for gas side thrust chamber wall.
+
+
+A. Ulas, E. Boysan / Aerospace Science and Technology 24 (2013) 187–197 193
+Table 11
+Parameters for 4 mm height channels.
+4 × 5 × 100 4 × 4 × 100 4 × 3 × 100 4 × 2 × 100 4 × 1 × 100
+Channel height [mm] 4 4 4 4 4 Channel width [mm] 5 4 3 2 1 # of cooling channels 100 100 100 100 100 AR (aspect ratio) 0.8 1.0 1.3 2.0 4 Dh [mm] 4.4 4.0 3.4 2.7 1.6 Heat flux (q ̇g) Convection Convection Convection Convection Convection Radiation Radiation Radiation Radiation Radiation m ̇ (per channel) [kg/s] 0.311 0.311 0.311 0.311 0.311 Channel geometry
+Table 12
+Parameters for 8 mm height channels.
+8 × 5 × 100 8 × 4 × 100 8 × 3 × 100 8 × 2 × 100 8 × 1 × 100
+Channel height [mm] 8 8 8 8 8 Channel width [mm] 5 4 3 2 1 # of cooling channels 100 100 100 100 100 AR (aspect ratio) 1.6 2.0 2.7 4.0 8.0 Dh [mm] 6.2 5.3 4.4 3.2 1.8 Heat flux (q ̇g) Convection Convection Convection Convection Convection Radiation Radiation Radiation Radiation Radiation m ̇ (per channel) [kg/s] 0.1555 0.1555 0.1555 0.1555 0.1555 Channel geometry
+Table 13
+Results for 4 mm height channels.
+4 × 5 × 100 4 × 4 × 100 4 × 3 × 100 4 × 2 × 100 4 × 1 × 100
+Maximum heat flux on gas side wall [MW/m2]
+29.03 29.32 29.53 29.67 29.74
+Maximum wall temperature on gas side [K]
+822.3 801.8 787.5 777.9 773.2
+Maximum coolant temperature [K]
+681.2 669.8 659.2 649.7 640.3
+Required pressure inlet for coolant [bar]
+70.3 77.8 96.3 164.0 741.0
+Pressure drop in channel [bar]
+10.3 17.8 26.3 104.0 681.0
+Table 14
+Results for 8 mm height channels.
+8 × 5 × 100 8 × 4 × 100 8 × 3 × 100 8 × 2 × 100 8 × 1 × 100
+Maximum heat flux on gas side wall [MW/m2]
+27.33 27.90 28.36 28.79 29.24
+Maximum wall temperature on gas side [K]
+944.5 904.9 872.5 842.7 811.8
+Maximum coolant temperature [K]
+805.0 760.6 724.0 703.4 679.0
+Required pressure inlet for coolant [bar]
+61.9 63.4 67.6 83.3 247.2
+Pressure drop in channel [bar]
+1.9 3.4 7.6 23.3 187.2
+4.3. Effect of channel geometry on cooling efficiency
+The effect of channel geometry on cooling efficiency is examined in two groups. In each group the height of the cooling channels are constant and width of the channels are decreased gradually. For the first group height is 4 mm and for the second
+group height is 8 mm. Analysis parameters are given in Tables 11 and 12. The results are given in Tables 13 and 14. These results show that for the same mass flow rate (i.e., same number of cooling channels) and channel height, gas-side wall and coolant temperatures decrease with the increase of the aspect ratio. This is because as we decrease the width of the cooling chan
+
+
+194 A. Ulas, E. Boysan / Aerospace Science and Technology 24 (2013) 187–197
+Fig. 7. Velocity profiles of coolant at throat (x = 0).
+Fig. 8. Effects of aspect ratio on gas side wall temperature.
+nels (i.e., increasing aspect ratio), velocity, Reynolds number, and therefore heat transfer coefficient on coolant side wall increases. The increase of the flow velocity in the cooling channels with the increase of the aspect ratio can be observed in Fig. 7, which shows coolant velocity profiles in the channel at the throat (x = 0) for each geometry. With constant channel height and channel number, the cooling efficiency has a converging trend, as shown in Fig. 8, due to the opposing effect between the decrease of heat transfer area
+and increase of heat transfer coefficient, as the aspect ratio increases. The decrease of the wall temperature is good from the structural design point of view; however, as one can see from Tables 13 and 14, the pressure drop in the channels reaches very large values, as high as 681 bar, for larger aspect ratios. For channel geometries 4 × 2 × 100, 4 × 1 × 100, and 8 × 1 × 100, pressure drops are calculated as higher than the combustion chamber pressure (60 bar) and therefore these designs are not acceptable since they need large feeding systems. Pressure drops around half of the
+
+
+A. Ulas, E. Boysan / Aerospace Science and Technology 24 (2013) 187–197 195
+Table 15
+Parameters used in the analysis for the effect of number of channels on cooling efficiency.
+4 × 2 × 50 4 × 2 × 100 4 × 2 × 150 4 × 2 × 200 4 × 2 × 250 4 × 2 × 300
+Channel height [mm] 4 4 4 4 4 4 Channel width [mm] 2 2 2 2 2 2 # of cooling channels 50 100 150 200 250 300 AR (aspect ratio) 2.0 2.0 2.0 2.0 2.0 2.0 Dh [mm] 2.7 2.7 2.7 2.7 2.7 2.7 Heat flux (q ̇g) Convection Convection Convection Convection Convection Convection Radiation Radiation Radiation Radiation Radiation Radiation m ̇ (per channel) [kg/s] 0.6220 0.3110 0.2073 0.1555 0.1244 0.1037
+Table 16
+Results obtained from the analysis for the effect of number of channels on cooling efficiency.
+4 × 2 × 50 4 × 2 × 100 4 × 2 × 150 4 × 2 × 200 4 × 2 × 250 4 × 2 × 300
+Maximum heat flux on gas side wall [MW/m2]
+29.07 29.67 29.83 29.71 29.39 28.67
+Maximum wall temperature on gas side [K]
+821.7 777.9 770.5 778.6 800.6 850.1
+Maximum coolant temperature [K]
+654.8 649.7 647.3 649.3 654.4 695.5
+Required pressure inlet for coolant [bar]
+411.9 164.0 110.8 90.3 80.3 74.6
+Pressure drop in channel [bar]
+351.9 104.0 50.8 30.3 20.3 14.6
+Fig. 9. Effects of number of channels on gas side wall temperature.
+combustion chamber pressure can be used as a system design criteria.
+4.4. Effect of number of channels on cooling efficiency
+According to the analysis results obtained in Section 4.3, coolant channels with 4 × 1 and 4 × 2 mm2 cross-sectional areas have the best temperature results for cooling but have high pressure drops (681 bar and 104 bar, respectively). Although these two geometries are not suitable because of high pressure drops, by changing the number of coolant channels, it is possible to decrease pressure drops and wall temperatures. Since the wall temperatures are quite close for these geometries, there is no need to work on case with 4 × 1 mm2 area, which has a very high pressure drop. Therefore, the channel geometry with 4 × 2 mm2 cross-sectional area is selected to investigate the effect of number of channels on cooling efficiency.
+The effect of number of channels on cooling efficiency is investigated for 6 different channel numbers. Analysis parameters are given in Table 15. The results are given in Table 16. For small number of coolant channels, mass flow rate of the coolant and therefore coolant velocities are high in each channel. Maximum coolant side heat transfer coefficient is obtained for geometry with 50 channels but on the other hand this geometry has also the minimum total heat transfer area between the coolant and the wall, which results in higher wall temperatures. As we increase the number of channels, total heat transfer area increases and wall temperatures decrease. These results show that there exists an optimum number of cooling channels which has the highest heat flux and lowest temperature on gas side wall, which can be also observed from Fig. 9. For 4 × 2 mm2 cross-sectional area, optimum number of cooling channels is around 150. Pressure drops in the cooling channels also decrease with increasing the number of channels due to lower flow velocities. From
+
+
+196 A. Ulas, E. Boysan / Aerospace Science and Technology 24 (2013) 187–197
+Fig. 10. Variation of the cooling channel geometry along the axial direction.
+Table 16, one can see that there is more than 50% reduction in the pressure drop (104 bar versus 50.8 bar) when the number of cooling channels increase from 100 to 150. Although this is a significant decrease, 50.8 bar pressure drop is still very high. Another way to decrease this pressure drop further is to use cooling channels with variable cross-sectional area, which is discussed in the next section.
+4.5. Cooling channels with variable cross-sectional area (VCSA)
+To understand the effects of VCSA on temperature and pressure, new cooling channel geometry is formed. The channel has 4 × 2 mm2 cross-sectional area in the throat region and 4 × 4 mm2 cross-sectional areas in the combustion region and nozzle diverging region. The variation of the cooling channel geometry along the rocket engine axis is shown in Fig. 10. To make a comparison with the results for 4 × 2 × 150 channel geometry, the number of cooling channels is kept 150 in this analysis. From the results presented in Table 17, we see that there is a very small difference between the maximum heat flux and maximum wall temperature on gas side for 4 × 2 × 150 and VCSA×150 cases. However, the major advantage of using VCSA cooling channels can be observed by comparing the pressure drops in the channels. For 4 × 2 × 150 case the pressure drop is 50.8 bar, whereas,
+Table 17
+Results for VCSA×150 and 4 × 2 × 150.
+4 × 2 × 150 VCSA×150
+Maximum heat flux on gas side wall [MW/m2]
+29.83 29.82
+Maximum wall temperature on gas side [K]
+770.5 772.2
+Maximum coolant temperature [K]
+647.3 675.2
+Required pressure inlet for coolant [bar]
+110.8 78.4
+Pressure drop in channel [bar]
+50.8 18.4
+for VCSA×150 case the pressure drop is significantly reduced to 18.4 bar, which means a more than 60% reduction. As can be seen from Fig. 11, velocities are high in the throat region and low in the combustion and nozzle diverging regions. Therefore a better cooling efficiency in the throat region is obtained compared to combustion and nozzle diverging regions. Since for both 4 × 2 × 150 and VCSA×150 cases the cross-sectional area is the same in the throat region, temperature values are quite similar in this region, as shown in Fig. 12. But as we increased the cross-sectional area in combustion and nozzle diverging regions, the cooling efficiency decreases and the wall and coolant temperatures of VCSA×150 case become higher than those of 4 × 2 × 150 case (Fig. 12). In Fig. 13, the pressure distributions along the axial direction for 4 × 2 × 150 and VCSA×150 channel geometries are given. For VCSA geometry the slope of pressure curve is low for larger crosssection regions and the slope of pressure curve is high for smaller cross-section region. When we analyzed all the results obtained so far, the best selection for the cooling channels would be the VCSA×150. For VCSA×150, the maximum wall temperature on the gas side is calculated as 772.2 K. For OFHC copper, the melting temperature is 1356 K. Therefore we can conclude that no melting of thrust chamber material will be observed. The maximum coolant temperature is calculated as 675.2 K. In Ref. [12], the critical temperature and critical pressure of kerosene is given as 678 K and 20 bar. The pressure levels in the cooling channels are above this critical pressure for VCSA×150 case, therefore, no boiling occurs in the coolant [7]. Pressure drop in the cooling channels for VCSA×150 case is calculated as 18.4 bar which is acceptable for a regeneratively cooled rocket engine with 60 bar chamber pressure.
+Fig. 11. Velocity profiles of coolant for VCSA channel at different axial locations.
+
+
+A. Ulas, E. Boysan / Aerospace Science and Technology 24 (2013) 187–197 197
+Fig. 12. Temperature distributions along axial direction for 4 × 2 × 150 and VCSA×150 channel geometries: (a) gas side wall temperatures, (b) coolant temperatures.
+Fig. 13. Pressure distribution of coolant along axial direction for 4 × 2 × 150 and VCSA×150 channel geometries.
+5. Conclusions
+In this study, the effects of geometry and number of cooling channels on the maximum temperatures of thrust chamber wall and coolant, and the pressure drop in cooling channel of a liquid propellant rocket engine are investigated. Sixteen different design cases, with different geometry and number of cooling channels, are investigated. Among these cases, the VCSA channel geometry having 150 cooling channels gives the best results from the engineering point of view. Based upon the results of this study, the following conclusions can be made:
+• Increasing the aspect ratio with constant number of cooling channels will increase the cooling efficiency up to an optimum level, and then efficiency will decrease because of decreasing heat transfer area. • Increasing the aspect ratio with constant number of cooling channels will increase the pressure drop in cooling channels.
+• Increasing the number of cooling channels without changing the geometry will increase the cooling efficiency up to an optimum level due to the dominating effect of increasing total heat transfer area, and then efficiency will decrease because of the dominating effect of decreasing mass flow rate per channel. • Increasing the number of cooling channels without changing the geometry will decrease the pressure drop in channels. • Increasing the cross-sectional area of a channel in non-critical regions of the cooling channel will slightly decrease the cooling efficiency and increase the local temperatures, however, the pressure drop decreases significantly.
+References
+[1] D.R. Bartz, A simple equation for rapid estimation of rocket nozzle convective heat transfer coefficients, Technical notes, DA-04-495, California Institute of Technology, 1957. [2] J. Carlie, R. Quentmeyer, An experimental investigation of high-aspect-ratio cooling passages, in: AIAA/SAE/ASME/ASEE 28th Joint Propulsion Conference, Nashville, TN, July 6–8, 1992, AIAA Paper No. 92-3154. [3] G.D. Ciniaref, M.B. Dorovoliski, Theory of Liquid-Propellant Rockets, Moscow, 1957. [4] S.S. Dunn, D.E. Coats, J.C. French, TDK’02TM Two-Dimensional Kinetics (TDK) Nozzle Performance Computer Program, User’s Manual, Software & Engineering Associates, Inc., 2002. [5] FLUENT®, http://www.fluent.com/software/fluent/index.htm. [6] GAMBIT®, http://www.fluent.com/software/gambit/index.htm. [7] D.K. Huzel, D.H. Huang, Modern Engineering for Design of Liquid-Propellant Rocket Engines, AIAA, Washington, DC, 1992. [8] Mitsubishi Materials, C003E General Catalogue, 2007–2009. [9] M.H.N. Naraghi, RTE—A Computer Code for Three-Dimensional Rocket Thermal Evaluation, User Manual, Tara Technologies, LLC, Yorktown Heights, NY, 2002. [10] G.J. Sanford, M. Bonnie, Computer program for calculation of complex chemical equilibrium compositions and applications, NASA RP-1311, Washington, DC, 1994. [11] B. Seçkin, Rocket nozzle design and optimization, Dissertation, Middle East Technical University, 2003. [12] G.P. Sutton, Rocket Propulsion Elements, 6th edn., John Wiley & Sons, Inc., New York, 1992. [13] M.F. Wadel, Comparison of high aspect ratio cooling channel designs for a rocket combustion chamber with development of an optimized design, NASA/TM-1998-206313, Washington, DC, 1998. [14] M.F. Wadel, M.L. Meyer, Validation of high aspect ratio cooling in an 89-kN thrust chamber, in: AIAA/SAE/ASME/ASEE 32nd Joint Propulsion Conference, Lake Buena Vista, Florida, July 1–3, 1996, AIAA Paper No. 96-2584.

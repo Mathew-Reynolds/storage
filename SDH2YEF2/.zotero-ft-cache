@@ -1,0 +1,346 @@
+Skip to main content
+Skip to article
+View PDF
+Download full issue
+International Journal of Fatigue
+Volume 124, July 2019, Pages 380-388
+The influence of additive manufacturing processing parameters on surface roughness and fatigue life
+Author links open overlay panel
+Joy Gockel a
+,
+Luke Sheridan a b
+,
+Brittanie Koerper a
+,
+Bo Whip a
+Show more
+Share
+Cite
+https://doi.org/10.1016/j.ijfatigue.2019.03.025
+Get rights and content
+Full text access
+Highlights
+•
+Maximum surface notch has an inverse relationship to the fatigue life.
+•
+Notches from line of slight measurements are obscured by powder and protrusions.
+•
+Computed tomography measures larger notches than the line of sight technique.
+•
+Average roughness does not have a strong correlation to fatigue life.
+Abstract
+Additive manufacturing (AM) is used to create metal components with complex geometries where the internal surfaces cannot easily be post machined. Fatigue behavior in additively manufactured metals is largely driven by defects in the material such as porosity and surface roughness. This work investigates the processing-structure-property-performance (PSPP) relationship for varied contour processing parameters, and the resulting surface roughness features for alloy 718 fabricated using the laser powder bed fusion AM process. Two nondestructive characterization methods are used to determine the relationships between contour parameters and surface roughness characteristics. The benefits of each characterization technique and metrics required for an accurate representation of the additively manufactured surfaces are discussed. Axial fatigue testing is performed to connect the entire PSPP relationship. An understanding of the PSPP relationship with respect to surface roughness features and fatigue life can be used to guide future process parameter optimization and to inform the qualification strategy for AM components.
+Previous
+Next
+Keywords
+DefectsSurface roughnessAdditive manufacturingFlaw sizeLow cycle fatigue
+1. Introduction
+Additive Manufacturing (AM) allows for the creation of complex geometries and internal features that cannot easily be produced using other manufacturing processes. In fields where complexity and customization are key advantages, AM is increasingly being used for final part applications. For example, AM production is already suitable for the high-performance engineering materials currently used in the aerospace and medical industries [1]. However, there is currently a lack of clear understanding of the surface features caused by metal powder bed fusion AM processes and the manufacturing process capabilities of those processes [2].
+Rough surfaces are known to be a detriment to the fatigue performance of metallic materials. Irregularities in the surface play a key role in fatigue failure mechanisms, such as crack initiation, therefore a better understanding of surface roughness will aid in an understanding of the fatigue failure mechanisms. Several factors can influence AM surface quality. For example, according to Barari et al., one of the major factors that affects the surface roughness of AM parts is the “staircase effect,” which occurs due to the layer-by-layer powder buildup of AM processes [3].
+In terms of AM processing parameters, the surface roughness is controlled by the contouring parameters such as laser power and laser speed [4]. The contour parameter set traces around the outside of the component on each layer in contrast to the bulk parameter set that fills in the internal portion to form solid material. Optimization of the contour processing parameters is typically completed using average line (i.e. arithmetic average (Ra)) surface roughness values [5], [6] or simply through qualitative observations. There have been several studies that question the validity of Ra as a representation of AM surfaces, but the improved roughness metrics are contradictory and have not been related to the mechanical performance [6], [7]. As-built surfaces show a fully melted surface underneath a layer of powder particles stuck to the surface. Typical measurements of the surface finish used for process optimization are performed aerially and average values of roughness are calculated [1]. These non-contact measurements of the AM surface are taken from above and are obscured by powder particles attached to the surface, thus providing a superficial measurement increase [8]. However, the protrusions from the surface carry little stress and are expected to have little bearing on the fatigue performance [9]. It is known that surface notches concentrate stress and that Ra values are not reliable when trying to predict material properties or behavior [10]. Hybrid metrics combining several surface roughness metrics have been created that relate to the stress concentration factor [11]. When comparing surface features to fatigue performance, nondestructive characterization methods are required.
+Complex designs often involve internal channels that cannot be easily machined after fabrication. It is well known that AM induces defects that are detrimental to fatigue behavior and have recently drawn interest in the fatigue research community. Particularly for complex components with internal features, the surface finish cannot be post machined and will likely be a dominating factor in a fatigue failure. Greitemeier et al. has shown that the surface finish dominates the fatigue failure in Ti-6Al-4V. Even with a reduction of the internal porosity, there was no improvement in fatigue life [12]. Fatemi et al. also concluded that the as-built surface roughness of the component is the driving factor in multiaxial fatigue [13]. Pegues et al. showed that crack initiation occurs at the rougher downward facing surface when fatigue bars are built at an angle and, in general, the rougher surfaces (measured by average roughness, Ra) generally had a lower fatigue life [14].
+Fracture mechanics theory assumes that the largest defect will be the location that initiates fatigue failure. Beretta et al. showed that correlating the fatigue strength to the defect size at the failure origin reduces the scatter [15]. Masuo et al. used the maximum defect observed in a metallographic cross section and extreme value statistical methods to somewhat successfully predict the fatigue behavior [16]. Useful information has been gained from prior studies indicating that surface roughness is a major driver in fatigue behavior. However, without consideration to the processing conditions linking the entire PSPP relationship, attempts at optimization of processing conditions to improve the fatigue performance remains a difficult task.
+Many of the fatigue studies in the literature are considering only the default processing conditions and often not reporting the exact parameters used for fabrication. This makes it difficult to replicate results and form the entire PSPP relationship. The thermal history of a part will influence the melt pool behavior and affects many aspects of the material such as porosity, microstructure and surface roughness. The thermal history depends on the processing parameters used as well as the local deposition geometry [17]. A thick section [18] versus a thin section [19] results in different heat conduction conditions changing the thermal history. Additionally, changing of processing parameters [20] and scanning strategies [21] are being considered to modify the material structure in specific sections of a part. Therefore, it is important to understand the entire PSPP relationship’s influence and whether it is the result of a purposeful modification or an inherent geometrical effect [22]. Sheridan et al. has shown the varied parameters produce different porosity type defects resulting in different PSPP relationships [23]. Therefore, in this work, a method is proposed to determine the relationship of surface roughness to processing parameters and fatigue performance using measurements from structured light (SL) surface scanning and computed tomography (CT).
+2. Material and methods
+2.1. Additive manufacturing processing of Alloy 718
+Round fatigue bars were fabricated using an EOS M290 laser powder bed fusion additive manufacturing machine using a layer thickness of 40 µm. The contour parameter set controls the laser scan settings that trace around the outside of the component geometry layer by layer as the build progresses and defines the surface roughness of the as-built component. In some optimized parameter sets, multiple contour passes are used. In this work, a single pass was used to reduce experimental variables and discover the fundamental PSPP relationships. Thus, the surfaces formed in this study are rougher than typical default parameter settings. However, the results gained can be used to guide further process optimization. Three replicate fatigue bars were built at each parameter set.
+The laser powers and speeds are varied as shown in Table 1. The laser power and speeds are varied individually to limit required specimens and so the conclusions can relate to AM melt pool characteristics. Increasing laser power puts more energy into the material and increases the melt pool size. The increase in laser power also moves toward the keyholing regime which results in a fundamental change of melt pool physics and a gas pore near the bottom of the melt pool. Increasing laser speed results in less energy being put into the material and decreases the melt pool size. An increase in laser speed could also results in unstable melt conditions and balling which causes an inconsistent weld bead. The variation of contour processing parameters could be interpreted relative to a linear energy density parameter, Power/Speed, where a larger number is more energy being put into the material. However, caution should be taken in this interpretation when parameter changes cause melt pool physics to transition away from the conduction mode. Therefore, in this paper the individual laser powers and speeds are reported.
+
+Table 1. Contour processing parameters used for as-built fatigue bars.
+
+Empty Cell
+	Power (W)	Speed (mm/sec)
+A	120	560
+B	100	560
+C	80	560
+D	80	700
+E	80	820
+The bulk processing parameter set that is used to fill in the internal material is held at the default setting, along with all other parameters. The bulk parameter would control other material aspects such as porosity and microstructure, therefore it is assumed that material characteristics other than the surface roughness are consistent through all specimens.
+The fatigue bars created in this build were tall pillars; therefore, support was required to help avoid build issues from component deformation, which can occur because of contact with the recoater as it spreads each new layer of powder. Cylindrical components were also fabricated in the same build between each as-built bar to help support the as-built geometries and are being used for a separate study. The as-built and cylindrical bars were placed closely together at the grip sections with rows of bars perpendicular to the recoating direction. The rows were staggered such that the recoater only contacted the edge of one component at any given time. Triangular supports were added to support the end of each row. In total, 15 as-built bars were included in the assembly. One of the bars with parameter set A was deleted mid-build, because of a recoater jam, so 14 as-built fatigue bars were fully fabricated. The build layout can be seen in Fig. 1 and the fatigue bar geometry is shown in Fig. 2.
+Download: Download high-res image (119KB)
+Download: Download full-size image
+
+Fig. 1. AM build chamber layout for vertical fatigue bars.
+
+Download: Download high-res image (71KB)
+Download: Download full-size image
+
+Fig. 2. Fatigue test bar dimensions in mm.
+
+The fatigue bars were heat treated post-process in order to relieve the residual stress and homogenize the microstructure. This will allow consistent assessment of the as-built surface roughness. The bars were stress relieved at 1065 °C for 90 min and furnace cooled.
+The bars were removed from the build plate using wire EDM and post-processed through the standard solution and aging heat treatment for AM Alloy 718 [24], [25]. No additional heat treatment was used to reduce the porosity because it has been shown that the surface roughness will dominate the fatigue failure [12].
+2.2. Surface measurements
+The entire surface of the gage section of every fatigue bar was measured using two nondestructive methods. SL scanning and CT were used to characterize the surface and calculate the surface roughness metrics. These methods were chosen because they can be performed on the material before fatigue testing and can capture the entire surface, which ensures that all surface features are captured. The chosen metrics used to quantify areal surface roughness measurements, designated with S, are defined and parameterized in ISO 25178 [26]. The surface is measured in the x-y plane with z representing the surface height. The heights are stored in a matrix z(x, y). The mean plane is from all measured points on the surface, and the surface metrics are calculated from the height variations from this plane. For both methods, Sa (arithmetic mean height) and Sv (maximum pit height) were calculated using Eqs. (1), (2) respectively, where A is the area of the surface and z(x, y) is the matrix of surface heights. Both surface roughness metrics are related to the contour process parameters used in fabrication. Sa and Sv are chosen for this investigation because these metrics are typically reported in relation to fatigue life when considering traditional manufacturing processes and have been shown to relate to the contour processing parameters [8].
+(1)
+Sa=1A∬Az(x,y)dxdy
+(2)
+Sv=|minzx,y|
+Scanning electron microscope (SEM) images of the as-built surface are shown in Fig. 3. Fig. 3a is a view down the 90° surface exposing caverns hidden below powder particles that are stuck to the surface. In Fig. 3b, the melted surface is evident under protrusions and powder particles partially melted to the surface. Through a comparison of the surface roughness data found using CT scans and SL surface scanning, this work provides an understanding of the limitations and advantages of each method in capturing a true representation of the surface. The surface features from each method are then related to the fatigue life to create a relationship that can be used by process developers to improve fatigue performance.
+Download: Download high-res image (204KB)
+Download: Download full-size image
+
+Fig. 3. SEM images showing the as-built surfaces. (a) Protrusions and powder particles on the surface obscuring other features and (b) powder particles dominating viewing of the surface.
+
+2.2.1. Structured light scanning
+Measurements of the surfaces of all geometries were performed using a Keyence VR-3200 wide area 3D measurement macroscope, which uses angled SL scanning to capture the surface heights. For the fatigue bars, eight measurements were evenly spaced around the circumference of the gage section of each bar in order to capture the entire surface as seen in Fig. 4. Stitched line measurements with a length of 7 mm at each radial location were used to capture the surface along the majority of the length of the gage section while avoiding the filleted regions on each end. Each measurement had a width of 0.5 mm to avoid extreme curvature. The secant curvature correction was applied in the Keyence software to correct for the cylindrical shape of the fatigue bars. The raw height data was then exported to allow for calculation of the surface roughness metrics for all radial locations. The arithmetic mean height, Sa, and the maximum pit height, Sv, were calculated at each radial location. The surface metrics are used in order to capture a representation of the entire surface. A representative example of one height map in micrometers (µm) from each parameter set is shown in Fig. 5.
+Download: Download high-res image (85KB)
+Download: Download full-size image
+
+Fig. 4. Radial measurement locations on fatigue bar gage section.
+
+Download: Download high-res image (738KB)
+Download: Download full-size image
+
+Fig. 5. Example surface scans from one radial location for different contour parameter sets.
+
+2.2.2. Computed tomography
+It is known that the surface protrusions on AM surfaces, such as powder particles stuck to the surface, make it difficult for non-contact methods to capture an accurate representation of the surface roughness [27]. Therefore, CT was performed on the gage section of each fatigue bar prior to testing to provide an unobstructed view of the surface by capturing all the previously hidden data as shown in Fig. 6.
+Download: Download high-res image (144KB)
+Download: Download full-size image
+
+Fig. 6. CT scan of the fatigue bar gage section showing surface roughness.
+
+The cross-section slices of the CT scans were exported as images with each bar having a total of one thousand images. Through the utilization of MATLAB [28] all one thousand images for each bar were read, cropped, centered, and converted to binary images. Next, the center of each individual adjusted image was determined by finding the centroid. In some cases, multiple circles were found in each image from particles protruding from other planes on the surface, resulting in multiple centroids. It was found that the anomalous surface features from other places were 12 pixels or fewer. With this information the threshold value was set above 12 pixels to capture only the circle of interest.
+After defining the centroid of the circle, the perimeter of the binary image was determined. Some slices near the top and bottom had inconsistencies occur because of CT limitations. To avoid affecting the results of the overall bar, and to remain consistent across all measurements, the first six and last six slices of each specimen were omitted from the study. With the coordinates of the average centroid and boundary perimeter for each image found, the mean radius is determined from all surface points. The mean radius is used to define the mean surface. Therefore, the circumference of the bar is flattened and the surface roughness metrics Sv and Sa are calculated from the height variations from the mean surface using Eqs. (1), (2). Because the entire surface is measured at once, only one measurement is reported for each specimen. Additional research is needed to determine the variability of the surface and if more than one measurement is required.
+2.3. Fatigue testing
+Load controlled axial fatigue tests at room temperature were performed using a 100 kN MTS servo-hydraulic load frame. The applied load for each test was calculated based on caliper measurements of the cross-sectional area of each specimen. The maximum stress was 900 MPa with a load ratio R = 0.1 at a linear frequency of 5 Hz. Each bar was tested to failure.
+3. Results
+3.1. Effect of contour processing parameters on surface roughness
+The as-built fatigue bars with varied contour processing parameters were characterized nondestructively using both SL scanning and CT. The relationship between the contour parameters and the surface roughness metrics is discussed.
+3.1.1. Structured light scanning
+Sv and Sa from the SL scanning method are related to the contour processing parameters in Fig. 7. The measurements from the eight different radial locations are averaged for each sample and the standard deviation is represented with error bars. Replicate samples within each parameter set are shown separately. Sv shows a clear trend of decreasing with increasing power and increasing with increasing speed. This is likely because of the change in melt pool size for the contour pass. Each surface is comprised of contour passes stacked one upon another. The melt pool size increases based on the processing parameters used [18], and the gap between each layer is decreased, thus resulting in a smaller Sv. The inverse happens with an increasing speed: the melt pool size decreases and the gap between layers increases. Additionally, as the energy input and melt pool size decrease, there is additional potential for other melt pool instabilities such as balling. A smaller Sv is expected to result in a higher fatigue life, therefore according to these results, a higher power should be used on the contour pass. However, there will be limitations in this relationship. If the power continues to increase, a keyhole type melt pool will form resulting in a change in shape of the melt pool. Additionally, keyholing results in the formation of subsurface porosity within the melt pool that would be a further detriment to the fatigue performance.
+Download: Download high-res image (287KB)
+Download: Download full-size image
+
+Fig. 7. Comparison of surface roughness from structured light scanning to the contour processing parameters (a) Sv to Speed, (b) Sv to Power, (c) Sa to Speed and (d) Sa to Power.
+
+Sa is shown to decrease with an increasing power, keeping with the same trend as Sv. However, when the speed is varied, there is no clear trend in Sa. With the highest speed, there is a large variation in the measured Sa values for the replicate samples. This indicates that at higher speeds, the process may be unstable and create additional variation in the surface results. It is expected that Sa will have some obscurity in the results because of the powder particles that are stuck to the surface and other protrusions superficially raising the roughness and making it difficult to observe changes in the melted surface. For both Sa and Sv, there is a significant amount of scatter in the data shown through the plotted standard deviation; indicating a high amount of variability in the surface and in the measurement technique. Because a new mean plane is defined for each radial location, the plane can be skewed by a large anomaly on the surface. This variation emphasizes the need for multiple measurements to accurately capture the surface roughness metrics.
+3.1.2. Computed tomography
+Sv and Sa from the CT scanning methods are related to the contour processing parameters in Fig. 8. The entire sample is analyzed. A single value of Sa and Sv are taken for the entire sample. Replicate bars within each parameter set are shown separately.
+Download: Download high-res image (297KB)
+Download: Download full-size image
+
+Fig. 8. Comparison of surface roughness from CT to the contour processing parameters (a) Sv to Speed, (b) Sv to Power, (c) Sa to Speed and (d) Sa to Power.
+
+It was found that while power was held constant at 80 W, the maximum valley, Sv, increased as speed increased as shown in Fig. 8(a). This shows a direct relationship between maximum surface valley and speed for the CT data, which was the same result shown in the SL scanning method. A similar trend was seen when speed was held constant at 560 mm/sec: Sv, decreased as power increased as shown in Fig. 8(b). This shows an indirect relationship between average surface roughness and power. The same relationship that was observed in the SL scanning method. No clear trends were found when relating the average roughness, Sa, to the processing parameters in Fig. 8(c) and (d). Sa is largely influenced by the powder particles and protrusions on the surface [4], [5], [6]. These superficial features are dominating the measurements and not capturing the solidified surface. Therefore, the average powder particle size in the raw power would likely highly influence the measured value of Sa but is expected to have little contribution to the fatigue performance.
+3.1.3. Comparison of SL and CT
+When comparing the values of Sv from the SL scanning and the CT scanning, the values of Sv are larger for the CT scanning data. This is likely for several reasons. In the SL scanning method, the maximum notches are obscured by powder particles that are stuck to the surface resulting in a lower maximum notch measured. In addition, the powder particles dominating the surface raise the average surface value from which the maximum notch is measured. The variation is small within the sampling of the eight largest notches within the component. This indicates that there are many large notches of a similar size that could be resulting in multiple crack initiations.
+It was shown that the Sa values for the CT data were consistently lower than those found using the SL surface scanning method. This is likely because of powder particles that are stuck on the surface. In SL scanning, underlying surface data is obstructed by powder particles resulting in less surface to be measured and some lower surface heights to be missed. With CT a truer representation of the surface is captured and it is logical that the Sa value would be lower.
+3.2. Effect of processing parameters on fatigue life
+The fatigue life is related to the processing parameters in Fig. 9. As the contour laser speed increases, the general trend in fatigue life decreases. As the contour laser power increases, the fatigue life increases. There is a significant amount of spread in the fatigue life within each parameter set. Additional samples would likely be required to verify the observed trends between processing parameters and fatigue life. However, there is also an observed spread in the surface roughness measurements. Therefore, it is useful to compare the fatigue life to the surface roughness measurement from each individual specimen.
+Download: Download high-res image (211KB)
+Download: Download full-size image
+
+Fig. 9. Comparison of fatigue life to contour processing parameters.
+
+3.3. Relation of surface roughness to fatigue life
+It has been shown that fatigue failure is likely to initiate on the surface when AM components are left in the as-built state. Therefore, it is useful to understand the relationship of the surface roughness metrics to the fatigue life in order to predict mechanical performance of an as-built component non-destructively. However, it is not known what surface roughness measurements relate to the fatigue performance and how the magnitudes compare.
+The measured Sa and Sv for each specimen are related to the fatigue life for each specimen and each measurement method. For each fatigue bar, the fatigue life is shown in Fig. 10 relative to Sa and Sv for both the SL scanning and CT methods. It should be noted that the trend lines are not statistically significant but are plotted here for visual emphasis when comparing the surface roughness metrics. For Sa measured using the SL scanning method (SL Sa) shown in Fig. 10(a), a general decreasing trend is shown where an increasing Sa results in a lower fatigue life. This is behavior that is typically seen with traditional manufacturing processes; however, the fit gets worse as the roughness values go up, in the cases with a higher speed. For Sa measured with CT (CT Sa) shown in Fig. 10(b), the fit is unsatisfactory with the points are clustered close together.
+Download: Download high-res image (303KB)
+Download: Download full-size image
+
+Fig. 10. Comparison of fatigue life to surface roughness metrics from the SL and CT measurement methods (a) SL Sa, (b) CT Sa, (c) SL Sv and (d) CT Sv.
+
+For Sv measured with the SL scanning method (SL Sv) shown in Fig. 10(c), a clear decreasing trend is shown where the fatigue life decreases with an increasing Sv. There is a concern that the SL measurement method is not measuring the true maximum notch, but results suggest that consistent measurement procedure can still lead to accurate fatigue life prediction. For Sv measured using CT (CT Sv) shown in Fig. 10(d), the fit improves further, especially in the cases with higher notch values, CT provides a better fit than the SL scanning method. This is likely because of the fact that as the roughness of the surface increases, more notches are obscured by the protrusions and powder particles on the AM surface.
+Both methods provide reasonably accurate trends within an acceptable level of scatter when comparing the fatigue life to Sv. Based on fracture mechanics concerns, it is expected that the maximum defect will be the failure location [29]. The maximum notches in the surface are represented by Sv. In this study, the surface of the entire gage section was measured ensuring that the maximum overall notch was captured. However, this process is time consuming and labor intensive, particularly for the SL method. Additional research is required to determine the number of measurements required to capture a representation of the life-limiting notch. SL scanning and other similar non-contact surface measurement methods are readily available in many laboratory and industrial settings and inspection can be completed quickly. CT is not easily accessible and adds significant time and costs for inspection. However, CT may be required if the true maximum depths of the notches are needed for predictive methods and modeling. It is promising that the trend from the SL scanning method is the same and could be used by process developers when choosing contour parameter values as an early indication of better fatigue performance.
+3.4. Surface features resulting in failure
+The fracture surfaces of the fatigue bars are examined to determine the location of failure and gain additional insight into the structure of the AM surface. Fig. 11(a) shows the crack initiation location for contour parameters P = 80 W and S = 820 mm/sec. This parameter set has the highest speed and would have the smallest melt pool area. In this case, there are several locations near the surface where there is evidence that the layers are not fusing together properly, and the contour pass is missing. In this experiment, the contour offset was not changed. As the melt pool gets smaller, there is the potential for a gap between the bulk melting and the contour pass. If this gap gets too large, the melt pool may not adhere appropriately. This produces a large notch in the surface and a possible crack initiation location. Similar behavior, to a lesser extreme, is also seen in a case with the lower speed, P = 80 W and S = 560 mm/sec in Fig. 11(c) where the surface of the prior contour pass is visible. This indicates that the contour passes did not sufficiently fuse together.
+Download: Download high-res image (940KB)
+Download: Download full-size image
+
+Fig. 11. Fracture surfaces from each contour parameter set. (a) P = 80 W, S = 820 mm/sec (b) P = 80 W, S = 700 mm/sec (c) P = 80 W, S = 560 mm/sec (d) P = 100 W, S = 560 mm/sec, (e) P = 120 W, S = 560 mm/sec.
+
+When the contour pass appropriately adheres to the bulk material, there is still the risk of subsurface porosity from process instabilities. This can occur at the boundary of the bulk and contour parameter interface. Fig. 11(b), from contour parameters P = 80 W and S = 700 mm/sec, shows a failure location where the failure is likely a combination of a surface notch and a subsurface pore. The combined influence of subsurface porosity and a nearby surface notch could dominate over a larger notch and should be considered in process optimization. Subsurface porosity could also be caused by keyholing porosity when high energy parameters are used for the contour. In the higher power cases, the layers are appropriately fused together, and the failure location is occurring at a notch in the surface at the interface when stacking melt pools on the contour laser scan. The exact notch of failure is now influenced by other factors. Fig. 11(d), with contour P = 100 W and S = 560 mm/sec shows a surface notch vertically adjacent to a large protrusion. While protrusions do not carry stress in a loaded scenario, the presence of a protrusion on a prior layer during processing could contribute to a process instability resulting in a surface notch or adhesion issues on the next layer. Fig. 11(e) is at the highest contour laser power, P = 120 W and S = 560 mm/sec. The failure location now exhibits a material inclusion instead of a surface notch. This contour parameter set exhibited the smallest Sv values. As the surface improves, the interaction of competing failure mechanisms will increase and must be considered during processing parameter optimization.
+4. Conclusions
+The PSPP relationship is explored for relating the contour process parameters to surface roughness and fatigue for AM alloy 718. It is shown, using multiple surface roughness measurement techniques, that the surface roughness is related to the processing parameters. Sa decreases with an increasing laser power, but a clear trend is not present with increasing laser speed. Sv decreases with an increasing laser power and increases with an increasing laser speed. The processing parameters used are influencing the melt pool size. Increasing the laser power results in a larger melt pool size and smaller surface notches. Further increase of the laser power would result in keyholing that would produce subsurface porosity. Increasing the laser speed produces a smaller melt pool and larger surface notches. This is likely magnified because an increase in speed introduces more melt pool instabilities and balling. The CT scanning surface inspection method supports similar trends; however, CT measures larger maximum notches than the SL scanning method because the surface is not obscured by powder particles and large protrusions on the surface.
+When comparing the surface roughness metrics to the fatigue life, Sv is inversely correlated to the fatigue life. As Sv increases, the fatigue life decreases. This trend is seen for both measurement methods, with the CT method providing a slightly better fit. Sa does not show a correlation to fatigue life from either measurement method. Fractography shows that in the cases of high roughness and maximum notch values, the contour pass is not adhering to the layer below, resulting in the large notches. When proper fusion is achieved, the failure locations are now influenced by other factors such as material inclusions, and subsurface porosity. This emphasizes the importance of future work including interaction effects. Understanding of the entire PSPP relationship for the effect of surface roughness on fatigue can be used to guide future process parameter optimization and to inform the qualification strategy for relating coupon test data to components with different thermal histories.
+Acknowledgements
+The authors would like to thank the Turbine Engine Fatigue Facility of The Air Force Research Laboratory, Universal Technology Corporation and the Air Force Summer Faculty Fellowship Program for funding and support.
+References
+[1]
+T. Grimm, G. Wiora, G. Witt
+Characterization of typical surface effects in additive manufacturing with confocal microscopy
+Surf Topogr Metrol Prop, 3 (1) (2015)
+Google Scholar
+[2]
+A. Townsend
+Surface texture metrology for metal additive manufacturing: a review
+Precis Eng, 46 (2016), pp. 34-47
+View PDF
+View articleView in ScopusGoogle Scholar
+[3]
+A. Barari, H.A. Kishawy, F. Kaji, M.A. Elbestawi
+On the surface quality of additive manufactured parts
+Int J Adv Manuf Technol (2016)
+Google Scholar
+[4]
+J.C. Fox, S.P. Moylan, B.M. Lane
+Effect of process parameters on the surface roughness of overhanging structures in laser powder bed fusion additive manufacturing
+3rd CIRP conference on surface integrity (2016)
+Google Scholar
+[5]
+A. Townsend, N. Senin, L. Blunt, R.K. Leach, J. Taylor
+Surface texture metrology for metal additive manufacturing: a review
+Precis Eng, 46 (2016), pp. 34-47
+View PDF
+View articleView in ScopusGoogle Scholar
+[6]
+A. Triantaphyllou, C.L. Giusca, G.D. Macaulay, M. Hoebel, R.K. Leach, B. Tomita, K.A. Milne
+Surface texture measurement for additive manufacturing
+Surf Topogr Metrol Prop, 3 (2) (2015)
+Google Scholar
+[7]
+S. Moylan
+Progress toward standardized additive manufacturing test artifacts
+Proceedings of achieving precision tolerances in additive manufacturing, Raleigh, NC (2015)
+Google Scholar
+[8]
+B. Whip
+The effect of processing parameters on surface roughness influencing performance in additively manufactured alloy 718
+Wright State University (2018)
+Google Scholar
+[9]
+C. Kantzos, R.W. Cunningham, V. Tari, A.D. Rollett
+Characterization of metal additive manufacturing surfaces using synchrotron X-ray CT and micromechanical modeling
+Comput Mech (2018), pp. 575-580
+CrossrefView in ScopusGoogle Scholar
+[10]
+D. Arola, M. Ramulu
+An examination of the effects from surface texture on the strength of fiber reinforced plastics
+J Compos Mater, 33 (2) (1999), pp. 102-123
+CrossrefView in ScopusGoogle Scholar
+[11]
+D. Arola, C. Williams
+Estimating the fatigue stress concentration factor of machined surfaces
+Int J Fatigue, 24 (2002), pp. 923-930
+View PDF
+View articleView in ScopusGoogle Scholar
+[12]
+D. Greitemeier, C. Dalle Donne, F. Syassen, J. Eufinger, T. Melz
+Effect of surface roughness on fatigue performance of additive manufactured Ti-6Al-4V
+Mater Sci Technol, 32 (7) (2016), pp. 629-634
+View in ScopusGoogle Scholar
+[13]
+A. Fatemi, R. Molaei, S. Sharifimehr, N. Phan, N. Shamsaei
+Multiaxial fatigue behavior of wrought and additive manufactured Ti-6Al-4V including surface finish effect
+Int J Fatigue (2017), pp. 347-366
+View PDF
+View articleView in ScopusGoogle Scholar
+[14]
+J. Pegues, M. Roach, R.S. Williamson, N. Shamsaei
+Surface roughness effects on the fatigue strength of additively manufactured Ti-6Al-4V
+Int J Fatigue, 116 (2018), pp. 543-552
+View PDF
+View articleView in ScopusGoogle Scholar
+[15]
+S. Beretta, S. Romano
+A comparison of fatigue strength sensitivity to defects for materials manufactured by AM or traditional processes
+Int J Fatigue (2017), pp. 178-191
+View PDF
+View articleView in ScopusGoogle Scholar
+[16]
+H. Masuo, Y. Tanaka, S. Morokoshi, H. Yagura, T. Uchida, Y. Yamamoto, Y. Murakami
+Effects of defects, surface roughness and HIP on fatigue strength of Ti-6Al-4V manufactured by additive manufacturing
+Procedia Struct Integrity (2017), pp. 19-26
+View PDF
+View articleView in ScopusGoogle Scholar
+[17]
+A. Yadollahi, N. Shamsaei
+Additive manufacturing of fatigue resistant materials: challenges and opportunities
+Int J Fatigue (2017), pp. 14-31
+View PDF
+View articleView in ScopusGoogle Scholar
+[18]
+J. Gockel, J. Beuth, K. Taminger
+Integrated control of solidification microstructure and melt pool dimensions in electron beam wire feed additive manufacturing of Ti-6Al-4V
+Addit Manuf, 1 (1) (2014), pp. 119-126
+View PDF
+View articleView in ScopusGoogle Scholar
+[19]
+J. Gockel, J. Fox, J. Beuth, R. Hafley
+Integrated melt pool and microstructure control for Ti-6Al-4V thin wall additive manufacturing
+Mater Sci Technol, 31 (8) (2015), pp. 912-916
+View in ScopusGoogle Scholar
+[20]
+S. Narra, R. Cunningham, J. Beuth, A.D. Rollett
+Location specific solidification microstructure control in electron beam melting of Ti-6Al-4V
+Addit Manuf, 19 (2018), pp. 160-166
+View PDF
+View articleView in ScopusGoogle Scholar
+[21]
+R.R. Dehoff, M.M. Kirka, F.A. List, K.A. Unocic, W.J. Sames
+Crystallographic texture engineering through novel melt strategies via electron beam melting: Inconel 718
+Mater Sci Technol, 31 (8) (2015), pp. 939-944
+View in ScopusGoogle Scholar
+[22]
+J.F. Hagen, M. Rasch, S. Kohl, M. Schmidt
+Geometry dependent microstructures: bug or feature?
+Procedia CIRP, 74 (2018), pp. 724-727
+View PDF
+View articleView in ScopusGoogle Scholar
+[23]
+L. Sheridan, O. Scott-Emuakpor, T. George, J. Gockel
+Relating porosity to fatigue failure in additively manufactured alloy 718
+Mater Sci Eng, A (2018), pp. 170-176
+View PDF
+View articleView in ScopusGoogle Scholar
+[24]
+Society AM. Heat treatment wrought nickel alloy and cobalt alloy parts; 2016.
+Google Scholar
+[25]
+ASTM
+Standard specification for additive manufacturing nickel alloy (UNS N07718) with powder bed fusion
+ASTM Book of Standards (2014)
+Google Scholar
+[26]
+ISO 25178-2. Geometrical product specifications (GPS) – surface texture: Areal- Part 2: Terms, definitions and surface texture parameters; 2012.
+Google Scholar
+[27]
+J. Fox, F. Kim, Z. Reese, C. Evans, J.S. Taylor
+“Investigation of complementary use of optical metrology and X-ray computed tomography for surface finish in laser powder bed fusion additive manufacturing
+European Society for Precision Engineering and Technology Special Interest Group (2017)
+Google Scholar
+[28]
+M R. Natick (MA): The MathWorks, Inc.; 2017b.
+Google Scholar
+[29]
+H. Masuo, Y. Tanaka, S. Morokoshi, H. Yagura, T. Uchida, Y. Yamamoto, et al.
+Influence of defects, surface roughness and HIP on the fatigue strength of Ti-6Al-4V manufactured by additive manufacturing
+Int J Fatigue, 117 (2018), pp. 163-179
+View PDF
+View articleView in ScopusGoogle Scholar
+Cited by (327)
+Defects and anomalies in powder bed fusion metal additive manufacturing
+2022, Current Opinion in Solid State and Materials Science
+Citation Excerpt :
+
+This is most likely because near-surface porosity induces localized damage in specific regions at the surface [658] more significantly than surface roughness [659]. The small influence of powder size on fatigue performance was also corroborated in Gockel et al. [661]. Here, it was discovered that the average powder particle size in the raw powder would likely highly influence the measured value of roughness parameter Sa but is expected to have little contribution to the fatigue performance.
+
+Show abstract
+Progress and perspectives in laser additive manufacturing of key aeroengine materials
+2021, International Journal of Machine Tools and Manufacture
+Show abstract
+Additive manufacturing of metallic lattice structures: Unconstrained design, accurate fabrication, fascinated performances, and challenges
+2021, Materials Science and Engineering R Reports
+Show abstract
+Defects in additive manufactured metals and their effect on fatigue performance: A state-of-the-art review
+2021, Progress in Materials Science
+Show abstract
+Architected cellular materials: A review on their mechanical properties towards fatigue-tolerant design and fabrication
+2021, Materials Science and Engineering R Reports
+Show abstract
+Surface post-treatments for metal additive manufacturing: Progress, challenges, and opportunities
+2021, Additive Manufacturing
+Show abstract
+View all citing articles on Scopus
+View Abstract
+© 2019 Elsevier Ltd. All rights reserved.
+About ScienceDirect
+Remote access
+Contact and support
+Terms and conditions
+Privacy policy
+
+Cookies are used by this site.Cookie Settings
+
+All content on this site: Copyright © 2025 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply.

@@ -1,0 +1,1319 @@
+Experimental Investigation of the Thermal
+Performance and Pressure Loss in
+Additively Manufactured mini-channels
+Anna Nyhlén
+Space Engineering, master's level 2021
+Luleå University of Technology Department of Computer Science, Electrical and Space Engineering
+
+
+Abstract
+Industrial gas turbines reach temperatures of 1500-2000K at high rotational velocities which means that much effort is spent on the design of an efficient cooling system. With the recent advances of the additive manufacturing (AM) industry, new design opportunities have open up for many industries and applications, including the design of cooling systems. However, a significant surface roughness will be present in AM components compared to traditionally manufactured components. An increased surface roughness inside a channel will affect both the heat transfer and pressure loss. The performance of AM channels are therefore not fully known and needs to be examined experimentally on the actual material to fully capture the effects of the increased surface roughness.
+The aim with this project is to experimentally investigate the thermal performance and pressure losses experienced in AM channels due to surface roughness. This was done by using a Steady State Heat Transfer rig which was assembled and verified. AM and aluminium test channels were mounted in a copper block which was insulated and heated up by electrical heaters. The test channels were then subjected to an air flow of constant mass flow. Temperature and pressure measurements were made at the inlet and outlet together with mass flow measurements and copper block temperature measurements.
+The Nusselt number and Darcy friction factor were used to evaluate the heat transfer and pressure losses experienced in the channels. The results showed that the heat transfer and friction factor increased significantly for the AM channels compared to smooth channels. Both the heat transfer and friction factor increased when the relative roughness of the channels increased.
+This project was executed at Siemens Energy in Finspa°ng at the Fluid Dynamic Laboratory and is a part of the work of obtaining thermal performance data for mini-channels manufactured by AM.
+1
+
+
+Table of Contents
+Abstract 1
+1 Introduction 6 1.1 Background . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6 1.2 Study Objective . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8 1.3 Project Plan and Time Plan . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9 1.4 Limitations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+2 Theoretical Background 10 2.1 Reynolds Number . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10 2.2 Boundary layer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11 2.3 Hydraulic Diameter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11 2.4 Pressure losses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12 2.4.1 Friction pressure loss . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12 2.4.2 Inlet and outlet pressure loss . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12 2.4.3 Mach number . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13 2.5 Heat Transfer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13 2.5.1 Correlations for smooth channels . . . . . . . . . . . . . . . . . . . . . . . . . . 14 2.5.2 Entrance effects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15 2.6 Additive Manufacturing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16 2.7 Uncertainty Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16
+3 Method and Equipment 17 3.1 Experiment setup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17 3.1.1 Test rig compartment . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18 3.1.2 Heater system . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19 3.1.3 Measurement devices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19 3.2 Test channels . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21 3.2.1 Surface roughness . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22 3.3 Test Procedure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24 3.4 Data Sampling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26 3.5 Post-processing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26 3.5.1 Software . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26 3.5.2 Darcy Friction Factor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27 3.5.3 Nusselt number . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28 3.6 Uncertainty Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+2
+
+
+Chapter 0
+4 Results 32 4.1 Bench Marking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32 4.2 Darcy Friction Factor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34 4.2.1 Surface roughness parameters . . . . . . . . . . . . . . . . . . . . . . . . . . . 36 4.2.2 Uncertainty for friction factor . . . . . . . . . . . . . . . . . . . . . . . . . . . . 39 4.3 Nusselt number . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40 4.3.1 Uncertainty for Nusselt number . . . . . . . . . . . . . . . . . . . . . . . . . . 42 4.4 Comparison with PennState . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+5 Discussion 46 5.1 Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46 5.2 Future work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47
+A Appendix A 50 A.1 Matlab code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 50 A.2 Python code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+B Appendix B 61 B.1 Data sheets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61
+3
+
+
+Nomenclature
+247 AM material CM247LC
+939 AM material Inconel939
+Δp Pressure drop over channel [P a]
+Δpdiff Pressure drop over channel with differential measurement [P a]
+ ̇m Mass flow [g/s]
+ρ Density [kg/m3]
+ε Average sand grain diameter [m]
+ε/D Relative surface roughness parameter [-]
+Ac Cross section area of channel [m2]
+As Surface area of channel [m2]
+AM Additive manufacturing
+c Speed of sound [m/s]
+c1 Pressure loss coefficient at inlet
+c2 Pressure loss coefficient at outlet
+Cp Specific heat capacity [J/kgK]
+D Channel diameter [m]
+Dh Hydraulic diameter of channel [m]
+fd Darcy friction factor [-]
+h Heat transfer coefficient [W/m2K]
+k Conductivity coefficient [W/mK]
+L Length [m]
+L/D Ratio between length and diameter of channel [-]
+M Mach number [-]
+N u Nusselt number [-]
+4
+
+
+Chapter 0
+N uG Nusselt number for Gnielinski correlation [-]
+P Channel perimeter [m]
+p Pressure [P a]
+patm Atmospheric pressure [P a]
+pdyn Dynamic pressure [P a]
+pinlet Pressure at inlet [P a]
+poutlet Pressure at outlet [P a]
+pstat Static pressure [P a]
+ptot Total pressure [P a]
+P r Prandtl number [-]
+Q Heat [W ]
+q Heat flux [W/m2]
+Ra Arithmetic Average Surface Roughness [m]
+Rp Maximum profile peak height [m]
+Rt Maximum height of the profile [m]
+Rz Average maximum height of the profile [m]
+Re Reynolds number [-]
+T Temperature [C°] or [K]
+Ts Temperature of a surface [K]
+T∞ Temperature of free stream flow [K]
+Tcu Copper temperature [C°] or [K]
+Tinlet Temperature at inlet [C°] or [K]
+Toutlet Temperature at outlet [C°] or [K]
+Tw Temperature of inner wall of test channel [C°] or [K]
+U Velocity of flow [m/s]
+u() Uncertainty of measured input()
+uc Combined uncertainty
+U∞ Velocity of free stream flow [m/s]
+5
+
+
+Introduction
+1.1 Background
+A gas turbine is an internal combustion engine which is used to convert thermal or chemical energy into mechanical energy. The principle is used for power generation applications and for aircraft propulsion. A simplified schematic of a gas turbine system can be seen in Figure 1.1 and the gas turbine SGT-800 manufactured by Siemens Energy can be seen in Figure 1.2.
+Figure 1.1: Simplified schematic of a gas turbine system [1]
+One of the most important factors that will affect the performance of a gas turbine is the turbine inlet temperature. By increasing the inlet temperature, the work output of the gas turbine increases as well. Due to an increased inlet temperature, modern industrial gas turbines can be exposed to temperatures of 1500-2000K with high rotational velocities. No suitable materials can withstand such extreme temperatures and loads for a long period of time, therefore an efficient cooling system is necessary for a successful design of a gas turbine. Internal air cooling with forced convection is described to be one of the most successful methods for cooling systems in production engines. Components that are to be cooled does therefore contain several small cooling channels that can vary in design in order to achieve an effective surface area. It is desired that the channels achieve high heat transfer with low pressure losses. [1]
+The recent advances in the additive manufacturing (AM) industry, also known as 3D printing, has open up new opportunities within many industries and applications, including the design of cooling systems for industrial gas turbines. The use of AM components gives more freedom in the design phase due to less geometrical constraints and lower the production time and cost compared to traditional manufacturing techniques. However, the performance of these new materials and components made from AM methods is not fully known and needs to be examined carefully before being used.
+One difference between traditionally manufacturing and AM is that an increase in surface roughness is introduced for AM components. An increased surface roughness for cooling channels will affect
+6
+
+
+Chapter 1
+both the pressure loss and heat transfer of the internal flow. These effects need to be examined experimentally on the actual materials in order to fully capture the effects of the increased surface roughness.
+Pressure losses and heat transfer in pipe or channel flow has been studied for several decades and the applications can be found in a number of industries. Nikuradse [2] performed experimental studies to examine the correlation between the pressure losses for pipe flow due to surface roughness and Reynolds number. Sand grains were applied to pipes and the roughness was characterized by using the average-sand-grain diameter compared to the diameter of the pipe. This translated to the relative roughness parameter (ε/Dh) which is still used in pressure loss measurements today.
+Huang et al. [3] studied internal flow in channels with a diameter between 0.2-3 mm, also known as mini-channels, with a high relative roughness up to 42%. These dimensions are similar of the channels evaluated in the present study. They observed a deviation from the theoretical laminar value of 64/Re for the friction factor for the channels with a relative roughness above 7%. It was also reported that the transitional Reynolds number decreased with an increasing relative roughness. Similar conclusion was presented by Dai et al. [4] which observed that a roughness of less than 1% has little effect on the flow characteristics and suggests that ε/Dh = 1% could be used as a limit between rough and smooth mini channels.
+Several studies about thermal performance in AM channels have been published from Pennsylvania State University (PennState). Stimpson et al. [5] performed experimental studies on channels manufactured by Direct Metal Laser Sintering (DMLS) using a cobalt-molybdenmun-based superalloy (CrCo) powder with a relative sand grain surface roughness (ε/Dh) around 20-38% of the hydraulic diameter. They presented the results in the form of the Nusselt number and Darcy friction factor and showed that the friction factor increased significantly for the AM channels compared to smooth channels, especially for small hydraulic diameters of the channel. A significant increase in heat transfer was also presented, however, this increase was not proportional to the augmentation of the friction factor. The relative arithmetic mean roughness value of the surface roughness was presented in the form Ra/Dh, which seemed to agree well with the ε/Dh value.
+This study examines test channels manufactured by the Selective Laser Melting (SLM) process with the low conductivity materials Inconel939 and CM247LC which are suitable for high temperature environments. The dimensions of the channels are of similar magnitude compared to cooling channels found in gas turbines while the shape of the channels may vary. The thermal performance of AM channels is highly dependent on the material and Inconel939 and CM247LC show great potential for being used in industrial gas turbines. Therefore, it is necessary to experimentally examine and evaluate their properties and performance before being implemented.
+7
+
+
+Chapter 1
+Figure 1.2: Gas turbine SGT-800, manufactured in Finspa°ng, Sweden [6]
+1.2 Study Objective
+The aim of the project is to perform an experimental investigation of the thermal performance of AM channels for application in industrial gas turbines. A Steady State Heat Transfer (SSHT) test rig was used for investigating the heat transfer and pressure losses that occurs inside the AM channels due to surface roughness.
+A test and measuring method, a data collection method and a post-processing method will be developed and the Nusselt number (N u) and the Darcy friction factor (fd) are the variables used to evaluate the heat transfer and pressure losses for the channels. The overall aim is to gather data of the performance for the AM channels which can be used in the design phase of the cooling system for gas turbines.
+The test channels are mounted in a copper block which is insulated and heated up by electrical heaters. Copper is used because of its high conductivity which ensures a uniform temperature distribution around the test channel. The channel will then be subjected to an air flow at constant temperature and mass flow. Temperature and pressure measurements are made at the inlet and outlet of the test channel to calculate the Nusselt number and the Darcy friction factor.
+An experimental method was chosen to investigate the thermal performance. The effects of the increased surface roughness can be captured fully by performing an experimental investigation on the actual AM materials.
+8
+
+
+Chapter 1
+1.3 Project Plan and Time Plan
+The project took place at the Fluid Dynamic Laboratory at Siemens Energy in Finspa°ng, O ̈ stergo ̈ tland over the span of 8 months with start in August 2020. The project was divided into different phases with room for adjustments. A time plan is presented in Figure 1.3.
+• Review of literature and background study
+• Assemble and prepare test rig
+• Perform Risk Analysis
+• Validate test rig and test method by a bench marking process
+• Insert changes to test rig and test method if necessary
+• Run experiment for AM test channels of varying geometries
+• Develop post-processing method for measured data evaluation
+• Analyse and validate results
+• Present results
+Figure 1.3: Overall schedule of project
+1.4 Limitations
+The project is an experimental project where focus is on the measured data evaluation. Fluid dynamic simulations were performed in addition to the experimental measurements for the use of validation and comparison of the measured results. These simulations are therefore not included as results.
+9
+
+
+Theoretical Background
+2.1 Reynolds Number
+One of the most important dimensionless quantities in fluid mechanics is the Reynolds number (Re) which is used to characterize the flow and its properties. The flow can be assumed to be laminar below certain limits of the Reynolds number and turbulent at higher Reynolds number with a transition zone in between. The Reynolds number for flow through a channel can be described as Equation 2.1 where the hydraulic diameter of the channel is the characteristic length. The hydraulic diameter is explained in Section 2.3.
+ρU Dh  ̇mDh
+Re = = (2.1)
+μ μAc
+Dh = hydraulic diameter [m] Ac = cross sectional area of flow [m2] ρ = density of fluid [kg/m3] μ = dynamic viscosity of fluid [kg/ms] U = velocity of fluid [m/s]  ̇m = mass flow [kg/s]
+Laminar flow in channels can be assumed when the streamlines of the flow are straight and parallel to each other and with a parabolic velocity distribution that does not fluctuate randomly with time for fully developed laminar flow. Many correlations and variables in fluid dynamics assumes fully developed flow, including the Nusselt number and Darcy friction factor, where both the velocity and temperature profile of the flow is fully developed and constant along the flow for internal flow with heat transfer [7].
+Turbulent flow has non-ordered streamlines which can be described as chaotic and the fluid elements have fluctuating velocities while the velocity profile is flatter for channel flow. The entrance length for internal channel flow is much shorter for turbulent flow compared to its laminar counterpart. The entrance length can be described as the length in the channel before the flow becomes fully developed and where entrance effects are significant in magnitude and affects the flow. For channels with large L/D, ratio between length and diameter of channel where L denotes the total channel length and D the diameter, these entrance effects will become less significant. The transition between laminar and turbulent flow does not happen immediately. The flow instead alters between the two flow types for a certain range of the Reynolds number before fully taking the form of one of the flow types. This range in Reynolds number is called the transition zone.
+10
+
+
+Chapter 2
+2.2 Boundary layer
+Flow over a surface will have a boundary layer due to the interaction between the fluid elements and the solid surface. These boundary layers can be divided between a velocity boundary layer and a thermal boundary layer.
+The velocity of the flow at the solid surface can be assumed to be zero. At a certain distance away from the solid surface, the velocity is close to the free-stream velocity U∞ of the flow. This distance is known as the boundary layer thickness where the limit U = 0.99U∞ is used to separate the boundary layer region from the rest of the fluid flow. Due to friction forces and shear stress, where shear stress (τ = Ff /As) is described as the friction force (Ff ) per unit area (As), between the solid surface and the fluid layer closest to it, the fluid will attempt to drag along the solid. Since these forces are dependent on the surface of the solid, an increased surface roughness will affect the shear stress acting between the fluid and solid which in turn will affect the friction forces.
+For the thermal boundary layer, it is assumed that the flow closest to the surface has the same temperature as the solid surface, Ts. The temperature will then gradually change in the flow as the distance from the surface increases until it reaches the same temperature as the free-stream flow. The limit T − Ts = 0.99(T∞ − Ts) is used to separate the two regions where T∞ is the temperature of the free stream flow.
+2.3 Hydraulic Diameter
+The hydraulic diameter of a channel is defined in Equation 2.2. It is commonly used in channel flow work since it is a common variable used for both symmetric and non-symmetric channels.
+4Ac
+Dh = (2.2)
+P
+Dh = hydraulic diameter [m] Ac = cross sectional area of flow [m2] P = wetted perimeter of channel [m]
+As can be derived from Equation 2.2, the hydraulic diameter for a circular channel is equal to the physical channel diameter. For non-circular channels, such as rectangular channels, the hydraulic diameter is used as a suitable substitute variable compared to other dimensions of the channel. The wetted surface perimeter is defined as the perimeter of the cross-section of the channel and can be described as the perimeter where the flow is in contact with the channel wall. Figure 2.1 show which dimensions are measured for a circular and a rectangular channels in order to obtain the hydraulic diameter.
+Figure 2.1: Rectangular and circular channel
+11
+
+
+Chapter 2
+2.4 Pressure losses
+The pressure losses experienced in a channel flow are commonly presented using the non-dimensional variable Darcy friction factor,fd, which quantifies the pressure losses due to the friction between the fluid and the channel walls. The Darcy friction factor is presented in Equation 2.3.
+Dh Δp
+fd = 2 (2.3)
+L U2
+ρmean mean
+Dh = hydraulic diameter [m] L = length of channel [m] Δp = pressure loss over channel [P a] ρmean = average density of fluid [kg/m3] Umean = average velocity of fluid [m/s]
+2.4.1 Friction pressure loss
+The most significant pressure loss experienced in a channel flow is generally over the length of the channel, Δp, illustrated from point 2 to 3 in Figure 2.2 which show a similar setup compared to the experimental setup. This pressure loss will be affected of the increase of the surface roughness on the inside of the channel due to the increased friction between the fluid and the solid material. This pressure loss is also dependent on the length of the channel.
+Figure 2.2: Pressure loss segments in channel
+In the case of laminar flow, this pressure loss is mainly dependent on the Reynolds number for channels with low roughness. The theoretical value for fd for laminar flow is fd,laminar = 64/Re which is valid for fully developed laminar flow. The Colebrook-White equation, Equation 2.4, describes the friction factor for fully developed turbulent flow dependent on the Reynolds number and relative roughness, ε/Dh [8].
+1 ε 2.51
+√ = −2log10 + √ (2.4)
+fd 3.7Dh Re fd
+The parameter relative roughness, ε/Dh is used to characterize the roughness of the wall and originates from Nikuradse [2] work from 1933, where ε is the average sand-grain roughness diameter. The Darcy friction factor together with the Colebrook-White equation and the laminar line are commonly presented in a Moody diagram [9] to illustrate how the friction factor is dependent on the Reynolds number and relative roughness of the channel.
+2.4.2 Inlet and outlet pressure loss
+Pressure losses are also experienced at the inlet and outlet of the channel due to the sudden contraction and expansion in the geometry, illustrated as point 1 to 2 and point 3 to 4 in Figure 2.2. These
+12
+
+
+Chapter 2
+pressure losses can be calculated with Equation 2.5 and 2.6. Idelcˇik [10] described correlations due to geometry for calculations of the coefficients c1 and c2. For channels with 90° sharp edge at the inlet and outlet, the coefficients can be assumed to be c1 = 0.5 and c2 = 1 for turbulent flow and c1 = 0.5 and c2 = 2 for laminar flow. The difference of c2 between laminar and turbulent flow is dependent on the difference of the velocity profiles between the two flow types.
+2
+1  ̇m
+ploss,in = c1 (2.5)
+2 ρiAc2
+2
+1  ̇m
+ploss,out = c2 (2.6)
+2 ρoAc2
+ ̇m = mass flow [kg/s] Ac = cross section area [m2] ρ = density at inlet and outlet [kg/m3]
+As mentioned previously, the most significant pressure loss is generally over the length of the channel. However, depending on the L/D of the channel, the inlet and outlet pressure losses can become equally significant if they are in the same magnitude.
+Minor pressure losses due to geometry are also experienced in other locations such as valves and connections but those are not included in this setup since they do not affect the pressure measurements.
+2.4.3 Mach number
+The Darcy friction factor is valid for incompressible fully developed flow. The flow can be assumed to be incompressible if the highest Mach number is below 0.3 [11]. The Mach number is a dimensionless variable that describes the ratio between the flow velocity and the speed of sound, Equation 2.7.
+U
+M = (2.7)
+c
+M = Mach number [−] U = flow velocity [m/s] c = speed of sound [m/s]
+2.5 Heat Transfer
+The heat transfer can be evaluated with the dimensionless variable called Nusselt number (N u). It describes the ratio between convective and conductive heat transfer at a boundary, Equation 2.8, where the hydraulic diameter Dh is used as the characteristic length for internal channel flow.
+h hDh
+N u = = (2.8)
+k/Dh k
+h = convective heat transfer coefficient [W/m2K] k = conductivity coefficient [W/mK] Dh = hydraulic diameter [m]
+Convective heat transfer is described as the transfer of heat from one region to another caused by the movement of fluid. There are two different types of convective heat transfer, natural convection
+13
+
+
+Chapter 2
+and forced convection. Forced convection happens when the fluid is forced over a boundary by for example a fan or a pressure tank. Internal and external convection is also used as a description where internal convection occurs when the fluid is enclosed by a solid boundary, for example for internal fluid flow in a channel.
+Conductive heat transfer is described as the transfer of heat through a matter or material. The heat transfer occurs in the direction from high temperature to low temperature in the material. Conductive heat transfer can also be described as energy transfer from more energetic particles to less energetic particles due to the interaction between said particles.
+Both conductive and convective heat transfer need matter or material to be able to transfer energy. The difference is that for convective heat transfer, the matter needs to have a bulk motion while this is not the case for conductive heat transfer.
+For fully developed laminar flow in circular channels, the Nusselt number can be assumed to be constant and the surface roughness and friction factor effects are negligible. This constant value is N u = 3.66 when a constant surface temperature is applied as boundary condition and N u = 4.36 when a constant surface heat flux is applied as boundary condition[11].
+For the case when fluid flows over a solid edge, conduction can be assumed from the edge to the fluid. Convection will then transport the heat in the direction of the fluid flow. Since the conduction occurs at the border between the fluid and solid, the surface of the solid will affect this heat transfer. An increased surface roughness changes the surfaces significantly compared to a smooth surface which therefore means that it will affect the heat transfer.
+The convective heat transfer coefficient for flow in a channel is calculated by Equation 2.9.
+Q
+h = (2.9)
+AsTLM
+Q = heat input [W ] TLM = logarithmic mean temperature [K] As = surface area [m2]
+For internal flow with forced convection, the heat can be described with Equation 2.10 while the logarithmic mean temperature of the flow can be calculated with Equation 2.11
+Q =  ̇mCp(To − Ti) (2.10)
+To − Ti
+TLM = (2.11)
+ln((Ts − Ti)/(Ts − To))
+Ti = inlet temperature [K] To = outlet temperature [K] Ts = surface temperature [K] Cp = specific heat capacity [J/kgK]
+2.5.1 Correlations for smooth channels
+Previous experimental studies have presented correlations for smooth channels for the Nusselt number, two of them being the Gnielinski correlation [12] and Dittus-Boelter correlation [7]. They can be expressed with Equation 2.12 and 2.13 respectively.
+14
+
+
+Chapter 2
+(f /8)(Re − 1000)P r
+N uGnielinski = (2.12)
+1 + 12.7(f /8)1/2(P r2/3 − 1)
+N uDittus−Boelter = 0.023Re4/5P rn (2.13)
+Re = Reynolds number [-] P r = Prandtl number [-] f = friction factor [-] n = 0.3 for cooled flow and 0.4 for heated flow
+The Prandtl number describes the ratio between momentum diffusivity and thermal diffusivity and is only dependent on the fluid and the fluid state. The Prandtl number is typically around 0.71 for air. [11] The Gnielinski correlation is valid for fully developed turbulent flow for 3000 ≤ Re ≤ 5 × 106 and 0.5 ≤ P r ≤ 2000 while the Dittus-Boelter correlation is valid for Re ≥ 10000 and 0.6 ≤ P r ≤ 160.
+The augmentation of the heat transfer due to increased surface roughness is generally presented as N u/N u0 over the range of Reynolds number where N u0 represent the Nusselt number for a smooth channel. The Gnielinski correlation will be used as N u0 in this study.
+The Gnielinski correlation will also be used as a known correlation for an infinite long channel for the Nusselt number, N u∞ when evaluating the entrance effects in this study.
+2.5.2 Entrance effects
+It is important to evaluate the entrance effects when studying channel flow, especially for low L/D where entrance effects becomes increasingly significant. Mills [13] presented correlations for evaluating entrance effects for heat transfer in low L/D smooth channels. The entrance region heat transfer results were described with the dimensionless form N ux/N u∞, where N ux is the Nusselt number at point x in the channel and N u∞ is the Nusselt number for fully developed conditions where the entrance effects are no longer present. In this study, the Gnielinski correlation has been used for N u∞ since it is valid for fully developed turbulent flow. The augmentation that is dependent on the L/D of the channel can be applied to N u∞ to compensate for the entrance effects. This augmentation for a channel with 90°sharp edge inlet is described in Equation 2.14.
+N ux 8.7
+= 1 + (2.14)
+N u∞ L + 5
+D
+The entrance region can also be described as the entrance length, meaning the region of the flow before the velocity and temperature profile of the flow is fully developed.
+15
+
+
+Chapter 2
+2.6 Additive Manufacturing
+Additive manufacturing is also known as 3D printing and is the name of the building process where a layer by layer method is used. Several different techniques and methods have been developed within AM and the techniques continues to develop at a rapid pace. The test channels used in this study are manufactured by a method called Laser Powder Bed Fusion method (LPBF), also known as Selective Laser Melting (SLM), and is a reliable method for metal AM components. The material is in the form of powder and is added one layer at a time in very thin layers onto a building platform. After every layer has been applied, a laser beam melts and fuses the powder together at the desired areas, forming a solid material. The platform then lowers and a new layer of material is added. This is then repeated and the melted material connects between the layers which will finally form a solid component. The process can also be seen in Figure 2.3. There are many advantages of using additive manufacturing for example it is time efficient, cost efficient and less wasteful. One of the biggest advantages is the increased degree of freedom in designing by the removal of geometric constraints compared to using traditional manufacturing techniques. The channels tested in this study were manufactured with EOS M290 machines, and the metal material powder underwent full melting.
+Figure 2.3: SLM manufacturing process. [14]
+2.7 Uncertainty Analysis
+Uncertainty analysis, or error analysis, is the process of estimating how great an effect the uncertainties in the individual measurements have on the calculated results. It is standard to perform an uncertainty analysis in an experimental project and to present the result of the analysis together with the main results. One method for error estimation is described by Kline and McClintock [15] where the combined uncertainty (uc) of the input quantities (XN ) are calculated, Equation 2.16. It is first defined which input quantities (XN ) the variable of interest is depended on, Equation 2.15.
+Y = f (X1, X2, ..., XN ) (2.15)
+N
+X ∂f 2
+u2(Y ) = u2(Xi) (2.16)
+c ∂Xi
+i=1
+16
+
+
+Method and Equipment
+3.1 Experiment setup
+The experimental setup is illustrated in Figure 3.1 and consist of a pressurized air system, a heater system and a test rig compartment. Test channels are located in the test rig compartment and accesses the pressurized air flow by turning on an external manual ball valve. The mass flow is then measured before entering the test rig compartment by a Coriolis MASSFLOW600 meter. Two different mass flow meters are used, one is used for mass flows between 0-1.1 g/s and the other is used for mass flows between 0.5-2 g/s. There are regulating valves on both the inlet and the outlet of the test compartment which is used to regulate the mass flow and pressure ratio between the inlet and outlet. The heaters are turned on manually by setting the power output. Four PT100 thermocouples are attached to the experiment setup. One is attached at the inlet and one at the outlet for measuring the air temperature. The other two measures the temperature in the copper block at different radial distances from the test channel. There are 10 differential pressure measurements attached, five at the inlet and five at the outlet. They measure the static differential pressure relative to either the atmospheric pressure or the pressure at some other measurement point, for example between the inlet and outlet. The atmospheric pressure is measured by a Rosemount 3051C Absolute Pressure Meter. The measurements and their locations are listed in Table 3.1.
+Table 3.1: Experimental measurements and their location
+Measurement Unit Device Location
+Air temperature °C PT-100 Inlet/Outlet Copper temperature °C PT-100 Copper block Differential Pressure Pa PSI9116 Inlet/Outlet Absolute Pressure Pa Rosemount Atmosphere Mass flow g/s Coriolis Upstream of test compartment
+17
+
+
+Chapter 3
+Figure 3.1: Schematics of experimental setup showing the pressurized air system, heat power supply and test rig compartment
+3.1.1 Test rig compartment
+The main components of the experimental test rig compartment are the inlet, outlet, copper block and heaters as illustrated in Figure 3.2. Surrounding the copper block and heaters are also plastic insulation parts. The test channels are placed in the copper block with a thin layer of thermal paste between the channel and copper block. The thermal paste is also applied between the copper block and heaters. Thermal paste is used to ensure as much contact as possible between the components. The length of the test rig compartment refers to the length of the test channel adapted for the test rig, namely L=45 mm.
+The test channel is located in a copper block due to the high conductivity of the copper, which will yield a uniform temperature distribution in the copper block and around the outer wall of the test channel. A photo of the test rig compartment can also be seen in Figure 3.2.
+18
+
+
+Chapter 3
+(a) Model of test compartment L=45mm (b) Photo of test compartment L=45mm
+Figure 3.2: Test compartment for L=45mm
+3.1.2 Heater system
+The heaters are so called nozzle elements, Figure 3.3, and are located around the copper block. Two heaters with different widths are used in the setup. They are connected to an external power source where the power is manually set.
+Figure 3.3: Example of nozzle element heaters [16]
+3.1.3 Measurement devices
+A schematic of the measurement devices can be seen in Figure 3.4. The atmospheric pressure and mass flow measurement are connected to a DataScan7220 which is connected to the PC via USB. The differential pressure, PT-100 temperature and mass flow measurements are connected to the PC via Ethernet cable. Additional information about the devices are presented in Table 3.2 and in Appendix B.
+19
+
+
+Chapter 3
+Figure 3.4: Measurement instrumentation setup and connection to PC
+Table 3.2: Measurement devices used in experiment setup
+Device Type Unit Amount Uncertainty Range
+Coriolis 10 Mass flow g/s 1 0.53% 0-1.1 g/s Coriolis 4 Mass flow g/s 1 0.53% 0-2 g/s Rosemount 3051C Absolute Pressure Pa 1 46 Pa 9116 NetScanner Differential Pressure Pa 10 1% 0-100 PSI PT-100 Temperature °C 4 0.015K 0-250 °C
+20
+
+
+Chapter 3
+3.2 Test channels
+A total of 6 Nickel alloy AM test channels were tested. They consisted of two different materials, Inconel939 and CM247LC of length 45mm. All of the test channels in this study are classified as mini-channels when using the same classification as Kandlikar et al. [17], see Table 3.3. One of the test channels had a rectangular shape while the rest were circular i.e axisymmetric. Two aluminium channels were also tested as a part of the validation process of the test rig since they could be assumed to be smooth channels manufactured by traditional methods.
+Table 3.3: Channel classification where D is the minimum channel dimension [17]
+Type of channel Channel size Conventional channels > 3 mm Minichannels 3 mm ≥ D > 200 μm Microchannels 200 μm ≥ D > 10 μm Transistional microchannels 10 μm ≥ D > 1 μm Transistional nanochannels 1 μm ≥ D > 0.1 μm Nanochannels 0.1 μm ≥ D
+Microscopic measurements of the test channels were made since the design and printed dimensions may not be identical with the present state of additive manufacturing. The measured dimensions from the microscopic measurements were used in the calculations. Photos of the inlet of test channels with hydraulic design diameter 0.75mm and 1.5mm can be seen in Figure 3.5, for both AM material 247 and 939 and also one aluminium channel. The microscopic measurements can also be seen in Figure 3.5.
+Figure 3.5: Photo of test channels for L=45mm from microscopic measurements
+All test channels with design and measured dimensions are presented in Table 3.4 for the circular
+21
+
+
+Chapter 3
+channels while the rectangular channel is presented in Table 3.5. The variables a and b in Table 3.5 refers to the length of the sides of the rectangular channel shape.
+Table 3.4: Design and measured dimensions for circular test channels in [mm]
+Material Dh (design) Dh (measured) L/D (design) Length 247 0.75 0.7625 60 45 939 0.75 0.7672 60 45 Aluminium 1.5 1.67 30 45 247 1.5 1.583 30 45 939 1.5 1.517 30 45 247 3 3.132 15 45 Aluminium 3 2.928 15 45
+Table 3.5: Design and measured dimensions of rectangular test channel in material 247 in [mm]
+Dh (design) a (design) b (design) a (measured) b (measured) Dh (measured) 1.5 3 1 3.089 1.128 1.652
+3.2.1 Surface roughness
+It is expected that material 939 has a greater surface roughness compared to material 247. Surface roughness measurements were made of five of the test channels. Four of the resulting surface roughness profiles can be seen in Figure 3.6-3.9 where two surface profiles are from 247 channels and two are from 939 channels. Surface profiles shows the height of the peaks and valleys of a surface sample of a material. From the profile, several surface roughness variables can be extracted.
+By comparing the profiles in Figure 3.6 and 3.7, it is evident that the 939 channel has a higher magnitude in height, which supports the statement that the 939 material has a higher surface roughness than 247. The arithmetic mean roughness value, Ra, was extracted from roughness measurements. Ra is the average roughness between a roughness profile and the mean line and is often used to measure and categorize a surface roughness. This value is higher for the 939 channel than the 247 channel of similar hydraulic diameter, namely Ra = 0.0143mm and Ra = 0.0071mm respectively.
+22
+
+
+Chapter 3
+Figure 3.6: Surface roughness profile for test channel 247 Dh=1.5mm rectangular. Ra = 0.0071mm
+Figure 3.7: Surface roughness profile for test channel 939 Dh=1.5mm. Ra = 0.0142mm
+However, even if the surface roughness is expected to be greater for material 939 compared to 247, this is not true for all cases and the surface roughness differs between channels of the same material as well. By comparing the two test channels with Dh = 0.75mm in Figure 3.8 and 3.9, the 247 channel shows a higher surface roughness than the 939 channel. The Ra value is also higher for the 247 channel, namely Ra=0.0163mm for the 247 channel while it is Ra=0.0142mm for the 939 channel.
+23
+
+
+Chapter 3
+Figure 3.8: Surface roughness profile for test channel 247 Dh=0.75mm. Ra = 0.0163 mm
+Figure 3.9: Surface roughness profile for test channel 939 Dh=0.75mm. Ra = 0.0142mm
+More information about the surface roughness measurements and their results are described in Section 4.2.1.
+3.3 Test Procedure
+Two types of tests were performed, so called cold test and hot test, where the main difference is the use of heaters. Both hot tests and cold tests were performed and analysed for every test channel. The friction factor was evaluated for the cold test and the Nusselt number was evaluated for the hot test.
+The first step in both test procedures is to turn on the external air flow. The regulating valves are then used to achieve the desired mass flow and pressure ratio between the inlet and outlet. Subsequently, the heaters are turned on for the hot test and data collecting is started. The rig needs to heat up for approximately two hours before changing to the next operating point i.e a different
+24
+
+
+Chapter 3
+mass flow. Thereafter, the mass flow is changed approximately once every hour since this is the time needed for the system to stabilize before gathering data. The cold test is very similar to the hot test except that no heaters are used. Therefore, the experiment does not need to heat up and mass flows can be changed approximately every 5-10 minutes. The test procedures for the two tests methods are also presented in Table 3.6 and 3.7.
+It is desirable to avoid compressible effects since the friction factor is not valid for compressible flow. The Mach number is therefore evaluated for all operating points. If the Mach number reaches above 0.3, the test is redone and the inlet and outlet pressures are adjusted. By increasing the pressure at the outlet, the pressure in the entire system increases and a higher Mach number can be avoided by getting a pressure ratio between outlet and inlet that is much lower. The Mach number is evaluated at the outlet since this is where the flow velocity is expected to be the highest due to the sudden expansion from the test channel into the plastic outlet.
+Table 3.6: Test procedure for hot test
+Step Action
+1 Check that all tubes and cables are connected properly 2 Check that all measurements devices are ON 3 Turn on RigView program on PC 4 Create text file where data will be stored 5 Enable system in RigView and check Channel monitor 6 Turn ON heaters to desired effect 7 Wait until copper temperature reaches 50-70 °C 8 Turn ON external ball valve to pressurised air system 9 Start writing to text file in RigView 10 Regulate valves at inlet and outlet to reach desired pressure ratio and mass flow 11 Observe data and wait until Nusselt number stabilizes 12 Log data over 10 seconds in RigView and store to a second text file 13 Repeat step 10-12 for all operating points 14 Stop writing to text file 15 Turn OFF heaters 16 Wait until copper temperature goes below 50 °C 17 Turn OFF external ball valve to pressurised air system 18 Disable system in RigView
+25
+
+
+Chapter 3
+Table 3.7: Test procedure for cold test
+Step Action
+1 Check that all tubes and cables are connected properly 2 Check that all measurements devices are ON 3 Turn on RigView program on PC 4 Create text file where data will be stored 5 Enable system in RigView and check Channel monitor 6 Turn on RigView CLIENT program and monitor pressure channels 7 Turn ON external ball valve to pressurised air system 8 Start writing to text file in RigView 9 Regulate valves at inlet and outlet to reach desired pressure ratio and mass flow 10 Observe pressures in RigView CLIENT and wait until they stabilizes 11 Log data over 10 seconds in RigView and store to a second text file 12 Repeat step 9-11 for all operating points 13 Stop writing to text file 14 Turn OFF external ball valve to pressurised air system 15 Monitor pressures and wait until experiment depressurizes 16 Disable system in RigView
+3.4 Data Sampling
+The software used to read and collect data was the in-house program Siemens RigView v3.3, Gas Turbine Measurement and Evaluation system. The trend program RigViewClient was used to observe data in real time and to help determine when pressures were stabilized. Data was sampled in two different ways, once every second and an averaged data sample over 10 seconds for every operating point. For every test, two different text files with data was therefore created. The main data file used in the calculations was the one with the averaged data.
+3.5 Post-processing
+The methods used to obtain the variables fd and N u are summarized in Table 3.8. Both the experimental and theoretical methods are included since the experimental results are compared with previously known correlations. More details about the experimental methods are described in Sections 3.5.2 and 3.5.3.
+Table 3.8: Methods and equations used to obtain experimental and theoretically values
+Variable Flow region Experimental Theoretically fd Laminar Δp
+= 2 Dh
+fd L ρmeanU 2mean
+64/Re
+Turbulent White-Colebrook (Equation 2.4) N u Laminar N u method N u = 3.46
+Turbulent Gnielinski (Equation 2.12)
+3.5.1 Software
+The data was post-processed in Matlab R2019b and Python. The in-house turbine cooling program C3D v.3.1.23 for 3D and 1D simulations was also used. The Matlab and Python scripts created for the post-processing can be found in Appendix A.
+26
+
+
+Chapter 3
+3.5.2 Darcy Friction Factor
+The Darcy friction factor was evaluated for every test channel. The density and velocity of the flow were evaluated at the inlet and outlet with Equation 3.1 and 3.2.
+pMair
+ρ = (3.1)
+TR
+ ̇m
+U = (3.2)
+ρAc
+Mair = molar mass [kg/mol] R = universal gas constant [J/molK]
+The measured pressure in this set up is the static pressure of the flow. The Darcy friction factor is valid for the total pressure which is equal to the sum of the static pressure and the dynamic pressure, ptot = pstat + pdyn. The dynamic pressure at the inlet and outlet was therefore evaluated as well, Equation 3.3.
+1
+pdyn = ρU 2 (3.3)
+2
+Pressure losses that arise at the inlet and outlet of the test channel due to the sudden contraction and expansions in geometry are presented in Chapter 2. These pressure losses were evaluated according to Equation 2.5 and 2.6. The coefficients c1 and c2 were used according to Table 3.9, where c1 is the pressure loss coefficient for the inlet pressure loss and c2 is for the outlet.
+Table 3.9: Pressure loss coefficients for inlet and outlet
+c1 (Inlet) c2 (Outlet) Laminar flow 0.5 2 Turbulent flow 0.5 1
+Two different methods were used to decide the pressure drop over the channel, Δpdiff and Δp. The first method uses a direct differential pressure measurement between the inlet and outlet called pdiff . The second method measure the pressure at the inlet and outlet separately by two different absolute pressure measurements. The evaluation of Δp for the two different methods are presented in Equation 3.4 and 3.5.
+Δpdiff = pdiff − ploss,in − ploss,out + pdyn,in − pdyn,out (3.4)
+Δp = ptot,in − ploss,in − ploss,out − ptot,out (3.5)
+The Darcy friction factor is then evaluated according to Equation 2.3. The Matlab code for calculation of the Darcy friction factor can be seen in Appendix A.
+27
+
+
+Chapter 3
+3.5.3 Nusselt number
+It is assumed that the inner wall temperature of the AM channels is not constant along the length of the channel since the conductivity of the AM materials are significantly lower than for highly conductive materials such as copper. An iterative method was therefore developed to evaluate the Nusselt number in the AM channels.
+The temperature distribution in the test channel is assumed to be axisymmetric which is valid for the circular test objects. Discretization is made along the flow direction of the channel into 100 cross sections and local values of the air and wall temperatures are calculated. The outlet air temperature is obtained and compared with the measured value of the outlet temperature. This is repeated for different heat transfer coefficients (h) as input until the difference between the calculated and measured outlet temperature is less than 0.1K. The resulting average wall temperature and the iterated value of h is then used to calculate the Nusselt number. The Matlab and Python code for this method are located in Appendix B and a flow chart of the method is shown in Figure 3.12.
+After dividing the channel into 100 cross sections, local values of the heat flux and wall temperature are calculated together with the guessed heat transfer coefficient. To calculate the local values of the heat flux, a 1D thermal model through the channel wall is used, Equation 3.6. This heat flux is then used to calculate the local value of the wall temperature, Equation 3.7.
+Tgas − Tcu
+q = (3.6)
+1 ln(ro/ri) 1
+++
+2Pih 2πk 2Pohcontact
+Tw = Tgas − q (3.7)
+Pih
+q = heat flux per meter pipe [W/m] Tgas = local value of air temperature [K] Tcu = copper temperature [K] Tw = wall temperature [K] h = iterated heat transfer coefficient [W/m2K] Pi = inner perimeter of channel [m] Po = outer perimeter of channel [m] ri = inner radius of channel [m] ro = outer radius of channel [m] k = conductivity coefficient of material [W/mK]
+For non-axisymmetric objects, such as a rectangular channel, the in-house simulation program C3D was used with a similar method as for axisymmetric channels. A 3D model of the test channel was imported in C3D and boundary conditions were applied. The boundary conditions were the measured air inlet temperature, inlet and outlet pressure and copper temperature. By using different heat transfer coefficients (h) as input, the C3D model is iterated until mass flow and outlet air temperature are similar to the measured mass flow and outlet temperature. This method can of course be applied to symmetric channels as well.
+A cut through model of a circular test channel in C3D can be seen in Figure 3.10. The large temperature gradient in the material is due to the low conductivity of the AM materials.
+28
+
+
+Chapter 3
+Figure 3.10: Model in C3D that shows temperature profile for a circular test channel in AM material
+The assumption that the wall temperature is not constant along the channel was evaluated with these methods. The resulting temperatures for one operating point in the circular test channel 939 Dh=1.5mm can be seen in Figure 3.11 using the axisymmetric method in Matlab. The inner wall temperature is not constant along the channel and there is a great temperature difference between the inner and outer wall of the AM test channel.
+Figure 3.11: Temperatures over length in test channel 939 Dh=1.5mm L=45mm. TmetIn = inner wall temperature. TmetOut = outer wall temperature
+29
+
+
+Chapter 3
+Figure 3.12: Flow chart of outlet temperature calculation method for Nusselt number evaluation
+30
+
+
+Chapter 3
+3.6 Uncertainty Analysis
+An uncertainty analysis was performed using the method described in Chapter 2. The measured input variables for Darcy Friction factor was identified, Equation 3.8.
+fd = f (pdiff , pin, pout, patm, Tin, Tout,  ̇m, Dh) (3.8)
+The Darcy friction factor is evaluated using Equation 2.3, the uncertainty expression is therefore identified in Equation 3.9.
+s
+22 2 2
+∂fd ∂fd ∂fd ∂fd
+u(fd) = u(Δp) + u(Dh) + u(ρmean) + u(Umean) (3.9)
+∂Δp ∂Dh ∂ρmean ∂Umean
+The uncertainties for the input quantities were obtained from data sheets for the measurement devices and are presented in Table 3.10. Some relevant data sheets can be found in Appendix B.
+Similar method was used for the Nusselt number uncertainty analysis where the measured input variables are defined in Equation 3.10 and the uncertainty expression is presented in Equation 3.11.
+N u = f (Tin, Tout, Tcu, m ̇ , Dh, k247/939) (3.10)
+r2 2 2
+∂Nu ∂Nu ∂Nu
+u(N u) = u(h) + u(Dh) + u(kair) (3.11)
+∂h ∂Dh ∂kair
+Table 3.10: Uncertainties of measured input quantities
+u(Tin) u(Tout) u(Dh) u(  ̇m) u(pin) u(pout) u(pdiff ) u(patm) u(k247) u(k939) 0.015 K 0.015 K 10 μm 0.53% 1% 1% 1% 46 Pa 0.21 0.89
+31
+
+
+Results
+4.1 Bench Marking
+Bench marking is the process used to validate an experimental setup. Circular aluminium test channels were used for the bench marking tests in this study. They can be assumed to be smooth channels manufactured by traditional methods. Therefore, the results from these channels can be compared with known correlations for smooth channels.
+The results from two aluminium channels for the Nusselt number are presented in Figure 4.1a and 4.1b.
+(a) Results for N u for Aluminium Dh=2.98mm (b) Results for N u for aluminium Dh=1.67mm
+Figure 4.1: Bench marking results of Nusselt number for aluminium channels
+The Gnielinski correlation is used for comparison for the Nusselt number. There is a deviation between the measured results and the Gnielinski correlation for the two presented aluminium channels. Therefore, entrance effects were evaluated. As described in Chapter 2, an augmentation can be applied to the Gnielinski correlation to compensate for entrance effects for low L/D channels. This has been done for these channels, which gives results that agrees well with the measured data for the Nusselt number for both aluminium channels
+32
+
+
+Chapter 4
+Figure 4.2: Results for fd for aluminium Dh=1.67mm
+The results for the Darcy friction factor for the aluminium test channel with Dh=1.67mm are presented in Figure 4.2 together with the correlation for laminar flow (64/Re) and the Colebrook-White equation for smooth channels where ε = 0 for turbulent flow. The friction factor results follow both the laminar and turbulent correlations.
+These results indicates that the experimental set up is valid for Darcy friction factor and Nusselt number evaluations.
+33
+
+
+Chapter 4
+4.2 Darcy Friction Factor
+The results for the Darcy friction factor are presented in Figure 4.3 for five AM test channels, including the rectangular one, together with one aluminium test channel. The results are plotted together with the laminar line (64/Re) and the Colebrook-White equation for ε = 0. The relevant equations for the Darcy friction factor results are presented in Section 2.4.
+Figure 4.3: Results for Darcy friction factor for five AM channels
+For lower Reynolds number, the friction factors for the five AM channel have similar behavior as the laminar line although a deviation from the line is present. This can be due to wrong estimations of the hydraulic diameter. However, a deviation from the laminar line has been observed in similar experimental studies, such as the study of Huang et al. [3], and can be due to a high relative roughness of the channels. Much of the previous experimental work used to develop the friction factor correlations used channels with a relative roughness of up to 5%, meaning that for channels with higher surface roughness, these correlations might not be the best fit. For higher Reynolds, the friction factor for all AM channels converge towards constant values. This value increases with the relative roughness of the channel.
+34
+
+
+Chapter 4
+Figure 4.4: Friction factor results for 939 test channels and aluminium channel
+By looking closer at the results for the 939 channels, Figure 4.4, it is evident that the friction factor is higher for the channel with the smaller hydraulic diameter for the same material. The friction factor for Dh=0.75 mm channel converges towards a higher constant value for higher Reynolds than that of the Dh=1.5mm channel. Since the relative roughness describes the ratio between the sand grain diameter and channel diameter, this result is expected.
+35
+
+
+Chapter 4
+Figure 4.5: Friction factor results for Dh=0.75mm test channels and aluminium channel
+In Figure 4.5, the results for the two channels with diameter Dh=0.75mm is presented. It is expected that the 939 channel would yield a higher friction factor and an earlier transition from laminar to turbulent flow than the 247 channel for approximately the same diameter, however, this is not the case. This may be due to a number of reasons, for example, that the hydraulic diameter is estimated incorrectly. Microscopic measurements of the diameter is only made at the inlet and outlet of the channel while the dimensions on the inside of the channel are still unknown, which leaves room for error in the estimation of the hydraulic diameter.
+However, roughness measurements showed that the highest relative roughness belongs to the 247 channel which means that it would be accurate that it yields the highest friction factor. The results from the roughness measurements are discussed more in Section 4.2.1.
+4.2.1 Surface roughness parameters
+The estimation of the surface roughness can be described by the relative roughness variable, ε/Dh. Different values of ε/Dh are plotted with the Colebrook-White equation in Figure 4.6 together with the experimental results for the friction factor. The experimental results align with certain values for ε/Dh. From this, the sand grain roughness value ε can be estimated for the test channels, see Table 4.1.
+36
+
+
+Chapter 4
+Figure 4.6: Friction factor results together with ε/Dh values
+Table 4.1: Estimated ε values for test channels
+Material Dh [mm] ε/Dh [-] ε [mm] 939 0.7672 0.23 0.176456 939 1.517 0.12 0.18204 247 0.7625 0.35 0.266875 247 1.652 0.1 0.1652 247 3.132 0.02 0.06264
+The ε value should be approximately the same for channels with the same material. This is the case for the two channels with material 939 where the values are 0.176 and 0.182. However, ε differs significantly for the channels with material 247.
+Measurements of the surface roughness were made of the test channels as described in Chapter 3 where surface roughness profiles of the channels are presented. The resulting roughness parameters are presented in Table 4.2.
+• Ra, the roughness average, describes the arithmetic average of the absolute values of the profile heights.
+• Rp, maximum profile peak height, the distance between the highest point of the profile and the mean line.
+• Rt, Maximum height of the profile, the vertical distance between the highest and lowest point of the profile
+37
+
+
+Chapter 4
+• Rz, Average Maximum height of the profile, the average of the successive values of Rt calculated over evaluation length.
+Table 4.2: Measured roughness values for test channels
+Material Dh [mm] Ra [mm] Rz [mm] Rp [mm] Rt [mm] 939 0.7672 0.0142 0.0809 0.0381 0.0999 939 1.517 0.0143 0.0699 0.0333 0.0885 247 0.7625 0.0163 0.0660 0.0341 0.0816 247 1.652 0.0071 0.0403 0.0192 0.0538 247 3.132 0.0080 0.0412 0.0238 0.0664
+For the 939 channels, the roughness parameters are very similar to each other. This is also the case for the two 247 channels with hydraulic diameter of 1.652mm and 3.132mm. However, the 247 channel with diameter of 0.7625 stands out and have roughness values much higher than expected for the 247 material. This 247 channel has roughness values that are more similar to the 939 material.
+Table 4.3: Measured roughness values expressed as relative roughness
+Material Dh [mm] Ra/Dh [-] Rz/Dh [-] Rp/Dh [-] Rt/Dh [-] 939 0.7672 0.0185 0.1055 0.0497 0.1303 939 1.517 0.0094 0.0461 0.0219 0.0583 247 0.7625 0.0214 0.0866 0.0447 0.1070 247 1.652 0.0043 0.0244 0.0116 0.0325 247 3.132 0.0025 0.0131 0.0076 0.0212
+In Table 4.3, the measured roughness parameters are divided by the hydraulic diameters which creates relative roughness parameters. For the Ra/Dh parameter, the highest relative roughness is given by the 247 Dh=0.75mm channel. This was also the case when describing the relative roughness in the form ε/Dh and it is also this channel that yields the highest friction factor. This shows that the roughness can differ between channels of the same material as well.
+38
+
+
+Chapter 4
+4.2.2 Uncertainty for friction factor
+The uncertainty was evaluated according to the method described in Chapter 3 and the results for test channel 247 Dh=0.75mm are shown in Table 4.4. The error results are approximately the same for all test channels.
+Table 4.4: Uncertainty of Darcy friction factor for 247 D=0.75mm channel
+Max error Min error Mean error 5.91 % 5.59 % 5.70 %
+Each input quantity contributes to the combined uncertainty uc, it was therefore evaluated which input contributed the most for a low and a high Reynolds numbers. The results are shown in Figure 4.7 where the contributions between the different input quantities are divided into percentages.
+(a) Divided into variables for fd equation (b) Divided into directly measured variables
+Figure 4.7: Uncertainty contribution for Darcy friction factor
+In Figure 4.7a, the uncertainty contributions are divided between the different variables that are included in the Darcy friction factor equation, Equation 2.3. The velocity is the parameter that is contributing the most to the uncertainty. In Figure 4.7b, the uncertainty contributions are instead divided into the variables that are directly measured in the experiment. The hydraulic diameter contributes to the uncertainty for approximately 85% for both high and low Reynolds numbers.
+39
+
+
+Chapter 4
+4.3 Nusselt number
+The results for the Nusselt number are presented in Figure 4.8 and in the form N u/N u0 in Figure 4.9 for six AM test channels, including the rectangular one, together with one aluminium test channel.
+Figure 4.8: Results for the Nusselt number
+The Nusselt number results are presented between approximately 600 < Re < 50000. The Nusselt number should obtain a constant value for laminar flow or Reynolds below approximately Re=2000 [7]. However, this is not the case for the presented results. This can be due to an incorrect temperature measurement or assumption in the setup.
+40
+
+
+Chapter 4
+Figure 4.9: Results for Nusselt number in the form N u/N u0 where the Gnielinski correlation is used as N u0
+The increase of the Nusselt number approaches a constant value for higher Reynolds number although this is not the case for the channels with the smallest diameter, Dh=0.75mm, Figure 4.9. Higher Reynolds numbers could not be reached for these channels with the pressures available in this experiment setup. Therefore, it is not known if the N u/N u0 would obtain a constant value for higher Reynolds for these two channels. However, the behaviour for these two channels are very similar and no major difference between the two materials is observed.
+The highest increase in heat transfer is found in the 939 channel with Dh = 1.5mm, where the N u/N u0 value stabilizes around 2.6 for higher Reynolds. Higher increase of the Nusselt number is expected for 939 due to the higher surface roughness.
+Both a rectangular and circular channel with a hydraulic design diameter of 1.5mm in material 247 were tested for the Nusselt number. The difference between these two channels is relatively small for higher Reynolds numbers, indicating that the geometry is not significant for the heat transfer for this material. The N u/N u0 value is around 2.2 for higher Reynolds which is a significant increase compared to smooth channels.
+An increase of approximately 1.4 for the aluminium channel is also present and is most likely due to the cause of entrance effects. However, it should be noted that even if the aluminium channel is considered smooth compared to the AM channels, a relatively small surface roughness can still be present in this channel.
+41
+
+
+Chapter 4
+4.3.1 Uncertainty for Nusselt number
+The uncertainty of the Nusselt number results was evaluated with the methods described in Chapter 3. The results for the uncertainty for channel 939 Dh = 1.5mm are presented in Table 4.5. It is expected that the uncertainty are similar for all the channels.
+Table 4.5: Uncertainty of Nusselt number for 939 Dh=1.5mm channel
+Max error Min error Mean error 7.93 % 2.71 % 4.85 %
+Evaluation of which input contributed the most for a low and a high Reynolds numbers was made. The results are shown in Figure 4.10 where the contributions between the different input quantities are divided into percentages.
+Figure 4.10: Uncertainty contribution to the Nusselt number
+Once again, the hydraulic diameter is the variable contributing the most to the uncertainty.
+42
+
+
+Chapter 4
+4.4 Comparison with PennState
+Similar studies about the thermal performance of AM channels for high temperature applications within gas turbine and aerospace technology have been performed at Pennsylvania State University where the results were presented as the Nusselt number and Darcy friction factor. They also presented measured Ra and Ra/Dh values of their channels [5]. Since the PennState study focus on the performance of AM channels due to surface roughness it is of great interest to compare the results between this project and their study.
+The relative roughness using the Ra/Dh form is used to compare the channels between this study and the PennState study since values for Ra are given for both.
+Figure 4.11: 939 channels comparison with PennState channels of similar relative roughness Ra/Dh
+In Figure 4.11, the friction factor results for the two 939 channels are presented together with friction factor results from PennState with similar relative roughness, Ra/Dh. The 939 channel with hydraulic diameter of 0.75mm has a relative roughness of 0.018 and shows a similar trend and results of the friction factor as the AM channel with relative roughness of 0.017 from PennState. The same observation is made for the 939 channel with a relative roughness of 0.0094 that shows similar results as the channel with relative roughness of 0.010 from PennState. This is indicating that Ra/Dh could be a potential parameter of estimating the friction factor for AM channels since it yields similar results between two different studies.
+43
+
+
+Chapter 4
+Figure 4.12: 247 channel with Dh = 0.75mm comparison with PennState channels of similar relative roughness Ra/Dh
+The 247 channel with Dh = 0.75mm is presented together with results from PennState in Figure 4.12. The relative roughness of the 247 channels is 0.021 and the friction factor is located between the resulting friction factor of two of the channels from PennState that has a relative roughness of 0.017 and 0.025. A deviation from the laminar line is present for the PennState results also indicating that this deviation can be due to the high relative roughness of the channels.
+44
+
+
+Chapter 4
+Figure 4.13: Nusselt number results comparison
+Figure 4.14: N u/N u0 results comparison
+The Nusselt number results were compared between the two studies as well in Figure 4.13 and 4.14. Both studies show an increase of the heat transfer for the AM channels and that the heat transfer increases when the relative roughness Ra/Dh of the channels increased.
+45
+
+
+Discussion
+5.1 Conclusions
+This thesis has been a part of the work of examining new experimental methods for investigating the effects of an increased surface roughness in AM channels. Since AM has open up new possibilities within cooling design, it is necessary to perform experiments on the actual AM materials in order to gain more experience and knowledge about the materials and their properties.
+The project has experimentally investigated the thermal performance and pressure losses in AM channels of two different materials, Inconel939 and CM247LC, by using a Steady State Heat Transfer rig which was assembled and validated. One channel had a rectangular shape while the rest were circular with different diameters (D) while the length was the same for all, namely L=45 mm. The Nusselt number and Darcy friction factor were used to evaluate the heat transfer and pressure losses of the channels.
+The channels in this study had relatively low L/D ratios. Entrance effects were therefore most likely present and affecting the flow. This was evident during the validation process were the entrance effects were evaluated for the aluminium channels by applying a compensating factor to the Gnielinski correlation. Entrance effects should therefore be taken into consideration in future work with channels that have low L/D ratios.
+The friction factor increased for all AM channels and converged towards a constant value for higher Reynolds numbers. This value increased with a decreasing hydraulic diameter and increased surface roughness, meaning that the friction factor increased when the relative roughness of the channels increased.
+The Nusselt number did also increase with an increase of the relative roughness for all AM channels compared to smooth channels. The results also showed that the increase of the Nusselt number converged towards a constant value for higher Reynolds numbers.
+Even tough it was assumed that the roughness of the 939 material was greater than that of the 247 channel, this was not the case for the 247 channel with Dh=0.75mm which had a roughness greater than the 939 channels. This was also shown in friction factor results where this channel yielded the highest friction factor. This indicates that it can not directly be assumed that AM channels of the same material have similar surface roughness.
+The results were compared with results from PennState that have done similar studies on AM channels. The channels were compared by using the relative roughness in the form Ra/Dh. Channels with similar Ra/Dh resulted in similar friction factors for both studies, indicating that the Ra value
+46
+
+
+Chapter 5
+could be a potential parameter for estimating the friction factor of AM channels.
+The obtained results can be used in the continued work of using AM components in cooling systems for industrial gas turbines. By knowing the thermal performance properties, these components can be used correctly in the design phase of the cooling systems.
+5.2 Future work
+Since the AM industry is fast paced, it is necessary to continue the work of examining the thermal performance of AM channels. The main focus of this thesis was about circular channels of different diameters of two different materials, while future work could include channels with a more variation in geometry. Rectangular channels with different aspect ratios could potentially be in focus for future work.
+The length of the examined channels was 45mm, meaning that a test rig of this length was built and validated. A similar test rig of length 90mm is available at the Fluid Dynamic Lab at Siemens Energy. This rig needs to be assembled and validated and can then be used for similar investigation of thermal performance of test channels with length 90mm. Since the pressure drop increases for longer channels and the entrance effects becomes less significant, it is interesting to obtain results for longer channels.
+Microscopic measurements were made to estimate the hydraulic diameter of the channels, however, these measurements were only made at the inlet and outlet of the channels. The dimensions of the channel further in of the channel are therefore not known and the estimation of the diameter could contain errors. A more precise method to estimate the hydraulic diameter would therefore improve the accuracy of the measurements. These measurements could potentially be done with a CT scan.
+The surface roughness of the channels were measured in this project and the surface profile together with roughness values were obtained. For future work, it should be examined how these values can be used in the calculation instead of using the ε/Dh parameter.
+The Nusselt number evaluation for low Reynolds numbers, or laminar flow, did not yield a constant value which was expected according to known correlation. It is suspected that the temperature measurement located at the outlet does not measure the correct outlet air temperature for very low mass flows. This should therefore be examined, either by simulations or experimentally, and a method for evaluating the Nusselt number at low Reynolds should be developed.
+A new AM material has been produced, called Stal15. This material has a surface roughness somewhere between 247 and 939 and has proven potential being used in industrial gas turbines due to its high endurance regarding stresses in the material. The focus of a future project could therefore be about this new material and its behavior compared to the 247 and 939 materials.
+47
+
+
+Bibliography
+[1] Herbert I H Saravanamuttoo et al. Gas turbine theory. Harlow; New York; Toronto Pearson, 2017.
+[2] J Nikuradse and United States. National Advisory Committee For Aeronautics. Laws of flow in rough pipes. National Advisory Commitee For Aeronautics, 1950.
+[3] K. Huang et al. “Experimental investigation on friction factor in pipes with large roughness”. In: Experimental Thermal and Fluid Science 50 (Oct. 2013), pp. 147–153. DOI: 10 . 1016 / j .
+expthermflusci.2013.06.002. (Visited on 03/16/2021).
+[4] Baomin Dai, Minxia Li, and Yitai Ma. “Effect of surface roughness on liquid friction and transition characteristics in micro- and mini-channels”. In: Applied Thermal Engineering 67
+(June 2014), pp. 283–293. DOI: 10.1016/j.applthermaleng.2014.03.028.
+[5] Curtis K. Stimpson et al. “Roughness Effects on Flow and Heat Transfer for Additively Manufactured Channels”. In: Journal of Turbomachinery 138 (Jan. 2016). DOI: 10.1115/1.4032167. (Visited on 11/24/2020).
+[6] SGT-800 — Industrial Gas Turbine — Gas Turbines — Manufacturer — Siemens Energy Global.
+siemens-energy.com Global Website. URL: https://www.siemens-energy.com/global/ en / offerings / power - generation / gas - turbines / sgt - 800 . html (visited on
+03/18/2021).
+[7] Warren M Rohsenow, James P Hartnett, and Young I Cho. Handbook of heat transfer. McgrawHill, Cop, 1998.
+[8] Pijush K Kundu et al. Fluid mechanics. Elsevier/Ap, 2016.
+[9] Lewis F. Moody and N. J. Princeton. “Friction Factors for Pipe Flow”. In: Transactions of the A.S.M.E 66 (Nov. 1944), pp. 671–684.
+[10] Isaak Evseevicˇ Idelcˇik. Handbook of hydraulic resistance Coefficient of local resistance and of friction. Jerusalem Israel Program For Scientific Translations, 1966.
+[11] Satish G Kandlikar. Heat transfer and fluid flow in minichannels and microchannels. Elsevier, 2006.
+[12] Volker Gnielinski. “Neue Gleichungen f  ̈ur den Wa ̈rme- und den Stoffu ̈ bergang in turbulent durchstro ̈ mten Rohren und Kana ̈len”. In: Forschung im Ingenieurwesen 41 (Jan. 1975), pp. 8–16. DOI: 10.1007/bf02559682. (Visited on 03/16/2021).
+[13] A. F. Mills. “Experimental Investigation of Turbulent Heat Transfer in the Entrance Region of a Circular Conduit”. In: Journal of Mechanical Engineering Science 4 (Mar. 1962), pp. 63–77. DOI:
+10.1243/jmes_jour_1962_004_010_02. (Visited on 03/16/2021).
+[14] How does additive manufacturing work? www.eos.info. URL: https://www.eos.info/en/
+industrial-3d-printing/additive-manufacturing-how-it-works.
+[15] S.J. Kline and F.A. McClintock. “Describing Uncertainties in Single-Sample Experiments”. In: Mechanical Engineering 75 (Jan. 1953).
+48
+
+
+Chapter 5
+[16] Nozzle elements. www.backergroup.com. URL: https : / / www . backergroup . com / en 
+se/heating/heating-elements/nozzle-elements (visited on 03/18/2021).
+[17] Satish G. Kandlikar and William J. Grande. “Evolution of Microchannel Flow PassagesThermohydraulic Performance and Fabrication Technology”. In: Heat Transfer Engineering 24 (Jan. 2003), pp. 3–17. DOI: 10.1080/01457630304040.
+49
+
+
+Appendix A
+A.1 Matlab code
+1 % Steady State Heat Transfer
+2
+3 % Reading data from RigView . 4 NumberVariables = 30; 5 filename = ’ . txt ’ ; 6 coldtest = 0; 7 average = 1; 8 Al = 0 ; 9 rectangular = 0;
+10
+rig , main s c r i p t
+txt−f i l e % Number o f v a r i a b l e s i n system
+11 [A, sample time , P10 , P11 , P12 , P13 , P14 , P15 , P16 , P4 , P5 , P6 , P7 , P8 , P9 , . . . 12 PT1 , PT2 , PT3 , PT4 , P atm , T1 , T10 , T11 , T12 , T2 , T3 , T4 , T6 , T9 , . . . 13 W1, W2, mFlow ] = readDataSSHT ( filename , NumberVariables , average ) ;
+14
+15 %%%%%% Change D when changing t e s t channel ! %%%%%%%%%%
+16
+17 D = 0 . 7 8 6 2 / 1 0 0 0 ; % diameter o f channel [m] 18 r = D/ 2 ; % r a d i u s o f channel [m] 19 A c = p i * ( r ˆ 2 ) ; % c r o s s −s e c t i o n o f channel [mˆ 2 ]
+20 P = p i *D; % p e r i m e t e r P [m]
+21
+22 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+23
+24 L = 0 . 0 4 5 ; 25 A s = P * L ;
+26 Dh = 4 * A c/P ;
+27 mFlow = mFlow . / 1 0 0 0 ;
+28
+29 i f Al == 1 30 T cu = ( T1+T2+T3+T4 ) . / 4 ; 31 e l s e 32 T cu = ( PT3+PT4 ) . / 2 ; 33 end 34 T cu = T cu + 2 7 3 . 1 5 ; 35 PT1 = PT1 + 2 7 3 . 1 5 ; % i n l e t 36 PT2 = PT2 + 2 7 3 . 1 5 ; % o u t l e t
+37
+% length of channel % s u r f a c e a r e a [m] % hydraulic diameter % massflow [ kg/s ]
+% Thermocouple type−k
+% PT−100 measurements
+= 45 [mm]
+[m]
+measurements for copper
+for copper
+38 %%%%%%%%%%%%%% Reynolds number %%%%%%%%%%%%%%%% 39 mu0 = 1 . 7 1 6 e −5; % S u t h e r l a n d s law 40 T0 = 2 7 3 . 1 1 ; 41 S = 1 1 0 . 5 6 ;
+*
+42 mu = mu0 . * ( PT1 . / T0 ) . ˆ 1 . 5 ( T0+S ) . / ( PT1+S ) ;
+43
+44 Re exp = ( mFlow . * Dh) . / (mu. * A c ) ;
+45 [ u Re exp ] = U n c e r t a i n t y R e y n o l d s (Dh, A c , mFlow , PT1 , mu) ;
+50
+
+
+50
+55
+60
+65
+70
+75
+80
+85
+90
+95
+100
+Chapter A
+46 %%%%%%%%%%%%%%%%% N u s s e l t ( h t c ) %%%%%%%%%%%%%%%%%%%%%%%% 47 % Two d i f f e r e n t methods a r e used t o c a l c u l a t e N u s s e l t number . 48 % Method 1 : % N u s s e l t c a l c u l a t i o n when Twall = Tcu 49 C p = 1 0 0 5 ; Cv = 7 2 0 ; R = 8 3 1 4 / 2 8 . 9 7 ; k a i r = mu. * Cv * ( 1 . 3 2 + ( 1 . 7 7 * ( R. /Cv ) ) ) ;
+51
+52 Q = mFlow . * C p . * ( PT2−PT1 ) ; % Q = m* C p * ( T o−T i ) [W]
+53 TLM = ( PT2−PT1 ) . / l o g ( ( T cu−PT1 ) . / ( T cu−PT2 ) ) ; 54 h 1 = Q. / (TLM. * A s ) ; % h e a t t r a n s f e r c o e f f c i e n t [W/mˆ2/K]
+Nu exp = ( h 1 *Dh) . / k a i r ; % N u s s e l t number f o r Twall = Tcu
+56
+57 % Method 2 : I t e r a t i v e p r o c e s s t o c a l c u l a t e h , o u t l e t temperature and wall 58 % temperature . T e s t s d i f f e r e n t h u n t i l r i g h t o u t l e t temperature i s achieved . 59 h = 8 0 0 ; h h i s t = [ ] ; Nu = [ ] ; N u t e s t = [ ] ;
+61 i f c o l d t e s t == 0 62 time = numel ( sample time ) ; 63 f o r i = 1 : 1 : time 64 T copper = T cu ( i ) ; T i n l e t = PT1 ( i ) ; T o u t l e t = PT2 ( i ) ; mdot = mFlow ( i ) ; Tdiff = 1; 66 q = Q( i ) ; 67 while abs ( T d i f f ) > 0 . 1 0 68 [ Tgas , Tmet , q1 , Tvec , TmetIn , TmetOut , xvec ] = ge t O u t le t T e mp e r a tu r e ( T copper , T i n l e t , mdot , h , Dh, r e c t a n g u l a r ) ; 69 T d i f f = T o u t l e t − Tgas ; if Tdiff > 0 71 h = h * 1 . 0 0 1 ;
+72 e l s e 73 h = h * 0 . 9 9 9 ;
+74 end end 76 h h i s t ( i ) = h ; 77 Nu( i ) = (Dh* h ) / k a i r ( i ) ;
+78 Tmet = Tmet + 2 7 3 . 1 5 ; 79 TLM test ( i ) = ( T o u t l e t −T i n l e t ) . / l o g ( ( Tmet−T i n l e t ) . / ( Tmet−T o u t l e t ) ) ; h test = q./( TLM test ( i ) . * A s ) ;
+81 N u t e s t ( i ) = ( h t e s t *Dh) . / k a i r ( i ) ;
+82
+83 [ u Nu ( i ) , u h ( i ) , u q ( i ) , u TLM ( i ) , u Tw ( i ) ] = UncertaintyNu (Dh, h , PT1 ( i ) , PT2 ( i ) , T cu ( i ) , mu( i ) , L , q , Tmet , TLM test ( i ) ) ; 84 end end
+86
+87 % N u s s l e t t h e o r e t h i c a l ( D i t t u s −B o e l t e r and G n i e l i n s k i ) 88 Pr = 0 . 7 1 ; n = 0 . 4 ; % n = 0 . 4 f o r heated f l u i d . 0 . 3 f o r cooled f l u i d
+89
+Nu DB = 0 . 0 2 3 . * ( Re exp . ˆ 0 . 8 ) . * ( Pr . ˆ n ) ; % D i t t u s −B o e l t e r e q u a t i o n f o r Nu.
+91 f B l a s i u s = 0 . 3 1 6 4 . * ( Re exp . ˆ − 0 . 2 5 ) ; % B l a s i u s f r i c t i o n f a c t o r .
+92 Nu G = ( ( f B l a s i u s . / 8 ) . * ( Re exp −1000) . * Pr ) . / ( 1 + 1 2 . 7 * ( ( f B l a s i u s . / 8 ) . ˆ ( 1 / 2 ) ) . * ( ( Pr . ˆ ( 2 / 3 ) )
+−1) ) ; % G n i e l i n s k i equation f o r Nusslet number . Turbulent flow in tubes .
+93
+94 %%%%%%%%%% F r i c t i o n f a c t o r %%%%%%%%%%%%%%% i f c o l d t e s t == 1 96 P i n l e t = P16 ; 97 P i n l e t = P i n l e t + P atm ; 98 P o u t l e t = P14 ; 99 P o u t l e t = P o u t l e t + P atm ; P d i f f = P9 ;
+101
+102 [ DarcyF , D a r c y F d i f f , Mach , d e l t a p , p l o s s i n , p l o s s o u t , p t o t 1 , p t o t 2 , p t o t d i f f , r h o i , rho o , u DarcyF , u DarcyF diff , u umean ] = DarcyFrictionSSHT ( P i n l e t , P o u t l e t , PT1 , PT2 , mFlow , Dh, A c , L , P d i f f , Re exp , P16 , P14 , P atm ) ; 103 end
+Listing A.1: Matlab code for main script
+51
+
+
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+Chapter A
+1 f u n c t i o n [ DarcyF , D a r c y F d i f f , Mach , d e l t a p , p l o s s i n , p l o s s o u t , p t o t 1 , p t o t 2 , p tot diff , rho i , rho o ] = . . . 2 DarcyFrictionSSHT ( P i n l e t , P o u t l e t , PT1 , PT2 , mFlow , Dh, A c , L , P d i f f , Re exp , P16 , P14 , P atm ) 3 % Calculates the Darcy f r i c t i o n factor 4% % The input : 6 % P i n l e t : pressure at i n l e t [ Pa ] 7 % P o u t l e t : pressure at o u t l e t [ Pa ] 8 % P d i f f : pressure d i f f e r e n c e between i n l e t and o u t l e t [ Pa ] 9 % mFlow : mass flow through t h e channel [ kg/s ] % PT1 : i n l e t temperature of a i r [K] 11 % PT2 : o u t l e t temperature o f a i r [K] 12 % Dh : h y d r a u l i c diameter o f channel [m] 13 % A c : c r o s s s e c t i o n channel a r e a [m2] 14 % L : channel l e n g t h [m] % Re exp : Reynolds number [ −]
+16 %
+17 % The output : 18 % DarcyF : Darcy f r i c t i o n f a c t o r 19 % D a r c y F d i f f : Darcy f r i c t i o n f a c t o r c a l c u l a t e d with P d i f f % Mach : Mach number . 21 % d e l t a p : 22 % p l o s s i n / p l o s s o u t : P r e s s u r e l o s s a t i n l e t / o u t l e t 23 % p t o t 1 / p t o t 2 : T o t a l p r e s s u r e a t i n l e t / o u t l e t 24 % p t o t d i f f : T o t a l p r e s s u r e d i f f e r e n c e % rho i/rho o : Density at inlet/outlet
+26
+27
+28 M air = 0 . 0 2 8 9 6 9 ; % Molar mass [ kg/mol ] 29 R = 8 . 3 1 4 5 ; % gas c o n s t a n t [ Pa mˆ3/K/mol ]
+31 n = numel ( Re exp ) ; 32 % I n l e t ( c1 ) and o u t l e t ( c2 ) l o s s c o e f f c i e n t s f o r laminar and t u r b u l e n t . 33 f o r j = 1 : 1 : n 34 i f Re exp ( j ) >1000 %Turbulent . c1 = 0.5; 36 c2 = 1 ; 37 e l s e 38 c1 = 0 . 5 ; 39 c2 = 2 ; end
+41
+42 % Density a t i n l e t and o u t l e t 43 r h o i ( j ) = ( P i n l e t ( j ) . * M air ) . / ( PT1 ( j ) . * R ) ; %i n l e t
+44 rho o ( j ) = ( P o u t l e t ( j ) . * M air ) . / ( PT2 ( j ) . * R ) ; %o u t l e t
+46 % Flow v e l o c i t y 47 u i ( j ) = mFlow ( j ) . / ( A c * r h o i ( j ) ) ; % i n l e t
+48 u o ( j ) = mFlow ( j ) . / ( A c * rho o ( j ) ) ; % o u t l e t
+49
+% Total pressure at i n l e t and o u t l e t . p t o t = p dyn + p s t a t . 51 p t o t 1 ( j ) = P i n l e t ( j ) + 0 . 5 * r h o i ( j ) . * ( u i ( j ) . ˆ 2 ) ; % i n l e t
+52 p t o t 2 ( j ) = P o u t l e t ( j ) + 0 . 5 * rho o ( j ) . * ( u o ( j ) . ˆ 2 ) ; % o u t l e t
+53 p t o t d i f f ( j ) = p t o t 1 ( j )−p t o t 2 ( j ) ;
+54
+% Mean d e n s i t y and v e l o c i t y 56 rho mean ( j ) = ( r h o i ( j ) +rho o ( j ) ) . / 2 ; 57 u mean ( j ) = mFlow ( j ) . / rho mean ( j ) . / A c ;
+58
+59 % P r e s s u r e l o s s a t i n l e t and o u t l e t p l o s s i n ( j ) = c1 * 0 . 5 * mFlow ( j ) . ˆ 2 . / r h o i ( j ) . / ( A c ˆ 2 ) ;
+61 p l o s s o u t ( j ) = c2 * 0 . 5 * mFlow ( j ) . ˆ 2 . / rho o ( j ) . / ( A c ˆ 2 ) ;
+62
+52
+
+
+Chapter A
+63 %%%%%%%%% Darcy F r i c t i o n F a c t o r %%%%%%%%%%%%%%
+64
+65 d e l t a p ( j ) = p t o t 1 ( j )−c1 * 0 . 5 * mFlow ( j ) . ˆ 2 . / r h o i ( j ) . / A c .ˆ2 − p t o t 2 ( j )−c2 * 0 . 5 * mFlow ( j )
+.ˆ2./ rho o ( j ) ./A c ˆ2; 66 d e l t a p d i f f ( j ) = P d i f f ( j ) + 0 . 5 * r h o i ( j ) . * ( u i ( j ) . ˆ 2 ) − 0 . 5 * rho o ( j ) . * ( u o ( j ) . ˆ 2 ) −
+c1 * 0 . 5 * mFlow ( j ) . ˆ 2 . / r h o i ( j ) . / A c . ˆ 2 − c2 * 0 . 5 * mFlow ( j ) . ˆ 2 . / rho o ( j ) . / A c ˆ 2 ;
+67
+68 DarcyF ( j ) = d e l t a p ( j ) . / L * 2 . / rho mean ( j ) *Dh. / u mean ( j ) . ˆ 2 ;
+69 D a r c y F d i f f ( j ) = d e l t a p d i f f ( j ) . / L * 2 . / rho mean ( j ) *Dh. / u mean ( j ) . ˆ 2 ;
+70
+71
+72 % Mach number 73 u o Mach ( j ) = mFlow ( j ) . / ( A c * rho o ( j ) ) ;
+74 Mach ( j ) = u o Mach ( j ) . / 3 4 3 ; % Highest v e l o c i t y should be a t t h e o u t l e t
+75
+76
+77 end 78 end
+79
+Listing A.2: Matlab function for calculation of Darcy friction factor
+1 f u n c t i o n [ Tgas , Tmet , q , Tvec , TmetIn , TmetOut , xvec ] = getOutletTemperature ( T copper , PT1 , mdot , h , Dh, r e c t a n g u l a r ) 2 %Function f o r c a l c u l a t i n g o u t l e t temperature and wall temperature o f t e s t o b j e c t . For now , 3 %assuming c i r c u l a r channel . 4% 5 % The input : 6 % T copper : Temperature of copper block [K] 7 % PT1 : I n l e t temperature of a i r 8 % massflow : Massflow through the channel [ kg/s ] 9 % h : the guessed heat transfer coeffcient 10 % h c o n t a c t : h e a t t r a n s f e r c o e f f c i e n t o f thermal p a s t e 11 % Dh : h y d r a u l i c diameter o f t e s t channel
+12
+13
+14 L = 0 . 0 4 5 ; % l e n g t h o f channel 15 k 247 = 8 . 8 1 ; % thermal c o n d u c t i v i t y o f SLM 247 [W/m/K] 16 k 939 = 1 0 ; %. 6 1 ; % thermal c o n d u c t i v i t y o f SLM 939 [W/m/K] 17 Do = 10 e −3; % t e s t o b j e c t o u t e r diameter = 10 mm 18 Po = Do* p i ;
+19 P i = Dh* p i ;
+20 r i = Dh/ 2 ; % i n n e r r a d i u s 21 ro = Do/ 2 ; % o u t e r r a d i u s 22 Cp = 1 0 0 5 ; 23 h c o n t a c t = 1 e4 ; %8 . 5 / ( 0 . 0 8 * 1 0 ˆ − 3 ) ; % thermal p a s t e l a y e r , # term p a s t a med gap om 0 . 0 2
+mm MX−4: 8 . 5 W/m K
+24
+25
+26 xvec = l i n s p a c e ( 0 , L , 1 0 0 ) ; % d i v i d e t h e channel i n t o 100 c r o s s s e c t i o n s 27 Tgas = PT1 ; 28 dx = xvec ( 2 )−xvec ( 1 ) ; 29 Tvec = [ ] ; 30 TmetIn = [ ] ; 31 TmetOut = [ ] ;
+32
+33 i = 1 ; 34 f o r x = xvec %0 : dx : L 35 i f r e c t a n g u l a r == 1 36 q = ( Tgas − T copper ) / ( 1 / ( P r e c t * h ) + l o g ( ro/ r i ) / ( 2 * p i * k 247 ) + 1/( P r e c t * h c o n t a c t
+)); 37 b = Tgas − ( q /( P r e c t * h ) ) ;
+38 Tgas = Tgas − ( ( q * dx ) /(mdot *Cp) ) ;
+39 a = −q / ( 2 * p i * k 2 4 7 ) ;
+53
+
+
+Chapter A
+40 e l s e 41 q = ( Tgas − T copper ) / ( 1 / ( P i * h ) + l o g ( ro/ r i ) / ( 2 * p i * k 247 ) + 1/( Po * h c o n t a c t ) ) ; %
+h e a t f l u x per meter pipe [W/m] 42 a = −q / ( 2 * p i * k 2 4 7 ) ;
+43 b = Tgas − q /( P i * h ) ; % i n n e r metal temperature
+44 Tgas = Tgas − ( ( q * dx ) /(mdot *Cp) ) ; % a i r temp
+45 end
+46
+47 Tvec ( i ) = Tgas ; 48 TmetIn ( i ) = b − 2 7 3 . 1 5 ; 49 TmetOut ( i ) = ( a * l o g (Do/Dh) ) +b − 2 7 3 . 1 5 ;
+50 i = i + 1 ; 51 end
+52
+53 Tgas = Tvec ( i −1) ; 54 Tmet = mean ( TmetIn ) ;
+55
+56 end
+57
+Listing A.3: Matlab function for calculation of outlet temperature for Nusselt calculations
+54
+
+
+Chapter A
+A.2 Python code
+1 import math , sys 2 import matplotlib . pyplot as plt 3 import numpy as np
+4
+5 D = 1 . 5 8 e−3 # h y d r a u l i c diameter 6 A = 1 . 9 6 e−6 # c r o s s s e c t i o n flow a r e a 7 P i = 4 . 9 6 3 e−3 # i n n e r p e r i m e t e r 8 h c o n t a c t = 1 e4 # 8 . 5 / 0 . 0 2 e−3 #1 e5 # term p a s t a med gap om 0 . 0 2 mm 9 L = 0.045 # meter length 10 O u t p u t F i l e =” . t x t ”
+11
+12 s o l v e C a s e s = [ 13 {” Tin ” : 2 1 . 6 3 3 , ” Tout ” : 3 7 . 5 8 9 , :6.17852597} , 14 {” Tin ” : 2 1 . 6 3 4 , ” Tout ” : 3 7 . 5 8 9 , :6.18117351} , 15 {” Tin ” : 2 1 . 5 6 , ” Tout ” : 3 8 . 5 7 2 , :6.25618403} , 16 {” Tin ” : 2 1 . 5 6 , ” Tout ” : 3 8 . 5 7 2 , :6.25744599} ,
+17 ] 18
+19
+20 Cp = 1 0 0 5 . # J /kgK 21 p l o t = 0 22 def mu( T ) : # S u t h e r l a n d ’ s law
+23 24 25 26
+27 #
+28 d e f
+29 30
+31 #
+32 d e f
+33 34 35
+36 #
+37 d e f
+38
+39 #
+40
+41 d e f
+42
+43
+44 d e f
+45 46
+47
+48 d e f
+49 50 51 52 53 54 55
+mu0 = 1 . 7 1 6 e−5 T0 =273.11 S=110.56 r e t u r n mu0* math . pow( T/T0 ,
+rho (T, p) : # T in Kelvin R=8314/28.97 return p/(R*T)
+k(T) : # T in Kelvin Cv = 720 R=8314/28.97
+”Tcu” : 6 6 . 0 7 ,
+”Tcu” : 6 6 . 0 7 ,
+”Tcu” : 6 8 . 4 1 ,
+”Tcu” : 6 8 . 4 1 ,
+”mdot” : 1 . 1 7 9 4 9 ,
+”mdot” : 1 . 1 7 9 9 0 ,
+”mdot” : 1 . 1 4 1 3 2 ,
+”mdot” : 1 . 1 4 0 9 9 ,
+1 . 5 ) ( T0+S ) /(T+S )
+*
+”Pin
+”Pin
+”Pin
+”Pin
+MX−4: 8 . 5 W/m K
+”:7.24439572 ,
+”:7.24625787 ,
+”:7.25022728 ,
+”:7.25179908 ,
+”Pout”
+”Pout”
+”Pout”
+”Pout”
+r e t u r n mu( T ) *Cv * ( 1 . 3 2 + 1 . 7 7 * R/Cv )
+g e t h e a t f l u x ( Ti , To , r i , ro , hi , ho , Pi , Po , kmet ) : r e t u r n ( Ti − To ) / ( 1 / ( P i * h i ) + math . l o g ( ro/ r i ) /( math . p i * 2 * kmet ) + 1/( Po * ho ) ) # W/m
+heat flux per meter pipe
+entranchEnhance ( xrD ) : # t h e accumulated i n c r e a s e o f Nu up t i l x/D return 1+8.7/( xrD+5)
+g n i e l i n s k i ( Re , Pr ) : f = 0.3164/ np . power ( Re , 0 . 2 5 ) r e t u r n f / 8 * ( Re−1000) * Pr / ( 1 + 1 2 . 7 * np . s q r t ( f /8) * ( np . power ( Pr , 2 / 3 . ) −1) )
+getOutletTemperature ( Tcopper , h c o n t a c t , T i n l e t , mdot , h ) : # f o r now , assuming c i r c u l a r cross sect test objects kmet = 8 . 8 1 # 150 # W/mK Thermal c o n d u c t i v i t y f o r t e s t o b j e c t Do = 10 e−3 # SSHT r i g t e s t o b j e c t o u t e r diameter Po = math . p i *Do
+xvec = np . l i n s p a c e ( 0 , L , 1 0 0 ) Tgas = Tinlet # dx = xvec [1] − xvec [ 0 ]
+55
+
+
+60
+65
+70
+75
+80
+85
+90
+95
+100
+105
+110
+115
+Chapter A
+56 Tvec = [ ] 57 TmetIn = [ ] 58 TmetOut = [ ]
+59
+for x in xvec : 61 q = g e t h e a t f l u x ( Tgas , Tcopper , D/2 , Do/2 , h , h c o n t a c t , Pi , Po , kmet ) 62 a = −q / ( 2 * math . p i * kmet )
+63 b = Tgas − q /( P i * h ) # i n n e r metal temperature
+64 # q = ( Tgas − Tcopper ) Dinner * np . p i * h
+*
+Tgas −= q * dx /(mdot *Cp)
+66 Tvec . append ( Tgas − 2 7 3 . 1 5 ) 67 TmetIn . append ( b − 2 7 3 . 1 5 ) 68 TmetOut . append ( a * np . l o g (Do/D) + b −273.15)
+69 #
+71 i f p l o t : 72 p l t . p l o t ( xvec , Tvec ) 73 p l t . p l o t ( xvec , TmetIn ) 74 p l t . p l o t ( xvec , TmetOut ) p l t . p l o t ( xvec , np . ones ( l e n ( xvec ) ) * ( Tcopper −273.15) , ’− ’ )
+76 p l t . x l a b e l ( ” Length [m] ” ) 77 p l t . y l a b e l ( ”Gas temperature [C] ” ) 78 p l t . show ( )
+79 #
+r e t u r n Tgas , np . average ( TmetIn ) +2 73 .1 5 # o u t l e t temperature
+81 #
+82
+83 h = 1600 84 ReWrite = [ ] NuWrite =[] 86 GnWrite = [ ]
+87
+88 f o r c a s e i n f o i n s o l v e C a s e s : 89 T i n l e t = c a s e i n f o [ ” Tin ” ] + 2 7 3 . 1 5 Toutlet = caseinfo [ ”Tout” ]+273.15 91 Tcopper = c a s e i n f o [ ”Tcu” ] + 2 7 3 . 1 5 92 mdot = c a s e i n f o [ ”mdot” ]/1000 93 P i n l e t = c a s e i n f o [ ” Pin ” ] * 1 e5
+94 P o u t l e t = c a s e i n f o [ ” Pout ” ] * 1 e5
+96 p r i n t ( ”Mass flow : { 0 : . 3 f } g/s ” . format ( mdot ) ) 97 p r i n t ( ” I n l e t temperature : { 0 : . 1 f } C” . format ( T i n l e t ) ) 98 p r i n t ( ” O u t l e t temperature : { 0 : . 1 f } C” . format ( T o u t l e t ) ) 99 p r i n t ( ”Copper temperature : { 0 : . 1 f } C” . format ( Tcopper ) ) print (” Inlet pressure : {0:.4 f} bar” . format ( Pinlet ) ) 101 p r i n t ( ” O u t l e t p r e s s u r e : { 0 : . 4 f } bar ” . format ( P o u t l e t ) )
+102
+103 T d i f f = 1 104 p r i n t ( ” I t e r a t i n g t o f i n d h t c . . . ” ) while np . abs ( T d i f f ) > . 1 0 : 106 Toute st , Tmet = g et O u t l et T e m pe r a t ur e ( Tcopper , h c o n t a c t , T i n l e t , mdot , h ) 107 T d i f f = T o u t l e t − T o u t e s t 108 i f T d i f f > 0 : 109 h *= 1 . 0 0 1
+else : 111 h *= 0 . 9 9 9
+112 p l o t = 0 113 g e t O u t l e t T e m p e r a t u r e ( Tcopper , h c o n t a c t , T i n l e t , mdot , h ) 114 Re = mdot D / (mu( T i n l e t ) A )
+**
+p r i n t ( ”Found HTC: {} W/m2K” . format ( h ) ) 116 p r i n t ( ”HTC (LMTD) : {}” . format ( mdot *Cp * ( T o u t l e t −T i n l e t ) * np . l o g ( ( Tmet−T i n l e t ) /( Tmet−
+Toutlet ) ) /(L* Pi * ( Toutlet−T i n l e t ) ) ) )
+117 p r i n t ( ” N u s s e l t number : {}” . format (D h/k ( T i n l e t ) ) )
+*
+118 p r i n t ( ”Re : {}” . format ( Re ) )
+56
+
+
+Chapter A
+119 p r i n t ( ” N u s s e l t G n e i l i n s k i : {}” . format ( g n i e l i n s k i ( Re , 0 . 7 1 ) ) ) 120 ReWrite . append ( Re ) 121 NuWrite . append (D h/k ( T i n l e t ) )
+*
+122 GnWrite . append ( g n i e l i n s k i ( Re , 0 . 7 1 ) )
+123
+124 # ## F r i c t i o n f a c t o r
+125
+126 i f Re <2500: 127 i n l o s s = 0 . 5 128 o u t l o s s = 2 129 e l s e : 130 i n l o s s = 0 . 5 131 o u t l o s s = 1
+132
+133 U b u l k i n l e t = mdot/( rho ( T i n l e t , P i n l e t ) A)
+*
+134 U b u l k o u t l e t = mdot/( rho ( T o u t l e t , P o u t l e t ) A)
+*
+135
+136 ve lh ead In = U b u l k i n l e t * * 2 * rho ( T i n l e t , P i n l e t ) /2
+137 velheadOut = U b u l k o u t l e t * * 2 * rho ( T o u t l e t , P o u t l e t ) /2
+138 dp = P i n l e t −P o u t l e t − o u t l o s s * velheadOut − i n l o s s * ve lh ead In
+139 p r i n t ( ” Darcy f r i c t i o n f a c t o r : {}” . format ( dp *D/L / ( 0 . 5 * ( velheadIn+velheadOut ) ) ) )
+140 #
+141 with open ( OutputFile , ”w” ) as o u t f i l e : 142 o u t f i l e . w r i t e ( ” Reynolds \n” ) 143 f o r Re i n ReWrite : 144 o u t f i l e . w r i t e ( ” {}\n” . format ( Re ) ) 145 o u t f i l e . w r i t e ( ” N u s s e l t \n” ) 146 f o r dpn i n NuWrite : 147 o u t f i l e . w r i t e ( ” {}\n” . format ( dpn ) ) 148 o u t f i l e . w r i t e ( ” G n e i l i n s k i \n” ) 149 f o r dp1n i n GnWrite : 150 o u t f i l e . w r i t e ( ” {}\n” . format ( dp1n ) )
+151 152
+Listing A.4: Python code for heat flux in pipe calculations
+1 import xml . e t r e e . ElementTree as ET 2 import subprocess , sys
+3
+4 # S t a r t C3D , then s t a r t t a s k manager . In l i s t o f running programs , r i g h t −c l i c k i n C3D −> P r o p e r t i e s . There you ’ l l find the path below 5 C3DExe = 6 ’’’ 7 C r e a t e a C3D model o f t h e t e s t o b j e c t 8 Add an e x t r a ”dummy” branch a t t h e o u t l e t ( e l s e t h e s c r i p t cannot determine outflow temperature in the model . ) 9 Make s u re t h i s branch do not cause p r e s s u r e drop . 10 Make a l l branches t h e same : 11 Heat t r a n s f e r : Custom model , with a r e a s o n a b l e value on C ( here i d e n t i c a l t o n u s s e l t number ) . n and s v a r i a b l e s s e t to zero 12 Fanning f r i c t i o n f a c t o r − s e t a r e a s o n a b l e i n i t i a l value . 13 LMTD temperature mapping i s most a c c u r a t e − t h i s c h o i c e a f f e c t s r e p o r t e d n u s s e l t number . 14 Mesh : 15 Couple flow network t o mesh 16 S e t o u t e r diameter temperature and HTC. HTC w i l l not be a d j u s t e d by t h e s c r i p t below 17 The copper temperature w i l l be a p p l i e d t o a l l e x t e r n a l mesh f a c e s t h a t have a T and HTC defined . 18 This o b v i o u s l y i n c l u d e s mapped f a c e s − but flow network w i l l o v e r w r i t e 19 When s e t t i n g t h e c a s e up , run t h e Conjugate s o l v e r t o convergence , then save t h e model i n that state . 20 This i s t h e s t a t e C3D w i l l run t h e c a s e i n b a t c h mode l a t e r . 21 ’ ’ ’
+22
+57
+
+
+30
+40
+50
+60
+70
+80
+Chapter A
+23 s o l v e C a s e s = [ 24 {” d i r ” : ” ” , ”name” : ” 1 5mm” , ” innode ” : 7 , ” outnode ” : 8 , ” upstreamnode ” : 1 , ” Tin ” : 2 2 . 1 6 8 2 5 , Tout ” : 6 0 . 8 2 4 9 1 7 , ”Tcu” : 8 4 . 6 6 0 3 3 3 , ”mdot” : 0 . 1 5 0 7 9 , ” Pin ” : 6 . 8 7 8 7 5 1 6 3 , ” Pout ”
+”
+25
+:6.85601627} , {” d i r ” : ”” , ”name” : ”1 5mm” , ” innode ” : 7 , ” outnode ” : 8 , ” upstreamnode ” : 1 , ” Tin ” : 2 2 . 0 7 8 4 1 7 , Tout ” : 6 0 . 4 1 8 7 5 , ”Tcu” : 8 4 . 1 3 9 1 6 7 , ”mdot” : 0 . 2 0 5 0 2 , ” Pin ” : 6 . 6 3 3 0 5 4 7 2 , ” Pout ”
+”
+26 ]
+:6.58880632} ,
+27
+28 O u t p u t F i l e =” . t x t ” 29 t o l m d o t = 0 . 0 0 1 # g/s tol temp = 0.02 # Celcius 31 DarcyWrite = [ ] 32 NuWrite = [ ]
+33
+34 f o r c a s e i n f o i n s o l v e C a s e s : 35 d i r = c a s e i n f o [ ” d i r ” ] 36 name = c a s e i n f o [ ”name” ] 37 innode = c a s e i n f o [ ” innode ” ] 38 outnode = c a s e i n f o [ ” outnode ” ] 39 T i n l e t = c a s e i n f o [ ” Tin ” ] Toutlet = caseinfo [ ”Tout” ] 41 Tcopper = c a s e i n f o [ ”Tcu” ] 42 mdot = c a s e i n f o [ ”mdot” ] 43 P i n l e t = c a s e i n f o [ ” Pin ” ] 44 P o u t l e t = c a s e i n f o [ ” Pout ” ] 45 upstreamoutletnode = c a s e i n f o [ ” upstreamnode ” ]
+46 47 48 49
+51 52 53 54
+p r i n t ( ” P r o c e s s i n g c a s e {}/{}. s a s ” . format ( d ir , name ) ) p r i n t ( ”Mass flow : { 0 : . 3 f } g/s ” . format ( mdot ) ) p r i n t ( ” I n l e t temperature : { 0 : . 1 f } C” . format ( T i n l e t ) ) p r i n t ( ” O u t l e t temperature : { 0 : . 1 f } C” . format ( T o u t l e t ) ) p r i n t ( ”Copper temperature : { 0 : . 1 f } C” . format ( Tcopper ) ) print (” Inlet pressure : {0:.4 f} bar” . format ( Pinlet ) ) print (”Outlet pressure : {0:.4 f} bar” . format ( Poutlet ) ) modelFile = d i r +”/”+name+” . s a s ”
+55
+56 # S e t up flow network a c c o r d i n g t o measurements 57 FlowNetXML = ET . p a r s e ( d i r +”/”+name+” ModelData/FlowNetwork . xml” ) 58 FlowNetXMLroot = FlowNetXML . g e t r o o t ( )
+59
+for entry1 in FlowNetXMLroot : 61 i f e n t r y 1 . t a g == ”XMLNodeValues” : 62 f o r guinode i n e n t r y 1 : 63 f o r s t u f f i n guinode : 64 i f s t u f f . t a g == ”FlowNode” : 65 s e t p r o p s = F a l s e 66 f o r n o d e s t u f f i n s t u f f : 67 i f n o d e s t u f f . t a g == ”NodeNr” : 68 i f i n t ( n o d e s t u f f . t e x t ) == innode : 69 s e t p r o p s =True setpressure = Pinlet *1 e5
+71 s e t t e m p e r a t u r e = T i n l e t + 2 7 3 . 1 5 72 e l i f i n t ( n o d e s t u f f . t e x t ) == outnode : 73 s e t p r o p s =True 74 s e t p r e s s u r e = P o u t l e t * 1 e5
+75 s e t t e m p e r a t u r e = T o u t l e t + 2 7 3 . 1 5 76 i f n o d e s t u f f . t a g == ” P r e s s u r e ” and s e t p r o p s : 77 n o d e s t u f f . t e x t = s t r ( s e t p r e s s u r e ) 78 i f n o d e s t u f f . t a g == ”Temp” and s e t p r o p s : 79 n o d e s t u f f . t e x t = s t r ( s e t t e m p e r a t u r e ) #
+81 # Check v a l u e s on Nu and f r i c t i o n f a c t o r . . . 82 i f e n t r y 1 . t a g == ”XMLBranchValues” :
+58
+
+
+85
+90
+95
+100
+105
+110
+115
+120
+125
+130
+135
+140
+145
+Chapter A
+83 f o r guibranch i n e n t r y 1 : 84 f o r s t u f f i n guibranch : i f s t u f f . t a g == ” FlowBranch ” : 86 f o r b r a n c h s t u f f i n s t u f f : 87 i f b r a n c h s t u f f . t a g == ” f r i c t i o n ” : 88 Fanning = f l o a t ( b r a n c h s t u f f . t e x t ) 89 i f b r a n c h s t u f f . t a g == ” C o r r e l a t i o n ” : for corrstuff in branchstuff : 91 i f c o r r s t u f f . t a g == ”C” : 92 N u s s e l t = f l o a t ( c o r r s t u f f . t e x t )
+93 #
+94 # Write t h e updated XML f i l e FlowNetXML . w r i t e ( d i r +”/”+name+” ModelData/FlowNetwork . xml” )
+96
+97 # S e t copper temperature . Do t h i s on a l l f a c e s t h a t have a r e c o v e r y temperature s e t 98 # Flow network w i l l o v e r w r i t e t h i s f o r coupled f a c e s 99 # A d i a b a t i c f a c e s w i l l not be s e t ( They do not have a ” Tr ” t a g ) tinfXML = ET . parse ( d i r +”/”+name+” T r a n s i e n t / t i n f . xml” ) 101 tinfXMLroot = tinfXML . g e t r o o t ( )
+102
+103 f o r e n t r y 1 i n tinfXMLroot : 104 i f e n t r y 1 . t a g == ”MeshData” : for facedata in entry1 : 106 f o r prop i n f a c e d a t a : 107 i f prop . t a g == ” Tr ” : 108 prop . t e x t = s t r ( Tcopper + 2 7 3 . 1 5 ) 109 i f e n t r y 1 . t a g == ”NetworkNodeData” : for nodeinfo in entry1 : 111 s e t t a n d p = F a l s e 112 f o r s t u f f i n nodeinfo : 113 i f s t u f f . t a g == ”N” : 114 i f i n t ( s t u f f . t e x t ) == innode : settandp = True 116 t t o s e t = T i n l e t 117 p t o s e t = P i n l e t 118 i f i n t ( s t u f f . t e x t ) == outnode : 119 s e t t a n d p = True ttoset = Toutlet 121 p t o s e t = P o u t l e t 122 i f s t u f f . t a g == ”T” and s e t t a n d p : 123 s t u f f . t e x t = s t r ( t t o s e t ) 124 i f s t u f f . t a g == ”P” and s e t t a n d p : stuff . text = str ( ptoset ) 126 tinfXML . w r i t e ( d i r +”/”+name+” T r a n s i e n t / t i n f . xml” )
+127
+128 notmatched = True 129 while notmatched : p r i n t ( ”Running C3D . . . ” )
+131
+132 s u b p r o c e s s . c a l l ( [ C3DExe , modelFile , ’−s o l v e ’ , ’−save ’ ] , s t d i n =None , s t d o u t =None , s t d e r r =None , s h e l l = F a l s e ) 133 tinfXML = ET . p a r s e ( d i r +”/”+name+” T r a n s i e n t / t i n f . xml” ) 134 tinfXMLroot = tinfXML . g e t r o o t ( )
+136 f o r e n t r y 1 i n tinfXMLroot : 137 i f e n t r y 1 . t a g == ” NetworkBranchData ” : 138 f o r branchdata i n e n t r y 1 [ 0 ] : 139 i f branchdata . t a g == ”m” : modelmdot = f l o a t ( branchdata . t e x t ) 141 i f e n t r y 1 . t a g == ”NetworkNodeData” : 142 f o r nodeinfo i n e n t r y 1 : 143 gettemp = F a l s e 144 f o r s t u f f i n nodeinfo : i f s t u f f . t a g == ”N” :
+59
+
+
+150
+160
+170
+180
+190
+Chapter A
+146 i f i n t ( s t u f f . t e x t ) == upstreamoutletnode : 147 gettemp = True 148 i f s t u f f . t a g == ”T” and gettemp : 149 modeloutlettemp = f l o a t ( s t u f f . t e x t ) p r i n t ( ”Model massflow : { 0 : . 5 f } measured : { 1 : . 3 f } g/s . Model o u t l e t temperature { 2 : . 1 f } measured : { 3 : . 1 f } C” . format ( modelmdot , mdot , modeloutlettemp , T o u t l e t ) ) 151 i f abs ( modelmdot − mdot ) < t o l m d o t and abs ( modeloutlettemp − T o u t l e t ) < t o l t e m p : 152 notmatched = F a l s e 153 p r i n t ( ” Case converged . Fanning f r i c t i o n f a c t o r : { 0 : . 4 f } Darcy : { 1 : . 4 f } , Nusselt number : { 2 : . 2 f }” . format ( Fanning , Fanning * 4 , NusseltLast ) )
+154 DarcyWrite . append ( Fanning * 4 )
+155 NuWrite . append ( N u s s e l t L a s t ) 156 b r e a k 157 i f modelmdot > mdot : 158 f r i c a d j u s t = 1+1* abs ( modelmdot − mdot ) /mdot
+159 e l s e : f r i c a d j u s t = max ( 0 . 3 , 1−1* abs ( modelmdot − mdot ) /mdot )
+161 i f modeloutlettemp > T o u t l e t : 162 h t c a d j u s t = max ( 0 . 1 , 1−1* abs ( modeloutlettemp − T o u t l e t ) / T o u t l e t )
+163 e l s e : 164 h t c a d j u s t = min ( 1 + 1 * abs ( modeloutlettemp − T o u t l e t ) / T o u t l e t , 4 )
+165
+166 FlowNetXML = ET . p a r s e ( d i r +”/”+name+” ModelData/FlowNetwork . xml” ) 167 FlowNetXMLroot = FlowNetXML . g e t r o o t ( )
+168
+169 f o r e n t r y 1 i n FlowNetXMLroot : i f e n t r y 1 . t a g == ”XMLBranchValues” : 171 f o r guibranch i n e n t r y 1 : 172 f o r s t u f f i n guibranch : 173 i f s t u f f . t a g == ” FlowBranch ” : 174 f o r b r a n c h s t u f f i n s t u f f : 175 i f b r a n c h s t u f f . t a g == ” f r i c t i o n ” : 176 b r a n c h s t u f f . t e x t = s t r ( f l o a t ( b r a n c h s t u f f . t e x t ) *
+fricadjust ) 177 Fanning = f l o a t ( b r a n c h s t u f f . t e x t ) 178 i f b r a n c h s t u f f . t a g == ” C o r r e l a t i o n ” : 179 f o r c o r r s t u f f i n b r a n c h s t u f f : i f c o r r s t u f f . t a g == ”C” : 181 N u s s e l t L a s t = N u s s e l t 182 c o r r s t u f f . t e x t = s t r ( f l o a t ( c o r r s t u f f . t e x t ) *
+htcadjust ) 183 N u s s e l t = f l o a t ( c o r r s t u f f . t e x t )
+184 #
+185 FlowNetXML . w r i t e ( d i r +”/”+name+” ModelData/FlowNetwork . xml” )
+186 #
+187 with open ( OutputFile , ”w” ) as o u t f i l e : 188 o u t f i l e . w r i t e ( ” Darcy\n” ) 189 f o r Da i n DarcyWrite : o u t f i l e . w r i t e ( ” {}\n” . format ( Da ) ) 191 o u t f i l e . w r i t e ( ” N u s s e l t \n” ) 192 f o r dpn i n NuWrite : 193 o u t f i l e . w r i t e ( ” {}\n” . format ( dpn ) )
+194
+Listing A.5: Python code for heat transfer calculations using a 3D model in the in-house simulation program C3D
+60
+
+
+Appendix B
+B.1 Data sheets
+61
+
+
+Chapter B
+62
+
+
+Chapter B
+63
+
+
+Chapter B
+64
+
+
+Chapter B
+65
+
+
+Chapter B
+66
+
+
+Chapter B
+67
+
+
+Chapter B
+silffinñËftr5
+Object
+Standards
+CALIBRATION PROTOCOL
+Customer Siemens lndustrial Turbomachinery AB, SE-612 83 Finspong, Sweden.
+Ka I ¡brer¡ n g s pro to ko I I
+PRESSURE SCANNER MODULE
+Manufacturer: Pressure Systems lnc. Type:
+Condition of the object: Good.
+Object lP.Adr: 200.200.23.232 Object firmware uppdated to v7 .02 before calibration
+Number (nummer)
+122087 91
+Page (of)/Sida av 1(2\ Date of Calibration (Kalibreringsdatum ) 201 9-03-08
+fc122087
+Warm-up Time: > 24 h Pressure medium : Nitrogen
+Traceability The laboratory reference standards for pressures and electrical quantities are through regularly performed calibrations directly traceable to the Research lnstitutes of Sweden, RISE in Borås.
+Pressure Calibrator, Pressure Calibrator,
+Ambient Temperature: Atmospheric Pressure:
+91 16
+Fluke 6270A TC128393
+Druck PACE 5000 (t2.5psi) 1C121845
+23 +2 "C 975.8 hPa
+Method of
+Calibration
+Calibration uncertainty
+Calibration Conditions
+The object was calibrated with the standards at atmosph. pressure.
+The measured value was logged in the computer using the "PSl 9816 Calibration software". The measured value is a arithmetíc mean of at least three readings
+The reported expanded uncertainty of measurement is stated as the standard uncertainty of measurement multiplied by the coverage factor k=2 which for a normal distribution
+corresponds to a coverage probability of approximately g5%. The standard uncertainty of
+measurement has been determined in accordance with EAL Publication EA-4102. The
+expanded uncertainty includes estimated uncertainties from all quantities that have been evaluated to influence the measurement.
+Ch.number Expanded uncertainty f% of applied pressurel
+1-6 0.1
+7-16 0.01
+.J
+O
+The result of this calibration is valid for the calibrated object at the date of calibration Measurement of long time instability is not performed.
+612 83 Finspong
+Dept: PS DO IGT FS TS Cl
+Tfn: +46 122 81000
+Siemens lndustrial Turbomachinery AB Skäggebyvägen 238 612 44 Finspong Reg.No: 55 66 06 - 6048
+68
+
+
+Chapter B
+SilHIMEruS
+)
+Results
+)
+_l
+O
+,ø,;ã/
+TC122087 201 9-03-08
+2
+Page (of)/Sida av
+Applied
+(psi) Reading ch. #1
+(psi) (p#s2i) (p#s3i) (p#s4i) (p#s5i) (p#s6i) -2.500 -2.501 -2.500 -2.500 -2.501 -2.501 -2.501 -2.000 -2.003 -2.003 -2.003 -2.003 -2.003 -2.003 -1.500 -1.503 -1.503 -1.503 -1.503 -1.503 -1.503 -1.000 -1.003 -1.003 -1.003 -1.003 -1.003 -1.003 -0.500 -0.501 -0.501 -0.501 -0.501 -0.501 -0.501 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.500 0.502 o.502 0.501 0.502 0.502 0.502 1.000 1.003 1.O02 1.003 1.003 1.003 1.003 1.500 1.504 1.503 1.503 1.504 1.504 1.504 2.000 2.003 2.002 2.002 2.003 2.003 2.003 2.500 2.502 2.500 2.500 2.501 2.501 2.501
+Applied
+(psi) Reading ch.#7
+(psi) (p#s8i) -10.000 -10.000 -10.000 -8.000 -8.001 -8.001 -6.000 -6.000 -6.000 -4.000 -4.000 -4.000 -2.000 -2.000 -2.000 0.000 -0.001 -0.001 2.000 2.000 2.000 4.000 4.000 4.000 6.000 5.999 6.000 8.000 8.000 8.000 10.000 9.998 9.999
+Applied
+(osi) Reading ch. # 9
+(psi) #10
+lpsi) -15.000 -15.012 -15.002 -12.000 -12.009 -12.002 -9.000 -9.007 -9.002 -6.000 -6.005 -6.001 -3.000 -3.002 -3.002 0.000 0.000 -0.001 3.000 3.001 2.999 6.000 6.003 5.998 9.000 9.004 8.998 12.000 12.006 1r.998 15.000 15.006 14.997
+Applied
+(psi) Reading # l1
+(Ps¡)
+(#p1si2) #13
+lpsi)
+(#o1si4) (#p1si5) (#p1si6) 0.000 0.000 0.000 -0.003 0.000 0.002 -0.004 20.000 20.000 19.990 19.991 19.995 19.993 19.992 40.000 40.001 39.989 39.984 39.988 39.995 39.987 60.000 59.986 59.984 59.968 59.976 59.993 59.975 80.000 79.989 79.974 79.964 79.963 79.985 79.953 100.000 99.961 99.961 99.956 99.950 99.972 99.944 60.000 59.997 59.992 59.987 59.987 60.000 59.981 0.000 0.014 0.011 0.013 0.016 0.016 0.016
+Assignment 201 9-03-08 Michael Karlsson Responsible for Calibration
+69
+
+
+Chapter B
+5NËMËru5 .ñ E D¡
+lrf'-4\ro t rçj*
+UALIÞl(l{ I ¡L'N UEra I lrlr.rA I E
+issued by an Accredited Calibration Laboratory
+KALlBRERINGSB Ev IS ulf ärdat av Ackrediterat Kal¡bretiôg slabolalo¡ium
+Number 1853-193047
+Sidan I av 2
+Date of Calibration 20 r 9-03-08
+C'
+z
+Accred.No 1853
+C-a li hr¿ ti on
+ls()/IEC 17025
+Unit Under Test: Rose mount 305 1 CA I Abs. Pressure Transmitter
+Asset Number: "tcll4046 , Label: p0
+SerialNumber: 1017935
+Used Sofrware: Fluke Met/Cal Version 7.20
+Used Procedure : Transmitter: 80-120 kPa(a) CAL VER PPC4 Procedure Revision: 1.2
+Warm-up time: > th (in laboratory erivironment).
+Customer
+Traceability
+Method of calibration
+)
+Calibration Uncertainty
+Result
+Specifications used
+I
+Test Result: Data Type: Ambient temperature: Relative Humidity: Pressure Medium: Local g: Ambient Atm. Pressure:
+PASS AS-LEFT
+23+2"C
+29 * 10Yo Nitrogen Gas 9,811939 m/s2 hPa
+Siemens Industrial Turbomachinery AB, SE-612 44 Finspong.
+The laboratory reference standards for electrical and pressure quantities are through regularly
+performed calibrations directly traceable to the Research Institutes of Sweden AB, RISE in Borås.
+The object was cailbrated with the standards at ambient atmosph. pressure. The supply voltage was +24VDC and the output current \¡/as measured as a voltage drop across the 100 ohm precision resistor. The object was calibrated acc. to pr.ocedure l CS I I I 876
+The reported expanded uncertainty ofmeasurement is stated as the standard uncertainty of
+measurement multiplied by the.coverage factor k:2 which for a normal distribution corresponds to a coverage probability of approximately 95%o.The standard uncertainty has been determined in accordance with EAL PublicationB{-4l}2. The expanded uncertainty
+include uncertainty originating from the measurement standard by +0,01U/o of applied
+pressure + 70Pa and from the electrical measurement by +0,005% of applied pressure.
+This result is valid at the date of calibration. Measurements of long time instábility is not performed. The Indicated Voltage is a meen value of at least three readings'
+The Nonlinearity and Hysteresis are calculated as percent of full scale'
+t) Test Result "PASS" indicates that the object complies with the specification at the measured points.
+Siemens transmitters: SITRANS P Operating Instructions 09112, A5F;00047092-08.
+Rosemount transmitters: Rosemount 305 I Product Data Sheet 008 I 3-0100-400 l, Rev TC.
+Remarks:
+Laboratories are accredited by the Swedish Board for Accreditation and Conformity Assessment (SWEDAC) under the terms of Swedish legislation. The accredited laboralory
+activities meet the requirements in SS-EN ISO/IEC 17025 (2005)
+This report may not be reproduced other than in full, except with the prior written approval of the issuing laboratory.
+Standards Used
+Asset # TCl13248 TC119076 TC120344 TCt23351 TC127301
+Description Cropico RS3-100 Precision Resistor 100 ohms Druck DPIl42 Precision Barometer Agilent 34401A 6,5 Digit Multimeter DHI PPC4 Pressure Controller Siemens 4-channel Transmitter Calibration Unit
+Cal Date 2018-05-18 201 8-09-05 201 8-05-l 7 20r8-10-03 20 I 8-05-17
+Due Date 2019-05-t7 20 I 9-09-0s 2019-05-17 2019-r0-03 2019-05-17
+SE-612 44 Finspong, Sweden Dept: PS DO IGT FS TS CI Tfn: +46 122 81000
+Siemens Industrial Turbomachinery AB Skäggebyvägen 238 SE-612 44 Finspong, Sweden Reg.No: 55 66 06 - 6048
+70
+
+
+Chapter B
+\rALlE¡lf,l{ I tlw, lf \rEñ, I lf l\rA I tr
+issued by an Accredited Calíbration Laboratory
+KÁLl8RER/NGSaÉV lS utfàrd at êv A ckteditêrat Katibteting slabatatorium
+Number
+t853-193047 Sidan2 av 2
+5¡EMEI\üS ô 7_
+¡s/tEç 11¿5
+Test Results
+Apolied Pressure
+80 kPa
+Indicated Voltase
+0.4003 0.4020 V
+Exnanded Uncertaintv IkPal 0.045
+Pass/Fail
+:i:_"
+."i:_"
+Lower limit Upper limit
+0. 3980
+9i ïi
+:: ï.1
+92 kPa
+96 kPa
+0. 5s 99 0.5512 0.5628 v 0.046
+0.'120L
+!:1!91
+1.0398
+? l!91
+0. 8756
+1.0348
+1.1940
+0.046
+9 u911
+! 9!:?
+!'?ou9 1.3668
+v
+v
+-"
+Y V
+0.046
+0 .046 Pas s
+PaSs
+100 kPa t.2002 0 .041
+9.9il 9 .9il 9 ?il
+0 .041
+191 ï1
+19: i:l
+112 kPa
+116 kPa
+, 120 kPa
+1.3597 1.3532 Pass
+1 .520L
+1.6803
+i..8399
+2.0003
+r .5L24 L -52'7 6 Pass
+L.67t6 1.6884 V Pass
+1.8308
+1: ?.?99 1.8308
+1-.8492 V Pass
+2.01-00' v 0.048 .Pi:"
+.:3:" l::."
+:i:"
+Pass
+116 kPa 1.8399 ! ?1:?
+1:9??n : ':?t 9 1.3668
+V o.o41
+|i: i:1
+108 kPa
+104 kPa
+1.6801 1.6'7L6 0 .041
+1 ql oo
+1: ll?1
+t:-1-'?-?
+1.0398
+0.8798
+L .5L24 0 .041
+o .04'7
+100 kPa 1.1940 1..2060 o.04'7
+96 kPa 1 911? 0.8756
+0 .'7 L64
+0 . 55'12
+7 .0452 0 .046 Pass
+?1 ï1
+88 kPa
+84 kPa
+80 kPa
+0.8844 0.046
+0.046
+0.046
+0. 045
+Pass
+0 . 7198 o.7236 v Pass
+0.5598 0.5628 v Pass
+0.3999 0.3980 Pass
+0.0000 * 0. 0094 -0. 1000
+Hysteres
+0.0000 3 o . oo12 -0.1000
+Polynom
+BSL: P(kPa): U(V) * 24.9990758314 + 69.999408s197
+The object is labeled with recommended date for recalibration.
+- /ìNonlinearity
+"/ ¿..
+Assignment: 2019-03-08 f;A'f
+Pass
+Pass
+Fil|¿Ãson Respons. for Calibration Anders Liljeberg Laboratory
+71
+
+
+Chapter B
+Unrestricted
+72
+
+
+Chapter B
+Unrestricted
+73

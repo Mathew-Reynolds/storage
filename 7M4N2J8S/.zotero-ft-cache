@@ -1,0 +1,948 @@
+Skip to main content
+Skip to article
+View PDF
+Download full issue
+Additive Manufacturing
+Volume 36, December 2020, 101490
+Additive manufacturing of products with functional fluid channels: A review
+Author links open overlay panel
+Chao Zhang a 1
+,
+Shuai Wang a 1
+,
+Jian Li a
+, Yi Zhu a b
+, Tao Peng c
+, Huayong Yang a
+Show more
+Share
+Cite
+https://doi.org/10.1016/j.addma.2020.101490
+Get rights and content
+Full text access
+Abstract
+Products with functional fluid channels can transfer mass or energy and have been widely used in various fields, including aerospace, robotic, and biomedical applications. The manufacturing of these products with complex fluid channels is usually difficult for conventional fabrication methods; thus, a portion of the fluid flow function must be sacrificed to realize the feasible and smooth fabrication. Additive manufacturing not only provides a new way to manufacture the products with complex internal channels but also highlights design revolution for existing products with regular internal channels currently limited by conventional fabrication methods. To date, many publications have been reported on the design and manufacture of products with functional fluid channels, but there is a lack of an overview on this topic. In this paper, the current state of additively manufactured products with fluid channels are reviewed. Different functional fluid channels in heat exchangers, fluid power components, bipolar plates of proton exchange membrane fuel cells, and artificial blood vessels are summarized, and the challenges and further direction of additively manufactured products with functional fluid channels are also discussed.
+Graphical abstract
+Download: Download high-res image (128KB)
+Download: Download full-size image
+Previous
+Next
+Keywords
+Additive manufacturingFunctional fluid channelsProduct redesignMass and energy transfer
+1. Introduction
+In industry and society, many products have complex internal structures, which generally show two purposes. One purpose is to achieve structurally lightweight products, which is significance for reducing the costs and energy consumption and improving the endurance of mobile equipment, such as automobiles, aircrafts, and robots. Another is to achieve mass or energy transport by fluid flow (liquid or gas), which is important for the products with functional fluid channels, such as heat exchangers [[1], [2], [3]], fluid power components [4,5], bipolar plates of proton exchange membrane (PEM) fuel cells [6,7], and artificial blood vessels [8,9], as the fluid flow in the internal fluid channels of the products can transfer heat, transmit fluid power, and transport mass, among other functions.
+Compared with structural lightweight, fluid flow channels that can transfer mass or energy put forward higher requirements for design methods and manufacturing technology. The design and manufacture of products with internal fluid channels not only need to consider the structural optimization of local fluid channels and the arrangement of all fluid flow channels but also need to take into account the influence of the structure on the target functions, mainly energy transmission and mass transfer. Nevertheless, conventional formative (e.g., forging, mold casting, die casting, plastic injecting) or subtractive manufacturing (e.g., turning, drilling, milling, grinding) have difficulties in manufacturing products with internal fluid channels; thus, it is usually necessary for these methods to sacrifice some functional performance or add extra unnecessary weight to meet manufacturing feasibility. Some products cannot be successfully manufactured when the structure and shape of the internal fluid channels are highly complicated or their sizes are very small.
+Additive manufacturing (AM), generally known as 3D printing, is an advanced manufacturing technology that digitally creates 3D objects by successive material addition [10]. AM has demonstrated great advantages in the automation of the production process, a high degree of design freedom, the resulting potential for optimization and material savings, etc. [[11], [12], [13]]. To date, many reviews focusing on the materials, microstructure, or mechanical properties of additively manufactured products exist [[14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31], [32], [33]]. Nevertheless, a state-of-the-art review of additively manufactured products with internal fluid channels is still absent, even though AM technologies have revolutionized the design and manufacturing of products with functional fluid channels. As such, it is appropriate to conduct a review to summarize the existing research of additively manufactured products with internal fluid channels. In this work, several existing additive manufacturing methods of products with fluid channels are introduced; then, the influence of additive manufacturing on the manufacture and design of different functional fluid channels in some representative products, including heat exchangers, fluid power components, bipolar plates of PEM fuel cells, and artificial blood vessels, are highlighted. In addition, the challenges and future directions of additively manufactured products with internal fluid channels are discussed.
+2. Additive manufacturing of products with functional fluid channels
+Since the first stereolithography manufacturing system appeared in the 1980s, AM has been widely used in various fields after years of development, including medicine [34,35], aerospace [36,37], robots [38], and construction [11,39]. To date, there have been many kinds of AM technologies developed for manufacturing various products with internal fluid channels and other internal structures, including vat photopolymerization (VP), material extrusion (ME), powder bed fusion (PBF), direct energy deposition (DED), material jetting (MJ), and sheet lamination (SL). All these AM technologies presently use a layer-based method, where each layer is a thin cross-section of the products derived from the virtual computer-aided design (CAD) data. These AM technologies can be broadly used in various materials categories, including metals, polymers, ceramics, composites, and biological materials.
+AM technologies have revolutionized the design and manufacturing of products with functional fluid channels due to their remarkable advantages in some respects. Complex inner fluid channels can be produced using power bed fusion, vat photopolymerization, and material jetting. Simple channels can be made using material extrusion. Advantages of AM technologies for products with internal fluid channels are given as follows:
+(1) Great design freedom for fluid channel arrangement and fluid channel shapes: AM technologies’ flexibility in the manufacturing of highly complex geometries provide the designer great freedom to design both optimized overall fluid channel arrangements (e.g., capillary structure, topology structure, channel array, or even more complex irregular arrangements) and more optimized local fluid channel shapes (e.g., teardrop, rhombic, elliptical, or even more complex irregular shapes); these optimizations are not only beneficial to improve the heat transfer efficiency, heat dissipation efficiency, flow efficiency, or the flow field uniformity of fluid channels but also beneficial for the miniaturization and lightweight of products with internal fluid channels
+(2) Integrated manufacturing of products with fluid channels: AM technologies can be used to manufacture whole products with internal fluid channels in a one-step process to remove the unnecessary metallurgical or mechanical joints. These joints are usually prone to leakage, especially under the action of internal high-pressure fluid. The integrated manufacturing of products with fluid channels can efficiently avoid the leakage at the joints to significantly improve the safety and service life of products with fluid channels.
+(3) Diversity of available materials for manufacturing products with fluid channels: Many functional fluids are corrosive to fluid channels, so materials with high corrosion resistance are always expected to be used to manufacture fluid channels. However, materials with high corrosion resistance are often difficult to be processed into the desired flow channels with complex structures. AM is a feasible and rapid way to use these materials to manufacture fluid channels. Thus, AM technologies can use a broad material selection for manufacturing fluid channels with high corrosion resistance. Moreover, fluid channels can be made of multi-material printing, where different materials can be used in different parts of the fluid channels to meet different performance requirements to improve the overall performance of the product. Various sensors can also be printed inside the flow channel to sense the flow rate and fluid pressure in real time, which can provide sensing data for real-time monitoring of fluid characteristics and improve the product intelligence with the fluid channels.
+Although AM technologies can bring many advantages to the design and manufacture of products with functional fluid channels, there are still many challenges in multiscale channels: vastly different technology, process, and quality. First, it is difficult to precisely control the forming qualities of the inner surface of the fluid channel, including the surface roughness and contour accuracy, which greatly influence the flow efficiency and heat transfer efficiency of the fluid. Different functional fluid channels often have different specific requirements. For example, it is necessary to reduce the inner surface roughness of the fluid channels in hydraulic components to improve the fluid flow efficiency, while to increase the inner surface roughness of the fluid channels in the heat exchangers improves the heat transfer efficiency. Moreover, high precision nondestructive testing methods of fluid channel quality and testing methods of fluid channel performance also need to be explored future studies. Additionally, although AM technologies bring design freedom to fluid channels, there is still a lack of scientific and effective design criteria for the overall arrangements and local shapes of fluid channels, especially since different design criteria are necessary for products with different functional fluid channels. Therefore, scientists and engineers should understand the tradeoffs between its advantages and limitations when AM is used to produce these products with internal fluid channels.
+In the following sections, some representative applications of additive manufacturing in products with internal fluid channels, including heat exchangers, fluid power components, bipolar plates of PEM fuel cells, and artificial blood vessels, are summarized, and the internal fluid channels in these products have different functions (Fig. 1).
+Download: Download high-res image (686KB)
+Download: Download full-size image
+
+Fig. 1. Representative applications of additive manufacturing in products with internal fluid channels.
+
+3. Fluid channels in heat exchangers: heat transfer efficiency
+As key components of heat exchangers, the functions of fluid channels are to use fluid flow to transfer heat, so that the desired heating or cooling effect is achieved. Heat exchangers are widely used in refrigeration, air conditioning, power stations, chemical plants, and the petroleum industry, etc. The typical demand of these functional fluid channels in heat exchangers is to achieve high heat transfer efficiency of heat exchangers. Increasing the surface area/volume ratio of fluid channels is the primary way to improve the heat transfer efficiency of heat exchangers. Enhanced heat transfer efficiency can result in significant benefits, including high energy conversion and compact size [40]. Cooling channels in molds used in plastic injection molding and die casting are also discussed here because the design and manufacture of cooling channels are similar to those of fluid channels in heat exchangers, though they do not belong to the same category.
+Conventionally, heat exchangers are produced by bending rolled sheets into desirable shapes, and then they are brazed or welded together. The process involves several steps and has a long fabrication time. In plastic injection molds, the drilling method is typically used to produce cooling channels. Both processes restrict the geometry and path of fluid channels, which negatively affect heat transfer efficiency. Laser powder bed fusion (LPBF) is a common AM technology to produce fluid channels with enhanced heat transfer efficiency while VP is also reported. Some additively manufactured products have already been used in industry, such as automobile and power generation, and show great advantages in heat transfer efficiency improvement [41,42].
+Some literature has focused on ways to improve heat transfer efficiency of heat exchangers by increasing the surface area/volume ratio using mini- and microchannels without increasing the size and weight [[43], [44], [45], [46]], as shown in Fig. 2(a)-(c). Some researchers have designed and manufactured inclined fins and tapered mini-channels using LPBF technology and a significant increase in heat transfer coefficient was reported [[47], [48], [49]]. Tiwari et al. [43] reported that they used polymers to 3D print a heat transfer manifold with circumferential fins and inter rifling structures. The heat transfer coefficient was an order of magnitude higher than that of a conventional manufactured manifold. Brooks and Brigden [50] applied lattice structures in the cooling channels which could increase fluid vorticity leading to improved convective heat transfer. Kwon et al. [51] designed various static mixers in water cooling channels. Two types, including twisted tape and chevron, were manufactured using continuous liquid interface production and both could enhance convection heat transfer. Yameen et al. [52] compared the influence of different arrays of pin fins in air channels and/or modified microchannel orientation on heat transfer performance; however, the influence was not significant.
+Download: Download high-res image (1MB)
+Download: Download full-size image
+
+Fig. 2. Summary of AM channel design in heat exchangers: (a) manifold with circumferential fins and inter rifling structures [43]; (b) channel filled with lattice structures [50]; (c) polymer channel with mixers [51]; (d) hollow droplet cross-section channel [53]; (e) channel with internal fins [55]; (f) channel with internal and external fins [56] (g) centroidal Voronoi diagram-based and spiral conformal cooling channels [65,66]; (h) variable distance layout conformal cooling channels [67]; (i) thermal-ﬂuid topology layout optimization [68].
+
+Some literature has focused on the influence of AM channel geometry on the heat transfer performance, as shown in Fig. 2(d)-(f). The Center for Environmental Energy Engineering in the University of Maryland [53] reported hollow droplet shape channels to increase overall heat transfer efficiency by 20 % while the size and weight were reduced. Saifullah et al. [54] designed a new square-shaped section with higher performance for injection molding and compared with the circularly sectioned conformal cooling channels by FEA methods. Various fin structures inside the channels were also found to be useful in increasing thermal conduction. Hearunyakij et al. [55] designed a circular conformal cooling channel with ﬁns to increase cooling efﬁciency. The results indicated that cooling efficiency increased as the number of ﬁns increased. Moon et al. [56] compared the heat transfer performance of three types of heat sinks with both internal and external fins. Measurements from an AM-fabricated aluminum alloy heat sink showed a four times improvement in power density compared to conventional designs.
+With AM technology, conformal cooling channels can be introduced to improve cooling efficiency and increase production, particularly plastic injection molding [[57], [58], [59], [60], [61], [62], [63], [64]], as shown in Fig. 2(g)-(i). Wang et al. [65,66] designed spiral conformal cooling channels based on boundary-distance maps, which could achieve uniform mold cooling. Au and Yu [67] proposed a novel adjustment method to modify the distance between the existing conformal cooling channels and the cavity surface to compensate for increasing coolant temperatures. The results showed that the conformal cooling channels with variable distance had a better cooling efficiency than the convectional conformal cooling channels. Wu and Tovar [68] introduced a coupled thermal-ﬂuid topological optimization algorithm to design conformal cooling channels. The fluid and solid phase materials were optimally distributed over the entire domain in terms of their ﬂuid and thermal-ﬂuid properties include ﬂow resistance, heat conduction, and natural and forced convection after topological optimization. Some results are summarized in Table 1.
+
+Table 1. Summary of AM heat exchangers with new channel design.
+
+Method	Materials	AM technology	Contributions	Heat transfer efficiency
+Micro/mini channels with fins	Stainless-steel; titanium alloy; aluminum alloy [47,48,49]	Powder Bed Fusion	Tapered channels with fins	Heat transfer coefficient increases by 15−50 %
+Polymer [43]	Not introduced	Design circumferential fins and inter rifling structures	10x increase
+Steel [50]	Only simulation	Lattice structures in the cooling channels	26.34 % increase
+Photopolymers [51]	Continuous liquid interface production	Designed various static mixers in water cooling channels	Reduced thermal resistance in half
+Stainless steel [52]	Powder Bed Fusion	compared different arrays of pin fins in air channels and/or modified microchannel orientation	No significant difference among the three types
+Channel geometry	Titanium [53]	Powder Bed Fusion	Hollow droplet shape channels. The size and weight of the heat exchanger was reduced.	Heat transfer efficiency increased by 20 %.
+Structural steel [54]	Only simulation	Compare square sectioned channels with circular channels.	20 % reduction in cooling time.
+Mold steel P20 [55]	Only simulation	Circular conformal cooling channel with internal ﬁns	8.3 %–21.3 % reduction in cooling time.
+AlSi10Mg [56]	Powder Bed Fusion	Compared channels with both internal and external fins	Power density increases by four times
+Flow path	Mold steel P20 [65,66]	Simulation and optimal algorithms.	Designed spiral conformal cooling channels based on boundary-distance maps	11.3 % reduction in cooling time than VD-based channel.
+Stainless steel [67]	Only simulation	Conformal cooling channels with variable distance	More uniform cooling performance.
+Prealloyed tool steel [68]	Powder Bed Fusion	Introduced a coupled thermal-ﬂuid topological optimization algorithm to design conformal cooling channels	/
+4. Fluid channels in fluid power components: fluid flow efficiency and lightweighting
+The function of fluid channels in fluid power components is to use fluid flow to transmit and control the hydraulic force so that the desired actuation operation is achieved. Fluid power components are widely used in mobile equipment, such as aerospace and robotics. The typical demand of these functional fluid channels in fluid power components is to achieve high power density (or power-to-mass ratio) of fluid power components [69]. To decrease the energy loss in fluid channels or to optimize the fluid flow arrangement to achieve lightweight fluid power components are two main ways to improve the power density of the fluid power components. Additionally, fluid channels in fluid power components are essential parts to transport pressurized fluids; thus, they are required to sustain high pressure to enable high energy conversion efficiency.
+Rubber is typically used to produce long flexible pipes used to connect fluid power components that have relative motion, while metal channels are used inside most fluid power components. Since most metal channels in fluid power components are on the millimeter scale, drilling (most common) or casting is often used to produce conventional fluid channels. Drilling is a highly efficient machining technique that produces channels with high accuracy. However, channel geometry and flow path (has to be straight) are significantly restricted leading to a bulk block. Casting is able to produce curved channels; the accuracy can be low, and complex channels remains a great challenge. Selective laser melting (SLM) or LPBF is often used to produce fluid channels in fluid power components due to high accuracy and strength. In addition to the well-known fuel nozzle in leap engines, hydraulic valves, actuators, and manifolds have been produced using SLM by industry and research groups [[70], [71], [72], [73]]. Size and weight were significantly reduced compared to conventional products. Some integrated hydraulic units were also fabricated using AM, which became an essential part in robots and aircrafts to increase dynamic response and loading capacity and to reduce energy consumption. However, few details have been released.
+Fluid topology, which uses a variable porosity approach to manipulate flow geometries by adding or removing material, has been proposed as an efficient method to optimize and design internal channels with minimal pressure loss. Researchers [[74], [75], [76]] presented exciting results in AM channels using fluid topological optimization based on some typical geometries: a serpentine channel, a U-bend, a straight duct, and a rectangular box. Some results are shown in Fig. 3, which outweigh those results using traditional designs [[77], [78], [79]]. However, such methods were performed based on a given space (design domain).
+Download: Download high-res image (321KB)
+Download: Download full-size image
+
+Fig. 3. Examples of fluid topology optimization. (a) A serpentine channel reduces pressure loss by 50 % [76]; (b) a U-bend channel reduces pressure loss by 40 % (with box aspect ratio 2:1 and inlet velocity 6 m/s) [75]; (c) a straight duct channel [75]; (d) a rectangular box channel reduces pressure loss by 26 % [75].
+
+A hydraulic manifold is a hydraulic circuit with many complex fluid channels that combines hydraulic components in a compact unit. Therefore, design and manufacture of a hydraulic manifold using AM not only shows the channel characterization in fluid power components but also exploits the high design freedom of AM. Renishaw plc. [72] took some examples to illustrate the capability of AM design. The severity of the corner angles, which significantly contributes to flow separation and stagnation, was reduced for optimized flow. Auxiliary holes were eliminated to reduce potential leakage. A cross drilled block manifold was reduced to a pipe network leading to large size and weight reductions. Schmelzle et al. [80] redesigned the structure of a hydraulic manifold, and SLM was used to manufacture it. In the study, stress relief, postprocessing, and nondestructive inspection were also performed and discussed to ensure robust performance. A design approach for part consolidation using metal AM was presented, and noncircular passages were also proposed to improve fabrication quality of fluid channels without internal supports. Fluid dynamics was mentioned but not discussed in depth. Alshare et al. [81] conducted similar work but focused on the pressure loss. They analyzed the fluid dynamics paths based on the extracted piping from the original hydraulic manifold. The model was evaluated through CFD fluid flow and fluid–structure interaction (FSI) to achieve the lowest pressure loss and adequate structural durability. SLM was used to manufacture the optimized manifold. A design flowchart was also presented by taking both fabrication boundaries and fluid dynamics optimization into account. A research group in Zhejiang University also presented work on a hydraulic manifold, which connected to eight valves and one sensor. They also focused on fluid flow by considering gradually curved turns, large turn radii, and lower turn numbers. In addition, friction factor in a SLM fabricated channel was measured and discussed because the influence of the fabrication quality of the channels on fluid flow remains unknown. Some results are summarized in Fig. 4 and Table 2.
+Download: Download high-res image (988KB)
+Download: Download full-size image
+
+Fig. 4. Summary of hydraulic manifolds: comparisons between original and AM manifolds ((a) Renishaw [72], (b) Alshare et al. [81], (c) Schmelzle et al. [80], and (d) ZJU research group); illustrations of the contribution ((e) Renishaw presents a new AM design for optimized flow [72]; (f) Alshare et al. present pressure distribution in two planes in the new AM design [81]; (g) Schmelzle et al. present noncircular channel design and stress analysis [80]; (h) ZJU research group presents the results of friction factors between a SLM-fabricated channel and classical theory).
+
+Table 2. Summary and comparison of AM hydraulic manifolds.
+
+Empty Cell
+	Materials	Weight reduction	Volume reduction	Pressure drop reduction	Contribution
+Renishaw	Aluminum alloy; 316 l stainless steel [72] (Original: aluminum alloy)	52 % for aluminum alloy; 36.3 % for stainless steel	52 % for aluminum alloy; 79 % for stainless steel	Up to 60 % (without details)	Illustrate benefits of AM in hydraulic manifolds; Change abruptly angled junctions between flow paths to curved ones to avoid flow separation and/or stagnation.
+Alshare et al.	Stainless steel [81]	84 %	23 %	15 %	Optimization with CFD and fluid-structure interaction simulations.
+Schmelzle et al.	17−4 stainless steel [80]	60 %	53 %	Not mentioned	Noncircular passages; A generalized design approach;
+Research group in ZJU	316 l stainless steel	92 %	46 %	31 %	Friction factor is the same between conventional and AM fluid channels in laminar flow.
+5. Bipolar plates of PEM fuel cells: uniform reactant distribution
+Bipolar plates are vital components of PEM fuel cells, which consist of fluid channels. The function of these fluid channels is to offer fuel and oxidant to reactive sites and remove reaction products, so that the produced current can be collected. The typical demand of these functional fluid channels in bipolar plates is to achieve high energy conversion efficiency of PEM fuel cells. An optimal route for an array of fluid flow channels in bipolar plates can enable uniform chemical reactant distribution to achieve uniform temperature distribution and even current density distribution, so that the energy conversion efficiency of the PEM fuel cell can be improved. However, it is difficult or even impossible for conventional fabrication methods to manufacture bipolar plates with complex fluid channels and conventional fabrication methods are expensive and time consuming. In addition, the available materials are also limited.
+PEM fuel cells are promising candidates as zero-emission power sources for transport, portable and stationary cogeneration applications due to their high-power density, high efﬁciency, low-temperature operation, quick start up capability, and system robustness [[82], [83], [84]]. As shown in Fig. 5, bipolar plates are vital components of PEM fuel cells, that offer fuel and oxidant to reactive sites, remove reaction products, collect produced current, and provide mechanical support for cells in the stack. In practice, PEM fuel cell stack design often boils down to bipolar plates design, which, in turn, is basically the design of ﬂow channels formed on the bipolar plates. Requirements for carrying out optimal bipolar plate functions are often met by the appropriate design of the ﬂow channels [85]. The optimization of the gas ﬂow ﬁelds of bipolar plates is an important factor for cost reduction and performance improvement of PEM fuel cells. The optimum route for an array of gas flow channels in bipolar plates can make the chemical reactant distribution uniform. When the reactant is evenly distributed over the surface areas of a cell membrane, temperature distribution becomes uniform and current density distribution, thereby limiting the mechanical stress on the membrane electrode assembly and increasing the longevity of the fuel cell [86].
+Download: Download high-res image (136KB)
+Download: Download full-size image
+
+Fig. 5. Schematic diagram of PEMFC components [85].
+
+Most graphite-based bipolar plates are manufactured by CNC machining. The manufacturing process of CNC machining is slow because the material brittleness increases the fabrication difficulty [87]. Conventional fabrication methods, such as engraving, stamping and compression molding, are used to manufacture metal-based bipolar plates. Over the last decade, many researchers have focused on improving flow field design to uniformly distribute the reactants and decrease the pressure-drop in bipolar plates [[88], [89], [90], [91], [92], [93], [94]]. However, it is difficult or even impossible for conventional fabrication methods to manufacture bipolar plates with complex fluid channels and the available materials are often limited. Additionally, conventional fabrication methods can be expensive and time consuming. AM is highly capable of manufacturing complex structures of bipolar plates for improving fuel cell performance. To date, several companies have tried to use AM to commercially produce fuel cells [95,96]. Meanwhile, some academic research has been published. Trogadas et al. [97] applied LPBF to manufacture a lung-inspired fractal geometry of bipolar plate flow channels to solve the uneven reactant distribution issue in fuel cells. Five step-by-step branching generations (shown in Fig. 6) were used to design a bipolar plate resulting in more uniform reactant distribution and minimum entropy production. This novel structure cannot be manufactured by conventional fabrication. The experimental results showed that additively manufactured lung-inspired flow field-based fuel cells with four generations outperform the conventional serpentine flow field designs. Uniform reactant distribution and minimal pressure drop were maintained, demonstrating the robustness of this proposed method. Cai et al. [98] put forward a PEM fuel cell with a porous bottom rib 3D cathode flow field. The result shows that this type of structure has a better performance than a conventional, parallel straight cathode flow field as the porous bottom ribs of 3D flow fields are helpful for even reactant distribution.
+Download: Download high-res image (909KB)
+Download: Download full-size image
+
+Fig. 6. 3D-printed lung-inspired flow fields of bipolar plate [97]; PEMFC with a 3D porous cathode flow field and parallel straight anode channels [98]; SLA bipolar plate with enclosed channels [99].
+
+To ensure maximum closeness to the desired geometry, it is necessary to eliminate any possible gap between the channel rib and acrylic glass and the effect of bipolar plate tightening in experiments. Therefore, Piri designed a novel bipolar plate with enclosed channels via a transparent layer 3-D printed on top of the channels shown in Fig. 6(c) [99]. The numerical simulation results show that the cathode bipolar plate was modified by decreasing the gap between the baffles in the middle section of the transition region, which increases the flow resistance in the middle section and leads to enhanced flow to the side channels, thereby achieving a uniform pressure and velocity profile in the modified cathode flow field.
+6. Artificial blood vessel and vascular networks: strength, cell viability, and structure complexity
+The function of blood vessels is to use blood flow to exchange substances with tissue fluid to provide oxygen and nutrients for organs and tissues and to expel wastes. Currently, vascular disease is common around the world. Over 15 million people worldwide die from cardiovascular disease every year [100,101] and the healthcare costs are tremendous [102]. Presently, autologous bypass therapy, which makes a detour around the blockage, has been applied to treat vascular diseases in clinics. However, autologous grafts are not always available due to critical conditions of patients and lack of donors [101]. As a result, artificial blood vessels, an ideal solution to that problem, have been under spotlight and investigated in recent years. Therefore, artificial blood vessels must meet the demands of sufficient mechanical properties and good biocompatibility.
+On one hand, it is crucial that the mechanical properties, e.g., Young’s modulus and tensile strength [103,104], of the artificial blood vessels are close to those of natural blood vessels. On the other hand, the capability to support tissue viability, including oxygen delivery, nutrient transport, and metabolic waste removal [105,106], should also be considered. Over the past several decades, several approaches, including decellularized tissue [107,108], synthetic-based construct [106,109], and natural biomaterial-based constructs [110,111], have been developed for fabricating artificial blood vessels. However, there are still many challenges, including negatively affected biological activity and biomechanical properties due to rigorous decellularization processes [112], difficulty in fabricating small-diameter vessels (below 5 mm) using synthetic-based methods [113], and limited mechanical properties of biomaterials [100]. In addition, the manufacturing process is complicated and expensive for the abovementioned approaches.
+AM has been used to fabricate artificial blood vessels due to unlimited geometric complexity, material diversity, and high building efficiency. Basically, ME and VP are two common techniques used for this purpose. More specifically, they are extrusion-based printing, inkjet writing, and laser-assist printing.
+Extrusion-based printing is mainly studied to embed hollow fiber into a tissue engineering scaffold as a vascular network. A coaxial nozzle with annulus structure is used, where different materials are extruded to form inner and outer phases, as shown in Fig. 7(a) and (b). Based on this method, many studies were carried out focusing on the mechanical properties. Gao et al. [114] produced a high strength cell-laden hydrogel structures with built-in microchannels that showed great potential in nutrients delivery for large scale organs. Dolati et al. [115] enhanced the mechanical strength of vascular conduits by adding carbon nanotubes (CNTs) to sodium alginate, as shown in Fig. 7(c). In addition, some studies were performed to improve the building process and structures. Jung et al. [116] produced blood vessels through a glass capillary and found the inner face could enhance the formation of tubular shapes, which further reduced build time. Attalla et al. [117] designed a scalable tri-axial microfluidic extrusion nozzle, which could fabricate scaffold structures that were multi-cellular and multi-material. Due to the inherent process in extrusion-based printing, it is difficulty to produce vessels with branches.
+Download: Download high-res image (936KB)
+Download: Download full-size image
+
+Fig. 7. Schematic of existed AM technologies used in vascular net-works and some application examples. (a) and (b) [114], extrusion-based printing. (c), tensile strength was enhanced from 382 kPa to 422 kPa by adding CNTs to sodium alginate [115]. (d) and (e) [118], inkjet writing technology. (f), complex structure (horizontal + vertical) was fabricated with a stiffness of 20 kPa and cell viability of 92.9 % [119]. (g) and (h) [122], laser-assist technology. (i). Scaffold with good cell density and location was fabricated [122].
+
+Inkjet writing fabricates structures directly in the supporting environment, which enables it to fabricate complicated structures, as shown in Fig. 7(d) and (e). As a result, branch structures can be fabricated (Fig. 7(f)) and high cell viability was reported. Tabriz et al. [118] fabricated a branch structure with cell viability (92.9 %) by using CaCl2 and barium ions to enhance primary and long-term stability of the alginate hydrogel and the static stiffness was increased to 20 kPa with 100 mM CaCl2 solution. Huang’s group [119,120] fabricated vascular-like structures with 92.4 % cell viability by a compensation-based printing approach, fabricating structures based on different stiffnesses of model parts. In a recent study [121], laponite was used to produce supporting structures and a new strategy “printing-then-solidification” was proposed for fabricating alginate, gelatin, and liquid photosensitive materials (SU-8). A maximum cell viability of 93.6 % was achieved.
+In addition, some researchers [122] introduced lasers to assist the fabrication of tissue engineering, as shown in Fig. 7(g)-(i). Extremly high fabricating accuracy can be achieved. Although an energy absorbing layer was introduced, cells still have a high risk of being damaged by the laser energy [123]. All abovementioned methods for fabricating vascular networks are briefly summarized in Table. 3.
+
+Table 3. Brief summary of present AM technologies used in vascular net-works.
+
+Method	Material	Fabricating accuracy	Contributions
+Extrusion-based printing	Sodium alginate and CaCl2 [114]	Depend on experimental parameters, e.g., diameters of nozzles, and kinematic accuracy Minimum inner diameter is approximately 15 μm	High sodium alginate concentration and small distance between adjacent hollow fibers promote high strength.
+CNTs- sodium alginate and CaCl2 [115]	Tensile strength was enhanced from 382 kPa to 422 kPa by adding CNTs to sodium alginate.
+N-Carboxyethyl chitosan and oxidized dextran [116].	Built time could be reduced by printing vessels through a glass capillary.
+Collagen, fibrin, sodium alginate and CaCl2 [117]	Tri-axial extrusion nozzle was designed to produce scaffolds with structures with multi-cellular and multi-material, which leading to high cell viability.
+Inkjet writing	Sodium alginate, CaCl2 and BaCl2 [118]	Depend on experimental parameters and the minimum inner diameter is approximately 3 mm.	100 mM CaCl2 solution increased the static stiffness of alginate hydrogel to 20 kPa. In 60 mM BaCl2 solution, the cell viability reached 92.9%.
+Sodium alginate and CaCl2 [119,120]	Overhang structures were fabricated based on a predictive compensation-based approach. 92.4 % printed cell viability was achieved.
+Sodium alginate, gelatin and SU-8 [121]	“Printing-then-solidification” strategy was proposed. 93.6 % printed cell viability was achieved.
+Laser-assist printing	Ploy(ethylene glycol) diacrylate (PEGda) [122]	Structures with high complexity and high fabrication accuracy.	Two-photon polymerization was used for the fabrication of scaffold. Scaffold with good cell density and location was fabricated.
+7. Challenges and future directions
+Although AM brings innovation to the manufacture and design of products with internal fluid channels, there are still challenges that should be resolved in the future. An existing hurdle of additively manufactured products with internal fluid channels is that the forming qualities, including surface roughness, dimensional accuracy, and heterogeneous properties, greatly affect the various functions of products with internal fluid channels, thereby affecting the mass transfer efficiency and increasing the energy loss.
+7.1. Heat exchangers
+For heat transfer efficiency, the mini- and micro- channels can enhance heat transfer performance but often result in poor fluid flow. Those two factors are often need to be considered together [[124], [125], [126], [127]]. To increase heat transfer performance without sacrificing fluid flow efficiency remains a great challenge. In addition, forming quality, including dimensional accuracy (Fig. 8(a)) and surface roughness (Fig. 8(b)), greatly affects heat transfer efficiency. Arie et al. [48] pointed out that a significant performance enhancement could be achieved by improving forming quality. Some literature has indicated that rough surfaces facilitate heat transfer due to increased surface area [128,129]. However, channels with high surface roughness typically decrease mass flow rate. It was pointed out that the reduction in heat transfer was not as large as the reduction in mass flow rate because of the augmentations that occur for rough AM coupons. At a ﬁxed pressure ratio the rough AM surface helps to recover heat transfer lost due to the drop in mass ﬂow from a theoretically smooth channel [124,127].
+Download: Download high-res image (595KB)
+Download: Download full-size image
+
+Fig. 8. (a) Micrographs of the ﬁns and microchannels of Ti64 prototype [48]; (b)Sample photo and 3D surface scan of 2-mm standard channel proﬁle: lower channel section(left) and upper channel section(right) [69].
+
+7.2. Fluid power components
+To achieve high flow efficiency, channels in fluid power components are often curved, which causes difficulties in removing supports inside the channels postprocessing. Moreover, due to functionalities, channels cannot be built vertically to avoid supports. Therefore, fluid channels are subjected to considerable shape deviation and high surface roughness due to a large overhang region shown in Fig. 9[130,131]. A typical fluid channel built horizontally using SLM is shown in Fig. 8. Curling and dross formation can be found on the top part due to residual stress [132,133]. Noncircular passages (e.g., diamond, teardrop shapes) [80] are an efficient way to improve forming quality. However, stress concentration increases, and results in thicker channel walls leading to more weight. Therefore, the influence of forming quality on the fluid flow in LPBF channels without supports should be investigated. Snyder et al. [130,134] found that the building direction greatly influences the dimensional tolerance and surface roughness which further affects the transitions between flow regimes. The horizontally positioned cylindrical channels have the highest friction factor while the vertical channels have the lowest. Stimpson et al. [124,135] found that the friction factor of the SLM channels built diagonally is higher than that of laminar flow theory at low Reynolds numbers, while in the turbulent region the difference in the SLM channels is large. This work is based on a few types of mini air fluid channels (diameter or equivalent diameter < 1 mm). Recently, some researchers found that the laminar flow between a drilled and a LPBF-fabricated channel is almost identical. However, the results are only valid for a fluid channel with 10 mm diameter.
+Download: Download high-res image (208KB)
+Download: Download full-size image
+
+Fig. 9. Horizontally fabricated channels using SLM. (a) A photo of an as-built SLM channel shows uneven surface roughness and poor circularity (design diameter =10 mm). (b) CT scan images of three micro channels [130] show poor cylindricity and high surface roughness.
+
+7.3. Bipolar plates
+Gould et.al pointed out that the single-cell stack performs well when compared to a standard one, but a 40-cell fuel cell stack power is 20 % less than expected due to inadequate ﬂatness of several bipolar plates fabricated using PBF. This cell-to-cell mismatch leads to high contact resistance in several cells [136]. Thus, more work is needed to reduce the weight and increase the ﬂatness of bipolar plates made by metal AM before they can be used in larger stacks.
+7.4. Artificial blood vessels
+Compared to traditional methods, AM technology enables high geometric complexity, material diversity and fabrication efficiency. However, there are some limitations in AM vascular networks. Extrusion-based printing can produce structures with high accuracy but low geometric complex (branch structures are not possible). In addition, cell viability is negatively affected due to the flow shearing while extruded from the nozzle. Inkjet writing enables complex structures with high cell viability while the fabrication accuracy is relatively low (vessel diameter > 3 mm). Moreover, there is a tradeoff between the mechanical properties and cell viability. High alginate concentration increases tensile strength, which reduces cell viability. AM-based blood vessels and vascular networks must improve from materials, machines, and processes to be close to the “optimal” design the natural blood vessels in our body.
+Moreover, it is important to consider the local mass and heat transfer functions as well as the overall functions in these additively manufactured products with different fluid channels. Although the AM offers great freedom for the design of these products with internal channels, mature design methods and theory of these products with different functional flow channels is lacking, which highlights a need for effective design methods and theories that can guide the manufacturing of high-performance products. Though fluid topology optimization can be used to improve flow performance for a channel within a given design domain, how to arrange several channels remains a great challenge. In addition, even within a product, the performance requirements and functions of its internal fluid channels are different. The multi-material and multi-process additive manufacturing technology can provide a better way to achieve the multi-functionality of fluid channels in various products [137]. Biomimetic design may give some insights since nature has developed high-performance structures and materials [138,139]. However, at present, relevant research is still in its infancy, and more relevant studies are necessary in the future.
+Declaration of Competing Interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper
+Acknowledgements
+This work was supported by the National Key R&D Program of China [2018YFB2000704], National Natural Science Foundation of China [Grant Nos. 51890881 and 51775486], and the Fundamental Research Funds for the Central Universities.
+References
+[1]
+J.S. Kwon, S. Son, J.Y. Heo, J.I. Lee
+Compact heat exchangers for supercritical CO2 power cycle application
+Energ. Convers. Manage., 209 (2020), Article 112666
+View PDF
+View articleView in ScopusGoogle Scholar
+[2]
+A.P.C. Sarmiento, V.H.T. Soares, G.G. Carqueja, J.V.C. Batista, F.H. Milanese, M.B.H. Mantelli
+Thermal performance of diffusion-bonded compact heat exchangers
+Int. J. Therm. Sci., 153 (2020), Article 106384
+View PDF
+View articleView in ScopusGoogle Scholar
+[3]
+Z. Tong, T. Cao, G. Zang, S. Hu, G. Liu, Y. Wang
+Performance analysis of capillary front-end heat exchanger for subway tunnel
+Appl. Therm. Eng., 174 (2020), Article 115360
+View PDF
+View articleView in ScopusGoogle Scholar
+[4]
+G. Wu, J. Yang, J. Shang, D. Fang
+A rotary fluid power converter for improving energy efficiency of hydraulic system with variable load
+Energy, 195 (2020), Article 116957
+View PDF
+View articleView in ScopusGoogle Scholar
+[5]
+X. He, G. Xiao, B. Hu, L. Tan, H. Tang, S. He, Z. He
+The applications of energy regeneration and conversion technologies based on hydraulic transmission systems: a review
+Energ. Convers. Manage., 205 (2020), Article 112413
+View PDF
+View articleView in ScopusGoogle Scholar
+[6]
+T. Wilberforce, Z.E. Hassan, E. Ogungbemi, O. Ijaodola, F.N. Khatib, A. Durrant, J. Thompson, A. Baroutaji, A.G. Olabi
+A comprehensive study of the effect of bipolar plater (BP) geometry design on the performance of proton exchange membrane (PEM) fuel cells
+Renew. Sust. Energ. Rev., 111 (2019), pp. 236-260
+View PDF
+View articleView in ScopusGoogle Scholar
+[7]
+H.C. Kang, K.M. Jum, Y.J. Sohn
+Performance of unit PEM fuel cells with a leaf-vein-simulating flow field-patterned bipolar plate
+Int. J. Hydrogen Energ., 44 (2019), pp. 24036-24042
+View PDF
+View articleView in ScopusGoogle Scholar
+[8]
+S.R. Jang, J.I. Kim, C.H. Park, C.S. Kim
+Development of Y-shaped small diameter artificial blood vessel with controlled topography via a modified electrospinning method
+Mater. Lett., 264 (2020), Article 127113
+View PDF
+View articleView in ScopusGoogle Scholar
+[9]
+D. Wang, Y. Xu, L. Wang, X. Wang, S. Yan, G. Yilmaz, Q. Li, L.S. Turing
+Long-term nitric oxide release for rapid endothelization in expanded polytetrafluoroethylene small-diameter artificial blood vessel grafts
+Appl. Surf. Sci., 507 (2020), Article 1450028
+Google Scholar
+[10]
+K.V. Wong, A. Hernandez
+A review of additive manufacturing
+ISRN Mech. Eng. (2012), pp. 1-10
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[11]
+A. Paolini, S. Kollmannsberger, E. Rank
+Additive manufacturing in construction: a review on processes, applications, and digital planning methods
+Addit. Manuf., 30 (2019), Article 100894
+View PDF
+View articleView in ScopusGoogle Scholar
+[12]
+T.D. Ngo, A. Kashani, G. Imbalzano, K.T.Q. Nguyen, D. Hui
+Additive manufacturing (3D printing): a review of materials, methods, applications and challenges
+Compos. Part B-Eng., 143 (2018), pp. 172-196
+View PDF
+View articleView in ScopusGoogle Scholar
+[13]
+Y. Oh, C. Zhou, S. Behdad
+Part decomposition and assembly-based (Re) design for additive manufacturing: a review
+Addit. Manuf., 22 (2018), pp. 230-242
+View PDF
+View articleView in ScopusGoogle Scholar
+[14]
+N. Li, S. Huang, G. Zhang, R. Qin, W. Liu, H. Xiong, G. Shi, J. Blackburn
+Progress in additive manufacturing on new materials: a review
+J. Mater. Sci. Technol. Res., 35 (2019), pp. 242-269
+View PDF
+View articleView in ScopusGoogle Scholar
+[15]
+J. Li, X. Zhou, M. Brochu, N. Provatas, Y.F. Zhao
+Solidification microstructure simulation of Ti-6Al-4V in metal additive manufacturing: a review
+Addit. Manuf., 31 (2020), Article 100989
+View PDF
+View articleView in ScopusGoogle Scholar
+[16]
+A.D. Plessis, I. Yadroitsava, I. Yadroitsev
+Effects of defects on mechanical properties in metal additive manufacturing: a review focusing on X-ray tomography insights
+Mater. Des., 187 (2020), Article 108385
+Google Scholar
+[17]
+P. Bajaj, A. Hariharan, A. Kini, P. Kurnsteiner, D. Raabe, E.A. Jagle
+Steels in additive manufacturing: a review of their microstructure and properties
+Mater. Sci. Eng. A, 772 (2020), Article 138633
+View PDF
+View articleView in ScopusGoogle Scholar
+[18]
+A. Aramian, S.M.J. Razavi, Z. Sadeghian, F. Berto
+A review of additive manufacturing of cermets
+Addit. Manuf., 33 (2020), Article 101130
+View PDF
+View articleView in ScopusGoogle Scholar
+[19]
+E. Hosseini, V.A. Popovich
+A review of mechanical properties of additively manufactured Inconel 718
+Addit. Manuf., 30 (2019), Article 100877
+View PDF
+View articleView in ScopusGoogle Scholar
+[20]
+K. Palanikumar, M. Mudhukrishnan, P. Soorya Prabha
+Technologies in additive manufacturing for fiber reinforced composite materials: a review
+Curr. Opin. Chem. Eng., 28 (2020), pp. 51-59
+Google Scholar
+[21]
+Y. Li, Z. Feng, L. Huang, K. Essa, E. Bilotti, H. Zhang, T. Peijs, L. Hao
+Additive manufacturing high performance graphene-based composites: a review
+Compos. Part A-Appl. S., 124 (2019), Article 105483
+View PDF
+View articleView in ScopusGoogle Scholar
+[22]
+R. Galante, C.G. Figueiredo-Pina, A.P. Serro
+Additive manufacturing of ceramics for dental applications: a review
+Dent. Mater., 35 (2019), pp. 825-846
+View PDF
+View articleView in ScopusGoogle Scholar
+[23]
+F. Liravi, E. Toyserkani
+Additive manufacturing of silicone structures: a review and prospective
+Addit. Manuf., 24 (2018), pp. 232-242
+View PDF
+View articleView in ScopusGoogle Scholar
+[24]
+B. Wu, Z. Pan, D. Ding, D. Cuiuri, H. Li, J. Xu, J. Norrish
+A review of the wire arc additive manufacturing of metals: properties, defects and quality improvement
+J. Manuf. Process., 35 (2018), pp. 127-139
+View PDF
+View articleView in ScopusGoogle Scholar
+[25]
+S. Liu, Y.C. Shin
+Additive manufacturing of Ti6Al4V alloy: a review
+Mater. Des., 164 (2019), Article 107552
+View PDF
+View articleView in ScopusGoogle Scholar
+[26]
+Y. Hu, W. Cong
+A review on laser deposition-additive manufacturing of ceramics and ceramic reinforced metal matrix composites
+Ceram. Int., 44 (2018), pp. 20599-20612
+View PDF
+View articleView in ScopusGoogle Scholar
+[27]
+H. Fayazfar, M. Salarian, A. Rogalsky, D. Sarker, P. Russo, V. Paserin, E. Toyserkani
+A critical review of powder-based additive manufacturing of ferrous alloys: process parameters, microstructure and mechanical properties
+Mater. Des., 144 (2018), pp. 98-128
+View PDF
+View articleView in ScopusGoogle Scholar
+[28]
+H. Attar, S. Ehtemam-Haghighi, D. Kent, M.S. Dargusch
+Recent developments and opportunities in additive manufacturing of titanium-based matrix composites: a review
+Int. J. Mach. Tool. Manuf., 133 (2018), pp. 85-102
+View PDF
+View articleView in ScopusGoogle Scholar
+[29]
+P. Parandoush, D. Lin
+A review on additive manufacturing of polymer-fiber composites
+Compos. Struct., 182 (2017), pp. 36-53
+View PDF
+View articleView in ScopusGoogle Scholar
+[30]
+S. Singh, S. Ramakrishna, R. Singh
+Materials issues in additive manufacturing: a review
+J. Manuf. Process., 25 (2017), pp. 185-200
+View PDF
+View articleView in ScopusGoogle Scholar
+[31]
+M. Elahinia, N.S. Moghaddam, M.T. Andani, A. Amerinatanzi, B.A. Bimber, R.F. Hamilton
+Fabrication of NiTI through additive manufacturing: a review
+Prog. Mater. Sci., 83 (2016), pp. 630-663
+View PDF
+View articleView in ScopusGoogle Scholar
+[32]
+E.A. Perigo, J. Jacimovic, F. Garcia Ferre, L.M. Scherf
+Additive manufacturing of magnetic materials
+Addit. Manuf., 30 (2019), Article 100870
+View PDF
+View articleView in ScopusGoogle Scholar
+[33]
+J.J. Lewandowski, M. Seifi
+Metal additive manufacturing: a review of mechanical properties
+Annu. Rev. Mater. Res., 46 (2016), pp. 151-186
+View at publisherCrossrefView in ScopusGoogle Scholar
+[34]
+C. Culmone, G. Smit, P. Breedveld
+Additive manufacturing of medical instruments: a state-of-the-art review
+Addit. Manuf., 27 (2019), pp. 461-473
+View PDF
+View articleView in ScopusGoogle Scholar
+[35]
+M. Trivedi, J. Jee, S. Silva, C. Blomgren, V.M. Pontinha, D.L. Dixon, B.V. Tassel, M.J. Bortner, C. Williams, E. Gilmer, A.P. Haring, J. Halper, B.N. Johnson, Z. Kong, M.S. Halquist, P.F. Rocheleau, T.E. Long, T. Roper, D.S. Wijesinghe
+Additive manufacturing of pharmaceuticals for precision medicine applications: a review of the promises and perils in implementation
+Addit. Manuf., 23 (2018), pp. 319-328
+View PDF
+View articleView in ScopusGoogle Scholar
+[36]
+U. Fasel, D. Keidel, L. Baumann, G. Cavolina, M. Eichenhofer, P. Ermanni
+Composite additive manufacturing of morphing aerospace structures
+Manuf. Lett., 23 (2020), pp. 85-88
+View PDF
+View articleView in ScopusGoogle Scholar
+[37]
+M. Oyesola, K. Mpofu, N. Mathe
+A techno-economic analytical approach of laser-based additive manufacturing processes for aerospace application
+Procedia Manuf., 35 (2019), pp. 155-163
+View PDF
+View articleView in ScopusGoogle Scholar
+[38]
+E.B. Joyee, Y. Pan
+Multi-material additive manufacturing of functional soft robot
+Procedia Manuf., 34 (2019), pp. 566-573
+View PDF
+View articleView in ScopusGoogle Scholar
+[39]
+D.C. Daniel, P. Clayton, W.J. O’Brien, C. Seepersad, M. Juenger, R. Ferron, S. Salamone
+Applications of additive manufacturing in the construction industry – a forward-looking review
+Autom. Constr., 89 (2018), pp. 110-119
+Google Scholar
+[40]
+K.M. Stone
+Review of literature on heat transfer enhancement in compact heat exchanger
+ACRC TR-105 (1996), pp. 1-39
+Google Scholar
+[41]
+https://www.3dprintingmedia.network/conflux-technology-reinventing-heat-exchangers/.
+Google Scholar
+[42]
+https://www.ge.com/reports/thats-hot-this-lung-inspired-3d-printed-part-for-cooling-co2-could-take-power-generation-to-the-next-level/.
+Google Scholar
+[43]
+R. Tiwari, R. Andhare, A. Shooshtari, M. Ohadi
+Development of an additive manufacturing-enabled compact manifold microchannel heat exchanger
+Appl. Therm. Eng., 147 (2019), pp. 781-788
+View PDF
+View articleView in ScopusGoogle Scholar
+[44]
+S.M. Thompson, Z.S. Aspin, N. Shamsaei, A. Elwany, L. Bian
+Additive manufacturing of heat exchangers: a case study on a multi-layered Ti-6Al-4V oscillating heat pipe
+Addit. Manuf., 8 (2015), pp. 163-174
+View PDF
+View articleView in ScopusGoogle Scholar
+[45]
+M. Cardone, B. Gargiulo
+Design and experimental testing of a mini channel heat exchanger made in additive manufacturing
+Energy Procedia, 148 (2018), pp. 932-939
+View PDF
+View articleView in ScopusGoogle Scholar
+[46]
+D. Kong, Y. Zhang, S. Liu
+Convective heat transfer enhancement by novel honeycomb-core in sandwich panel exchanger fabricated by additive manufacturing
+Appl. Therm. Eng., 163 (2019), Article 114408
+View PDF
+View articleView in ScopusGoogle Scholar
+[47]
+M.A. Arie, A.H. Shooshtari, S.V. Dessiatoun, M.M. Ohadi
+Performance characterization of an additively manufactured titanium (ti64) heat exchanger for an air-water cooling application
+Proceedings of the ASME 2016 Heat Transfer Summer Conference, Washington, DC, USA (2016)
+Google Scholar
+[48]
+M. Arie, A. Shooshtari, M. Ohadi
+Experimental characterization of an additively manufactured heat exchanger for dry cooling of power plants
+Appl. Therm. Eng., 129 (2018), pp. 187-198
+View PDF
+View articleView in ScopusGoogle Scholar
+[49]
+X. Zhang, R. Tiwari, A.H. Shooshtari, M. Ohadi
+An additively manufactured metallic manifold-microchannel heat exchanger for high temperature applications
+Appl. Therm. Eng., 143 (2018), pp. 899-908
+View PDF
+View articleView in ScopusGoogle Scholar
+[50]
+H. Brooks, K. Brigden
+Design of conformal cooling layers with self-supporting lattices for additively manufactured tooling
+Addit. Manuf., 11 (2016), pp. 16-22
+View PDF
+View articleView in ScopusGoogle Scholar
+[51]
+B. Kwon, L. Liebenberg, A.M. Jacobi, W.P. King
+Heat transfer enhancement of internal laminar flows using additively manufactured static mixers
+Int. J. Heat Mass Transf. - Theory Appl., 137 (2019), pp. 292-300
+View PDF
+View articleView in ScopusGoogle Scholar
+[52]
+W.C. Yameen, N.A. Piascik, A.K. Miller, R.C. Clemente, J.Z. Benner, A.D. Santamaria, S.A. Niknam, M. Mortazavi
+Modified manifold-microchannel heat exchangers fabricated based on additive manufacturing: experimental characterization
+Proceedings of the ASME 2019 Heat Transfer Summer Conference (2019)
+Google Scholar
+[53]
+https://www.makepartsfast.com/metal-additive-manufacturing-enables-lean-green-heat-exchanger/.
+Google Scholar
+[54]
+A.B.M. Saifullah, S.H. Masood, I. Sbarski
+Thermal–structural analysis of bi-metallic conformal cooling for injection moulds
+Int. J. Adv. Manuf. Technol., 62 (2012), pp. 123-133
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[55]
+M. Hearunyakij, S. Sontikaew, D. Sriprapai
+Improvement in the cooling performance of conformal mold cooling by using ﬁn concept
+Int. J. Mining Metall. Mech. Eng., 2 (2014), pp. 41-46
+Google Scholar
+[56]
+H. Moon, N. Miljkovic, W.P. King
+High power density thermal energy storage using additively manufactured heat exchangers and phase change material
+Int. J. Heat Mass Trans., 153 (2020), Article 119591
+View PDF
+View articleView in ScopusGoogle Scholar
+[57]
+X. Xu, E. Sachs, S. Allen
+The design of conformal cooling channels in injection molding tooling
+Polymer Eng. Sci., 41 (2001), pp. 1265-1279
+View in ScopusGoogle Scholar
+[58]
+J. Mazumder, D. Dutta, N. Kikuchi, A. Ghosh
+Closed loop direct metal deposition: art to part
+Laser Mater. Process., 34 (2000), pp. 397-414
+View PDF
+View articleView in ScopusGoogle Scholar
+[59]
+D. King, T. Tansey
+Rapid tooling: selective laser sintering injection tooling
+J. Mater. Process. Technol., 132 (2003), pp. 42-48
+View PDF
+View articleView in ScopusGoogle Scholar
+[60]
+L.E. Rannar, A. Glad, C.G. Gustafson
+Efﬁcient cooling with tool inserts manufactured by electron beam melting
+Rapid Prototyping J., 13 (2007), pp. 128-135
+View at publisherCrossrefView in ScopusGoogle Scholar
+[61]
+D.G. Ahn, H.W. Kim, S.H. Park, H.S. Kim
+Manufacture of mold with a high energy efﬁciency using rapid manufacturing process
+Proceeding of the 10th International Conference on Numerical Method in Industrial Forming Process (2010), pp. 185-191
+View at publisherCrossrefView in ScopusGoogle Scholar
+[62]
+I. Ilyas, C. Taylor, K. Dalgarno, J. Gosden
+Design and manufacture of injection mould tool inserts produced using indirect SLS and machining processes
+Rapid Prototyping J., 16 (2010), pp. 429-440
+View at publisherCrossrefView in ScopusGoogle Scholar
+[63]
+T. Wu, S.A. Jahan, P. Kumar, A. Tovar, H. Mounayri, Y. Zhang, R. Nalim
+A framework for optimizing the design of injection molds with conformal cooling for additive manufacturing
+Procedia Manuf., 1 (2015), pp. 404-415
+View PDF
+View articleView in ScopusGoogle Scholar
+[64]
+J. Vasco, F.M. Barreiros
+Additive manufacturing applied to injection moulding: technical and economic impact
+Rapid Prototyping J., 25 (2019), pp. 1241-1249
+View articleCrossrefView in ScopusGoogle Scholar
+[65]
+Y. Wang, K.M. Yu, C.L. Wang
+Spiral and conformal cooling in plastic injection molding
+J. Comp. Aided Design, 63 (2015), pp. 1-11
+View PDF
+View articleGoogle Scholar
+[66]
+Y. Wang, K.M. Yu, C.L. Wang, Y. Zhang
+Automatic design of conformal cooling circuits for rapid tooling
+J. Comp. Aided Design, 43 (2011), pp. 1001-1010
+View PDF
+View articleView in ScopusGoogle Scholar
+[67]
+K.M. Au, K.M. Yu
+Modeling of multi-connected porous passageway for mould cooling
+Comp. Aided Design, 43 (2011), pp. 989-1000
+View PDF
+View articleView in ScopusGoogle Scholar
+[68]
+T. Wu, A. Tovar, Design for additive manufacturing of conformal cooling channels using thermal-fluid topology optimization and application in injection molds, Proceedings of the ASME 2018 International Design Engineering Technical Conferences and Computers and Information in Engineering Conference.
+Google Scholar
+[69]
+Association National Fluid Power
+Improving the Design, Manufacture and Function of Fluid Power Components and Systems-2019 NFPA Technology Roadmap
+(2019)
+Google Scholar
+[70]
+Moog
+Overview of Moog Additive Manufacturing
+(2018)
+Google Scholar
+[71]
+D. Sher
+First 3D Printed Hydraulic Manifold Successfully Flies on Airbus A380 Aircraft
+(2017)
+Https://Www.3dprintingmedia.Network/First-3d-Printed-Hydraulic-Manifold
+Google Scholar
+[72]
+Renishaw
+Hydraulic Block Manifold Redesign for Additive Manufacturing
+(2016)
+Google Scholar
+[73]
+Y. Zhu, Y. Yang, T. Peng, Y. Wang, L. Zhang, H. Yang
+Localized property design and gradient processing of a hydraulic valve body using selective laser melting
+IEEE-ASME T. Mech. Under Revi. (2020)
+Google Scholar
+[74]
+M. Pietropaoli, R. Ahlfeld, F. Montomoli, A. Ciani, M. D’Ercole
+Design for additive manufacturing: internal channel optimization
+Proc. ASME Turbo Expo., 5B-2016 (2016), pp. 1-9
+Google Scholar
+[75]
+M. Pietropaoli, R. Ahlfeld, F. Montomoli, A. Ciani, M. D’Ercole
+Design for additive manufacturing: internal channel optimization
+J. Eng. Gas Turb. Power, 139 (2017), pp. 1-8
+Google Scholar
+[76]
+S. Ghosh, J.S. Kapat
+Topology optimization of serpentine channels for minimization of pressure loss and maximization of heat transfer performance as applied for additive manufacturing
+Proc. ASME Turbo Expo., 5B-2019 (2019), pp. 1-10
+Google Scholar
+[77]
+B. Zardin, G. Cillo, C.A. Rinaldini, E. Mattarelli, M. Borghi
+Pressure losses in hydraulic manifolds
+Energies, 10 (2017), p. 310
+View at publisherCrossrefView in ScopusGoogle Scholar
+[78]
+T. Verstraete, F. Coletti, J. Bulle, T. Vanderwielen, T. Arts
+Optimization of a U-bend for minimal pressure loss in internal cooling channels- part I: numerical method
+J. Turbomach., 135 (2013), pp. 1-10
+View in ScopusGoogle Scholar
+[79]
+B. Zardin, G. Cillo, M. Borghi, A. D’Adamo, S. Fontanesi
+Pressure losses in multiple-elbow paths and in V-bends of hydraulic manifolds
+Energies, 10 (2017), p. 788
+View at publisherCrossrefView in ScopusGoogle Scholar
+[80]
+J. Schmelzle, E.V. Kline, C.J. Dickman, E.W. Reutzel, G. Jones, T.W. Simpson
+(Re)Designing for part consolidation: understanding the challenges of metal additive manufacturing
+J. Mech. Design, 137 (2015), Article 111404
+Google Scholar
+[81]
+A.A. Alshare, F. Calzone, M. Muzzupappa
+Hydraulic manifold design via additive manufacturing optimized with CFD and fluid-structure interaction simulations
+Rapid Prototyping J., 25 (2019), pp. 1516-1524
+View articleCrossrefView in ScopusGoogle Scholar
+[82]
+Y. Sim, J. Kwak, S.-Y. Kim, et al.
+Formation of 3D graphene–Ni foam heterostructures with enhanced performance and durability for bipolar plates in a polymer electrolyte membrane fuel cell
+J. Mater. Chem., 6 (2018), pp. 1504-1512
+View at publisherCrossrefView in ScopusGoogle Scholar
+[83]
+L. Wang, Y. Tao, Z. Zhang, et al.
+Molybdenum carbide coated 316L stainless steel for bipolar plates of proton exchange membrane fuel cells
+Int. J. Hydrogen Energy, 44 (2019), pp. 4940-4950
+View PDF
+View articleView in ScopusGoogle Scholar
+[84]
+C. Turan, O.N. Cora, M. Koç
+Effect of manufacturing processes on contact resistance characteristics of metallic bipolar plates in PEM fuel cells
+Int. J. Hydrogen Energy, 36 (2011), pp. 12370-12380
+View PDF
+View articleView in ScopusGoogle Scholar
+[85]
+Xianguo Li, Imran Sabir
+Review of bipolar plates in PEM fuel cells: flow-ﬁeld designs
+Int. J. Hydrogen Energy, 30 (2005), pp. 359-371
+View PDF
+View articleView in ScopusGoogle Scholar
+[86]
+E. Hontañón, M.J. Escudero, C. Bautista, P.L. Garcı́a-Ybarra, L. Daza
+Optimization of flow-field in polymer electrolyte membrane fuel cells using computational fluid dynamics techniques
+J. Power Sources, 86 (2000), pp. 363-368
+View PDF
+View articleView in ScopusGoogle Scholar
+[87]
+A. Iranzo, C.H. Arredondo, A.M. Kannan, F. Rosa
+Biomimetic flow fields for proton exchange membrane fuel cells: a review of design trends
+Energy, 190 (2020), Article 116435
+View PDF
+View articleView in ScopusGoogle Scholar
+[88]
+J.P. Kloess, X. Wang, J. Liu, Z. Shi, L. Guessous
+Investigation of bio-inspired ﬂow channel designs for bipolar plates in proton exchange membrane fuel cells
+J. Power Sources, 188 (2009), pp. 132-140
+View PDF
+View articleView in ScopusGoogle Scholar
+[89]
+D. Ouellette, A. Ozden, M. Ercelik, C.O. Colpan, H. Ganjehsarabi, X. Li
+Assessment of different bio-inspired flow fields for direct methanol fuel cells through 3D modeling and experimental studies
+Int. J. Hydrogen Energy, 43 (2018), pp. 1152-1170
+View PDF
+View articleView in ScopusGoogle Scholar
+[90]
+N. Bunmark, S. Limtrakul, T. Vatanatham, J. Gostick
+Assisted water effect on performance
+Int. J. Hydrogen Energy, 35 (2010), pp. 6887-6896
+View PDF
+View articleView in ScopusGoogle Scholar
+[91]
+R. Roshandel, F. Arbabi, G.K. Moghaddam
+Simulation of an innovative flow field design based on a bioinspired pattern for PEM fuel cells
+Renew. Energy, 41 (2012), pp. 86-95
+View PDF
+View articleView in ScopusGoogle Scholar
+[92]
+S. Maharudrayya, S. Jayanti, A.P. Deshpande
+Pressure drop and flow distribution in multiple parallel-channel conﬁgurations used in proton-exchange membrane fuel cell stacks
+J. Power Sources, 157 (2006), pp. 358-367
+View PDF
+View articleView in ScopusGoogle Scholar
+[93]
+J.G. Carton, A.G. Olabi
+Representative model and flow characteristics of open pore cellular foam and potential use in proton exchange membrane fuel cells
+Int. J. Hydrogen Energy, 40 (2015), pp. 5726-5738
+View PDF
+View articleView in ScopusGoogle Scholar
+[94]
+H. Kahraman, M.F. Orhan
+Flow field bipolar plates in a proton exchange membrane fuel cell: analysis & modeling
+Energy Convers. Manage., 133 (2017), pp. 363-384
+View PDF
+View articleView in ScopusGoogle Scholar
+[95]
+http://www.hydrogencarsnow.com/index.php/uncategorized/dtu-researchers-print-a-fuel-cell-in-3d/.
+Google Scholar
+[96]
+https://www.fch.europa.eu/news/cell3ditor-project-towards-industrial-production-3d-printed-solid-oxide-fuel-cells-sofc-stacks.
+Google Scholar
+[97]
+P. Trogadas, J.I.S. Cho, T.P. Neville, J. Marquis, B. Wu, D.J.L. Brett, M.O. Coppens
+A lung-inspired approach to scalable and robust fuel cell design
+Energy Environ. Sci., 11 (2018), pp. 136-143
+View at publisherCrossrefView in ScopusGoogle Scholar
+[98]
+Y. Cai, Z. Fang, B. Chen, T. Yang, Z. Tu
+Numerical study on a novel 3D cathode flow field and evaluation criteria for the PEM fuel cell design
+Energy, 161 (2018), pp. 28-37
+View PDF
+View articleView in ScopusGoogle Scholar
+[99]
+H. Piri
+Flow Visualization in 3D Printed PEM Fuel Cell Bipolar Plates, MS Thesis
+University of British Columbia, Vancouver, Canada (2017)
+Google Scholar
+[100]
+Y. Zhang, Y. Yu, A. Akkouch, A. Dababneh, F. Dolati, I.T. Ozbolat
+In vitro study of directly bioprinted perfusable vasculature conduits
+Biomater. Sci., 3 (2015), pp. 134-143
+View in ScopusGoogle Scholar
+[101]
+C. Kucukgul, S.B. Ozler, I. Inci, E. Karakas, S. Irmak, D. Gozuacik, A. Taralp, B. Koc
+3D bioprinting of biomimetic aortic vascular constructs with self‐supporting cells
+Biotechnol. Bioeng., 112 (2015), pp. 811-821
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[102]
+D.F. Wang, Y.Y. Xu, L.Q. Li, L.S. Turng
+Artificial small-diameter blood vessels: materials, fabrication, surface modification, mechanical properties, and bioactive functionalities
+J. Mater. Chem. B, 8 (2020), pp. 1801-1822
+View at publisherCrossrefView in ScopusGoogle Scholar
+[103]
+R. Roeder, J. Wolfe, N. Lianakis, T. Hinson, L.A. Geddes, J. Obermiller
+Compliance, elastic modulus, and burst pressure of small‐intestine submucosa (SIS), small‐diameter vascular grafts
+J. Biomed. Mater. Res., 47 (1999), pp. 65-70
+View in ScopusGoogle Scholar
+[104]
+Y.C. Chiu, Y.F. Shen, A.K.X. Lee, S.H. Lin, Y.C. Wu, Y.W. Chen
+3D printing of amino resin-based photosensitive materials on multi-parameter optimization design for vascular engineering applications
+Polymers, 11 (2019), p. 1394
+View at publisherCrossrefView in ScopusGoogle Scholar
+[105]
+V.K. Lee, D.Y. Kim, H. Ngo, Y. Lee, L. Seo, S.S. Yoo, P.A. Vincent, G. Dai
+Creating perfused functional vascular channels using 3D bio-printing technology
+Biomater, 35 (2014), pp. 8092-8102
+View PDF
+View articleView in ScopusGoogle Scholar
+[106]
+Y. Zhang, Y. Yu, A. Akkouch, A. Dababneh, F. Dolati, I.T. Ozbolat
+In vitro study of directly bioprinted perfusable vasculature conduits
+Biomater. Sci., 3 (2015), pp. 134-143
+View in ScopusGoogle Scholar
+[107]
+W.S. Sheridan, G.P. Duffy, B.P. Murphy
+Mechanical characterization of a customized decellularized scaffold for vascular tissue engineering
+J. Mech. Behav. Biomed. Mater., 8 (2012), pp. 58-70
+View PDF
+View articleView in ScopusGoogle Scholar
+[108]
+L. Lop, A. Bonetti, F. Naso, et al.
+Decellularized allogeneic heart valves demonstrate self-regeneration potential after a long-term preclinical evaluation
+PLoS One, 9 (2014), pp. 1-15
+Google Scholar
+[109]
+J.M. Caves, V.A. Kumar, A.W. Martinez, J. Kim, C.M. Ripberger, C.A. Haller, E.L. Chaikof
+The use of microfiber composites of elastin-like protein matrix reinforced with synthetic collagen in the design of vascular grafts
+Biomater, 31 (2010), pp. 7175-7182
+View PDF
+View articleView in ScopusGoogle Scholar
+[110]
+A. Salerno, S. Zeppetelli, E. Di Maio, S. Iannace, P.A. Netti
+Processing/structure/property relationship of multi‐scaled PCL and PCL–HA composite scaffolds prepared via gas foaming and NaCl reverse templating
+Biotechnol. Bioeng., 108 (2011), pp. 963-976
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[111]
+C. Norotte, F.S. Marga, L.E. Niklason, G. Forgacs
+Scaffold-free vascular tissue engineering using bioprinting
+Biomater, 30 (2009), pp. 5910-5917
+View PDF
+View articleView in ScopusGoogle Scholar
+[112]
+D.W. Courtman, C.A. Pereira, V. Kashef, D. McComb, J.M. Lee, G.J. Gregory
+Development of a pericardial acellular matrix biomaterial: biochemical and mechanical effects of cell extraction
+J. Biomed. Mater. Res., 28 (1994), pp. 655-666
+View at publisherCrossrefView in ScopusGoogle Scholar
+[113]
+S.P. Hoerstrup, G. Zund, R. Sodian, A.M. Schnell, J. Grunenfelder, M.I. Turina
+Tissue engineering of small caliber vascular grafts
+Eur. J. Cardio-Thorac., 20 (2001), pp. 164-169
+View at publisherCrossrefView in ScopusGoogle Scholar
+[114]
+Q. Gao, Y. He, J. Fu, A. Liu, L. Ma
+Coaxial nozzle-assisted 3D bioprinting with built-in microchannels for nutrients delivery
+Biomater, 61 (2015), pp. 203-215
+View PDF
+View articleView in ScopusGoogle Scholar
+[115]
+F. Dolati, Y. Yu, Y. Zhang, A.M.D. Jesus, E.A. Sander, I.T. Ozbolat
+In vitro evaluation of carbon-nanotube-reinforced bioprintable vascular conduits
+Nanotechnology, 25 (2014), Article 145101
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[116]
+J. Jung, K. Kim, S.C. Choi, J. Oh
+Microfluidics-assisted rapid generation of tubular cell-laden microgel inside glass capillaries
+Biotechnol. Lett., 36 (2014), pp. 1549-1554
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[117]
+R. Attalla, E. Puersten, N. Jain, P.R. Selvaganapathy
+3D bioprinting of heterogeneous bi- and tri-layered hollow channels within gel scaffolds using scalable multi-axial microfluidic extrusion nozzle
+Biofabrication, 11 (2018), Article 015012
+View at publisher
+CrossrefGoogle Scholar
+[118]
+A.G. Tabriz, M.A. Hermida, N.R. Leslie, W. Shu
+Three-dimensional bioprinting of complex cell laden alginate hydrogel structures
+Biofabrication, 7 (2015), Article 045012
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[119]
+K. Christensen, C. Xu, W. Chai, Z. Zhang, J. Fu, Y. Huang
+Freeform inkjet printing of cellular structures with bifurcations
+Biotechnol. Bioeng., 112 (2015), pp. 1047-1055
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[120]
+C. Xu, Z. Zhang, K. Christensen, Y. Huang, J. Fu, R.R. Markwald
+Freeform vertical and horizontal fabrication of alginate-based vascular-like tubular constructs using inkjetting
+J. Manuf. Sci. Eng.- ASEM, 136 (2014), p. 61020
+Google Scholar
+[121]
+Y. Jin, A.M. Compaan, W. Chai, Y. Huang
+Functional nanoclay suspension for printing-then-Solidification of liquid materials
+ACS Appl. Mater. Inter., 9 (2017), pp. 20057-20066
+View at publisherCrossrefView in ScopusGoogle Scholar
+[122]
+A. Ovsianikov, M. Gruene, M. Pflaum, L. Koch, F. Maiorana, M. Wilhelmi, A. Haverich, B. Chichkow
+Laser printing of cells into 3D scaffolds
+Biofabrication, 2 (2010), Article 014104
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[123]
+A. Dababneh, I.T. Ozbolat
+Bioprinting technology: a current state-of-the-Art review
+J. Manuf. Sci. Eng.-ASME, 136 (2014), p. 61016
+Google Scholar
+[124]
+C.K. Stimpson, J.C. Snyder, K.A. Thole, D. Mongillo
+Roughness effects on flow and heat transfer for additively manufactured channels
+J. Turbomach., 138 (2016), Article 051008
+View in ScopusGoogle Scholar
+[125]
+K.L. Kirsch, K.A. Thole
+Heat transfer and pressure loss measurements in additively manufactured wavy microchannels
+J. Turbomach., 139 (2016), Article 011007
+Google Scholar
+[126]
+K.L. Kirsch, K.A. Thole
+Pressure loss and heat transfer performance for additively and conventionally manufactured pin fin arrays
+Int. J. Heat Mass Transf., 108 (2017), pp. 2502-2513
+View PDF
+View articleView in ScopusGoogle Scholar
+[127]
+J.C. Snyder, C.K. Stimpson, K.A. Thole, D. Mongillo
+Build direction effects on additively manufactured channels
+J. Turbomach., 138 (2016), Article 051006
+View in ScopusGoogle Scholar
+[128]
+M.J. Rhodes, M.R. Taylor, J.G. Monroe, S.M. Thompson
+Experimental investigation of a flat-plate oscillating heat pipe with modified evaporator and condenser
+ASME 2014 Int. Mech. Eng. Congr. Expo., Montreal, Canada (2014)
+pp. IMECE2014–39188
+Google Scholar
+[129]
+P. Cheng, J. Dong, S.M. Thompson, H.B. Ma
+Heat transfer in the bulk and thin film fluid regions of a rectangular micro groove
+J. Thermophys. Heat Transf., 26 (2012), pp. 108-114
+View in ScopusGoogle Scholar
+[130]
+J.C. Snyder, C.K. Stimpson, K.A. Thole, D. Mongillo
+Build direction effects on additively manufactured channels
+J. Turbomach., 138 (2016), Article 051006, 10.1115/1.4032168
+View at publisherView in ScopusGoogle Scholar
+[131]
+A.M. Kamat, Y. Pei
+An analytical method to predict and compensate for residual stress-induced deformation in overhanging regions of internal channels fabricated using powder bed fusion
+Addit. Manuf., 29 (2019), Article 100796, 10.1016/j.addma.2019.100796
+View PDF
+View articleView in ScopusGoogle Scholar
+[132]
+P. Mercelis, J.P. Kruth
+Residual stresses in selective laser sintering and selective laser melting
+Rapid Prototyp. J., 12 (2006), pp. 254-265, 10.1108/13552540610707013
+View at publisherView in ScopusGoogle Scholar
+[133]
+B. Vandenbroucke, J. Kruth
+Selective laser melting of biocompatible metals for rapid manufacturing of medical parts
+Rapid Prototyp. J., 13 (2007), pp. 196-203, 10.1108/13552540710776142
+View in ScopusGoogle Scholar
+[134]
+J.C. Snyder, C.K. Stimpson, K.A. Thole, D.J. Mongillo
+Build direction effects on microchannel tolerance and surface roughness
+J. Mech. Des., 137 (2015), Article 111411, 10.1115/1.4031071
+Google Scholar
+[135]
+C.K. Stimpson, J.C. Snyder, K.A. Thole, D. Mongillo
+Scaling roughness effects on pressure loss and heat transfer of additively manufactured channels
+J. Turbomach., 139 (2016), Article 021003, 10.1115/1.4034555
+Google Scholar
+[136]
+B.D. Gould, J.A. Rodgers, M. Schuette, K. Bethune, S. Louis, R. Rocheleau, K. Swider-Lyonsa
+Performance and limitations of 3D-Printed bipolar plates in fuel cells
+ECS J. Solid State Sci. Technol., 4 (2015), pp. 3063-3068
+Google Scholar
+[137]
+E. MacDonald, R. Wicker
+Multiprocess 3D printing for increasing component functionality
+Science, 353 (2016), Article aaf2093
+View in ScopusGoogle Scholar
+[138]
+A. Iranzo, C.H. Arredondo, A.M. Kannan, F. Rosa
+Biomimetic flow fields for proton exchange membrane fuel cells: a review of design trends
+Energy, 190 (2020), Article 116435
+View PDF
+View articleView in ScopusGoogle Scholar
+[139]
+Y. Yang, X. Song, X. Li, Z. Chen, C. Zhou, Q. Zhou, Y. Chen
+Recent progress in biomimetic additive manufacturing technology: from materials to functional structures
+Adv. Mater., 30 (36) (2018), Article 1706539
+View in ScopusGoogle Scholar
+Cited by (0)
+1
+Both authors contribute equally to the paper.
+View Abstract
+© 2020 Elsevier B.V. All rights reserved.
+About ScienceDirect
+Remote access
+Contact and support
+Terms and conditions
+Privacy policy
+Cookie settings
+
+All content on this site: Copyright © 2025 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply.
+
+×
+Help us learn about your workflow
+
+We would like to learn more about how you use AI tools to support your research. Do you have time for a few questions?
+
+Maybe Later
+Yes, sure!

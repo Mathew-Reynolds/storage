@@ -1,0 +1,161 @@
+Industry 4.0 – Applications, challenges and opportunities in industries and academia: A review
+Bharti Rana a, Sanjay S. Rathore b,⇑
+a Department of Computer Science, University of Delhi, Delhi, India b Skill Faculty of Engineering and Technology, Shri Vishwakarma Skill University, Dudhola, Palwal, Haryana, India
+article info
+Article history:
+Available online 31 December 2022
+Keywords: Industry 4.0 Enabling factors of I4.0 Applications and challenges of I4.0 Education Health Material science
+abstract
+Industrial revolutions have always influenced the other sectors since the first industrial revolution. ‘‘Industry 4.0 (I4.0)‘‘, the fourth industrial revolution, in particular, has impacted the ecosystem of the industries where the focus is on developing cyber-physical systems (CPS). The ultimate goal of I4.0 is building ”smart‘‘ machines that can predict and take intelligent/smart decision(s) using enablers of I4.0 like data analysis, communication, and internet-of-things. I4.0 has applications in many sectors like healthcare, agriculture, wood, food, and education. It has boosted not only these sectors but also new concepts like Smart Material, Agriculture 4.0, Health 4.0, Smart Operator 4.0, and many more have evolved in the literature. Adopting I4.0 also highlighted creating a new educational paradigm that focuses on developing the Smart Workforce, Smart Operators, Smart Material and Smart Project Managers and boosted the concept of Education 4.0. The objective of the present work is to review the research works of I4.0, its applications, and challenges in the above-listed prominent sectors. The focus of the work is to report (i) the current state of various technologies of I4.0 in the industries, (ii) the present status of I4.0 in the academia ecosystem, and (iii) key identified challenges in the adoption of I4.0. It was observed that technologies, mainly Artificial Intelligence, IoT, machine learning, CPS, and robotics, are popularly used. However, the popularity of technologies varies according to the sector or application area. Also, an attempt was made to report the various opportunities for the researchers and how Academia can support the demands of I4.0. Copyright Ó 2023 Elsevier Ltd. All rights reserved. Selection and peer-review under responsibility of the scientific committee of the International Conference on Startup ventures: Technology Developments and Future Strategies.
+1. Introduction
+Industry 4.0 (I.40) conceptualizes the amalgamation of automation, digitalization, artificial intelligence, and networking in the machines and processes of the industries. I4.0 emphasizes the ‘‘smart” machines that can think, decide from experience, and improve performance over time. In the I4.0 environment, people, particularly customers, can directly interact with the machines and describe their requirements. In short, people are connected to machines help of information and communication technology and customize their products.1
+The objectives of I4.0 are achieved through enablers of I4.0, which are an integration of various technologies that include Big Data and Analytics (BDA), Autonomous Robotic Systems (ARS), Simulation, Artificial intelligence (AI), Machine Learning (ML), Horizontal and Vertical System Integration, Industrial Internet of Things (IIoT), Cybersecurity, Cloud Computing (CC), Additive Manufacturing (AM), Augmented Reality, Cyber-physical system (CPS) and Smart Factories. Data science and machine learning have been experimented for material discovery for soft robotics and 3D printing which have been identified as the driver for I4.0. Havle and Üçler (2018) [1] conceptualized these enablers into three main dimensions, namely ‘‘Human,” ‘‘Organization,” and ‘‘Technology.” The human dimension focuses on the skill-sets and technology awareness among staff members to work in the I4.0 environment. The organization dimension focuses on adaption and organizational strategy changes, including management poli
+https://doi.org/10.1016/j.matpr.2022.12.162 2214-7853/Copyright Ó 2023 Elsevier Ltd. All rights reserved. Selection and peer-review under responsibility of the scientific committee of the International Conference on Startup ventures: Technology Developments and Future Strategies.
+⇑ Corresponding author. E-mail addresses: bharti@cs.du.ac.in (B. Rana), sanjay.singh@svsu.ac.in (S.S. Rathore). 1 https://www.plattform-i40.de/IP/Navigation/DE/Industrie40/WasIndustrie40/ was-ist-industrie-40.html (accessed on April 07, 2022).
+Materials Today: Proceedings 79 (2023) 389–394
+Contents lists available at ScienceDirect
+Materials Today: Proceedings
+journal homepage: www.elsevier.com/locate/matpr
+
+
+cies, digital roles and responsibilities, process engineering, assembly lines, and manufacturing lines. Technology dimension includes four major components: ‘‘digitalization”, ‘‘connectivity/ communication”, ‘‘hardware”, and ‘‘software”. The authors categorize cyber security, CC, virtual enterprise, and big data as a part of digitalization. Since connectivity involves allowing machines and humans to communicate through a network, it can be possible with the help of sensors, collaboration, and virtual communication, and they also come under IIoT. Thus, they classified IIoT, collaboration, sensors, and virtual communication, under connectivity/communication. Robots and automatic machines are classified under hardware. Product life cycle management (PLM), Supply chain material resource planning (MRP), platform design for interchangeability, advanced manufacturing systems, mobile access, and autonomous systems are covered under software. The design principles include [2]: Interoperability, Virtualization, Real-time capability, Decentralization, Modularity, Information transparency, and technical assistance. The current work focuses on highlighting: (i) the applications of various enablers/technologies of I4.0 in various industrial sectors, (ii) identifying the gap between the demand of industries for the adoption of I4.0 and academia, and (iii) various challenges in adoption of I4.0. Section 2 proposes the current scenario of various technologies in industries. While Section 3 presents the current scenario of multiple technologies in academics. The conclusion is presented in Section 4.
+2. Current scenario of various technologies in industries
+Evolution in industries has revolutionized many areas, including agriculture, health, education, and business. The concept of Industry 4.0 not only influenced but also boosted many sectors and gave birth to concepts of Smart materials [3,4], Agriculture 4.0 [5,6], Health 4.0 [7], Smart Operator 4.0 [8], Supply chain 4.0 [9], Safety 4.0 [10], Lean 4.0 [11–13], and many more in the similar fashion. A literature review is carried out to understand the role of various technologies of I4.0 in the industries. A few combinations of keywords were searched on ScienceDirect using advanced search, and the details of the searched keywords are mentioned in Table 1. The year-wise distribution of the research work on I4.0 and different enablers of I4.0 are shown in Figs. 1 and 2. Adapting to I4.0 implies a radical alteration in the industries in its varied domains like infrastructure, vision & mission, manpower skills, managerial strategies, and production lines. Also, it varies depending upon sectors and the industry. The demand of high performance with better environmental security and less cost of manufacturing has ignited new field of research called ‘‘Smart Materials” or ‘‘Special Materials” in material science. The area of ‘‘Smart Materials” focuses upon design and discovering of more reliable exotic materials [14] and their optimization and prediction. This has been possible due to AI and ML, enablers of I4.0. Amitava Choudhary [15] has highlighted the role of computation techniques for greater reliability and precision of exotic materials. In the similar fashion, integration of data science with I4.0 could help increase efficiency and reduce the production cost by optimizing the predictive maintenance. The researchers focused on identification of suitable shape memory alloys, shape memory polymers, multi-principal element alloys, electro-active polymers for soft robotics, construction purposes, textiles, production lines and many more [3,4,14,16]. Also, smart materials are currently being used in medical domains (orthopedic, dental and prosthetics) for designing of artificial body parts, and bone structures for transplantation [3,4].
+Health 4.0 is also one of the application areas of I4.0, where the focus is entirely on patient-centric healthcare services. The research work utilized I4.0 enablers like IoT, ML, and BDA. Karatas et al. (2022) [7] reviewed the research work that focused on BDA for healthcare. They reported that numerous research works had been carried out for e-Health systems, Health data mining, disease diagnosis and prognosis, health data security, workplace safety, and caregiving home system. They reviewed research work that worked in the direction of smart clothing, use of the smartphone, BDA, and CC. They also reported the role of automation and digitalization during the COVID-19 pandemic. Further, the I4.0 enablers helped in decision making, tracing cases, and improving public health monitoring in various diseases like coronary heart disease diagnosis, sleep monitoring and sleep health, and prevention of infectious diseases. Smart wearables like smartwatches and the internet help in real-time monitoring of health. It uses IoT and big data analysis to analyze the data collected from the patients. Data privacy & security is also of significant concern in Health 4.0 since data is communicated through the internet and kept online for analysis and future access. Overall, they highlighted the role of BDA, IoT, and CC in improving the diagnosis and prognosis of any disease. Further, the agriculture sector has experienced a significant change in recent years. An increase in population, industrialization, and urbanization has created exponentially increased food demands that have forced the agriculture sector to forge ahead and adopt smart agriculture and coined the concept of Agriculture 4.0 [5,17]. In agriculture, three stages of the value chain of crop farming are defined as pre-field, in-field, and post-field, and I4.0 supports agriculture at all levels. Recently, Abbasi et al. (2022) [5] conducted a systematic review on agriculture, particularly for the in-field value chain of crop farming, and studied five types of farming. They reported that the fusion of the technologies of I4.0 to fulfil the demands of Agriculture sparked the ‘‘Agriculture 4.0” era, also known as ‘‘Smart Agriculture” or ‘‘Smart farming.” They focused on identifying I4.0 technologies used in ‘‘Smart Agriculture.” They reported that ARS, IoT, and ML are most commonly used in this sector. James et al. (2022) [18] reported issues related to Human Resource Management (HRM) in adopting I4.0 in the Indian automobile industry. I4.0 has sparked a change in the hiring process, also. Now, hiring should focus more on task and skill-based, innovative thinking, creativity, and curiosity than in early practices where the focus was on reliable and long-term employment. Even HRM is incorporating AI and BDA for analysis of resumes of applicants during the hiring process. Also, the concept of Smart operators 4.0 is evolved that are expected machine line workers who should be equipped with the skills required for I4.0. However, in the present scenario, specifically in the Indian automobile industry, employees are unaware of I4.0 and possess
+Table 1
+The details of the literature review.
+S.No. Searched Keywords in Title, abstract, keywords #Research Papers
+1. Industry 4.0 3,029 2. Industry 4.0, Cyber-physical system 509 3. industry 4.0, IoT 401 4. Industry 4.0, Machine Learning 310 5. Industry 4.0, Robotics 291 6. Industry 4.0, Artificial Intelligence 280 7. Industry 4.0, cloud computing 165 8. Industry 4.0, CPS 143 9. Industry 4.0, AI 132 10. Industry 4.0, augmented reality 116 11. Industry 4.0, material science 15
+B. Rana and S.S. Rathore Materials Today: Proceedings 79 (2023) 389–394
+390
+
+
+inadequate skills to fit into the I4.0 ecosystem. It exerts a significant responsibility on HRM to organize and train employees. Also, the I4.0 technologies are growing and changing over time. So, the training and learning process needs to be continuous. However, it introduces many challenges to the employer and employees, like losing employees’ trust in HRM since employees may feel job insecurity, budget restrictions on HRM to conduct training programs, performance pressure on employees, and fear of replacing the workforce with machines employees. So, HRM has to take appropriate steps and rigorous efforts to address the challenges and find solutions in the interests of management and employees.
+3. Current scenario of various technologies in academia
+An understanding of the impact of I4.0 in academia is equally essential. Thus, to understand it, a search using the keywords ‘‘Industry 4.0” and ”Education‘‘ is conducted on ScienceDirect using
+the advanced search. A total of 128 papers were retrieved. The distribution of research work over the years is also shown in Fig. 1. Goldin et al. (2022) [19] highlighted the creation of a new educational paradigm that focuses on developing the Smart Workforce, Smart Operators, and Smart Project Managers, which are equipped with digital tools, analytical skills to identify the problem and find out a solution, and eager to upgrade their knowledge and skills continuously. It motivates and forces educationists to upgrade to new teaching tools like digital tools, especially in online, blended, project-based, and game-based learning. Also, the authors elaborated on the categorization of digital tools by using Learning Management Systems, Video Conferencing Tools, Digital Exam Assessment Tools, Data Exchange, Cloud Systems, Document Collaboration Tools, Virtual and Remote Lab Tools, and Digital Gradebooks. They proposed a reference architecture to implement digital tools in Education 4.0. It includes six modules: administration, digital grade book, teaching, learning, assessment,
+Fig. 1. Research work carried out in I4.0 and its enablers.
+Fig. 2. Year-wise distribution of total publications including keyword word ‘‘Industry 4.0” in Title, abstract, keywords.
+B. Rana and S.S. Rathore Materials Today: Proceedings 79 (2023) 389–394
+391
+
+
+Table 2
+Applications of the different enablers of I4.0 in diverse sectors.
+Application Areas Popularly used Technologies Issues Addressed Tasks involved Research
+Work
+Health IoT, BDA, ML e-Health systems, Health data mining, Work place safety, caregiving
+home system, disease diagnosis, health data privacy, discovery of
+new materials used in medical domain like, orthopedic, dental, and
+prosthetics
+Health data collection using smart gadgets like watch, analysis of
+the data to predict the health of a patient using BDA and ML;
+Protection of history of the patients from intruders using cyber
+security
+Discovering of new material for bones, artificial body part designing
+with high durability and reliability;
+[5,12,13]
+Agriculture ARS, IoT, and ML Health monitoring of plants, Pest and disease management, water
+supply management, crop managements
+Collection of Data related to soil and plant health, like temperature,
+humidity, and pH value using various sensors and its analysis using
+ML. The analysis helps monitor and manage water supply regularly
+and identify the plants’ requirements or change the crop.
+[5,17]
+Wood Sector AI, CC, IoT Wood supply chain, Forest Cover change, Management and
+allocation of raw material efficiently, Harvesting, Storage &
+Transportation, Processing & Manufacturing, Sales, distribution &
+Maintenance
+Monitoring and altering the officials about the illegal poaching of
+trees in the forest through spectral imaging and its analysis that
+includes AI, CC and IoT.
+Optimized planning of supply of the woods to the industries or
+customers using AI
+[22]
+Material discovery ML, AI, AM Exotic materials designing with better reliability. New material are
+discovered for soft robotics, bone structure designing, artificial body
+part designing, material used in implantation, jewellery designing,
+making of new alloys and many more
+New materials are desired in various and diverse fields like in
+medical domain including orthopedic, dental, and prosthetics for
+designing materials for bones, implantation etc.; in robotics for
+reliable and high-quality alloys (Aluminium alloys, stainless steel
+alloys, Nickel-, Cobalt based alloys) including multi-principal
+element alloys; in building and construction sector for making
+smart cities; in textile; in hydraulics and electronics
+[3,4,14,16]
+Finance Cyber Security-Blockchain Data Security, Fraud detection, Phishing attacks prevention, Digital
+Signature
+Protection of customers’ credentials to avoid frauds
+Identification of reliable customers for loan purposes
+Protection of cyber-attacks during online transactions
+Storing the history of each customer without any data breach using
+blockchain concept.
+[23]
+Manufacturing data protection Cyber Security-Blockchain
+Identifications of products and
+assemblies
+Cyber Security-Blockchain
+Digital purchasing Cyber Security-Blockchain
+Transaction recording Cyber Security-Blockchain
+Manufacturing Execution
+System and Sustainability of
+industries
+Digital Twin, Deep Learning, IoT,
+CPS, BDA, CC, Reinforcement
+Learning, 5G
+Manufacturing data analysis for developing CPS, health monitoring
+of machines, the role of I4.0 enablers in the sustainability of
+industries
+Prediction of quality of the used material in the production or
+manufacturing line
+Discovering of new materials or optimization of materials for
+reducing production line cost and time. [3,24,25]
+Human Resource Management AI and BDA Recruitment process, training the employees To filter the resumes of applicants for a job using AI and BDA
+Digital training of employees on the latest trends and techniques
+which are identified using AI and BDA
+[18]
+Education AI, BDA Smart Workforce, Smart Operators, Smart Project Managers
+Smart Education institutes with smart teaching and smart
+administration, design and development of smart teaching, digital
+assessment tools, digital gradebooks.
+Developing curriculums that are in line with the demands of I4.0;
+AI-supported time and task planning for students; design and
+development of digital pedagogy tools like, Video Conferencing
+Tools, Data Exchange and Cloud Systems, Document Collaboration
+Tools, Virtual and Remote Lab Tools;
+[19,20]
+BDA: Big data analysis; ML: Machine Learning; AI: Artificial intelligence; CC: Cloud computing; IoT: Internet-of-things; CPS: Cyber-physical systems; AM: Additive Manufacturing ARS: Autonomous Robotic Systems.
+B. Rana and S.S. Rathore Materials Today: Proceedings 79 (2023) 389–394
+392
+
+
+and Institutional Backbone. They emphasized the digitalization of each part of the education system, where CC, AI, and internet communication will be the system’s backbone. Haderer and Ciolacu (2022) [20] also worked on the concept of Education 4.0. They emphasized the utilization of AI to analyze the students’ performance, planning of curriculum, and AI-supported time and task planning for students. They proposed the ‘‘Architecture Artificial Intelligence assisted Task- and Time Planning System for Education 4.0” framework. The base of the architecture was AI. Due to the COVID-19 pandemic, online teaching has been adopted by schools worldwide. It focuses on the self-organization of student-related tasks. The authors concentrate on utilizing I4.0 technologies in the Education system itself. It will help improve the efficiency of the teaching and learning experience of educators, students, and administration. In literature, the research work that emphasizes the collaborative efforts of industries and academia in identifying the gap in adopting of the I4.0 is scant. Srivastava et al. (2022) [21] attempted to find gaps that may affect the decision to adopt Industry 4.0 in technical education institutes in India. They conducted a questionnaire-based survey and concluded that support from the top management and the teaching staff and infrastructure to support learning I4.0 are required. However, there is a need to form a platform where industries and academicians can brainstorm the need of industries and challenges faced by academics to meet the requirements. Ultimately, the goal is to increase employability. It will be possible only by identifying industries’ needs, introducing new programs/courses, and sensitizing youth and their parents about the latest demands of the industries. Overall, a summary of a few applications of I4.0 and its popularly used enablers are listed in Table 2.
+4. Challenges and opportunities
+For the adaption of I4.0, a radical alteration in the infrastructure of the industries, vision & mission of the sectors, workforce skills, managerial strategies, and production lines are required. Also, it varies depending upon sectors and industries. These alterations raise several challenges in adopting I4.0 [2,5,26,27] and are summarized in Table 3. The challenges always open the horizon for new opportunities for academia and researchers. The best example is the COVID-19
+pandemic, where the whole world was suffering while innovators came up with new ideas to cope with the situation. Researchers are continuously attempting to propose ecosystems/architectures/tech nologies that support the adoption of the I4.0 ecosystem. Also, for academia, it is an opportunity to offer new courses/programs that can support the preparation of a smart workforce, smart operators, and smart managers to support the I4.0 ecosystem. It can help bridge the gap between academia and the demands of the I4.0 workforce.
+5. Conclusion
+I4.0 has elevated many research areas. This work explored the current scenario of using I4.0 in industries and Academia. Several diverse applications of I4.0 are reported. In addition, various challenges associated with I4.0 are presented. To address the issues, the management of the industries should identify their requirements and challenges where they need support in terms of skillmanpower (like, Smart Operator 4.0) and/or technologies (like, lean 4.0) and/or organizational changes (like, Human resources management 4.0) since different sectors will have other demands. Further, to fulfil the demand(s) of the industries to adopt I4.0, academic governing bodies should understand the need of the hour and start planning, designing, and developing or modifying the existing curriculum. Also, educationists must upgrade their skills and change their pedagogy to support the industry and students. Government funding agencies should also handhold the industries by providing financial support. AI, IoT, ML, and ARS were observed to be the most commonly used enablers in the research works related to I4.0. In addition, the use of enablers is entirely dependent on the research problem and sector. The present work reported the facts based on a literature review on I4.0 and its enablers. A survey with industries and academia should be conducted to find the ground reality related to challenges and opportunities in adopting I4.0. It will also help the two stakeholders come in the same boat to find the solution.
+CRediT authorship contribution statement
+Bharti Rana: Methodology, Writing – original draft, Data curation. Sanjay S. Rathore: Conceptualization, Writing – review & editing, Visualization, Investigation, Validation.
+Data availability
+No data was used for the research described in the article.
+Declaration of Competing Interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+Acknowledgements
+The present work is part of the project ‘‘A study on transformation challenges for embracing Industry 4.0 in (Manufacturing) Industries of National Capital Region (NCR),” funded by IoE, University of Delhi, as a Faculty Research Programme (FRP) grant. This financial support is gratefully acknowledged.
+Table 3
+The broad categories of challenges and the key factors in the adoption of I4.0.
+Challenges A few factors
+Technical & Technological
+Lack of infrastructure to adopt I4.0; Lack of competent employees or smart managers; Lack of skilled I4.0 trainers; No idea of maintenance and support staff for I4.0; Data security; heterogeneity of data and its analysis; Scalability; Adaptability of existing staff to I4.0 infrastructure Organizational & Legal barriers
+Lack of financial support for infrastructure building, Fear of top management, Resistance to change, no knowledge about I4.0 and its adoption, Fear of failure, Resistance of current workforce due to fear of losing jobs, no clarity about the changing demands of I4.0, no funding or less support for organizing specialized I4.0 training programs, absence of Laws and regulations for I4.0 framework. Socio-economic Trust building regarding the sustainability of industries after I4.0 adoption, job insecurity since technologies are advancing too fast, Connectivity infrastructure, general reluctance to change by stakeholders, insecurity of unemployment since jobs, no clarity on return on investment, no transparency on costs of manufactured products, lack of digital division
+B. Rana and S.S. Rathore Materials Today: Proceedings 79 (2023) 389–394
+393
+
+
+References
+[1] C.A. Havle, Ç. Üçler, Enablers for Industry 4.0. 2018 2nd Int. Symp. Multidiscip. Stud. Innov. Technol. ISMSIT, 2018, p. 1–6. https://doi.org/10.1109/ISMSIT. 2018.8567293. [2] A.K. Sharma, R. Bhandari, C. Pinca-Bretotean, C. Sharma, S.K. Dhakad, A. Mathur, A study of trends and industrial prospects of Industry 4.0, Mater. Today Proc. 47 (2021) 2364–2369, https://doi.org/10.1016/ j.matpr.2021.04.321. [3] U.M. Dilberoglu, B. Gharehpapagh, U. Yaman, M. Dolen, The role of additive manufacturing in the era of industry 4.0, Procedia Manuf. 11 (2017) 545–554, https://doi.org/10.1016/j.promfg.2017.07.148. [4] S. Rouf, A. Malik, N. Singh, A. Raina, N. Naveed, M.I.H. Siddiqui, et al., Additive manufacturing technologies: Industrial and medical applications, Sustain. Oper. Comput. 3 (2022) 258–274, https://doi.org/10.1016/j.susoc.2022.05.001. [5] R. Abbasi, P. Martinez, R. Ahmad, The digitization of agricultural industry – a systematic literature review on agriculture 4.0., Smart Agric. Technol 2 (2022), https://doi.org/10.1016/j.atech.2022.100042. [6] M.E. Latino, M. Menegoli, M. Lazoi, A. Corallo, Voluntary traceability in food supply chain: a framework leading its implementation in Agriculture 4.0., Technol. Forecast Soc. Change 178 (2022), https://doi.org/10.1016/j. techfore.2022.121564. [7] M. Karatas, L. Eriskin, M. Deveci, D. Pamucar, H. Garg, Big Data for Healthcare Industry 4.0: Applications, challenges and future perspectives, Expert. Syst. Appl. 200 (2022) 116912, https://doi.org/10.1016/j.eswa.2022.116912. [8] D. Li, Å. Fast-Berglund, D. Paulin, P. Thorvald, Exploration of digitalized presentation of information for Operator 4.0: Five industrial cases, Comput. Ind. Eng. 168 (2022) 108048, https://doi.org/10.1016/j.cie.2022.108048. [9] H. García-Reyes, J. Avilés-González, S.V. Avilés-Sacoto, A Model to Become a Supply Chain 4.0 Based on a Digital Maturity Perspective, Procedia Comput. Sci. 200 (2022) 1058–1067, https://doi.org/10.1016/j.procs.2022.01.305. [10] A. Gajek, B. Fabiano, A. Laurent, N. Jensen, Process safety education of future employee 4.0 in Industry 4.0 ;75:104691. J. Loss Prev. Process Ind. (2022), https://doi.org/10.1016/j.jlp.2021.104691. [11] A. Mofolasayo, S. Young, P. Martinez, R. Ahmad, How to adapt lean practices in SMEs to support Industry 4.0 in manufacturing, Procedia Comput. Sci. 200 (2022) 934–943, https://doi.org/10.1016/j.procs.2022.01.291. [12] F. Dillinger, O. Bernhard, G. Reinhart, Competence Requirements in Manufacturing Companies in the Context of Lean 4.0, Procedia CIRP 106 (2022) 58–63, https://doi.org/10.1016/j.procir.2022.02.155. [13] L.B.P. da Silva, R. Soltovski, J. Pontes, F.T. Treinta, P. Leitão, E. Mosconi, et al., Human resources management 4.0: Literature review and trends, Comput. Ind. Eng. 168 (2022) 108111, https://doi.org/10.1016/j.cie.2022.108111. [14] S. Sajid, A. Haleem, S. Bahl, M. Javaid, T. Goyal, M. Mittal, Data science applications for predictive maintenance and materials science in context to
+Industry 4.0, Mater. Today:. Proc. 45 (2021) 4898–4905, https://doi.org/ 10.1016/j.matpr.2021.01.357. [15] A. Choudhury, The Role of Machine Learning Algorithms in Materials Science: A State of Art Review on Industry 4.0, Arch. Comput. Meth. Eng. 28 (2021) 3361–3381, https://doi.org/10.1007/s11831-020-09503-4. [16] M. Norouzi, M. Chàfer, L.F. Cabeza, L. Jiménez, D. Boer, Circular economy in the building and construction sector: A scientific evolution analysis, J. Build. Eng. 44 (2021), https://doi.org/10.1016/j.jobe.2021.102704. [17] W.K. Mok, Y.X. Tan, W.N. Chen, Technology innovations for food security in Singapore: A case study of future food systems for an increasingly natural resource-scarce world, Trends Food Sci. Technol. 102 (2020) 155–168, https:// doi.org/10.1016/j.tifs.2020.06.013. [18] A.T. James, G. Kumar, P. Tayal, A. Chauhan, C. Wadhawa, J. Panchal, Analysis of human resource management challenges in implementation of industry 4.0 in Indian automobile industry, Technol. Forecast Soc. Change 176 (2022) 121483, https://doi.org/10.1016/j.techfore.2022.121483. [19] T. Goldin, E. Rauch, C. Pacher, M. Woschank, Reference Architecture for an Integrated and Synergetic Use of Digital Tools in Education 4.0, Procedia Comput. Sci. 200 (2022) 407–417, https://doi.org/10.1016/j. procs.2022.01.239. [20] B. Haderer, M. Ciolacu, Education 4.0: Artificial Intelligence Assisted Task- and Time Planning System, Procedia Comput. Sci. 200 (2022) 1328–1337, https:// doi.org/10.1016/j.procs.2022.01.334. [21] D.K. Srivastava, V. Kumar, B.Y. Ekren, A. Upadhyay, M. Tyagi, A. Kumari, Adopting Industry 4.0 by leveraging organisational factors, Technol. Forecast Soc. Change 176 (2022) 121439, https://doi.org/10.1016/j. techfore.2021.121439. [22] M. Molinaro, G. Orzes, From forest to finished products: The contribution of Industry 4.0 technologies to the wood sector, Comput. Ind. 138 (2022) 103637, https://doi.org/10.1016/j.compind.2022.103637. [23] M. Javaid, A. Haleem, R. Pratap Singh, S. Khan, R. Suman, Blockchain technology applications for Industry 4.0: A literature-based review, Blockchain Res Appl 2 (2021) 100027, https://doi.org/10.1016/j.bcra.2021.100027. [24] M. Ghobakhloo, Industry 4.0, digitization, and opportunities for sustainability, J. Clean. Prod. 252 (2020) 119869, https://doi.org/10.1016/j. jclepro.2019.119869. [25] A. Shojaeinasab, T. Charter, M. Jalayer, M. Khadivi, O. Ogunfowora, N. Raiyani, et al., Intelligent manufacturing execution systems: A systematic review, J. Manuf. Syst. 62 (2022) 503–522, https://doi.org/10.1016/j.jmsy.2022.01.004. [26] S. Luthra, S.K. Mangla, Evaluating challenges to Industry 4.0 initiatives for supply chain sustainability in emerging economies, Process Saf. Environ. Prot. 117 (2018) 168–179, https://doi.org/10.1016/j.psep.2018.04.018. [27] H.M. Elhusseiny, J. Crispim, SMEs, Barriers and Opportunities on adopting Industry 4.0: A Review, Procedia Comput. Sci. 196 (2022) 864–871, https://doi. org/10.1016/j.procs.2021.12.086.
+B. Rana and S.S. Rathore Materials Today: Proceedings 79 (2023) 389–394
+394

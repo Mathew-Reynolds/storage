@@ -1,0 +1,186 @@
+Skip to Main Content
+Open Menu
+Volume 140, Issue 1
+January 2018
+Previous Article
+Next Article
+Article Contents
+References
+RESEARCH-ARTICLE
+Effectiveness Measurements of Additively Manufactured Film Cooling Holes
+Available to Purchase
+Curtis K. Stimpson,Jacob C. Snyder,Karen A. Thole,Dominic Mongillo
+Author and Article Information
+J. Turbomach. Jan 2018, 140(1): 011009 (11 pages)
+Paper No: TURBO-17-1163 https://doi.org/10.1115/1.4038182
+Published Online: October 31, 2017
+Article history
+Share 
+Cite
+Permissions
+Search Site
+
+As additive manufacturing (AM) technologies utilizing metal powders continue to mature, the usage of AM parts in gas turbine engines will increase. Current metal AM technologies produce parts with substantial surface roughness that can only be removed from external surfaces and internal surfaces that are accessible for smoothing. Difficulties arise in making smooth the surfaces of small internal channels, which means the augmentation of pressure loss and heat transfer due to roughness must be accounted for in the design. As gas turbine manufacturers have only recently adopted metal AM technologies, much remains to be examined before the full impacts of applying AM to turbine parts are understood. Although discrete film cooling holes have been extensively studied for decades, this objective of this study was to understand how the roughness of film cooling holes made using AM can affect the overall cooling effectiveness. Coupons made from a high temperature nickel alloy with engine-scale film holes were tested in a rig designed to simulate engine relevant conditions. Two different hole sizes and two different build directions were examined at various blowing ratios. Results showed that the effectiveness is dependent on the build direction and the relative size of the hole. It was also discovered that commercially available AM processes could not reliably produce small holes with predictable behavior.
+
+Issue Section:
+Research Papers
+Keywords:
+Heat transfer, Film cooling
+Topics:
+Cooling, Electrical discharge machining, Film cooling, Flow (Dynamics), Surface roughness, Additive manufacturing, Manufacturing, Heat transfer, Coolants, Design, Geometry, Gas turbines
+References
+1.
+Snyder, J. C., Stimpson, C. K., Thole, K. A., and Mongillo, D., 2015, “Build Direction Effects on Microchannel Tolerance and Surface Roughness,” ASME J. Mech. Des., 137(11), p. 111411.
+Google ScholarCrossref 
+2.
+Snyder, J. C., Stimpson, C. K., Thole, K. A., and Mongillo, D., 2016, “Build Direction Effects on Additively Manufactured Channels,” ASME J. Turbomach., 138(5), p. 051006.
+Google ScholarCrossref 
+3.
+Stimpson, C. K., Snyder, J. C., Thole, K. A., and Mongillo, D., 2016, “Roughness Effects on Flow and Heat Transfer for Additively Manufactured Channels,” ASME J. Turbomach., 138(5), p. 051008.
+Google ScholarCrossref 
+4.
+Stimpson, C. K., Snyder, J. C., Thole, K. A., and Mongillo, D. J., 2017, “Scaling Roughness Effects on Pressure Loss and Heat Transfer of Additively Manufactured Channels,” ASME J. Turbomach., 139(2), p. 021003.
+Google ScholarCrossref 
+5.
+Hanson, R. B., 2014, “Combustor Component With Cooling Holes Formed by Additive Manufacturing,” United Technologies Corporation, Farmington, CT, U.S. Patent No. 20140216042 A1.https://www.google.ch/patents/US20140216042
+6.
+Xu, J., 2014, “Gas Turbine Engine Shaped Film Cooling Hole,” United Technologies Corporation, Farmington, CT, U.S. Patent No. 20160003056 A1.https://encrypted.google.com/patents/EP2971667A4?cl=en
+7.
+Johnson, T. E., Keener, C. P., Ostebee, H. M., and Wegerif, D. G., 2016, “Effusion Plate Using Additive Manufacturing Methods,” General Electric Company, Boston, MA, U.S. Patent No. 20140202163 A1.https://www.google.ch/patents/US9309809
+8.
+Dudebout, R., Brandt, D., Waldman, D., Neumann, J., and Payne, A., 2016, “Gas Turbine Engine Combustors With Effusion and Impingement Cooling and Methods for Manufacturing the Same Using Additive Manufacturing Techniques,” Honeywell International Inc., Morris Plains, NJ, U.S. Patent No. 20150226433 A1.http://www.google.com/patents/US20150226433
+9.
+Schurb, J., Hoebel, M., Haehnle, H., Kissel, H., Bogdanic, L., and Etter, T., 2016, “Additive Manufacturing of Hot Gas Path Parts and Engine Validation in a Heavy Duty GT,” ASME Paper No. GT2016-57262.
+10.
+Vinton, K. R., Nahang-Toudeshki, S., Wright, L. M., and Carter, A., 2016, “Full Coverage Film Cooling Performance for Combustor Cooling Manufactured Using DMLS,” ASME Paper No. GT2016-56504.
+11.
+Jackowski, T., Schulz, A., Bauer, H.-J., Gerendás, M., and Behrendt, T., 2016, “Effusion Cooled Combustor Liner Tiles With Modern Cooling Concepts: A Comparative Experimental Study,” ASME Paper No. GT2016-56598.
+12.
+Aghasi, P., Gutmark, E., and Munday, D., 2016, “Dependence of Film Cooling Effectiveness on 3D Printed Cooling Holes,” ASME Paper No. GT2016-56698.
+13.
+Kirollos, B., and Povey, T., 2017, “Laboratory Infra-Red Thermal Assessment of Laser-Sintered High-Pressure Nozzle Guide Vanes to De-Risk Engine Design Programmes,” ASME J. Turbomach., 139(4), p. 041009.
+Google ScholarCrossref 
+14.
+Krawciw, J., Martin, D., and Denman, P., 2015, “Measurement and Prediction of Adiabatic Film Effectiveness of Combustor Representative Effusion Arrays,” ASME Paper No. GT2015-43210.
+15.
+Schroeder, R. P., and Thole, K. A., 2017, “Effect of In-Hole Roughness on Film Cooling From a Shaped Hole,” ASME J. Turbomach., 139(3), p. 031004.
+Google ScholarCrossref 
+16.
+Schroeder, R. P., 2015, “Influence of In-Hole Roughness and High Freestream Turbulence on Film Cooling From a Shaped Hole,” Ph.D. dissertation, Pennsylvania State University, State College, PA.http://adsabs.harvard.edu/abs/2015PhDT.......470S
+17.
+Albert, J. E., Bogard, D. G., and Cunha, F., 2004, “Adiabatic and Overall Effectiveness for a Film Cooled Blade,” ASME Paper No. GT2004-53998.
+18.
+Bunker, R. S., 2009, “The Effects of Manufacturing Tolerances on Gas Turbine Cooling,” ASME J. Turbomach., 131(4), p. 041018.
+Google ScholarCrossref 
+19.
+Schroeder, R. P., and Thole, K. A., 2014, “Adiabatic Effectiveness Measurements for a Baseline Shaped Film Cooling Hole,” ASME Paper No. GT2014-25992.
+20.
+EOS GmbH, 2014, “Material Data Sheet: EOS NickelAlloy HX,” EOS GmbH, Munich, Germany.
+21.
+EOS GmbH, 2011, “Basic Training EOSINT M 280,” EOS GmbH, Munich, Germany.
+22.
+Kays, W. M., Crawford, M. E., and Weigand, B., 2004, Convective Heat & Mass Transfer, McGraw-Hill, Boston, MA.
+23.
+Reinhart, C., 2011, Industrial CT & Precision, Volume Graphics GmbH, Heidelberg, Germany.
+24.
+Downs, J. P., and Landis, K. K., 2009, “Turbine Cooling Systems Design: Past, Present and Future,” ASME Paper No. GT2009-59991.
+25.
+Martiny, M., Schulz, A., and Wittig, S., 1997, “Mathematical Model Describing the Coupled Heat Transfer in Effusion Cooled Combustor Walls,” ASME Paper No. 97-GT-329.
+26.
+Falcoz, C., Weigand, B., and Ott, P., 2006, “A Comparative Study on Showerhead Cooling Performance,” Int. J. Heat Mass Transfer, 49(7–8), pp. 1274–1286.
+Google ScholarCrossref 
+Copyright © 2017 by ASME
+You do not currently have access to this content.
+Sign In
+Sign In Or Register For Account
+Sign in via your Institution
+Purchase this Content
+$25.00
+Purchase
+Learn about subscription and purchase options
+51
+View Metrics
+Get Email Alerts
+Article Activity Alert
+Accepted Manuscript Alert
+New Issue Alert
+Cited By
+Web Of Science (74)
+Google Scholar
+CrossRef (38)
+New and popular articles
+Latest
+Most Read
+Most Cited
+Assessment of the Delayed Detached-Eddy Simulation Method for Predicting Off-Design Operating Conditions of an Axial Compressor
+J. Turbomach (September 2026)
+Determination of Heat Transfer Coefficient Distribution in Microrotating Detonation Combustor Using Measured Wall Temperatures
+J. Turbomach (September 2026)
+Compressible Resolvent Analysis for Receptivity and Separation Control in Turbomachinery
+J. Turbomach (September 2026)
+Laminar-Turbulent Transition in Axial Compressor Disc Boundary Layers
+J. Turbomach
+Related Articles
+Build Direction Effects on Additively Manufactured Channels
+J. Turbomach (May,2016)
+Analytical Blade Row Cooling Model for Innovative Gas Turbine Cycle Evaluations Supported by Semi-Empirical Air-Cooled Blade Data
+J. Eng. Gas Turbines Power (July,2004)
+Experimental Investigation on Additively Manufactured Transpiration and Film Cooling Structures
+J. Turbomach (March,2019)
+Geometric and Flow Characterization of Additively Manufactured Turbine Blades With Drilled Film Cooling Holes
+J. Turbomach (April,2025)
+Related Proceedings Papers
+Geometric and Flow Characterization of Additively Manufactured Turbine Blades With Drilled Film Cooling Holes
+GT2024
+Thermal and Hydraulic Performance Analyses of Machined and Hybrid Printed Oblique-Fin Cold Plates
+InterPACK2023
+Effects of Coolant Feed Direction on Additively Manufactured Film Cooling Holes
+GT2018
+Related Chapters
+Thermal Interface Resistance
+Thermal Management of Microelectronic Equipment
+Control and Operational Performance
+Closed-Cycle Gas Turbines: Operating Experience and Future Potential
+Other Components and Variations
+Axial-Flow Compressors
+Issues
+Accepted Manuscripts
+All Years
+Purchase
+Twitter
+About the Journal
+Editorial Board
+Information for Authors
+Call for Papers
+Rights and Permission
+Online ISSN 1528-8900Print ISSN 0889-504X
+ASME Journals
+About ASME Journals
+Information for Authors
+Submit a Paper
+Call for Papers
+Title History
+ASME Conference Proceedings
+About ASME Conference Publications and Proceedings
+Conference Proceedings Author Guidelines
+ASME eBooks
+About ASME eBooks
+ASME Press Advisory & Oversight Committee
+Book Proposal Guidelines
+Resources
+Contact Us
+Authors
+Librarians
+Access Information & Frequently Asked Questions
+Publication Permissions & Reprints
+ASME Membership
+Opportunities
+Faculty Positions
+LinkedIn
+Twitter
+Facebook
+ASME Instagram
+Accessibility Privacy Statement Terms of Use Get Adobe Acrobat Reader
+Copyright © 2026 The American Society of Mechanical Engineers
+This site uses cookies. By continuing to use our website, you are agreeing to our privacy policy.
+Accept

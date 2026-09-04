@@ -1,0 +1,374 @@
+Principles of Directed Energy Deposition
+for Aerospace Applications
+Paul Gradl
+NASA Marshall Space Flight Center January 20, 2021
+Presentation to: Drive AM Industry Connect W.M. Keck Center for 3D Innovation University of Texas El Paso (UTEP)
+
+
+Introduction and Agenda
+• Introduction of Metal AM
+• Case Study using DED
+• Introduction to Metal AM Processes
+• Comparisons to L-PBF
+• Why the need for DED?
+• Materials for DED
+• DED Process Overviews
+• Other Considerations
+• Wrap-up
+Hot-fire testing of bimetallic additively manufactured combustion chamber using Electron Beam DED Jacket
+
+
+Terminology
+Course will focus exclusively on metal additive manufacturing
+• AM = Additive Manufacturing
+• DED = Directed Energy Deposition
+• LP-DED = Laser Powder DED
+• LW-DED = Laser Wire DED
+• AW-DED = Arc Wire DED
+• EB-DED = Electron Beam DED
+• L-PBF = Laser Powder Bed Fusion
+• Metal Additive Manufacturing - Build, print, grow, AM, fabricate...
+
+
+Why use AM? (Rocket Engines)
+• Metal Additive Manufacturing provides significant advantages for lead time and cost over traditional manufacturing for rocket engines
+• Lead times reduced by 2-10x
+• Cost reduced by more than 50%
+• Complexity is inherent in liquid rocket engines and AM provides new design and performance opportunities
+• Materials that are difficult to process using traditional techniques, long-lead, or not previously possible are now accessible using metal additive manufacturing
+
+
+Case Study – RS25 Powerhead
+Traditional Manufacturing L-PBF Development DED Development
+Sivolella D. (2014) Power to orbit: the main engines. In: To Orbit and Back Again. Springer Praxis Books. Springer, New York, NY. https://doi.org/10.1007/978-1-4614-0983-0_3
+Forged => Machined
+<14 days deposition using LP-DED
+>90 days using L-PBF (Large Platform)
+
+
+The need for large scale AM...
+
+
+Metal AM Technologies - Overview
+*Does not include all metal AM processes
+Metal Additive Manufacturing Processes
+Powder Bed based Directed Energy
+Deposition Solid State
+Selective Laser Melting
+Powder Powder Wire Foil Powder
+Electron Beam Melting
+Arc-based Deposition
+Laser Wire Deposition
+Blown Powder Deposition
+Ultrasonic Additive
+Friction Stir Additive (MELD)
+Electron Beam
+Deposition Coldspray
+Category
+Process Feedstock
+Rod
+Laser Powder Bed Fusion
+Electron Beam PBF
+Laser Powder DED
+Arc Wire DED
+Laser Wire DED
+Electron Beam DED
+Additive Friction Stir
+Based on Ref:
+• Gradl, P., Brandsmeier, W., Calvert, M., et al., “Additive Manufacturing Overview: Propulsion Applications, Design for and Lessons Learned. Presentation,” M17-6434. 1 December (2017). • ASTM Committee F42 on Additive Manufacturing Technologies. Standard Terminology for Additive Manufacturing Technologies ASTM Standard: F2792-12a. (2012). • Gradl, P.R., Greene, S.E., Protz, C., Bullard, B., Buzzell, J., Garcia, C., Wood, J., Osborne, R., Hulka, J. and Cooper, K.G., 2018. Additive Manufacturing of Liquid Rocket Engine Combustion Devices: A Summary of Process Developments and Hot-Fire Testing Results. In 2018 Joint Propulsion Conference (p. 4625). • Ek, K., “Additive Manufactured Metals,” Master of Science thesis, KTH Royal Institute of Technology (2014).
+
+
+Various criteria for selecting AM techniques
+Complexity of Features Cost
+Material Physics
+Material Properties Internal Geometry Availability
+Speed of Process
+Scale of Hardware Material Efficiency
+Post Processing
+References:
+• Honore, M. “Structural strengthening of Rocket Nozzle Extensions by Means of Laser Metal Depositioning”. In Support of Volvo Channel Wall Nozzle. Force Technology. MTI Mtg Laserfusing Presentation. 1 February, 2013. • O’Neill., W., Cockburn., A., et al. “Supersonic Laser Deposition of Ti and Ti64 Alloys”. 5th International Symposium on High Power Fibre Laser and their Applications/14th International Conference on Laser Optics. July 1, 2010. St. Petersburg, Russia. • Paul R. Gradl. "Rapid Fabrication Techniques for Liquid Rocket Channel Wall Nozzles", 52nd AIAA/SAE/ASEE Joint Propulsion Conference, Propulsion and Energy Forum, (AIAA 2016-4771)
+
+
+Why DED?
+• Each Metal AM technique provides advantages and disadvantages
+• DED offers advantages for various applications
+• Large Scale
+• Multi-axis
+• Use wire or powder feedstock
+• Ability to use multiple materials in same build
+• Ability to add material in a secondary operation
+• High deposition rates
+• Integration of secondary processes (machining)
+• Process feedback and closed loop control
+• Disadvantages
+• Residual stresses (more heat input)
+• Lower resolution (less detailed complexity)
+• Higher surface roughness
+
+
+Comparison of L-PBF and DED
+Laser Powder Bed Fusion (L-PBF) Directed Energy Deposition (DED)
+Feature Resolution / Complexity High resolution of features
+Wall thicknesses and holes <0.010”
+Medium resolution of features Walls >0.040” and limited holes
+Deposition Rate Low build rates
+<0.3 lb/hr
+High Build rates lbs per hour (some systems >20lb/hr)
+Multi-alloys / Gradient Materials Monolithic materials in single build Option for multi-alloys or gradients
+within single build
+Materials Available High number of materials available
+and being developed
+High number of materials available and being developed
+Production Rates Higher volume with several parts
+in a single build
+Generally limited to single builds; longer programming/setup time
+Scale / Size of components Limited to existing build volumes
+<15.6” dia (400mm) or 16”x24”x19”
+Scale is limited to gantry or robot size
+Added Features / Repair No (limited) ability to add material
+to existing part
+Can add material or features to an existing part
+Different methods for different components!
+
+
+Material Availability for Metal AM (DED)
+Ni-Base
+Inconel 625 Inconel 718 Hastelloy-X Haynes 230 Haynes 214 Haynes 282 Haynes 188 Monel K-500 C276 Rene 80 Waspalloy
+Al-Base
+AlSi10mg A205 F357 6061 / 4047
+Fe-Base
+SS 17-4PH SS 15-5 GP1 SS 304 SS 316L SS 420 Tool Steel (4140/4340) Invar 36 SS347 JBK-75 NASA HR-1
+Cu-Base
+GRCop-84 GRCop-42 C-18150 C-18200 Glidcop CU110
+Refractory
+W
+W-25Re Mo Mo-41Re Mo-47.5Re C-103 Ta
+Ti-Base
+Ti6Al4V γ-TiAl Ti-6-2-4-2
+MMC
+Al-base Fe-base Ni-base
+Industry Materials developed for L-PBF, EPBF, and DED processes (not fully inclusive)
+Bimetallic
+GRCop-84/IN625 C-18150/IN625
+Co-Base
+CoCr Stellite 6, 21, 31
+As available materials and processes continue to grow, so does
+complexity of characterization and standardization
+
+
+Feedstock Material for DED
+Feedstock can be Powder or Wire
+Laser Powder DED LP-DED Alt
+*UAM = Ultrasonic Additive Manufacturing
+
+
+Material Properties for Metal
+• In general, once AM processes are refined they can yield near wrought properties • Material properties are highly dependent on the type of process (L-PBF, DED, UAM, Coldspray,....), the starting feedstock chemistry, the parameters used in the process, and the heat treatment processes used post-build • Each AM process results in different grain structures, which ultimately have an effect on properties • Heat treatments should be developed based on the requirements and environment of the end component use • Properties should be developed after AM process is stable and parameters confirmed
+Example of Inconel 625, L-PBF and LP-DED (Typical)
+*Not design data and provided as an example only
+Same heat treatment applied to L-PBF and BP-DED
+*
+*
+LP-DED, HT. per AMS 7000
+*
+
+
+Aspects of AM DED Systems
+Heat
+Source Motion
+Control
+Build Plate
+Feedstock
+Feedback and Monitoring
+Environment
+Laser Electron Beam
+Arc Plasma
+PostProcessing
+Wire Powder
+Kinematic Robot
+Cartesian Gantry
+Enclosed Inert
+Local Inert Vacuum
+Secondary Purges
+Secondary Positioning
+Powder or Wire Feeder
+
+
+Various DED Technologies
+Freeform fabrication technique focused on near net shapes as a forging or casting replacement and also nearfinal geometry fabrication. Can be implemented using powder or wire as additive medium.
+Laser Powder DED (LP-DED)
+Melt pool created by laser and off-axis nozzles inject powder into melt pool; installed on gantry or robotic system
+Electron Beam DED (EB-DED)
+An off-axis wire-fed deposition technique using electron beam as energy source; completed in a vacuum.
+Laser Wire DED (LW-DED) / Hotwire
+A melt pool is created by a laser and uses an offaxis wire-fed deposition to create freeform shapes, attached to robot system
+Arc Wire DED (AW-DED)
+Pulsed-wire metal inert gas (MIG) welding process creates near net shapes with the deposition heat integral to a robot
+Integrated and Hybrid DED  Combine L-PBF/DED  Combine AM with subtractive  Wrought and DED
+*Photos courtesy DMG Mori Seiki and DM3D
+NASA L-PBF/DED
+
+
+Laser Powder DED
+• Coaxial laser energy source with surrounding nozzles that inject powder (within inert gas) fabricating freeform shapes or cladding
+• Advantages: Large scale (only limited by gantry or robotic system), multi-alloys in same build, high deposition rate
+• Disadvantages: Resolution of features, rougher surface than L-PBF, higher heat input
+DED NASA HR-1 Liner Integrated Channel DED Nozzle Inco 718, 1:4 Scale JBK-75, IN625, NASA HR-1 Manifolds JBK-75 Integrated Channel
+
+
+LP-DED Process Overview
+• Powder and laser beam path (sometimes optics) integrated into deposition head
+• Basic parameters include power, powder feedrate, travel speed
+• Additional geometry control for layer height, step over (hatching), standoff distance, angle of head and trunnion table
+• Can vary spot size
+Courtesy: Formalloy
+• Gradl, P. R., & Protz, C. S. (2020). Technology advancements for channel wall nozzle manufacturing in liquid rocket engines. Acta Astronautica. https://doi.org/10.1016/j.actaastro.2020.04.067 • AIAA Book: Metal Additive Manufacturing for Propulsion Systems, Gradl et al (unreleased)
+Courtesy: BeAM
+
+
+Animation of LP-DED Process
+
+
+Example of LP-DED for large scale
+
+
+Example of LP-DED with small features
+
+
+Examples of Small Feature Large Scale LP-DED
+40” (1.016 m) and 38” (0.965 m) height nozzle with internal features built in 30 days using LP-DED
+Courtesy: RPM Innovations (RPMI)
+LP-DED Integral Channel During Hotfire
+
+
+Component Applications using LP-DED
+Multi-material combination with L-PBF and DED (RAMPT Project)
+1⁄2 Scale RS25 Nozzle Liner
+DM3D
+RPMI
+DM3D
+RPMI
+RPMI
+RPMI
+DM3D
+RPMI
+
+
+LP-DED Large Scale Nozzle with Fine Features
+60” (1.52 m) diameter and 70” (1.78 m) height 90 day deposition
+
+
+Laser Wire DED
+• Uses a laser energy source with a off-axis wire feed and local purge
+• 100% efficiency in material usage
+• High deposition rates, but balances low heat input
+• Can be used on complex surfaces
+• Key parameters: Laser Power, Wire feedrate, Travel rate, Angle of Head, Shielding gas flowrate
+All Images Courtesy of Procada
+Travel
+
+
+LW-DED Component Examples
+• Used on a variety of components including rocket nozzles
+• Add secondary material “in-place” or freeform deposition
+• Multi-alloys demonstrated
+LW-DED Closeout Nozzle During Hotfire LW-DED using multi-alloys
+
+
+Electron Beam DED
+• Uses electron beam energy source with a wire feed inside vacuum chamber
+• 100% efficiency in material usage
+• High deposition rates
+• Key parameters: Beam current and acceleration voltage, Wire Feedrate, Travel Rate, Angle of Turntable
+Monolithic EB-DED Freeform EB-DED Inco 625 Jacket on L-PBF GRCop-84 Liner
+
+
+Arc Wire DED
+• Electric energy source providing arc with co-axial wire feed and local purge
+• Very high efficiency of material usage
+• Low cost process
+• Key parameters: Voltage, Current, Wire Pulse Rate, Wire Feedrate, Travel Rate, Angle of Head and Turntable, Shielding Gas flowrate
+
+
+Courtesy: Keystone
+Arc Wire DED
+
+
+Freedom in DED design and deposition strategies
+Ability to use multiple axes for complex features fabricated locally
+RS25 Powerhead demonstrator using LP-DED under NASA SLS Artemis Program (Courtesy: RPMI)
+
+
+Typical DED Process Flow
+• AIAA Book: Metal Additive Manufacturing for Propulsion Systems, Gradl et al (unreleased)
+
+
+Microstructure – Different AM Processes
+Laser Powder Bed Fusion (L-PBF) Laser Powder DED (LP-DED)
+Schneider, J.A., “Comparison of microstructural response to heat treatment of Inconel 718 prepared by three different metal additive manufacturing processes,” JOM, https://doi.org/10.1007/s11837-020-04021-x, vol. 72/3, pp. 1085-1091, 2020.
+Inconel 718
+Arc Wire DED (AW-DED)
+
+
+Challenges with DED
+• Machining • Programming / Tooling • Pre-heating (some processes) • Surface Roughness • Smaller supply chain • Residual Stresses and distortion • Joining (can differ than wrought) • Weld/deposition failures:
+• Melt pool instabilities • Lack of fusion • Oxidation • Deposition overrun/under • Delamination • Elemental segregations • Cracking
+• Rosa, B., Brient, A., Samper, S., & Hascoët, J. Y. (2016). Influence of additive laser manufacturing parameters on surface using density of partially melted particles. Surface Topography: Metrology and Properties, 4(4), 045002. • Bian, L., Thompson, S. M., & Shamsaei, N. (2015). Mechanical properties and microstructural features of direct laser-deposited Ti-6Al-4V. Jom, 67(3), 629-638.
+Surface Roughness
+
+
+General Summary
+• DED offers a lot of flexibility for large scale and multiple material with the same
+build for near net shape or final shape applications
+• It’s all welding, so same physics apply
+• Additive manufacturing is not a solve-all; consider trading with other
+manufacturing technologies and use only when it makes sense
+• Complete understanding of design process, build-process, and post-processing
+critical to take full advantage of AM
+• Additive manufacturing takes practice!
+• Standards and certification of the processes in-work
+• AM is evolving and there is a lot of work ahead
+
+
+Paul Gradl
+NASA Marshall Space Flight Center
+Paul.R.Gradl@nasa.gov
+
+
+Acknowledgements
+Chris Protz Tom Teasley Omar Mireles Chance Garcia Megan Le Corre Will Tilson Zach Jones Po Chen Will Evans Matt Medders Colton Katsarelis Drew Hope Matt Melis John Fikes Dave Ellis Laura Evans Auburn University National Center for Additive Manufacturing Excellence (NCAME) Mike Ogles Nima Shamsaei RPM Innovations (RPMI) Tyler Blumenthal / RPMI DM3D Bhaskar Dutta / DM3D
+Fraunhofer USA – CLA BeAM Machines The Lincoln Electric Company ASB Industries Rem Surface Engineering Procam Powder Alloy Corp HMI ATI Praxair Formalloy Tal Wammen Test Stand 115 crew Kevin Baker Adam Willis Dale Jackson Marissa Garcia Nunley Strong Brad Bullard Gregg Jones James Buzzell Marissa Garcia Dwight Goodman Will Brandsmeier Jonathan Nelson
+Ken Cooper (retired) Bob Witbrodt Brian West John Ivester John Bili Bob Carter Justin Milner Ivan Locci Jim Lydon Keystone / Bryant Walker / Ray Walker Judy Schneider / UAH PTR-Precision Technologies AME Westmoreland Mechanical Testing David Myers Ron Beshears James Walker Steve Wofford Jessica Wood Robert Hickman Johnny Heflin Mike Shadoan Keegan Jackson Many others in Industry, commercial space and others
+
+
+Standards for DED Techniques
+Published
+• ASTM F3187-16: Standard Guide for Directed Energy Deposition of Metals
+Standards under development
+• ISO/ASTM PWI 52943-1 Additive manufacturing — Process characteristics and performance — Part 1: Standard specification for directed energy deposition using wire and beam in aerospace applications
+• ISO/ASTM PWI 52943-2 Additive manufacturing — Process characteristics and performance — Part 2: Standard specification for directed energy deposition using wire and arc in aerospace applications
+• ISO/ASTM PWI 52943-3 Additive manufacturing — Process characteristics and performance — Part 3: Standard specification for directed energy deposition using laser blown powder in aerospace applications
+*(PWI: Preliminary Work Item)
+
+
+Presenter Bio
+• Senior Propulsion Engineer at NASA Marshall Space Flight Center (MSFC) in the Propulsion Division, Engine Components Development and Technology Branch.
+• Principal investigator and lead several projects for additive manufacturing of liquid rocket engine combustion devices and support a variety of development and flight programs over the last 16 years.
+• Authored and co-authored over 45+ conference and professional papers and journal articles; holds four patents in additive.
+• Associate Fellow of AIAA, serve on several committees and chairs various sessions at leading conferences on additive manufacturing.
+• Active in ASTM as a course instructor and advisory board
+• Lead editor of book Metal Additive Manufacturing for Propulsion Applications (AIAA, 2021)
+Paul Gradl
+
+
+References
+• Shamsaei, N., Yadollahi, A., Bian, L., & Thompson, S. M. (2015). An overview of Direct Laser Deposition for additive manufacturing; Part II: Mechanical behavior, process parameter optimization and control. Additive Manufacturing, 8, 12-35.
+• Thompson, S. M., Bian, L., Shamsaei, N., & Yadollahi, A. (2015). An overview of Direct Laser Deposition for additive manufacturing; Part I: Transport phenomena, modeling and diagnostics. Additive Manufacturing, 8, 36-62.
+• Dass, A., & Moridi, A. (2019). State of the art in directed energy deposition: From additive manufacturing to materials design. Coatings, 9(7), 418.
+• Gradl, P. R., & Protz, C. S. (2020). Technology advancements for channel wall nozzle manufacturing in liquid rocket engines. Acta Astronautica. https://doi.org/10.1016/j.actaastro.2020.04.067
+• Gradl, P., Greene, S., Protz, C., Bullard, B., Buzzell, J., Garcia, C., Wood, J., Osborne, R., Hulka, J. Cooper, K. Additive Manufacturing of Liquid Rocket Engine Combustion Devices: A Summary of Process Developments and Hot-Fire Testing Results. 54th AIAA/SAE/ASEE Joint Propulsion Conference, AIAA Propulsion and Energy Forum, (AIAA 2018-4625). July 9-12, 2018. Cincinnati, OH.
+• Gradl, P., Protz, C., Wammen, T. Additive Manufacturing Development and Hot-fire Testing of Liquid Rocket Channel Wall Nozzles using Blown Powder Directed Energy Deposition Inconel 625 and JBK-75 Alloys. 55th AIAA/SAE/ASEE Joint Propulsion Conference, AIAA Propulsion and Energy Forum. August 19-21, Indianapolis, IN. AIAA-2019-4362
+• Gradl, P., Protz, C., Fikes, J., Clark, A., Evans, L., Miller, S., Ellis, D.L., Hudson, T. Lightweight Thrust Chamber Assemblies using Multi-Alloy Additive Manufacturing and Composite Overwrap. AIAA Propulsion and Energy Forum. August 24-26. Virtual. (2020). AIAA-2020-3787.
+• Gradl, P.R., Protz, C., Greene, S.E., Ellis, D., Lerch, B., and Locci., I. "Development and Hot-fire Testing of Additively Manufactured Copper Combustion Chambers for Liquid Rocket Engine Applications", 53rd AIAA/SAE/ASEE Joint Propulsion Conference, AIAA Propulsion and Energy Forum, (AIAA 20174670)
+• Anderson, R., Terrell, J., Schneider, J., Thompson, S., & Gradl, P. (2019). Characteristics of Bi-metallic Interfaces Formed During Direct Energy Deposition Additive Manufacturing Processing. Metallurgical and Materials Transactions B, 50(4), 1921–1930.
+• Gradl, Mireles, Andrews (2020). Introduction to Additive Manufacturing for Propulsion and Energy Systems. Conference: AIAA Propulsion and Energy 2020, Additive Manufacturing Course. DOI: 10.13140/RG.2.2.23228.05761

@@ -1,0 +1,161 @@
+The Space Congress® Proceedings 2002 (39th) Beginning a New Era - Initiatives In
+Space
+Apr 30th, 1:00 PM - 4:00 PM
+PPaappeerr SSeessssiioonn II--AA -- RRoobbuusstt LLooww CCoosstt LLiiqquuiidd RRoocckkeett CCoommbbuussttiioonn
+CChhaammbbeerr BByy AAddvvaanncceedd VVaaccuuuumm PPllaassmmaa PPrroocceessss
+Richard R. Holmes NASA/MSFC
+Sandra Elam NASA/MSFC
+Timothy McKechenie PlasmaProcessess,Inc
+Robert Hickman PlasmaProcessess,Inc
+Follow this and additional works at: https://commons.erau.edu/space-congress-proceedings
+SScchhoollaarrllyy CCoommmmoonnss CCiittaattiioonn Holmes, Richard R.; Elam, Sandra; McKechenie, Timothy; and Hickman, Robert, "Paper Session I-A Robust Low Cost Liquid Rocket Combustion Chamber By Advanced Vacuum Plasma Process" (2002). TheSpaceCongress®Proceedings. 8. https://commons.erau.edu/space-congress-proceedings/proceedings-2002-39th/april-30-2002/8
+This Event is brought to you for free and open access by the Conferences at Scholarly Commons. It has been accepted for inclusion in The Space Congress® Proceedings by an authorized administrator of Scholarly Commons. For more information, please contact commons@erau.edu.
+
+
+The 39th Space Congress
+Sponsored by the Canaveral Council of Technical Societies
+April 29–3 May, 2002.
+Cape Canaveral, Florida
+Robust Low Cost Liquid Rocket
+Combustion Chamber By Advanced
+Vacuum Plasma Process
+Cutting Edge Technology Session
+Richard Holmes and Sandra Elam
+NASA / Marshall Space Flight Center
+Timothy McKechnie and Robert Hickman
+Plasma Processes, Inc., Huntsville, Alabama
+
+
+1
+Robust Low Cost Liquid Rocket Combustion Chamber By Advanced Vacuum Plasma Process
+Richard Holmes1, Sandra Elam1, Timothy McKechnie2, Robert Hickman2
+1George C. Marshall Space Flight Center 2Plasma Processes Inc. National Aeronautics and Space Administration 4914 D Moores Mill Road Marshall Space Flight Center, Alabama 35812 Huntsville, Alabama 35811
+Introduction
+Next-generation, regeneratively cooled rocket engines require materials that can meet high temperatures while resisting the corrosive oxidation-reduction reaction of combustion known as blanching, the main cause of engine failure. A project was initiated at NASA-Marshall Space Flight Center (MSFC) to combine three existing technologies to build and demonstrate an advanced liquid rocket engine combustion chamber that would provide a 100-mission life. Technology developed in microgravity research to build cartridges for space furnaces was utilized to vacuum plasma spray (VPS) a functional gradient coating on the hot wall of the combustion liner as one continuous operation, eliminating any bondline between the coating and the liner. (See Figure 1) The coating was NiCrAlY, developed previously as durable protective coatings on space shuttle high-pressure fuel turbopump (HPFTP) turbine blades. A thermal model showed that 0.035” NiCrAlY applied to the hot wall of the combustion liner would reduce the hot wall temperature 200°F, a 20% reduction, for longer life. Cu-8Cr-4Nb alloy, which was developed by NASA-Glenn Research Center (GRC), and which possesses excellent high-temperature strength, creep resistance, and low cycle fatigue behavior combined with exceptional thermal stability, was utilized as the liner material in place of NARloy-Z. The Cu-8Cr-4Nb material exhibits better mechanical properties at 650°C (1200°F) than NARloy-Z does at 538°C (1000°F). VPS formed Cu-8Cr-4Nb combustion chamber liners with a protective NiCrAlY functional gradient coating have been hot fire tested, successfully demonstrating a durable coating for the first time. Hot fire tests along with tensile and low cycle fatigue properties of the VPS formed combustion chamber liners and witness panel specimens are discussed.
+Background
+In 1984-86, durable, protective thermal barrier coatings were developed in the Vacuum Plasma Laboratory of Marshall Space Flight Center for the Space Shuttle Main Engine (SSME) high- pressure fuel turbopump (HPFTP) turbine blades. Existing coatings were cracking and spalling off, requiring excessive engine maintenance. Oxides were attributed to weak bonding which was minimized by a vacuum plasma process of spraying the coatings on in a vacuum chamber that had been evacuated and back-filled with a partial pressure of argon to prevent oxidation. The VPS coated turbine blades were considered to be qualified for space flight by satisfactorily passing 25 hot firing tests cycling between 1700°F oxihydrogen combustion and quenching with liquid hydrogen at a –423°F. Turbine blades VPS coated with NiCrAlY alloy showed no spalling or wear after 40 hot firing cycles while baseline turbine blades spalled after 5 cycles. (1) Then in 1992-96, VPS composite cartridges were successfully developed in Marshall’s VPS Laboratory and Microgravity Research for space furnaces, combining high CTE (coefficient of thermal expansion) metals with low CTE and brittle ceramics. This was necessary because scientists wanted to grow semi-conductor gallium arsenide crystals (which eat through most metals at high temperatures) in space furnaces at 1260°C. A protective ceramic coating was VPS sprayed on the inside of a niobium alloy cartridge for the necessary protection in the event the quartz ampoule containing the gallium arsenide ruptured. Although the ceramic would contain the molten gallium arsenide in the advent of an ampoule
+
+
+2
+rupture, any cracks in the inert but brittle ceramic would allow the molten gallium arsenide to attack the metal cartridge through the cracks. Consequently, a functional gradient coating technique was developed in which the ceramic coating was VPS sprayed on a revolving mandrel first, followed by transitioning from 100% coating to 100% niobium alloy with no bondline between them similar to that shown in Figure 1. The mandrel was subsequently leached out leaving a metallic cartridge with a protective ceramic coating on the inside, any differences in CTE between the two materials minimized by the transitional functional gradient coating. (2)
+Figure 1: Functional Gradient of NiCrAlY–Cu-8Cr-4Nb Coating with No Bondline
+Blanching, caused by the oxidation-reduction action of continuous, multiple explosions in the combustion chamber of liquid rocket engines, had long been recognized as the main cause of rocket engine failure. Many efforts had been made to apply protective coatings on the inside hot wall of the combustion chamber. However, every coating had always blistered off immediately on hot fire testing. All these coatings had bondlines with the combustion liner and it was reasoned that a functional gradient coating tied into the liner with no bondline should offer a very tenacious bonding under extreme conditions. Also, the VPS process offered the only known means of performing this task. In 1997, funding was obtained from NASA Marshall’s Center Director’s Discretionary Fund (CDDF) to combine three existing technologies and build a robust, low cost Aerospike liquid rocket engine combustion chamber suitable for advanced propulsion systems such as Lockheed-Martin’s VentureStar and NASA’s Reusable Launch Vehicle (RLV). Combustion chambers of equivalent size to the Aerospike chamber had been fabricated in Marshall’s Vacuum Plasma Laboratory using the copper alloy NARloy-Z. (3,4) However, current research and development conducted by Dr. Dave Ellis at NASA-Glenn Research Center (GRC) had identified a Cu-8Cr-4Nb alloy which possessed excellent high-temperature strength, creep resistance, and low cycle fatigue behavior combined with exceptional thermal stability. Researchers at NASA-GRC had demonstrated that powder metallurgy (P/M) Cu-8Cr-4Nb exhibited better mechanical properties at 650°C (1200°F) than NARloy-Z did at 538°C (1000°F). (5,6) Another plus for the use of Cu-8Cr-4Nb was that
+
+
+3
+is was very suitable for VPS spraying and less susceptible to oxygen degradation than NARloy-Z. More recently, Cu-8Cr-4Nb has been given the trade name of GRCop-84. Five different coatings were considered for the functional gradient material. NiCrAlY had been demonstrated at NASA Marshall to be very satisfactory for space shuttle main engine HPFTP turbine blades operating at a temperature of 1700°F and quenched at –423°F with liquid hydrogen. A thermal model showed that NiCrAlY, applied as a 0.035” thick functional gradient coating to the hot wall of the proposed combustion chamber, would lower the operating temperature of the liner from 1000°F to 800°F, a 20% reduction, for longer life. At the same time, the NiCrAlY coating would operate at a temperature of 1700°F, which was the same temperature the coating operated when VPS coated on the HPFTP turbine blades. (1) The NiCrAlY coating not only served as a protective coating against oxidation/blanching, but also, as a thermal barrier coating in lowering the operating temperature of the Cu8Cr-4Nb liner.
+Experimental
+Two lots of powder were purchased from Crucible Research Inc. with an oxygen content of 1355 ppm and 805 ppm respectively. This powder was used to establish process parameters, prepare test specimens and VPS one Cu-8Cr-4Nb liner. (7) Additional powder was purchased from Crucible Research with oxygen levels from 400 ppm to 650 ppm. The powder heats were sieved into lots of –325 mesh (fine) powder and –150/325 mesh (coarser) powder. A third special lot was sieved of –270 mesh powder because it processed with much greater efficiency than the –325 mesh powder (less clogging) plus having less exposure to oxygen. The powder lots were not blended to minimize any exposure to oxygen during this hand operation. The vendor has subsequently installed automated sieving and blending equipment, and blending will be incorporated in all future orders to minimize variability. Two cylindrical liners were formed at Vacuum Plasma Inc. by VPS spraying –325 mesh Cu-8Cr4Nb powder on revolving cylindrical steel mandrels in a vacuum chamber that had been evacuated and back-filled with a partial pressure of argon to prevent oxidation. The mandrels were pre-shaped to the cylindrical shape of the combustion liners. A plasma was formed by passing argon and hydrogen through an electric arc , ionizing the gases to temperatures on the order of 16,650°C (30,000°F). Powder, injected into the hot plasma by an argon carrier gas, was melted and projected toward the mandrel surface at speeds up to Mach 3 velocity. Deposition rates can be as high as 9 kg/hr (20 lb/hr). A schematic of this process is shown in Figure 2. One Cu-8Cr-4Nb liner was formed by first VPS spraying a .035” NiCrAlY coating on a revolving mandrel and transitioning to the Cu-8Cr-4Nb liner with no bond lines (reference Figure 1). (8) The second liner was VPS sprayed without a functional grading coating to serve as a control. The two VPS liners were HIPed (hot isostatic pressure) two hours at 1750°F (954°C) and 30 ksi in argon to densify and anneal the liners. After light machining, the liners were slotted with cooling channels and the mandrels removed by chemical leeching. Witness panels for physical property testing were VPS sprayed on the same type mandrels and heat treated with the liners for product/process documentation. The cylindrical VPS liners were braised in a standard stainless steel spool-piece by Rocketdyne Division of Boeing in Canoga Park, California and hot fire tested at NASA-GRC as shown in Figures 3a and 3b.
+
+
+4
+Figure 2: Vacuum Plasma Spray Process
+
+
+5
+Figure 3a: C-8Cr-4Nb Spool-piece Liner and NASA-Glenn Support Jacket
+Figure 3b: Spool-piece Liner During Hot Fire Testing at NASA-Glenn
+A primary advantage of the VPS forming over other processes is that near-net-shape spray forming of components significantly simplifies and reduces the cost of fabrication due to the high material utilization and reduction of laborious machining.
+Characterization and Material Property Testing
+Facilities at Plasma Processes, Inc. (PPI) were used to VPS-form bulk Cu-8Cr-4Nb for characterization and materials property testing. Powder lots of –150/+325, –270, and –325 mesh material were VPS deposited onto steel mandrels. The mandrels were HIPed for 1, 2, 3, and 4 hours at 30ksi for further consolidation. Samples were then machined for density, hardness, tensile, and LCF testing. Additionally, thermal conductivity samples were machined and tested for the one hour HIP condition.
+Density and Hardness
+VPS forming of the Cu-8Cr-4Nb alloy produced material with high density and good hardness. Optical micrographs of the as-sprayed material showed the microstructures were defect free with few unmelted powder particles. Table 1 lists the Rockwell B hardness (Rb) and densities of the VPS Cu-8Cr4Nb. For comparison, the density of extruded Cu-8Cr-4Nb was 8.66 g/cm3. Average hardness of the asextruded samples ranged from 73 to 78 on the Rockwell B hardness (RB) scale.
+Table 1: Average Rockwell B Hardness and Density of VPS Cu-8Cr-4Nb
+Hardness (Rb) Density (g/cc) Heat Treatment -150/+325 -270 -325 -150/+325 -270 -325
+1 Hour HIP 63.5 73.9 882.7 8.55 8.735 8.515 2 Hour HIP 65.3 73.8 78.2 8.725 8.72 8.605 3 Hour HIP 63.8 73.6 78.2 8.715 8.735 8.685 4 Hour HIP 64.8 73.7 81.6 8.72 8.745 8.7
+Tensile and Low Cycle Fatigue (LCF) Testing
+Tensile and LCF testing of the VPS Cu-8Cr-4Nb was conducted at Metcut Research. A base line temperature of 538°C(1000°F) was chosen for all samples because it was within the range of prior test temperatures and is comparable to a rocket engine combustion chamber environment. For a comparison to NASA-Glenn work, three tensile and LCF samples made from extruded material were also tested.
+Tensile Testing
+All tensile tests were performed according to ASTM E-21 test specifications at 538°C (1000°F) with an argon environment to minimize oxidation. Tensile properties for –150/+325, –270, and –325 mesh Cu-8Cr-4Nb vs. HIP time are shown in Figures 4 and 5. The NASA-Glenn extruded material is shown in the 1 hour HIP column for comparison. The results indicate that the VPS Cu-8Cr-4Nb retains good strength at elevated temperatures. This is evidence of the very good stability of the Cr2Nb precipitates and their ability to strengthen Cu even at extreme temperatures. The –270 VPS material provided the highest UTS values. The –150/+325 VPS material retained equivalent strength as the extruded material for all HIP times. As expected, the strength of the materials decreased slightly with increasing HIP time.
+
+
+6
+VPS Cu-8Cr-4Nb Ultimate Tensile Strength @ 538C (1000F) vs. HIP Tiime
+0.0
+5.0
+10.0
+15.0
+20.0
+25.0
+30.0
+1234 HIP Time (Hr)
+UTS (ksi)
+-150/+325 -270 -325 Extruded
+Figure 4: UTS vs. HIP time for –150/+325, -270, -325 mesh VPS Cu-8Cr-4Nb
+VPS Cu-8Cr-4Nb Elongation @ 538C (1000F) vs. HIP Time
+0.0
+2.0
+4.0
+6.0
+8.0
+10.0
+12.0
+14.0
+16.0
+18.0
+20.0
+1234 HIP Time (Hr)
+% Elongation
+-150/+325 -270 -325 Extruded
+Figure 5: Elongation vs. HIP time for –150/+325, -270, -325 mesh VPS Cu-8Cr-4Nb
+Elongation is presented in Figure 5. The –150 VPS material had the highest elongation and is comparable to the extruded material for all HIP times. The –270 VPS material also showed good elongation for all HIP times. A complete failure analysis of fracture surfaces is currently being analyzed to characterize the fracture behavior of the VPS material. Similar work on previous VPS Cu-8Cr-4Nb has shown typical ductile fracture behavior with well-developed dimple rupture.
+Low Cycle Fatigue (LCF) Testing
+The LCF testing was performed using general guidelines of the ASTM E606 specification. The tests were performed at 538°C (1000°F) in an argon atmosphere with a strain ratio of –1.0 and a constant strain rate of 0.002% per second. Setup specimens were tested in true strain control using a 0.375” exten
+
+
+7
+someter positioned on the gage. Fractured occurred at one of the extensometer probes. All subsequent tests were performed in displacement control with a 0.50” extensometer positioned on the threaded adapters. Therefore, only the measured total elastic ( L) and plastic ( L plas.) change in length has been reported. The LCF results are presented graphically in Figures 6 and 7. As shown, the –325 VPS material has an LCF life comparable to the extruded material. The average cycles to failure based on three (3) data points per parameter are reported. However, the –325 VPS material had peak values of 15,707 and 15,980 cycles. The –150/+325 and –270 VPS material performed better than NARloy-Z.
+–150/+325 and –270 VPS Cu-8Cr-4Nb (538 C)
+
+
+8
+Figure 6: Low Cycle Fatigue Life of VPS Cu-8Cr-4Nb
+VPS Cu-8Cr-4Nb 538C (1000F) LCF vs. HIP Tim
+5,188 5,257
+5,796 5,098 4,943 4,880
+5,727
+10,067
+10,690
+7,950
+5,521
+11,598
+0
+2,000
+4,000
+6,000
+8,000
+10,000
+12,000
+14,000
+1 23 4
+HIP Time (Hr)
+-150/+325 -270 -325 Extruded
+Figure 7: Low Cycle Fatigue Life of VPS Cu-8Cr-4Nb
+-325 VPS Cu-8Cr-4Nb (538 C)
+Extruded Cu-8Cr-4Nb (538 C)
+
+
+9
+Thermal Conductivity of VPS Cu-8Cr-4Nb
+200
+220
+240
+260
+280
+300
+320
+340
+0 200 400 600 800
+Temperature (C°)
+V99-23 (-270) V99-24 (-150/+325) V99-27 (-325) Extruded (#196)
+Figure 8: Thermal Conductivity vs. Temperature for Cu-8Cr-4Nb
+As shown in Figure 8, the VPS Cu-8Cr-4Nb thermal conductivity values are comparable to the extruded Cu-8Cr-4Nb samples. However, above 200 C there is a decrease in thermal conductivity for the –150/+325 and –325 VPS Cu-8Cr-4Nb. Hasselman states that a data scatter of 7% can be measured for multiple samples of the same material during testing. In addition, very small amounts of impurities in the copper matrix, such as oxygen, can cause a dramatic decrease in thermal conductivity. Overall, VPS Cu8Cr-4Nb retains 90-100% of the thermal conductivity of extruded Cu-8Cr-4Nb over the temperature range tested.
+Hot Fire Testing
+Two NASA Marshall Space Flight Center Cu-8Cr-4Nb combustion liners, VPS formed at Vacuum Plasma, Inc. and brazed into stainless steel spool pieces by Rocketdyne Division of Boeing were hot fire tested at NASA Glenn Research Center in a joint effort. One combustion liner was VPS sprayed with a NiCrAlY functional gradient coating while the other liner had no coating as a control. Both spool pieces/liners were equivalent to liquid rocket engine combustion chamber liners, but with simpler geometry. Cooling channels were machined into the outside of each liner. The liners were brazed to stainless steel jackets with cooling water manifolds. Test conditions were: Chamber pressure = 750 psia, Oxygen/Hydrogen ratio =7.0, Duration =30 seconds of hot fire testing, Number =28 hot firing tests for a total 482 seconds. See Figures 3a and 3b.
+Summary
+For the first time ever, a coating has remained adhered to the combustion liner through a hot firing test. While referred to as a coating, the VPS NiCrAlY is actually a functional gradient material (FGM), an integral part of the combustion liner with no bond line separating them. (8) While Cu-8Cr4Nb performed at higher temperatures with greatly improved Low Cycle Fatigue over NARloy-Z, the VPS NiCrAlY FGM offered additional oxygen and blanching protection plus thermal barrier protection for lower operating temperature and longer operating life. The VPS Cu-8Cr-4Nb combustion liner with FGM “coating” was projected to produce a 100-mission life.
+
+
+10
+References
+1. R.R. Holmes and T.N. McKechnie, “Vacuum Application of Thermal Barrier Plasma Coatings,” Proceedings from Advanced Earth-to-Orbit Propulsion Technology Conference, NASA George C. Marshall Space Flight Center, Huntsville, Alabama, May 10-12, 1988. 2. J.S. O’Dell, T.N. McKechnie and R.R. Holmes, “Development of Near Net Shape Refractory Metal Components Utilizing Vacuum Plasma Spray,” Tungsten Refractory Metals and Alloys:4, Metal Powder Industries Federation, Princeton, NJ. 1997, pp. 159-166. 3. R.R. Holmes, D.H. Burns, and T.N. McKechnie, “Vacuum Plasma Spray Forming NARloy-Z and Inconel 718 Components for Liquid Rocket Engines,” Thermal Spray Research and Applications, ASM International, Materials Park, OH 1991, pp. 363-368. 4. U.S. Patent No. 5,249,357, “Method of Fabricating a Rocket Engine Combustion Chamber” 10/15/1993 5. D.L. Ellis and G.M. Michal, “Mechanical and Thermal Properties of Two Cu-Cr-Nb Alloys and NARloy-Z,” NASA CR-198529, NASA Lewis Research Center, Cleveland, OH (Oct. 1996). 6. D.L. Ellis, G.M. Michal and R.L. Dreshfield, “A New Cu-8 Cr-4 Nb Alloy For High Temperature Applications,” Materials Technology, Vol. 5, No. 5/6, (May/June 1995). 7. R.R. Holmes, D.L. Ellis and T.N. McKechnie, “Robust Low Cost Aerospike/RLV Combustion Chamber By Advanced Vacuum Plasma Process,” Proceedings of the 36TH Space Conference, Cape Canaveral, Florida, April 27-30, 1999. 8. U.S. Patent No. 6,314,720, “Rocket Combustion Chamber Coating” 11/13/2001

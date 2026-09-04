@@ -1,0 +1,297 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/263269970
+Effects of Aspect Ratio on the Turbulent Heat Transfer of
+Regenerative Cooling Passage in a Liquid Rocket Engine
+Article in Numerical Heat Transfer Applications · November 2013
+DOI: 10.1080/10407782.2013.798532
+CITATIONS
+6
+READS
+327
+1 author:
+Tae Seon Park Kyungpook National University
+74 PUBLICATIONS 662 CITATIONS
+SEE PROFILE
+All content following this page was uploaded by Tae Seon Park on 10 July 2014.
+The user has requested enhancement of the downloaded file.
+
+
+This article was downloaded by: [Kyungpook National University] On: 10 July 2014, At: 15:46 Publisher: Taylor & Francis Informa Ltd Registered in England and Wales Registered Number: 1072954 Registered office: Mortimer House, 37-41 Mortimer Street, London W1T 3JH, UK
+Numerical Heat Transfer, Part A: Applications: An International Journal of Computation and Methodology
+Publication details, including instructions for authors and subscription information: http://www.tandfonline.com/loi/unht20
+Effects of Aspect Ratio on the Turbulent Heat Transfer of Regenerative Cooling Passage in a Liquid Rocket Engine
+Tae Seon Park a
+a School of Mechanical Engineering , Kyungpook National University , Daegu , South Korea Published online: 02 Aug 2013.
+To cite this article: Tae Seon Park (2013) Effects of Aspect Ratio on the Turbulent Heat Transfer of Regenerative Cooling Passage in a Liquid Rocket Engine, Numerical Heat Transfer, Part A: Applications: An International Journal of Computation and Methodology, 64:9, 710-728, DOI: 10.1080/10407782.2013.798532
+To link to this article: http://dx.doi.org/10.1080/10407782.2013.798532
+PLEASE SCROLL DOWN FOR ARTICLE
+Taylor & Francis makes every effort to ensure the accuracy of all the information (the “Content”) contained in the publications on our platform. However, Taylor & Francis, our agents, and our licensors make no representations or warranties whatsoever as to the accuracy, completeness, or suitability for any purpose of the Content. Any opinions and views expressed in this publication are the opinions and views of the authors, and are not the views of or endorsed by Taylor & Francis. The accuracy of the Content should not be relied upon and should be independently verified with primary sources of information. Taylor and Francis shall not be liable for any losses, actions, claims, proceedings, demands, costs, expenses, damages, and other liabilities whatsoever or howsoever caused arising directly or indirectly in connection with, in relation to or arising out of the use of the Content.
+This article may be used for research, teaching, and private study purposes. Any substantial or systematic reproduction, redistribution, reselling, loan, sub-licensing, systematic supply, or distribution in any form to anyone is expressly forbidden. Terms & Conditions of access and use can be found at http://www.tandfonline.com/page/termsand-conditions
+
+
+EFFECTS OF ASPECT RATIO ON THE TURBULENT HEAT TRANSFER OF REGENERATIVE COOLING PASSAGE IN A LIQUID ROCKET ENGINE
+Tae Seon Park
+School of Mechanical Engineering, Kyungpook National University, Daegu, South Korea
+Turbulent flows and related heat transfer in a regenerative cooling passage of liquid rocket engine are investigated by turbulence models. At a constant mass flow rate, threedimensional characteristics of flow and heat transfer are studied by changing the aspect ratio under constant or variable heat flux conditions. The cooling passage shows different flow structures, which cannot be found in a straight duct, because the heated wall has a convex-concave-convex curvature. So, the streamwise velocity and secondary flows are varied by the geometrical feature of curvature inversion. From these characteristics the thermal field in the cooling passage is discussed depending on the variation of crosssectional area and the aspect ratio. Also, the influences of aspect ratio coupled to the thermal boundary condition are investigated. Finally, the geometric effects on the local heat transfer and the change of flow structure are scrutinized.
+1. INTRODUCTION
+In order to maintain the structural integrity of a rocket chamber, a cooling arrangement must be installed. Regenerative cooling is one of the most widely used cooling techniques in liquid propellant rocket engines. It has been effective in protecting the surface of the walls of rocket engines, because the wall temperature should be maintained below the material’s thermal limit by the thermal equilibrium between the wall and coolant flow [1]. Therefore, the understanding of the flow behavior and heat transfer inside cooling passages is of great importance, because it can be served to the design determination of regeneratively cooled rocket engines. To cool the thrust chamber, a liquid coolant is passed through cooling channels that are machined in the thrust chamber wall. If the number of cooling channels is constant, the aspect ratio of cooling passages is naturally changed depending on the variation of the chamber radius. Also, in this configuration, strong curvatures appear at the nozzle throat and contraction regions. However, the effects of the
+Received 24 September 2012; accepted 27 March 2013. This research was supported by the Basic Science Research Program through the National Research Foundation of Korea (NRF) funded by the Ministry of Education, Science and Technology (2012R1A1A2041310), and Kyungpook National University Research Fund, 2012. Address correspondence to Tae Seon Park, School of Mechanical Engineering, Kyungpook National University, 1370 Sangyuk-dong, Buk-gu, Daegu 702-701, South Korea. E-mail: tsparkjp@ knu.ac.kr
+Numerical Heat Transfer, Part A, 64: 710–728, 2013 Copyright # Taylor & Francis Group, LLC ISSN: 1040-7782 print=1521-0634 online DOI: 10.1080/10407782.2013.798532
+710
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+aspect ratio or streamwise curvature in the cooling passage have not been fundamentally scrutinized in spite of its engineering significance. So, it is interesting to examine the combined effects of aspect ratio and curvature on the wall heat transfer. The turbulent flow and heat transfer of regenerative cooling passage have been investigated by some researchers [2–7]. Marchi et al. [2] showed a one-dimensional model for the gas flow including the heat conduction in the thrust chamber wall. Zhang et al. [3] studied for regenerative cooling using a one-dimensional model coupled with two-dimensional simulation for the gas flow in the thrust chamber. Park [4] discussed turbulent flow and heat transfer in a convex channel of a calorimetric rocket chamber and found that the geometric effects on the local heat transfer and Reynolds number dependence were significant. On the other hand, the cooling efficiency of a regenerative cooling based on three-dimensional computations was investigated by Ulas and Boysan [5]. They showed the maximum temperature of the thrust chamber wall and coolant and the pressure drop in a cooling channel. Kang and Sun [6] presented two methodologies using empirical equations and computational fluid dynamics. Pizzarelli et al. [7] showed three-dimensional flows of transcritical methane. However, their computation was performed for a straight duct. So, the detailed description of turbulent flow and heat transfer in cooling passages leaves something to be desired. For a cooling passage, as addressed by Pizzarelli et al. [8], three-dimensional analysis coupled with the conjugate heat transfer is rather complex. Also, the turbulent flows related to the heat transfer are not pupularly studied. Then, as the preliminary stage of a comprehensive approach, this study focuses on the convective heat transfer inside cooling channels. In the present study, the turbulent flow and heat transfer of a regenerative cooling passage are investigated for the different aspect ratios of cooling passage. The effects of the geometric variation with a constant mass flow rate are clarified by turbulence models. In addition to this, the peculiar structures of three-dimensional flows due to the different shapes of cooling passage are examined, and their effects on turbulent heat transfer are scrutinized.
+2. NUMERICAL METHOD
+2.1. Nonlinear k-e-fl Model
+The nonlinear k-e-fm model (NKEF) [9] among the selected turbulence models (Launder and Spalding (SKE) [10], Launder and Sharma (LS) [11], Yang and Shih
+NOMENCLATURE
+AR ratio of height to width at the outlet Cf skin friction coefficient Cm model constant in eddy viscosity fm1, fm2, fw damping functions k turbulent kinetic energy Mach mach number Nu Nusselt number Rt turbulent Reynolds number ( 1⁄4 k2=ne)
+Sij strain rate tensor ( 1⁄4 0.5(Ui, j þ Uj, i)) Wij strain rate tensor ( 1⁄4 0.5(Ui, j Uj, i)) e dissipation rate of turbulent kinetic energy h fluctuating temperature H mean temperature n kinematic molecular viscosity nt eddy viscosity q density
+REGENERATIVE COOLING IN A LIQUID ROCKET ENGINE 711
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+(YS) [12], Park et al. (KEF, NKEF) [9]) is briefly summarized below. For an unsteady and incompressible turbulent flow, the continuity and Reynolds-averaged Navier-Stokes equations can be written in the following form.
+qU i qxi
+1⁄4 0; ð1Þ
+qU i
+qt þ U j
+qU i qxj
+1⁄41
+q
+qP qxi
+þq
+qxj
+n qU i
+qxj
+sij ð2Þ
+Where Ui is the mean velocity, P the mean pressure, and n the kinematic viscosity, respectively. The Reynolds stress (sij 1⁄4 uiuj) can be represented in the eddy viscosity form.
+sij 1⁄4 nt
+qU i qxj
+þ qU j
+qxi
+2
+3 kdij kb2 SikSkj
+1
+3 S 2dij
+kb3 W ikSkj SikW kj kb4 Sil SlmW mj W il SlmSmj
+kb5 W il W lmSmj þ Sil W lmW mj þ 0:5SijW 2 2
+3 III Sdij ð3Þ
+nt 1⁄4 Cmf m
+k2
+e
+Where III S 1⁄4 SlmW mnW nl; Sij 1⁄4 Sijk=e; W ij 1⁄4 W ijk=e; S 1⁄4
+ffiffiffiffiffiffiffiffiffiffiffiffiffi
+2Sij Sij
+q
+, and W 1⁄4
+ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi
+2W ijW ij
+q
+. bi represents the strain dependent coefficients.
+The variations of the eddy viscosity are allowed by decomposing fm into two parts, i.e., fm 1⁄4 fm1 fm2.
+f m1 1⁄4 1 þ f DRt 3=4 f w
+2 ð5Þ
+q2f w qxj qxj
+1⁄4 R3=2
+t
+A2L2 ðf w 1Þ ð6Þ
+f m2 1⁄4 15
+3
+1þg
+g2 þ Cmg3 þ As
+ð7Þ
+g1⁄4
+C0
+3 þ ðP1 þ ffiffiPffiffi2ffiffi
+p Þ1=3 þ signðP1
+ffiffiPffiffi2ffiffi
+p ÞjP1
+ffiffiPffiffi2ffiffi
+p j1=3; P2 0
+C0
+3 þ 2ðP2
+1 P2Þ1=6 cos 1
+3 arccos ffiffiPffiffi1ffiffiffiffiffiffi
+P2
+1 P2
+p ; P2 < 0
+8<
+: ð8Þ
+P1 1⁄4 C0
+C2
+0
+27
+ðAs a1g2Þ
+6 þ1
+2 ð9Þ
+712 T. S. PARK
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+P2 1⁄4 P2
+1
+C2
+0
+9
+ðAs a1g2Þ
+3 ð10Þ
+Here, As 1⁄4 a2
+3n2 a2
+2g2=3, g 1⁄4 fwS , n 1⁄4 fwW , fD 1⁄4 10 exp[ (Rt=120)2], and L2 1⁄4
+k3=e2 þ 702 ffiffiffiffiffiffiffiffiffi
+n3=e
+p . The strain dependent coefficients are as follows.
+b2 1⁄4 4a2Cmf m2f 2
+w=g þ b2;wall; b3 1⁄4 2a3Cmf m2f 2
+w=g þ b3;wall
+b4 1⁄4 6a2a3Cmf m2f 2
+w=g2; b5 1⁄4 2a2
+3Cmf m2f 2
+w=g2 ð11Þ
+Where b2,wall 1⁄4 (1 fw)2.0=Sw, b3;wall 1⁄4 ð1 f wÞð1:5=Sw 2a3Cmf m2f 2
+w=gÞ, Sw 1⁄4 (1 þ [MAX(S , W )]2)=(1 þ fw), and fm2 1⁄4 5.41g=(g2 þ As). The model constants are set as Cm 1⁄4 0.09, A 1⁄4 8.4, a1 1⁄4 0.48, a2 1⁄4 0.375, a3 1⁄4 0.8, and C0 1⁄4 2.5. Further detailed description of the nonlinear k-e-fm model is given in Park et al. [9, 13]. In calculating turbulent heat transfer, the governing equation of mean temperature is expressed as follows.
+qH
+qt þ U j
+qH qxj
+1⁄4q
+qxj
+n Pr
+qH qxj
+huj ð12Þ
+The heat flux huj is determined by huj 1⁄4 ðnt=PrtÞqH=qxj. Here, the turbulent Prandtl number is set as Prt 1⁄4 0.9.
+2.2. Numerical Procedure
+The spatial discretization is performed with the fourth-order compact scheme [14] for the convective term in Eq. (2), and the HLPA scheme [15] for the convective term in the turbulence and temperature equations. The viscous term and the other terms are evaluated by the second-order central difference. A nonstaggered grid arrangement is adopted in a generalized coordinate system. Therefore, the momentum interpolation technique is employed to avoid pressure-velocity decoupling. The time integration is based on a hybrid scheme using the third-order Runge-Kutta method for the explicitly treated terms and the Crank-Nicolson method for the implicitly treated terms. The implicit terms in each equation are the diffusion terms without cross derivatives. The explicit terms are the diffusion terms with cross derivatives and the source terms. Convergence of the Poisson equation for pressure is accelerated with a multigrid method [16]. Although the present study focuses on steady-state solutions, the time-dependent terms are maintained in governing equations because the present method is based on a time-stepping procedure. In all simulations, the value of the Courant-Friedrichs-Lewy number (CFL) was kept as CFL 1⁄4 0.5.
+2.3. Computational Domain and Boundary Conditions
+Figure 1 shows a simplified rocket engine with regenerative cooling. It consists of a combustion chamber, a bell-shaped nozzle, and hundreds of cooling passages. Although it is not a real engine, the geometrical parameters are summarized as the
+REGENERATIVE COOLING IN A LIQUID ROCKET ENGINE 713
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+following. That is, the chamber radius is 0.1685 m, the throat radius is 0.1066 m, and the nozzle expansion area ratio is 9. One of the cooling passages is selected as the computational domain. The geometric effect on the wall heat transfer is analyzed for six aspect ratios (AR 1⁄4 0.5, 1.0, 1.5, 2.0, 3.0, and 4.0), keeping the height of the cooling passage (0.05 m). Here, the aspect ratio (AR) is the ratio of height to width at the outlet. The inflow condition uses a constant mass flow rate of uniform temperature Hin. The convective boundary condition is applied at the outlet. No-slip boundary conditions are used along all solid walls. The inner wall of the cooling passage is imposed at a constant (qo) or a variable (qwall (x)) heat flux and other three walls are adiabatic. In order to examine the thermal boundary condition for nozzle flow, preliminary computations are performed by using a compressible Navier-Stokes flow solver and the RTE code [17]. The axial distributions of the predicted pressure, Mach number and wall heat flux are compared in Figure 2. The combustion chamber has the total pressure of 4 MPa and the total temperature of 3300 K. Even though there are some discrepancies between two methods, the results show similar variations to the isentropic flow through a converging-diverging nozzle. As the local radius varies along the x-coordinate, the fluid experiences an adiabatic expansion owing to the enthalpy decrease. The flow is accelerated until it becomes
+Figure 1. Computational domain and boundary conditions (color figure available online).
+714 T. S. PARK
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+choked to the nozzle throat having the smallest radius. Under these flow variations, the high heat fluxes are generated in the throat region. The predicted results are consistent with such phenomena and so the wall heat flux is maximized at the nozzle throat. In order to comprehend the flow and heat transfer of the cooling passage, the consideration of geometrical characteristics is a prerequisite. Figure 3 shows the ratio of cross-sectional area to the inlet area, local aspect ratios for different AR, and wall heat flux for boundary conditions. The local aspect ratio gives the relationship between the height and width of the cooling passage at streamwise locations. Compared to the inlet, the local aspect ratio of the outlet is nearly twice and the ratio is biggest at the nozzle throat. With the aid of the mass continuity, we can comprehend the flow variation in the streamwise direction. As can be seen in the figure, the flow is accelerated in the nozzle part of CS1 and CS2 because of the decreased area. Conversely, after the nozzle throat (CS3), the flow is decelerated. This is a peculiar feature for the variation of the streamwise velocity in a regenerative cooling passage. It plays a very important role to understand the heat transfer characteristics. On the other hand, as shown in Figure 2, the wall heat flux is a function of x. To implement this condition, the interpolated qwall (x) according to the wall position is applied to each computation. Here, qo is an area-weighted average of qwall (x). From this result, two thermal boundary
+Figure 2. Comparison of the predicted pressure, Mach number, and wall heat flux.
+REGENERATIVE COOLING IN A LIQUID ROCKET ENGINE 715
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+Figure 3. Ratio of cross-sectional area to the inlet area, local aspect ratios for different AR, and wall heat flux for B.C (color figure available online).
+Figure 4. Comparison of the streamwise velocity and turbulent intensities distributions (Reb 1⁄4 4410) (color figure available online).
+716 T. S. PARK
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+conditions of qo and qwall (x) are considered. Although the qwall (x) condition is reasonable for the regenerative cooling passage, the qo condition is additionally adopted for comparison.
+2.4. Validation
+From a literature survey, turbulent fields of the regenerative cooling passage are not available. Accordingly, for the validation of the present numerical method, the results of a straight duct are compared with the DNS data of Gavrilakis [18] and the experiment of Cheesewright et al. [19]. Figure 4 shows the streamwise velocity distributions and the root mean square (rms) values of the fluctuating velocities. Although the predicted values are slightly higher than that of DNS, but they match well with the pattern of the DNS data. So, reasonable computational results can be expected for the turbulent flow and related heat transfer in cooling passages.
+3. RESULTS AND DISCUSSION
+In a regenerative cooling, the mass flow rate is closely related to the design parameters to maintain below the thermal limit. The present study focuses on the geometric variation, so the mass flow rate is fixed at a constant when Reb 1⁄4 UbDh=n 1⁄4 15000 for AR 1⁄4 1. And a specific fluid is not adopted and the Prandtl number of 0.7 is considered for the working fluid. Before proceeding further, the grid dependency was checked by carrying out the computation of the nonlinear k-e-fm model [9] for the three cases: 150 30 30 CVs, 200 40 40 CVs, and 260 40 40 CVs. Here, CV represents a control volume. For different grids, Figure 5 shows the axial distributions of friction coefficients and wall temperatures at the center of the heated wall. As can be seen, the grid dependency is weak for the most region after the central part of the nozzle. The grid-independent solution is close to the grid of 200 40 40 CVs. So, the grid number is selected as 200 40 40 CVs. Figure 6 shows pressure distribution and cross-sectional velocities for a cooling passage. To see flow structures clearly, the magnitudes of secondary flows are enlarged suitably. The secondary flows are obtained from the projection to the normal direction of each cross-section. It represents a typical feature of turbulent flow in the cooling passage. In the entrance region of CS1, there are no secondary vortices. In the region, the streamwise velocity may be considered nearly parabolic. However, as the flow moves forward to the section of CS2, a pair of counter-rotating vortices is generated. The secondary flow in the middle of heated wall is directed from inner wall to outer wall. As a result, the pressure on the outer wall increases and the center of the streamwise velocity is pushed to the outer wall. This is caused by the centrifugal force generated due to streamwise curvature. In a rocket engine, we can expect that this force is maximized at the region of nozzle throat, because the radius of the nozzle throat is smallest to obtain the choking condition. In the region, the centrifugal force is acting toward the heated wall, it makes secondary flows having reversed axes compared to those of the nozzle part. But at the CS3 section, there are weak secondary flows. It is because the region of CS3 is the introduction part of the inverse curvature. After going through the CS3 section,
+REGENERATIVE COOLING IN A LIQUID ROCKET ENGINE 717
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+we can see a pair of strong counter-rotating vortices impinging on the heated wall. These reversed vortices at the CS4 section develop in the straight passage under the remaining influence of the nozzle throat. Then, the flow undergoes an opposite curvature over again at the CS5 section. The resulting structure of secondary flows is maintained at the chamber part over the CS6 section. These characteristics,
+Figure 6. Pressure distribution and cross-sectional velocities for a cooling passage (color figure available online).
+Figure 5. Grid dependency (color figure available online).
+718 T. S. PARK
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+including curvature inversions, is crucial for the understanding of the convective heat transfer inside regenerative cooling passages. Figure 7 shows pressure and streamwise velocity (U=Ub) on several crosssections and wall friction coefficient (Cf 1⁄4 2swall=qU2
+b), where swall is the shear stress at the wall. We can easily see the alternations of the pressure difference between inner and outer walls due to the curvature inversions. Also, the streamwise velocity is mainly accelerated or decelerated by depending on the variation of cross-sectional area. In particular, near the outer wall of CS3 the flow is significantly increased. This is a very important feature because the heat flux and temperature gradients at the nozzle throat are very high. So, thermal equilibrium by the accelerated flow is a decisive part in designing the regenerative cooling passage. Figure 8 shows streamwise velocity (U=Ub) and temperature distributions at several cross-sectional planes and Nusselt number (Nu 1⁄4 hDh=j), where h 1⁄4 qw=(Hw Hb). Here, j is the thermal conductivity and Hw is wall temperature. The bulk
+temperature is calculated by Hb 1⁄4 R UHdydz= R Udydz. The temperature values are normalized by (H Hmin)=(Hmax Hmin). Temperature distributions on the cross-sections of cooling passage varies mainly with the secondary flows. According to the flow structures, the thermal boundary layer on the heated wall thins or thickens. In the nozzle region (CS1, CS2), since the secondary flow makes the thermal boundary layer thicker due to the ejecting structure in the middle of the heated wall,
+Figure 7. Pressure and streamwise velocity on several cross-sectional planes and wall friction coefficient (NKEF, AR 1⁄4 1) (color figure available online).
+REGENERATIVE COOLING IN A LIQUID ROCKET ENGINE 719
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+it deteriorates the wall heat transfer. However, the secondary flow of the nozzle throat region shows an impinging structure, it reduces the thickness of thermal boundary layer, and the wall heat transfer rate is significantly increased at that region. After the nozzle throat, such increasing character in heat transfer is significantly influenced by the strong deceleration due to the enlargement of the crosssectional area. In spite of the flow deceleration for the section between CS3 and CS4, the wall heat transfer keeps on growing. This is due to the result that the impinging flow structure is more dominant than others in the region. After the CS4 section, the wall heat transfer is decreased by the flow deceleration. This decreasing pattern is strengthened by the negative effect of inverted secondary flows in the CS5 section. To investigate the influences for different thermal boundary conditions, the streamwise distributions of the cross-sectional mean temperature, wall temperature, and Nu along the cooling passage are plotted in Figure 9. The mean temperature and Nu varies naturally according to the prescribed heat flux condition, but the different evolutions are observed for the wall temperature. That is, the peak temperature of the qo condition appears in the nozzle part, whereas the wall temperature of the qwall (x) condition is maximized at the nozzle throat. This indicates that the qo condition is not reasonable when the wall temperature is a design variable of the regenerative cooling passage, because the qwall (x) condition is close to the heat
+Figure 8. Temperature distributions at several cross-sectional planes and Nusselt number (NKEF, AR 1⁄4 1) (color figure available online).
+720 T. S. PARK
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+transfer characteristics in a rocket engine. So, if we use the wall temperature as a design variable, the qwall(x) condition should be adopted into the numerical analysis. However, when we take design variables of the mean temperature at the exit and the averaged Nu both boundary conditions are meaningful. To investigate the effect of cross-sectional aspect ratio on the wall heat transfer, several computations are performed. Figure 10 shows the streamwise distributions of Nu along the heated wall. The local Nusselt numbers for two thermal boundary conditions is compared with five turbulence models. Although there is a big difference between the predicted values of Nu, the overall variations are quite similar. It is due to the discrepancy in model performance for turbulent heat transfers. Generally in a straight duct, as the flow moves downstream, Nu decreases due to the increased thickness of thermal boundary layer. However, as can be seen in the figure, Nu increases in the region of 0.65 x 1.2. In this region, the counter-rotating vortices negatively work on the wall heat transfer due to the flow toward the outer wall, and the accelerated flow by the decreased cross-section increases the wall heat transfer. These two effects are reflected in the Nu variation. Accordingly, the wall heat transfer of the nozzle region is more sensitive to the changes of the cross-sectional area. When the flow enters the throat region, the fluid
+Figure 9. Streamwise distributions of the cross-sectional mean temperature, wall temperature, and Nusselt number for different boundary conditions (AR 1⁄4 1) (color figure available online).
+REGENERATIVE COOLING IN A LIQUID ROCKET ENGINE 721
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+undergoes the reversed curvature. The flow near the middle region of the heated wall is changed into an impinging type, it benefits the enhancement of the wall heat transfer. However, the region of the contraction part has the increasing crosssectional area. So, the resulting Nu shows the increase and decrease pattern. In this region, we can expect that the influence of secondary flows and flow deceleration on the wall heat transfer is comparable each other. After the contraction part, the local Nu varies like that in a straight duct. Figure 11 shows the streamwise distributions of the cross-sectional mean temperature, the wall temperature, and Nu along the cooling passage for five different aspect ratios. These quantities are critical to the design point of view. As AR increases, the streamwise distributions of the cross-sectional mean temperature and Nu varies similarly for both boundary conditions. Thus, for the high AR the increase of the mean temperature is slow and Nu is decreased. However, the wall temperatures are differently distributed for the two conditions. The wall temperatures of the qwall (x) condition except AR 1⁄4 0.5 tend to concentrate in the vicinity of a single function, but the constant heat flux condition gives the wall temperatures widely. In particular, in the throat region the wall temperatures of the qwall (x) condition
+Figure 10. Comparison of the predicted Nusselt numbers for five turbulence models (AR 1⁄4 1). (a) Constant heat flux, (qo), and (b) variable heat flux, qwall (x) (color figure available online).
+722 T. S. PARK
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+are maintained at the similar level, but those are scattered for the qo condition. This trend notices that the mean temperature at the exit and the wall temperature at the throat can be used as key factors for the design of the cooling passage. The evolution of the local skin friction coefficient (Cf) and pressure coefficient (Cp 1⁄4 2Pwall=qU2
+b) are plotted in Figure 12. The friction coefficient decreases as AR increases, while the pressure drop is a little increased. It is mainly because the streamwise velocity increases to keep a constant mass flow rate. In designing a regenerative cooling passage [1], to control the required pumping power, these two factors should be taken into consideration. Figure 13 shows secondary flows and temperature distributions on several cross-sections. As AR increases, secondary flows are clearly seen and those are strengthened. For the cooling passage of a constant AR, the aspect ratio of the inlet section is lowest and it is highest at the nozzle throat; the passage has the reversed transitions of surface curvatures. From this geometrical feature, the development of counter-rotating vortices and the temperature distribution are characterized. In general, the contraction part (CS4) of the combustion chamber was considered as a thermally vulnerable part, but it is observed the positive effects of secondary flow on the wall heat transfer. This is a good feature considering the heat generation inside the combustion chamber.
+Figure 11. Cross-sectional mean temperature, wall temperature, and Nusselt numbers for five aspect ratios (NKEF). (a) Constant heat flux, (qo), and (b) variable heat flux, qwall (x) (color figure available online).
+REGENERATIVE COOLING IN A LIQUID ROCKET ENGINE 723
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+To investigate the variation of secondary flows by the aspect ratio, the magnitudes of secondary flows, the cross-sectional average vorticity (X) and turbulent kinetic energy (kavg) are plotted in Figure 14. Here, SVmax represents
+a maximum of
+ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi
+SV 2 þ SW 2
+p
+for the projected velocities (SV, SW) on the cross
+Figure 13. Secondary flows and temperature on several cross-sectional planes (NKEF) (color figure available online).
+Figure 12. Comparison of the predicted Cf and Cp (NKEF, AR 1⁄4 1) (color figure available online).
+724 T. S. PARK
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+sectional plane, and X is the norm of the vorticity vector, X 1⁄4
+ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi
+X2
+x þ X2
+y þ X2
+z
+q
+. For the
+selected aspect ratios, the secondary flows are severely changed after the nozzle throat. As can be seen, the magnitude of the CS3 section is several times higher than those of other sections. These increases of secondary flows are helpful to enhance the wall heat transfer. On the other hand, in the throat region, as the aspect ratio increases, the magnitudes of the secondary flows are weakened, whereas the vorticity magnitudes are intensified. It is a result that the sidewall effect of the cooling passage is strengthened gradually. Also, as the aspect ratio increases, the variation of the streamwise velocity gets more severe, because the streamwise momentum for the mass conservation shows a tendency to increase. These flow characteristics are reflected into the variation of turbulent kinetic energy. The predicted kavg=U2
+b values are significantly increased depending on the aspect ratios. It is interesting that as the aspect ratio increases, the flow in the cooling passage becomes more turbulent and the magnitudes of secondary flows are decreased. The higher levels of turbulent kinetic energy make the interior temperatures of the cooling passage more uniform.
+Figure 14. Comparison of the magnitudes of secondary flows and turbulent kinetic energy for five aspect ratios (NKEF) (color figure available online).
+REGENERATIVE COOLING IN A LIQUID ROCKET ENGINE 725
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+Finally, Figure 15 shows the area-averaged Nusselt numbers for two thermal boundary conditions. The predicted results by five turbulence models are compared for the different aspect ratios. Even though the predicted values are very different, all predictions commonly show a local maximum. For the models except the YS model the averaged Nu are maximized at 0.5 < AR < 2. As AR is larger than AR 1⁄4 2, the heat transfer coefficient is decreased. It can be considered as a typical trend for the heat transfer in a regenerative cooling passage. Considering the results of Figures 11 and 14, the higher AR produces the lower bulk temperature and it increases the difference between the wall and bulk temperatures. This is caused by the increased turbulent kinetic energy. So, the heat transfer coefficient is decreased with increasing AR. It indicates that the cooling efficiency by the convective heat transfer is diminished.
+4. CONCLUSION
+In the present study, the turbulent flow and thermal fields of a regenerative cooling passage in a rocket engine were investigated by turbulence models. At a constant mass flow rate, three dimensional characteristics of flow and heat transfer were studied by changing the aspect ratios of the cooling passage with constant or variable heat flux.
+Figure 15. Comparison of the area-averaged Nusselt numbers for two thermal boundary conditions. (a) Constant heat flux (qo), and (b) variable heat flux (qwall (x)) (color figure available online).
+726 T. S. PARK
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+The cooling passage showed different flow structures which cannot be found in a straight duct. In the curved region of the cooling passage, the secondary flows and the pressure gradient between the inner and outer wall were induced by the centrifugal force. The streamwise velocity was accelerated or decelerated by depending on the variation of cross-sectional area. The rotational directions of the secondary flows were strongly related to the surface curvatures of the cooling passage. And, the streamwise velocity and the vortices had significant effects on the heat and momentum transport. The wall temperatures of the variable heat flux condition were weakly sensible to the aspect ratio, but those were scattered for the constant heat flux condition. Also, the wall heat transfer was affected by two factors of the streamwise acceleration and surface curvature. Considering the geometrical characteristics to obtain the choking condition, the nozzle throat region was considered as a vulnerable part to heat by the combustion gas. However, the positive effect of secondary flows and the strong acceleration due to the reduction of cross-sectional area was observed in the region. Before the nozzle throat region, the wall heat transfer was more sensitive to the flow acceleration, while the influence of secondary flows and flow deceleration was comparable in the contraction part. As the aspect ratio increases, the friction coefficient and the magnitudes of secondary flows were decreased, while the flow in the cooling passage became more turbulent. From the simulations with two thermal boundary conditions, we deduced that the variable heat flux condition was more desirable for using the wall temperature as a design variable. Considering the distributions of local temperature, the high aspect ratio was more reasonable to maintain below the thermal limit of the cooling passage. However, the cooling efficiency by the convective heat transfer was diminished, as the aspect ratio increase. This feature was strongly influenced by the evolutions of turbulent kinetic energy and secondary flows.
+REFERENCES
+1. G. P. Sutton and O. Biblarz, Rocket Propulsion Elements, 7th ed., John Wiley & Sons, New York, 2001.
+2. C. H. Marchi, F. Laroca, A. F. da Silva, and J. N. Hinckel, Numerical Solutions of Flows in Rocket Engines with Regenerative Cooling, Numer. Heat Transfer A, vol. 45, pp. 699–717, 2004.
+3. H. W. Zhang, Y. L. He, and W. Q. Tao, Numerical Study of Film and Regenerative Cooling in a Thrust Chamber at High Pressure, Numer. Heat Transfer A, vol. 52, pp. 991–1007, 2007.
+4. T. S. Park, Numerical Study of Turbulent Flow and Heat Transfer in a Convex Channel of a Calorimetric Rocket Chamber, Numer. Heat Transfer A, vol. 45, pp. 1029–1047, 2004.
+5. A. Ulas and E. Boysan, Numerical Analysis of Regenerative Cooling in Liquid Propellant Rocket Engines, Aerospace Sci. and Tech., vol. 24, pp. 187–197, 2013.
+6. Y. D. Kang and B. Sun, Numerical Simulation of Liquid Rocket Engine Thrust Chamber Regenerative Cooling, J. Thermophysics and Heat Transfer, vol. 25, pp. 155–64, 2011. 7. M. Pizzarelli, F. Nasuti, and M. Onofri, Flow Analysis of Transcritical Methane in Rectangular Cooling Channels, 44th AIAA=ASME=SAE=ASEE Joint Propulsion Conference & Exhibit, AIAA 2008–4556, Hartford, CT, 2008.
+REGENERATIVE COOLING IN A LIQUID ROCKET ENGINE 727
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+
+
+8. M. Pizzarelli, S. Carapellese, and F. Nasuti, A Quasi-2-D Model for the Prediction of the Wall Temperature of Rocket Engine Cooling Channels, Numer. Heat Transfer A, vol. 60, pp. 1–24, 2011.
+9. T. S. Park, H. J. Sung, and K. Suzuki, Development of a Nonlinear Near-Wall Turbulence Model for Turbulent Flow and Heat Transfer, Int. J. Heat and Fluid Flow, vol. 24, pp. 29–40, 2003.
+10. B. E. Launder and D. B. Spalding, The Numerical Computation of Turbulent Flows, Computer Methods in Appl. Mechanics and Eng., vol. 3, pp. 269–289, 1974.
+11. B. E. Launder and N. Shima, Second-Moment Closure for the Near-Wall Sublayer: Development and Application, AIAA J., vol. 27, no. 10, pp. 1319–1325, 1989.
+12. Z. Yang and T. H. Shih, New Time Scale Based k-e Model for Near-Wall Turbulence, AIAA J., vol. 31, pp. 1191–1198, 1993.
+13. T. S. Park and H. J. Sung, A New Low-Reynolds-Number k-e-fm Model for Predictions Involving Multiple Surfaces, Fluid Dynamics Res., vol. 20, pp. 97–113, 1997. 14. S. K. Lele, Compact Finite Difference Schemes with Spectral-Like Resolution, J. Computational Physics, vol. 103, pp. 16–42, 1992.
+15. J. Zhu, Higher-Order Bounded Discretization Schemes for Finite Volume Computations of Incompressible Flows, Computer Methods in Appl. Mechanics and Eng., vol. 98, pp. 345–360, 1992.
+16. T. S. Park, Multigrid Method and Low-Reynolds-Number k-e Model for Turbulent Recirculating Flows, Numer. Heat Transfer B, vol. 36, pp. 433–456, 1999.
+17. M. H. N. Naraghi, RTE-A Computer Code for Three-Dimensional Rocket Thermal Evaluation, User Manual, 2002. 18. S. Gavrilakis, Numerical Simulation of Low-Reynolds-Number Turbulent Flow Through a Straight Square Duct, J. Fluid Mechanics, vol. 244, pp. 101–129, 1992.
+19. R. Cheesewright, G. McGrath, and D. G. Petty, LDA Measurements of Turbulent Flow in a Duct of Square Cross Section at Low Reynolds Number, Aeronautical Engineering Dept. Rep. ER1011, Queen May Westfield College, University of London, 1990.
+728 T. S. PARK
+Downloaded by [Kyungpook National University] at 15:46 10 July 2014
+View publication stats

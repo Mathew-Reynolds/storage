@@ -1,0 +1,211 @@
+x
+
+ARTICLE
+
+The Importance of Cooling Lines in Injection Molding
+SHARE
+
+SEARCH
+
+TOPIC
+
+DFM Guides
+Material Guides
+Engineering Workflow Tips
+Mechanical Design Tips
+Industry Reports
+Supply Chain Optimization
+Fictiv Updates
+Fictiv Culture
+CLEAR
+
+FILTER BY
+
+Content type
+
+▸
+
+Master Class
+Articles
+Case Studies
+eBooks
+Teardowns
+Tools
+Webinars
+Podcasts
+
+Role
+
+▸
+
+Business Leadership
+Engineering
+ID
+Industrial Design
+Supply Chain
+
+Industry
+
+▸
+
+Aerospace
+Automotive
+Climate Tech
+Consumer Products
+Medical Devices
+Robotics
+Semiconductor
+
+Manufacturing Processes
+
+▸
+
+3D Printing
+Assembly
+CNC Machining
+Compression Molding
+Die Casting
+Injection Molding
+Metal Casting
+Off-The-Shelf Parts
+Post Processing
+Quality Control
+RTV Molding
+Sheet metal
+Urethane Casting
+
+Subscribe to MechStack
+
+for articles, videos, and puzzles for the mechanically inclined.
+
+Subscribe
+
+By signing up, you agree to our Terms of Use and Privacy Policy. We may use the info you submit to contact you and use data from third parties to personalize your experience.
+
+
+STEVE MELITO
+
+11.17.2022
+
+Time to read: 5 min
+
+Cooling lines, or cooling channels, support the uniform cooling of injection molds and the production of plastic parts that are free from sink marks and warping. During the injection molding process, a plastic resin is heated and then injected into a mold cavity. The plastic fills the cavity, conforms to its shape, and is cooled. This cooling process returns the plastic to a solid state in the form of a finished part, but an inconsistent temperature across the mold can cause uneven cooling that results in part defects.
+
+Proper cooling in injection molding reduces the risk of defects, rework, and material waste. Because cooling typically comprises up to 75% of injection molding cycle time, it’s important for an injection molder to optimize cooling channel design and minimize potential risks to molded parts. Fictiv’s Manufacturing Partners are skilled in cooling injection molds and can maximize coolant flow for effective temperature distribution. Create an account and request an injection molding quote, and keep reading to learn more.
+
+Air Cooling vs. Water Cooling
+
+Most injection molding machines are either air-cooled or water-cooled.
+
+Air cooling uses an evaporator to remove heat from the injection system and a condenser to remove heat from the evaporator. Air does not conduct heat as well as water, but electric fans can take heat away from the injection mold and blow in cooler air.
+Water cooling pumps coolant through lines on the outside of the mold cavity. For optimal cooling, these waterlines are located as close as possible to the surface of the molded part. Known as thermolators, water cooling systems require a cooling source such as a tower.
+
+It’s important to note that the “water” used for cooling is actually a mixture of fluids. In the cooling tower for an injection molding machine, water is mixed with a biocide to prevent microbial growth. In the cooling lines near the injection mold, water is mixed with ethylene glycol to prevent the formation of rust.
+
+Straight Line Cooling vs. Conformal Cooling
+
+Two types of cooling lines, or channels, are used near an injection mold: straight-line and conformal.
+
+Straight-line cooling is the traditional, or standard method for cooling injection molds. Cooling lines or channels are machined in straight lines into metal molds. Side channels, or branches, intersect with main channels and increase the surface area that coolant can reach. After a plastic part is molded, coolant is pumped through these channels in a circuit. This cools the mold core and draws heat away from the injection molded part. Typically, straight-line cooling is used for parts with simpler geometries. Conformal cooling is used with injection molds for more complex parts. These cooling channels closely follow the shape of the cavity and are not limited to straight lines. Instead, they follow the twists and turns of the injection molded part while offering greater cooling efficiency for faster cycle times. Conformal channels also can cool hard-to-reach areas. Traditionally, the milling and welding required for conformal channels made them cost-prohibitive. Today, a 3D printing technique called direct metal laser sintering (DMLS) can be used to create these channels in a more cost-effective way.
+
+Baffles, Bubblers, and Thermal Pins
+
+No matter what type of cooling channels an injection mold uses, hot surfaces far from cooling lines increase the risk of part defects. To create a more effective cooling circuit around the injection molded part, design features called bafflers, bubblers, and thermal pins can be used. Bafflers and bubblers are especially important with laminar flows because they help to produce turbulence, and a turbulent flow exposes more of the coolant’s surface area to the heated injection mold.
+
+Baffles
+
+Baffles are blade-like metal plates that divert coolant from a main channel to a side channel and then back into the main channel. Coolant from the main channel flows up one side of the blade and into the side channel until it reaches an opening at the top. The coolant then flows down the other side of the baffle and returns to the main channel. By twisting the sheet metal that forms the blade, a mold maker can cause the coolant to flow as a helix for more homogenous temperature distribution.
+
+Bubblers
+
+Bubblers are tubes that are fitted into drilled holes to connect coolant channels. The coolant from one channel flows into the bottom of the tube and then bubbles out the top of the tube into another channel, much like a fountain. The coolant then flows down both sides of the tube and continues its flow through the cooling system. Bubblers are usually screwed into the mold core but can also be used for cooling flat sections of the mold that do not support milled or drilled channels.  
+
+Thermal Pins
+
+Thermal pins are sealed, fluid-filled cylinders that are inserted into a cooling channel and help draw heat away from the mold. Heat causes the fluid inside of a thermal pin to become a gas. When this gas cools, it condenses to a liquid, and the cycle repeats. Thermal pins are more effective than copper tubes at conducting heat; however, effective heat conduction depends upon avoiding or filling any air gaps between the thermal pin and the mold.   
+
+Cooling for Slender, Large, and Cylinder Cores
+
+The size and shape of the mold’s core are also important for injection molding cooling.
+
+Cooling for slender cores (≤3 mm) uses air cooling instead of water. Air is blown at the core when the mold is opened or flows in through a centrally-located hole. For cores with diameters of 5 mm or less, copper or copper-beryllium inserts are press-fitted into the mold.
+Cooling for large cores (≤40 mm) also uses thermally-conductive inserts, but to ensure that coolant flow reaches the tip through the central bore. Multiple smaller channels are better than a single channel, and larger channels should keep the same diameter across the mold.  
+Cooling for cylinder cores uses a double-helix flow. The coolant flows to the tip of the core in one helix and then returns via another helix. As with other types of cores (and cavities), it’s critical to achieve consistent cooling.  
+The Importance of Cooling in Injection Molding
+
+Fictiv understands the importance of cooling in injection molding and works with partners who use the right types of cooling lines to optimize plastic parts production. Because cooling can comprise as much as 75% of the plastic injection molding cycle, getting it right will contribute to the success of your plastics project. 
+
+For all your custom injection molded part manufacturing needs, Fictiv has you covered. We simplify custom plastic part sourcing with intelligent, streamlined, automated workflows — in short, Fictiv is your operating system for custom manufacturing that makes part procurement faster, easier, and more efficient. 
+
+In other words, Fictiv lets engineers, like you, engineer.
+
+Create an account and upload your part to see what our instant quote process, expert guidance, and intelligent platform can do for you. Our injection molding service can deliver T1 samples in as little as 2 weeks!
+
+STEVE MELITO Steve Melito is a technical writer who raises bees and chickens when he's not digging into manufacturing and technology. He lives and works in the Berkshires.
+Learn More »
+Appreciate this Topic?
+
+Subscribe to MechStack to get articles, videos, and puzzles for the mechanically inclined.
+
+Subscribe
+
+By signing up, you agree to our Terms of Use and Privacy Policy. We may use the info you submit to contact you and use data from third parties to personalize your experience.
+
+
+Also of Interest
+Most Common Injection Molding Defects
+Rapid Injection Molding Guide: Process, Materials...
+Conformal Cooling: The Ins and Outs of Advanced...
+Capabilities
+3D Printing
+Injection Molding Services
+CNC Machining
+Urethane Casting
+Die Casting
+Sheet Metal
+Compression Molding Services
+Solutions
+For Prototyping
+For Production
+Teams
+Quality Management
+Tariff Management
+Why Choose Fictiv
+Welding & Assembly
+MRO Services
+Why Fictiv
+Why Choose Fictiv
+Xometry Alternative
+Protolabs Alternative
+Industries
+Aerospace
+Automotive
+Consumer products
+Medical
+Robotics
+Climate Tech
+Semiconductor
+Company
+Contact Us | NDA Form
+Reviews
+About Us
+Careers
+Press
+Become a partner
+Resource Center
+Help Center
+Supplier Code of Conduct
+Non-Disclosure Agreement
+ISO 9001:2015 Certificate
+Articles Sitemap
+
+Join our newsletter
+
+Stay up to date with the latest news, announcements, and articles.
+
+SUBSCRIBE
+
+By signing up, you agree to our Terms of Use and Privacy Policy. We may use the info you submit to contact you and use data from third parties to personalize your experience.
+
+
+Copyright © Fictiv. All rights reserved

@@ -1,0 +1,92 @@
+IOP Conference Series: Materials Science and Engineering
+PAPER • OPEN ACCESS
+Heat transfer aspects and analysis of regenerative cooling in semi-cryogenic thrust chamber with fixed and variable aspect ratio coolant channels
+To cite this article: Thomas Santhosh and Biju T Kuzhiveli 2019 IOPConf.Ser.:Mater.Sci.Eng. 502 012066
+View the article online for updates and enhancements.
+You may also like
+Optimization and Design of Regenerative Cooling Channel for Scramjet Engine Feng Gao, Qian Zhang, Hongyu Xiao et al.
+
+A spray-cooling based antagonistic SMA actuator (SCASA) with low resistance consumption and high driving frequency Lei Zhang, Hu Jin, Yiming Ouyang et al.
+
+Numerical Simulation of Shock WaveBoundary Layer Interaction with Supersonic Film Cooling Zhigang Liu
+
+This content was downloaded from IP address 146.230.192.154 on 31/03/2025 at 12:59
+
+
+Content from this work may be used under the terms of the Creative Commons Attribution 3.0 licence. Any further distribution of this work must maintain attribution to the author(s) and the title of the work, journal citation and DOI. Published under licence by IOP Publishing Ltd
+ICEC-ICMC 2018 IOP Conf. Series: Materials Science and Engineering 502 (2019) 012066
+IOP Publishing doi:10.1088/1757-899X/502/1/012066
+1
+Heat transfer aspects and analysis of regenerative
+cooling in semi-cryogenic thrust chamber with fixed
+and variable aspect ratio coolant channels
+Thomas Santhosh, Biju T Kuzhiveli
+Centre for Advanced Studies in Cryogenics (CASC), National Institute of Technology Calicut, Calicut, India - 673601
+E-mail: santhoshthomas38@gmail.com, btkuzhiveli@nitc.ac.in
+Abstract. Semi-cryogenic rocket engines have very high combustion temperatures inside its thrust chambers which lead to huge chamber wall heat fluxes. Hence appropriate cooling methods are to be implemented to maintain the chamber wall temperatures within the safe limits. Regenerative cooling is the most commonly used cooling method in liquid propellant rocket engines. Recent studies has shown that using coolant channels having high height to width ratios (Aspect ratio) results in better cooling of the thrust chamber walls but implementing such channels along the entire length of the thrust chamber produces excessive coolant pressure drop. In this study, a computer program has been developed to perform two dimensional heat transfer analysis of regenerative cooled thrust chambers with coolant channels of rectangular cross section. The effect of aspect ratio and number of coolant channels on chamber wall temperature as well as coolant pressure drop is analysed. Analysis has also been conducted for variable aspect ratio coolant channels such that high aspect ratios are employed only in the critical regions. The engine considered for analysis is designed to produce 600 kN of thrust, has a chamber pressure of 60 bar and runs on LOX/RP-1 mixture with RP-1 as the coolant.
+1. Introduction
+Modern liquid propellant rocket engines are subjected to high flame temperatures in the range of 3500 K and wall heat fluxes close to 160 MW/m2 in large engines. Thus adequate cooling methods are required to ensure the safe and reliable operation of the liquid propellant rocket engines. Regenerative cooling is one of the most effective and commonly used cooling methods in liquid propellant rocket engines. The number and aspect ratio (Height to width ratio where height being the dimension of the coolant channel in the radial direction) of rectangular coolant channels has significant effect on thrust chamber cooling. Recent studies show that high aspect ratio provides better cooling compared to low aspect ratios. The throat region of the nozzle is subjected to maximum heat flux and hence is the most difficult region to cool. Using high aspect ratio coolant channels in the throat region and reducing the aspect ratio as we move away from the throat region can provide required cooling of chamber walls with minimum coolant pressure drop. A computer program is developed to perform two dimensional heat transfer analysis of regenerative cooled thrust chambers having rectangular coolant channels of fixed and variable aspect ratios. Heat transfer analysis is performed on a thrust chamber burning LOX/RP-1 mixture with RP-1 (kerosene) as the coolant.
+
+
+ICEC-ICMC 2018 IOP Conf. Series: Materials Science and Engineering 502 (2019) 012066
+IOP Publishing doi:10.1088/1757-899X/502/1/012066
+2
+2. Mathematical description
+Heat transfer through the combustion gases, chamber wall and coolant is considered for analysis. The flow of coolant through the coolant channels is considered to be steady and turbulent. Due to the symmetry characteristic of the system, only half of the domain is considered for analysis. The schematic diagram of the solution domain is shown in figure 1.
+Figure 1. Schematic diagram of the solution domain.
+The combustion gas side convective heat transfer coefficient (hg) is estimated using the Bartz relation expressed as:
+hg = 0.026
+Dt0.2
+( μg0.2Cpg
+P rg0.6
+)( Pc
+c∗
+)0.8( At
+A
+)0.9
+σ (1)
+Where Dt is the throat diameter (m), μg is the dynamic viscosity of combustion gases (Ns/m2), Cpg is the specific heat of combustion gases at constant pressure (J/kgK), Prg is the Prandtl number associated with the combustion gases, Pc is the combustion chamber pressure (N/m2), c∗ is the characteristic velocity (m/s), At is the throat area (m2), A is the area of the section considered (m2) and σ is the correction factor for property variations across the boundary layer. The coolant side convective heat transfer coefficient is estimated using the Dittus-Boelter equation expressed as:
+N uc = 0.023Re0.8
+c P r0.4
+c (2)
+Where Nuc, Rec and Prc are the Nusselt number, Reynolds number and Prandtl number associated with the coolant. The properties of the coolant such as density, specific heat, viscosity and thermal conductivity varies along the length of the coolant channel depending on its pressure and temperature. The appropriate values of these properties are input to the computer program from a property file.
+3. Results and discussions
+Heat transfer analysis is performed on a regenerative cooled semi-cryogenic thrust chamber burning LOX/RP-1 combination with RP-1 as the coolant. The thrust chamber material is OFHC and covering jacket material is Inconel-718. The parameters of the liquid propellant engine considered for analysis is expressed in table 1.
+3.1. Effect of aspect ratio of coolant channels
+To study the effect of aspect ratio of coolant channels on the chamber wall temperature, heat transfer analysis is performed on seven configurations of coolant channels having height 4 mm and 5mm. The number of coolant channels is fixed to 100 and a constant coolant mass flow rate of 0.67 kg/s per channel is used for the analysis. Different aspect ratios are obtained by varying the width of coolant channels. The variation of maximum gas side wall temperature (Twg max) with aspect ratio of coolant channels are shown in figure 2. It is observed that increasing the aspect ratio of coolant channels reduces the maximum gas side wall temperature in all the coolant channel configurations considered for analysis. Among the channels with
+
+
+ICEC-ICMC 2018 IOP Conf. Series: Materials Science and Engineering 502 (2019) 012066
+IOP Publishing doi:10.1088/1757-899X/502/1/012066
+3
+Table 1. Liquid propellant rocket engine specifications.
+Thrust (kN) 600 Combustion chamber pressure (bar) 60 Propellant combination LOX/RP-1 Mixture ratio (Oxidizer mass flow rate/Fuel mass flow rate) 2.5 Oxidizer mass flow rate (kg/s) 168 Fuel mass flow rate (kg/s) 67
+height 4 mm, there is no significant reduction in the maximum gas side wall temperatures as the aspect ratio is increased above 1 up to 1.33 because of the fact that the area available for heat transfer decreases with increase in aspect ratio. Further increase in aspect ratio may lead to a rise in the maximum gas side wall temperature due to the dominating effect of reduction in area available for heat transfer over the increase in the coolant side convective heat transfer coefficient. Among the coolant channels of height 5 mm, within the range of the aspect ratios considered the effect of increase in coolant side convective heat transfer coefficient is dominating and hence the maximum gas side wall temperature is dropping. The pressure drop in the coolant channels increases with aspect ratio of the coolant channels as expressed in figure 3.
+Figure 2. Variation of maximum gas side wall temperature (Twg max) with aspect ratio of coolant channels.
+Figure 3. Variation of coolant pressure drop with aspect ratio of coolant channels.
+3.2. Effect of number of coolant channels
+To study the effect of number of coolant channels on thrust chamber cooling, a total of 31 different coolant channel configurations are subjected to heat transfer analysis. The number of coolant channels ranges from 40 to 220. The coolant mass flow rate per channel ranges from 0.304 kg/s to 1.675 kg/s. The number of coolant channels is varied keeping the total coolant mass flow rate constant. The variation of maximum gas side wall temperature (Twg max) and coolant pressure drop with number of coolant channels for different coolant channel configurations are shown in figure 4 and 5. With the increase in number of coolant channels, as long as the effect of
+
+
+ICEC-ICMC 2018 IOP Conf. Series: Materials Science and Engineering 502 (2019) 012066
+IOP Publishing doi:10.1088/1757-899X/502/1/012066
+4
+increase in area available for heat transfer dominates over the effect of decrease in coolant side heat transfer coefficient, the wall temperature decreases. Once the effect of decrease in coolant side convective heat transfer coefficient dominates, the wall temperature begins to increase. For a given total coolant mass flow rate as the number of coolant channel increases, the coolant pressure drop decreases.
+Figure 4. Variation of maximum gas side wall temperature (Twg max) with number of coolant channels.
+Figure 5. Variation of pressure drop in coolant channels with number of coolant channels.
+3.3. Variable aspect ratio coolant channels
+Study of variable aspect ratio coolant channels has been conducted by varying the coolant channel width from the throat section to the nozzle exit. Among the coolant channel configurations subjected to analysis, the configuration 3x2x180 produced the best cooling with a maximum gas side wall temperature of 813.605 K. The coolant pressure drop associated with this configuration is 368.295 bars. The fuel (coolant) generally being stored at a pressure below 5 bars in this case necessitates a turbo pump capable of delivering at least 429 bars outlet pressure which is not justifiable considering the huge energy requirement of the turbo pump and the enhanced structural strength required for the engine components to withstand such high pressures. The acceptable pressure drop in coolant channels is in the range of 50 to 100 percentage of the chamber pressure. This 3x2x180 configuration is considered as the BASE configuration for the analysis of variable aspect ratio coolant channels. The parameters of different variable aspect ratio coolant channel configurations as well as the BASE configuration considered for analysis are given in table 2. The variation of gas side wall temperature (Twg) and coolant pressure along the length of the thrust chamber for different variable aspect ratio coolant channel configurations are given figures 6 and 7. The coolant channel configurations using variable aspect ratios have produced higher wall temperatures in the non-critical regions compared to the BASE configuration. In all the cases, the wall temperatures along the entire length of the thrust chamber are maintained within the safe limits (below 900 K for OFHC) . The coolant pressure drops are significantly reduced with variable aspect ratio coolant channels. VACH-1, VACH-2, VACH-3, VACH-4 and VACH-5 has produced 21.49%, 39.52%, 47.36%, 51.9% and 54.5% lower coolant pressure drops compared to the BASE configuration. The use of variable aspect ratio coolant channels is a solution to the excess pressure drops encountered in high aspect ratio coolant channel configurations.
+
+
+ICEC-ICMC 2018 IOP Conf. Series: Materials Science and Engineering 502 (2019) 012066
+IOP Publishing doi:10.1088/1757-899X/502/1/012066
+5
+Table 2. Parameters of different coolant channel configurations considered for analysis.
+BASE VACH-1 VACH-2 VACH-3 VACH-4 VACH-5
+Channel height, H (mm) 3 3 3 3 3 3 Channel width at combustion chamber, Wcc (mm) 2 2 2 2 2 2 Channel width at throat, Wt (mm) 2 2 2 2 2 2 Channel width at nozzle exit, We (mm) 2 4 6 8 10 12 Number of coolant channels, N 180 180 180 180 180 180
+Figure 6. Variation of gas side wall temperature (Twg) along the length of the thrust chamber.
+Figure 7. Variation of coolant pressure along the length of the thrust chamber for different coolant channel configurations.
+4. Conclusions
+For a coolant channel of given geometry, there exists an optimum number of coolant channels which produce the maximum cooling. Number of coolant channels other than this optimum value results in increased chamber wall temperatures. The pressure drop in the coolant channels decreases with increase in number of coolant channels. For a fixed number of coolant channels and channel height, there exists an optimum aspect ratio which produces maximum cooling. Aspect ratios other than the optimum value results in higher chamber wall tempereatures. For a given number of coolant channels, the coolant pressure drop increases with increase in aspect ratio. Increasing the cross section area of coolant channels in certain regions will increase the wall temperatures and decrease the pressure drop in this region.
+References
+[1] A Ulas and E Boysan 2013 Aerospace Science and Technology 24 187-197 [2] M F Wadel 1998 NASA/TM-1998-206313 Washington DC

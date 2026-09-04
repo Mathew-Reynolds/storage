@@ -1,0 +1,566 @@
+Home
+1 update
+Conference Paper
+Full-text available
+Rapid Fabrication Techniques for Liquid Rocket Channel Wall Nozzles
+July 2016
+DOI: 10.2514/6.2016-4771
+Conference: 52nd AIAA/SAE/ASEE Joint Propulsion ConferenceAt: Salt Lake City, UT
+Paul R. Gradl
+Research Interest Score
+48.6
+Citations
+38
+Recommendations
+0
+Reads
+5,738
+Learn about stats on ResearchGate
+Overview
+Stats
+Citations (38)
+References (32)
+Download
+Share
+More
+Recommend
+Recommend this work
+Follow
+Get updates
+Share
+Share in a message
+Abstract and figures
+The functions of a regeneratively-cooled nozzle are to (1) expand combustion gases to increase exhaust gas velocity while, (2) maintaining adequate wall temperatures to prevent structural failure, and (3) transfer heat from the hot gases to the coolant fluid to promote injector performance and stability. Regeneratively-cooled nozzles are grouped into two categories: tube-wall nozzles and channel wall nozzles. A channel wall nozzle is designed with an internal liner containing a series of integral coolant channels that are closed out with an external jacket. Manifolds are attached at each end of the nozzle to distribute coolant to and away from the channels. A variety of manufacturing techniques have been explored for channel wall nozzles, including state of the art laser-welded closeouts and pressure-assisted braze closeouts. This paper discusses techniques that NASA MSFC is evaluating for rapid fabrication of channel wall nozzles that address liner fabrication, slotting techniques and liner closeout techniques. Techniques being evaluated for liner fabrication include large-scale additive manufacturing of freeform-deposition structures to create the liner blanks. Abrasive water jet milling is being evaluated for cutting the complex coolant channel geometries. Techniques being considered for rapid closeout of the slotted liners include freeform deposition, explosive bonding and Cold Spray. Each of these techniques, development work and results are discussed in further detail in this paper.
+… Read more
+Figure content uploaded by Paul R. Gradl
+Author content
+Content may be subject to copyright.
+Public Full-text
+1
+Content uploaded by Paul R. Gradl
+Author content
+Content may be subject to copyright.
+Page 1
+AIAA-2016-4771
+1
+American Institute of Aeronautics and Astronautics
+Rapid Fabrication Techniques for Liquid Rocket
+Channel Wall Nozzles
+Paul R. Gradl
+1
+NASA Marshall Space Flight Center, Huntsville, AL 35812
+The functions of a regeneratively-cooled nozzle are to (1) expand combustion gases to increase
+exhaust gas velocity while, (2) maintaining adequate wall temperatures to prevent structural failure,
+and (3) transfer heat from the hot gases to the coolant fluid to promote injector performance and
+stability. Regeneratively-cooled nozzles are grouped into two categories: tube-wall nozzles and
+channel wall nozzles. A channel wall nozzle is designed with an internal liner containing a series of
+integral coolant channels that are closed out with an external jacket. Manifolds are attached at each
+end of the nozzle to distribute coolant to and away from the channels. A variety of manufacturing
+techniques have been explored for channel wall nozzles, including state of the art laser-welded
+closeouts and pressure-assisted braze closeouts. This paper discusses techniques that NASA MSFC
+is evaluating for rapid fabrication of channel wall nozzles that address liner fabrication, slotting
+techniques and liner closeout techniques. Techniques being evaluated for liner fabrication include
+large-scale additive manufacturing of freeform-deposition structures to create the liner blanks.
+Abrasive water jet milling is being evaluated for cutting the complex coolant channel geometries.
+Techniques being considered for rapid closeout of the slotted liners include freeform deposition,
+explosive bonding and Cold Spray. Each of these techniques, development work and results are
+discussed in further detail in this paper.
+Nomenclature
+AM
+ 
+=
+ 
+Additive Manufacturing
+CTE
+ 
+=
+ 
+Coefficient Thermal Expansion
+CWN
+ 
+=
+ 
+Channel Wall Nozzle(s)
+DED
+ 
+=
+ 
+Directed Energy Deposition
+DMLS
+ 
+=
+ 
+Direct Metal Laser Sintering
+EBF^3
+ 
+=
+ 
+Electron Beam Freeform Fabrication
+EXW
+ 
+=
+ 
+Explosive Welding
+HIP
+ 
+=
+ 
+Hot Isostatic Press
+lbf
+ 
+=
+ 
+Pounds of Force
+LENS
+ 
+=
+ 
+Laser Engineered Net Shape
+LME
+ 
+=
+ 
+Liquid Metal Embrittlement
+LCUSP
+ 
+=
+ 
+Low Cost Upper Stage Propulsion
+MCC
+ 
+=
+ 
+Main Combustion Chamber
+MDDM
+ 
+=
+ 
+Metal Direct Digital Manufacturing
+MRL
+ 
+=
+ 
+Manufacturing Readiness Level
+MSFC
+ 
+=
+ 
+Marshall Space Flight Center
+SLM
+ 
+=
+ 
+Selective Laser Melting
+VPS
+ 
+=
+ 
+Vacuum Plasma Spray
+WJM
+ 
+=
+ 
+Water Jet Milling or Water Jet Machining
+_______________________________
+1 Combustion Devices Design and Manufacturing Engineer, NASA Marshall Space Flight Center,
+Huntsville, AL 35812
+Page 2
+AIAA-2016-4771
+2
+American Institute of Aeronautics and Astronautics
+I.
+ 
+Introduction
+arge-scale booster and upper stage liquid rocket engines (>20,000 lbf thrust) are being considered and developed
+across the launch vehicle and defense industries to provide continuing and reduced-cost access to space for current
+and future missions. These engines are derived from heritage designs that are being upgraded for payload capacity,
+heritage engines that are being evolved for affordability, and new blank-sheet engine designs. As engine manufacturers
+and government agencies are challenged to provide these engine solutions, the systems-level cost requirements are
+being flowed down to a component level to reduce associated design, manufacturing and tests costs while maintaining
+high performance. These costs can be reduced through elimination of processes, adopting and integrating new
+manufacturing techniques and design solutions, reducing inspections, or providing lower cost inspections.
+NASA is researching methods and techniques of manufacturing for large-scale nozzles to reduce the overall life-
+cycle costs for liquid rocket engine component fabrication. Cost reduction is certainly a topic that has been addressed
+for many decades and several state of the art techniques have been considered to address this. In addition to cost,
+reduced production component build schedules is also being evaluated, which in most cases is synonymous with
+component cost. Although these cost reductions are being considered across all engine components, a fair amount of
+development and feasibility efforts for new manufacturing approaches are being investigated for regeneratively-cooled
+channel wall nozzles and combustion chambers. There are considerable differences between material considerations
+for high-heat-flux combustion chambers over materials used in regeneratively-cooled nozzles, but many of the
+manufacturing techniques for channel wall structures are similar, regardless of material combinations. The focus of
+these development efforts have been on nozzles, but are certainly applicable for combustion chambers with further
+development.
+Modern manufacturing techniques are being advanced to address some of these cost reductions and increases in
+performance through design complexity. One example of this is the use of powder-bed additive manufacturing, often
+referred to as Selective Laser Melting (SLM) or Direct Metal Laser Sintering (DMLS), where design complexity adds
+no additional cost. This technology is being demonstrated and appears suitable for lower-thrust upper stage engine
+components. Subscale combustion chambers and nozzles have been hot-fire tested at NASA Marshall Space Flight
+Center (MSFC), where the fabrication of and hot-fire test planning for a 25,000-lbf thrust-class upper stage GRCop-
+84 copper combustion chamber under the Low Cost Upper Stage Propulsion (LCUSP) program is pushing the limits
+of this technology
+1
+,2
+.
+The LCUSP combustion chamber makes use of two additively-manufactured GRCop-84 axially-split halves,
+joined with a circumferential electron beam weld in the barrel section. This full copper chamber is then cladded with
+an Inconel 625 jacket and manifolds using Electron Beam Freeform Fabrication (EBF^3). The diameter of this
+chamber maximized the 250x250 mm build area of the available powder bed machines. Larger-scale powder bed
+machines such as the EOS M400
+3
+ 
+and Concept Laser XLINE
+4
+ 
+are increasing build capabilities (X,Y,Z)
+ 
+to
+400x400x400mm and 800x400x500mm, respectively. This, however, still limits the size of components that can be
+manufactured in a single piece. Studies have been conducted to fabricate large-scale components using SLM pieces
+that integrate panels with axial and circumferential welds or brazes. While this design solution does have potential, it
+increases complexity of the hot-wall joints and must be traded against cost and fabrication schedules to build large-
+diameter components. Another technology that has been reviewed for the complete (one-piece) fabrication of nozzles
+and other large-scale components is free-form blown-powder deposition. Although this technology has potential, the
+surface roughness, size limitations and fidelity of this process require further development at the time of this
+publication.
+A regeneratively-cooled (regen) channel wall nozzle contains the coolant fluid within externally-machined coolant
+channels that must be closed out, as opposed to a tube-wall configuration that contains the fluid within the pre-formed
+tubes. Channel wall nozzles have been investigated for liquid engines due to the reduction in touch labor costs and
+more robust manufacturing processes relative to traditional tube wall nozzles
+5. The general configuration of a channel
+wall nozzle includes an inner liner that has a series of integral coolant passages on the backside of the hot wall and
+follow the internal contour of the nozzle. These passages are closed out using interface bonding (brazing, welding,
+non-metallic) or unbonded floating liner techniques, depending on the requirements. Once the liner is closed out,
+collection manifolds and flanges are added to complete the coolant circuit. This general configuration is shown in
+Figure 1. There are several techniques that have been used for formation of the liners (and closeout jackets/shells),
+creating the integral coolant channels and closeout of the coolant channels.
+L
+Page 3
+AIAA-2016-4771
+3
+American Institute of Aeronautics and Astronautics
+Figure 1. Configuration of channel wall nozzle liner and closeout.
+The most challenging manufacturing operation within the channel wall nozzle is the closeout of the coolant
+channels. The closeouts require a high-integrity joint that meet several difficult requirements to contain the pressures
+of the coolant fluid, as well as withstand thermal shocks, static strains and dynamic loads within the material.
+Electroplating is a heritage process extending back many decades for closeout of regen liners. Electroplating has
+primarily been used for the closeout of main combustion chambers (MCC), but regen nozzles have also been fabricated
+using this process. Nozzles are much more challenging due to the increased diameter and length. The coolant channels
+are filled with wax, then electrodeposited copper or nickel, depending on the liner material, is plated on the outer
+surface to closeout the coolant channels. The wax is later removed by melting and backpressure. A structural jacket
+can then be welded to the electrodeposited closeout and the distribution manifolds attached. Although several MCC
+configurations have been fabricated without the structural jacket, generally they are included to limit buckling at
+elevated temperatures. The electrodeposited technique limits the operating temperature and bond strength of the
+component at the plated interface. Additionally, the electrodeposition process can introduce impurities into the metal,
+causing issues in subsequent processing and often resulting in prolonged fabrication schedules.
+Several state of the art techniques have been developed over the last couple of decades to address these channel
+closeout issues and are being used in development and flight production engines. These techniques include advanced
+brazing techniques (pressure and atmospheric), laser welding and deposition processes such as Vacuum Plasma Spray
+(VPS).
+Brazing processes for nozzles have advanced to include pressure-assisted, often referred to as Hot Isostatic
+Pressure (HIP), brazing or vacuum compression brazing. These processes require an external jacket that is machined
+within tight tolerances to ensure that the inner mold line of the closeout shell is in close contact with the outer mold
+line of the slotted inner liner. The assembly process then requires the application of braze foil to select surfaces,
+assembly of the liner into the jacket, and sealing of the assembled parts
+6
+,7
+. The nozzle is then brazed using a pressure-
+assisted braze furnace (elevated temperature, external pressure, and vacuum within the channels). The pressure-
+assisted brazing technique for nozzles has been covered in several papers and patents
+8
+,9,10
+.
+Various closeout techniques have been investigated to improve the traditional and pressure-assisted braze closeout
+processes. One of these techniques was a vacuum plasma spray (VPS) closeout demonstrated by NASA in the
+1990’s
+11
+,12
+. This process used a plasma jet to deposit particles onto the external surface of a slotted liner to closeout
+the channels. These coolant channels were filled, or often electroplated, prior to plasma deposition, which added
+additional challenges, as previously described. The filler medium was then removed to expose the internal coolant
+channels. The VPS closeout process also exhibited several limitations. The material was deposited on a pre-heated
+liner at high temperatures, locally, in a vacuum chamber. The high base part temperature and plasma deposition
+required close matching
+ 
+of the material’s coefficient of thermal expansion (CTE)
+ 
+to minimize the potential for
+cracking, although intermediate bond layer materials could be used to address some of this concern. The potential for
+cracking limited the size of components that could be built using this technique, since larger scale parts would
+exacerbate the CTE effects. Additionally, the process required a controlled vacuum chamber and environment, which
+could also limit the size of components fabricated using this technique.
+A more recent closeout technique is the laser-welded sandwich-wall closeout technology developed by Volvo
+13
+,14
+.
+This fabrication technique laser welds a closeout metal sheet or shell over an inner liner that has been pre-machined
+with coolant channels. The lands for each of the coolant channels are dynamically tracked with an ultrasonic or X
+‐
+ray
+device and welded on the top of the land rib, using the laser to penetrate through. This method produces a closeout of
+the channels, but requires significant offline inspections after the welding process due the blind welds. There is no
+Hotwall
+Inner Liner
+Closeout and/or Jacket
+(Coldwall)
+Braze Bond or
+Closeout Interface
+Coolant Channel
+Lands
+Fluid
+Page 4
+AIAA-2016-4771
+4
+American Institute of Aeronautics and Astronautics
+direct means of inspecting these welds and the welds must be precisely tracked due the very thin ribs. This
+configuration also requires extensive tooling and specialized machinery to complete the tracking and welding, but has
+proven to be a reliable technique for large nozzles.
+MSFC has been evaluating a series of techniques related to the fabrication of large-scale regen nozzles to reduce
+the fabrication cycle time and associated cost. The basic process for fabrication of channel wall nozzles includes:
+1)
+ 
+Forming of the Liner
+2)
+ 
+Channel Forming within the Liner
+3)
+ 
+Closeout of the Coolant Channels and Attachment of the Structural Jacket
+4)
+ 
+Manifolds
+Some of the modern manufacturing techniques, such as SLM additive manufacturing, fall into several categories
+and the terminology used is based upon the traditional channel wall processes. It was also assumed that structural
+stiffeners or hatbands, if required, would be integral to the closeout and jacket, or assembled similar to manifolds. A
+basic survey of both existing and potential process techniques was completed that merited further research. These are
+shown in Figure 2. Some of these techniques have already been proven, while others are at a low manufacturing
+readiness (MRL) level for nozzles.
+Figure 2. Various fabrication processes for channel wall nozzle liners, slotting, closeout and manifolds.
+This was not intended to be an exhaustive list of all available techniques, but provides several of the more mature
+industry technologies that have been or could be scaled for a large CWN. The channel closeouts and structural jacket
+could be fabricated from different materials, as well as separate manufacturing processes, but are combined for
+simplicity in the above figure. It is also known there are several complexities and variations within each of these
+fabrication techniques that are not covered in the graphic. Many of the techniques shown in the figure have been
+evaluated for use in chamber or nozzle technology, either at the specimen or full-scale level, although not all have
+been fully explored. There have also been new process developments for many of these techniques that merit further
+evaluation to build upon previous development work.
+Liner Forming
+•
+ 
+Forging
+•
+ 
+Spin Forming
+•
+ 
+Shear Forming
+•
+ 
+Powder Metallurgy
+•
+ 
+Freeform AM Deposition
+•
+ 
+Powder-based Laser
+•
+ 
+Wire-based Laser
+•
+ 
+Arc-based Wire
+•
+ 
+Multi-Piece SLM
+•
+ 
+Platelets
+•
+ 
+Explosive Forming
+•
+ 
+Coldspray
+•
+ 
+Casting
+•
+ 
+Vacuum Plasma Spray
+Slotting
+•
+ 
+Slitting Saw
+•
+ 
+End Milling
+•
+ 
+Water Jet Milling
+•
+ 
+Electro or Photochemical
+•
+ 
+Plunge EDM
+•
+ 
+Multi-Piece SLM
+•
+ 
+Platelets
+•
+ 
+Freeform AM Deposition
+Closeout and Jackets
+•
+ 
+Pressure Assisted Braze
+•
+ 
+Standard Atmosphere Braze
+•
+ 
+Multi-Piece SLM
+•
+ 
+Vacuum Plasma Spray
+•
+ 
+Electroplating
+•
+ 
+Coldspray
+•
+ 
+Freeform AM Deposition
+•
+ 
+Wire-based Laser
+•
+ 
+Powder-based Laser
+•
+ 
+Arc-based Wire
+•
+ 
+Explosive Bonding
+•
+ 
+Ultrasonic
+•
+ 
+Laser Welding
+•
+ 
+Diffusion Bonding
+•
+ 
+Platelets
+•
+ 
+Casting
+•
+ 
+Composite Overwrap
+Manifolds
+•
+ 
+Wrought and Machined
+•
+ 
+Freeform AM Deposition
+•
+ 
+Wire-based Laser
+•
+ 
+Powder-based Laser
+•
+ 
+Arc-based Wire
+•
+ 
+Multi-Piece SLM
+•
+ 
+Platelets
+•
+ 
+Casting
+•
+ 
+Molded Composites
+Similar research
+Additive Manufacturing and Hot-fire Testing of Liquid Rocket Channel Wall Nozzles Using Blown Powder Directed Energy Deposition Inconel 625 and JBK-75 Alloys
+Conference Paper
+Full-text available
+August 2019AIAA Propulsion and Energy 2019 Forum
+Paul R. Gradl
+Christopher S. Protz
+Tal Wammen
+Additive manufacturing (AM) is being investigated at NASA and across much of the rocket propulsion industry as an alternate fabrication technique to create complex geometries for liquid engine components that offers schedule and cost saving opportunities. The geometries that can be created using AM offer a significant advantage over traditional techniques. Internal complexities, such as internal coolant channels for combustion chambers and nozzles that would typically require several operations to manufacture traditionally can be fabricated in one process. Additionally, the coolant channels are closed out as a part of the AM build process, eliminating the complexities of a traditional process like brazing or plating. The primary additive manufacturing technique that has been evaluated is powder bed fusion (PBF), or selective laser melting (SLM), but there is a scale limitation for this technique. There are several alternate additive manufacturing techniques that are being investigated for large-scale nozzles and chambers including directed energy deposition (DED) processes. A significant advantage of the DED processes is the ability to adapt to a robotic or gantry CNC system with a localized purge or purge chamber, allowing unlimited build volume. This paper will discuss the development and hot-fire testing of channel-cooled nozzles fabricated utilizing one form of DED called blown powder deposition. This initial development work using blown powder DED is being explored to form the entire channel wall nozzle with integral coolant channels within a single AM build. Much of this development is focused on the design and DED-fabrication of complex and thin-walled features and on characterization of the materials properties produced with this techniques in order to evolve this process. Subscale nozzles were fabricated using this DED technique and hot-fire tested in Liquid Oxygen/Hydrogen (LOX/GH2) and LOX/Kerosene (LOX/RP-1) environments accumulating significant development time and cycles. The initial materials that were evaluated during this testing were high-strength nickel-based Inconel 625 and JBK-75. Further process development is being completed to increase the scale of this technology for large-scale nozzles. This paper will summarize the general design considerations for DED, specific channel-cooled nozzle design, manufacturing process development, property development, initial hot-fire testing and future developments to mature this technology for regeneratively-cooled nozzles. An overview of future development at NASA will also be discussed.
+Download
+Recommend
+Follow
+Share
+Optical Measurement Techniques for Rocket Engine Testing and Component Applications
+Presentation
+File available
+June 2016Range Commanders Council
+Paul R. Gradl
+Digital Image Correlaton Techniques Applied to Rocket Engine Testing and Component Development
+Download
+Recommend
+Follow
+Share
++13
+Technology advancements for channel wall nozzle manufacturing in liquid rocket engines
+Article
+Full-text available
+May 2020
+Acta Astronautica
+Paul R. Gradl
+Christopher S. Protz
+A regeneratively-cooled or dump-cooled nozzle is a critical component for expansion of hot gases to enable high temperature and performance in liquid rocket engines systems. Regeneratively-cooled channel wall nozzles are a design solution used across the propulsion industry as a simplified method to fabricate the nozzle structure with internal coolant passages. The scale and complexity of the channel wall nozzle (CWN) design can be challenging to fabricate which results in extended lead times and higher costs. Some of these challenges include: 1) Unique and high temperature materials, 2) Tight tolerances on large parts during manufacturing and assembly to contain high pressure propellants, 3) Thin-walled features to maintain adequate wall temperatures, and 4) Unique manufacturing process operations and complex tooling. The United States (U.S.) National Aeronautics and Space Administration (NASA) and U.S. specialty manufacturing vendors are maturing modern fabrication techniques to reduce complexity and decrease costs associated with channel wall nozzle manufacturing technology. Additive Manufacturing (AM) is one of the key technology advancements under evaluation for channel wall nozzles. Much of additive manufacturing for propulsion components has focused on laser powder bed fusion (L-PBF), but the scale is not yet feasible for application to large scale nozzles. NASA is evolving directed energy deposition (DED) techniques for nozzles including arc-based deposition, blown powder deposition, and Laser Wire Direct Closeout (LWDC). There are different approaches being considered for fabrication of the nozzle, and each of these DED processes offer unique process steps for rapid fabrication. The arc-based and blown powder deposition techniques are used for the forming of the CWN liner. A variety of materials are being demonstrated including Inconel 625, Haynes 230, JBK-75, and NASA HR-1. The blown powder DED process is also being demonstrated for forming an integral channel nozzle in a single operation in similar materials. The LWDC process is a method for closing out the channels within the liner and forming the structural jacket using a localized laser wire deposition technique. Identical materials mentioned above have been used for this process in addition to bimetallic closeout (C-18150–SS347, and C-18150–Inconel 625). NASA has completed process development, material characterization, and hot-fire testing on a variety of these channel wall nozzle fabrication technique. This publication presents an overview of the various channel wall nozzle manufacturing processes and materials under evaluation including results from the hot-fire testing. Future development and technology focus areas is also discussed relative to channel wall nozzle manufacturing.
+Download
+Recommend
+Follow
+Share
+Channel Wall Nozzle Manufacturing and Hot-Fire Testing using a Laser Wire Direct Closeout Technique for Liquid Rocket Engines
+Conference Paper
+Full-text available
+July 20182018 Joint Propulsion Conference
+Paul R. Gradl
+William Brandsmeier
+Sandy E. Greene
+Download
+Recommend
+Follow
+Share
+CHALLENGES IN ASSESSING THE SUSTAINABILITY OF WIRE + ARC ADDITIVE MANUFACTURING FOR LARGE STRUCTURES
+Conference Paper
+Full-text available
+August 2016SFF 2016
+Anne C M Bekker
+Jouke Casper Verlinden
+Giorgia Galimberti
+Additive manufacturing is known as a disruptive technology, in enabling freedom in shape and on-demand production with little human intervention. At present, large-scale digital manufacturing means are being developed, such as Wire & Arc Additive Manufacturing (WAAM). These could be beneficial in aerospace, automotive and construction industries. However, while the technology is rapidly developing, little is known on the sustainability aspects. This article explores how such environmental effects could be assessed for a novel technology, and the production of large-scale products by means of a Life Cycle Assessment (LCA). Forerunning results show possible gains in material usage when compared to traditional manufacturing technologies, and in power consumption when compared to different additive manufacturing technologies. Future research will focus benchmarking WAAM against alternative manufacturing techniques, including green sand casting and CNC milling.
+Download
+Recommend
+Follow
+Share
+View more related research
+Company
+About us
+Blog
+Careers
+Resources
+Help Center
+Contact us
+Business Solutions
+Marketing Solutions
+Scientific Recruitment
+Publisher Solutions
+ © 2008 - 2025 ResearchGate GmbH. All rights reserved.
+TermsPrivacyCopyrightImprint

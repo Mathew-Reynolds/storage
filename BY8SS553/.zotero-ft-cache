@@ -1,0 +1,497 @@
+NASA Technical Memorandum 107426
+JAJ-- J _ /
+f
+The Effect of Cooling Passage Aspect Ratio on Curvature Heat Transfer Enhancement
+Michael L. Meyer
+Lewis Research Center Cleveland, Ohio
+March 1997
+Natonal Aeronautics and Space Administration
+https://ntrs.nasa.gov/search.jsp?R=19970012643 2020-06-16T02:59:50+00:00Z
+View metadata, citation and similar papers at core.ac.uk brought to you by CORE
+provided by NASA Technical Reports Server
+
+
+
+
+The Effect of Cooling l_u_e Aspect Ratio on Curvature Heat Transfer Enhancement
+Michael L. Meyer NASA Lewis Research Center Cleveland, Ohio 44135
+Abstrs_
+A series of electrically heated tube experiments was performed to investigate the effect of high aspect ratio on curvature heat transfer enhancement in uniformly heated rectangular cooling passages. Three hardware geometries were tested: a baseline straight aspect ratio 10 tube, an aspectratio1 (square)tube with a 45 °curve,and an aspectratioi0 tube with a 45° curve. Gaseous nitrogenwith the followingpropertieswas used as the coolant:ambient inlettemperature, pressuresto 8.3MPa, wall-to-bultkemperature ratioslessthan two, and Reynolds numbers based on hydraulicdiameter ranging from 250,000 to 1,600,000.The measured curvatureenhancement factorswere compared to valuespredictedby three previouslypublishedmodels which had been developedforlow aspectratiotubes.The models were shown tobe validforthe high aspectratio tube as wellthe low aspectratiotube,indicatingthataspectratiohad littliempact on the curvature heat transferenhancement in these tests.
+Introduction
+Numerous efforts have focussed on the problem of understanding the heat transfer enhancement which occurs in a curving coolant passage.14 The enhancement is a result of secondary flows which develop due to centrifugal force on the coolant. These secondary flows
+carry cooler fluid to the concave wall, increasing the convective heat transfer at that surface. However, little information is available on the effect that passage aspect ratio has on this enhancement, particularly when the increase in aspect ratio is in the plane of curvature, which is the situation when high aspect ratio cooling channels (HARCC) are applied to rocket engine thrust chambers.5,6
+Recent subscale rocket engine tests have shown the potential to significantly reduce hotgas-side thrust chamber wall temperatures by using HARCC in the throat region of a
+regeneratively cooled rocket engine.V, s The KARCC allow more passages to fit in the same throat circumference without reducing the total coolant flow are& In doing this, the fin effectiveness of the high conductivity metal lands between the channels is increased, and the chamber is more effectively cooled.9 Unfortunately, the data available from hot-fire tests are limited and insufficient to evaluate the impact that increased aspect ratio has on the curvature induced secondary flows that enhance heat transfer to the coolant.
+The objectives of this study were to determine if cooling passage aspect ratio significantly affects curvature heat transfer enhancement and to evaluate existing curvature enhancement factor models when applied to high aspect ratio passages. Toward this end, a series of electrically heated tube experiments was conducted with straightand curved tubes ofrectangularcross
+section. Gaseous nitrogenwith the followingpropertieswas used as the coolant:ambient inlet
+temperature,pressuresto 8.3MPa, wall-to-bultkemperature ratioslessthan two, and Reynolds numbers based on hydraulicdiameter up to 1,600,000.For comparison,in a typicalliquid
+
+
+hydrogen cooled rocket engine, wall-to-bulk temperature ratios can be as high as eight and Reynolds numbers range from 500,000 to 2,500,000. Wall-to-bulk temperature ratios greater than two were not possible with the current experimental setup. Consequently, some caution must be exercised when extrapolating the results to a rocket engine application.
+The tests were conducted with a straight aspect ratio 10 tube, a curving aspect ratio 1 (square) tube, and a curving aspect ratio 10 tube_ The results are presented as local Nusselt number measurements compared with predictions from existing models. In particular, the curvature enhancement factor observed in the experiments is used to determine the applicability of three previously published models to high aspect ratio geometries.
+Theory
+The classical approach to modeling convective heat transfer for internal flows is to use semi-empirically developed equations for either the heat transfer coefficient or the dimensionless Nusselt number. Many refinements of the equations have been developed to provide optimum accuracy for the specific flow and thermal conditions of interesL It has been shown that the simplest equation that adequately models the conditions presently studied is a modified smoothwalled straight-tube Dittus-Boelter correlation for the Nusselt numberlO:
+Nu-,-0.02R3o°' fr.
+'t J (1)
+Re is the Reynolds number based on hydraulic diameter, Pr is the Prandtl number, and the wallto-bulk temperature ratio accounts for variations in the coolant properties. The exponent (-0.3) used here is valid for wall-to-bulk temperature ratios less than three. Although this exponent is typically given to be -0.5 to -0.7 to include larger values of wall-to-bulk temperature ratio11, the value -0.3 provides a better fit for the test conditions studied.
+To apply equation (1) to a non-ideal problem, several correction factors are included:
+Nu_a_=Nu,._._,._
+The ¥'s are correction factors and e, r, and c represent entrance, roughness, and curvature effects. The focus of this study is ¥c, the curvature enhancement factor, and how it is influenced by cooling passage aspect ratio. Neither entrance effects or surface roughness effects were included.
+Table I provides three forms of ¥c which were previously developed for circular and low aspect ratio tubes, where X¢ is the distance from the start of the curve, L¢ is the length of the curve, and Rc is the radius of curvature. The exponent in each of these factors has a positive value when modeling the concave surface and a negative value when modeling the convex surface.
+Apperatus and Operating Preoedures
+Testing was conducted in the Heated Tube Facility at the NASA Lewis Research Center (figure 1). The facility and operating procedures are described in detail in reference 12. The main components used for the tests were a 14 cubic foot run tank, a test section vacuum enclosure, flow control and measurement systems, and a 40 volt, 2000 ampere, DC power supply. The test sections are uniformly joule heated by flowing a large electrical current through the length of the walls, and gaseous nitrogen flowing through the tube acts as the coolant. A typical test consisted of
+
+
+pressurizingthe run tank with gaseous nitrogen, initiating the programmable logic controller to set the nitrogen flow rate and backpressure, and increasing the power supply to the desired heat input level. The run conditions were held constant for approximately five minutes to insure that the test section reached thermal equilibrium before any data were recorded. The data were collected at a rate of one Hertz for ten cycles; the values were averaged for the final results.
+A D-Optimal experimental test matrix was developed for the controlled experimental conditions: back-pressure, flow rate, and applied voltage. This D-Optimal design provides the benefits and efficiency of a designed experiment, but can be applied to an experiment where the
+design space is constrained.13 In this case, the highest power input levels could not be operated with the lowest coolant flow rates without overheating the tube walls. The matrix also included several repeated tests, and a total of 18-20 test runs was conducted for each test configuration. The range of test operating conditions for all three test sections is shown in table 2.
+Test Hardwvxe
+Figures 2a-c are sketches of the three test sections used for the experiments; table 3 provides the corresponding dimensional details. The test sections consisted of rectangular cross-section tubes with connecting flanges. Copper electrical busses were brazed to the tubes for power connection, pressure taps were located at the inlet and exit connecting flanges, and the heated sections of the tubes were extensively instrumented with thermocouples (table 4). The
+thermocouples were spot-welded directly onto the tube. Therefore, each junction was carefully aligned to minimize temperature errors due to test section voltage that is sensed by the thermocouple. A description of the procedure used to correct this test section voltage induced temperature error was given in reference 10.
+Test section TS3 (figure 2a) had a cross-sectional aspect ratio of 1 and a 45 ° curve in the heated portion. The curve diameter to hydraulic diameter ratio, 2Re/dh, was 33 for TS3, and the
+curve began 29 hydraulic diameters downstream of the first copper bus. This insured that the flow at the entrance to the curve was fully developed from both a thermal and velocity standpoint. Test
+sections TS4 and TS5, figures 2b and 2c, were fabricated with cross-sectional aspect ratios of 10. Test section TS5 had an identical radius of curvature to that of TS3, but because of the difference in cross-sectional geometry, the curve diameter to hydraulic diameter ratio, 2Rc/dh, was 58 for TSS, and the curve began 49 hydraulic diameters downstream of the first copper bus.
+All three test sections were fabricated by machining an open channel from solid Inconel
+718 material and electron beam welding the fourth side in place. The curved test sections were machined with the curve so that no bending was necessary. One advantage of this technique over bending a straight tube is that the wall thickness is known, whereas it is not possible to predict exactly where the wall material will flow during the bending process. The wall thickness is critical in this type of experiment because it determines the local resistance and, hence, heat input
+to that portion of the tube, and ultimately the surface temperature. The interior surfaces of the test sections were also polished to minimize any surface roughness effects which were not considered in the analysis.
+An important consideration for modeling the curvature enhancement in a rocket engine cooling passage is the length that the enhancement persists downstream of the bend. Because the test section curves ended near the exit of the heated portion of the tube, the downstream results could not be observed in the forward flow configuration. Thus, to investigate the enhancement downstream of the curve, additional tests were conducted with test sections TS3 and TS5 inverted
+in the test rig such that the flow direction through the test section was reversed. Although there was
+3
+
+
+not an adequateentrancelength for full viscous and thermal development of the flow prior to the curve, the curvature enhancement at the exit of the curve was expected to be comparable to that achieved in the forward flow configuration.
+Analysis
+An analysis was conducted to calculate experimental convective heat transfer coefficients for the test sections from the thermocouple data. The experimentally measured tube surface temperatures were first corrected for errors due to the test section voltage sensed by misaligned thermocouples. The corrected surface temperatures were then used to calculate inside wall temperatures assuming one dimensional conduction through the thickness of the wall. An iterative procedure that incorporated the variation of the thermal conductivity and electrical resistivity with temperature along the length of the tube, similar to that employed in reference 14, was used to obtain both inside wall temperature and the local heat generation rate. Although the variation in heat generation rate along the length of the tube was determined in the analysis, the
+heat generation rate was assumed to be uniform through the wall thickness. The bulk temperature of the coolant at each station was calculated from the local heat input, and the fluid properties were obtained from the subroutine GASP.iS
+A heat balance between the electrical power input and the coolant enthalpy gain was calculated as a check, to ensure that the heat losses from the system were not significanL For most ofthe tests,therewas lessthan +_3% discrepancyb,ut a few testshad a differencaes largeas -+10%. Because the larger differences consistently occurred during the low flow rate tests, some additional tests were conducted to investigate the effect of run duration on the heat balance. During these tests, the heat balance continued to improve after the standard five minute run duration. The problem was that, due to the large thermal mass of the exit mixer where the fluid enthalpy was measured, the heat balance was slow in reaching thermal equilibrium. The temperatures measured on the test section, however, reached thermal equilibrium in less than one minute. Thus, the discrepant heat balances were not affecting the low flow test results.
+Because these test sections are rectangular, the wall temperatures around the perimeter are not uniform. In particular, for the aspect ratio 10 tubes, where the wall thicknesses were approximately the same as the flow channel width, a comprehensive analysis would incorporate three-dimensional conduction in the walls. However, in the present effort, the assumption of onedimensional conduction was maintained. Because the focus of this effort is the curvature effect, comparison between the curved portion of the test section and the straight portion remains valid.
+Applying the assumption of one-dimeflsionaclonductionto the rectangulartubes required specialtreatment forthe heat generatedin the comers. This was handled by assuming that the heat generatedin each comer was evenlydistributedbetween the adjacentwalls.For the aspect ratio10 tubes,theresultofthisassumption was thatthe shorterwallshad 80% higher effectivheeat generationratesthan the longerwalls,because the comer heat was distn%uted over a much smallerlength. This effectwas generallysupportedby measured temperatures on the longer wallswhich were lower than the respectiveshorterwall temperatures;however, the simplicityof thisapproach introducederrorswhich caused greaterscatterofthe data from the high aspectratio testsections.With the effectivheeat generationratesdetermined from the one-dimensional analysis,the experimentalheat transfercoefficientasnd bulk propertyNusselt numbers couldbe calculatedforeach surfaceof a testsection.
+At thispoint,the curvatureheat transferenhancement forthe low and high aspectratio tubes can be qualitativelcyompared. A directquantitativecomparison ofthe heat transfer
+4
+
+
+enhancement is not an appropriate method to determine if the increased aspect ratio has an impact on the enhancemenk Although the tubes are geometrically similar in length, curvature, and flow area, their hydraulic diameters are significantly different, and the models in table 1 indicate that hydraulic diameter is a factor in the magnitude of the enhancement. Therefore, the curvature enhancement models, which were developed with data from low aspect ratio tubes, were used to predict Nusselt numbers for the test conditions. These predicted values were then compared to the experimental results. Since the models do not account for aspect ratio, any effect of aspect ratio would be expected to reduce the accuracy of their predictions for the high aspect ratio test section.
+Results and Discussion
+The objectives of these tests were to determine if cooling passage aspect ratio significantly affected curvature heat transfer enhancement and to determine the applicability of the existing models for curvature enhancement factor (presented in table 1) to high aspect ratio passages. Test section TS3 was an aspect ratio 1 carved rectangular tube, and test section TS5 was a curved aspect ratioI0 rectangulartube. In additiont,estsectionTS4, a straightaspectratioI0 tube,was used to
+verifythe applicabilitoyfthestraighttube model toa high aspectratiotube. The plotsdo not contain the data from the temperature stationsnearestthe copperbussesbecause entranceand end effects were not includedin the analysis.
+A comparison of the straight tube Nusselt number model to the experimental Nusselt numbers obtained for the two narrow sides of test section TS4 is presented in figure 3. Most of the data are correlated to within _+20 %, but there is considerable spread of the data in general and some asymmetry of the experimental results (most significantly at the first thermocouple on side A). Despite the spread of the data for test section TS4, the results are adequately modeled by equation 1. In an effort to improve the data for the remaining tests, the cause of the data scatter was investigate& It was determined that the probable explanation for these results was the poor
+manufacturing quality of the thermocouples and slight inaccuracy of their installation on this test section. This resulted in greater error (up to 100 °R) due to tube voltage potential sensed by the
+misaligned thermocouple. Because the correction for this error was linearly approximated, a very large error may not have been fully corrected. Extreme care was taken when instrumenting the two curved test sections to insure that the voltage induced error would be minimized. In addition to the instrumentation issues on TS4, both high aspect ratio test sections (TS4 and TS5) had greater
+spread of the data due to their thick walls. This is because the analysis assumption of onedimensional conduction is less valid for thicker walls.
+The ratiosofthe experimentallydetermined Nusseltnumbers to those predictedby the
+straighttube model (equation1)arepresentedforthe curvedtestsectionsin figures4a and 4b. In figure4a,resultsforthe concavesideof testsectionTS3 show significanetnhancement to the heat transferin the curved portionofthe tube,where the experimentalvaluesare more than 20% greater than those calculatedusing equation1. The resultsforthe convex sideare alsoplottedin figure4a, and, while thereis a reductionoftheheat transfert,he effectisnot as pronounced as on the concave side.Figure 4b presentssimilarresultsforthe aspectratio10 testsection(TS5),and similar trends are apparent,although the reductionon the convex surfaceislesssignificant.
+The plots in figures 5a-c show the results of applying the three forms of ¥c to the predicted Nusselt numbers for the concave side of test section TS3. Because the Taylor factorl, figure 5a, is a
+fully developed formulation, it overpredicts the enhancement at the entrance to the curve, where the enhancement is just beginning to develop. The Niino et al. factor2, figure 5b, also overpredicts the development of the enhancement. Finally, the factor developed by Kumakawa et al.3 is used in figure 5c. Reasonable correlation of the data is achieved, though the enhancement in the second
+
+
+andthird stationsinto the curve may be underestimated.
+The ability of the ¥c's to model the curvature enhancement for the aspect ratio 10 tube is
+examined in figures 6a-_ As with the square tube, Taylor's factor1 and the Niino et al. factor2 overpredict the enhancement at the entrance to the curve, and the Kumakawa et al. factor3 does an adequate job of correlating the data.
+Since the curvature enhancement models were developed for low aspect ratio tubes, it was expected that they would reasonably model the low aspect ratio test section results. However, by comparing the results in figures 5 and 6, it is apparent that all three models predict the enhancement for both the low and high aspect ratio tubes comparably. Thus, for the conditions
+investigated, aspect ratio did not have a significant effect on curvature heat transfer enhancement on the concave surface.
+The remaining tests were conducted with the curved test sections in the inverted configuration to allow reverse flow of the coolant. The reverse flow orientation permitted observation of the heat transfer downstream of the bend, and the results indicated the persistence of the curvature enhancement for both low and high aspect ratio tubes.
+A plot of the ratio of experimental Nusselt number to that predicted by equation I for the concave surface of test section TS3 in the inverted (reverse flow) orientation is presented in figure 7. The data from the tests in the inverted configuration are overlayed on the results from the
+forward flow configuration which were presented in figure 4. In figure 7, the locations of the thermocouple stations are referenced to the curve entrance. To further improve the readability of the large number of data points, the reverse and forward flow results are displaced by plus and minus one hydraulic diameter, respectively, on the figure. The development of the enhancement in the inverted tests agrees fairly well with the results from the original configuration, even though the flow entering the test section was probably not fully developed. The curvature enhancement persists in the straight downstream portion of the tube for about 15 hydraulic diameters.
+The concave surface results from tests with the high aspect ratio tube, test section TS5, in the reverse flow configuration are plotted along with the forward flow configuration results in figure 8. As with the low aspect ratio tube, the enhancement continues downstream of the curve and decays in approximately 15-20 diameters. However, in this case, the enhancement developed immediately at the entrance to the curve. This was probably caused by the undeveloped flow entering the curve. The transition to the high aspect ratio flow passage is more severe than for the low aspect ratio case, and disturbances induced by this transition contributed to the difference in enhancement development.
+Conclusions
+A series of electrically heated tube experiments was conducted to investigate the effect of cooling passage aspect ratio on curvature heat transfer enhancement. A single curvature was investigated with tubes of aspect ratio I and 10 (the long dimension in the plane of curvature) and gaseous nitrogen coolant. Entrance effects and surface roughness effects were not investigated in this study. The following conclusions were drawn for the conditions studied in these tests:
+I. Cooling passage aspectratiodoes not significantlayffectthe curvatureheat transfer enhancement on the concave surface.
+
+
+, Existing models developed for low aspect ratio passages are adequate in predicting heat transfer curvature enhancement for high aspect ratio tubes. The model published by Knmakawa, et al.8 most accurately captures the development of the enhancement.
+. Reverse flow tests show that the curvature enhancement persists significantly downstream of the bend for beth low and high aspect ratio tubes. Furthermore, these tests qualitatively demonstrate the impact of flow conditions at the onset of the curve (i.e. thermally and hydraulically undeveloped flow) on the enhancement realized through the curve.
+Referellce8
+1. Taylor, M. F., "A Method of Predicting Heat Transfer Coefficients in the Cooling Passages of NERVA and PHOEBUS-2 Rocket Nozzles," AIAA-68-608, NASA TM X-52437, 1968.
+2. Niino, M., Kumakawa, A,, Yatsuyanagi, N., and Suzuki, b_, _Heat Transfer Characteristics of Liquid Hydrogen as a Coolant for the LO2/LH2 Rocket Thrust Chamber with Channel Wall Construction," AIAA-82-1107, 1982.
+3. Kumakawa, _, Sasaki, M., Niino, M., Sakamoto, H., and Sekita, T., "Thermal Conduction Characteristics of an Electrically Heated Tube Modeled ai_r the LE-7 Main Burner, _ Presented at the 30th Space Sciences and Technology Conference, October 15, 1986.
+4. Hendricks, tt C. and Simon, F. F., _Heat Transfer to Hydrogen Flowing in a Curved Tube, _ in Multi-Phase Flow Symposium, Proceeding ofthe Winter Annual Meeting of the ASME, Philadelphiap,p. 90-93,1963.
+5. Kacynski, I_J., _Phermal Stratification Potential in Rocket Engine Coolant Channels, _ NASA TM-4378, Presented at the JANNAF Propulsion Meeting, Vol. 1, pp. 329-338, 1992.
+6. Meyer, M. L. and Giuliani,J. E.,_Visualizatioonf Secondary Flow Development in High Aspect Ratio Channels with Curvature,_ AIAA-94-2979,NASA TM-106658, 1994.
+7. Carlile, J. b-, Quentmeyer, R. J., "An Experimental Investigation of High-Aspect_Ratio Cooling Passages, _ AIAA-92-3154, NASA TM 105679, 1992.
+8. Wadel, M. F.,and Meyer, M. L.,_Experimental Resultsof High Aspect Ratio Cooling Channels in a 89 KN (20,000LBF) Thrust Combustion Chamber," to be publishedin the proceedings ofthe 1995 JANNAF 32nd Combustion Subcommittee Meeting,1995.
+9. Wadel, M. F., Quentmeyer, K J., and Meyer, M. L., "A Rocket Engine Design for Validating the High Aspect Ratio Cooling Channel Concept, _ in 1994 Advanced Earth-to-Orbit Propulsion Conference, NASA Conference Publication 3282, vol II, pp. 145-150, 1994.
+10. Meyer, M. L.,_ElectricallHyeated Tube Investigationof Cooling Channel Geometry Effects_, AIAA-95-2500, NASA TM 106985, 1995.
+11. Perkins, H. C., and Worsoe-Schmidt, P., "Purbulent Heat and Momentum Transfer for Gases in a Circular Tube at Wall to Bulk Temperature Ratios to Seven," Int. J. Heat Mass Transfer, Vol. 8, pp. 1011-1031, 1965.
+
+
+12. Green,J. M., Pease,G. M., andMeyer,M. L., aA Heated Tube Facility for Rocket Coolant
+Channel Research," AIAA-95-2936, 1995.
+13. Federev, V. V., Theory of Optimal Experiments, New York, Academic Press, 1972.
+14. Hendricks, 1_ C., Graham, R. W., Hsu, Y. Y., and Friedman, 1_, aExperimental HeatTransfer Results for Cryogenic Hydrogen Flowing in Tubes at Subcritical and Supercritical Pressures to 800 Pounds Per Square Inch," NASA TN D-3095, 1966.
+15. Hendricks, l_ C., Baron,/_ I_, and Peller, I. C., _GASP- A Computer Code for Calculating the Thermodynamic and Transport Properties for Ten Fluids: Parahydrogen, Helium, Neon, Methane, Nitrogen, Carbon Monoxide, Oxygen, Fluorine, Argon, and Carbon Dioxide," NASA TN D-7808, 1975.
+Table 1.
+Curvature Factor, ¥c
+" 2" _0.05
+;. t,2Ro).
+Curvature Enhancement Factors from the Literature
+" 2"_.(n
+1/fc = ! Re b I xo I!
+l+bsin _ Lc +15d h _
+ii.
+Reference
+1 - Taylor
+2 - Niino, et al.
+.o,r,,,,
+L2 ;i
+3 - Kumakawa, et al.
+Table 2.
+Parameter
+Ranges of Operating Conditions For Each Test Section
+Test Section TS3
+Bulk Reynold's Number, Reb
+Wall-to-Bulk iTemperature Ratio, Tw/Tb
+Back Pressure (MPa)
+Coolant Bulk Inlet Temperature (K)
+Average Heat Flux, q" (MW/m2)
+500,0OOto 1,600,000
+ltoL5
+2.1, 4.8, 8.3
+-28O
+0.28, 0.63, 1.10
+I Test Section TS4
+250,000 to 9O0,0O0
+1to L75
+2.1, 4.5, 6.9
+-28O
+0.35, 0.79, 1.40
+Test Section TS5
+250,O00 to 900,O00
+1toL75
+2.1, 4.5, 6.9
+-28O
+0.34, 0.74, 1.31
+
+
+Table 3. Test SectionDetails
+Test Section Number
+TS3
+TS4
+TS5
+Material
+Inconel718
+Inconel718
+Inconel718
+Inside Dimension (cm)
+0.414 x 0.414
+0.134x 1.275
+0.127x 1.270
+Outside Dimension (cm)
+0.617x 0.617
+0.414 x 1.554
+0.381x 1.537
+Heated Length (cm)
+25.4
+25.4
+25.4
+Curvature
+45° Bend with 13.7 cm mean radius
+None
+450 Bend with 13.7 cm mean radius
+Table 4. Test sectionthermocouple locations.
+TS3 TS3 TS4 SideA Concave Convex Axial* Axial* Axial* Location Location Location (cm) (cm) (cm)
+T/C No.
+0.8
+5.7
+5.7
+11.3
+0.8
+5.7
+TS4SideC Axial*
+Location (cm)
+5.7
+ii.0
+TS5 Concave Axial* Location (cm)
+0.8
+5.7
+TS5
+Convex Axial* Location (cm)
+5.7
+11.6
+3 7.6 13.8 9.5 13.5 9.5 14.1
+4 9.5 16.4 11.0 16.0 10.9 16.6
+5 11.3 18.9 13.8 18.6 13.8 19.2
+6 21.5 21.1
+N/A
+N/A
+14.0
+16.7
+16.6 21.7
+19.5 N/A
+22.3 N/A
+16.6
+19.5
+7
+8 19.4 N/A 22.3 N/A
+9 22.0 N/A 24.6 N/A 24.6 N/A
+10 24.6 N/A N/A N/A N/A
+copper bus in the u
+* Streamvnse length measured from the center of the upstream configuration.
+N/A
+_right
+9
+
+
+Back Pressure
+ControlValve _)
+Oudet Mixing .... Chamber
+I_ Test Section
+o"Vacu_mn
+[_ Enclos_e
+m;_ Test Section
+,..-" Assembly
+E :::i To _.a_ Insmunentation Powm"Supl:dy
+Inlet Mbr_g ., -Chamber PlowCoutrol Valve
+GN2
+Supply
+Vacumn-Jacketed I,Jq2 Fill Line (Not Used During these Tests)
+Itl
+Foam
+Figure 1. Heated tube facility schematic.
+10
+
+
+2SOm
+===¢,
+FORWARD FLOW
+REVERSE FLOW, LId3£V£LOI_D FLOW ENTERING THE TEST _CTION
+THE_
+A-A _ SECTION A-A
+ENLARGEMENT
+-\ ELECTRICABLUS
+Figure 2a. Schematic and dimensions of test section TS3.
+_m
+THER_
+[] 1_ ,,.. _1 (CENTERED)
+SECTION A-A
+ENLARGEMENT
+Figure 2b. Schematic and dimensions of test section TS4.
+_0 ffml
+_mnl
+Pc. 137 mm THERMCX::OUPL.ES e ffi (CENTERED)
+A-A c.o_vE ENLARGEMENT
+Figure 2c. Schematic and dimensions of test section TSS.
+11
+
+
+2
+1.8 =
+1.6 =
+1.4"
+1.2
+1
+_X
+0.8
+0.6"
+0.4"
+0.2"
+0 0
+Figure 3.
+x SIDE A
+O SIDE C
+Aspect Ratio = 10
+No Curvature
+-20%
+oo0.so.o.4_',T_w-o.3 Nu_=0.023_,_b _b _,'_-b,)
+' ' ' I ' '' I ' '' I ' '' I ' ' ' I
+20 40 60 80 100
+X/d h
+The ratio of experimental to predicted Nusselt numbers for the narrow sides of test sectionTS4.
+12
+
+
+Figure4a.
+Figure 4b.
+2
+I x CONCAVE Aspect Ratio = 1
+1.8
+O CONVEX 1.6 .
+1.4J x ×
+o" l i-m-l-u-
+0.6 -o_
+CURVE
+, u ,, i_ u , u i,a,_ i_, u_ I,U,, I _ u n'
+0 i0 20 30 40 50 60
+X/d h
+The effect of curvature on Nusselt number for the concave and convex surfaces of test section TS3.
+2
+1"8 1 16
+× CONCAVE
+O CONVEX
+Aspect Ratio = 10
+i
+_ 0.8- -20% ......
+Nu,_ = O.O23Reb Pr_,_'-_bJ
+0.6
+0.4.
+0.2.
+0 _-- CURVE --_
+' ' ' I ' '' I ' ' '1 ' ' ' I '' ' I '
+0 20 40 60 80 100
+X/d h
+The effect of curvature on Nusselt number for the concave and convex surfaces of test section TSS.
+13
+
+
+1.5
+1.4A X CONCAVE [ v ,, .27 +0.05 [
+_I _ =_./_f_// I
+I:_1 +__........... L_?":'_.J.... I
+i ' !!
+5 i: .aa.... .u . i__It.... I--1 .....
+0O..b6
+0 10 20 30 40 50 60
+X/d h
+Figure 5a. Concave surface results from test section TS3 with Taylor's 1 curvature factor applied.
+1.5
+1.3 Nu_,_ = Nu_. Re_ • 1 + sin _ •
+1.2 L_+ 15d_
+1.1 +10%
+i!l '
+°-_=l__o--_ t_ - °_- _I I
+0"51 .... I .... I .... I .... I .... I .... I
+0 10 20 30 40 50 60
+X/d h
+Figure 5b. Concave surface results from test section TS3 with the Niino et al.2 curvature factor applied.
+1.5
+1.31"4_ x CONCAVE r ,,,,,n_o,-(-_)
+- "-'-:""F°'t_JJx x
+- I-_--+I,:_ ........ i
+,iiii., '": : ; ; l
+0.5
+0 I0 20 30 40 50 60
+X/d h
+Figure 5c. Concave surfaceresultsfrom testsectionTS3 with the Kumakawa et al.3curvature factorapplied.
+14
+
+
+11..54-"
+1.3
+-_ 1.2. 1.1. Z 1
+0"9 1
+Z 0.8 0.7 0.6 0.5
+0
+x CONCAVE I
++ 10% ]
+- 10%
+_" 2 -_).05
+l_ --J Aspect Ratio = 10 /-- CURVE - I
+' ' ' I ' ' ' I' ' 'I ' ' ' I' ' ' I
+20 40 60 80 I00
+X/d h
+[
+Figure 6a. Concave surfaceresultsfrom testsectionTS5 with TayloFsl curvaturefactorapplied.
+1.5 1.41.31.2:
+_' 1.1
+Z 1
+_ 0.9
+Z 0.8
+0.7-" 0.60.5
+0
+x CONCAVE
++ 10%
+- 10% I
+I _ CURVE
+Aspect Ra_o = 10 /-
+' '' I '' 'I ''' I' '' I ''
+20 40 60 80
+' II ":!It
+l Nu_ = Nu, Reb 3 L_ +15
+• . l+-sin z , -
+M _ i[
+10I 0
+X/d h
+Figure 6b. Concave surface results from test section TS5 with the Niino et al.2curvature factor applied.
+1.5 1.41.3-_ 1.2' 1.1Z 1
+0.9
+Z 0.80.7-" 0.6= 0.5
+0
+x CONCAVE
++ 10%
+- 10%
+. Re b "h
+_,+.=[_,_,.JJ .....
+l ...... i___i I -i
+I_ CURVE
+Aspect Ratio = 10 _"
+' ' ' I ' ' ' I' ' ' I' ''
+20 40 60
+X/d h
+I ' ' -- I
+80 100
+Figure 6c. Concave surface results from test section TS5 with the Kumakawa et al.S curvature factor applied.
+15
+
+
+2
+1"8 t
+1.6
+1.4=_ 1.2
+z 1_" 0.8
+Z 0.60.40.20
++ 20% _ _ _ .__
+-N u _ uo a o
+-2(_ .... × Forward Flow
+o
+g i g m• i i • I • I • | • g | e I • |
+-20 -10 0 10 20 30 40 50
+Xc/d h
+Figure 7. Concave surface Nusselt number results for test section TS3 in the inverted configuration.
+× Forward Flow
+Aspect Ratio = 10 _ CURVE _ O Reverse Flow l
+N
+' ' ' I ' ' ' "' ' I ' ' ' I ' ' I ' ' '
+-20 0 20 40 60
+Xc/d h
+Figure 8. Concave surface Nusselt number results for test section TS5 in the inverted configuration.
+8O
+16
+
+
+
+
+I Form ,4Opmved
+REPORT DOCUMENTATION PAGE OMB No. 07040188
+puldic _ i:xJKleniof ill/coile¢idnn of informationb e_tknatod to avell0o 1 ho_- per rwpo_ inckJdinOthe time for _ I_, HI1ddflO eKist_ data Imercos,
+[_vls Hi01mqq. ,,_dtl 1204, Admire, VA _ a_d to ffw Offl_ _' MIm_ lind Budget. Pi_ Fiwkx:ttonPm_ (0"/04-0 ).
+1. AGENCY USE ONLY (Leavebkml¢ i2. REPORTDATE 3. _PORT TYPE AND DATES COVi_
+Match 1997 Technical Memorandum
+4. TITLE AND SUBTITLE & FUNDING NUMBERS
+The Effect of Cooling Passage Aspect Ratio on Curvature Heat Transfer Enhancement
+e. AUTHORS)
+Michael L. Meyer
+7. PERFORMING OFIGANIZATION NAME(S) AND ADDRESS(ES)
+National Aeronautics and Space Administration Lewis Research Center
+Cleveland, Ohio 44135-3191
+9. SIPOHSO_HrroRING AGENCY NAMI-=(S) AND ADDRESS(F_S)
+National Aeronautics and Space Adminislration Washington, DC 20546-0001
+WU- 505-6 2- 7K-00
+8. PERFORMING ORGANIZATION REPORT NUMBER
+E-10672
+10. SPONSORING/MONITORING AGENCY REPORT NUMBER
+NASA TM- 107426
+11. SUPPLEMENTARY NOTES
+Responsible person, Michael L. Meyer, organization code 5830, (216) 433-7492.
+_2,,. DISTRmtmOWAV.LAB,urv STAI"SMERT
+Unclassified- Unlimimd
+Subject Categories 20 and 34
+This publication is available from the NASA Center for AexoSpace Information, (301) 621-(1390,
+12b. DISTRIBUTION CODE
+13. ABSTRACT(_mum 2OOwords)
+A series of electrically heated robe experiments was performed to investigate the effect of high aspect ratio on cmvatme heat transfer enhancement in uniformly heated rectangular cooling passages. Three hardware geometries were tested; a baseline straight aspect ratio 10 robe, an aspect ratio 1 (square) robe with a 45 ° curve, and an aspect ratio 10 tube with a 45 ° curve. Gaseous nilrogen with the following properties was used as the coolant: ambient inlet temperature, pressures to 8.3 MI_ wall-to-bulk temperature ratios less than two, and Reynolds numbers based on hydraulic diameter ranging from 250,000 to 1,600,000. The measured curvature enhancement factors were compared to values predicted by three previously published models which had been developed for low aspect ratio robes. The models were shown to be valid for the high aspect ratio tube as well the low aspect ratio robe, indicating that aspect ratio had tittle impact on the curvaua'e heat transfer enhancement in these tests.
+14. SUBJECT TERMS
+Convective heat uansfer;, Heat u'ansfer coefficients; Rocket engine design; Resistive heating; Cmvaa_; High aspect ratio; Tubes; Cooling; Secondary flow
+17. SECURITY _LA.%,_IFICATION OF REPORT
+Unclassified
+NSN 7540-0%280-5500
+18. SECURITY CLASSIFICATION OF THIS PAGE
+Unclassified
+[ 19. SECUIMTY CLASSIFICATION OF ABSTRACT
+Unclassified
+lS. NUMBER Of PAGES
+18
+16. PRICE CODE
+A03
+20. UMITATION OF AB_I'II_kCW
+Standard Form 298 (Rev. 2-89)
+Piresc:db(KI by ANI_I Sld. Z39-18
+290-102

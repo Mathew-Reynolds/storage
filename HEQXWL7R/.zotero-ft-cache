@@ -1,0 +1,212 @@
+Skin Friction Measurements of Systematically-Varied Roughness: Probing the Role of Roughness Amplitude and Skewness
+K. A. Flack1 & M. P. Schultz 2 & J. M. Barros3
+Received: 28 March 2019 / Accepted: 16 September 2019 / # Springer Nature B.V. 2019
+Abstract
+Skin-friction, roughness functions and predictive correlations are presented for random roughness that has a Gaussian power spectral density distribution of surface elevations. The root-mean-square (rms) roughness height and the skewness of the probability density function are parametrically varied to investigate the role of these parameters in generating the friction at the wall. Results are presented for all roughness regimes, from hydraulically-smooth to fully-rough. Negative skewness (pits) had a much smaller influence on drag than positive skewness (peaks). Predictive engineering correlations for the equivalent sandgrain roughness height indicate that the rms roughess height and skewness are important scaling parameters. However, the scaling does not appear to be universal as different correlations are needed for surface roughness with positive, negative and zero skewness. Most surfaces collapse to a single roughness function in the transitionally-rough regime similar to the one developed by Nikuradase (1933) for uniform sand-grain roughness. The exceptions are the wavy surface (low effective slope) and the surface with high positive skewness.
+Keywords Rough-wall turbulent boundary layers . Skin-friction
+1 Introduction
+Correlations that predict the drag of flow over rough surfaces are important engineering tools. Identifying a single correlation that is valid for a range of roughness types in all roughness
+https://doi.org/10.1007/s10494-019-00077-1
+* K. A. Flack flack@usna.edu
+1 Department of Mechanical Engineering, U.S. Naval Academy, Annapolis, MD 21402, USA
+2 Department of Naval Arch and Ocean Engineering, U.S. Naval Academy, Annapolis, MD 21402, USA
+3 Fluid Mechanics Unit, Okinawa Institute of Science and Technology, 1919-I Tancha, Onna-son, Okinawa 904-0945, Japan
+Flow, Turbulence and Combustion (2020) 104:317–329
+Published online: 19 December 2019
+
+
+regimes has proven to be an extremely difficult challenge. Skin-friction predictions of surface roughness is generally characterized by ks, the equivalent sandgrain roughness height, the size of uniformly packed sandgrains tested by Nikuradse [19] that produces the same drag in the fully-rough regime. ks is a hydraulic scale, not a physical scale and this is what is listed on the Moody diagram [16] as ε, the equivalent roughness height. Ideally, robust engineering correlations should be based on information that can be obtained solely from the surface topography, thus excluding any information that requires hydrodynamic testing. While a significant number of studies have tackled this problem (see recent reviews by Flack and Schultz [8], Forooghi et al. [11]), correlations that are valid for a wide range of roughness types are still not available. Previous experimental results [8], showed that the root-mean-square roughness height (krms) and the skewness (Sk) of the probability density function (pdf) are the roughness parameters that best predict drag in the fully-rough regime. A correlation was developed for roughness types ranging from commercial steel pipes to gravel-covered surfaces. These parameters also exhibited significant correlations for predicting ks for grit-blasted surfaces [10] and mathematically-generated surfaces with a power law distribution of surface elevations [2]. Predictive correlations for complex roughness have been investigated in several recent simulations. Yuan and Piomelli [31] used large eddy simulations (LES) for realistic roughness replicated from hydraulic turbine blades as well as sand-grain type roughness. Rough surface drag correlations were presented based on a slope/shape parameter [26, 30], the root-mean-square of the local surface slope [4], and the skewness of the pdf. The slope-based correlations yielded better collapse of the data since the surfaces generally had low effective slopes (ES), as defined by Napoli et al. [18]. Direct Numerical Simulation (DNS) was employed by Forooghi et al. [11] for randomly distributed roughness elements of random size and prescribed shape. The correlation that best predicted ks normalized with the maximum peak-to-trough roughness (kt) height was based on surface height skewness (Sk) and effective slope (ES). Thakkar et al. [28] used DNS to study a realistic irregular roughness for the entire range of roughness Reynolds numbers from hydraulically-smooth to fullyrough. Drag was best predicted by a correlation that included roughness solidity, skewness, the streamwise correlation length, and rms roughness height. The present work focuses on random roughness that contains a range of roughness scales. This roughness represents naturally occurring and engineering surfaces with close-packed roughness elements having a wide distribution of roughness length scales. While a range of surface parameters have shown promise in predictive correlations of drag on rough surfaces, it is important to isolate the influence of each parameter. In the present study, both rms roughness height and skewness of the pdf are parametrically changed to investigate the shape and extent of the transitionally-rough regime and to determine if a two parameter model based on krms and skewness [8] is valid to predict the equivalent sandgrain roughness height.
+2 Experimental methods
+Experiments on rough surfaces were conducted in the high Reynolds number turbulent channel flow facility at the United States Naval Academy (Fig. 1). The test section is 25 mm in height (H), 200 mm in width (W), and 3.1 m in length (L). This gives an aspect ratio (W/H) of 8 which according to Monty [15] is sufficient to ensure two-dimensionality of the flow within the central part of the channel. The flow develops over smooth walls for a distance of 60H (1.5 m) in the upstream portion of the channel. The roughness covered plates
+Flow, Turbulence and Combustion (2020) 104:317–329
+318
+
+
+form the top and bottom walls for the remainder of the test section. The channel flow facility has a reservoir tank containing 4000 L of water. The water temperature is held constant to within ±0.25∘ C using a thermostat-controlled chiller. The flow is driven by two 7.5 kW pumps operated in parallel. The flow rate is measured using a Yokogawa ADMAG AXF magnetic flow-meter that has an accuracy of 0.2% of the reading. The bulk mean velocity in the test section ranges from 0.4–11.0 m/s, resulting in a Reynolds number based on the channel height and bulk mean velocity (Rem) range from 10,000 - 300,000. Mean velocity profiles over rough surfaces show no difference within the experimental uncertainty of the measurement [24], indicating that the flow in the channel is fully-developed by a streamwise distance of 90H or 30H downstream of the onset of roughness. Nine static pressure taps are located in the test section of the channel. They are 0.75 mm holes and are placed along the centerline of the side wall of the channel and are spaced 6.8H apart. The streamwise pressure gradient (dp dx) is determined with a Honeywell FP2000 series differential pressure transducer with a 2 psi range and have an accuracy of ±0.1% of full scale. Pressure taps 5–8 are used to measure the pressure drop in the channel, located ~ 90H - 110H downstream of the trip at the inlet to the channel. A roughness fetch of 30H is present before the first tap used in the determination of dp/dx. The linearity in the measured pressure gradient using these four taps was quite good with a coefficient of determination (R2) of the regression generally greater than 0.995. The wall shear stress, τw, was determined via measurement of the streamwise pressure gradient, dp/dx, as detailed below:
+τw 1⁄4 − H
+2
+dp
+dx ð1Þ
+or as expressed as the skin-friction coefficient, Cf
+Cf 1⁄4 τw
+1
+2 ρU 2
+1⁄4 2 uτ
+U
+2 ð2Þ
+Fig. 1 High Reynolds number flow channel
+Flow, Turbulence and Combustion (2020) 104:317–329 319
+
+
+where H = channel height, p = static pressure, x = streamwise distance, ρ = fluid density, U = bulk mean velocity, and uτ = friction velocity. A similarity-law procedure of Granville [12] for fully-developed internal flows was employed to determine the roughness function, ΔU+. This procedure assumes mean flow similarity between rough and smooth walls outside of the roughness sublayer, as demonstrated with collapse of mean velocity profiles in velocity defect form. Collapse of the mean defect profiles for rough and smooth walls is consistent with the turbulence similarity hypotheses of Townsend [29]. Mean flow similarity has proven to be robust for a wide range of surface roughness (i.e. [5, 9]). Granville’s method states that the roughness function can be obtained by:
+ΔU þ 1⁄4 U Sþ−U Rþ 1⁄4
+ffiffiffiffiffiffiffi 2
+CfS
+s
+−
+ffiffiffiffiffiffiffiffi 2
+CfR
+s
+ð3Þ
+where the subscripts S and R represent smooth and rough surfaces, respectively, evaluated at the same Rem(Cf)1/2 or Reτ.
+The rough surfaces were generated mathematically so the surface statistics can be systematically altered to identify the roughness parameters that contribute the most to drag. The surfaces were generated in MATLAB using a circular Fast Fourier Transform (FFT) with a random set of independent phase angles, distributed between 0 and 2π, with a Gaussian power spectral density
+(PSD), in the form of EðkÞ 1⁄4 lh2=ð2pffiπffiffiÞ e−k2l2=4, where k is the wavenumber, and l and h are parameters that control the shape of the spectrum (l sets the length-scale of the roughness elements and h the roughness rms). The random phase was generated using the Pearson system random numbers [14], where both skewness (Sk) and flatness (Fl) can be set as input parameters. These values were adjusted until the desired Sk and Fl were achieved after the Gaussian power spectrum was imposed. The Gaussian-shape power spectrum was selected, as opposed to the power-law [2], because better control of the roughness parameters, down to the resolution of the printer, could be achieved. It should be noted that, even though a Gaussian power spectrum was chosen, the skewed surfaces possess a non-Gaussian probability density function. The generated surfaces were reproduced using a high-resolution 3D printer (Objet 30 Pro) with lateral resolution 34 μm, elevation resolution 16 μm. A total of twenty plates for each roughness case were printed, each 216 mm × 165 mm, enough to cover the top and bottom of the rough section of the channel. The tiles were glued onto a piece of acrylic using an epoxy and vacuum bagging technique, and then machined to fit in the channel flow facility, as described in [2]. Four separate surfaces with different surface topographies but similar surface statistics were created and each was replicated five times. The tiles were randomly positioned along the streamwise length of the channel to avoid repeating features that have been shown to create secondary flows [1]. The surfaces were scanned to determine the statistics of the printed surfaces. The scanned region (50 mm by 15 mm, x and y direction, respectively), were obtained with an optical profilometer utilizing white light interferometry (Veeco Wyco NT9100), with sub-micron vertical resolution and 3.4 μm lateral resolution. The data acquired from the profilometer require careful post-processing in order to remove any anomalies and spurious data as well as filling any holes in the surface scans that result from angles that are too steep for the optical profilometer to measure accurately. The surface scans had tilt and curvature removed, and the holes were filled using a PDE-based interpolation method [3]. Spurious data from the interpolation step were removed by a median-test filter, followed by a second PDE-based interpolation. Further details of the post-processing can be found in Flack et al. [10].
+Flow, Turbulence and Combustion (2020) 104:317–329
+320
+
+
+Figure 2 shows both the mathematically generated and a scan of a printed surface, along with the corresponding pdf, indicating the ability of the printer to reproduce the desired surface. While the printer has limited spatial resolution, which filters the desired surface parameters, a systemic variation of parameters is achieved. Figure 3 shows representative surface topography profiles based on the surface scans, demonstrating the effect of varying krms and Sk. Table 1 lists the statistics of the surfaces as determined from the scans. These include the centerline average roughness height, ka 1⁄4 ð1=NÞ∑iN1⁄41jzij, the rms roughness height,
+krms 1⁄4
+ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi ð1=N Þ∑iN1⁄41zi2
+q
+, the peak-to-trough roughness height, kt = zmax − zmin, skewness,
+Sk 1⁄4 ð1=N Þ∑iN1⁄41zi3= ð1=N Þ∑iN1⁄41zi2
+3=2, flatness, Fl 1⁄4 ð1=N Þ∑iN1⁄41zi4= ð1=N Þ∑iN1⁄41zi2
+2, and the effective
+slope, ES 1⁄4 1
+Ls ∫ ∂z
+∂x dx, [18]. Surfaces 1, 2 and 7 have Gaussian distributions (Sk ≈ 0) with
+varying roughness heights (krms, ka, kt), while surfaces 2–6 have a range of skewness (both positive and negative) with the roughness heights approximately constant. The effective slope was also constant for surfaces 2–6 but varied for surfaces 1 and 7. Also listed in Table 1 is the equivalent sandgrain roughness height, ks, the roughness height that produces the same roughness function as the uniform sandgrain of Nikuradse in the fully rough regime. Using the roughness function, ΔU+ (eq. 3), ks can be determined from:
+ΔU þ 1⁄4 1
+κ lnksþ þ A−B ð4Þ
+where κ = 0.40 is the von Kármán constant, B = 5.0 is the log-law intercept for a smooth wall, and A = 8.5 is the intercept for a uniform sandgrain surface. The error in estimating ks is 7%.
+3 Results and discussion
+Sample skin-friction (Cf) results for all the tested surfaces are shown in fig. 4 as a function of the Reynolds number based on the channel height (H) and mean velocity (U), Rem = UH/ν. Also
+Fig. 2 Mathematically generated (a) and printed (b) surface roughness with corresponding pdf of surface elevation (c)
+Flow, Turbulence and Combustion (2020) 104:317–329 321
+
+
+included are the smooth-wall results of Schultz and Flack [23]. At low Reynolds number, all the surfaces appear to be hydraulically smooth or nearly so. At higher Reynolds number the rough surfaces all exhibit fully-rough behaviour, where the skin-friction becomes independent of Reynolds number at sufficiently high Reynolds number. Skewness and rms roughness height are scales that
+Surface 3
+Surface 2
+Surface 1
+Surface 6
+Fig. 3 Sample surface profiles - 1, 2, 3, and 6. The elevation color scale is mm. Comparison between 1 and 2 demonstrates the effect of krms (fix Sk ~ 0). Comparison between 2, 3 and 6 demonstrates the effect of skewness (fix krms)
+Flow, Turbulence and Combustion (2020) 104:317–329
+322
+
+
+impact the skin-friction coefficient. Focusing on surface 1 and 7 (red and green diamonds on fig. 4), as krms increases, the drag on the rough surfaces increases monotonically. Similarly, for sufaces from 2 to 6, as the skewness increases (and krms is remained constant) from negative to positive values, the drag on the rough surfaces increases. Negative skewness (pits) has a much smaller influence than positive skewness (peaks). There is a relatively small difference in the skin-friction coefficient for the negatively skewed surfaces compared to the surface with zero skewness, whereas, there is a dramatic difference in Cf as the skewness increases from Sk = 0 to +0.35 to +0.84. Comparing all cases, it is clear that positive skewness (peaks) has a stronger influence on increased drag than increased rms roughness height. Reduced drag for negatively skewed surfaces is likely a result of the flow filling in the surface depressions causing a skimming effect. For positively skewed surfaces, flow separation from the peaks and the resulting pressure drag contributes to increased losses. This is especially evident for the highly skewed surface (Sk = +0.84). The overall trend is in agreement with the numerical study of Jelly and Busse [13]. Their study investigated a Gaussian roughness height distribution with DNS performed for the original surface (zero skewness) and the Gaussian height map decomposed into ‘pits-only’ (negatively skewed) and ‘peaks-only’ components (positively skewed). The positive and zero skewness surfaces had similar roughness functions while the negatively skewed surface displayed significantly lower drag. The roughness function (ΔU+) is shown in Fig. 5. Most of the surfaces (2,3,4,5 and 7) collapse to a single roughness function that is similar to but offset slightly from the Nikuradse [19] roughness function for uniform sand grain. These surfaces depart from hydraulicallysmooth at ks+ ≈ 4–6 and become fully-rough at ks+ ≈ 40–45. The two surfaces that do not collapse on the others are surface 1 (krms = 44 μm, Sk = −0.06), the surface with the smallest rms roughness height, and surface 6 (krms = 90 μm, Sk = +0.84), the most positively skewed. The shape of the roughness functions in the transitionally-rough regime for surfaces 1 and 6 are markedly different. High positive skewness leads to an abrupt departure from hydraulically-smooth to fully-rough. However, this surface also remains hydraulicallysmooth and transitions to fully-rough at larger roughness Reynolds numbers (ks+) than the other surfaces. The transitionally-rough range for surface 6, the highly positive skewed surface, is 10 < ks+ < 70. On the other hand, surface 1 has a more gradual transition from hydraulicallysmooth to fully-rough behaviour but the shape of the roughness function in the transitionally rough regime does not follow the Nikuradse roughness function or the Colebrook [6] roughness function that is used in the Moody diagram [16]. The transitionally-rough range for surface 1 (2 < ks+ < 15) is significantly less than the other surfaces. The abbreviated transitionally-rough regime extent was also observed for practical engineering surfaces such as honed pipe (Shockling et al. [25]) and commercial steel pipe (Langelandsvik et al. [17]). The difference in shape of ΔU+ for surface 1 is likely due to differences in effective slope (ES),
+Table 1 Roughness statistics of tested surfaces
+krms [μm] ka [μm] kt [μm] ks [μm] Sk Fl ES
+1 44.9 36.0 397 65 −0.07 2.95 0.19 2 87.7 70.2 705 200 −0.06 2.92 0.37 3 87.1 69.6 646 160 −0.70 3.31 0.36 4 88.5 70.8 665 180 −0.35 3.04 0.37 5 87.7 71.5 681 245 0.35 3.05 0.37 6 89.5 69.8 659 435 0.84 3.25 0.37 7 114 92.0 890 230 −0.06 2.78 0.47
+Flow, Turbulence and Combustion (2020) 104:317–329 323
+
+
+also listed in Table 1, as noted by Barros et al. [2]. It has been shown [18, 22] that an effective slope less than 0.35 indicates that a surface is “wavy” or has undulating long wavelength scales that do not contribute significantly to the drag. The present results can now be used to explore predictive correlations for the equivalent sandgrain roughness height ks, where ks = ks (krms, Sk). Figure 6 shows the results for the Gaussian-PSD surfaces along with other recent experimental results for grit-blasted roughness [10], random roughness with a power law distribution [2] as well as the surfaces used by Flack and Schultz [8] to develop the predictive correlation having the following form, with A = 4.43 and B = 1.37:
+ks 1⁄4 Akrms 1 þ Sk
+ð ÞB ð4Þ
+Re m
+0.0 5.0e+4 1.0e+5 1.5e+5 2.0e+5
+Cf
+0.000
+0.002
+0.004
+0.006
+0.008
+0.010
+Smooth - Schultz & Flack (2013)
+krms = 45 μm, Sk = -0.07 krms = 114 mm, Sk = -0.06
+krms = 87 μm, Sk = -0.70
+krms = 90 μm, Sk = +0.84
+krms = 88 μm, Sk = +0.35
+krms = 89 μm, Sk = -0.35 krms = 88 μm, Sk = -0.07
+Fig. 4 Skin-friction coefficient
+ks
++
+1.0 10.0 100.0
+ΔU+
+0
+2
+4
+6
+8
+10
+Nikuradse Sand Fully-Rough Asymptote
+Fig. 5 Roughness function (same symbols as 4)
+Flow, Turbulence and Combustion (2020) 104:317–329
+324
+
+
+The Gaussian-PSD surfaces do not all follow this correlation closely, as highlighted in the inset for smaller values of ks. This is not a surprising result since mostly positively-skewed surfaces were used to obtain the correlation shown in the figure and the Gaussian-PSD surfaces have skewness ranging from −0.70 to +0.84. Separate correlations for positive, negative and zero skewness are likely needed. Figures 7, 8 and 9 show ks actual vs. ks predicted results for a compilation of surfaces with only positive, negative and zero skewness, respectively. Positive skewness (fig. 7) results in a correlation that is more strongly dependent on skewness as indicated by the increase in coefficient B and a decrease in A, as compared to the previously proposed correlation. While there is a high level of correlation, ks for the Gaussian-PSD surfaces are still under-predicted. This indicates that additional surface parameters such as effective slope or a shape-based scale may be needed. Negative skewness (fig. 8) shows an opposite trend with a correlation that is more strongly dependent on the rms roughness height as indicated by the decrease in B and an increase in A. Coefficient B also changes sign as compared to the same coefficient for the positively skewed surfaces, indicating the need for separate predictive equations for positively and negatively skewed surfaces. The form of the equation was also slightly modified to allow for Sk < −1. The correlation shown in fig. 8 fits the data remarkably well (note change in scale) for a wide range of surface roughness. Figure 9 shows predictive results for surfaces with zero skewness, a roughness that statistically has a similar distribution of pits and peaks. The form of the correlation for this type of surface roughness based solely on krms. For this sparse data set, results indicate that ks ≈ 2 krms for random roughness with Sk ≈ 0.
+ks actual, μm
+0 2000 4000 6000 8000
+ks predicted, μm
+0
+2000
+4000
+6000
+8000
+0 100 200 300 400 500
+0
+100
+200
+300
+400
+500
+packed spheres (Schultz & Flack 2005 [20]) sandpaper (Flack, et al. 2007 [7]) gravel (Castro 2007 [5]) honed pipe (Shockling, et al. 2006 [25]) commercial steel pipe (Langelandsvik, et al 2008 [17]) scratched plate (Schultz & Flack 2007 [21])
+Gaussian
+power law (Barros, et al. 2018 [2])
+grit blasted (Flack, et al. 2017)
+ks = 4.43krms (1+ Sk)1.37
+Fig. 6 All data (Flack and Schultz [8])
+Flow, Turbulence and Combustion (2020) 104:317–329 325
+
+
+ks actual, μm
+0 50 100 150 200 250
+ks predicted, μm
+0
+50
+100
+150
+200
+250 commercial steel pipe scratched plate Gaussian grit blasted
+ks = 2.73krms (2+ Sk)-0.45
+R2 = 0.97
+Fig. 8 Surfaces with negative skewness, Sk < 0
+ks actual, μm
+0 2000 4000 6000 8000
+ks predicted, μm
+0
+2000
+4000
+6000
+8000 packed spheres sandpaper gravel honed pipe Gaussian
+ks = 2.48krms (1+ Sk)2.24
+R2 = 0.95
+Fig. 7 Surfaces with positive skewness, Sk > 0
+Flow, Turbulence and Combustion (2020) 104:317–329
+326
+
+
+4 Conclusions
+Experimental results are presented for systematically-varied random roughness. Positivelyskewed surfaces (peaks) display significantly higher drag than negatively-skewed surfaces (pits). Results also indicate that high positive skewness has a stronger influence on increased drag than rms roughness height for the range of surfaces tested in this study. For similar rms roughness heights, negatively-skewed surfaces create less drag. The flow may be filling in the pits and skimming over these surface features. The majority of the surfaces collapse to a single roughness function, following a Nikuradsetype roughness function throughout the transitionally-rough regime. Two surfaces displayed roughness functions with different shapes and extent of the transitionally-rough regime. The first exception is the most highly-skewed surface which has an abrupt transition from hydraulically-smooth to transitionally-rough along with a larger ks+ to reach fully-rough. The wavy surface displayed a more gradual transition from hydraulically-smooth to fullyrough behaviour with a lower range of the transitionally-rough regime. It is also important to note that none of the surfaces follow a Colebrook-type roughness function. Results indicate that skewness and rms roughness height are important surface parameters however, a single correlation cannot adequately predict frictional effects of surface texture. Based on the present results, correlations should be separated by positive, negative and zero skewness of the pdf to capture the differences in near-wall flow interactions for peaked and pitted surfaces. Predictive correlations for wavy surfaces (ES < 0.35) and highly skewed surfaces require different or additional parameters. While the present results are promising, a single correlation is still elusive and may not be achievable. The effective slope (or similar
+ks actual, μm
+0 50 100 150 200 250
+ks predicted, μm
+0
+50
+100
+150
+200
+250
+Gaussian power law
+ks = 2.11krms
+R2 = 0.96
+Fig. 9 Surfaces with zero skewness, Sk = 0
+Flow, Turbulence and Combustion (2020) 104:317–329 327
+
+
+slope parameter) appears to be necessary for wavy surfaces. Other candidates may include a planform or frontal shape parameter (or ES [27]) and correlation lengths of surface elevations. Additional studies are needed for a wider range of surfaces before definitive correlations can be obtained. Recent advancements in simulations of rough-wall flows may allow a larger range of the parameter space to be explored, eventually leading to better predictive correlations.
+Acknowledgements The investigations presented in this paper were funded by the United States Office of Naval Research project N0001418WX01767.
+Compliance with ethical standards
+Conflict of interest The authors have no conflict of interest.
+References
+1. Barros, J.M., Christensen, K.T.: Observations of turbulent secondary flows in a rough-wall boundary layer. J. Fluid Mech. 748, R1 (2014) 2. Barros, J.M., Schultz, M.P., Flack, K.A.: Measurements of skin-friction of systematically generated surface roughness. Int. J. Heat and Fluid Flow. 72, 1–7 (2018) 3. Bertalmino, M., Sapiro, G., Caselles, V., Ballester, C.: Image Impainting, 27th Conference on Computer Graphics and Interactive Techniques. ACM Press/Addison Wesley Publishing Co, pp. 417–424, (2000) 4. Bons, J.P.: A review of surface roughness effects in gas turbines. J. Turbomach. 132, 021004–1–16 (2010) 5. Castro, I.P.: Rough-wall boundary layers: mean flow universality. J. Fluid Mech. 585, 469–485 (2007) 6. Colebrook, C.F.: Turbulent flow in pipes, with particular reference to the transition region between the smooth and rough pipe laws. Journal of the Institution of Civil Engineers. 12(8), 393–422 (1939) 7. Flack, K.A., Schultz, M.P., Connelly, J.S.: Examination of a critical roughness height for boundary layer similarity. Phys. Fluids. 19, 095104 (2007) 8. Flack, K.A., Schultz, M.P.: Review of hydraulic roughness scales in the fully rough regime. J. Fluids Engng. 132(4), 041203 (2010) 9. Flack, K.A., Schultz, M.P.: Roughness effects on wall-bounded turbulent flows. Phys. Fluids. 26(10), 101305 (2014) 10. Flack, K.A., Schultz, M.P., Barros, J.M., Kim, Y.C.: Skin-friction behavior in the transitionally-rough regime. Int. J. Heat and Fluid Flow. 61(A), 21–30 (2016) 11. Forooghi, P., Stroh, A., Magagnato, F., Jakirlic, S., Frohnapfel, B.: Toward a universal roughness correlation, trans. ASME. J. Fluids Engng. 139(12), 121201 (2017) 12. Granville, P.S.: Three indirect methods for the drag characterization of arbitrarily rough surfaces on flat plates. J. Ship Res. 31, 70–77 (1987) 13. Jelly, T.O., Busse, A.: Reynolds and Dispersive shear stress contributions above highly skewed roughness. J. Fluid Mech. 852, 710–724 (2018) 14. Johnson, N.L., S. Kotz, and N. Balakrishnan: Continuous Univariate Distributions, Volume 1, WileyInterscience, p. 15, eqn. 12.33, (1994) 15. Monty, J.P.,: Developments in smooth wall turbulent duct flows, Ph.D. dissertation (University of Melbourne), (2005) 16. Moody, L.F.: Friction factors for pipe flow. Trans. ASME. 66(8), 671–684 (1944) 17. Langelandsvik, L.I., Kunkel, G.J., Smits, A.J.: Flow in a commercial steel pipe. J. Fluid Mech. 595, 323339 (2008) 18. Napoli, E., Armenio, V., De Marchis, M.: The effect of the slope of irregularly distributed roughness elements on turbulent wall-bounded flows. J. Fluid Mech. 613, 385–394 (2008) 19. Nikuradse, J.: Laws of flow in rough pipes. NACA Technical Memorandum 1292, (1933) 20. Schultz, M.P., Flack, K.A.: Outer layer similarity in fully rough turbulent boundary layers. Exp. Fluids. 38, 328–340 (2005) 21. Schultz, M.P., Flack, K.A.: The rough-wall turbulent boundary layer from the hydraulically smooth to the fully rough regime. J. Fluid Mech. 580, 381–405 (2007) 22. Schultz, M.P., Flack, K.A.: Turbulent boundary layers on a systematically varied rough wall. Phys. Fluids. 21, 015104 (2009)
+Flow, Turbulence and Combustion (2020) 104:317–329
+328
+
+
+23. Schultz, M.P., Flack, K.A.: Reynolds-number scaling of a turbulent channel flow. Phys. Fluids. 25, 025104 (2013) 24. Schultz, M.P., Walker, J.M., Steppe, C.N., Flack, K.A.: Impact of diatomaceous biofilms on the frictional drag of fouling-release coatings. Biofouling. 31(9–10), 759–773 (2015) 25. Shockling, M.A., Allen, J.J., Smits, A.J.: Roughness effects in turbulent pipe flow. J. Fluid Mech. 564, 267285 (2006) 26. Sigal, A., Danberg, J.E.: New correlation of roughness density effects on the turbulent boundary layer. AIAA J. 28, 554–556 (1990) 27. Thakkar, M., Busse, A., Sandham, N.: Surface correlations of hydrodynamic drag for transitionally rough engineering surfaces. J. of Turbulence (2016), (2017) 28. Thakkar, M., Busse, A., Sandham, N.: DNS of turbulent channel flow over a surrogate for Nikuradse-type roughness. J. Fluid Mech. 837, R1 (2018) 29. Townsend, A.A.: The Structure of Turbulent Shear Flow. Cambridge University Press, Cambridge (1976) 30. van Rij, J.A., Belnap, B.J., Ligrani, P.M.: Analysis and experiments on three-dimensional, irregular surface roughness. J. Fluids Eng. 124, 671–677 (2002) 31. Yuan, J., Piomelli, U.: Estimation and prediction of the roughness function of realistic surfaces. J. Turbul. 15(6), 350–365 (2011)
+Flow, Turbulence and Combustion (2020) 104:317–329 329

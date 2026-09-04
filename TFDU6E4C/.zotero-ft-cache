@@ -1,0 +1,297 @@
+South African Journal of Industrial Engineering December 2025 Vol 36(3), pp 338-350
+338
+Hydrodynamic and Thermal Analysis of Additively Manufactured Thrust Chamber Cooling Channels
+M. Reynolds1*, N. Wunderlin1, G. Snedden1 & J. Pitot1
+ARTICLE INFO
+Article details
+Presented at the 26th annual conference of the Rapid Product Development Association of South Africa, held from 27 to 30 October 2025 in Pretoria, South Africa
+Available online 8 Dec 2025
+Contact details
+∗ Corresponding author contact@reynoldsengineer.com
+Author affiliations
+1 Aerospace Systems Research Institute (ASRI), University of KwaZulu-Natal, Durban, South Africa
+ORCID® identifiers M. Reynolds https://orcid.org/0009-0008-1013-9547
+N. Wunderlin https://orcid.org/0009-0009-3001-4650
+G. Snedden https://orcid.org/0000-0001-8760-5931
+J. Pitot https://orcid.org/0000-0002-3411-3658
+DOI
+http://dx.doi.org//10.7166/36-3-3349
+ABSTRACT
+The University of KwaZulu-Natal’s Aerospace Systems Research Institute is developing an additively manufactured regeneratively cooled rocket engine and investigating the effects of surface roughness on the hydrodynamic and thermal performance of its cooling channels. Additive manufacturing produces high roughness values, increasing both heat transfer and pressure drop in cooling channels. It is crucial to understand these delicate relationships between pressure drop, heat transfer, and surface roughness. This paper details the strategy and preliminary results of the above investigation. It provides a brief review of the literature associated with surface roughness characterisation, Nusselt number correlations, and friction factor correlations that are relevant to additively manufactured surfaces. In this context, preliminary predictions of thrust chamber temperature and pressure distributions are also presented. Numerical methods, using ANSYS Fluent, are described, and preliminary results are presented and compared with analytical predictions. It was found that the numerical methods predict higher pressure drops and lower heat transfer than those of the analytical methods. Finally, the experimental hardware and procedure that will be used for future cooling channel friction factor measurement is described.
+OPSOMMING
+Die Universiteit van KwaZulu-Natal se Lugvaartstelselnavorsingsinstituut ontwikkel 'n additief vervaardigde regeneratief verkoelde vuurpylmotor en ondersoek die effekte van oppervlakruheid op die hidrodinamiese en termiese werkverrigting van sy verkoelingskanale. Additiewe vervaardiging produseer hoë ruheidwaardes, wat hitte-oordrag verhoog, maar ook drukval in verkoelingskanale skep. Dit is van kardinale belang om hierdie delikate verhoudings tussen drukval, hitte-oordrag en oppervlakruheid te verstaan. Hierdie artikel gee besonderhede oor die strategie en voorlopige resultate van die bogenoemde ondersoek. Dit bied 'n kort oorsig van die literatuur wat verband hou met die oppervlakruheidseienskappe, Nusselt-getalkorrelasies en wrywingsfaktorkorrelasies wat relevant is vir additief vervaardigde oppervlaktes. In hierdie konteks word voorlopige voorspellings oor die drukkamertemperatuur en drukverspreidings ook aangebied. Numeriese metodes, met behulp van ANSYS Fluent, word beskryf, en voorlopige resultate word aangebied en vergelyk met analitiese voorspellings. Daar is gevind dat die numeriese metodes hoër drukvalle en laer hitte-oordrag voorspel as dié van die analitiese metodes. Laastens word die eksperimentele hardeware en prosedure wat vir toekomstige verkoelingskanaalwrywingsfaktormeting gebruik sal word, beskryf.
+
+
+339
+1. BACKGROUND AND INTRODUCTION
+The space economy is set to grow to around $1.8 trillion by 2035, a 185% increase from 2023 [1], with the majority of this being attributable to satellite services. South Africa currently has 13 satellites in orbit [2], the second-highest number of any African country. However, South Africa, and Africa as a whole, does not have sovereign access to space. South Africa has had to use foreign launch services despite having a thriving satellite manufacturing sector. Yet, given its geographical location and minimal air and sea traffic, South Africa is primed to provide polar and sun-synchronous launch services.
+The Aerospace Systems Research Institute (ASRI) at the University of KwaZulu-Natal (UKZN) hopes to provide the technical and skills foundation for South African space launch capability. ASRI is in the process of developing a liquid rocket engine (LRE), named the South African first rocket engine (SAFFIRE), for use on the commercial launch vehicle (CLV). This is a two-stage vehicle being developed by ASRI that uses nine SAFFIRE engines in the first stage and one vacuum-optimised SAFFIRE-V engine in the second stage. The vehicle has a design-point payload performance of 200 kg into a 500 km sun-synchronous orbit. The CLV and its launch infrastructure would allow South Africa to launch satellites from home soil, boosting economic growth and cementing South Africa as a key player in the space economy.
+As part of the SAFFIRE programme, which has thus far focused on ablatively-cooled thrust chambers, ASRI has begun to develop an additively manufactured and regeneratively cooled version of the SAFFIRE thrust chamber, to investigate the potential performance improvements and production cost savings enabled by AM. The cooling channels of this type of LRE are crucial to its performance and are, therefore, of particular concern to ASRI. The hydrodynamic and thermal analysis of cooling channels is discussed in this paper, in the context of the additively manufactured SAFFIRE engine. The theory and procedure of determining the efficacy of additively manufactured cooling channels is discussed, using analytical, numerical, and experimental methods.
+2. LITERATURE REVIEW
+2.1. Additive manufacturing in aerospace
+Additive manufacturing (AM) has been evolving for decades [3], and today it takes the form of multiple different technologies. The most impactful for aerospace applications are metal-based technologies such as powder bed fusion (PBF) and directed energy deposition (DED). PBF uses a bed of powdered metal particles that are selectively melted by a laser or electron beam [4]. On top of each melted layer, a new layer of particles is deposited and then melted. This process is repeated, building up the part layer by layer. DED directly deposits the feedstock – metal powder or wire – into an energy source such as an electron beam or laser. Other metal AM methods exist, but PBF and DED are the most widely used [5]. PBF can produce slightly finer features than DED, but it is constrained by its build volume, as the powder bed needs to be larger than the part being produced [6]. The proposed SAFFIRE design suits the typical size constraints of PBF and will, therefore, be manufactured using PBF to make use of the increased resolution.
+Metal AM is favoured because of its ability to create complex features that are often impossible to achieve using traditional manufacturing methods such as machining, casting, and forging. These complex structures offer multiple benefits, the most important of which for aerospace applications is weight reduction. Using topology optimisation and generative design, components with higher specific strength can be additively manufactured.
+The recent development of AM technologies, coupled with the growth of the international space industry, has brought about a surge in additively manufactured rocket components. This synergy has revealed unique problems relating to increased surface roughness, topology optimisation, and design for manufacturing.
+2.2. Regeneratively cooled liquid propellant rocket engines
+One popular use of AM in aerospace is to create thrust chambers for regeneratively cooled liquid propellant rocket engines. The flame temperatures achieved during liquid rocket engine combustion are in the region of 3500 K, resulting in substantial heating of the thrust chamber walls [7]. The strength of most engineering materials is greatly diminished at these temperatures to the point where they become unusable. In Figure 1, the yield strengths of Inconel 718, Hastelloy X, and 304 and 309 stainless steel are compared at different
+
+
+340
+temperatures. It can be seen that the yield strength of these materials becomes significantly diminished past 900 °C, which is well below the temperatures experienced during combustion. Therefore, cooling is essential to maintain the structural stability of an LRE.
+Figure 1: Yield strength vs temperature for Inconel 718, Hastelloy X, and 304 and 309 stainless steel [8]
+Regeneratively cooled engines use cooling channels positioned in the walls of the thrust chamber, through which fuel or oxidiser flows to cool the walls via convection. Traditionally, regeneratively cooled thrust chambers have been manufactured by complex techniques such as tube brazing. These techniques often yield high scrap rates and manufacturing defects that result in leaks, high thermal stresses, and the potential for catastrophic failure [9]. With AM, thrust chamber manufacturing can be greatly simplified, resulting in consolidated parts and reduced operational failure modes.
+The cooling channels in regeneratively cooled engines, as shown in Figure 2, typically have small crosssectional areas and large channel aspect ratios. They therefore typically experience significant pressure drops. Thus, the adverse effects of increased surface roughness on this pressure drop are of concern. However, in respect of heat transfer, rougher surfaces typically result in greater heat extraction, which is desirable for cooling channels. When considering additively manufactured cooling channels, therefore, it is crucial to understand the delicate relationships between pressure drop, heat transfer, and surface roughness.
+Figure 2: Diagram of regeneratively-cooled LRE cooling
+
+
+341
+2.3. Surface roughness
+AM is known to produce relatively high surface roughness when compared with traditional machining [4], and PBF is no different. Many attribute this roughness to the layers created during AM processes, but numerous other factors also contribute. Snyder and Thole (2020) detail the remaining sources of roughness, summarised in Table 1:
+Table 1: Summary of sources of roughness in PBF [10]
+Source of roughness Description
+Partially melted particles
+Unmelted powder particles partially melt on to surrounding hot surfaces.
+Hatch spacing Incorrect hatch spacing causes ridges to form between laser passes.
+Balling Molten material forms spheres instead of a uniform layer to minimise its surface energy.
+Humping Like balling, melt pool begins to neck to reduce its surface energy, resulting in wavy cross sections.
+Lack of fusion Inadequate laser energy results in undesirable porosity in the final part.
+Dross Typically, on overhangs and down skin surfaces, more material is melted than needed owing to poor melt pool control.
+Quantifying the complex roughness features produced by AM has long been a problem for engineers. This becomes increasingly difficult when correlating the effects of surface roughness on phenomena such as fluid flow and heat transfer. Roughness parameters consist of line or 2D parameters, denoted by RR, and area or 3D parameters, denoted by SS. Many roughness parameters have been developed, some better suited to certain analyses than others. For example, the skewness (RRssss) has been shown to correlate well against skin friction drag, which is important in the study of aerodynamics [11, 12], whereas the maximum profile valley depth (RRvv or SSvv) is better suited to fatigue correlations [13]. Other roughness parameters include the root mean square roughness (RRqq), peak-to-valley roughness (RRzzzz), the kurtosis (RRsskk), and the widely used arithmetic mean roughness (RRaa).
+The rough features in pipes or channels produce secondary flows, increasing heat transfer and pressure drop. Many researchers have developed empirical, semi-empirical, and analytical correlations to calculate the hydrodynamic and thermal effects of rough internal flow. Nikuradse (1933) pioneered this field by experimenting with pipes that were internally coated with a uniform sand layer [14]. This equivalent sand roughness (kkss) was later used by Colebrook (1937) to create one of the first correlations for turbulent flow in rough pipes. The Colebrook equation (1) is used to calculate a friction factor, which can be used in equation (2) to determine the pressure drop in a pipe [15, 16].
+1
+�ff = −2 log � ssss
+3.7DDh
++ 2.51
+RRRR�ff� (1)
+ff = ΔPP DDh
+LL
+2
+ρρVV2 (2)
+The Colebrook equation is still widely used, but many other friction factor correlations exist today. Unfortunately, this foundational work was done for pipes with a maximum relative roughness (RRRR), the ratio of roughness to hydraulic diameter (DDh), of around 5% [17]. Smaller channels, such as those in regeneratively cooled rocket engines, are likely to have a relative roughness much higher than 5% if they are additively manufactured.
+Traditionally, relative roughness has been calculated using equation (3). Alternatively, kkss is replaced with RRaa, as seen in equation (4).
+RRRR = kkss
+DDh
+(3)
+RRRR = RRaa
+DDh
+(4)
+
+
+342
+There are, however, problems with the use of sand grain roughness. First, kkss assumes a uniform layer of equal diameter sand grains, whereas most real surfaces have random roughness. Second, kkss cannot be measured, but correlations are needed instead to relate kkss to quantities that can be measured, such as RRaa. These correlations differ, based on geometry and dimensions. For example, Stimpson et al. (2017) found that, for tubes with RRaa/DDh > 0.0028, such as AM tubes, equation (5) is best suited, whereas Adams et al. (2012) found that equations (6) and (7) correlate well for tubes with much smaller values of RRaa/DDh, such as traditionally machined tubes.
+ssss DDh
+= 18 RRaa
+DDh
+− 0.05 (5)
+kkss = 3.100RRzzzz (6)
+kkss = 5.863RRaa (7)
+3. ANALYTICAL METHODS
+It is clear from the literature that there is a wide variety of different methods to account for surface roughness when predicting heat transfer and fluid flow characteristics. To calculate convective heat transfer in a pipe or channel, the following procedure is used. The heat transfer rate (QQ̇ ) is calculated using equation (7), where h is the heat transfer coefficient, AA is the area, TTss is the inner channel wall temperature, and TTbb is the bulk fluid temperature. h is calculated using equation (8), where NNNN is the nondimensional Nusselt number and kk is the thermal conductivity of the fluid.
+QQ̇ = hAA(TTss − TTbb) (8)
+h = NNkk∗ss
+DDh
+(9)
+NNNN is calculated differently depending on the fluid, geometry, and whether the flow is laminar or turbulent. For laminar flow, NNNN is independent of the Reynolds number (RRRR) and the Prandtl number (PPRR ), and stays about the same for a given fluid and geometry; whereas, in turbulent flow, NNNN is highly dependent on RRRR and PPRR, requiring specialised correlations.
+Cooling channels are most likely to be in the turbulent regime because of the working fluid’s high inlet velocity. Therefore, Nusselt correlations are needed for turbulent, internal, forced convection in a tube or channel. Turbulent pipe or channel flow is very common in practice, and many correlations have been developed, with some dating back to 1930 [20]. The problem with most correlations is that they break down when used for high relative roughness applications, such as AM cooling channels. Experimental research has been performed to investigate additively manufactured tubes with higher relative roughness [20, 21, 22, 23, 24, 25]. Several of these studies have developed their own correlations; these are summarised in Table 2 alongside the traditional correlations of Dittus-Boelter (1930) and Gnielinski (1976).
+Table 2: Nusselt number correlations for turbulent flow in pipes and channels
+Correlation Formula Applicability
+Dittus-Boelter (1930) [20]
+NNNN = 0.023RRRR0.8PPRR0.4 (10) 0.6 ≤ PPRR ≤ 160 RRRR > 10000
+LL DDh
+> 10
+Gnielinski
+(1976) [26] NNNN = �ff
+8�(RRRR−1000)PPPP
+1+12.7�ff
+8�
+0.5 �PPPP
+2
+3−1�
+(11) 0.5 < PPRR < 2000 3000 < RRRR < 50000
+Stimpson et al.
+(2017) [18] NNNN = �RRRR0.5−29�PPPP�ff
+8�
+0.5
+0.6�1−PPPP
+2 3�
+(12) PPRR ≈ 0.7 RRRR > 2300
+
+
+343
+Correlation Formula Applicability
+Chen et al. (2023) [24]
+NNNN = 0.02RRRR1.03PPRR0.2 � xx
+DDh
+�
+−0.05
+ff0.4 (13) 4.39 ≤ PPRR ≤ 6.41 4000 ≤ RRRR ≤ 10000
+xx DDh
+< 100
+xx = distance into pipe
+Chen et al. (2024) [22]
+NNNN =
+0.02RRRR1.13 PPRR−0.21 � xx
+DDh
+�
+−0.16
+ff0.003 � ssss
+DDh
+�
+0.2
+(14) 4 ≤ PPRR ≤ 7
+3000 ≤ RRRR ≤ 10000
+xx DDh
+≤ 100
+0.01212 ≤ ε
+DDh
+≤ 0.02229
+Lei et al. (2025) [25]
+NNNN = 0.5558RRRR0.8197PPRR−0.7668 (15) RRaa = 11μμμμ 5 < PPRR < 7 3000 < RRRR < 50000
+Table 3: Friction factor correlations for turbulent flow in pipes and channels
+Correlation Formula Applicability
+Colebrook (1939) [15]
+1
+�ff = −2 log � ssss
+3.7DDh
++ 2.51
+RRRR�ff� (1) 4000 ≤ RRRR ≤ 107
+ssss DDh
+< 0.05
+Chen et al. (2023) [24]
+ff = 0.01RRRR
+1
+4 (16) 4000 ≤ RRRR ≤ 10000
+Chen et al. (2024) [22]
+ff = 0.005RRRR0.34 � ssss
+DDh
+�
+0.05 (17) 3000 ≤ RRRR ≤ 10000
+Lei et al. (2025) [25]
+ff = 0.07573RRRR0.1332PPRR−0.325 (18) RRaa = 11μμμμ 5 < PPRR < 7 3000 < RRRR < 50000
+It is important, however, to note that the previously mentioned Nusselt number and friction factor correlations are for straight tubes or channels of constant DDh. Cooling channels are not straight, and often have varying cross-sectional areas, which may have an impact on predictions by introducing different heat transfer and flow phenomena. These correlations could prove useful as a starting point when experimenting with AM cooling channels, or they could be used in conjunction with correction factors to produce better results. One such Nusselt curvature correction factor is suggested by Taylor (1968), and can be seen in equation (19), where ψψcc is the Nusselt curvature correction factor, RRh is the channel’s hydraulic radius, and RRcc is the radius of curvature of the channel. The exponent should be positive when applied to the concave side of the channel and negative when applied to the convex side.
+ψψcc = �RRRR �PPh
+RRcc
+��
+±0.05
+(19)
+The first regeneratively cooled SAFFIRE thrust chamber will be additively manufactured with Inconel 718 and will operate with kerosene and liquid oxygen as the fuel and oxidiser. The cooling channels will use the fuel (kerosene) as the cooling fluid, which enters from a manifold on the nozzle side of the combustion chamber and exits on the injector side.
+The authors developed an inhouse code, written in Python, that iteratively solves for the flow and heat transfer characteristics using analytical correlations such as those mentioned above. Specifically, the Dittus-Boelter correlation was used in conjunction with Taylor’s curvature correction method, described above, to determine the local Nusselt number, which was then used to determine the local heat transfer coefficient, as shown in equation (9). The normalised coolant heat transfer coefficient results are presented in Figure 3. Combustion heat was then determined using the Bartz equation [28] and incorporated in a simple thermal resistance network, along with the coolant heat transfer coefficients, to determine the temperature distributions in the thrust chamber. The associated mean and hot wall temperature distributions are presented in Figure 4. Finally, the pressure drop in the cooling channels was calculated
+
+
+344
+using Colebrook’s equation, where the roughness was changed on the basis of the overhang angle during printing at that specific point. The overhang angles and their associated roughnesses were supplied by the manufacturer and a distribution profile was produced. The normalised pressure drop results can be seen below in Figure 5.
+Figure 3: Normalised coolant heat transfer coefficient distribution
+Figure 4: Normalised temperature distributions
+Figure 5: Normalised coolant pressure distribution
+
+
+345
+4. NUMERICAL METHODS
+Computational fluid dynamics (CFD) has been used in conjunction with the analytical method to assist in the understanding of the flow features that are involved in the heat transfer phenomena expected to be associated with the design. CFD simulations of transitional boundary layers, taking account of the effects of known roughness, are possible with several Reynolds-averaged Navier-Stokes turbulence models, notably Spalart-Allmaras and kk − ωω SST; however, all require considerable computational resources to resolve correctly, as well as careful validation if used in the design process. More accurate CFD methods such as large eddy simulation or direct numerical simulation would require exponentially more computational resource, and therefore are not considered in this study. Using ANSYS Fluent, a conjugate heat transfer model was developed to simulate half of a single cooling channel. The core details of this simulation and a cross-section of a half channel with both the solid and the fluid mesh are shown below in Table 4 and Figure 5 respectively.
+Figure 6: Cross section of half channel mesh, including boundary conditions
+Table 4: CFD simulation details
+Parameter Details
+Turbulence model kk − ωω SST
+Curvature correction Enabled
+Corner flow correction Enabled
+Fluid Jet-A1
+Solid Inconel 718
+Mesh type Poly-hexcore
+Fluid region cell count ~ 4.5 million
+Solid region cell count ~ 2.7 million
+Inlet boundary condition Mass flow inlet
+Outlet boundary condition Pressure outlet
+Symmetry
+Symmetry
+Convection + radiation
+Constant heat flux
+Inflation layers
+
+
+346
+Inflation layers are used to capture the fluid boundary layer accurately. The hot wall is given a mixed boundary condition of convection from the combustion gases and a constant heat flux to account for radiation. This boundary condition is input as a profile that varies along the pipe length and is determined on the basis of analytical calculations that are outside the scope of this paper. The cool or ambient side wall is given a constant heat flux of 5 W/m2 to replicate the minimal heat transfer to ambient. The remaining sides are given a symmetry boundary condition to account for the heat transfer between the adjacent cooling channel and the other half of the channel. To specify a rough wall boundary condition in ANSYS Fluent, two inputs are needed: sand grain roughness and the roughness constant. The roughness constant is nominally set to 0.5, but the literature has suggested that a roughness constant of 0.6 is more applicable to AM [29]. ANSYS Fluent accounts for the rough wall boundary condition by shifting the logarithmic boundary layer downwards, thereby increasing shear stress and pressure drop [30]. Three roughness conditions were considered:
+• Condition 1: Roughness profile based on overhang angle with roughness constant of 0.5.
+• Condition 2: Roughness profile based on overhang angle with roughness constant of 0.6.
+• Condition 3: Constant roughness of 87.945 μμm with roughness constant of 0.5.
+Conditions 1 and 2 use the same roughness as the analytical calculations, and the roughness constant was varied to investigate its effects. Condition 3 was chosen to investigate the effect of constant roughness as opposed to a profile. The sand grain roughness of 87.945 μμm was calculated based on equation (7), where an RRaa value of 15 μμm was chosen because average powder bed fusion roughness varies from 10-20 μμm [31]. The pressure drop and outlet temperature were used to compare the hydrodynamic and thermal results respectively. Figures 7 and 8 below summarise these results, and compare them with the results from the analytical calculations.
+Figure 7: Bar graph comparing analytical and numerical normalised pressure drop results
+Figure 8: Bar graph comparing analytical and numerical outlet temperature results
+As can be seen in Figure 7, all three conditions predict a higher pressure drop than the analytical calculations. This aligns with the literature, as the analytical calculations were completed using the Colebrook equation, which was not developed for the high relative roughness in AM channels and, therefore, it underpredicts the pressure drop. It should also be noted that condition 2 produces a higher pressure drop than condition 1. This could be explained by the increased roughness constant, which amplifies the downshift of the logarithmic boundary layer. However, the effect is minimal, and results in an increase of less than 5%. Condition 3 has a much larger pressure drop, which could be because the mean roughness is greater than that of the profile used in conditions 1 and 2.
+1 1,118 1,169
+1,386
+0
+0,5
+1
+1,5
+Analytical Condition 1 Condition 2 Condition 3
+Normalised
+pressure drop [Pa/Pa]
+Normalised pressure drop results
+1
+0,9006 0,9007 0,9014
+0,85
+0,9
+0,95
+1
+1,05
+Analytical Condition 1 Condition 2 Condition 3
+Normalised
+temperature [K/K]
+Normalised fluid outlet temperature results
+
+
+347
+The outlet temperature results in Figure 8 indicate a much larger discrepancy between the analytical and the numerical methods than that seen with pressure drop. The analytical outlet temperature is far greater than all three conditions, which remain relatively close to one another. This could be explained because the simulation takes into account only how the roughness affects the velocity boundary layer, and does not consider the increase in surface area caused by the surface’s peaks and valleys. The boundary layer effects do cause a slight increase in heat transfer; this can be seen in the slight increase in outlet temperature between conditions 1 to 3, but this effect is minimal. This is an indication that future work could involve adjustments to the numerical model to account for this increase in surface area – for example, by artificially increasing the solid’s thermal conductivity in the simulation.
+5. EXPERIMENTAL METHODS
+Although the analytical and numerical methods produced results that relatively closely agree with one another, it is important that future work be done to validate both these results against experimental data. Two experimental methods will be used to verify the models: surface roughness measurement and cold flow testing. The resulting data will be used to validate the hydrodynamic predictions derived from both the analytical and the numerical methods. However, this testing will only have slight applicability in validating the thermal results and, therefore, further hot fire or constant heat flux testing will be required in the future for better validation.
+The surface roughness of the channels will be measured using stylus profilometry. Sample channels will be cut into two halves along their centre plane and RRaa will be measured. This roughness measurement will be key to calculate friction factors and to compare the current investigation’s results with those of other studies.
+“Cold flow testing” refers to the use of an analogue fluid in a system to determine quantities such as flow rate, velocity, and pressure drop without the application of heat. The most important parameter for this investigation is the pressure drop in the channel. The pressure at the inlet and the outlet of the cooling channel will be measured and used in equation (2) to determine the actual friction factor. Thereafter, with the use of the measured surface roughness, the accuracy of correlations such as Colebrook’s can be tested and compared to others.
+Cold flow calibration tests serve as a fundamental method to assess flow resistance and to evaluate qualitatively the characteristics of injected propellant streams [32]. The experimentally determined flow resistance is then compared with computational predictions to establish the inlet pressure requirements needed to achieve the desired flow rates under the specified operating conditions of the propellant injector [33]. Cold flow testing will be conducted using ASRI’s in-house cold-flow test stand, seen in Figure 9, which is designed to facilitate the precise characterisation of fluid systems with multiple outlets. A simplified piping and instrumentation diagram illustrating the test stand’s configuration and operational flow is also presented in Figure 9.
+Figure 9: ASRI cold-flow test stand photograph and P&ID
+Ejector
+Purge valve
+Run valve
+Compressor
+Mass flow meter
+Isolation valve
+Main tank
+Fill valve
+Pressurant tank
+Pressure regulator
+Vent valves
+Relief valve Charge valve
+
+
+348
+In this setup, the inlet manifold of the test chamber/nozzle assembly is connected to the test stand, allowing controlled delivery of the analogue fluid. At the outlet, a collector system is installed to capture the discharge volume from each cooling channel individually. The collected volumes are then weighed to determine the mass flow rate through each channel. This gravimetric method provides accurate measurements of mean mass flow rates, which are essential to validate the fluid dynamic performance of the cooling channels under test conditions.
+6. CONCLUSION AND FUTURE WORK
+This paper has detailed the theory, procedure, and preliminary results of the hydrodynamic and thermal analysis of the cooling channels in an additively manufactured and regeneratively cooled thrust chamber, which is being developed by ASRI at UKZN. The benefits of AM in aerospace were discussed, as well as its suitability for manufacturing regeneratively cooled thrust chambers. The problems related to AM surface roughness were presented, detailing different roughness parameters.
+Analytical methods were used to calculate heat transfer coefficients, temperatures, and pressure drop using ASRI’s inhouse code. These results showed a maximum wall temperature well below the maximum service temperature and a pressure drop of around 2% along the cooling channel. A numerical model using CFD was developed, and preliminary results were presented and compared with those of the analytical methods. This comparison found that the CFD model predicted higher pressure drops in all three roughness conditions, which aligns with the limitations of the Colebrook equation used in the analytical calculations. It was found that the CFD model predicted significantly lower fluid outlet temperatures, indicating that it was underpredicting the heat transfer caused by surface roughness. The authors of this article hypothesised that the CFD model was not accounting for the increased surface area produced by surface roughness. The experimental setup that will be used for future experiments was then presented, as well as the procedure to determine pressure drop and surface roughness.
+Future work includes further analytical calculations using multiple correlations to determine the optimal one for the high roughness flow in cooling channels. The numerical model will be improved further by accounting for the increase in surface area because of roughness, thereby improving heat transfer predictions. Experimental data will then be collected when the test article has been successfully manufactured, such as pressure drop and surface roughness, and will be used to refine and validate the CFD model. Finally, the analytical, experimental, and numerical results will be compared to determine the best method to predict the hydrodynamic and thermal behaviour of AM cooling channels.
+ACKNOWLEDGEMENTS
+The authors would like to thank and acknowledge the Council for Scientific and Industrial Research (CSIR) for generously funding this research through the Collaborative Programme in Additive Manufacturing (CPAM) grant.
+The data used for the normalised results in the analytical and numerical section of this paper is not publicly available owing to its sensitive nature and ASRI policy.
+All the authors contributed to the conception of this paper. Jean Pitot provided the supervisory and administrative contributions this work needed. Contributions were made by Glen Snedden to the numerical section. The analytical and experimental work was completed by both Nino Wunderlin and Mathew Reynolds. The remainder of the work was compiled by Mathew Reynolds. All the authors reviewed and edited previous drafts of this paper.
+REFERENCES
+[1] A. Acket-Goemaere, R. Brukardt, J. Klempner, A. Sierra, and B. Stokes, “Space: The $1.8 trillion opportunity for global economic growth,” McKinsey & Company, 2024. [Online]. Available: https://www.mckinsey.com/industries/aerospace-and-defense/our-insights/space-the-1-point-8trillion-dollar-opportunity-for-global-economic-growth [Accessed 12 January 2025]. [2] Spacehubs Africa, “South Africa,” Spacehubs Africa, 2024. [Online]. Available: https://spacehubs.africa/south-africa [Accessed 13 January 2025].
+
+
+349
+[3] S. M. Yusuf, S. Cutler, and N. Gao, “Review: The impact of metal additive manufacturing on the aerospace industry,” Metals, vol. 9, no. 12, 1286, 2019. https://doi.org/10.3390/met9121286
+[4] P. R. Gradl, O. R. Mireles, C. S. Protz, and C. P. Garcia, Metal additive manufacturing. Georgia: AIAA, 2022. https://doi.org/10.2514/5.9781624106279.0000.0000 [5] C. Tian and A. Moridi, “In Situ Reactive Printing of Aluminum Matrix Composite with Ultra-High Volume Fraction Reinforcement,” 3D Printing and Additive Manufacturing, vol. 11, no. 2, pp. e709e717, Apr. 2024. https://doi.org/10.1089/3dp.2022.0152
+[6] P. Gradl, A. Park, O. R. Mireles, M. Garcia, R. Wilkerson and C. Mckinney, “Robust metal additive manufacturing process selection and development for aerospace components,” Journal of Materials Engineering and Performance, vol. 31, pp. 6013-6044, 2022. http://dx.doi.org/10.1007/s11665-02206850-0
+[7] T. Santhosh and T. Kuzhiveli, “Heat transfer aspects and analysis of regenerative cooling in semicryogenic thrust chamber with fixed and variable aspect ratio coolant channels,” in IOP Conference Series: Materials Science and Engineering 502, Chicago, 2019. http://dx.doi.org/10.1088/1757899X/502/1/012066 [8] C. Shao-Hsien and K.-T. Tsai, “Predictive analysis for the thermal diffusion of the plasma-assisted machining of superalloy inconel-718 based on exponential smoothing,” Advances in Materials Science and Engineering, vol. 2018, 9532394, 2018. http://dx.doi.org/10.1155/2018/9532394
+[9] NASA, Liquid rocket engine fluid-cooled combustion chambers. Springfield, VA: National Technical Information Service, 1972. https://ntrs.nasa.gov/citations/19730022965 [10] J. C. Snyder and K. A. Thole, “Understanding laser powder bed fusion surface roughness,” Journal of Manufacturing Science and Engineering. Transactions of the ASME, vol. 142, no. 7, 071003, 2020. https://doi.org/10.1115/1.4046504 [11] K. A. Flack, M. P. Schultz, and J. M. Barros, “Skin friction measurements of systematically-varied roughness: Probing the role of roughness amplitude and skewness, Flow, Turbulence and Combustion, vol. 104, pp. 317-329, 2019. https://doi.org/10.1007/s10494-019-00077-1 [12] K. A. Flack, M. P. Schultz, and R. J. Volino, “The effect of a systematic change in surface roughness skewness on turbulence and drag,” International Journal of Heat and Fluid Flow, vol. 85, 108669, 2020. https://doi.org/10.1016/j.ijheatfluidflow.2020.108669 [13] J. Gockel, L. Sheridan, B. Koerper, and B. Whip, “The influence of additive manufacturing processing parameters on surface roughness and fatigue life,” International Journal of Fatigue, vol. 124, pp. 380-388, 2019. https://doi.org/10.1016/j.ijfatigue.2019.03.025 [14] J. Nikuradse, Laws of flow in rough pipes, National Advisory Committee for Aeronautics, NACA-TM1292, 1933. http://hdl.handle.net/2060/19930093938
+[15] C. F. Colebrook and C. M. White, “Experiments with fluid friction in roughened pipes,” in Proceedings of the Royal Society A, vol. 161, pp. 367-381, 1937. https://doi.org/ 10.1098/rspa.1937.0150 [16] C. F. Colebrook, “Turbulent flow in pipes, with particular reference to the transition region between the smooth and rough pipe laws,” Journal of the Institute of Civil Engineers, vol. 11, no. 4, pp. 133-156, 1939. http://dx.doi.org/10.1680/ijoti.1939.13150
+[17] S. G. Kandlikar, D. Schmitt, A. L. Carrano, and J. B. Taylor, “Characterization of surface roughness effects on pressure drop in single-phase flow in mini/micro channels,” in Transport Phenomena in Micro and NanoDevices. Engineering Conference International (ECI), Kona Coast, (2004). https://www.researchgate.net/publication/314096729_Characterization_of_Surface_Roughness_Ef fects_on_Pressure_Drop_in_Single-phase_Flow_in_MiniMicro_Channels_Keynote [18] C. Stimpson, J. Snyder, K. Thole, and D. Mongillo, “Scaling roughness effects on flow and heat transfer for additively manufactured channels,” Journal of Turbomachinery, vol. 139, no. 2, 021003, 2017. https://doi.org/10.1115/1.4034555 [19] T. Adams, C. Grant and H. Watson, “A simple algorithm to relate measured surface roughness to equivalent sand-grain roughness,” International Journal of Mechanical Engineering and Mechatronics, vol. 1, no. 2, pp. 66-71, 2012. http://dx.doi.org/10.11159/ijmem.2012.008 [20] F. W. Dittus and L. M. Boelter, “Heat transfer in automobile radiators of the tubular type, University of California Engineering Publication, vol. 2, no. 13, pp. 443-462, 1930. https://ci.nii.ac.jp/naid/10020941079 [21] C. Stimpson, J. Snyder, K. Thole and D. Mongillo, “Roughness effects on flow and heat transfer for additively manufactured channels,” Journal of Turbomachinery, vol. 138, no. 5, 051008, 2016. https://doi.org/10.1115/1.4032167 [22] J. H. Chen, K. W. Wu, L. M. Tam, and A. J. Ghajar, “Experimental investigation of heat transfer and pressure drop characteristics for vertical downflow using traditional and 3d-printed mini tubes,” Journal of Enhanced Heat Transfer, vol. 30, no. 4, pp. 69-82, 2023. http://dx.doi.org/10.1615/JEnhHeatTransf.2023046983
+
+
+350
+[23] L. Hernandez, R. Palacios, D. Ortega, J. Adams, L. Bugarin, M. M. Rahman, and A. Choudhuri, “The effect of surface roughness on LCH4 boiling heat transfer performance of conventionally and additively manufactured rocket engine regenerative cooling channels,” in AIAA Propulsion and Energy Forum and Exposition, Indianapolis, 2019. http://dx.doi.org/10.2514/6.2019-4363
+[24] J. Chen, Y. Yang, L. Lam, M. Zeng, T. Ma, L. Tam, and A. Ghajar, “Experimental investigation of heat transfer and pressure drop characteristics for vertical downflow using traditional and 3Dprinted mini tubes,” Journal of Enhanced Heat Transfer, vol. 30, no. 4, pp. 69-82, 2023. http://dx.doi.org/10.1615/JEnhHeatTransf.2023046983
+[25] C. Lei, X. Ying, H. Huaizhi, Y. Ruitian, and L. Wen, “Experimental study on flow and heat transfer of hydrocarbon fuels in additive manufacturing channels at supercritical pressure,” J. of Beij. Univ. of Aero. and Astro., vol. 51, no. 3, pp. 881-891, 2025. https://doi.org/10.13700/j.bh.10015965.2023.0120 [26] V. Gnielinski, “New equations for heat and mass transfer in turbulent pipe and channel flow,” International Chemical Engineering, vol. 16, no. 2, pp. 359-368, 1976. https://ui.adsabs.harvard.edu/abs/1975STIA...7522028G/abstract
+[27] M. F. Taylor, “A method of predicting heat transfer coefficients in the cooling passages of NERVA and Phoebus-2 rocket nozzles,” in Fourth Joint Propulsion Specialists Conference, Cleveland, 1968. https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/19680014393.pdf
+[28] D. R. Bartz, A simple equation for rapid estimation of rocket nozzle convective. Jet Propulsion Laboratory, Pasadena, 1957. https://cir.nii.ac.jp/crid/1570009750450444928 [29] W. Luo, X. Tang, H. Han and B. Xie, “Experiment and simulation of supercritical hydrocarbon fuel in additively manufacture elliptical tubes,” Applied Thermal Engineering, vol. 258, Part C, 124723, 2025. https://doi.org/10.1016/j.applthermaleng.024.124723
+[30] ANSYS, 4.18.5. Wall roughness effects in turbulent wall-bounded flows. [Online]. Available: https://ansyshelp.ansys.com/public/account/secured? returnurl=/Views/Secured/corp/v252/en/flu_th/x1-5720008.164.html [Accessed 15 August 2025]. [31] P. Rao, A. Riensche, P. Carriere, Z. Smoqi, A. Menendez, P. Frigola, S. Kutsaev, A. Araujo, and N. G. Matavalam, “Application of hybrid laser powder bed fusion additive manufacturing to microwave radio frequency quarter wave cavity resonators,” International Journal of Advanced Manufacturing Technology, vol. 124, no. 2023, pp. 619-632, 2022. https://doi.org/10.1007/s00170022-10547-y
+[32] D. K. Huzel and D. H. Huang, Modern engineering for design of liquid-propellant rocket engines. Washington, DC: AIAA, 1992. https://doi.org/10.2514/5.9781600866197.0000.0000
+[33] R. Cooper, “Design, manufacture and testing of a liquid rocket engine injector test rig,” Master’s thesis, University of KwaZulu-Natal, Durban, 2020.

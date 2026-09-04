@@ -1,0 +1,441 @@
+Skip to content
+1
+/
+15
+search
+group_add
+more_horiz
+get_app
+DETAILS
+RELATIONS
+Proceedings of the Royal Society of London. Series A - Mathematical and Physical Sciences
+Volume 161, Issue 906
+Aug 1937
+ARTICLE
+Experiments with fluid friction in roughened pipes
+View article page
+C. F. Colebrook (C. F. Colebrook), C. M. White (C. M. White), and Geoffrey Ingram Taylor (G. I. Taylor, F. R. S.)
+...See all authors
+format_quote
+CITE
+Scanned images copyright © 2017, Royal Society
+https://doi.org/10.1098/rspa.1937.0150
+open_in_new
+Publisher
+The Royal Society
+ISSN
+0080-4630
+eISSN
+2053-9169
+Received
+February 15, 1937
+Published in issue
+August 3, 1937
+Online
+January 1, 1997
+Pages
+367 - 381
+Abstract
+Nikuradse (1933; Prandtl 1933), experimenting with pipes roughened internally by a uniform layer of sand, found that such pipes were indistinguishable from perfectly smooth ones, provided that the pressure gradient was less than that given by pV*k/μ = 4, where V = √(T0/p), T0 = shear stress at wall, p = density of fluid, μ, —- viscosity of fluid, k = diameter of roughness grains. With lesser flows neither the resistance nor the distribution of velocity was measurably influenced by the size of the roughness grains, and the observed resistance law was satisfactorily of the type required by the Kármán-Prandtl theory for smooth surfaces. This law is usually expressed in the following form:
+B
+ 
+y
+ 
+C.
+ 
+F.
+ 
+C
+o l e b r o o k
+ 
+a n d
+ 
+C.
+ 
+M.
+ 
+W
+ 
+h it e
+
+
+Imperial College, London
+
+
+Experiments with Fluid Friction in Roughened Pipes
+
+
+mmunicated by G. I. Taylor,
+ 
+F
+.
+R
+— Received
+ 
+15
+ 
+February
+ 
+1937
+)
+
+
+Nikuradse (1933; Prandtl
+ 
+1933), experimenting with pipes roughened
+
+
+internally by a uniform layer of sand, found that such pipes were indis
+
+
+tinguishable
+ 
+from
+ 
+perfectly
+ 
+smooth
+ 
+ones,
+ 
+provided
+ 
+that
+ 
+the
+ 
+pressure
+
+
+gradient was less than that given by
+
+
+where
+ 
+V* —
+ 
+\KTolp)>
+ 
+t
+0 = shear stress at wall,
+ 
+p
+ 
+= density of fluid, //, —
+- vis
+
+
+cosity of fluid,
+ 
+k
+= diameter of roughness grains. With lesser flows ne
+
+
+the resistance nor the distribution of velocity was measurably influenced
+
+
+by the size of the roughness grains, and the observed resistance law was
+
+
+satisfactorily of the type required by the
+ 
+Karman-Prandtl theory for
+
+
+smooth surfaces. This law is usually expressed in the following form:
+
+
+- t
+ 
+= 2 1 o g ^ A - 0 - 8 ,
+ 
+(1)
+
+
+where Ais the coefficient of friction in the formula
+ 
+= A— , and
+ 
+U
+ 
+= mean
+
+
+2
+gd
+
+
+velocity,
+ 
+d
+ 
+= pipe diameter, and the “ 2” and the “ 0*8” are experimentally
+
+
+determined coefficients relating to turbulence and boundary conditions
+
+
+respectively.
+ 
+q-
+
+
+Rewriting (1) to express the resistance coefficient
+ 
+~ ~ 2
+ 
+as a function of
+
+
+the Reynolds Number
+ 
+we get
+
+
+F
+
+
+To
+
+
+pU
+2
+ 
+i(2 1 o g l‘
+ 
+,
+pV*d
+ 
+- 2
+
+
+(
+ 
+2
+)
+
+
+With much greater pressure gradients, Nikuradse found that fully rough
+
+
+conditions had developed provided
+
+
+pV*k
+ 
+>
+ 
+60
+,
+
+
+367
+ 
+]
+368
+ 
+C. F. Colebrook and C. M. White
+
+
+and the friction coefficient
+ 
+T0/ p U 2
+ 
+was then constant for any one pipe with
+
+
+any given surface. The type of law required by the theory was found, viz.
+
+
+1
+
+
+8
+
+
+- 2
+
+
+9
+ 
+(
+3
+)
+
+
+in which the resistance is seen to be independent of viscosity which is in
+
+
+effect replaced by grain size
+ 
+k.
+
+
+pV k
+
+
+Thus a pipe may be regarded as perfectly smooth when —— is less than 4
+
+
+or completely rough when
+ 
+pVJc
+
+
+M
+>
+ 
+exceeds
+ 
+60
+, and the appropriate resistance
+
+
+laws are given by (2) and (
+3
+) respectively. Between these values, however,
+
+
+i.e. within the range
+
+
+<
+ 
+60
+,
+
+
+flow in Nikuradse’s pipes is in a transitional state in which both viscosity
+
+
+and grain size influence the resistance. In this transition range the resistance
+
+
+law is necessarily more complicated since both
+ 
+and
+ 
+k
+ 
+are involved.
+
+
+The two simpler particular cases (2) and (
+3
+), when generalized as
+
+
+pU
+2
+ 
+8
+
+
+l / ft1
+ 
+0
+-
+113d\ - 2
+
+
+2 Iog —
+ 
+)
+ 
+,
+ 
+(
+4
+)
+
+
+are seen as the result of integrating the equation
+
+
+du
+ 
+2*5
+ 
+/
+t
+0
+
+
+dV ~
+ 
+V
+V
+
+
+mits
+ 
+y
+=
+ 
+ylf
+ 
+u =
+0,
+
+
+and
+ 
+y
+ 
+=
+ 
+0
+-
+225
+r,f
+ 
+=
+
+
+Here the lower limit
+ 
+y
+1
+ 
+is the distance from the wall of an arbitrarily selected
+
+
+point where the velocity is assumed zero. In equation (
+3
+) the lower limit
+
+
+conforms with the experimental value
+
+
+y±
+ 
+=
+
+
+the velocity being taken as zero at a distance
+ 
+yx
+ 
+equal to
+ 
+1/33
+ 
+of the grain
+
+
+diameter, measured from the centre line of the grains inwards towards the
+
+
+t
+ 
+T he num erical facto r 0-225 can be o b tain ed b y a sim ple in teg ratio n across th e
+
+
+pipe an d is p ractically in d ep en d en t o f
+ 
+y j r
+ 
+w hen th is is sm all.
+ 
+radius, d /2.

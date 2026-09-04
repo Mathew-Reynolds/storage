@@ -1,0 +1,256 @@
+Understanding Flow Characteristics in Metal Additive Manufacturing
+Carl R. Hartsfield, Ph.D., A.M.ASCE1; Travis E. Shelton2; Gregory R. Cobb3; Ryan A. Kemnitz, Ph.D.4; and Joseph Weber5
+Abstract: In fluid flow, the frictional effects from interior surfaces of flow components create pressure loss across the surface. Understanding this inherent pressure loss due to friction and other phenomena is important when designing a flow system. For conventional manufacturing, friction loss has been empirically studied and is well known in the engineering community. However, newer manufacturing techniques, such as laser powder bed fusion (LPBF), an additive manufacturing technique, need to be understood. The inherent flow conditions resulting from the additive processes were studied. Test samples were printed with the flow path oriented in the vertical direction with different channel diameters to characterize the inherent fundamental flow properties of the process. Moody diagrams were replicated for a greater understanding of possibilities and shortfalls when implementing LPBF into design applications. Experimental flow testing revealed that greater effective sand grain roughness resulted from this process when compared to conventional machining methods. This roughness did not correlate well to the average roughness measured with a laser scanning microscope but was consistent with the average particle size of the powder metal feedstock. DOI: 10.1061/(ASCE)AS.1943-5525.0001325. This work is made available under the terms of the Creative Commons Attribution 4.0 International license, https://creativecommons.org/licenses/by/4.0/.
+Author keywords: Surface roughness; Additive manufacturing; Pressure loss; Sand grain.
+Introduction
+Additive manufacturing (AM) has become a profound fabrication technique with remarkable flexibility. The localized processing of AM offers the ability to print small complex passages (diameter < 0.25 mm) within structures. This microscale manufacturability has implications for the design and fabrication of flow devices. Devices such as injectors, nozzles, and heat exchangers are capable of being printed using AM (Petrovic et al. 2011; Anilli et al. 2018; Townsend et al. 2016; Anderson et al. 2020; Waters 2018; Steitz et al. 2013; Durkee et al. 2020; Tommila et al. 2021) while reducing part and labor complexity. SpaceX has experimented with printing thrust chambers and flown printed oxidizer valve housings to reduce lead time and expense (Howell 2014). Large flow structures like this would be less sensitive to the tens of micrometer-scale
+roughness expected from AM (Tommila et al. 2021), simply by virtue of their large size, supporting flow for 500 kN of thrust and up. However, small-scale flow devices from this process alleviate constraints that conventional manufacturing can pose. Finer features with more complex geometry have been realized through AM. In some cases, the process has shown significant cost reductions relative to traditional manufacturing. One study found that the cost of printed rocket nozzles was approximately 25% of the traditionally manufactured nozzles’ cost (Tommila 2017) due to savings in labor. Inconel 718 (IN 718, American Special Metals Corporation, Miami) is a material capable of being processed by AM. It is a Ni-Fe superalloy that has excellent corrosion resistance (Thomas et al. 2006) and microstructure stability (Sabelkin et al. 2019) that make it an excellent material for pipe flow applications. Many studies have reported on the basic material properties; however, no overarching analysis and design projections of the fundamental flow regimes have been fully reported. Manufacturing properties, such as surface roughness, have been studied, and the results have shown high average surface roughness (Ra ≥ 7 μm) to be inherent to the AM process (Shelton et al. 2020). Printed metal, specifically using laser powder bed fusion (LPBF), lacks the smooth, consistent surface produced by many traditional, subtractive techniques. Conventionally, Moody (1944) diagrams were produced to forecast pipe flow pressure losses based on empirical data. To conclude this, an effective sand-grain roughness is assigned to the flow path surface based on empirical data. Drawn-Over-Mandrel (DOM) tubing is a high standard for smoothness in flow applications and commonly has a sand-grain surface roughness of 1.5 μm (Bergman et al. 2011). Sand-grain roughness effectively assumes a surface made up of many identical diameters of tangent spheres, in which the roughness dimension is the diameter of those spheres (Adams et al. 2012). Printed metal has a finish far from a uniform sand-grain roughness, with larger protrusions projecting from a relatively smooth base.
+1Assistant Professor, Dept. of Aeronautics and Astronautics, Air Force Institute of Technology, 2950 Hobson Way, Wright Patterson AFB, OH 45434 (corresponding author). ORCID: https://orcid.org/0000-0002 -6224-7127. Email: carl.hartsfield@afit.edu 2Research Engineer, Dept. of Aeronautics and Astronautics, Air Force Institute of Technology, 2950 Hobson Way, Wright Patterson AFB, OH 45434. Email: travis.shelton@afit.edu 3Research Engineer, Dept. of Aeronautics and Astronautics, Air Force Institute of Technology, 2950 Hobson Way, Wright Patterson AFB, OH 45434. Email: gregory.cobb@afit.edu 4Assistant Professor, Dept. of Aeronautics and Astronautics, Air Force Institute of Technology, 2950 Hobson Way, Wright Patterson AFB, OH 45434. Email: ryan.kemnitz@afit.edu 5ORISE Student Research Fellow, Dept. of Aeronautics and Astronautics, Air Force Institute of Technology, 2950 Hobson Way, Wright Patterson AFB, OH 45434. Email: joseph.weber.ctr@afit.edu Note. This manuscript was submitted on February 11, 2021; approved on May 7, 2021; published online on August 5, 2021. Discussion period open until January 5, 2022; separate discussions must be submitted for individual papers. This paper is part of the Journal of Aerospace Engineering, © ASCE, ISSN 0893-1321.
+© ASCE 04021082-1 J. Aerosp. Eng.
+J. Aerosp. Eng., 2021, 34(6): 04021082
+This work is made available under the terms of the Creative Commons Attribution 4.0 International license.
+
+
+Understanding the underlying effect of this modern manufacturing technique and the associated surface roughness requires studying with a perspective toward applications. Adams et al. (2012) developed a simple method of estimating equivalent sand grain roughness based on the arithmetic average surface roughness, Ra, which is the average of the absolute deflection from the mean profile of a surface. The result was a constant (5.683) applied to the Ra based on calculations derived from many vector paths taken across an array of equally sized spheres arranged in a hexagonal pattern. This arrangement corresponds to the ideal sand grain configuration. According to this method, the printing process yields an estimated sand grain roughness nearing 40 μm; this roughness is in the range of commercial steel tubing (46 μm, presumably hot rolled, welded seam tubing or similar) values commonly used for the calculation of friction factors and pressure losses in flow devices (Bergman et al. 2011). However, previous research by Tommila et al. (2021) indicates that these values may not be accurate in reflecting the actual effective roughness that should be used in design predictions. Their work on additively manufactured rocket nozzles found that loss predictions using this methodology were well short of the experimental losses experienced, although some of these losses were due to compressibility effects, likely including shocks within the nozzle (Tommila et al. 2021). Some difference was expected, as the Adams et al. (2012) formula was based on average roughness for calculating the sand-grain texture. High surface roughness coupled with small fluid passages leads to extremely high-pressure losses with low flow rates. This research was performed to experimentally determine the equivalent sandgrain roughness and associated friction factors when evaluating AM parts, specifically those manufactured of IN 718 using LPBF. In this study, the fundamental flow characteristics within AM are vital when designing with this newer manufacturing technique. Empirical data must be formed to understand all the impacts on fluid mechanics that AM imposes on the design process. From this research, it is expected that empirical flow data will more accurately represent equivalent or effective sand grain roughness for AM parts and scalability.
+Materials and Methodology
+Fluid Flow Analysis Calculations
+This work focuses on the roughness impacts of small printed passages. The analysis approach can be put into perspective with the Moody diagram and associated equations (Bergman et al. 2011; White 2006). Pressure drop is the result of friction during fluid flow in a length of a pipe. The pressure drop in a pipe can be derived by the Darcy-Weisbach equation (assuming incompressible flow, constant cross-section, and constant properties), as defined in Eq. (1)
+Δp 1⁄4 −
+Z p2
+p1
+dp 1⁄4 f ρu2m
+2DH
+Z x2
+x1
+dx 1⁄4 f ρu2m
+2DH
+L ð1Þ
+where L = length of pipe; DH = diameter; ρ = density; um = velocity; and f = friction factor. From this, a large pressure drop would be expected from the following variables: a long pipe (L), small diameter (DH), high density (ρ), high velocity (um), or high friction factor (f). Making mathematical substitutions, a suitable derivation for experimental measurements is designated in Eq. (2)
+Δp 1⁄4 f ρ
+2DH
+4m ̇ ρπD2H
+2
+L 1⁄4 f 8m ̇ 2
+ρπ2D5H
+L ð2Þ
+The mass flow rate,  ̇m, in this equation can be measured or controlled, while the friction factor, f, must be calculated.
+Experimental determination of the friction factor, f, generally uses measured pressure drop and mass flow to calculate a friction factor. In 1944, Moody published a diagram (Moody 1944) showing the general trends between the friction factor and the Reynolds number. The chart shows the dependence of the Darcy friction factor on the flow Reynolds number (ReD) and the relative roughness of the inside surface of the pipe (ε=D). A low Reynolds number leads to laminar flow, in which the Darcy friction factor is independent of the roughness and calculated by Eq. (3)
+f 1⁄4 64
+ReD
+ð3Þ
+A transitional flow (2,000 < ReD < 10,000) is significantly less affected by roughness than higher Reynolds number flows. A higher Reynolds number leads to turbulent flow, where the Darcy friction factor is significantly impacted by the relative roughness. It also leads to a region dominated by roughness, referred to as fully rough, which is characterized by a near absence of the friction factor dependence on the Reynolds number (Bergman et al. 2011). Moody’s work was based on the experimental data, while other researchers, including Colebrook and Haaland, produced analytic functions to fit the Moody data. Haaland’s formula [Eq. (4)] (White 2006) is explicit if the Reynolds number and relative roughness are known
+p1ffifffiffi ≈ −1.8log10
+6.9 ReD
+þ ε=D
+3.7
+1.11
+ð4Þ
+This makes Haaland’s formula useful for the prediction of a friction factor in most design problems. On the other hand, the friction factor is determined implicitly using Colebrook’s formula [Eq. (5)] (White 2006). Thus, if the Reynolds number and relative roughness are known, an iterative process is required to find the appropriate friction factor. While Colebrook’s formula is more time-intensive, this formulation is slightly more accurate to the experimental data
+p1ffifffiffi ≈ −2.0log10
+ε=D
+3.7 þ 2.51
+ReD
+pffifffiffi ð5Þ
+The increased accuracy of the Colebrook formulation is desirable for this research and was utilized in this study. The Colebrook formula can be rearranged to deliver an expression for relative roughness explicitly in terms of the Reynolds number and friction factor [Eq. (6)]
+ε
+D 1⁄4 3.7 10−ð1=2.0pffifffiÞ − 2.51
+ReD
+pffifffiffi ð6Þ
+Defining an appropriate Reynolds number is necessary for defining the flow characteristics. For internal flows, the convention is to use the Reynolds number based on hydraulic diameter, ReD, as calculated in Eq. (7)
+ReD 1⁄4 ρumDH
+μ 1⁄4 4m ̇
+ρπDH
+ð7Þ
+where DH = hydraulic diameter, which is the effective flow diameter seen by the fluid. For experimentation, the mass flow was determined and controlled while the hydraulic diameter was calculated as the viscosity of the fluid, and the temperature was known. The hydraulic diameter, DH, was calculated according to Eq. (8)
+DH 1⁄4 4Ac
+P ð8Þ
+© ASCE 04021082-2 J. Aerosp. Eng.
+J. Aerosp. Eng., 2021, 34(6): 04021082
+This work is made available under the terms of the Creative Commons Attribution 4.0 International license.
+
+
+where both the cross-sectional area, Ac, and the perimeter, P, are affected by significant roughness. A representation of sand grain roughness is shown in Fig. 1. First, the presence of significant roughness generally reduces the cross-sectional area. Geometrically, the area is reduced by the scalloping of the flow path edges, while the perimeter is also significantly increased. The most simplistic calculations have the perimeter increased by a factor of π=2, regardless of the size of the roughness. However, a significant contribution to the perimeter calculation is the very narrow gap between two adjacent and tangent spheres. When this void fills with fluid, there will not be significant flow through it as a result of viscous effects. To remove the gap from the calculation of the perimeter and, as a result, make the perimeter a function of the sand grain roughness size, a limiting minimum gap, δ, was assumed to be 2δ 1⁄4 2 μm (fillet area between circles). It was assumed that any gap smaller than this would not contribute to the flow area, especially for very small protrusions, such as that in DOM tubing (ε 1⁄4 1.5 μm). This assumption makes the perimeter very close to the smooth circle perimeter, while at higher roughness, the perimeter becomes much larger. From these assumptions, the cross-sectional area can be calculated
+Ac 1⁄4 π
+4 D2nom − π
+θ
+π−2
+2 R2SG ð9Þ
+and the perimeter of the tube
+φ 1⁄4 tan−1
+ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi
+RSGδ − δ2
+p
+RSG
+2 −δ
+!
+PA 1⁄4 2 2π
+θ
+RSG
+2
+π
+2 − θ − φ þ δ ð10Þ
+The sand grain roughness yields a significant impact on the hydraulic diameter. Twenty micrometers of sand grain roughness increases the calculated perimeter [Eq. (10)] and decreases the cross-sectional area [Eq. (9)], resulting in a calculated hydraulic diameter [Eq. (8)] that is only 83%–84% of the observed or measurable diameter for the smallest tubes assessed, while 1.5 μm of roughness (DOM tubing) yields a hydraulic diameter very close to the observed diameter. This reduction in hydraulic diameter works with the wall roughness to significantly affect the pressure drop in a small tube.
+Experimental Samples
+Thirty samples were processed on a GE Concept Laser (General Electric Additive, Cincinnati) M2 Cusing LPBF metal printer. All samples were synthesized from IN 718 powder (purchased from
+Powder Alloy Corporation, Loveland, Ohio) on Inconel build plates in a single print. Each printed sample had a 127 mm long flow section of a constant diameter. Fig. 2 shows the cross-sectional flow path of a printed sample. The fluid enters this section through a smooth contoured funnel (6 mm long) entrance at the input feed. External features of the printed tubes include a cylindrical base, printed 12.7 mm in diameter and then machined to a 1/4′′ (6.35 mm) National Pipe Thread to seal into a Swagelok T fitting (Swagelok, Solon, Ohio). Just above the cylindrical base is a hexagonal section printed on the exterior to provide easy installation into the fittings. Fig. 3 represents the 30 samples’ locations on the substrate during the print process. As seen, they are in a grid pattern inclined 15° counterclockwise. The samples were semirandomly distributed to minimize potential inside diameter effects with respect to position. Samples were printed in sets of five, each with six different inside diameters: 0.381 mm (0.015′′), 0.762 mm (0.030′′), 1.143 mm (0.045′′), 1.524 mm (0.060′′), 2.540 mm (0.100′′), and 3.175 mm (0.125′′). The range of inside diameters was selected to extend as low as the processing capability allowed and up to a maximum that would lead to velocities in the water feed tubing at less than half of the flow velocity in the printed samples to ensure that most of the gas feed pressure would reflect pressure drop in the printed sample. At the maximum, the pressure drop per length for the largest tubes would be at least five times higher than that of the inlet tubing. Individual part numbers shown in Fig. 3 consist of the nominal inside diameter in thousandths of an inch, followed by an index (1–5) of parts within that nominal size. The 381 μm (0.015′′) ID tubes were printed and tested; however, it was found that their flow rates were extremely low. The pressure sensor recording was saturated after approximately 10 min of recording, and well over one-half million data points were recorded with less than 1 g of fluid exiting the system. The low total mass of fluid through the tube, coupled with an accuracy of 0.1 g for the total mass measurement, leads to very high uncertainty in these samples’ flow rate calculations. The flow rate uncertainty generated high uncertainty in both the friction
+Fig. 1. (Color) Internal tube geometry showing sand grain roughness impact (θ is a measure of the angular extent of a sand grain particle, while rnom is the nominal radius of the tube or pipe).
+Fig. 2. Representative geometry of a printed sample.
+Fig. 3. Distribution of printed tubes on a build plate.
+© ASCE 04021082-3 J. Aerosp. Eng.
+J. Aerosp. Eng., 2021, 34(6): 04021082
+This work is made available under the terms of the Creative Commons Attribution 4.0 International license.
+
+
+factor and roughness calculations. As a result, those results are not presented in this study.
+Experiment Setup
+The experimental setup consists of a pressurized inert gas source linked to a water tank through a regulator (Fig. 4). The water tank is partially filled with ice before it is filled with water to maintain an approximately 0°C temperature. This setup allows the flow through the printed tubes to be a known state of density and viscosity. The water tank is pressurized from the top and has an outflow feed from the bottom. The outflow goes through another valve to a Swagelok T fitting. The specimens are on the direct path, and a pressure sensor is on the cross path. The pressure sensor monitors the gauge pressure loss across the printed specimens. The printed tube flows into an open reservoir. The mass change in the reservoir and the time of positive pressure are both measured to calculate the mean mass flow for the experiment. After each run, pressure readings (sampled at a rate of approximately 1 kHz), the total mass of water that passed through the system, the elapsed time, and the printed sample geometry were used to determine where the data converged using the following procedure: 1. Calculate the mean pressure drop during the test:
+Δp 1⁄4 1
+Δt
+Z t2
+t1
+Δpdt ð11Þ
+2. Calculate a mean mass flow rate during the test from the total mass and elapsed time:
+m ̄ ̇ 1⁄4 Δm=Δt ð12Þ
+3. Estimate an effective sand grain roughness and calculate the effective cross-sectional area, perimeter, and hydraulic diameter using Eqs. (13)–(15) (reprinted in this study):
+Ac 1⁄4 π
+4 D2nom − π
+θ
+π−2
+2 R2SG ð13Þ
+PA 1⁄4 2 2π
+θ
+RSG
+2
+π
+2 − θ − φ þ δ ð14Þ
+DH 1⁄4 4Ac
+P ð15Þ
+4. Calculate the effective friction factor during the test from the pressure drop and mass flow:
+f 1⁄4 ρπ2D5H
+8Lm ̇ 2 Δp ð16Þ
+5. Calculate the Reynolds number from Eq. (17) (reprinted in this study)
+ReD 1⁄4 4m ̇
+ρπDH
+ð17Þ
+6. Calculate effective relative roughness from Eq. (18) (reprinted in this study)
+ε
+D 1⁄4 3.7 10−ð1=2.0pffifffiÞ − 2.51
+ReD
+pffifffiffi ð18Þ
+7. Calculate a new effective sand-grain roughness from the relative roughness and tube hydraulic diameter. 8. Return to Step 3 with an updated sand-grain roughness estimate. Note that it proved necessary to artificially damp the oscillations in this process by only changing the Step 3 estimate by about 20% of the difference between that previous estimate and the Step 7 calculation. This led to convergence, defined as less than 1 nm of change in the sand grain roughness value, in less than 10 iterations in all evaluated cases.
+Results and Discussion
+Predicted Roughness
+A fully developed flow is important for this study. In turbulent flow, Bergman et al. (2011) indicate that a flow becomes turbulent above a length/diameter (L/D) ratio of 10. All samples in this study were the same length, resulting in the smallest sample having an L/D ratio of 333 and the largest diameter L/D as low as 40. The highest L/D (smallest diameter) tubes were expected to experience only laminar flow, while all other L/Ds would only experience turbulent flow. Table 1 shows the experimental sample geometries manufactured and the associated predicted flow characteristics, including the expected minimum and maximum Reynolds numbers. Both were based on expected performance with a nominal 40 μm of equivalent sand grain roughness. Calculations for minimum and maximum predicted Reynolds numbers were based on assumed pressure drops of 34 kPa (5 psi) and 1 MPa (150 psi), respectively. This assumed that all feed pressure was dropped in the printed tube samples and reflected minimum and maximum feed pressures that
+Fig. 4. (Color) (a) Schematic of the experimental setup with the pressurized tank forcing water through the experimental nozzle as seen in (b).
+Table 1. Predicted characteristics of test samples according to geometry
+Nominal diameter (mm) ðL=DÞmax
+Nominal relative roughness
+Predicted ReD (min)
+Predicted ReD (max)
+Roughness- ReD product (min)
+Roughness- ReD product (max)
+0.381 333 0.105 600 2,700 63 284 0.762 167 0.052 2,000 9,300 105 488 1.143 111 0.035 3,400 19,300 119 676 1.524 83 0.026 5,600 32,400 146 843 2.540 50 0.016 13,600 78,000 211 1,209 3.175 40 0.013 20,400 112,000 255 1,456
+© ASCE 04021082-4 J. Aerosp. Eng.
+J. Aerosp. Eng., 2021, 34(6): 04021082
+This work is made available under the terms of the Creative Commons Attribution 4.0 International license.
+
+
+are at the edge of what would be achievable with the hardware available. The minimum pressure of 5 psi, is absolutely the minimum readable value on the pressure regulator used. The water tank was rated for 1.45 MPa (210 psi) maximum pressure, and for safety purposes, no feed pressures were allowed in excess of about 2/3 of the maximum allowable pressure (0.97 MPa). The potentially achievable pressure range allows an approximately 5x variation in the Reynolds number, which generally covers the areas of curvature in the Moody diagram friction factor curves. According to White (2006), the product of the relative roughness and Reynolds number is an important analysis tool for correlating roughness to the friction factor. When this product is less than 10 (very smooth surfaces and/or very low Reynolds numbers), roughness is not important to the flow or pressure loss. This is the case for most relatively smooth walls at laminar (<2,000) Reynolds numbers. In comparison, if the product is more than 1,000 (very rough surfaces or very large Reynolds numbers), the roughness dominates, and the friction factor is largely independent of the Reynolds number. As shown in Table 1, several of these test samples were expected to approach the fully rough state within the given pressure and mass flow limitations, especially at higher feed pressures, higher mass flow rates, and Reynolds numbers. Observed roughness in excess of the preliminary estimates will only push further into the fully rough zone.
+Measured Geometries
+Figs. 5(a–f) presents representative optical images of the as-printed diameter for each sample size. Measurements were made on each sample as a circular overlay of the actual image. As seen in Fig. 5, the as-printed passages were highly circular. Fig. 6 illustrates the relative error of the as-printed to the asdesigned diameters for the five test articles in each size manufactured. As the nominal and actual diameter points show, on average, the samples are relatively close (<3% error) to the intended diameter. However, the absolute errors (between design diameter and actual diameter), plotted in gray, show variations within an average diameter (∼6% error). These variations are more prevalent at smaller diameters. The average diameter error could result in a variation of 11.5% (or greater) in the expected flow area for the smaller printed cross-sections. These errors do not show a significant dependence on size and are apparently caused by the resolution of the print process. The resolution is determined by the minimum layer height for the M2 cusing printer (20 μm), the mean powder diameter (approximately 35 μm), and the laser beam width (50 μm).
+Analysis of the Effective Roughness
+Fig. 7 shows the flow testing results of the Darcy friction factor with respect to the Reynolds number for a subset of samples. The experimental results follow analytic curves based on the mean relative roughness calculated. Empirically, these curves exhibit the same trends observed in Moody diagrams generated from flow testing traditionally manufactured tubes. The friction factor increases as a result of increasing the ε=D ratios. Also, within each ε=D ratio, the friction factor decreases as the Reynolds number increases. Similar results were seen for each set of samples and are, therefore, not presented. One item to note from the data is the variation in roughness between sample parts. A disproportional relative roughness was seen between geometric flow sizes. If the absolute roughness were similar in all samples, the relative roughness would decrease proportionally with the increasing diameter. This decrease would cause a shift from a higher friction factor at small diameters to a lower friction factor at larger diameters. Experimentally, this is not the case, as the 3,175-μm sample demonstrated only a slight decrease in the friction factor from the 1,524-μm sample, even though it is more than twice the diameter. This trend was present in every size sample, with variations exhibited in both diameter and roughness (Table 2) at each nominal tube size.
+Fig. 5. Optical images normal to the channel exit. These channels were
+measured with optical tools. Fig. 6. Experimentally measured sample diameters in relation to theoretically designed diameters.
+Fig. 7. Additively manufactured experimental pipe flow results on Moody diagram lines.
+© ASCE 04021082-5 J. Aerosp. Eng.
+J. Aerosp. Eng., 2021, 34(6): 04021082
+This work is made available under the terms of the Creative Commons Attribution 4.0 International license.
+
+
+Table 2 was constructed from experimental flow data, in which the average and standard deviation of the five samples with respect to the as-printed diameter and absolute sand grain roughness are shown. The mean sand grain roughness varied in range from 16.04 to 22.24 μm. The author’s previous research (Shelton et al. 2020) indicated that the mean sand grain roughness would be approximately 40 μm. However, these results are at least 40% less than predicted. Two observations were made that would account for this difference. First, the flow testing effective roughness was considerably lower than predicted. In this study, the sand grain roughness was about 40% of the estimate calculated at a comparable diameter, based on average roughness measurements from the previous research. There are two possible explanations for this rise: either the average surface roughness value used was not the right metric for the printed surface, or the characteristics of the roughness are such that the Adams, Grant, and Watson correlation [Eq. (1)] is not applicable. The Adams, Grant, and Watson correlation (Adams et al. 2012) tied sand grain roughness to the average roughness measured with a profilometer. Table 4 shows several roughness statistics measured for individual tubes of different diameters, as compared to the observed roughness derived from the friction factor based on pressure drop and mass flow data. There is no correlation between the observed roughness based on the friction factor and any of the standard roughness statistics, even when comparing data from the same part. Second, the variation in roughness within the five replicates of a given sample size is high. It will be shown that this is largely driven by the location of the part on the build plate. An individual sample’s roughness is likely affected by asymmetries within the build chamber affecting the purge flow of
+argon gas and, to a lesser degree, the loss of focus as the laser beam is scanned across the build area. The absence of any correlation between effective sand grain roughness, as measured, and any of the observable roughness characteristics for the sectioned tubes that were measured indicates that the high variability in roughness even between samples of the same nominal diameter is not the reason the observed roughness is much lower than the Adams, Grant, and Watson correlation [Eq. (1)] would predict (Adams et al. 2012).
+Measured Average Roughness
+The surface roughness was verified for multiple samples using a Zeiss laser scanning microscope (LSM) 700. Five of the test samples were sectioned lengthwise along the flow path using electrode discharge machining (EDM) and probed with the LSM to determine the interior surface’s roughness, as seen in Fig. 8. The effective sand grain roughness for these samples was closest to the mean value for their respective sets. The average roughness was measured at four locations axially along the tube and averaged to get a value for the sample. Visually, this characterization technique shows random protrusions from the metal powder adhered to the inner surface wall. They tend to be randomly distributed and occasionally form dense clusters. Overall, the flow passage is well defined. This data is summarized in Table 4. As shown, the average roughness ranges from 7.48 to 14.28 μm, while the effective sand grain roughness ranges from 15.87 to 21.24 μm. Visually and qualitatively, the apparent roughness of the samples tracked with the average roughness measured with the LSM. The 45-2 and 100-5 samples are visually smoother and about 1/2–2/3 the average roughness value of the other samples. The quantitative roughness results are tabulated in Table 3. As seen, the average roughness (Ra) is in the range of 7.48–14.28 μm, without showing a clear trend between tube IDs. The average roughness of the samples also does not strongly correlate with the effective sand grain roughness (ε) calculated from pressure drop in the tubes. Samples were also measured on different tangents of the exterior hexagonal section to measure a roughness independent of any surface curvature effects. Between the two result methods, there is no real trend relating to the average roughness and the effective sand grain roughness. These results indicate the average roughness has not captured the important surface effects on fluid flow from the additive process.
+Table 2. Summary of test samples and flow test results
+Nominal diameter (μm)
+Mean printed diameter (μm)
+COV for printed diameter (%)
+Mean sand grain roughness (μm)
+COV for sand grain roughness (%)
+762 756 1.97 16.04 22.22 1,143 1,144 2.22 17.23 48.12 1,524 1,547 2.37 18.64 32.27 2,540 2,565 2.99 17.54 19.32 3,175 3,258 0.87 22.24 22.95
+Fig. 8. (Color) Surface topography of the interior surface; particles distributed across the surface are present.
+© ASCE 04021082-6 J. Aerosp. Eng.
+J. Aerosp. Eng., 2021, 34(6): 04021082
+This work is made available under the terms of the Creative Commons Attribution 4.0 International license.
+
+
+There are several other standard roughness statistics listed in Table 4, which also show variations. These variations differed mostly in a scalar multiple from the measured average roughness, RSA, and, therefore, did not correspond well to the measured effective sand grain roughness. Based on the experimental measurements, there is little indication of a relationship between the effective sand grain and these statistical roughness values. In all of these cases, there is no relatively simple, monotonic functional relationship (i.e., linear or quadratic) to be drawn between the LSM measured roughness statistics and the effective sand grain roughness.
+Build Location
+Each build location was evaluated to understand its influence on creating spread in the data. Fig. 9 represents the roughness of the samples with respect to the build location. The roughness was a function of distance from a normal line at 37° from the vertical axis. The normal line passed through the lowest part in the array (part number 15-5), and its slope intersects the lower leftmost part in the print pattern. As shown in Fig. 9, there is a clear dependence on print position for effective roughness. One potential effect from this is the flow of inert (argon) gas across the build area (from right to left) to clear contaminants resulting from the laser melting and sintering process. The front edge (near 0.00 m) is near a smooth vertical wall, and the rising roughness is likely due to lower gas flow in the region. The back edge (near 0.25 m) has similar issues of flow, which is complicated by a presence of a cavity along the wall to allow a germanium lens for infrared imaging of the print process. This cavity could create a recirculation zone that adversely affects the argon flow across the print surface, leading to increased flow turbulence and roughness near this zone, slightly away from the wall (near the 0.2 m point). Even without the asymmetry of the window cavity, the parabolic distribution of roughness would be an expected feature due to corner flow effects on the print surface.
+After removing the dependence from the gas flow on the position along a linear axis from the data, a linear trend was revealed [Fig. 9(b)] with respect to the sample location from the radius of the center. Because the laser is steered about the build area by moving a mirror that is centered over the build plate at the top of the build chamber, the roughness depends on the radius from the nadir point below that mirror. As the beam moves further from the nadir point, the path length is longer, and the diffraction-limited beam size increases. In addition, any pointing angle error is magnified by the increased distance. Fig. 9(b) shows the distribution of points with radius from that center point. In this case, the best fit quadratic correlation was a straight line. The flow path diameter was then studied to understand its contribution to the effective sand grain roughness. Geometric sample diameters were evaluated to determine the laser processing influence on roughness. Due to the laser scan speed being held constant, the laser would take longer to make a full scan around a larger fluid channel relative to a smaller channel. This concept could potentially lead to different thermal gradients among samples during the additive process. Fig. 10 shows the variation of roughness after correcting for position along the 53° point from the horizontal axis and the radius from the center of the build plate. Statistically, no trend becomes apparent due to the channel size. Empirically, there is a potential dependence on the diameter, with larger diameters being slightly rougher. However, the statistical assessment showed that it was difficult to separate the distributions at different diameters. The distribution of roughness at the largest diameter could not be confidently separated from that of the smallest diameter, so any dependence on diameter is considered negligible.
+Table 4. Measured roughness parameters
+Nominal size (mm)
+Effective sand grain (μm)
+RSA
+(μm)
+RSQ
+(μm)
+RSZ
+(μm)
+RSV
+(μm)
+0.762 15.87 16.65 22.12 182.7 56.29 1.143 16.47 10.89 15.32 118.8 29.60 1.524 20.02 11.15 13.85 76.91 27.82 2.540 16.84 8.79 10.99 56.19 25.21 3.175 21.24 12.32 15.98 101.5 57.60
+Fig. 9. (a) Variation sand grain roughness for individual tubes with position; and (b) roughness variation with radius after subtraction of axis correction.
+Fig. 10. Effective sand grain roughness after correction for axis and radius.
+Table 3. Laser scanning microscope roughness for specific tubes with effective sand grain roughness
+Tube ID
+Average roughness (μm)
+Roughness standard deviation (μm)
+Effective sand grain roughness (μm)
+Sand grain roughness standard deviation (μm)
+30-3 14.28 2.03 15.87 1.11 45-2 8.05 1.08 16.47 0.86 60-2 13.53 2.53 20.02 0.69 100-5 7.48 0.28 16.84 0.46 125-1 12.33 1.67 21.24 0.62
+Note: Flat surface (exterior) values based on the average of all tubes. Interior values are based on a single sample of each size, which was selected because they were closest to the mean effective sand grain roughness for that tube size.
+© ASCE 04021082-7 J. Aerosp. Eng.
+J. Aerosp. Eng., 2021, 34(6): 04021082
+This work is made available under the terms of the Creative Commons Attribution 4.0 International license.
+
+
+Analysis from all contributions resulted in a mean linear axis dependency of 5.16 μm, a mean radius dependence of 3.41 μm, and a mean contribution from the remaining roughness of 10.23 μm. The sum of these three contributions is 18.80 μm. For a more conservative approach in design, a root-mean-square (RMS) value is desired for the entire build plate and results in 7.16 μm (mean 5.41 μm) for the axis dependence and 4.63 μm (mean 4.34 μm) for the radius contribution. The remaining RMS roughness for the samples, after correcting for axis and radial contributions, was 10.47 μm, resulting in a sum of RMS values of 22.26 μm. As mentioned, this is a conservative estimate of roughness and would consistently overestimate pressure losses. A more accurate estimate of the sum of the means across the entire plate would be 19.98 μm. However, this estimate has a much higher risk of underestimating the pressure drop. The constants for the correction quadratics and offsets can be found in the following equations. All Cartesian positions are measured relative to the front left corner of the build plate as it sits in the printer. The position on the axis is
+Laxis 1⁄4 ðx − 0.05mÞ cosð53°Þ þ ðy − 0.015mÞ sinð53°Þ ð19Þ
+The dependence due to a position along the axis is
+Δεaxis 1⁄4 1073La2xis − 129.42Laxis ðin μmÞ for Laxis < 0.182m
+ð20Þ
+Δεaxis 1⁄4 1073ð0.364 − LaxisÞ2 − 129.42ð0.364 − LaxisÞ ðin μmÞ
+for Laxis > 0.182m ð21Þ
+The radius from the center of the plate is
+R1⁄4
+ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi ðx − 0.125mÞ2 þ ðy − 0.125mÞ2
+q
+ð22Þ
+The dependence on the radius is
+Δεradius 1⁄4 44.46R ðR in m; Δε in μmÞ ð23Þ
+where Laxis = length along the inclined axis (m); x and y = positions on the build plate measured from the front, left corner of the build plate (m), with x in the left-right axis and y in the front-back axis; Δεaxis = incremental change in sand grain roughness associated with that axial position (μm); R = radius from the center of the plate (m); and Δεradius = incremental change in sand grain roughness associated with the radius from the center of the plate (μm). A final dependence study was conducted on the baseline roughness to the powder dimensions (without location). From processing, the powder at the surface was potentially not fully melted but sintered to the bulk sample while maintaining some of the basic packed powder shapes. Powder size characteristics, as measured by the manufacturer, were determined by sieving powder through different mesh sizes. An electron microscope image of a typical powder sample is shown in Fig. 11. Material certification data from the powder supplier, Powder Alloy Corporation, based on powder sieving through different size mesh screens in accordance with ASTM B214-16 standard (ASTM 2021), showed that the powder batch used for printing had 0.0% content greater than a #270 mesh size (53 μm particle size), 2.0% content greater than a #325 mesh size (44 μm particle size), and no content smaller than 15 μm (PAC 2019). Assuming a Gaussian distribution of powder such that the percentages round to the precision given on the specification (<0.05% powder over 53 μm, 1.95%–2.05% of powder between
+44 and 53 μm, and <0.05% of powder less than 15 μm), an estimation of the mean powder size range and the coefficient of variation of the powder size can be calculated. The mean powder diameter would be between 32.4 and 35.1 μm, with the associated coefficients of variation of 17.3% and 12.4%, respectively. These values result in less than 0.01% of the powder exceeding 53 μm in diameter but allow up to 0.05% below 15 μm. If the fraction below 15 μm is required not to exceed that above 53 μm, the range tightens considerably: 34.02–35.09 μm diameter with coefficients of variation between 12.4% and 14.4%. Using the middle of this smaller range as the nominal mean for the powder and calculating the associated standard deviation results in a mean of 34.56 μm and standard deviation of 4.63 μm, respectively, and a 13.4% coefficient of variation. This correlates to an effective sand grain roughness contribution due to the powder size being 29.6% of the mean powder size, while the standard deviation would be 49.2% of the powder standard deviation. There is a certain physical sense to this as the mean size of protrusions caused by the packed powder, which is at least somewhat melted together, would be less than the radius of the powder. While the variation would be reduced in magnitude, it might not be reduced as much as fully melted or nonpacked powder. Overall, this is a much better match to the observed data than the Adams et al. (2012) correlation based on the average roughness for this surface.
+Conclusions
+Flow designs incorporating additive manufacturing allow for unprecedented opportunities. Fundamental flow characteristics for additively manufactured tubes have not been fully characterized and, for that reason, were experimentally tested in this work. Testing showed the additive samples’ pipe flow behaves similarly to conventional pipe flow. The relative friction factor increased with an increasing ε=D ratio and behaved consistently to the Colebrook formulation for friction factor variation with the Reynolds number. This observation fundamentally holds true for the mechanics; however, the proportionality of how this ratio decreased relative to pipe sizes is more inconsistent. Each printed pipe has independent artifacts, with an inherent effective sand grain roughness, partially dependent on the position within the print location where it was manufactured. Even with variation, the effective sand grain roughness was consistently on the order of half the estimated mean powder size (46.4%–64.4%, with an average of 53.1%) for the IN 718 powder used in this study. This should provide a reasonable
+Fig. 11. Scanning electron microscope image of Inconel powder.
+© ASCE 04021082-8 J. Aerosp. Eng.
+J. Aerosp. Eng., 2021, 34(6): 04021082
+This work is made available under the terms of the Creative Commons Attribution 4.0 International license.
+
+
+estimate of effective sand grain surface roughness for those wishing to implement additively manufactured fluid paths into practical devices. It was also clear from laser scanning microscopy that traditional roughness statistics are not fully representative of the surface qualities resulting from LPBF additive manufacturing, and using those roughness estimates may dramatically overpredict pressure losses.
+Data Availability Statement
+Some or all data, models, or code that support the findings of this study are available from the corresponding author upon reasonable request.
+Acknowledgments
+The authors would like to thank the administration, laboratory technicians, and machine shop of the Air Force Institute of Technology and the Air Force Research Laboratory for their support throughout this research. This research was primarily funded by sponsors who have requested anonymity. Additionally, this research was supported in part by an appointment of the Student Research Participation Program at the US Air Force Institute of Technology administered with the Oak Ridge Institute for Science and Education through an interagency agreement between the US Department of Energy and USAFIT.
+Notation
+The following symbols are used in this paper: Ac = cross sectional area (m2); COV = coefficient of variation (dimensionless); D = diameter (m); DH = hydraulic diameter (m); f = Darcy friction factor (dimensionless); ID = inside diameter (m); L = tube length (m); Laxis = length along axis (m); m = mass (kg);  ̇m = mass flow (kg=s); P = perimeter (m); p = static pressure (Pa); Ra = average roughness (μm); RSG = radius of sand grain particles (μm); ReD = Reynolds number, based on diameter (dimensionless); r = radius (m); T = temperature (K); t = time (s); um = mean velocity (m=s); δ = limiting minimum gap width (μm); ε = absolute sand grain roughness (μm); μ = dynamic viscosity (Pa · s); π = 3.14159265:::; and ρ = density (kg=m3).
+References
+Adams, T., C. Grant, and H. Watson. 2012. “A simple algorthim to relate measured surface roughness to equivalent sand grain roughness.” Int. J. Mech. Eng. Mechatron. 1 (1): 66–71. https://doi.org/10.11159/ijmem .2012.008. Anderson, W. S., S. D. Heister, B. Kan, and C. Hartsfield. 2020. “Experimental study of a hypergolically ignited liquid bipropellant rotating detonation rocket engine.” J. Propul. Power 36 (6): 851–861. https:// doi.org/10.2514/1.B37666. Anilli, M., A. G. Demir, and B. Previtali. 2018. “Additive manufacturing of laser cutting nozzles by SLM: Processing, finishing and functional characterization.” Rapid Prototyping J. 24 (3): 562–583. https://doi.org/10 .1108/RPJ-05-2017-0106. ASTM. 2021. “Standard test method for sieve analysis of metal powders.” ASTM B214-16. West Conshohocke, PA: ASTM. Bergman, T. L., A. S. Lavine, F. P. Incropera, and D. P. Dewitt. 2011. Fundmentals of heat and mass transfer. 7th ed. Hoboken, NJ: Wiley.
+Durkee, M., C. McCain, A. Quinton, K. Stewart, L. Utley, and K. P. Rouser. 2020. “AIAA 2020-1122: Design and test of a small-scale, additivelymanufactured, liquid-cooled rocket nozzle.” In Proc., AIAA SciTech 2020 Forum. Orlando, FL: American Institute of Aeronautics and Astronautics. https://doi.org/10.2514/6.2020-1122. Howell, E. 2014. “SpaceX taking 3D printing to the final frontier.” Accessed April 19, 2021. https://www.space.com/26899-spacex-3d -printing-rocket-engines.html. Moody, L. 1944. “Friction factors for pipe flow.” Trans. Am. Soc. Mech. Eng. 66 (8): 671–678. PAC (Powder Alloy Corporation). 2019. PAC material characteristics report: IN718 powder. Loveland, OH: PAC.
+Petrovic, V., J. Vicente Haro Gonzalez, O. Jordá Ferrando, J. Delgado Gordillo, J. Ramo ́n Blasco Puchades, and L. Portolés Gri ̃nan. 2011. “Additive layered manufacturing: Sectors of industrial application shown through case studies.” Int. J. Prod. Res. 49 (4): 1061–1079. https://doi .org/10.1080/00207540903479786. Sabelkin, V., G. Cobb, T. Shelton, M. Hartsfield, D. Newell, R. O’Hara, and R. Kemnitz. 2019. “Mitigation of anisotropic fatigue in nickel alloy 718 manufactured via selective laser melting.” Mater. Des. 182 (Nov): 108095. https://doi.org/10.1016/j.matdes.2019.108095. Shelton, T. E., D. J. Stelzer, C. R. Hartsfield, G. R. Cobb, R. P. O’Hara, and C. D. Tommila. 2020. “Understanding surface roughness of additively manufactured nickel superalloy for space applications.” Rapid Prototyping J. 26 (3): 557–565. https://doi.org/10.1108/RPJ-02-2019-0049. Steitz, D. E., K. K. Martin, and E. Dick. 2013. “NASA, industry test additively manufactured rocket engine injector.” Accessed April 16, 2021. https://www.nasa.gov/press/2013/july/nasa-industry-test-additively -manufactured-rocket-engine-injector-0/#.YHn5ESWSmUk. Thomas, A., M. El-Wahabi, J. Cabrera, and J. Prado. 2006. “High temperature deformation of Inconel 718.” J. Mater. Process. Technol. 177 (1–3): 469–472. https://doi.org/10.1016/j.jmatprotec.2006.04.072. Tommila, C. 2017. “Performance losses in addtively manufactured low thrust nozzles.” M.S. thesis, Dept. of Aeronautics and Astronautics, Air Force Institute of Technology. Tommila, C., C. Hartsfield, J. Redmond, J. Komives, and T. Shelton. 2021. “Performance impacts of metal additive manufacturing of very small nozzles.” J. Aerosp. Eng. 34 (2): 04020115. https://doi.org/10.1061 /(ASCE)AS.1943-5525.0001229. Townsend, A., N. Senin, L. Blunt, R. K. Leach, and J. S. Taylor. 2016. “Surface texture metrology for metal additive manufacturing: A review.” Precis. Eng. 46 (Oct): 34–47. https://doi.org/10.1016/j.precisioneng .2016.06.001. Waters, M. C. 2018. “Analysis of additively manufactured injectors for rotating detonation engines.” M.S. thesis, Dept. of Aeronautics and Astronautics, Air Force Institute of Technology. White, F. M. 2006. Viscous fluid flow. New York: McGraw Hill.
+© ASCE 04021082-9 J. Aerosp. Eng.
+J. Aerosp. Eng., 2021, 34(6): 04021082
+This work is made available under the terms of the Creative Commons Attribution 4.0 International license.

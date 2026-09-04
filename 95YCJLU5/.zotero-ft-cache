@@ -1,0 +1,1419 @@
+Skip to main content
+Skip to article
+View PDF
+Download full issue
+Sustainable Production and Consumption
+Volume 51, November 2024, Pages 628-643
+Review Article
+Environmental and economic sustainability of additive manufacturing: A systematic literature review
+Author links open overlay panel
+Hamad Hussain Shah
+,
+Claudio Tregambi
+, Piero Bareschino, Francesco Pepe
+Show more
+Share
+Cite
+https://doi.org/10.1016/j.spc.2024.10.012
+Get rights and content
+Full text access
+Abstract
+Additive manufacturing (AM) is rapidly being adopted in various industries due to its ability to enhance production efficiency and reduce material waste, yet there remains a critical need to explore its sustainability, particularly concerning environmental, economic, and material recycling aspects. This study employs a systematic literature review (SLR) approach to assess the sustainability of AM across multiple aspects, including environmental impact, cost-effectiveness, and its role in advancing circular economy (CE) principles. The findings indicate that AM offers notable environmental benefits, including reductions in material waste and energy consumption, but challenges remain in scaling these advantages globally, particularly regarding the optimization of energy use and the emission of volatile organic compounds (VOCs). Economic analysis reveals that AM is cost-effective for small-scale production but less competitive in large-scale operations. The study also highlights that while AM promotes material recycling, its full potential in supporting a CE has yet to be realized. To further advance AM's sustainability, it is recommended to integrate more sustainable materials into AM processes and adopt industry-wide protocols to support global adoption of sustainable AM practices.
+Previous
+Next
+Keywords
+Additive manufacturingEnvironmental aspectsEconomic aspectsCircular economy
+1. Introduction
+Manufacturing involves transforming raw materials into products and is one of the most significant human activities globally (Panagiotopoulou et al., 2022). Manufacturing is essential for economic development, and its level of advancement is closely related to a national strategic competitiveness (Chen and Lin, 2021). Presently, manufacturing in the industrial sector is responsible for approximately 15% of the world's energy use and 35–40% of its material consumption. A reduction in the consumption of energy and materials within this sector would significantly contribute in achieving global sustainability goals (Panagiotopoulou et al., 2023). Over the past twenty years, there has been a growing concern regarding climate change, depletion of natural resources, and their subsequent environmental impacts. The increased focus on environmental concerns has intensified the need of environmentally safe manufacturing practices, leading the way for future industrial advancement (FO Usman et al., 2024; Gao et al., 2021). The concept of sustainability includes the maintenance of global ecological health, the advancement of economic growth through technological means, and the promotion of social equality (Bourhis et al., 2013). Typically, engineering methods are closely connected to economic enhancement. The consumption of energy, materials, and the utilization of water are fundamental elements that drive economic progress in manufacturing activities (Li et al., 2023).
+Additive manufacturing (AM), commonly referred to as 3D printing, is a method characterized by the American Society for Testing and Materials (ASTM) as a technique that involves combining materials to produce items based on three-dimensional model data (Zhou et al., 2024; Heiden et al., 2019; Stavropoulos, 2023). This is typically done in a successive layering manner, as opposed to methods used in traditional subtractive manufacturing (Rahimi et al., 2014; Muñoz et al., 2021). Overall, AM technologies are eco-friendly as they use only the necessary amount of material needed for the product (Manco et al., 2023). Additionally, AM techniques can potentially reduce the mass of materials and energy used throughout the product's life cycle compared to conventional subtractive processes, primarily by minimizing waste (Landi et al., 2022). AM includes seven different categories of processes: powder bed fusion, material jetting, deposition of energy-directed materials, material extrusion, sheet lamination, vat photopolymerization, and binder jetting (BJ) (Huang et al., 2015; Pereira et al., 2019; Khalid and Peng, 2021). Several industries have found that remanufacturing existing products instead of producing new ones is an effective strategy to increase efficiency, reduce cost, and mitigate environmental impacts. AM is advantageous in its ability to fabricate components from digital models, using a wide variety of materials and complex configurations. This technology utilizes a wide range of materials, such as composites (Parandoush and Lin, 2017), metals (Herzog et al., 2016), polymers (Ligon et al., 2017), concrete and cement (Bos et al., 2016), ceramics (Travitzky et al., 2014), clays (Ordoñez et al., 2019), foods (Lipton et al., 2015), metamaterials (Bertoldi et al., 2017), and even organic tissues (Singh et al., 2019). The scope of items produced through AM is remarkably diverse, including products like residential structures (Plantamura, 2015), electronic devices (Saengchairat et al., 2017), human organs (Singh et al., 2019), turbine systems (Murr, 2016), artistic works (Short, 2015), public infrastructure (Bhardwaj et al., 2019), prosthetic limbs (Chen et al., 2016), robots (Türk et al., 2016), electromagnetic shields (Restrepo and Colorado, 2020), engine components (Marchesi et al., 2015), and architectural designs (Paoletti, 2017). AM is revolutionizing global manufacturing in various aspects, making design and production more universally attainable (Ziółkowski and Dyl, 2020).
+A number of research studies have addressed the technologies and applications of AM, yet only a few have discussed this technique from the sustainability point of view and its environmental implications. Nonetheless, there remains an essential need to investigate the various sustainability components of AM, including economic, environmental, and social dimensions, as well as circular economy (CE) approaches, sustainability evaluations, and life cycle assessment (LCA) of AM processes, exploring the potential for implementing sustainable AM, and understanding the challenges associated with it. Furthermore, this paper aims to provide a thorough understanding of the AM sustainability and implementation, based on information available in published literature. As the integration of AM technologies could significantly transform manufacturing systems, policymakers are now assessing the most effective means to facilitate their practical application and advancement.
+2. Methods
+In this study, a systematic literature review (SLR) was employed to collect, critically assess, and effectively integrate relevant scholarly work, with the objective of presenting the findings in a clear and systematic manner. A SLR is a thorough and structured approach to reviewing existing research on a defined topic or question. The primary goal of this approach is to maintain a neutral review technique, ensuring the credibility, dependability, and detailed understanding of the research findings (Ardern et al., 2022). Data and publications from 2014 to 2024 have been collected from major databases such as Scopus®, Google Scholar®, Springer®, and Web of Science®. The research has included a variety of publication types, including peer-reviewed journals, conference proceedings, and industry reports, focusing on keywords such as “additive manufacturing”, “sustainability”, “environmental aspects”, economic aspects”, “recycling”, “life cycling assessment”, “circular economy”, and “problems and challenges”. From the entire range of publications sourced from the databases, a categorization of the most relevant papers within each assessed topic was conducted, focusing on the relevance of their titles and abstracts. Following this categorization, 290 papers were selected for in-depth analysis. These were scrutinized thoroughly, and the references cited in this paper were derived from them. Fig. 1 illustrates the systematic search approach employed, as depicted in the PRISMA flow diagram. Fig. S1 presents a classification of articles related to AM, classified by document type, while the number of studies published per year is presented in Fig. S2. Data suggests a growing interest in sustainability design for AM processes from 2014 to 2024. The literature published on AM has indeed seen a notable increase since 2014, aligning with the areas of focus discussed in this study. The key elements of this systematic analysis are detailed in the following sections.
+Download: Download high-res image (393KB)
+Download: Download full-size image
+
+Fig. 1. Summary of the systematic literature review using the PRISMA flow diagram.
+
+3. Results
+As the adoption of AM technologies could significantly transform manufacturing methods, policymakers are now assessing ways to effectively facilitate their growth and application. In the UK, the AM Special Interest Group, under the Materials Knowledge Transfer Network, has identified several potential contributions of AM that could meet future needs in sustainable and high-value manufacturing. These contributions include the development of more efficient production systems, enhancements in resource utilization, the introduction of innovative manufacturing techniques, integration of novel materials, and new business frameworks adoption (Despeisse and Ford, 2015). Furthermore, based on LCA, the integration of AM is projected to yield substantial cost efficiencies in both the production and operational phases of a product. Estimates for these phases by 2025 indicate potential cost reductions in the range of $113–370 billion for manufacturing and $56–219 billion for usage. The economization in the manufacturing phase can be related to reduced material consumption and handling, as well as more efficient supply chain processes. In addition, the adoption of lighter-weight components leads to lower energy consumption in the product's operational phase (Gebler et al., 2014). This section provides a detail analysis of various factors that are integral to the key sustainability dimensions within AM approaches.
+3.1. Air pollution
+3D printing presents a notable reduction in ecological footprint when compared to conventional machining (CM) techniques, especially regarding material and energy consumption, due to its ability to significantly reduce waste generation (Mami et al., 2017). However, some materials employed in 3D printing, such as nylon, polylactic acid (PLA) and acrylonitrile butadiene styrene (ABS), carry potential health hazards due to the release of volatile organic compounds (VOCs), including substances like ethylbenzene, cyclohexanone, styrene, and butanol (Wojtyła et al., 2017). The temperature at which the extruder operates (Deng et al., 2016; Mendes et al., 2017; Wojtyła et al., 2017), along with potential malfunctions of the printer (Mendes et al., 2017; Stefaniak et al., 2017a; Yi et al., 2016), are critical determinants in the volatilization of these compounds (Romanowski et al., 2023). Levels of VOCs and particulate matter (PM) tend to be more concentrated immediately after the printer is switched off and the cover is removed for retrieving the printed item (Wojtyła et al., 2017; Afshar-Mohajer et al., 2015). Furthermore, minor variations in the emission of VOCs have been noted among filaments made from identical polymers. These differences are often due to the variations in filament diameters, filaments suppliers, aggregates used in the filaments or differences in the additives (Wojtyła et al., 2017).
+The overall emission rates of ultrafine particles (UFP) from 3D printers are significantly higher, almost tenfold, when thermoplastic ABS material is used compared to raw PLA material. Nonetheless, both these materials are classified as substantial UFP emitters. Therefore, caution is necessary when utilizing these filaments in indoor settings that have insufficient filtration systems or lack proper ventilation (Ali et al., 2022). Most filaments release particles with an average diameter (count median diameter CMD) around 30 nm, with the exception of high impact polystyrene (HIPS) (41 nm), and polyethylene terephthalate glycol (PETG) (59–82 nm) based filaments. Styrene is the primary VOC emitter, followed by compounds like ethylbenzene and benzaldehyde (J. Gu et al., 2019b). While the full extent of organic chemical emissions from 3D printing is currently unclear, certain studies suggest they may lead to negative respiratory or cardiovascular impacts (PB Chandan et al., 2024). The levels of these emissions are affected by factors such as the raw materials properties, construction parameters, 3D printer's design (Stefaniak et al., 2019b), as well as the color of the filament (Stefaniak et al., 2017b).
+The particles concentration rises with an increase in nozzle temperature. However, PLA filaments demonstrate considerably lower particles emissions compared to ABS, due to the differences in heating the filament. A higher nozzle temperature greatly amplifies particle emissions. A method involving the external heating of both the extruder and platform has been shown to reduce particle emissions from ABS filaments by 75% compared to traditional methods. Additionally, other studies have suggested that inhaling emissions from ABS filaments during AM with an extrusion-based machine could potentially cause asthma attacks in workers and also acute hypertension in rodents (Stefaniak, Johnson, du Preez, Hammond, Wells, Ham, LeBouf, Martin et al., 2019). 3D printers utilizing PLA and ABS materials can lead to the inhalation of ultrafine particles, as a significant portion of these particles are as small as 100 nm in diameter. While existing research indicates that exposure to such UFP could pose risks to human health, the level of particle exposure for individuals operating 3D printers varies based on multiple factors, including the size of the room, ventilation, and the design of the printer's enclosure (Stefaniak et al., 2019a). Studies indicate that employing PLA in 3D printing could result in lower exposure to small particles compared to those generated by ABS-based 3D printing. This difference is due to the fact that the nozzle temperature effects the quantity of particles released (Byrley et al., 2019).
+The negative health impacts relate to 3D printing are also associated with the release of chemical gases, whose concentration seem however to be low in well-ventilated areas. Presently, there is an increasing worry that the release of UFP may be associated with cardiovascular, respiratory, and inflammatory issues, suggesting that 3D printing generates significant amounts of UFP. Consequently, there is a need for future research to develop safer materials and formulate safety guidelines for manufacturing (Zontek et al., 2017). Animals exposed to inhaling emissions from 3D printing have showed a notable average increase in blood pressure, equivalent to approximately a 12% rise in resting arteriolar tone (Stefaniak et al., 2017a). Additionally, it has been observed that these emissions vary depending on factors such as the types and colors of filaments, the type of consumables used, the design of the printed part, and the printer model. Conversely, regarding laser printers, despite the lack of comprehensive data, the presence of UFP in considerable quantities has been linked to an increased mortality risk. Consequently, it is advisable to limit exposure to these processes in public settings like homes, libraries, and schools (J. Yi et al., 2016).
+The rates of VOC emissions and the detrimental health effects of UFP have raised significant concerns regarding their impact on human health. Styrene, which the International Agency for Research on Cancer (IARC) categorizes as a carcinogen in humans, is released by all HIPS and ABS filaments. While, caprolactam, considered likely non-carcinogenic to humans, is emitted by filaments made of wood, nylon, bricks, and PCTPE. The highest and smallest rates of UFP emissions in 3D printing involving filament use were observed with PLA and ABS filaments, respectively (Azimi et al., 2016). Zhou et al. (2015) discovered that the predominant particle size emitted by 3D printers using ABS filaments is under 10 μm, with the most concentrated particle size is between 0.25 and 0.28 μm.
+3.2. Life cycle assessment of additive manufacturing
+The LCA environmental approach includes a detail method for assessing the environmental impacts throughout a product's lifecycle. Thus, LCA is instrumental in assessing the environmental impacts associated with different construction materials. The LCA process involves four interrelated analytical stages, supported by iterative processes. These stages include defining the assessment's aim and scope, life cycle inventory (LCI) analysis, life cycle impact assessment (LCIA), and interpreting the life cycle impacts (Amin et al., 2022; Shah et al., 2023). While, life-cycle costing (LCC) or a life-cycle cost assessment (LCCA) also employs a life-cycle approach, but applies it to the direct monetary costs from a product or service from production through transport, use, and end of life and does not include environmental impacts (Rödger et al., 2018).
+Several comprehensive reviews have been identified in the literature. Lunetto et al. (2019) performed an analysis of the environmental and economic sustainability aspects of AM techniques. Their approach included scrutinizing a range of literature sources and standards established by international regulatory agencies, highlighting the key role of models in the formulation of risk indicators. Agrawal and Vinodh (2019) examined the current advancements in sustainable AM, categorizing 63 articles into three key domains: economic, environmental, and societal aspects. Moreover, the analysis by Rastogi and Kandasubramanian (2019) focused on assessing the progress, development, and future prospects of the 3D printing lifecycle. This review highlighted the smart materials and their distinctive features, including responsiveness to stimuli, as well as future challenges in the field. Garcia et al. (2018) conducted a review analyzing the environmental impact of AM, revealing that a primary concern among many authors is the energy usage of AM devices. Similarly, Liu et al. (2016) provided an extensive review of the environmental impacts of 3D printing, both qualitatively and quantitatively, to provide the understanding of the field and inform future research directions. Their approach involved proposing a systematic framework that integrates LCA with computer-aided design (CAD) to assess and optimize the sustainability of 3D printing processes.
+In this SLR, analytical comparisons were conducted between AM and CM, employing LCA as a methodological tool for comparison (detailed in Table S1). Paris et al. (2016) performed a comparative study on the environmental implications of AM with traditional subtractive (milling) technologies in fabricating aeronautical turbines. In a related study, Hofstätter et al. (2016) examined the environmental impacts of AM with three established manufacturing methods used in the production of aluminum, steel, and brass inserts for injection molding processes. Liu et al. (2018) conducted a comparison between the environmental impacts and energy consumption of CM processes and direct energy deposition. Similarly, Peng et al. (2017) performed an assessment of the environmental impacts associated with various methods of impeller fabrication, including laser coating formation (integrating AM and CM), immersion milling (CM), and additive remanufacturing (RM). Their study aimed to develop a scientific approach for the selection of manufacturing techniques that enhance the sustainability of impeller production.
+In AM, material consumption also has negative environmental impact, but less compared to CM (Fig. 2). As depicted in Fig. 2a, CM produce a major damage due to greater material and energy consumption compared to AM (Landi et al., 2022). The specific energy consumption for AM systems, defined by their electrical energy requirements are presented in Fig. 2b. Noticeable variances are observed in the energy consumption of various AM technologies. Analytical studies have identified the printing process as the most energy-intensive stage, thereby making it a primary factor influencing the environmental impact of AM (Huang et al., 2016; Jiang et al., 2019; Meteyer et al., 2014; Yosofi et al., 2018). For instance, Bourhis et al. (2014) established a systematic approach for assessing the consumption of raw materials, fluids, and energy in AM processes. They employed the “Eco-indicator 99” approach for assessing environmental impacts. Their analysis extended to include not only electrical consumption but also the consumption of raw materials and fluids. Their study revealed that, in a given scenario, the environmental impacts related to material usage were substantially greater than those due to electricity usage. In another study, Kellens et al. (2017) compiled a comprehensive life cycle inventory at the process level, covering aspects such as direct material and energy usage, for various AM processes. These processes include selective laser sintering (SLS), selective laser melting (SLM), fused deposition modeling (FDM), EBM and stereolithography (SLA). Additionally, the energy and material flows associated with BJ have been analyzed by Meteyer et al. (2014). Other LCA studies related to material and energy consumption is also performed by Peng et al. (2017), Faludi et al. (2017), and Walachowicz et al. (2017).
+Download: Download high-res image (303KB)
+Download: Download full-size image
+
+Fig. 2. (a) Environmental impacts of conventional machining (CM) and additive manufacturing (AM) (b) The specific energy consumption for AM systems, defined by their electrical energy requirements (MJ/kg).
+
+Employing an integrated framework that includes both subtractive and AM techniques, Priarone et al. (2018) performed study highlighting the optimal methodologies capable of determining the manufacturing pathway with the lowest energy consumption and minimal CO2 emissions. This framework incorporates key process parameters and assesses the impacts resulting from the adaptation of AM for fabricating titanium alloy components. Moreover, Nagarajan and Haapala (2018) systematically identified the determinants impacting AM's environmental efficacy, specifically emphasizing end-use energy, by utilizing methodologies like exergy analysis and LCA.
+3.3. Use of recycled materials in additive manufacturing
+In 3D printing, the application of recycled materials can be systematically organized into four main classifications based on their intrinsic composition: composite materials, ceramics, metals, and plastics (Carrion et al., 2019; Shi et al., 2018; Lee et al., 2019). It should be acknowledged that certain materials may not comply precisely to these established categories. A detailed overview of the relevant research associated with each of these material groups is provided below.
+3.3.1. Composites
+Composite materials are known for their high strength, long-lasting durability, reduced weight, prolonged usability in components, lower maintenance demands, and enhanced recyclability. Hence, they are frequently employed in various applications as replacements for ceramics and metals. Carbon fiber (CF), in particular, is notable in composite reinforcement for its excellent flexibility, enduring durability, and high tensile capacity. Consequently, a number of studies have been focused on assessing the properties of composite materials, specifically those employing CF as a reinforcement element and various polymers as the base matrix. Notable examples include the studies performed by Tian et al. (2017), and Hunt et al. (2015), who explored the characteristics and behavior of composite materials reinforced with CF in a PLA matrix. Likewise, Cholleti and Gibson (2018) analyzed test outcomes on composites of ABS resin with multi-walled carbon nanotubes. Similarly, Wang et al. (2019) conducted a study on the machinability and structure of materials involving recycled and 3D printed CFs. Additionally, Wang et al. (2018) explored the practicality of a process that utilizes a filament made from milled CF combined with recycled polyamide 12.
+Additional studies have also focused on alternative reinforcement materials for composites. Spadea et al. (2015) explored the characteristics of a mortar composite, based on cement and enhanced with nylon fibers recycled from 3D-printed objects, which were produced using extruded nylon granules derived from fishing nets. Veer et al. (2017) conducted a study on the potential application of a recycled composite material, consisting of polypropylene (PP) and fiberglass, in AM processes. Pan et al. (2018) investigated the integration of nanocrystalline silicon (Si), iron (Fe), aluminum (Al), and chromium (Cr), powders into a recycled HDPE/PP matrix for the extrusion of 3D printing filaments, comparing the resultant properties with the original recycled filaments. Melugiri-Shankaramurthy et al. (2019) explored the reinforcement of a cementitious mixture with stainless steel micro powders to increase its mechanical properties. Singh et al. (2018) investigated the thermomechanical behavior of a filament integrating aluminum oxide (Al2O3) and silicon carbide (SiC) within HDPE matrix. Esposito Corcione et al. (2018) formulated a composite biomaterial comprising a PLA matrix with incorporated residues of recycled Lecce stone (LS). Further, Singh et al. (2021) assessed the efficacy of thermoplastic polymers in reinforcing ceramic particles, finding that their mechanical properties are comparable to those of unreinforced ABS.
+3.3.2. Ceramics
+The intrinsic properties of ceramic materials make them particularly suitable for various engineering applications. Their distinctive characteristics, such as thermal resistance, enable their utilization in scenarios where conventional materials like polymers or metals may be unsuitable. As a result, ceramics are employed in a wide range of applications, one example being the precise transmission of light waves. Nonetheless, this literature review revealed a scarcity of research focusing on the recycling of ceramic materials, with glass emerging as the primary material of interest in these studies. Andrew et al. (2018), and Ting et al. (2019) suggest employing recycled glass as an aggregate in 3D printing applications involving concrete. Gebhardt (2013) have developed a formulation for a new material conducive to the extrusion process in 3D printing, facilitating the production of glass-based objects with optical transparency. Similarly, Von Witzendorff et al. (2018) achieved an AM of quartz glass by using a CO2 laser source to melt a quartz glass fiber.
+3.3.3. Metals and alloys
+Metallic materials include both elemental metals and various alloys. Of the 86 metals, only few are critically relevant in engineering applications (Wang et al., 2023). Metals are known for their substantial recyclability potential. The SLR performed in this study highlights that a few specific metals, including titanium, have been the focus of extensive scientific analysis. In recent times, the implications of recycling this particular metal have been extensively studied (Carrion et al., 2019; Denti et al., 2019; Gökelma et al., 2018), particularly in proinflammatory and osteolysis-inducing effects (C. Li et al., 2018), electron beam melting (EBM) process (Mohammadhosseini et al., 2014; Park et al., 2017) and in fatigue behavior assessment (Nandana et al., 2020). However, one of the primary challenges in titanium AM is ensuring a high-quality, non-porous microstructure while also achieving the desired mechanical properties for its key applications (Popov et al., 2018; Tang et al., 2015). Aluminum is another material that have recently been explored for 3D printing applications (Asgari et al., 2017; Ashkenazi, 2019; Bauer et al., 2017). Hadadzadeh et al. (2018) explored the potential for fabricating DMLS-AlSi10Mg components using recycled powder, while Maamoun et al. (2018) focused on assessing how thermal post-processing affects parts made from the same recycled material. Despite these studies, powder recycling is not commonly practiced due to quality concerns (Lutter-Günther et al., 2018).
+Nickel alloys are also extensively studied for AM applications (Bhardwaj and Shukla, 2018; Cordova et al., 2019; Giurco et al., 2014). Nickel-based alloys are widely utilized in high-value engineering applications such as aerospace applications (Sudbrack et al., 2018), because of their exceptional mechanical strength, fatigue resistance, and corrosion resistance (Gruber et al., 2019; Nguyen et al., 2017; Shvab et al., 2016). Other materials that have been recently explored for 3D printing applications include copper (Chen et al., 2017; Perry et al., 2019), stainless steel (Gorji et al., 2019; Saboori et al., 2019a, Saboori et al., 2019b; Slotwinski et al., 2014), and magnesium (Salehi et al., 2018). Moreover, in this review, two studies were identified that assess the recycling of rare earth metals. In the first study, Harooni et al. (2018), focuses on the recycling of rare earth metals and introduces the concept of producing additives through the melting of zirconium powder. This study further examines the microstructure and mechanical characteristics of thin-walled structures fabricated via AM. In the second study, Khazdozian et al. (2018) suggest producing recycled neodymium magnetic and samarium filaments for 3D printing of permanent magnets.
+3.3.4. Plastics
+The process of plastic materials recycling involves the recovery and potential reuse of these wastes as raw materials for new products, conversion into fuel, or utilization in the production of new chemical products (Khoo, 2019; Cruz Sanchez et al., 2017; Zander et al., 2018). Among various plastics, the most widely studied plastic material in the literature is PLA (Anderson, 2017; Babagowda et al., 2018; Lanzotti et al., 2019). Several authors have conducted studies on the mechanical properties of recycled PLA (Jaksic, 2016; Reddy and Raju, 2018; P. Zhao et al., 2018). This material is derived from printed items made of virgin PLA, which are then reprocessed into filaments suitable for 3D printing applications. Studies have also explored the enhancement of recycled PLA properties for specialized applications (Paciorek-Sadowska et al., 2019; X.G. Zhao et al., 2018). Furthermore, literature studies have assessed the performance of various plastics materials in post multiple-recycling phases. These materials include: polyethylene furanoate (PEF) (Kucherov et al., 2017), polycarbonate (PC) (Gaikwad et al., 2018; Hiroyuki, 2015), HDPE (Chong et al., 2017; Saltonstall and Doddamani, 2018; Schirmeister et al., 2019), polyethylene terephthalate (PET) (H. Gu et al., 2019a; Mosaddek et al., 2018; Zander et al., 2019), polyamides (PA) (Chen et al., 2018; Z. Li et al., 2018; Mägi et al., 2016), and ABS (Cunico et al., 2019; Czyżewski et al., 2018; He et al., 2020; Mohammed et al., 2019). Additionally, various studies have focused on recycling plastic materials specifically for 3D printing applications. For instance, Quetzeri-Santiago et al. (2019) outlines a method for recycling rubber through AM, and Hart et al. (2018) suggest methods for reprocessing polymer-based packaging substances.
+3.4. Materials management and valorization in a circular economy framework
+In this review, four studies were identified that focused on an open-source industrial 3D printer named GigabotX®, produced by re:3D of Houston, Texas (USA). The topics covered in these articles include analysis of the printer's economic viability (Byard et al., 2019), exploring a mechanism for pelletizing (Woern and Pearce, 2018), investigating the capabilities for material extrusion (Hiroyuki, 2015; Angioletti et al., 2016), and developing an open-source solution suitable for large-format printing applications (Woern et al., 2018).
+One of the foundational studies concerning the CE is performed by Giurco et al. (2014). This study examines the emergence of two concurrent phenomena identified as 3D production systems, one addressing the dynamics of mineral supply chains, the other concentrating on the intricacies of AM processes. Similarly, Angioletti et al. (2016) illustrated how the adoption of AM technologies contributes to improved efficiency in production and service-oriented manufacturing, particularly by reducing manufacturing costs under a CE model. Conversely, Leino et al. (2016) conducted a study on existing research regarding the utilization of AM in the repair, refurbishment, and remanufacturing of metal products.
+Moreover, Despeisse et al. (2017) suggested conducting studies on more sustainable production practices. They outlined six specific research domains to explore how 3D printing could facilitate more sustainable methods of production and consumption practices, and its potential to contribute value within the framework of the CE. Alghamdi et al. (2017) presented a theoretical model aimed at minimizing the variability and widespread distribution of engineering attributes during the remanufacturing planning stage. Chowdhury (2023) integrated CE concepts into AM, particularly in the context of pertinent aspects related to post-use material valuation in AM, recyclability of materials, and the environmental footprint associated with these processes. Meanwhile, Angioletti et al. (2017) introduced a method for measuring the circularity of a product by adopting a streamlined life cycle approach, which includes considering the resource exchanges between different systems.
+Voet et al. (2018) successfully fabricated complex-shaped prototypes using environmentally derived acrylate photopolymer resins through a commercial 3D stereolithographic printer. Garmulewicz et al. (2018) investigated the capacity of 3D technology to facilitate a CE by transforming the existing material value chains. Moreover, Unruh (2018) applied the concept of the Biosphere Rules, a CE framework inspired by the principles of biomimetics, to the advancing fields of AM and 3D printing. Clemon and Zohdi (2018) developed a systematic approach aimed at optimizing the efficiency and reducing the economic outlay in the lifecycle of products, emphasizing the recycling of materials and the reutilization of 3D printing filaments. Concurrently, Navarro et al. (2018) outlined the principal policy frameworks that are instrumental in supporting the transition from a linear to a CE model, with a specific focus on strategies targeted at the reduction of CO2 emissions. Sauerwein and Doubrovski (2018) conducted a study on the formulation of a methodology for associating locally sourced materials with AM processes, along with the application of key approaches to maximize the CE potential. Pavlo et al. (2018) performed a literature review, assessing the economic and ecological dimensions of the collection process in a circular supply chain network, specifically for distributed and local plastic recycling operations aimed at generating 3D printing filaments. Baiani and Altamura (2018) conducted an analytical study on a research program that applies CE principles to the built environment, employing two interrelated concepts: reuse (superuse) and recycling (upcycling). Lahrour and Brissaud (2018) developed a comprehensive framework for AM, detailing critical processes to facilitate the remanufacturing of products through AM technologies. Minetola and Eyers (2018) identified and categorized potential applications for 3D printing within a Make-To-Order paradigm, distinguishing between opportunities that are currently feasible and those that may become more pertinent in future scenarios.
+Recently, Chatziparaskeva et al. (2022) explored the recycling of various composite materials and concluded that the recycling of polymer composites plays a key role in enhancing the CE. Saboori et al., 2019a, Saboori et al., 2019b and Terrassa et al. (2018) also presented a detailed analysis of the directed energy deposition (DED) process, highlighting its critical application in the restoration and maintenance of metal components. Sauerwein et al. (2019) conducted a study to assess the applicability and effectiveness of AM in developing sustainable design practices, specifically within the framework of a CE, and evaluated the degree to which AM can aid in establishing CE design principles. Wu and Raymond (2019), on the other hand, discussed how 3D printing design and CE practices substantially influence environmental technologies, particularly in the areas of material processing and waste management. Turner et al. (2019) conducted a study on the practicality of an adapted business model for manufacturing companies, integrating advanced manufacturing technologies such as 3D printing or AM within a sustainable and circular approach to production and consumption. Nascimento et al. (2019) investigated the synergistic application of industry 4.0's emerging technologies with CE approaches, aiming to develop a business model focused on the reusing and recycling of materials, notably scrap and e-waste. Ghabezi et al. (2024) explored the integration of 3D printing technologies with CE strategies to create a sustainable framework for converting waste polypropylene and CF into high-performance composite materials, highlighting waste reduction and resource efficiency. Similarly, Simon et al. (2024) investigated the synergistic application of CE strategies with 3D printing technologies, aiming to recycle PLA and copper microparticles from electronic waste into high-performance composite materials.
+To summarize, the principle of CE can be successfully integrated into AM by concentrating on two key elements: (a) improving the value of the product, and (b) efficient selection and sourcing of materials. Table S2 provides a concise summary of the CE strategies that AM supports and the benefits they provide.
+3.5. Economic aspects
+Khorram Niaki et al. (2019) performed a study focused on assessing the economic sustainability improvements and the potential rise in profitability by using AM technology for prototyping. By surveying 105 businesses from 23 different countries, the study pinpointed various elements that might impact the economic effectiveness of utilizing AM. These elements include energy consumption as a direct cost and the return on investment. The research concluded two key insights: how AM affects cost savings, and the current status of the profitability of investing in this technology. The study revealed that the implementation of AM technology could aid in decreasing costs in both small-scale manufacturing and new product development. However, AM is unable to compete conventional manufacturing methods in large-scale production, and it is also not suitable for larger batch production systems, primarily due to the principles of economies of scale. These economies arise from the inverse correlation between the quantity of production and the fixed cost per unit. Essentially, as the volume of production increases, the fixed cost per unit decreases because these expenses are spread across a larger number of items. Due to the lower unit cost associated with mass production in CM techniques, AM becomes less advantageous as production quantities increase. The results of this study indicate that, typically, AM could serve as a feasible option compared to conventional manufacturing methods for small-scale production runs (under 40 units). Nonetheless, this is depending on factors such as material properties, machine capacity, and desired quality standards. In comparison, AM offers an ‘economy-of-one’ scenario, suggesting that producing a complex or unique design individually can be cost-effective, whereas conventional manufacturing methods would incur higher costs. As AM eliminates the need for molds or tools, it can potentially reduce expenses associated with iterative processes in the new products development.
+For the production of metal components in small to medium batches, existing AM techniques can offer economic benefits and compete effectively with traditional methods. The cost per unit of machinery plays a key role in the total cost. While materials and machines for AM are currently expensive, these costs are expected to decrease as AM gains wider adoption in manufacturing. Additionally, AM is predicted to become more financially viable as larger production volumes become economically feasible (Ford and Despeisse, 2016). The design flexibility offered by AM allows for the redesign of components and products. With additive techniques, various parts made of different materials can be consolidated into a single unified structure, thereby eliminating or reducing the time, cost, and quality concerns related to process assembling. Moreover, this consolidation of parts can lead to a decrease or complete elimination of assembly costs. Such redesign efforts can achieve an ideal strength-to-weight ratio, fulfilling functional needs while minimizing the volume of material used. LCA suggests that adopting AM could lead to significant savings in product manufacturing costs. By 2025, it is projected that savings ranging from $113 to 370 billion could be achieved due to lower material usage and processing, along with more streamlined supply chains (Gebler et al., 2014). The financial gains from enhanced efficiency and improvements in manufacturing, validation, and development processes are expected to exceed the benefits gained from avoiding tooling expenses (Franco et al., 2020). Additionally, manufacturing can start immediately once the design of a component is finalized. This leads to cost savings by shortening the time gap between design and production. Further reductions in expenses can be achieved if the design of the component is optimized to fully exploit the capabilities of AM. The use of components produced additively can also lead to long-term financial benefits. Components that are lighter in weight will reduce energy consumption, potentially leading to savings between $56–219 billion by 2025 (Gebler et al., 2014). Despite expected advancements in recycling, the materials employed in AM may not always be more environmentally friendly compared to those used in conventional manufacturing. PLA, a biopolymer, might be one exception (Faludi et al., 2015). The comparative toxicity of materials utilized in AM, coupled with the energy consumed in producing these materials and their processing, might somehow offset the anticipated savings in materials. Therefore, a comprehensive assessment of AM's environmental impact should consider the energy requirements from a systemic perspective, not just from the process alone (Baumers and Holweg, 2019; van Sice and Faludi, 2021; Yosofi et al., 2019). Fig. 3 summarizes the impacts of adopting AM on a company's business.
+Download: Download high-res image (488KB)
+Download: Download full-size image
+
+Fig. 3. Additive manufacturing (AM) adoption effects on a company's business. The indicators and their empirical effects, as reported in the reviewed papers, are summarized in Tables S3 and S4, in the supplementary file.
+
+3.6. Opportunities and challenges in additive manufacturing
+Assessing the sustainability of AM is crucial in understanding its influence and role in modern manufacturing frameworks. AM is characterized by its novel approach to material utilization and production efficiency, presenting substantial prospects for sustainable progress (Daminabo et al., 2020). It provides paths towards more resource-efficient and reduced waste production techniques, yet it also introduces several complexities and environmental factors to consider (Javaid et al., 2021). The following section details the related advantages and challenges associated with implementing sustainable practices in AM processes.
+3.6.1. Opportunities
+AM presents significant opportunities for enhancing sustainability in various industrial domains. A major advantage of AM is its material use efficiency (Valentinčič et al., 2024). Unlike traditional subtractive manufacturing methods that frequently result in considerable material wastage, AM constructs items by sequentially adding layers of material, thereby drastically reducing waste (Bhatia and Sehgal, 2021). This aspect is particularly important for materials that are either costly or rare, where waste minimization is a priority from both economic and environmental perspectives. Furthermore, AM holds the potential for energy saving advantages (Sun et al., 2021). It tends to be more energy-efficient compared to conventional manufacturing processes, particularly in the fabrication of complex or lightweight components. Design optimization for AM allows the production of lighter components without compromising structural integrity or functionality, leading to decreased energy requirements during their operational life. This is notably important in industries such as automotive and aerospace, where weight reduction is a key consideration.
+AM contributes to environmental sustainability by streamlining supply chain dynamics (Kurpjuweit et al., 2021). Traditional manufacturing methods often involve extensive, globalized supply chains, which are significant sources of carbon emissions. AM, however, facilitates localized production strategies, thereby reducing transportation needs and the emissions associated with them. This shift towards local production not only reduces the carbon footprint but also strengthens supply chain resilience, lessening susceptibility to global logistics disruptions. Additionally, the customization potential of AM represents a significant advantage. It enables the production of parts specifically designed for individual needs or customers, effectively reducing instances of overproduction and unnecessary inventory accumulation (Lacroix et al., 2021). This customization capability is highly relevant in fields such as healthcare, where AM can be utilized to manufacture patient-specific medical devices, like implants or prosthetics, leading to improved patient care and reducing the inefficiencies linked with generic, mass-produced products.
+Moreover, AM has a significant role in advancing CE concepts. By facilitating the repair, refurbishment, or remanufacturing of components, AM can prolong the life of products, reducing the demand for new raw materials and decreasing waste generation. This method not only saves resources but also meets the increasing consumer and regulatory expectations for more sustainable, CE-oriented business practices (Burmaoglu et al., 2023). In addition, the digital aspect of AM is in line with the broader transition to industry 4.0. It enables enhanced integration of digital technologies in manufacturing processes, improving efficiency and promoting more sustainable production methods. For example, employing digital twins can optimize manufacturing processes to reduce waste and energy use, while incorporating sensors and internet of things (IoT) devices allows for real-time monitoring and adjustments, ensuring optimal sustainability performance (Haghnegahdar et al., 2022; Sepasgozar et al., 2020). Fig. 4 shows the key opportunities in AM.
+Download: Download high-res image (218KB)
+Download: Download full-size image
+
+Fig. 4. Strategic benefits of additive manufacturing (AM).
+
+3.6.2. Challenges
+While AM holds considerable potential for sustainability, specific challenges emerge from the methods employed in AM processes. Notably, the energy consumption associated with some AM techniques, such as SLS and EBM, poses a considerable concern. The energy intensity of these methods, especially when operating at elevated temperatures for extended durations, has the potential to offset the overall environmental advantages of AM by amplifying the carbon footprint (He et al., 2022; Lunetto et al., 2020; El Idrissi et al., 2022).
+Another challenge emerges from the limited selection of materials suitable for specific AM methods. Methods like FDM primarily employ thermoplastics, which frequently lack viable recyclability options. This limitation restrains the material options for AM, posing difficulties in aligning AM processes with CE principles. Furthermore, the development of new, sustainable materials for AM presents complexities, hindering the adoption of more environmentally friendly practices (Kumar, 2020; Sanchez-Rexach et al., 2020).
+Waste generation is a major concern in AM (Charles et al., 2019), especially in techniques such as SLA and SLS (He et al., 2022; Simon et al., 2019). In SLA, which involves curing liquid resin with UV light in a vat, there is a frequent issue of leftover or residual resin, posing challenges in sustainable disposal. Similarly, SLS frequently results in a significant residue of unused powder, which presents difficulties in reusing or recycling, particularly when the materials are mixed or contaminated.
+In AM techniques such as direct metal laser sintering (DMLS) and FDM, challenges with quality and uniformity are common. DMLS, typically employed for complex, high-value metallic components, may experience problems like porosity and microstructural irregularities. These issues can result in an increased rate of component rejection or necessitate further post-processing. Such quality concerns increase material and energy consumption, thereby decreasing the environmental benefits of AM. This leads to the generation of extra waste and prolongation of production times (Martin et al., 2019).
+The environmental impact associated with the disposal of products produced using AM methods are of notable concern. The recyclability of various AM-produced products, particularly those with complex shapes or made from composite materials, presents a substantial challenge. Parts manufactured using multi jet fusion (MJF) or BJ often consist of a variety of materials, making the recycling process more complex. Therefore, it is important to establish and implement efficient strategies for the end-of-life management of these products to effectively lessen their ecological impact (London et al., 2020).
+In the specific AM techniques, integrating sustainability considerations during the design process poses unique scientific challenges (Kumar and Czekanski, 2017). Methods such as 3D printing demand a thorough understanding of material properties, process limitations, and potential environmental impacts. However, there is often a noticeable deficiency in the knowledge and application skills among designers and engineers regarding the principles of sustainable design in AM contexts. This gap is particularly noticeable in complex processes like EBM or DMLS, where achieving sustainability goals depends critically on the synergy between design, material selection, and process parameter optimization.
+In summary, AM provides various opportunities for sustainability, but it is important to carefully manage the challenges presented by certain AM approaches. It is important to integrate the innovative characteristics of these methods with their ecological impacts, ensuring the optimal realization of AM's sustainability potential. Tables S5 and S6 provides the SWOT, and PEST analysis of various AM techniques. Fig. 5 provides an overview of the current challenges in AM industrial practices.
+Download: Download high-res image (278KB)
+Download: Download full-size image
+
+Fig. 5. Challenges in industrial applications of additive manufacturing (AM).
+
+4. Discussion
+4.1. Main findings
+In the industrial sector, AM is catalyzing a substantial transformation. In terms of surface finish, traditional manufacturing methods perform better than AM. Nevertheless, AM excels in fabricating geometrically complex and detailed structures. This study suggest that AM technologies generally show greater environmental sustainability than traditional methods, with lower impacts on the environment, fewer emissions, and reduced resource and energy utilization. Conducting a thorough environmental impact comparison between AM and CM methods is imperative. Current research is increasingly directed towards identifying the most environmentally efficient AM techniques.
+The environmental footprint of AM is characterized by its contrasting aspects of resource efficiency and substantial energy consumption. On one hand, it promises significant reductions in material waste compared to CM, aligning with the CE principles. Its capacity for producing components with optimized designs leads to lighter parts, which in turn can reduce energy consumption in product use, notably in the automotive and aerospace sectors. Conversely, the energy intensity associated with specific AM processes, especially those related to metal printing, poses a notable challenge. The utilization of high-energy laser or electron beams in these processes may contribute to a higher-than-expected overall energy footprint (Patterson et al., 2021). Effectively addressing this complexity demands a precise understanding of the environmental implications of AM, necessitating a shift towards processes that are more energy-efficient and the integration of renewable energy sources into AM operations.
+From an economic perspective, AM has the potential to revolutionize traditional manufacturing models. The prospect of transitioning from mass production to personalized, on-demand manufacturing could result in significant reductions in logistics and inventory costs, leading a manufacturing environment that is more adaptable and responsive. However, the realization of this economic potential is limited by challenges such as the substantial initial capital investment required for AM equipment and the ongoing costs associated with specialized materials and maintenance (Lynch et al., 2020). These factors pose limitations to the accessibility of AM, particularly for small and medium-sized enterprises (SMEs), potentially limiting its widespread adoption in the manufacturing sector.
+In terms of materials, the efficacy of AM to reduce raw material usage and waste is a notable advantage. The layer-by-layer construction method employed in AM enables precise material placement, minimizing the excess material typically associated with subtractive manufacturing methods. Nevertheless, the current scope of materials suitable for AM is limited, and the recycling of used or excess AM materials poses a considerable challenge (Bhuvanesh Kumar and Sathiya, 2021; Liu et al., 2021). This limitation highlights the need for continuous research and development in the domain of sustainable materials for AM, with the objective of diversifying the scope of recyclable and environmentally friendly alternatives.
+The assessment of AM impact on product life cycles and supply chains is a key area of focus. The ability of AM to manufacture parts on demand has the potential to lower the necessity for extensive warehousing, thereby reducing the associated environmental impact. Nevertheless, the decentralized manufacturing approach of AM introduces considerations related to quality control and standardization, important elements for ensuring the reliability and performance of AM-produced parts (Kanyilmaz et al., 2022; Pereira et al., 2019; Singamneni et al., 2019). Moreover, the localized nature of AM production may induce shifts in labor demands and skill requirements, thereby influencing aspects of workforce development and training.
+In summary, while AM holds great promise for sustainable manufacturing, realizing this potential requires a balanced approach that considers the environmental, economic, and material aspects. The advancement of this technology should be accompanied by a continuous assessment of its impacts, ensuring that the positive outcomes of innovation remain prominent and are not overshadowed by unintended environmental or economic consequences. This study lays the groundwork for such an assessment, providing a comprehensive understanding of the complexities and challenges associated with implementing sustainable practices in AM. The results from current research streams are summarized in Table S7.
+4.2. Recommendations for future research
+This paper aims to support the AM community in developing practical and reliable sustainability guidelines by highlighting the advantages, implementation strategies, and challenges associated to sustainable AM systems. It provides detailed knowledge on AM sustainability and adoption based on the reviewed literature. From this analysis, seven key research gaps have been identified, along with proposed future research directions, which are outlined below.
+•
+Environmental impact and energy consumption: One of the most key issues in AM is the energy-intensive nature of certain processes, such as SLS and EBM. Although AM is often recognized for its ability to reduce material waste, the environmental benefits are sometimes offset by the high energy consumption, particularly when producing metal parts. Future research should focus on developing more energy-efficient AM processes, potentially through innovations in machine design or the use of renewable energy sources. Studies exploring the integration of alternative energy sources like solar or wind into AM systems could help reduce the overall carbon footprint.
+•
+Material innovation and recycling: Another gap in the literature is the limited diversity of recyclable materials used in AM. While some polymers such as PLA have shown promise in terms of recyclability, other widely used materials like ABS and certain metals pose significant recycling challenges. Future research should prioritize the development of new, sustainable materials specifically designed for use in AM. Additionally, enhancing the recyclability of existing materials, perhaps through chemical recycling or closed-loop systems, could advance AM's role in a CE. Studies could also investigate hybrid material solutions that combine recyclability with high-performance characteristics to widen their applications in various industries.
+•
+Health and safety concerns: VOCs and UFPs emitted during the AM process present significant health risks, particularly for operators working in confined spaces. While some research has examined the emission rates of these particles, there remains a need for a comprehensive understanding of their long-term effects on human health. Future research should focus on developing safer materials and mitigating emission risks, perhaps through improved filtration systems or alternative, non-toxic materials. Furthermore, the regulatory framework surrounding emissions in AM environments needs to be strengthened, and research could help establish international guidelines for workplace safety.
+•
+LCA and sustainability metrics: Although LCA has been extensively used to assess the environmental impacts of AM, discrepancies exist in how different studies calculate and interpret these impacts. Standardized metrics for assessing the sustainability of AM processes are essential for meaningful comparisons across studies. Future research should work towards developing consistent LCA methodologies that include not only the environmental costs but also social and economic dimensions, to provide a more comprehensive view of AM's sustainability.
+•
+Scaling up AM for industrial use:A major limitation of AM is its scalability for large-scale industrial applications. While AM is highly effective for prototyping and small production runs, its economic viability decreases in mass production settings due to longer build times and higher material costs. Research focused on improving the speed and efficiency of AM technologies, as well as reducing material costs through supply chain innovations, will be critical for scaling up AM in industries like automotive and aerospace.
+•
+AM and the CE: Although AM shows promise in contributing to a CE by enabling material recycling and reducing waste, its full potential in this area is still untapped. Future studies could explore how AM can be better integrated into circular business models, particularly through the lens of product life extension and remanufacturing. Research could investigate how AM processes can be optimized for the repair and refurbishment of existing products, minimizing the need for new raw materials.
+•
+Customization and industry 4.0: The integration of AM into industry 4.0 presents another significant research opportunity. Customization and on-demand manufacturing are key features of AM that align with the goals of Industry 4.0, but there are still challenges in optimizing digital supply chains and integrating AM with other smart manufacturing technologies. Future research could explore the use of digital twins, IoT, and AI in AM environments to enhance production efficiency, reduce lead times, and further align AM with sustainable manufacturing principles.
+4.3. Study limitations
+In this study, multiple aspects are explored to enhance the sustainability efficiency of AM technologies. These findings should be regarded as preliminary insights that may generate ideas for more detailed investigations. Despite the systematic and structured approach of conducting a SLR, it is not without its limitations. One fundamental limitation common to all literature reviews is their reliance on the choices made by researchers. These choices include the selection of keywords, the types of publications reviewed, and the time frame considered. Furthermore, a systematic comparison between the compiled data and the perspectives of various stakeholders in the supply chain may yield interesting outcomes. Future research could involve a separate analysis of the impacts of 3D printing technology adoption in domestic and commercial scenarios. This differentiated study would enhance the understanding of the transformative effects of AM in different operational environments.
+Additionally, many studies address the integration of AM technology into production or business operations without conducting a preliminary evaluation of the AM process. This initial assessment is crucial, as a negative outcome from the process evaluation would suggest that the business should not consider that particular AM process. This aspect was not considered in this study, representing a limitation of the research. This consideration could be key in future studies dealing with the AM adoption effects. MetaCAM, an analytical instrument previously utilized in a various context, could be a viable option for experimental application in these studies. A subject of academic interest would be the exploration of the complex interrelations between the varied effects associated with the adoption of AM. This approach could show the causative relationship between different effects, for instance, how supply chain decentralization correlates with its complexity. In conclusion, the discussion on these effects and the identified areas lacking in-depth knowledge could be improved through more quantitative research methods performed by researchers.
+5. Conclusions
+This comprehensive review has highlighted the significant advances that AM has made towards enhancing both environmental and economic sustainability. We have found that AM effectively reduces material waste and energy usage, which are crucial for environmental conservation, especially in industries like aerospace and automotive that depend on precision. However, the waste generation and energy consumption associated with some AM techniques, (such as SLS, SLA and EBM), presents a considerable concern. Our analysis also shows that while AM provides cost benefits for small-scale and custom productions, it remains less competitive against traditional manufacturing for large-scale production due to higher initial costs and slower production rates. Additionally, although AM promotes the use of recycled materials and aligns with CE principles, there is a clear need for more thorough integration of these principles throughout the lifecycle of AM processes. To make the most of AM's potential, we recommend that stakeholders focus on several key areas: First, increased investment in research is essential to overcome the current limitations related to energy efficiency and material diversity in AM. Second, developing comprehensive regulatory frameworks can guide sustainable AM practices while also encouraging wider adoption. Third, enhancing workforce capabilities through education and training programs will be crucial as AM technologies continue to evolve. Lastly, encouraging collaboration and knowledge sharing across industries can lead to further innovations in AM, ensuring its contributions to sustainability are maximized. Advances in AM are starting a new industrial revolution. Here, the combination of technology and creativity can create great opportunities for growth and innovation.
+CRediT authorship contribution statement
+Hamad Hussain Shah: Writing – original draft, Methodology, Conceptualization. Claudio Tregambi: Methodology, Investigation, Funding acquisition. Piero Bareschino: Writing – original draft, Investigation, Formal analysis. Francesco Pepe: Writing – review & editing, Writing – original draft, Supervision.
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+Acknowledgements
+The authors acknowledge the support provided by Department of Engineering and the Laboratory of Chemical Process Engineering, University of Sannio, for carrying out this research work.
+Appendix A. Supplementary data
+Download: Download Acrobat PDF file (986KB)
+
+Supplementary material
+
+Data availability
+Data will be made available on request.
+References
+Afshar-Mohajer et al., 2015
+Nima Afshar-Mohajer, Chang Yu Wu, Thomas Ladun, Didier A. Rajon, Yong Huang
+Characterization of particulate matters and Total VOC emissions from a binder jetting 3D printer
+Build. Environ., 93 (P2) (2015), pp. 293-301, 10.1016/j.buildenv.2015.07.013
+View PDF
+View articleView in ScopusGoogle Scholar
+Agrawal and Vinodh, 2019
+Rohit Agrawal, S. Vinodh
+State of art review on sustainable additive manufacturing
+Rapid Prototyp. J., 25 (6) (2019), pp. 1045-1060, 10.1108/RPJ-04-2018-0085
+View articleView in ScopusGoogle Scholar
+Alghamdi et al., 2017
+Awn Alghamdi, Paul Prickett, Rossitza Setchi
+A conceptual framework to support decision-making in remanufacturing engineering processes
+Smart Innovation, Systems and Technologies, 68 (2017), pp. 222-232, 10.1007/978-3-319-57078-5_22
+View at publisherView in ScopusGoogle Scholar
+Ali et al., 2022
+Muhammad Ubaid Ali, Siyi Lin, Balal Yousaf, Qumber Abbas, Mehr Ahmed Mujtaba Munir, Audil Rashid, Chunmiao Zheng, Xingxing Kuang, Ming Hung Wong
+Pollution characteristics, mechanism of toxicity and health effects of the ultrafine particles in the indoor environment: current status and future perspectives
+Crit. Rev. Environ. Sci. Technol., 52 (3) (2022), pp. 436-473, 10.1080/10643389.2020.1831359
+View at publisher
+View in ScopusGoogle Scholar
+Amin et al., 2022
+Muhammad Amin, Hamad Hussain Shah, Anaiz Gul Fareed, Wasim Ullah Khan, Eunhyea Chung, Adeel Zia, Zia Ur Rahman Farooqi, Chaehyeon Lee
+Hydrogen production through renewable and non-renewable energy processes and their impact on climate change
+Int. J. Hydrog. Energy, 47 (77) (2022), pp. 33112-33134, 10.1016/j.ijhydene.2022.07.172
+View PDF
+View articleView in ScopusGoogle Scholar
+Anderson, 2017
+Isabelle Anderson
+Mechanical properties of specimens 3D printed with virgin and recycled Polylactic acid
+3D Printing and Additive Manufacturing, 4 (2) (2017), pp. 110-115, 10.1089/3dp.2016.0054
+View at publisherView in ScopusGoogle Scholar
+Andrew et al., 2018
+Guan Heng Ting Andrew, Yi We Idaniel Tay, Ashokreddy Annapareddy, Mingyang Li, Ming Jen Tan
+Effect of recycled glass gradation in 3d cementitious material printing
+Proceedings of the International Conference on Progress in Additive Manufacturing 2018-May (2018), pp. 50-55, 10.25341/D4F59Z
+View at publisherView in ScopusGoogle Scholar
+Angioletti et al., 2016
+Cecilia M. Angioletti, Francesco G. Sisca, Rossella Luglietti, Marco Taisch, Roberto Rocca
+Additive manufacturing as an opportunity for supporting sustainability through implementation of circular economies
+Proceedings of the Summer School Francesco Turco, 2283-8996 (2016), pp. 25-28
+(13-15-Sept)
+View in ScopusGoogle Scholar
+Angioletti et al., 2017
+Cecilia Angioletti, Mélanie Despeisse, Roberto Rocca, Cecilia Angioletti, Mélanie Despeisse, Roberto Rocca, Product Circularity, and Assessment Methodology
+Product circularity assessment methodology to cite this version: HAL id: Hal-01707263
+IFIP International Conference on Advances in Production Management Systems (APMS), Sep 2017, Hamburg, Germany (2017)
+Google Scholar
+Ardern et al., 2022
+Clare L. Ardern, Fionn Büttner, Renato Andrade, Adam Weir, Maureen C. Ashe, Sinead Holden, Franco M. Impellizzeri, H. Eamonn Delahunt, Paul Dijkstra, Stephanie Mathieson, Michael Skovdal Rathleff, Guus Reurink, Catherine Sherrington, Emmanuel Stamatakis, Bill Vicenzino, Jackie L. Whittaker, Alexis A. Wright, Mike Clarke, David Moher, Matthew J. Page, Karim M. Khan, Marinus Winters
+Implementing the 27 PRISMA 2020 statement items for systematic reviews in the sport and exercise medicine, musculoskeletal rehabilitation and Sports science fields: the PERSiST (implementing Prisma in exercise, rehabilitation, sport medicine and SporTs Sc)
+Br. J. Sports Med., 56 (4) (2022), pp. 175-195, 10.1136/bjsports-2021-103987
+View at publisherView in ScopusGoogle Scholar
+Asgari et al., 2017
+Hamed Asgari, Carter Baxter, Keyvan Hosseinkhani, Mohsen Mohammadi
+On microstructure and mechanical properties of additively manufactured AlSi10Mg_200C using recycled powder
+Mater. Sci. Eng. A, 707 (September) (2017), pp. 148-158, 10.1016/j.msea.2017.09.041
+View PDF
+View articleView in ScopusGoogle Scholar
+Ashkenazi, 2019
+Dana Ashkenazi
+How aluminum changed the world: a metallurgical revolution through technological and cultural perspectives
+Technol. Forecast. Soc. Chang., 143 (March) (2019), pp. 101-113, 10.1016/j.techfore.2019.03.011
+View PDF
+View articleView in ScopusGoogle Scholar
+Azimi et al., 2016
+Parham Azimi, Dan Zhao, Claire Pouzet, Neil E. Crain, Brent Stephens
+Emissions of ultrafine particles and volatile organic compounds from commercially available desktop three-dimensional printers with multiple filaments
+Environ. Sci. Technol., 50 (3) (2016), pp. 1260-1268, 10.1021/acs.est.5b04983
+View at publisher
+View in ScopusGoogle Scholar
+Babagowda et al., 2018
+R.S. Babagowda, R. Kadadevara Math, Goutham, and K. R. Srinivas Prasad.
+Study of effects on mechanical properties of PLA filament which is blended with recycled PLA materials
+IOP Conference Series: Materials Science and Engineering, 310 (1) (2018), 10.1088/1757-899X/310/1/012103
+View at publisher
+Google Scholar
+Baiani and Altamura, 2018
+Serena Baiani, Paola Altamura
+Waste materials Superuse and upcycling in architecture: design and experimentation
+Techne, 16 (2018), pp. 142-151, 10.13128/Techne-23035
+View at publisherView in ScopusGoogle Scholar
+Bauer et al., 2017
+Dominik M. Bauer, Elisabeth Schwarzenböck, Ina Ludwig, Norbert Schupp, Frank Palm, Gerd Witt
+Investigations of aging behaviour for aluminium powders during an atmosphere simulation of the LBM process
+Powder Metall., 60 (3) (2017), pp. 175-183, 10.1080/00325899.2017.1288841
+View at publisher
+View in ScopusGoogle Scholar
+Baumers and Holweg, 2019
+Martin Baumers, Matthias Holweg
+On the economics of additive manufacturing: experimental findings
+J. Oper. Manag., 65 (8) (2019), pp. 794-809, 10.1002/joom.1053
+View at publisher
+View in ScopusGoogle Scholar
+Bertoldi et al., 2017
+Katia Bertoldi, Vincenzo Vitelli, Johan Christensen, Martin Van Hecke, Gregorio Milla
+This is a postprint version of the following published document
+Nat. Rev. Mater., 2 (17066) (2017), pp. 1-11, 10.1038/Natrevmats.2017.66
+© 2017 Macmillan Publishers Limited , Part of Springer Nature All Rights
+View at publisher
+View in ScopusGoogle Scholar
+Bhardwaj et al., 2019
+Abhinav Bhardwaj, Scott Z. Jones, Negar Kalantar, Zhijian Pei, John Vickers, Timothy Wangler, Pablo Zavattieri, Na Zou
+Additive manufacturing processes for infrastructure construction: a review
+ASME 2019 14th International Manufacturing Science and Engineering Conference, MSEC 2019, 1 (2019), pp. 1-18, 10.1115/MSEC2019-2988
+View at publisherGoogle Scholar
+Bhardwaj and Shukla, 2018
+Tarun Bhardwaj, Mukul Shukla
+Direct metal laser sintering of maraging steel: effect of building orientation on surface roughness and microhardness
+Materials Today: Proceedings, 5 (9) (2018), pp. 20485-20491, 10.1016/j.matpr.2018.06.425
+View PDF
+View articleView in ScopusGoogle Scholar
+Bhatia and Sehgal, 2021
+Akash Bhatia, Anuj Kumar Sehgal
+Additive manufacturing materials, methods and applications: a review
+Materials Today: Proceedings, 81 (2) (2021), pp. 1060-1067, 10.1016/j.matpr.2021.04.379
+View at publisher
+View in ScopusGoogle Scholar
+Bhuvanesh Kumar and Sathiya, 2021
+M. Bhuvanesh Kumar, P. Sathiya
+Methods and materials for additive manufacturing: a critical review on advancements and challenges
+Thin-Walled Struct., 159 (October 2020) (2021), Article 107228, 10.1016/j.tws.2020.107228
+View PDF
+View articleView in ScopusGoogle Scholar
+Bos et al., 2016
+Freek Bos, Rob Wolfs, Zeeshan Ahmed, Theo Salet
+Additive manufacturing of concrete in construction: potentials and challenges of 3D concrete printing
+Virtual Phys. Prototyp., 11 (3) (2016), pp. 209-225, 10.1080/17452759.2016.1209867
+View at publisher
+View in ScopusGoogle Scholar
+Burmaoglu et al., 2023
+Serhat Burmaoglu, Dilek Ozdemir Gungor, Aynur Kirbac, Ozcan Saritas
+Future research avenues at the Nexus of circular economy and digitalization
+Int. J. Product. Perform. Manag., 72 (8) (2023), pp. 2247-2269, 10.1108/IJPPM-01-2021-0026
+View at publisherView in ScopusGoogle Scholar
+Byard et al., 2019
+Dennis J. Byard, Aubrey L. Woern, Robert B. Oakley, Matthew J. Fiedler, Samantha L. Snabes, Joshua M. Pearce
+Green fab lab applications of large-area waste polymer-based additive manufacturing
+Additive Manufacturing, 27 (February) (2019), pp. 515-525, 10.1016/j.addma.2019.03.006
+View PDF
+View articleView in ScopusGoogle Scholar
+Byrley et al., 2019
+Peter Byrley, Barbara Jane George, William K. Boyes, Kim Rogers
+Particle emissions from fused deposition modeling 3D printers: evaluation and meta-analysis
+Sci. Total Environ., 655 (2019), pp. 395-407, 10.1016/j.scitotenv.2018.11.070
+View PDF
+View articleView in ScopusGoogle Scholar
+Carrion et al., 2019
+Patricio E. Carrion, Arash Soltani-Tehrani, Nam Phan, Nima Shamsaei
+Powder recycling effects on the tensile and fatigue behavior of additively manufactured Ti-6Al-4V parts
+Jom, 71 (3) (2019), pp. 963-973, 10.1007/s11837-018-3248-7
+View at publisher
+View in ScopusGoogle Scholar
+Chandan et al., 2024
+Palivela Bhargav Chandan, et al.
+Environmental aspects of 3D printing metal and alloys
+Additive Manufacturing with Novel Materials: Processes, Properties and Applications (2024), pp. 373-407
+View at publisherCrossrefView in ScopusGoogle Scholar
+Charles et al., 2019
+Amal Charles, Pedro Matiotti Bassan, Tobias Mueller, Ahmed Elkaseer, Steffen G. Scholz
+On the Assessment of Thermo-Mechanical Degradability of Multi-Recycled ABS Polymer for 3D Printing Applications
+vol. 155, Springer Singapore (2019)
+Google Scholar
+Chatziparaskeva et al., 2022
+Georgia Chatziparaskeva, Iliana Papamichael, Irene Voukkali, Pantelitsa Loizia, Georgia Sourkouni, Christos Argirusis, Antonis A. Zorpas
+End-of-life of composite materials in the framework of the circular economy
+Microplastics, 1 (3) (2022), pp. 377-392, 10.3390/microplastics1030028
+View at publisherView in ScopusGoogle Scholar
+Chen et al., 2018
+Peng Chen, Mingchen Tang, Wei Zhu, Lei Yang, Shifeng Wen, Chunze Yan, Zhijun Ji, Hai Nan, Yusheng Shi
+Systematical mechanism of polyamide-12 aging and its micro-structural evolution during laser sintering
+Polym. Test., 67 (December 2017) (2018), pp. 370-379, 10.1016/j.polymertesting.2018.03.035
+View PDF
+View articleView in ScopusGoogle Scholar
+Chen et al., 2016
+Roland K. Chen, Yuan Jin, Jeffrey Wensman, Albert Shih
+Additive manufacturing of custom orthoses and prostheses-a review
+Addit. Manuf., 12 (2016), pp. 77-89, 10.1016/j.addma.2016.04.002
+View PDF
+View articleView in ScopusGoogle Scholar
+Chen et al., 2017
+Xiaolong Chen, Xinhua Liu, Peter Childs, Nigel Brandon, Wu. Billy
+A low cost desktop electrochemical metal 3D printer
+Advanced Materials Technologies, 2 (10) (2017), pp. 1-6, 10.1002/admt.201700148
+View at publisher
+Google Scholar
+Chen and Lin, 2021
+Yu Chen, Boqiang Lin
+Towards the environmentally friendly manufacturing industry–the role of infrastructure
+J. Clean. Prod., 326 (2021), Article 129387
+View PDF
+View articleView in ScopusGoogle Scholar
+Cholleti and Gibson, 2018
+Eshwar Reddy Cholleti, Ian Gibson
+ABS Nano composite materials in additive manufacturing
+IOP Conference Series: Materials Science and Engineering, 455 (1) (2018), 10.1088/1757-899X/455/1/012038
+View at publisher
+Google Scholar
+Chong et al., 2017
+Siewhui Chong, Guan Ting Pan, Mohammad Khalid, Thomas C.K. Yang, Shuo Ting Hung, Chao Ming Huang
+Physical characterization and pre-assessment of recycled high-density polyethylene as 3D printing material
+J. Polym. Environ., 25 (2) (2017), pp. 136-145, 10.1007/s10924-016-0793-4
+View at publisher
+View in ScopusGoogle Scholar
+Chowdhury, 2023
+Hribhu Chowdhury
+Circular Economy Integration in Additive Manufacturing
+(2023), 10.20944/preprints202310.0087
+View at publisherGoogle Scholar
+Clemon and Zohdi, 2018
+L.M. Clemon, T.I. Zohdi
+On the tolerable limits of granulated recycled material additives to maintain structural integrity
+Constr. Build. Mater., 167 (2018), pp. 846-852, 10.1016/j.conbuildmat.2018.02.099
+View PDF
+View articleView in ScopusGoogle Scholar
+Corcione et al., 2018
+Esposito Corcione, Elisabetta Palumbo Carola, Angela Masciullo, Francesco Montagna, Maria Chiara Torricelli
+Fused deposition modeling (FDM): an innovative technique aimed at reusing Lecce Stone waste for industrial design and building applications
+Constr. Build. Mater., 158 (2018), pp. 276-284, 10.1016/j.conbuildmat.2017.10.011
+View at publisher
+Google Scholar
+Cordova et al., 2019
+Laura Cordova, Mónica Campos, Tiedo Tinga
+Revealing the effects of powder reuse for selective laser melting by powder characterization
+Jom, 71 (3) (2019), pp. 1062-1072, 10.1007/s11837-018-3305-2
+View at publisher
+View in ScopusGoogle Scholar
+Cunico et al., 2019
+Marlon Wesley Cunico, Dalton Alexandre Machado, Patrick Medeiros Kai, Cavalheiro, and Jonas de Carvalho.
+Development and characterisation of 3D printing finishing process applying recycled plastic waste
+Virtual Phys. Prototyp., 14 (1) (2019), pp. 37-52, 10.1080/17452759.2018.1521248
+View at publisher
+View in ScopusGoogle Scholar
+Czyżewski et al., 2018
+Piotr Czyżewski, Marek Bieliński, Dariusz Sykutera, Marcin Jurek, Marcin Gronowski, Łukasz Ryl, Hubert Hoppe
+Secondary use of ABS co-polymer recyclates for the manufacture of structural elements using the FFF technology
+Rapid Prototyp. J., 24 (9) (2018), pp. 1447-1454, 10.1108/RPJ-03-2017-0042
+View articleView in ScopusGoogle Scholar
+Daminabo et al., 2020
+S.C. Daminabo, S. Goel, S.A. Grammatikos, H.Y. Nezhad, V.K. Thakur
+Fused deposition modeling-based additive manufacturing (3D printing): techniques for polymer material systems
+Materials Today Chemistry, 16 (2020), Article 100248, 10.1016/j.mtchem.2020.100248
+View PDF
+View articleView in ScopusGoogle Scholar
+Deng et al., 2016
+Yelin Deng, Shi Jie Cao, Ailu Chen, Yansong Guo
+The impact of manufacturing parameters on submicron particle emissions from a desktop 3D printer in the perspective of emission reduction
+Build. Environ., 104 (2016), pp. 311-319, 10.1016/j.buildenv.2016.05.021
+View PDF
+View articleGoogle Scholar
+Denti et al., 2019
+Lucia Denti, Antonella Sola, Silvio Defanti, Corrado Sciancalepore, Federica Bondioli
+Effect of powder recycling in laser-based powder bed fusion of Ti-6Al-4V
+Manufacturing Technology, 19 (2) (2019), pp. 190-196, 10.21062/ujep/268.2019/a/1213-2489/mt/19/2/190
+View at publisherView in ScopusGoogle Scholar
+Despeisse et al., 2017
+M. Despeisse, M. Baumers, P. Brown, F. Charnley, S.J. Ford, A. Garmulewicz, S. Knowles, T.H.W. Minshall, L. Mortara, F.P. Reed-Tsochas, J. Rowley
+Unlocking value for a circular economy through 3D printing: a research agenda
+Technol. Forecast. Soc. Chang., 115 (2017), pp. 75-84, 10.1016/j.techfore.2016.09.021
+View PDF
+View articleView in ScopusGoogle Scholar
+Despeisse and Ford, 2015
+Mélanie Despeisse, Simon Ford
+The role of additive manufacturing in improving resource efficiency and sustainability
+IFIP Advances in Information and Communication Technology, 460 (2015), pp. 129-136, 10.1007/978-3-319-22759-7_15
+View at publisher
+View in ScopusGoogle Scholar
+El Idrissi et al., 2022
+El Youbi El Idrissi, Mohamed Achraf, Loubna Laaouina, Adil Jeghal, Hamid Tairi, Moncef Zaki
+Energy consumption prediction for fused deposition modelling 3D printing using machine learning
+Applied System Innovation, 5 (4) (2022), pp. 1-16, 10.3390/asi5040086
+View at publisherGoogle Scholar
+Faludi et al., 2015
+Jeremy Faludi, Cindy Bayley, Suraj Bhogal, Myles Iribarne
+Comparing environmental impacts of additive manufacturing vs traditional machining via life-cycle assessment
+Rapid Prototyp. J., 21 (1) (2015), pp. 14-33, 10.1108/RPJ-07-2013-0067
+View at publisherView in ScopusGoogle Scholar
+Faludi et al., 2017
+Jeremy Faludi, Martin Baumers, Ian Maskery, Richard Hague
+Environmental impacts of selective laser melting: do printer, powder, or power dominate?
+J. Ind. Ecol., 21 (2017), pp. S144-S156, 10.1111/jiec.12528
+View at publisher
+View in ScopusGoogle Scholar
+Ford and Despeisse, 2016
+Simon Ford, Mélanie Despeisse
+Additive manufacturing and sustainability: an exploratory study of the advantages and challenges
+J. Clean. Prod., 137 (2016), pp. 1573-1587, 10.1016/j.jclepro.2016.04.150
+View PDF
+View articleView in ScopusGoogle Scholar
+Franco et al., 2020
+Denise Franco, Gilberto Miller Devós Ganga, Luis Antonio de Santa-Eulalia, Moacir Godinho Filho
+Consolidated and inconclusive effects of additive manufacturing adoption: a systematic literature review
+Comput. Ind. Eng., 148 (December 2019) (2020), 10.1016/j.cie.2020.106713
+View at publisher
+Google Scholar
+Gaikwad et al., 2018
+Vaibhav Gaikwad, Anirban Ghose, Sagar Cholake, Aditya Rawal, Mei Iwato, Veena Sahajwalla
+Transformation of E-waste plastics into sustainable filaments for 3D printing
+ACS Sustain. Chem. Eng., 6 (11) (2018), pp. 14432-14440, 10.1021/acssuschemeng.8b03105
+View at publisherView in ScopusGoogle Scholar
+Gao et al., 2021
+Chongjie Gao, Sarah Wolff, Shiren Wang
+Eco-friendly additive manufacturing of metals: energy efficiency and life cycle analysis
+J. Manuf. Syst., 60 (February) (2021), pp. 459-472, 10.1016/j.jmsy.2021.06.011
+View PDF
+View articleView in ScopusGoogle Scholar
+Garcia et al., 2018
+Fabricio Leon Garcia, Virgínia Aparecida, da Silva Moris, Andréa Oliveira Nunes, and Diogo Aparecido Lopes Silva.
+Environmental performance of additive manufacturing process – an overview
+Rapid Prototyp. J., 24 (7) (2018), pp. 1166-1177, 10.1108/RPJ-05-2017-0108
+View articleView in ScopusGoogle Scholar
+Garmulewicz et al., 2018
+Alysia Garmulewicz, Matthias Holweg, Hans Veldhuis, Aidong Yang
+Disruptive technology as an enabler of the circular economy: what potential does 3D printing hold?
+Calif. Manag. Rev., 60 (3) (2018), pp. 112-132, 10.1177/0008125617752695
+View at publisher
+View in ScopusGoogle Scholar
+Gebhardt, 2013
+Andreas Gebhardt
+Additive Manufacturing of Optically Transparent Glass
+(2013), pp. 0-49
+Google Scholar
+Gebler et al., 2014
+Malte Gebler, Anton J.M. Schoot Uiterkamp, Cindy Visser
+A global sustainability perspective on 3D printing technologies
+Energy Policy, 74 (C) (2014), pp. 158-167, 10.1016/j.enpol.2014.08.033
+View PDF
+View articleView in ScopusGoogle Scholar
+Ghabezi et al., 2024
+Pouyan Ghabezi, et al.
+Circular economy innovation: a deep investigation on 3D printing of industrial waste polypropylene and carbon fibre composites
+Resour. Conserv. Recycl., 206 (2024), Article 107667
+View PDF
+View articleView in ScopusGoogle Scholar
+Giurco et al., 2014
+Damien Giurco, Anna Littleboy, Thomas Boyle, Julian Fyfe, Stuart White
+Circular economy: questions for responsible minerals, additive manufacturing and recycling of metals
+Resources, 3 (2) (2014), pp. 432-453, 10.3390/resources3020432
+View at publisherView in ScopusGoogle Scholar
+Gökelma et al., 2018
+Mertol Gökelma, Dilara Celik, Onur Tazegul, Huseyin Cimenoglu, Bernd Friedrich
+Characteristics of TI6AL4V powders recycled from turnings via the HDH technique
+Metals, 8 (5) (2018), 10.3390/met8050336
+View at publisherGoogle Scholar
+Gorji et al., 2019
+N.E. Gorji, R. O’Connor, D. Brabazon
+XPS, XRD, and SEM characterization of the virgin and recycled metallic powders for 3D printing applications
+IOP Conference Series: Materials Science and Engineering, 591 (1) (2019), 10.1088/1757-899X/591/1/012016
+View at publisher
+Google Scholar
+Gruber et al., 2019
+Hans Gruber, Mikael Henriksson, Eduard Hryha, Lars Nyborg
+Effect of powder recycling in Electron beam melting on the surface chemistry of alloy 718 powder
+Metall. Mater. Trans. A Phys. Metall. Mater. Sci., 50 (9) (2019), pp. 4410-4422, 10.1007/s11661-019-05333-7
+View at publisher
+View in ScopusGoogle Scholar
+Gu et al., 2019a
+Hao Gu, Zahir Bashir, Lanti Yang
+The re-usability of heat-exposed poly (ethylene terephthalate)powder for laser sintering
+Addit. Manuf., 28 (April) (2019), pp. 194-204, 10.1016/j.addma.2019.05.004
+View PDF
+View articleView in ScopusGoogle Scholar
+Gu et al., 2019b
+Jianwei Gu, Michael Wensing, Erik Uhde, Tunga Salthammer
+Characterization of particulate and gaseous pollutants emitted during operation of a desktop 3D printer
+Environ. Int., 123 (January) (2019), pp. 476-485, 10.1016/j.envint.2018.12.014
+View PDF
+View articleView in ScopusGoogle Scholar
+Hadadzadeh et al., 2018
+Amir Hadadzadeh, Carter Baxter, Babak Shalchi Amirkhiz, Mohsen Mohammadi
+Strengthening mechanisms in direct metal laser sintered AlSi10Mg: comparison between virgin and recycled powders
+Addit. Manuf., 23 (June) (2018), pp. 108-120, 10.1016/j.addma.2018.07.014
+View PDF
+View articleView in ScopusGoogle Scholar
+Haghnegahdar et al., 2022
+Lida Haghnegahdar, Sameehan S. Joshi, Narendra B. Dahotre
+From IoT-based cloud manufacturing approach to intelligent additive manufacturing: industrial internet of things—an overview
+Int. J. Adv. Manuf. Technol., 119 (3–4) (2022), pp. 1461-1478, 10.1007/s00170-021-08436-x
+View at publisher
+View in ScopusGoogle Scholar
+Harooni et al., 2018
+Arshad Harooni, Mehrdad Iravani, J. Amir Khajepour, Mitch King, Ahmed Khalifa, Adrian P. Gerlich
+Mechanical properties and microstructures in zirconium deposited by injected powder laser additive manufacturing
+Additive Manufacturing, 22 (September 2017) (2018), pp. 537-547, 10.1016/j.addma.2018.05.037
+View PDF
+View articleView in ScopusGoogle Scholar
+Hart et al., 2018
+Kevin R. Hart, Jolie B. Frketic, John R. Brown
+Recycling meal-ready-to-eat (MRE) pouches into polymer filament for material extrusion additive manufacturing
+Additive Manufacturing, 21 (February) (2018), pp. 536-543, 10.1016/j.addma.2018.04.011
+View PDF
+View articleView in ScopusGoogle Scholar
+He et al., 2022
+Di He, Hyung Chul Kim, Robert De Kleine, Vi Kie Soo, Alper Kiziltas, Paul Compston, Matthew Doolan
+Life cycle energy and greenhouse gas emissions implications of polyamide 12 recycling from selective laser sintering for an injection-molded automotive component
+J. Ind. Ecol., 26 (4) (2022), pp. 1378-1388, 10.1111/jiec.13277
+View at publisher
+View in ScopusGoogle Scholar
+He et al., 2020
+Hezhi He, Zhiming Zhan, Zhiwen Zhu, Bin Xue, Jiqian Li, Ming Chen, Guozhen Wang
+Microscopic morphology, rheological behavior, and mechanical properties of polymers: recycled acrylonitrile-butadiene-styrene/polybutylene terephthalate blends
+J. Appl. Polym. Sci., 137 (4) (2020), pp. 1-11, 10.1002/app.48310
+View at publisher
+Google Scholar
+Heiden et al., 2019
+Michael J. Heiden, Lisa A. Deibler, Jeff M. Rodelas, Josh R. Koepke, Dan J. Tung, David J. Saiz, Bradley H. Jared
+Evolution of 316L stainless steel feedstock due to laser powder bed fusion process
+Addit. Manuf., 25 (October 2018) (2019), pp. 84-103, 10.1016/j.addma.2018.10.019
+View PDF
+View articleView in ScopusGoogle Scholar
+Herzog et al., 2016
+Dirk Herzog, Vanessa Seyda, Eric Wycisk, Claus Emmelmann
+Additive manufacturing of metals
+Acta Mater., 117 (2016), pp. 371-392, 10.1016/j.actamat.2016.07.019
+View PDF
+View articleView in ScopusGoogle Scholar
+Hiroyuki, 2015
+Narahara Hiroyuki
+日本におけるAdditive Manufacturingの概要とこれからの課題
+計測と制御, 54 (6) (2015)
+381-undefined
+Google Scholar
+Hofstätter et al., 2016
+Thomas Hofstätter, Niki Bey, Michael Mischkot, Andreas Lunzer, David Bue Pedersen, Hans Nørgaard Hansen
+Comparison of conventional injection mould inserts to additively manufactured inserts using life cycle assessment
+Proceedings of the 16th International Conference of the European Society for Precision Engineering and Nanotechnology, EUSPEN 2016 (2016)
+Google Scholar
+Huang et al., 2016
+Runze Huang, Matthew Riddle, Diane Graziano, Joshua Warren, Sujit Das, Sachin Nimbalkar, Joe Cresko, Eric Masanet
+Energy and emissions saving potential of additive manufacturing: the case of lightweight aircraft components
+J. Clean. Prod., 135 (2016), pp. 1559-1570, 10.1016/j.jclepro.2015.04.109
+View PDF
+View articleView in ScopusGoogle Scholar
+Huang et al., 2015
+Yong Huang, Ming C. Leu, Jyoti Mazumder, Alkan Donmez
+Additive manufacturing: current state, future potential, gaps and needs, and recommendations
+J. Manuf. Sci. E. T. ASME, 137 (1) (2015), pp. 1-10, 10.1115/1.4028725
+View PDF
+View articleGoogle Scholar
+Hunt et al., 2015
+Emily J. Hunt, Chenlong Zhang, Nick Anzalone, Joshua M. Pearce
+Polymer recycling codes for distributed manufacturing with 3-D printers
+Resour. Conserv. Recycl., 97 (2015), pp. 24-30, 10.1016/j.resconrec.2015.02.004
+View PDF
+View articleView in ScopusGoogle Scholar
+Jaksic, 2016
+Nebojsa I. Jaksic
+Sustainable undergraduate engineering 3-D printing lab
+ASEE Annual Conference and Exposition, Conference Proceedings 2016-June(1984) (2016), 10.18260/p.25992
+View at publisherGoogle Scholar
+Javaid et al., 2021
+Mohd Javaid, Abid Haleem, Ravi Pratap Singh, Rajiv Suman, Shanay Rab
+Role of additive manufacturing applications towards environmental sustainability
+Advanced Industrial and Engineering Polymer Research, 4 (4) (2021), pp. 312-322, 10.1016/j.aiepr.2021.07.005
+View PDF
+View articleView in ScopusGoogle Scholar
+Jiang et al., 2019
+Qiuhong Jiang, Zhichao Liu, Tao Li, Weilong Cong, Hong Chao Zhang
+Emergy-based life-cycle assessment (Em-LCA) for sustainability assessment: a case study of laser additive manufacturing versus CNC machining
+Int. J. Adv. Manuf. Technol., 102 (9–12) (2019), pp. 4109-4120, 10.1007/s00170-019-03486-8
+View at publisher
+View in ScopusGoogle Scholar
+Kanyilmaz et al., 2022
+Alper Kanyilmaz, Ali Gökhan Demir, Martina Chierici, Filippo Berto, Leroy Gardner, Sastry Yagnanna Kandukuri, Paul Kassabian, Takuya Kinoshita, Andrea Laurenti, Ingrid Paoletti, Anton du Plessis, Nima Razavi
+Role of metal 3D printing to increase quality and resource-efficiency in the construction sector
+Addit. Manuf., 50 (November 2021) (2022), 10.1016/j.addma.2021.102541
+View at publisher
+Google Scholar
+Kellens et al., 2017
+Karel Kellens, Raya Mertens, Dimos Paraskevas, Wim Dewulf, Joost R. Duflou
+Environmental impact of additive manufacturing processes: does AM contribute to a more sustainable way of part manufacturing?
+Procedia CIRP, 61 (Section 3) (2017), pp. 582-587, 10.1016/j.procir.2016.11.153
+View PDF
+View articleView in ScopusGoogle Scholar
+Khalid and Peng, 2021
+Marwan Khalid, Qingjin Peng
+Sustainability and environmental impact of additive manufacturing: a literature review
+Computer-Aided Design and Applications, 18 (6) (2021), pp. 1210-1232
+View at publisherCrossrefView in ScopusGoogle Scholar
+Khazdozian et al., 2018
+Helena A. Khazdozian, J. Sebastián Manzano, Kinjal Gandha, Igor I. Slowing, Ikenna C. Nlebedim
+Recycled Sm-co bonded magnet filaments for 3D printing of magnets
+AIP Adv., 8 (5) (2018), 10.1063/1.5007669
+View at publisher
+Google Scholar
+Khoo, 2019
+Hsien H. Khoo
+LCA of plastic waste recovery into recycled materials, energy and fuels in Singapore
+Resour. Conserv. Recycl., 145 (February) (2019), pp. 67-77, 10.1016/j.resconrec.2019.02.010
+View PDF
+View articleView in ScopusGoogle Scholar
+Kucherov et al., 2017
+Fedor A. Kucherov, Evgeny G. Gordeev, Alexey S. Kashin, Valentine P. Ananikov
+Three-dimensional printing with biomass-derived PEF for carbon-neutral manufacturing
+Angew. Chem. Int. Ed., 56 (50) (2017), pp. 15931-15935, 10.1002/anie.201708528
+Finding PDF…
+View in ScopusGoogle Scholar
+Kumar, 2020
+Ranvijay Kumar
+Tertiary and quaternary recycling of thermoplastics by additive manufacturing approach for thermal sustainability
+Materials Today: Proceedings, 37 (Part 2) (2020), pp. 2382-2386, 10.1016/j.matpr.2020.08.183
+Finding PDF…
+View in ScopusGoogle Scholar
+Kumar and Czekanski, 2017
+Sanjay Kumar, Aleksander Czekanski
+Development of filaments using selective laser sintering waste powder
+J. Clean. Prod., 165 (2017), pp. 1188-1196, 10.1016/j.jclepro.2017.07.202
+View PDF
+View articleView in ScopusGoogle Scholar
+Kurpjuweit et al., 2021
+Stefan Kurpjuweit, Christoph G. Schmidt, Maximilian Klöckner, Stephan M. Wagner
+Blockchain in additive manufacturing and its impact on supply chains
+J. Bus. Logist., 42 (1) (2021), pp. 46-70, 10.1111/jbl.12231
+Finding PDF…
+View in ScopusGoogle Scholar
+Lacroix et al., 2021
+Rachel Lacroix, Ralf W. Seifert, Anna Timonina-Farkas
+Benefiting from additive manufacturing for mass customization across the product life cycle
+Operations Research Perspectives, 8 (2021), 10.1016/j.orp.2021.100201
+Finding PDF…
+Google Scholar
+Lahrour and Brissaud, 2018
+Yahya Lahrour, Daniel Brissaud
+A technical assessment of product/component re-manufacturability for additive remanufacturing
+Procedia CIRP, 69 (May) (2018), pp. 142-147, 10.1016/j.procir.2017.11.105
+View PDF
+View articleView in ScopusGoogle Scholar
+Landi et al., 2022
+Daniele Landi, Filippo Colombo Zefinetti, Christian Spreafico, Daniele Regazzoni
+Comparative life cycle assessment of two different manufacturing technologies: laser additive manufacturing and traditional technique
+Procedia CIRP, 105 (March) (2022), pp. 700-705, 10.1016/j.procir.2022.02.117
+View PDF
+View articleView in ScopusGoogle Scholar
+Lanzotti et al., 2019
+Antonio Lanzotti, Massimo Martorelli, Saverio Maietta, Salvatore Gerbino, Francesco Penta, Antonio Gloria
+A comparison between mechanical properties of specimens 3D printed with virgin and recycled PLA
+Procedia CIRP, 79 (March) (2019), pp. 143-146, 10.1016/j.procir.2019.02.030
+View PDF
+View articleView in ScopusGoogle Scholar
+Bourhis et al., 2013
+Florent Le Bourhis, et al.
+Sustainable manufacturing: evaluation and modeling of environmental impacts in additive manufacturing
+Int. J. Adv. Manuf. Technol., 69 (2013), pp. 1927-1939
+Finding PDF…
+CrossrefGoogle Scholar
+Bourhis et al., 2014
+Florent Le Bourhis, Olivier Kerbrat, Lucas Dembinski, Jean Yves Hascoet, Pascal Mognol
+Predictive model for environmental assessment in additive manufacturing process
+Procedia CIRP, 15 (2014), pp. 26-31, 10.1016/j.procir.2014.06.031
+View at publisher
+View in ScopusGoogle Scholar
+Lee et al., 2019
+Dongoh Lee, Younghun Lee, Kyunghyun Lee, Youngsu Ko, Namsu Kim
+Development and evaluation of a distributed recycling system for making filaments reused in three-dimensional printers
+J. Manuf. Sci. E. T. ASME, 141 (2) (2019), 10.1115/1.4041747
+View at publisherGoogle Scholar
+Leino et al., 2016
+Maija Leino, Joonas Pekkarinen, Risto Soukka
+The role of laser additive manufacturing methods of metals in repair, refurbishment and remanufacturing - enabling circular economy
+Phys. Procedia, 83 (2016), pp. 752-760, 10.1016/j.phpro.2016.08.077
+View PDF
+View articleGoogle Scholar
+Li et al., 2018a
+Cuidi Li, Chuan Jiang, Mingzheng Peng, Tao Li, Zezheng Yang, Zhiyuan Liu, Ning Li, Chengtao Wang, Kerong Dai, Jinwu Wang
+Proinflammatory and osteolysis-inducing effects of 3D printing Ti6Al4V particles: in vitro and in vivo
+RSC Adv., 8 (4) (2018), pp. 2229-2239, 10.1039/c7ra12677h
+View at publisherView in ScopusGoogle Scholar
+Li et al., 2023
+Yiming Li, Yingnan Zhang, Lin Yang, Du Fenglian, Linna Sai, Bin Zhang
+Decoupling analysis of China’s mining industrial development and water usage: based on production-based and consumption-based perspectives
+J. Clean. Prod., 385 (December 2022) (2023), Article 135668, 10.1016/j.jclepro.2022.135668
+View PDF
+View articleView in ScopusGoogle Scholar
+Li et al., 2018b
+Zhenhua Li, Fei Zhu, Xu Huiyan, Ziliang Li, Baoren Teng, Xiaowei Zhang
+Effect of powder recycling on hardness and impact toughness of polyamide formed by selective laser sintering
+Zhongguo Jiguang/Chinese Journal of Lasers, 45 (5) (2018), 10.3788/CJL201845.0502010
+View at publisherGoogle Scholar
+Ligon et al., 2017
+Samuel Clark Ligon, Robert Liska, Jürgen Stampfl, Matthias Gurr, Rolf Mülhaupt
+Polymers for 3D printing and customized additive manufacturing
+Chem. Rev., 117 (15) (2017), pp. 10212-10290, 10.1021/acs.chemrev.7b00074
+View at publisher
+View in ScopusGoogle Scholar
+Lipton et al., 2015
+Jeffrey I. Lipton, Meredith Cutler, Franz Nigl, Dan Cohen, Hod Lipson
+Additive manufacturing for the food industry
+Trends Food Sci. Technol., 43 (1) (2015), pp. 114-123, 10.1016/j.tifs.2015.02.004
+View PDF
+View articleView in ScopusGoogle Scholar
+Liu et al., 2021
+Guo Liu, Xiaofeng Zhang, Xuliang Chen, Yunhu He, Lizi Cheng, Mengke Huo, Jianan Yin, Fengqian Hao, Siyao Chen, Peiyu Wang, Shenghui Yi, Lei Wan, Zhengyi Mao, Xu Zhou Chen, Zhaowenbo Cao Wang, Lu. Jian
+Additive manufacturing of structural materials
+Mater. Sci. Eng. R. Rep., 145 (2021), Article 100596, 10.1016/j.mser.2020.100596
+View PDF
+View articleView in ScopusGoogle Scholar
+Liu et al., 2016
+Zhichao Liu, Qiuhong Jiang, Zhang Yang, Tao Li, Hong Chao Zhang
+Sustainability of 3D printing: a critical review and recommendations
+ASME 2016 11th International Manufacturing Science and Engineering Conference, MSEC 2016 2(June) (2016), 10.1115/MSEC2016-8618
+View at publisherGoogle Scholar
+Liu et al., 2018
+Zhichao Liu, Qiuhong Jiang, Weilong Cong, Tao Li, Hong Chao Zhang
+Comparative study for environmental performances of traditional manufacturing and directed energy deposition processes
+Int. J. Environ. Sci. Technol., 15 (11) (2018), pp. 2273-2282, 10.1007/s13762-017-1622-6
+View at publisher
+View in ScopusGoogle Scholar
+London et al., 2020
+Michael B. London, Geoffrey M. Lewis, Gregory A. Keoleian
+Life cycle greenhouse gas implications of multi jet fusion additive manufacturing
+ACS Sustain. Chem. Eng., 8 (41) (2020), pp. 15595-15602, 10.1021/acssuschemeng.0c04845
+View at publisherView in ScopusGoogle Scholar
+Lunetto et al., 2019
+Vincenzo Lunetto, Angioletta R. Catalano, Paolo C. Priarone, Luca Settineri
+Comments about the Human Health Risks Related to Additive Manufacturing
+vol. 130, Springer International Publishing (2019)
+Google Scholar
+Lunetto et al., 2020
+Vincenzo Lunetto, Manuela Galati, Luca Settineri, Luca Iuliano
+Unit process energy consumption analysis and models for electron beam melting (EBM): effects of process and part designs
+Addit. Manuf., 33 (January) (2020), Article 101115, 10.1016/j.addma.2020.101115
+View PDF
+View articleView in ScopusGoogle Scholar
+Lutter-Günther et al., 2018
+M. Lutter-Günther, M. Bröker, T. Mayer, S. Lizak, C. Seidel, G. Reinhart
+Spatter formation during laser beam melting of AlSi10Mg and effects on powder quality
+Procedia CIRP, 74 (March) (2018), pp. 33-38, 10.1016/j.procir.2018.08.008
+View PDF
+View articleView in ScopusGoogle Scholar
+Lynch et al., 2020
+Paul Lynch, Christie Hasbrouck, Joseph Wilck, Michael Kay, Guha Manogharan
+Challenges and opportunities to integrate the oldest and newest manufacturing processes: metal casting and additive manufacturing
+Rapid Prototyp. J., 26 (6) (2020), pp. 1145-1154, 10.1108/RPJ-10-2019-0277
+View articleView in ScopusGoogle Scholar
+Maamoun et al., 2018
+Ahmed H. Maamoun, Mohamed Elbestawi, Goulnara K. Dosbaeva, Stephen C. Veldhuis
+Thermal post-processing of AlSi10Mg parts produced by selective laser melting using recycled powder
+Addit. Manuf., 21 (January) (2018), pp. 234-247, 10.1016/j.addma.2018.03.014
+View PDF
+View articleView in ScopusGoogle Scholar
+Mägi et al., 2016
+Piret Mägi, Andres Krumme, Meelis Pohlak
+Recycling of PA-12 in additive manufacturing and the improvement of its mechanical properties
+Key Eng. Mater., 674 (2016), pp. 9-14, 10.4028/www.scientific.net/KEM.674.9
+View at publisherView in ScopusGoogle Scholar
+Mami et al., 2017
+Fares Mami, Jean Pierre Revéret, Sophie Fallaha, Manuele Margni
+Evaluating eco-efficiency of 3D printing in the aeronautic industry
+J. Ind. Ecol., 21 (2017), pp. S37-S48, 10.1111/jiec.12693
+View at publisher
+View in ScopusGoogle Scholar
+Manco et al., 2023
+Pasquale Manco, Mario Caterino, Marta Rinaldi, Marcello Fera
+Additive manufacturing in green supply chains: a parametric model for life cycle assessment and cost
+Sustainable Production and Consumption, 36 (2023), pp. 463-478, 10.1016/j.spc.2023.01.015
+View PDF
+View articleView in ScopusGoogle Scholar
+Marchesi et al., 2015
+Tadeus R. Marchesi, Ricardo D. Lahuerta, Emlio C.N. Silva, Marcos S.G. Tsuzuki, Thiago C. Martins, Ahmad Barari, Ian Wood
+Topologically optimized diesel engine support manufactured with additive manufacturing
+IFAC-PapersOnLine, 28 (3) (2015), pp. 2333-2338, 10.1016/j.ifacol.2015.06.436
+View PDF
+View articleView in ScopusGoogle Scholar
+Martin et al., 2019
+Aiden A. Martin, Nicholas P. Calta, Saad A. Khairallah, Jenny Wang, Phillip J. Depond, Anthony Y. Fong, Vivek Thampy, Gabe M. Guss, Andrew M. Kiss, Kevin H. Stone, Christopher J. Tassone, Johanna Nelson Weker, Michael F. Toney, Tony van Buuren, Manyalibo J. Matthews
+Dynamics of pore formation during laser powder bed fusion additive manufacturing
+Nat. Commun., 10 (1) (2019), pp. 1-10, 10.1038/s41467-019-10009-2
+View at publisher
+Google Scholar
+Melugiri-Shankaramurthy et al., 2019
+Bharath Melugiri-Shankaramurthy, Yogiraj Sargam, Xiao Zhang, Wen Sun, Kejin Wang, Hantang Qin
+Evaluation of cement paste containing recycled stainless steel powder for sustainable additive manufacturing
+Constr. Build. Mater., 227 (2019), Article 116696, 10.1016/j.conbuildmat.2019.116696
+View PDF
+View articleView in ScopusGoogle Scholar
+Mendes et al., 2017
+Luís Mendes, Anneli Kangas, Kirsi Kukko, Bjarke Mølgaard, Arto Säämänen, Tomi Kanerva, Iñigo Flores Ituarte, Marika Huhtiniemi, Helene Stockmann-Juvala, Jouni Partanen, Kaarle Hämeri, Konstantinos Eleftheriadis, Anna Kaisa Viitanen
+Characterization of emissions from a desktop 3D printer
+J. Ind. Ecol., 21 (2017), pp. S94-106, 10.1111/jiec.12569
+View at publisher
+View in ScopusGoogle Scholar
+Meteyer et al., 2014
+Simon Meteyer, Xu Xin, Nicolas Perry, Yaoyao Fiona Zhao
+Energy and material flow analysis of binder-jetting additive manufacturing processes
+Procedia CIRP, 15 (2014), pp. 19-25, 10.1016/j.procir.2014.06.030
+View PDF
+View articleView in ScopusGoogle Scholar
+Minetola and Eyers, 2018
+Paolo Minetola, Daniel Eyers
+Energy and cost assessment of 3D printed mobile case covers
+Procedia CIRP, 69 (May) (2018), pp. 130-135, 10.1016/j.procir.2017.11.065
+View PDF
+View articleView in ScopusGoogle Scholar
+Mohammadhosseini et al., 2014
+Afshin Mohammadhosseini, Darren Fraser, S.H. Masood, Mahnaz Jahedi
+A study of morphology of titanium powder used in electron beam melting
+Appl. Mech. Mater., 541–542 (2014), pp. 160-163, 10.4028/www.scientific.net/AMM.541-542.160
+View at publisherView in ScopusGoogle Scholar
+Mohammed et al., 2019
+Mazher Iqbal Mohammed, Daniel Wilson, Eli Gomez-Kervin, Bin Tang, Jinfeng Wang
+Investigation of closed-loop manufacturing with acrylonitrile butadiene styrene over multiple generations using additive manufacturing
+ACS Sustain. Chem. Eng., 7 (16) (2019), pp. 13955-13969, 10.1021/acssuschemeng.9b02368
+View at publisherView in ScopusGoogle Scholar
+Mosaddek et al., 2018
+Akif Mosaddek, Hrushi K.R. Kommula, Felipe Gonzalez
+Design and testing of a recycled 3D printed and foldable unmanned aerial vehicle for remote sensing
+2018 International Conference on Unmanned Aircraft Systems, ICUAS 2018 (2018), pp. 1207-1216, 10.1109/ICUAS.2018.8453284
+View at publisherView in ScopusGoogle Scholar
+Muñoz et al., 2021
+Ivan Muñoz, et al.
+Life cycle assessment of integrated additive–subtractive concrete 3D printing
+Int. J. Adv. Manuf. Technol., 112 (2021), pp. 2149-2159
+Finding PDF…
+CrossrefView in ScopusGoogle Scholar
+Murr, 2016
+Lawrence E. Murr
+Frontiers of 3D printing/additive manufacturing: from human organs to aircraft fabrication
+J. Mater. Sci. Technol., 32 (10) (2016), pp. 987-995, 10.1016/j.jmst.2016.08.011
+View PDF
+View articleView in ScopusGoogle Scholar
+Nagarajan and Haapala, 2018
+Hari P.N. Nagarajan, Karl R. Haapala
+Characterizing the influence of resource-energy-exergy factors on the environmental performance of additive manufacturing systems
+J. Manuf. Syst., 48 (May) (2018), pp. 87-96, 10.1016/j.jmsy.2018.06.005
+View PDF
+View articleView in ScopusGoogle Scholar
+Nandana et al., 2020
+M.S. Nandana, Bhat K. Udaya, C.M. Manjunatha
+ICAF 2019 – Structural Integrity in the Age of Additive Manufacturing
+vol. 2, Springer International Publishing (2020)
+Google Scholar
+Nascimento et al., 2019
+Daniel Luiz Nascimento, Viviam Alencastro Mattos, Osvaldo Luiz Gonçalves Quelhas, Rodrigo Goyannes Gusmão Caiado, Jose Arturo Garza-Reyes, Luis Rocha Lona, Guilherme Tortorella
+Exploring industry 4.0 technologies to enable circular economy practices in a manufacturing context: a business model proposal
+J. Manuf. Technol. Manag., 30 (3) (2019), pp. 607-627, 10.1108/JMTM-03-2018-0071
+View articleView in ScopusGoogle Scholar
+Navarro et al., 2018
+Juan C. Navarro, Miguel A. Centeno, Oscar H. Laguna, José A. Odriozola
+Policies and motivations for the CO2 valorization through the Sabatier reaction using structured catalysts. A review of the most recent advances
+Catalysts, 8 (12) (2018), pp. 1-25, 10.3390/catal8120578
+Finding PDF…
+View in ScopusGoogle Scholar
+Nguyen et al., 2017
+Quy Bau Nguyen, Mui Ling Sharon Nai, Zhiguang Zhu, Chen Nan Sun, Jun Wei, Wei Zhou
+Characteristics of Inconel powders for powder-bed additive manufacturing
+Engineering, 3 (5) (2017), pp. 695-700, 10.1016/J.ENG.2017.05.012
+View PDF
+View articleView in ScopusGoogle Scholar
+Niaki et al., 2019
+Khorram Niaki, Fabio Nonino Mojtaba, Giulia Palombi, S. Ali Torabi
+Economic sustainability of additive manufacturing: contextual factors driving its performance in rapid prototyping
+J. Manuf. Technol. Manag., 30 (2) (2019), pp. 353-365, 10.1108/JMTM-05-2018-0131
+Finding PDF…
+Google Scholar
+Ordoñez et al., 2019
+Edisson Ordoñez, Jhon M. Gallego, Henry A. Colorado
+3D printing via the direct ink writing technique of ceramic pastes from typical formulations used in traditional ceramics industry
+Appl. Clay Sci., 182 (53) (2019), Article 105285, 10.1016/j.clay.2019.105285
+View PDF
+View articleView in ScopusGoogle Scholar
+Paciorek-Sadowska et al., 2019
+Joanna Paciorek-Sadowska, Marcin Borowicz, Marek Isbrandt
+New poly(lactide-urethane-isocyanurate) foams based on bio-polylactidewaste
+Polymers, 11 (3) (2019), 10.3390/polym11030481
+Finding PDF…
+Google Scholar
+Pan et al., 2018
+Guan Ting Pan, Siewhui Chong, Hsuan Ju Tsai, Lu Wei Hua, Thomas C.K. Yang
+The effects of iron, silicon, chromium, and aluminum additions on the physical and mechanical properties of recycled 3D printing filaments
+Adv. Polym. Technol., 37 (4) (2018), pp. 1176-1184, 10.1002/adv.21777
+Finding PDF…
+View in ScopusGoogle Scholar
+Panagiotopoulou et al., 2023
+V.C. Panagiotopoulou, A. Paraskevopoulou, P. Stavropoulos
+A modelling-based framework for carbon emissions calculation in additive manufacturing: a stereolithography case study
+Processes, 11 (2023), p. 2574, 10.3390/pr11092574
+View at publisherView in ScopusGoogle Scholar
+Panagiotopoulou et al., 2022
+Vasiliki Christina Panagiotopoulou, Panagiotis Stavropoulos, George Chryssolouris
+A critical review on the environmental impact of manufacturing: a holistic perspective
+Int. J. Adv. Manuf. Technol. (2022), pp. 1-23
+Google Scholar
+Paoletti, 2017
+Ingrid Paoletti
+Mass customization with additive manufacturing: new perspectives for multi performative building components in architecture
+Procedia Engineering, 180 (2017), pp. 1150-1159, 10.1016/j.proeng.2017.04.275
+View PDF
+View articleView in ScopusGoogle Scholar
+Parandoush and Lin, 2017
+Pedram Parandoush, Dong Lin
+A review on additive manufacturing of polymer-fiber composites
+Compos. Struct., 182 (2017), pp. 36-53, 10.1016/j.compstruct.2017.08.088
+View PDF
+View articleView in ScopusGoogle Scholar
+Paris et al., 2016
+Henri Paris, Hossein Mokhtarian, Eric Coatanéa, Matthieu Museau, Inigo Flores Ituarte
+Comparative environmental impacts of additive and subtractive manufacturing technologies
+CIRP Ann. Manuf. Technol., 65 (1) (2016), pp. 29-32, 10.1016/j.cirp.2016.04.036
+View PDF
+View articleView in ScopusGoogle Scholar
+Park et al., 2017
+Hyung Ki Park, Yong Keun Ahn, Byoung Soo Lee, Kyung Hwan Jung, Chang Woo Lee, Hyung Giun Kim
+Refining effect of electron beam melting on additive manufacturing of pure titanium products
+Mater. Lett., 187 (2017), pp. 98-100, 10.1016/j.matlet.2016.10.065
+View PDF
+View articleView in ScopusGoogle Scholar
+Patterson et al., 2021
+T. Patterson, J. Hochanadel, S. Sutton, B. Panton, J. Lippold
+A review of high energy density beam processes for welding and additive manufacturing applications
+Welding in the World, 65 (7) (2021), pp. 1235-1306, 10.1007/s40194-021-01116-0
+View at publisher
+View in ScopusGoogle Scholar
+Pavlo et al., 2018
+Santander Pavlo, Cruz Fabio, Boudaoud Hakim, Camargo Mauricio
+3D-printing based distributed plastic recycling: a conceptual model for closed-loop supply chain design
+2018 IEEE International Conference on Engineering, Technology and Innovation, ICE/ITMC 2018 - Proceedings (2018), pp. 1-8, 10.1109/ICE.2018.8436296
+View at publisher
+Google Scholar
+Peng et al., 2017
+Shitong Peng, Tao Li, Xinlin Wang, Mengmeng Dong, Zhichao Liu, Junli Shi, Hongchao Zhang
+Toward a sustainable impeller production: environmental impact comparison of different impeller manufacturing methods
+J. Ind. Ecol., 21 (2017), pp. S216-S229, 10.1111/jiec.12628
+View at publisherView in ScopusGoogle Scholar
+Pereira et al., 2019
+Tanisha Pereira, John V. Kennedy, Johan Potgieter
+A comparison of traditional manufacturing vs additive manufacturing, the best method for the job
+Procedia Manufacturing, 30 (2019), pp. 11-18, 10.1016/j.promfg.2019.02.003
+View PDF
+View articleView in ScopusGoogle Scholar
+Perry et al., 2019
+J. Perry, P. Richer, B. Jodoin, E. Matte
+Pin fin Array heat sinks by cold spray additive manufacturing: economics of powder recycling
+J. Therm. Spray Technol., 28 (1–2) (2019), pp. 144-160, 10.1007/s11666-018-0758-3
+View at publisher
+View in ScopusGoogle Scholar
+Plantamura, 2015
+Oberti I. Plantamura
+Is 3D printed house sustainable?
+Cisbat, 9 (11) (2015), pp. 173-178
+Google Scholar
+Popov et al., 2018
+Vladimir V. Popov, Alexander Katz-Demyanetz, Andrey Garkun, Menachem Bamberger
+The effect of powder recycling on the mechanical properties and microstructure of electron beam melted Ti-6Al-4 V specimens
+Addit. Manuf., 22 (June) (2018), pp. 834-843, 10.1016/j.addma.2018.06.003
+View PDF
+View articleView in ScopusGoogle Scholar
+Priarone et al., 2018
+Paolo C. Priarone, Giuseppe Ingarao, Vincenzo Lunetto, Rosa Di Lorenzo, Luca Settineri
+The role of re-design for additive manufacturing on the process environmental performance
+Procedia CIRP, 69 (May) (2018), pp. 124-129, 10.1016/j.procir.2017.11.047
+View PDF
+View articleView in ScopusGoogle Scholar
+Quetzeri-Santiago et al., 2019
+Miguel A. Quetzeri-Santiago, Clara L. Hedegaard, J. Rafael Castrejón-Pita
+Additive manufacturing with liquid latex and recycled end-of-life rubber
+3D Printing and Additive Manufacturing, 6 (3) (2019), pp. 149-157, 10.1089/3dp.2018.0062
+View at publisherView in ScopusGoogle Scholar
+Rahimi et al., 2014
+Mohammad Rahimi, Mohsen Esfahanian, Mehran Moradi
+Effect of reprocessing on shrinkage and mechanical properties of ABS and investigating the proper blend of virgin and recycled ABS in injection molding
+J. Mater. Process. Technol., 214 (11) (2014), pp. 2359-2365, 10.1016/j.jmatprotec.2014.04.028
+View PDF
+View articleView in ScopusGoogle Scholar
+Rastogi and Kandasubramanian, 2019
+Prasansha Rastogi, Balasubramanian Kandasubramanian
+Breakthrough in the printing tactics for stimuli-responsive materials: 4D printing
+Chem. Eng. J., 366 (February) (2019), pp. 264-304, 10.1016/j.cej.2019.02.085
+View PDF
+View articleView in ScopusGoogle Scholar
+Reddy and Raju, 2018
+Sudhakara Reddy, Thunga Raju
+Design and development of mini plastic shredder machine
+IOP Conference Series: Materials Science and Engineering, 455 (1) (2018), 10.1088/1757-899X/455/1/012119
+View at publisher
+Google Scholar
+Restrepo and Colorado, 2020
+Jose J. Restrepo, Henry A. Colorado
+Additive manufacturing of composites made of epoxy resin with magnetite particles fabricated with the direct ink writing technique
+J. Compos. Mater., 54 (5) (2020), pp. 647-657, 10.1177/0021998319865019
+View at publisher
+View in ScopusGoogle Scholar
+Rödger et al., 2018
+Jan-Markus Rödger, Louise Laumann Kjær, Aris Pagoropoulos
+Life cycle costing: an introduction
+Life cycle assessment: Theory and practice (2018), pp. 373-399
+View at publisherCrossrefGoogle Scholar
+Romanowski et al., 2023
+Heike Romanowski, Frank S. Bierkandt, Andreas Luch, Peter Laux
+Summary and derived risk assessment of 3D printing emission studies
+Atmos. Environ., 294 (November 2022) (2023), Article 119501, 10.1016/j.atmosenv.2022.119501
+View PDF
+View articleView in ScopusGoogle Scholar
+Saboori et al., 2019b
+A. Saboori, A. Aversa, G. Marchese, S. Biamino, M. Lombardi, P. Fino
+Application of directed energy deposition-based additive manufacturing in repair
+Appl. Sci., 9 (2019), p. 3316, 10.3390/app9163316
+View at publisherView in ScopusGoogle Scholar
+Saboori et al., 2019a
+Abdollah Saboori, Alberta Aversa, Federico Bosio, Emilio Bassini, Erica Librera, Michele De Chirico, Sara Biamino, Daniele Ugues, Paolo Fino, Mariangela Lombardi
+An investigation on the effect of powder recycling on the microstructure and mechanical properties of AISI 316L produced by directed energy deposition
+Mater. Sci. Eng. A, 766 (August) (2019), Article 138360, 10.1016/j.msea.2019.138360
+View PDF
+View articleView in ScopusGoogle Scholar
+Saengchairat et al., 2017
+Nitipon Saengchairat, Tuan Tran, Chee Kai Chua
+A review: additive manufacturing for active electronic components
+Virtual Phys. Prototyp., 12 (1) (2017), pp. 31-46, 10.1080/17452759.2016.1253181
+View at publisher
+View in ScopusGoogle Scholar
+Salehi et al., 2018
+Mojtaba Salehi, Saeed Maleksaeedi, Hamidreza Farnoush, Mui Ling Sharon Nai, Ganesh Kumar Meenashisundaram, Manoj Gupta
+An investigation into interaction between magnesium powder and Ar gas: implications for selective laser melting of magnesium
+Powder Technol., 333 (2018), pp. 252-261, 10.1016/j.powtec.2018.04.026
+View PDF
+View articleView in ScopusGoogle Scholar
+Saltonstall and Doddamani, 2018
+Brooks Saltonstall, Mrityunjay Doddamani
+Ó 2018
+(2018)
+Google Scholar
+Sanchez et al., 2017
+Cruz Sanchez, A. Fabio, Hakim Boudaoud, Sandrine Hoppe, Mauricio Camargo
+Polymer recycling in an open-source additive manufacturing context: mechanical issues
+Addit. Manuf., 17 (2017), pp. 87-105, 10.1016/j.addma.2017.05.013
+View at publisher
+Google Scholar
+Sanchez-Rexach et al., 2020
+Eva Sanchez-Rexach, Trevor G. Johnston, Coralie Jehanno, Haritz Sardon, Alshakim Nelson
+Sustainable materials and chemical processes for additive manufacturing
+Chem. Mater., 32 (17) (2020), pp. 7105-7119, 10.1021/acs.chemmater.0c02008
+View at publisherView in ScopusGoogle Scholar
+Sauerwein and Doubrovski, 2018
+M. Sauerwein, E.L. Doubrovski
+Local and recyclable materials for additive manufacturing: 3D printing with mussel shells
+Materials Today Communications, 15 (2018), pp. 214-217, 10.1016/j.mtcomm.2018.02.028
+View PDF
+View articleView in ScopusGoogle Scholar
+Sauerwein et al., 2019
+M. Sauerwein, E. Doubrovski, R. Balkenende, C. Bakker
+Exploring the potential of additive manufacturing for product design in a circular economy
+J. Clean. Prod., 226 (2019), pp. 1138-1149, 10.1016/j.jclepro.2019.04.108
+View PDF
+View articleView in ScopusGoogle Scholar
+Schirmeister et al., 2019
+Carl G. Schirmeister, Timo Hees, Erik H. Licht, Rolf Mülhaupt
+3D printing of high density polyethylene by fused filament fabrication
+Addit. Manuf., 28 (February) (2019), pp. 152-159, 10.1016/j.addma.2019.05.003
+View PDF
+View articleView in ScopusGoogle Scholar
+Sepasgozar et al., 2020
+Samad M.E. Sepasgozar, Anqi Shi, Liming Yang, Sara Shirowzhan, David J. Edwards
+Additive manufacturing applications for industry 4.0: a systematic critical review
+Buildings, 10 (12) (2020), pp. 1-35, 10.3390/buildings10120231
+View at publisherView in ScopusGoogle Scholar
+Shah et al., 2023
+Hamad Hussain Shah, Piero Bareschino, Erasmo Mancusi, Francesco Pepe
+Environmental life cycle analysis and energy payback period evaluation of solar PV systems: the case of Pakistan
+Energies, 16 (17) (2023), 10.3390/en16176400
+View at publisherGoogle Scholar
+Shi et al., 2018
+Yunsong Shi, Wei Zhu, Chunze Yan, Jinsong Yang, Zhidao Xia
+Preparation and selective laser sintering of a new nylon elastomer powder
+Rapid Prototyp. J., 24 (6) (2018), pp. 1026-1033, 10.1108/RPJ-11-2017-0223
+View articleView in ScopusGoogle Scholar
+Short, 2015
+Daniel B. Short
+Use of 3D printing by museums: educational exhibits, artifact education, and artifact restoration
+3D Printing and Additive Manufacturing, 2 (4) (2015), pp. 209-215, 10.1089/3dp.2015.0030
+View at publisherView in ScopusGoogle Scholar
+Shvab et al., 2016
+Shvab, R., A. Leicht, E. Hryha, and L. Nyborg. 2016. “Characterization of the virgin and recycled nickel alloy Hx powder used for selective laser melting.” World PM 2016 Congress and Exhibition 2016.
+Google Scholar
+van Sice and Faludi, 2021
+Corrie van Sice, Jeremy Faludi
+Comparing environmental impacts of metal additive manufacturing to conventional manufacturing
+Proceedings of the Design Society, 1 (AUGUST) (2021), pp. 671-680, 10.1017/pds.2021.67
+View at publisherView in ScopusGoogle Scholar
+Simon et al., 2019
+Timothy Simon, Yiran Yang, Wo Jae Lee, Jing Zhao, Lin Li, Fu Zhao
+Reusable unit process life cycle inventory for manufacturing: stereolithography
+Prod. Eng., 13 (6) (2019), pp. 675-684, 10.1007/s11740-019-00916-0
+View at publisher
+View in ScopusGoogle Scholar
+Simon et al., 2024
+Žan Simon, et al.
+Circular economy-driven additive manufacturing: a model for recycling PLA/copper composites through multi-extrusion processing
+J. Ind. Eng. Chem., 130 (2024), pp. 392-400
+View PDF
+View articleView in ScopusGoogle Scholar
+Singamneni et al., 2019
+Sarat Singamneni, L.V. Yifan, Andrew Hewitt, Rodger Chalk, Wayne Thomas, David Jordison
+Additive manufacturing for the aircraft industry: a review
+Journal of Aeronautics & Aerospace Engineering, 08 (01) (2019), 10.35248/2168-9792.19.8.215
+View at publisherGoogle Scholar
+Singh et al., 2019
+Ajay Vikram Singh, Mohammad Hasan Dad Ansari, Shuo Wang, Peter Laux, Andreas Luch, Amit Kumar, Rajendra Patil, Stephan Nussberger
+The adoption of three-dimensional additive manufacturing from biomedical material design to 3D organ printing
+Applied Sciences (Switzerland), 9 (4) (2019), 10.3390/app9040811
+View at publisherGoogle Scholar
+Singh et al., 2018
+Narinder Singh, Rupinder Singh, I.P.S. Ahuja
+Recycling of polymer waste with SiC/Al2O3 reinforcement for rapid tooling applications
+Materials Today Communications, 15 (January) (2018), pp. 124-127, 10.1016/j.mtcomm.2018.02.008
+View PDF
+View articleView in ScopusGoogle Scholar
+Singh et al., 2021
+Rupinder Singh, Ranvijay Kumar, Inderpreet Singh
+Investigations on 3D printed thermosetting and ceramic-reinforced recycled thermoplastic-based functional prototypes
+J. Thermoplast. Compos. Mater., 34 (8) (2021), pp. 1103-1122, 10.1177/0892705719864623
+View at publisher
+View in ScopusGoogle Scholar
+Slotwinski et al., 2014
+J.A. Slotwinski, S.S. Watson, P.E. Stutzman, C.F. Ferraris, M.A. Peltz, E.J. Garboczi
+Application of physical and chemical characterization techniques to metallic powders
+AIP Conference Proceedings 1581, 33 (January) (2014), pp. 1184-1190, 10.1063/1.4864955
+View at publisherView in ScopusGoogle Scholar
+Spadea et al., 2015
+Saverio Spadea, Ilenia Farina, Anna Carrafiello, Fernando Fraternali
+Recycled nylon fibers as cement mortar reinforcement
+Constr. Build. Mater., 80 (2015), pp. 200-209, 10.1016/j.conbuildmat.2015.01.075
+View PDF
+View articleView in ScopusGoogle Scholar
+Stavropoulos, 2023
+Panagiotis Stavropoulos
+Additive Manufacturing: Design, Processes and Applications
+Springer Nature (2023)
+Google Scholar
+Stefaniak et al., 2017a
+A.B. Stefaniak, R.F. LeBouf, M.G. Duling, J. Yi, A.B. Abukabda, C.R. McBride, T.R. Nurkiewicz
+Inhalation exposure to three-dimensional printer emissions stimulates acute hypertension and microvascular dysfunction
+Toxicol. Appl. Pharmacol., 335 (September) (2017), pp. 1-5, 10.1016/j.taap.2017.09.016
+View PDF
+View articleView in ScopusGoogle Scholar
+Stefaniak et al., 2019a
+A.B. Stefaniak, A.R. Johnson, S. du Preez, D.R. Hammond, J.R. Wells, J.E. Ham, R.F. LeBouf, S.B. Martin, M.G. Duling, L.N. Bowers, A.K. Knepp, D.J. de Beer, J.L. du Plessis
+Insights into emissions and exposures from use of industrial-scale additive manufacturing machines
+Saf. Health Work, 10 (2) (2019), pp. 229-236, 10.1016/j.shaw.2018.10.003
+View PDF
+View articleView in ScopusGoogle Scholar
+Stefaniak et al., 2019b
+A.B. Stefaniak, A.R. Johnson, S. du Preez, D.R. Hammond, J.R. Wells, J.E. Ham, R.F. LeBouf, K.W. Menchaca, S.B. Martin, M.G. Duling, L.N. Bowers, A.K. Knepp, F.C. Su, D.J. de Beer, J.L. du Plessis
+Evaluation of emissions and exposures at workplaces using desktop 3-dimensional printers
+J. Chem. Health Saf., 26 (2) (2019), pp. 19-30, 10.1016/j.jchas.2018.11.001
+View PDF
+View articleView in ScopusGoogle Scholar
+Stefaniak et al., 2017b
+Aleksandr B. Stefaniak, Ryan F. Lebouf, Jinghai Yi, Jason Ham, Timothy Nurkewicz, Diane E. Schwegler-Berry, Bean T. Chen, J. Raymond Wells, Matthew G. Duling, Robert B. Lawrence, Stephen B. Martin, Alyson R. Johnson, M. Abbas Virji
+Characterization of chemical contaminants generated by a desktop fused deposition modeling 3-dimensional printer
+J. Occup. Environ. Hyg., 14 (7) (2017), pp. 540-550, 10.1080/15459624.2017.1302589
+View at publisher
+View in ScopusGoogle Scholar
+Sudbrack et al., 2018
+Chantal K. Sudbrack, Bradley A. Lerch, Timothy M. Smith, Ivan E. Locci, David L. Ellis, Aaron C. Thompson, Benjamin Richards
+Impact of Powder Variability on the Microstructure and Mechanical Behavior of Selective Laser Melted Alloy 718
+Vols. 2018-June, Springer International Publishing (2018)
+Google Scholar
+Sun et al., 2021
+Cheng Sun, Yun Wang, Michael D. McMurtrey, Nathan D. Jerred, Frank Liou, Ju Li
+Additive manufacturing for energy: a review
+Appl. Energy, 282 (May 2020) (2021), 10.1016/j.apenergy.2020.116041
+View at publisher
+Google Scholar
+Tang et al., 2015
+H.P. Tang, M. Qian, N. Liu, X.Z. Zhang, G.Y. Yang, J. Wang
+Effect of powder reuse times on additive manufacturing of Ti-6Al-4V by selective electron beam melting
+Jom, 67 (3) (2015), pp. 555-563, 10.1007/s11837-015-1300-4
+View at publisher
+View in ScopusGoogle Scholar
+Terrassa et al., 2018
+Katherine L. Terrassa, James C. Haley, Benjamin E. MacDonald, Julie M. Schoenung
+Reuse of powder feedstock for directed energy deposition
+Powder Technol., 338 (2018), pp. 819-829, 10.1016/j.powtec.2018.07.065
+View PDF
+View articleView in ScopusGoogle Scholar
+Tian et al., 2017
+Xiaoyong Tian, Tengfei Liu, Qingrui Wang, Abliz Dilmurat, Dichen Li, Gerhard Ziegmann
+Recycling and remanufacturing of 3D printed continuous carbon Fiber reinforced PLA composites
+J. Clean. Prod., 142 (2017), pp. 1609-1618, 10.1016/j.jclepro.2016.11.139
+View PDF
+View articleView in ScopusGoogle Scholar
+Ting et al., 2019
+Guan Heng Ting, Yi Wei Andrew, Daniel Tay, Ye Qian, Ming Jen Tan
+Utilization of recycled glass for 3D concrete printing: rheological and mechanical properties
+J. Mater. Cycles Waste Manage., 21 (4) (2019), pp. 994-1003, 10.1007/s10163-019-00857-x
+View at publisher
+View in ScopusGoogle Scholar
+Travitzky et al., 2014
+Nahum Travitzky, Alexander Bonet, Benjamin Dermeik, Tobias Fey, Ina Filbert-Demut, Lorenz Schlier, Tobias Schlordt, Peter Greil
+Additive manufacturing of ceramic-based materials
+Adv. Eng. Mater., 16 (6) (2014), pp. 729-754, 10.1002/adem.201400097
+View at publisherView in ScopusGoogle Scholar
+Türk et al., 2016
+Daniel Alexander Türk, Lukas Triebe, Mirko Meboldt
+Combining additive manufacturing with advanced composites for highly integrated robotic structures
+Procedia CIRP, 50 (2016), pp. 402-407, 10.1016/j.procir.2016.04.202
+View PDF
+View articleView in ScopusGoogle Scholar
+Turner et al., 2019
+Chris Turner, Mariale Moreno, Luigi Mondini, Konstantinos Salonitis, Fiona Charnley, Ashutosh Tiwari, Windo Hutabarat
+Sustainable production in a circular economy: a business model for re-distributed manufacturing
+Sustainability (Switzerland), 11 (16) (2019), pp. 1-19, 10.3390/su11164291
+View at publisherGoogle Scholar
+Unruh, 2018
+Gregory Unruh
+Circular economy, 3D printing, and the biosphere rules
+Calif. Manag. Rev., 60 (3) (2018), pp. 95-111, 10.1177/0008125618759684
+View at publisher
+View in ScopusGoogle Scholar
+Usman et al., 2024
+Favour Oluwadamilare Usman, et al.
+Integrating renewable energy solutions in the manufacturing industry: challenges and opportunities: a review
+Engineering Science & Technology Journal, 5 (3) (2024), pp. 674-703
+Google Scholar
+Valentinčič et al., 2024
+Joško Valentinčič, Jithinraj Edaklavan Koroth, Henning Zeidler
+Advancements in surface finish for additive manufacturing of metal parts: a comprehensive review of plasma electrolytic polishing (PEP)
+Virtual Phys. Prototyp., 19 (1) (2024), Article e2364222
+View in ScopusGoogle Scholar
+Veer et al., 2017
+F.A. Veer, F. Setaki, A.C. Riemslag, P. Sakkas
+The strength and ductility of glass fibre reinforced 3D-printed polypropylene
+Heron, 62 (2) (2017), pp. 85-97
+View in ScopusGoogle Scholar
+Voet et al., 2018
+Vincent S.D. Voet, Tobias Strating, Geraldine H.M. Schnelting, Peter Dijkstra, Martin Tietema, Xu Jin, Albert J.J. Woortman, Katja Loos, Jan Jager, Rudy Folkersma
+Biobased acrylate photocurable resin formulation for Stereolithography 3D printing
+ACS Omega, 3 (2) (2018), pp. 1403-1408, 10.1021/acsomega.7b01648
+View at publisher
+View in ScopusGoogle Scholar
+Walachowicz et al., 2017
+Frank Walachowicz, Ingo Bernsdorf, Ulrike Papenfuss, Christine Zeller, Andreas Graichen, Vladimir Navrotsky, Noorie Rajvanshi, Christoph Kiener
+Comparative energy, resource and recycling lifecycle analysis of the industrial repair process of gas turbine burners using conventional machining and additive manufacturing
+J. Ind. Ecol., 21 (2017), pp. S203-S215, 10.1111/jiec.12637
+View at publisher
+View in ScopusGoogle Scholar
+Wang et al., 2023
+Erdong Wang, Ruyang Yao, Qing Li, Hu Xueyou, Guangyong Sun
+Lightweight metallic cellular materials: a systematic review on mechanical characteristics and engineering applications
+Int. J. Mech. Sci., 108795 (2023), 10.1016/j.ijmecsci.2023.108795
+View at publisher
+Google Scholar
+Wang et al., 2018
+Lu Wang, Alper Kiziltas, Deborah F. Mielewski, Ellen C. Lee, Douglas J. Gardner
+Closed-loop recycling of polyamide12 powder from selective laser sintering into sustainable composites
+J. Clean. Prod., 195 (2018), pp. 765-772, 10.1016/j.jclepro.2018.05.235
+View PDF
+View articleView in ScopusGoogle Scholar
+Wang et al., 2019
+Peng Hao Wang, Ronald Sterkenburg, Garam Kim, Yuwei He
+Investigating the void content, fiber content, and Fiber orientation of 3D printed recycled carbon Fiber
+Key Eng. Mater., 801 KEM (May 2019) (2019), pp. 276-281, 10.4028/www.scientific.net/KEM.801.276
+View at publisherView in ScopusGoogle Scholar
+Witzendorff et al., 2018
+Von Witzendorff, Leonhard Pohl Philipp, Oliver Suttmann, Peter Heinrich, Achim Heinrich, Jörg Zander, Holger Bragard, Stefan Kaierle
+Additive manufacturing of glass: CO2-laser glass deposition printing
+Procedia CIRP, 74 (March) (2018), pp. 272-275, 10.1016/j.procir.2018.08.109
+View at publisher
+Google Scholar
+Woern and Pearce, 2018
+Aubrey L. Woern, Joshua M. Pearce
+3-D printable polymer pelletizer chopper for fused granular fabrication-based additive manufacturing
+Inventions, 3 (4) (2018), 10.3390/inventions3040078
+View at publisherGoogle Scholar
+Woern et al., 2018
+Aubrey L. Woern, Dennis J. Byard, Robert B. Oakley, Matthew J. Fiedler, Samantha L. Snabes, Joshua M. Pearce
+Fused particle fabrication 3-D printing: recycled materials’ optimization and mechanical properties
+Materials, 11 (8) (2018), 10.3390/ma11081413
+View at publisherGoogle Scholar
+Wojtyła et al., 2017
+Szymon Wojtyła, Piotr Klama, Tomasz Baran
+Is 3D printing safe? Analysis of the thermal treatment of thermoplastics: ABS, PLA, PET, and nylon
+J. Occup. Environ. Hyg., 14 (6) (2017), pp. D80-D85, 10.1080/15459624.2017.1285489
+View at publisher
+View in ScopusGoogle Scholar
+Wu and Raymond, 2019
+Haishang Wu, Wu. Raymond
+The role of educational action research of recycling process to the green technologies, environment engineering, and circular economies
+International Journal of Recent Technology and Engineering, 8 (2) (2019), pp. 1639-1645, 10.35940/ijrte.B2384.078219
+View at publisherView in ScopusGoogle Scholar
+Yi et al., 2016
+Jinghai Yi, Ryan F. LeBouf, Matthew G. Duling, Timothy Nurkiewicz, Bean T. Chen, M. Diane Schwegler-Berry, Abbas Virji, Aleksandr B. Stefaniak
+Emission of particulate matter from a desktop three-dimensional (3D) printer
+Journal of Toxicology and Environmental Health - Part A: Current Issues, 79 (11) (2016), pp. 453-465, 10.1080/15287394.2016.1166467
+View PDF
+View articleGoogle Scholar
+Yosofi et al., 2018
+Mazyar Yosofi, Olivier Kerbrat, Pascal Mognol
+Energy and material flow modelling of additive manufacturing processes
+Virtual Phys. Prototyp., 13 (2) (2018), pp. 83-96, 10.1080/17452759.2017.1418900
+View at publisher
+View in ScopusGoogle Scholar
+Yosofi et al., 2019
+Mazyar Yosofi, Olivier Kerbrat, Pascal Mognol
+Additive manufacturing processes from an environmental point of view: a new methodology for combining technical, economic, and environmental predictive models
+Int. J. Adv. Manuf. Technol., 102 (9–12) (2019), pp. 4073-4085, 10.1007/s00170-019-03446-2
+View at publisher
+View in ScopusGoogle Scholar
+Zander et al., 2018
+Nicole E. Zander, Margaret Gillan, Robert H. Lambeth
+Recycled polyethylene terephthalate as a new FFF feedstock material
+Addit. Manuf., 21 (March) (2018), pp. 174-182, 10.1016/j.addma.2018.03.007
+View PDF
+View articleView in ScopusGoogle Scholar
+Zander et al., 2019
+Nicole E. Zander, Margaret Gillan, Zachary Burckhard, Frank Gardea
+Recycled polypropylene blends as novel 3D printing materials
+Addit. Manuf., 25 (October 2018) (2019), pp. 122-130, 10.1016/j.addma.2018.11.009
+View PDF
+View articleView in ScopusGoogle Scholar
+Zhao et al., 2018a
+Peng Zhao, Fu Gu Chengchen Rao, Nusrat Sharmin, Fu. Jianzhong
+Close-looped recycling of polylactic acid used in 3D printing: an experimental investigation and life cycle assessment
+J. Clean. Prod., 197 (2018), pp. 1046-1055, 10.1016/j.jclepro.2018.06.275
+View PDF
+View articleView in ScopusGoogle Scholar
+Zhao et al., 2018b
+Xing Guan Zhao, Kyung Jun Hwang, Dongoh Lee, Taemin Kim, Namsu Kim
+Enhanced mechanical properties of self-polymerized polydopamine-coated recycled PLA filament used in 3D printing
+Appl. Surf. Sci., 441 (2018), pp. 381-387, 10.1016/j.apsusc.2018.01.257
+View PDF
+View articleView in ScopusGoogle Scholar
+Zhou et al., 2024
+L. Zhou, J. Miller, J. Vezza, M. Mayster, M. Raffay, Q. Justice, Z. Al Tamimi, G. Hansotte, L.D. Sunkara, J. Bernat
+Additive manufacturing: a comprehensive review
+Sensors, 24 (2024), p. 2668, 10.3390/s24092668
+View in ScopusGoogle Scholar
+Zhou et al., 2015
+Yu Zhou, Xiangri Kong, Ailu Chen, Shijie Cao
+Investigation of ultrafine particle emissions of desktop 3D printers in the clean room
+Procedia Engineering, 121 (0) (2015), pp. 506-512, 10.1016/j.proeng.2015.08.1099
+View PDF
+View articleView in ScopusGoogle Scholar
+Ziółkowski and Dyl, 2020
+Marcin Ziółkowski, Tomasz Dyl
+Possible applications of additive manufacturing technologies in shipbuilding: a review
+Machines, 8 (4) (2020), pp. 1-34, 10.3390/machines8040084
+View in ScopusGoogle Scholar
+Zontek et al., 2017
+Tracy L. Zontek, Burton R. Ogle, John T. Jankovic, Scott M. Hollenbeck
+An exposure assessment of desktop 3D printing
+J. Chem. Health Saf., 24 (2) (2017), pp. 15-25, 10.1016/j.jchas.2016.05.008
+View PDF
+View articleView in ScopusGoogle Scholar
+Cited by (6)
+Advancing sustainability in Electron and laser beam powder Bed Fusion technologies via Innovation: Insights from patent analysis
+2025, Computers and Industrial Engineering
+Show abstract
+Adaptive Spatial Lattice Manufacturing (ASLM): A novel approach to efficient lattice structure production
+2025, Materials and Design
+Show abstract
+Carob tree (Ceratonia siliqua L.): A sustainable solution for green entrepreneurship
+2025, Incentives and Benefits for Adopting Green Entrepreneurship Practices
+Incentives and benefits for adopting green entrepreneurship practices
+2025, Incentives and Benefits for Adopting Green Entrepreneurship Practices
+Evaluation of Machine Learning Models for Enhancing Sustainability in Additive Manufacturing
+2025, Technologies
+A Review of Simulation Tools Utilization for the Process of Laser Powder Bed Fusion
+2025, Materials
+View Abstract
+© 2024 Institution of Chemical Engineers. Published by Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+About ScienceDirect
+Remote access
+Contact and support
+Terms and conditions
+Privacy policy
+
+Cookies are used by this site.Cookie Settings
+
+All content on this site: Copyright © 2025 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply.

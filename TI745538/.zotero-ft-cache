@@ -1,0 +1,2712 @@
+Design, Manufacture and Testing of a Liquid Rocket Engine
+Injector Test Rig
+Ryan William Neil Cooper
+Submitted in fulfilment of the academic requirements for the degree of Master of Science in
+Mechanical Engineering, College of Agriculture, Engineering and Science, University of
+KwaZulu-Natal.
+Durban, South Africa
+October 2020
+Supervisor: Prof Michael J Brooks
+Co-Supervisor: Dr Jean-Francois Pitot la Beaujardiere
+
+
+i
+DECLARATION 1 - PLAGIARISM
+I, Ryan William Neil Cooper, declare that,
+1. The research reported in this thesis, except where otherwise indicated,
+is my original research.
+2. This thesis has not been submitted for any degree or examination at any other university.
+3. This thesis does not contain other person’s data, pictures, graphs or
+other information, unless specifically acknowledged as being sourced
+from other persons.
+4. This thesis does not contain other person’s writing, unless specifically
+acknowledged as being sourced from other researchers. Where other
+written sources have been quoted, then:
+i. Their words have been re-written but the general
+information attributed to them has been referenced
+ii. Where their exact words have been used, then their
+writing has been placed in italics and inside quotation
+marks, and referenced.
+5. This thesis does not contain text, graphics or tables copied and pasted
+from the Internet, unless specifically acknowledged, and the source
+being detailed in the thesis and in the References sections.
+
+
+ii
+Acknowledgements
+I would sincerely like to thank my supervisors, Prof Michael Brooks and Dr Jean Pitot for their
+guidance and support throughout this study. Additionally, for the opportunity to work on this
+project. My sincere thanks and appreciation also goes to the following:
+- Mr Duran Martin for all the assistance. Both theoretical input during the design phase and
+physical assistance during the testing phase. Your input helped determine the success of
+this study.
+- Mr Nino Wunderlin for his design and manufacturing assistance of the required parts for
+the test stand. Additionally, for the motivation and support.
+- The ASReG team for the support and assistance during the testing phase, including Phillip
+Gyasi-Agyei, Timothy Velthuysen, Kai Broughton and Chikhar Maharaj.
+- The workshop technicians, namely Mr Danesh Singh, Mr Yushan Reddy and Mr Strini
+Govender for the work done and practical advice given.
+- My friends and family for their endless understanding, support and motivation towards
+my studies.
+- My fiancé Chantelle Visser for her endless understanding and support.
+I would like to take this opportunity to thank the Department of Science and Innovation for the
+financial support of the SAFFIRE project. Also, the Council for Scientific and Industrial Research
+for the use of their HPC resources, namely Dr Charles Crosby, for his assistance.
+
+
+iii
+Abstract
+The combustion efficiency and stability of a liquid rocket engine are influenced by the distribution
+and atomization of propellants within the combustion chamber. High combustion efficiency and
+stable combustion require finely atomized propellants distributed evenly across the chamber
+cross-section, in the correct oxidiser to fuel (O/F) ratio. The injector is the primary component
+that controls the distribution and atomization of propellants within the combustion chamber.
+Therefore, the injector fuel and oxidiser domains require in-depth analyses to ensure the correct
+propellant conditions are present during combustion.
+The South African First Integrated Rocket Engine (SAFFIRE) is a liquid oxygen/kerosene engine.
+With a thrust of 27.5 kN, it has been designed to provide propulsion to a small satellite launch
+vehicle. The injector was designed using computational fluid dynamic (CFD) software to ensure
+the propellants were evenly distributed across the chamber cross-section. The design concluded
+that the propellants were evenly distributed with a maximum distribution deviation of ±2 %.
+Although extensive CFD analyses were conducted during the design phase of the SAFFIRE
+injector, a comprehensive test program was required to establish the actual performance. This
+study presents the experimental procedure and results used to validate the modelled performance
+of the SAFFIRE injector. Cold flow tests, with water as an analogue fluid, were performed using
+a custom-developed test rig to determine the required injector pressure drop to drive the fuel and
+oxidiser at mass flow rates of 2.28 kg/s and 5.66 kg/s respectively. Propellant distribution tests
+were also conducted to ensure the correct O/F ratio was evenly distributed across the chamber
+cross-section. This study employed a two-test method to mitigate the effects of the transient
+periods experienced during start-up and shutdown. For comparative data sets, the fluid properties
+for the simulations were updated to match the analogue fluid properties used during testing.
+The fuel and oxidiser simulations were validated using the experimental data gathered from the
+cold flow tests. It was concluded that the most appropriate turbulence model and wall treatment
+for the fuel domain, containing internal passages and small diameter holes, was a K-Epsilon
+turbulence model with a low y+ wall treatment. The simulated pressure drop was found to deviate
+by 2.48 % from the experimental value, with the average distribution deviating by 5.46 %. For the
+oxidiser domain, containing mainly open channel axial flow, the K-Epsilon turbulence model with
+a high y+ wall treatment was concluded to be the most appropriate model. The simulated pressure
+drop was found to deviate by 14.59 % from the experimental value, with the average distribution
+deviating by 8.18 %.
+
+
+iv
+Table of Contents
+DECLARATION 1 - PLAGIARISM ............................................................................................. i
+Acknowledgements ....................................................................................................................... ii
+Abstract ........................................................................................................................................ iii
+Table of Contents ......................................................................................................................... iv
+List of Figures.............................................................................................................................. vii
+List of Tables................................................................................................................................. x
+Nomenclature ............................................................................................................................... xi
+1. Introduction ........................................................................................................................... 1
+1.1 Liquid Rocket Propulsion.............................................................................................. 1
+1.2 SAFFIRE Programme Overview................................................................................... 1
+1.3 Injector Cold Flow Testing............................................................................................ 2
+1.4 CFD Error and Uncertainty ........................................................................................... 2
+1.5 Problem Statement and Research Objectives ................................................................ 3
+1.6 Dissertation Outline....................................................................................................... 3
+2. Literature Review .................................................................................................................. 5
+2.1 Introduction ................................................................................................................... 5
+2.2 Cold Flow Testing Methods .......................................................................................... 5
+2.3 Pressurization Systems .................................................................................................. 8
+2.4 Propellant Distribution .................................................................................................. 9
+2.5 Atomization ................................................................................................................. 12
+2.6 Existing Test Stands .................................................................................................... 14
+2.7 Ground Support Equipment......................................................................................... 17
+2.8 CFD Verification and Validation ................................................................................ 17
+2.9 Turbulence Models and Wall Functions...................................................................... 20
+2.10 Uncertainty and Error .................................................................................................. 21
+2.11 Orifice Pressure Drop and Tolerances......................................................................... 24
+2.12 SAFFIRE Injector........................................................................................................ 25
+3. Test Facility ......................................................................................................................... 26
+3.1 Introduction ................................................................................................................. 26
+3.2 Test Facility................................................................................................................. 26
+3.2.1. Propellant Storage & Pressurization.................................................................... 26
+
+
+v
+3.2.2. Test Stand ............................................................................................................ 29
+3.2.3. Control Room and System................................................................................... 31
+3.3 Summary...................................................................................................................... 35
+4. Test Stand Calibration ......................................................................................................... 36
+4.1 Introduction ................................................................................................................. 36
+4.2 Tank Pressure and Manifold Pressure Relationship .................................................... 36
+4.3 Line Loss Calibration .................................................................................................. 38
+4.4 Main Valve Calibration ............................................................................................... 38
+4.5 Summary...................................................................................................................... 39
+5. Validation Methodology...................................................................................................... 40
+5.1 Introduction ................................................................................................................. 40
+5.2 Validation Methodology.............................................................................................. 40
+5.3 Steady State Comparison............................................................................................. 42
+5.4 Mathematical Model.................................................................................................... 44
+5.5 Test Articles................................................................................................................. 44
+5.6 Fuel Test Piece ............................................................................................................ 45
+5.6.1. Geometric Simplifications................................................................................... 48
+5.6.2. Machining Imperfections..................................................................................... 48
+5.6.3. Structural Design & FEA Analysis...................................................................... 50
+5.7 LOX Test Piece ........................................................................................................... 51
+5.7.1. Machining Tolerances ......................................................................................... 53
+5.7.2. Structural Design & FEA Analysis...................................................................... 54
+5.8 CFD Simulations Updates ........................................................................................... 56
+5.9 Fuel Propellant Distribution ........................................................................................ 58
+5.10 LOX Propellant Distribution ....................................................................................... 60
+5.11 Summary...................................................................................................................... 62
+6. Uncertainty Calculations and Measurement Limitations..................................................... 63
+6.1 Introduction ................................................................................................................. 63
+6.2 Pressure Drop and Flow Factor Uncertainties ............................................................. 63
+6.3 Propellant Distribution Uncertainties .......................................................................... 64
+6.4 Two-Test Method Justification.................................................................................... 66
+6.5 CFD Verification ......................................................................................................... 67
+6.6 Summary...................................................................................................................... 69
+7. Experimental and Simulation Results.................................................................................. 70
+
+
+vi
+7.1 Introduction ................................................................................................................. 70
+7.2 Simulation Data ........................................................................................................... 70
+7.3 Pressure Drop Calibration ........................................................................................... 70
+7.4 Fuel Domain Results ................................................................................................... 71
+7.4.1. Pressure Drop ...................................................................................................... 71
+7.4.2. Turbulence Model Sensitivity.............................................................................. 72
+7.4.3. Fuel Distribution Results ..................................................................................... 73
+7.5 LOX Domain Results .................................................................................................. 78
+7.5.1. Pressure Drop ...................................................................................................... 79
+7.5.2. Turbulence Model Sensitivity.............................................................................. 80
+7.5.3. LOX Distribution Results.................................................................................... 80
+7.6 Summary...................................................................................................................... 85
+8. Conclusion and Recommendations ..................................................................................... 87
+8.1 Overview ..................................................................................................................... 87
+8.2 Conclusion................................................................................................................... 87
+8.3 Discussion of Problems Encountered .......................................................................... 89
+8.4 Recommendations and Future Work ........................................................................... 90
+References ................................................................................................................................... 91
+Appendix A: Simulation Graphs ................................................................................................. 94
+Appendix B: Bolted Connections .............................................................................................. 100
+Appendix C: Two-Test Method Sample Calculation ................................................................ 102
+Appendix D: Control System Code ........................................................................................... 103
+Appendix E: Machine Drawings ............................................................................................... 107
+
+
+vii
+List of Figures
+Figure 2-1: Hybrid rocket engine cold flow test (Broughton, 2018) ............................................. 6
+Figure 2-2: Spray fan distributions of an unlike triplet element (Gill & Nurick, 1976)................ 7
+Figure 2-3: Regulated blowdown feed system (Sutton & Biblarz, 2001) ..................................... 9
+Figure 2-4: Injector element types (Ito, 1995)............................................................................. 10
+Figure 2-5: Geometric factors affecting inter-element mixing of like doublet elements (Falk &
+Burick, 1973)............................................................................................................................... 11
+Figure 2-6: Injector spray collection system (McHale, 1974) ..................................................... 12
+Figure 2-7: Viscosity, droplet size and time taken to atomize (Graco, 1995) ............................ 13
+Figure 2-8: BURPG vertical hot fire test stand (Boston University, 2018)................................. 14
+Figure 2-9: LPL cold flow test stand (Moruzzi et al., 2018) ....................................................... 15
+Figure 2-10: Colossus test stand (Seshadri, 2016)....................................................................... 16
+Figure 2-11: Validation phases (AIAA, 1998) ............................................................................ 18
+Figure 2-12: SAFFIRE injector cross-section (Martin, 2019)..................................................... 25
+Figure 3-1: Test Facility Layout .................................................................................................. 26
+Figure 3-2: Pressure vessel and pressurization system................................................................ 27
+Figure 3-3: Pressurization system................................................................................................ 28
+Figure 3-4: P&ID......................................................................................................................... 28
+Figure 3-5: Test stand during assembly in a blast-proof area...................................................... 30
+Figure 3-6:Test stand with the fuel test article ............................................................................ 30
+Figure 3-7: Main control box....................................................................................................... 31
+Figure 3-8: LabVIEW cold flow testing user interface ............................................................... 32
+Figure 3-9: Testing safety and setup procedure........................................................................... 33
+Figure 4-1: Swagelok regulator pressure curve ........................................................................... 36
+Figure 4-2: Decreasing manifold pressure................................................................................... 37
+Figure 4-3: Relatively constant manifold pressure...................................................................... 37
+Figure 4-4: Main valve positioner (APL, 2006) .......................................................................... 38
+Figure 4-5: Double acting pneumatic ball valve.......................................................................... 39
+Figure 5-1: Validation process and outcomes ............................................................................. 41
+Figure 5-2: Resulting steady state pressures................................................................................ 42
+Figure 5-3: 12-second full duration test pressures....................................................................... 43
+Figure 5-4: 2-second valve test pressures.................................................................................... 43
+Figure 5-5: Integrated flow domains ........................................................................................... 44
+Figure 5-6: Fuel domain .............................................................................................................. 45
+Figure 5-7: Fuel test piece exploded view................................................................................... 46
+Figure 5-8: Fuel inlet step............................................................................................................ 47
+
+
+viii
+Figure 5-9: Fuel test article pressure tap...................................................................................... 47
+Figure 5-10: Fillets on down-coming holes................................................................................. 48
+Figure 5-11: Updated geometry with no fillets............................................................................ 48
+Figure 5-12: Profile projector with fuel faceplate ....................................................................... 49
+Figure 5-13: Fuel faceplate main orifice ..................................................................................... 49
+Figure 5-14: Film cooling defective orifice................................................................................. 50
+Figure 5-15: Injector body maximum Von-Mises stress ............................................................. 51
+Figure 5-16: Faceplate deformation............................................................................................. 51
+Figure 5-17: LOX domain top and bottom view ......................................................................... 52
+Figure 5-18: Lox test piece exploded view.................................................................................. 52
+Figure 5-19: LOX test article....................................................................................................... 53
+Figure 5-20: 1.4 mm hole sample ................................................................................................ 53
+Figure 5-21: Ring 1 orifice exit (good quality) ........................................................................... 54
+Figure 5-22: Ring 4 orifice exit (poor quality) ............................................................................ 54
+Figure 5-23: Injector body Von-Mises stress .............................................................................. 55
+Figure 5-24: LOX faceplate and injector body gap ..................................................................... 55
+Figure 5-25: Fuel domain wall y+ scene ...................................................................................... 57
+Figure 5-26: LOX domain wall y+ scene ..................................................................................... 58
+Figure 5-27: Fuel faceplate during cold flow testing................................................................... 58
+Figure 5-28: Fuel collection attachment ...................................................................................... 59
+Figure 5-29: Distribution plate construction................................................................................ 59
+Figure 5-30: Percentage error of an additional 1g of water vs test duration................................ 60
+Figure 5-31: LOX domain impinging streams............................................................................. 61
+Figure 5-32: 3D printed distribution attachment ......................................................................... 61
+Figure 5-33: LOX distribution attachment .................................................................................. 62
+Figure 6-1: Uncertainty components ........................................................................................... 63
+Figure 7-1: Mass flow rate vs manifold pressure ........................................................................ 71
+Figure 7-2: Manifold pressure vs mass flow rate ........................................................................ 72
+Figure 7-3: Turbulence model and wall treatment sensitivity ..................................................... 73
+Figure 7-4: Fuel faceplate chamber section................................................................................. 74
+Figure 7-5: Average propellant distribution deviation per ring................................................... 75
+Figure 7-6: Ring one simulation vs experimental distribution data............................................. 76
+Figure 7-7: Ring two simulation vs experimental distribution data ............................................ 76
+Figure 7-8: Ring three simulation and experimental data............................................................ 77
+Figure 7-9: Ring four simulation and experimental data............................................................. 77
+Figure 7-10: Ring five simulation and experimental distribution................................................ 78
+
+
+ix
+Figure 7-11: Manifold Pressure vs mass flow rate ...................................................................... 79
+Figure 7-12: Turbulence model and wall treatment sensitivity study.......................................... 80
+Figure 7-13: LOX faceplate......................................................................................................... 81
+Figure 7-14: Ring average deviation for experimental and simulation data................................ 82
+Figure 7-15: Ring one experimental and simulation deviation from nominal............................. 83
+Figure 7-16: Ring two experimental and simulation deviation from nominal............................. 83
+Figure 7-17: Ring three experimental and simulation deviation from nominal........................... 84
+Figure 7-18: Ring four experimental and simulation deviation from nominal............................ 84
+Figure 7-19: Ring five experimental and simulation deviation from nominal ............................ 85
+Figure A-1: F1 simulation deviation............................................................................................ 94
+Figure A-2: F2 simulation deviation............................................................................................ 94
+Figure A-3: F3 simulation deviation............................................................................................ 95
+Figure A-4: F4 simulation deviation............................................................................................ 95
+Figure A-5: FF simulation deviation ........................................................................................... 96
+Figure A-6: L1 simulation deviation ........................................................................................... 96
+Figure A-7: L2 simulation deviation ........................................................................................... 97
+Figure A-8: L3 simulation deviation ........................................................................................... 97
+Figure A-9: L4 simulation deviation ........................................................................................... 98
+Figure A-10: L5 simulation deviation ......................................................................................... 98
+Figure A-11: Fuel simulation residuals ....................................................................................... 99
+Figure A-12: LOX simulation residuals ...................................................................................... 99
+Figure D-1: LabVIEW primary control loop............................................................................. 104
+Figure D-2: LabVIEW primary valve control loop .................................................................. 105
+Figure D-3: LabVIEW auto sequence ....................................................................................... 106
+Figure E-1: Fuel top manifold ................................................................................................... 108
+Figure E-2: Fuel injector body................................................................................................... 109
+Figure E-3: Fuel faceplate ......................................................................................................... 110
+Figure E-4: LOX top manifold .................................................................................................. 111
+Figure E-5: LOX injector body ................................................................................................. 112
+Figure E-6: LOX faceplate ........................................................................................................ 113
+
+
+x
+List of Tables
+Table 3-1: P&ID description ....................................................................................................... 29
+Table 3-2: LabVIEW input parameters ....................................................................................... 31
+Table 3-3: Pressure transducer locations and accuracies............................................................. 34
+Table 3-4: Solenoid valve locations and function ....................................................................... 35
+Table 5-1: Nominal mass flow rates per orifice .......................................................................... 45
+Table 5-2: Fuel test piece dimension updates.............................................................................. 48
+Table 5-3: LOX and fuel simulation boundary conditions and solver settings ........................... 56
+Table 6-1: Absolute uncertainties of flow factor variables.......................................................... 64
+Table 6-2: Distribution test uncertainty....................................................................................... 65
+Table 6-3: Distribution test deviation uncertainty ....................................................................... 65
+Table 6-4: Fuel manifold pressure variation between tests ......................................................... 67
+Table 6-5: LOX manifold pressure for start-up and full duration tests ....................................... 67
+Table 6-6: Fuel simulation GCI inputs ........................................................................................ 68
+Table 6-7: LOX simulation GCI inputs ....................................................................................... 68
+Table 6-8: Grid convergence outputs .......................................................................................... 68
+Table 7-1: Fuel Simulation and Experimental starting point....................................................... 70
+Table 7-2: Flow factor for experimental and simulation data ..................................................... 72
+Table 7-3: Simulation percentage deviation from experimental results ...................................... 75
+Table B-1: Fuel test article bolt calculations ............................................................................. 101
+Table B-2: LOX test article bolt calculations ............................................................................ 101
+Table C-1: Example test results................................................................................................. 102
+
+
+xi
+Nomenclature
+Symbol Description Units
+Cୢ Coefficient of discharge [-]
+C୴ Flow coefficient [-]
+d Diameter [m]
+Dorifice Propellant deviation [%]
+Fୱ Safety factor [-]
+F1 Fuel ring 1 [-]
+F2 Fuel ring 2 [-]
+F3 Fuel ring 3 [-]
+F4 Fuel ring 4 [-]
+FF Fuel film cooling ring [-]
+K Coverage factor [-]
+K Head loss coefficient [-]
+K୴ Flow factor [m3/h.bar0.5]
+ṁ Mass flow rate [kg/s]
+md Sample measurement [-]
+m୭୰୧୤୧ୡୣ Orifice sample mass [g]
+n Number of observations [-]
+N Number of orifices [-]
+Oh Ohnesorge number [-]
+p Order of convergence [-]
+P Pressure [Pa]
+∆P Change in pressure [Pa]
+P୸ୣ୰୭ Zero grid spacing continuum value [-]
+Q Flow rate [m3/s]
+r Refinement ratio [-]
+Re Reynolds number [-]
+s Standard deviation [-]
+SG Specific gravity [-]
+u Uncertainty [-]
+U Expanded uncertainty [-]
+v Mean jet velocity [m/s]
+We Weber number [-]
+
+
+xii
+Greek symbols Description Units
+γ Surface tension [N/m]
+δ Device resolution [-]
+μ Dynamic viscosity [Pa. s]
+ρ Density [kg/m3]
+σ Standard deviation [-]
+Abbreviation Description
+AIAA American Institute of Aeronautics and Astronautics
+ASME American Society of Mechanical Engineers
+ASReG Aerospace Systems Research Group
+BURPG Boston University Rocket Propulsion Group
+CAD Computer-aided Design
+CFD Computational Fluid Dynamics
+CHPC Centre for High-Performance Computing
+DNS Direct Numerical Simulation
+EDM Electrical Discharge Machining
+EMRTC Energetic Materials Research and Testing Center
+FEA Finite Element Analysis
+GCI Grid Convergence Index
+L/D Length to Diameter ratio
+LES Large Eddy Simulation
+LOX Liquid Oxygen
+LPL Liquid Propulsion Laboratory
+NASA National Aeronautics and Space Administration
+NI National Instruments
+O-F-O Oxidiser – Fuel – Oxidiser
+O/F Oxidiser to Fuel Ratio
+P&ID Piping and Instrumentation Diagram
+PDPA Phase Doppler Particle Analyser
+PIV Particle Image Velocimetry
+RANS Reynolds-average Navier-Stokes
+REM Richards Extrapolation Method
+SAFFIRE South African First Integrated Rocket Engine
+SEM Standard Error of the Mean
+SMD Sauter Mean Diameter
+
+
+xiii
+UI User Interface
+UKZN University of KwaZulu-Natal
+USC University of Southern California
+WEDM Wire Electrical Discharge Machining
+
+
+1
+1. Introduction
+1.1 Liquid Rocket Propulsion
+A liquid rocket engine injector must supply propellants to the combustion chamber in the correct
+proportions and pressures to yield an efficient and stable combustion process (Huzel & Huang, 1992).
+These parameters are based on the O/F ratio and the chamber pressure of an engine. The injector is also
+responsible for sealing the top of the combustion chamber where it experiences high pressures and
+temperatures during combustion. Therefore, both the flow and structural design are critical to the overall
+performance of a liquid rocket engine. Computational fluid dynamic software has become a useful tool
+within the design phase for evaluating the performance of a liquid rocket engine injector, but the
+modelled results must be validated through experimental methods. Within the propulsion industry, the
+process of testing a system or component with non-reactive analogue fluids is known as cold flow
+testing (Gill & Nurick, 1976). Cold flow testing methods are used to test the performance outputs of a
+system or component in a safe and controlled environment without the complexities introduced by
+combustion.
+The injector design influences the combustion stability and designing for stability can reduce
+combustion efficiency. To achieve high levels of combustion efficiency, uniform distribution of the
+desired mixture ratio and fine atomization is required (Elverum & Morey, 1959). Typically, a 15-20%
+pressure drop across the injector system is targeted (Huzel & Huang, 1992). This pressure drop allows
+for slight pressure fluctuation to occur during operation without causing reverse flow within the injector
+flow domains. According to the National Aeronautics and Space Administration (NASA), pressure
+fluctuations of ±5 % of the engine chamber pressure are considered acceptable for stable combustion
+(Huzel & Huang, 1992). When designing for stability or performance, parameters such as the element
+type and layout must be considered. The element layout affects the mixing interaction between
+elements, mass distribution and effective mixture-ratio distribution. These factors are known to
+influence the stability of a liquid rocket engine (Huzel & Huang, 1992; Sutton & Biblarz, 2001).
+1.2 SAFFIRE Programme Overview
+The SAFFIRE program comprises the paper design of a liquid rocket engine with a predicted thrust of
+27.5 kN. The combustion chamber is thermally insulted using an ablative liner. Cooling is assisted by
+a fuel-rich region near the chamber wall, known as film cooling. The injector design consists of a
+concentric ring injector that has been designed to supply liquid oxygen (LOX) and kerosene to the
+combustion chamber. The injector is designed to produce an even mass flow distribution, such that the
+mass flow rate through each orifice is within ±2 % of the nominal mass flow rate. This nominal mass
+flow rate is based on even distribution for the correct O/F ratio. To achieve maximum engine thrust the
+
+
+2
+SAFFIRE injector must perform as designed. The current performance of the SAFFIRE injector is based
+solely on CFD analyses. Therefore, a comprehensive cold flow testing campaign is required to validate
+the actual performance of the SAFFIRE injector. The SAFFIRE engine was designed to provide
+propulsion for a small satellite launcher. Therefore, the actual injector performance is required to ensure
+the launcher can successfully deliver a payload to orbit.
+1.3 Injector Cold Flow Testing
+Various methods of cold flow testing have been developed to determine specific performance outputs
+of liquid rocket engines. Cold flow testing with an analogue fluid is used to test the pressure drop and
+propellant distribution of an injector (Elverum & Morey, 1959). Extensive research data is available for
+different element types/shapes and the resulting propellant distribution (Elverum & Morey, 1959;
+McHale, 1974; Riebling, 1967; Rupe, 1973). Based on these studies and others, an appropriate element
+configuration and angle were selected for the SAFFIRE injector: a triplet element configuration at 30°
+(Martin, 2019). This element type relies on two outer LOX streams impinging on a central fuel stream
+to atomise and distribute the propellants. The major factor that determines the impingement
+performance is the momentum of each stream. An unbalanced momentum will result in a skewed spray
+fan leading to hot spots on the chamber walls (Elverum & Morey, 1959). The pressure drop across the
+injector is the main factor that determines the flow rate of each propellant. It also decouples the
+combustion chamber from the feed system and prevents any back propagation of propellants caused by
+pressure spikes in the combustion chamber (Huzel & Huang, 1992). Therefore, the pressure drop and
+propellant distribution are performance parameters that must be evaluated in an injector test programme
+as they directly influence the impingement and the overall performance of the engine.
+1.4 CFD Error and Uncertainty
+Verification and validation are processes that ensure a simulated problem is being solved correctly.
+CFD verification is the process of ensuring the partial differential equations selected to describe the
+computational model are being solved correctly to yield an accurate solution. This is purely a numerical
+analysis. Validation is the process of ensuring these partial differential equations accurately describe
+the physical model being solved based on experimental data (AIAA, 1998). Before a model can be
+validated, it must first be verified to avoid a false validation (Pelletier, 2010). Verification involves
+investigating the errors within a CFD solution, namely insufficient spatial and temporal discretization
+convergence, insufficient convergence of an iterative procedure, computer roundoff and computer
+programming errors (Oberkampf & Trucano, 2002).
+
+
+3
+1.5 Problem Statement and Research Objectives
+The SAFFIRE injector design includes the following operating performance parameters: 1) the required
+pressure drops for the design mass flow rates and 2) the propellant distributions for the fuel and oxidiser
+domains. This experimental study aims to validate the performance parameters through cold flow
+testing methods.
+The study comprises the following research objectives.
+1. Develop an experimental testing methodology to determine the pressure drop across separate
+oxidiser and fuel injector domains, for nominal mass flow rates, and propellant distribution for
+the SAFFIRE injector.
+2. Develop and commission a SAFFIRE injector test stand incorporating an appropriate control
+system, flow control valves and data acquisition hardware to obtain the required experimental
+data.
+3. Obtain comparative data sets for the simulation and experimental results by conducting cold
+flow tests for the oxidiser and fuel domains, using water as an analogue fluid, and simulating
+the performance of the injector domains using the analogue fluid properties.
+4. Determine the accuracy of the simulation results based on the deviation from the experimental
+data and validate the final performance of the injector.
+The results of this study will aid future developments of injector design and optimization by determining
+the accuracy of the selected simulation model.
+1.6 Dissertation Outline
+A brief introduction to liquid rocket engine injectors, CFD verification and CFD validation is given in
+Chapter 1. An overview of the SAFFIRE programme is presented followed by the research problem
+statement and objectives.
+Chapter 2 covers literature on liquid rocket engine testing, with specific reference to cold flow testing.
+Numerous cold flow testing methods and the corresponding outputs are investigated. Furthermore, CFD
+validation techniques and methods are covered, including evaluating experimental error and statistical
+analysis of experimental data.
+Chapter 3 summarizes the test stand design, including the plumbing setup, valve types and actuation,
+control system, pressurization system and the data acquisition hardware. The test facility zones and sub
+systems are shown and described in detail.
+
+
+4
+Chapter 4 describes the calibration process of the test stand and the pressurization system. This ensured
+a relatively constant tank pressure is maintained during operating conditions. Preliminary tests were
+also conducted to determine and decrease the valve actuation delay.
+Chapter 5 covers the methodology followed for the CFD validation. This includes the test article
+designs, geometric changes, simulation updates, steady state testing methods and the respective outputs.
+The propellant collection method for the distribution tests is shown and discussed.
+Chapter 6 covers the process of determining the uncertainty of each experimental data point obtained
+through physical testing. A justification of the two-test method used to obtain the mass flow rate
+measurement is provided. Lastly, the updated simulation results modelled using the analogue test fluid
+are verified.
+Chapter 7 summarises the comparison of the experimental data and the CFD simulation results. The
+simulations included all design changes made due to machining limitations and practical considerations.
+The differences in pressure drop and propellant distribution with respect to the experimental data are
+investigated. The accuracy of the selected turbulence models and wall treatments are determined based
+on the experimental data gathered.
+A final review of the experimental data and CFD simulation results is presented in Chapter 8. To
+conclude, guidelines are discussed on the best suited CFD model parameters, namely turbulence model
+and wall treatment, to aid future injector designs. Recommendations for future work and problems
+encountered are also discussed.
+
+
+5
+2. Literature Review
+2.1 Introduction
+Computational fluid dynamic software has become a useful and effective tool for modelling the
+performance of liquid rocket engine injectors, including modelling the pressure drop, propellant
+distribution (Martin, 2019), evaluating the performance of different element configurations
+(Thirupathi et al., 2015), and modelling the combustion process from a resulting injector spray (Cheng
+& Farmer, 2002). Employing CFD methods to optimise the performance of liquid rocket engines is by
+no means a novel concept as NASA have been using this approach since the 1960s. One early use was
+the development of codes to compute combustion stability in liquid hydrogen/oxygen rocket chambers
+(Priem & Guentert, 1962). Recent developments in computational hardware and commercially available
+CFD packages have increased the availability of complex solvers, leading to an increase in accuracy
+and streamlined the required setup for CFD simulations. In theory, these models can produce accurate
+results depending on the physical problem being modelled. A problem arises, though, when determining
+the accuracy of these CFD models as experimental data pertaining to the specific geometry and flow
+conditions do not exist (Oberkampf & Trucano, 2002).
+2.2 Cold Flow Testing Methods
+Cold flow testing involves substituting explosive propellants with non-reactive analogue fluids to
+determine the performance of a system or component. The method of cold flow testing a liquid rocket
+engine injector is dependent on the propellant phases and the performance parameters being
+investigated, for example, pressure drop, propellant atomization and mixing.
+Basic cold flow calibration tests are used to calibrate flow resistance and visually assess the quality of
+the injected propellant streams (Huzel & Huang, 1992). This flow resistance value is compared to
+computational techniques and indicates the required inlet pressures to achieve the correct flow rates
+with the operating chamber pressure. This type of testing was conducted on the SAFFIRE injector to
+determine the required inlet pressures to drive the propellants at the design mass flow rates. An example
+of a cold flow test is shown in Figure 2-1 for a hybrid rocket. Here the pressure drop across the injector
+is being determined using nitrous oxide without any combustion taking place.
+
+
+6
+Figure 2-1: Hybrid rocket engine cold flow test (Broughton, 2018)
+Cold flow testing an engine with a gaseous fuel and liquid oxidiser propellant combination involves
+using water as a substitute for the oxidiser and high-pressure air for the fuel. For mixing tests these
+substitute propellants are directed through the injector simultaneously and are expelled to atmosphere.
+The resulting spray is collected in a grid located a set distance away from the injector faceplate. The
+propellant mixture ratio can then be determined for specific grid locations (Fang, 1983; Huzel & Huang,
+1992).
+Cold flow mixing tests for a bi-liquid propellant combination are conducted using two non-soluble
+liquids and the resulting spray is collected in a grid system after impingement has occurred. The oxidiser
+to fuel ratio for each grid location can be measured to determine the propellant distribution. This ensures
+the entire cross-section of the combustion chamber receives the correct O/F ratio. These tests are also
+conducted using a single element setup to determine the effects of the impingement angle, orifice length
+or orifice shape (Riebling, 1967; Rupe, 1973). Figure 2-2 shows the distribution of a single triplet
+element with varying stream momentums (Gill & Nurick, 1976). Alternatively, the mixing and
+propellant distribution for an entire injector setup can be evaluated (McHale, 1974). The propellant
+distribution of the fuel and oxidiser domains for the SAFFIRE injector were conducted with a multiple
+element setup. However, the distribution was determined prior to impingement.
+
+
+7
+Figure 2-2: Spray fan distributions of an unlike triplet element (Gill & Nurick, 1976)
+Supercritical conditions can influence the atomization and mixing within a combustion chamber. These
+conditions exist when the chamber pressure is at or near the critical pressure of the propellants. This is
+desirable due to the decrease in surface tension at critical pressures as surface tension is known to have
+a dominant role in the atomization process (Lefebvre, 1998). This theory was confirmed through visual
+observations of liquid nitrogen at its critical pressure for a coaxial injector by Chehroudi and Talley
+(2010). Further developments for impinging jets were investigated by Chehroudi (2012) and it was
+concluded that the supercritical jets display gas-like jet properties.
+The atomization process determines the combustion efficiency and relative sensitivity to destabilizing
+influences (Huzel & Huang, 1992). The SAFFIRE injector design considered numerous factors that aid
+atomization such as element type, impingement momentum and impingement angle (Martin, 2019).
+Historically, atomisation characteristics were assessed through qualitative methods conducted during
+cold flow testing by visually inspecting the spray of an injector. Quantitative methods were also
+developed based on the collection of small wax droplets or low-melting metals solidifying after
+impingement. More advanced tests were developed that used laser and holographic measurement
+methods. However, development slowed when larger engines were found to be mixing-limited rather
+than vaporisation-limited. This is due to larger engines employing supercritical injection which is less
+sensitive to hydraulic-atomization characteristics (Huzel & Huang, 1992).
+An effective tool for evaluating the performance of a model or prototype is to consider dynamic
+similarity, provided that the flows are both incompressible and no cavitation exists. Dynamic similarity
+exists when the flow characteristics of two steady state flows result in force distributions, where
+
+
+8
+identical types of forces are parallel and vary in magnitude by a constant factor. Geometric similarity
+is also required for the two flow domains. Using the Buckingham Pi theorem, the governing
+dimensionless groups for a flow phenomenon can be found. Each independent dimensionless group
+must be equal for both the model and prototype to ensure dynamic similarity exists (Fox, McDonald &
+Pritchard, 2012). For an incompressible flow with no free surface, the Reynolds number must be equal
+for identical forces and pressure coefficients (Fox et al., 2012). The Reynolds number for a flow within
+a pipe of diameter d, mass flow rate ṁ and dynamic viscosity μ can be calculated using Equation 2-1:
+Re = 4ṁ
+πdμ (2-1)
+For two different fluids within the same geometry, the Reynolds numbers for each flow can be made
+equal by varying the flow rate based on the ratio of the viscosities as it is the only remaining independent
+variable. Therefore, the required mass flow rate of fluid 1 (ṁଵwith dynamic viscosity μଵ) that yields
+the same Reynolds number as fluid 2 (with mass flow rate ṁଶ and viscosity μଶ ) is given by
+Equation 2-2:
+ṁ ଵ = ṁ ଶ
+μଵ
+μଶ (2-2)
+By extension, liquid rocket engines can be tested with analogue fluids at different flow rates to model
+the force and pressure coefficients of the actual propellants at the design flow rates. However, certain
+phenomena, such as atomization, which is not solely dependent on the density and viscosity of the
+propellant, will not be accurately modelled at this dynamically similar flow rate. When using water as
+an analogue fluid for LOX the required mass flow rate must increase by a factor of roughly seven to
+meet the requirements of dynamic similarity. This increased mass flow rate often increases the cost and
+complexity of a test stand (Moruzzi, Fessl, Prochnicki, et al., 2018).
+2.3 Pressurization Systems
+Liquid rocket engines are often designed to operate at high chamber pressures due to the increase in
+combustion efficiency. The propellants must be delivered to the combustion chamber at a high pressure
+to ensure there is no reverse flow during operation. There are currently three main methods of increasing
+the pressure of the propellants to overcome the line losses and injector pressure drop, namely
+turbopumps, electrically driven pumps and blowdown systems (Sutton & Biblarz, 2001). Blowdown
+systems can be separated into two configurations. Both systems make use of a high-pressure ullage to
+drive the propellants to the combustion chamber. The more stable approach uses a regulator to ensure
+a constant ullage pressure throughout the burn. The simplified approach does not include a regulator
+
+
+9
+and the injector inlet pressure and chamber pressure decrease during the duration of the burn (Sutton &
+Biblarz, 2001). Although the SAFFIRE engine was designed for an electric turbopump setup, a
+regulated blowdown system was used for the test stand because of the simplicity of the configuration.
+A schematic of a regulated blowdown feed system is shown in Figure 2-3.
+Figure 2-3: Regulated blowdown feed system (Sutton & Biblarz, 2001)
+2.4 Propellant Distribution
+One of the many functions of an injector is to distribute and mix the propellants in the combustion
+chamber while ensuring that the correctly proportioned mixture of fuel and oxidiser has an even mass
+flow rate and composition across the combustion chamber cross-section (Sutton & Biblarz, 2001). One
+factor affecting the distribution of propellants is the injector orifice pattern which is closely related to
+the internal manifolds and feed passages. A method of increasing the likelihood of even distribution is
+to employ a large complex geometry which results in low passage velocities. This increases the internal
+volume of the injector which results in a larger “dribble” flow, leading to poor combustion performance
+during engine shut down. However, this only represents a problem with vehicles that require an accurate
+terminal velocity (Sutton & Biblarz, 2001).
+
+
+10
+Propellant distribution is also a function of the type of element configuration used. Different types of
+injector elements are shown in Figure 2-4. The SAFFIRE injector contains triplet elements with two
+oxidiser streams impinging on a single centre fuel stream.
+Figure 2-4: Injector element types (Ito, 1995)
+Experimental methods were used to evaluate the performance of numerous element types and
+configurations using a single element setup, but these experiments do not consider inter-element mixing
+and rather focus on the element type and distribution (Elverum & Morey, 1959; Riebling, 1967; Rupe,
+1973). An example of inter-element mixing is shown in Figure 2-5 for two like-doublet elements
+positioned next to each other.
+
+
+11
+Figure 2-5: Geometric factors affecting inter-element mixing of like doublet elements (Falk & Burick, 1973)
+An oxidiser – fuel – oxidiser (O-F-O) triplet element configuration has two oxidiser streams impinging
+on a single central fuel stream. This type of configuration is known for its increased performance due
+to high levels of mixing. However, triplet elements tend to have combustion stability issues (Huzel &
+Huang, 1992). Testing of propellant mixing for a liquid-liquid propellant combination is performed by
+collecting the resulting spray of two non-soluble liquids in a grid system during cold flow tests. An
+example of a test system designed to evaluate propellant distribution, developed by NASA in 1974, is
+shown in Figure 2-6. This setup was used to evaluate the distribution of non-circular elements (McHale,
+1974).
+
+
+12
+Figure 2-6: Injector spray collection system (McHale, 1974)
+2.5 Atomization
+Atomization is a process that takes place over several steps, with general agreement that there are at
+least two stages. Firstly, primary atomization is the initial disintegration of a jet into ligaments and large
+droplets. Secondary atomization is the breakup of the ligaments and large droplets into smaller droplets
+(Kenny, Moser, Hulka, et al., 2006). The Weber number (We) is a dimensionless number used to
+describe a fluid’s inertia compared to its surface tension. The Weber number is given by Equation 2-3:
+We = ρvଶd୨ୣ୲
+γ (2-3)
+Here, ρ is the density of the fluid, v is the mean jet velocity, djet is the undisturbed jet diameter and γ is
+the surface tension of the fluid. Ohnesorge conducted a dimensionless analysis based on photographic
+experiments and classified liquid jet break up into three regimes based on a dimensionless parameter
+Oh (Ohnesorge number) (Wang, 2016). The Oh number is given by Equation 2-4:
+Oh = √We
+Re (2-4)
+Here, Re is the Reynolds number given by Equation 2-1. Based on the Ohnesorge number, a fluid’s
+properties affect the atomization process, namely surface tension, density and viscosity. Therefore,
+when investigating atomization using an analogue fluid, these properties must be representative of the
+
+
+13
+actual propellant. A fluid with a high surface tension and high density will resist breakup into smaller
+droplets. Similarly, a fluid’s viscosity also prevents breakup into smaller droplet sizes. Therefore, fluids
+with a high viscosity have a larger average droplet size. This also increases the time taken for the fluid
+to atomize, as shown in Figure 2-7.
+Figure 2-7: Viscosity, droplet size and time taken to atomize (Graco, 1995)
+The atomization process in a liquid rocket engine is a pressure atomization, also known as airless
+atomization. This occurs when high pressures force a fluid through a small nozzle and the fluid emerges
+as a solid stream or sheet at high speeds. There is no high-pressure air supply directly assisting with the
+initial atomization. It is the friction between the fluid and the air/combustion gases that breaks up the
+stream into ligaments and eventually droplets. This process becomes more complex when multiple
+streams impinge on each other and the interaction also depends on the conditions present at the nozzle
+outlet. Factors such as the pressure and temperature can affect the atomization. The relative velocity
+between the fluid and the gas affects the droplet size, such that the higher the pressure before the nozzle
+the smaller the resulting droplet size due to the increased velocity (Rupe, 1973).
+Modern methods of evaluating the droplet size produced by injectors include the use of laser scattering
+devices. These use a helium-neon laser beam and can measure the Sauter mean diameter (SMD) of
+droplets between 0.1 μm and 1750 μm (Bouziane, de Morais Bertoldi, Lee, et al., 2017).
+
+
+14
+2.6 Existing Test Stands
+Liquid rocket engine test stands are designed to test for specific performance parameters, namely thrust,
+combustion efficiency, combustion stability, pressure drop, propellant mixing and supercritical
+injection. Usually, test stands are designed with hot fire capabilities. However, they may also be
+constructed specifically for cold flow testing to quantify the performance of an injector safely. Both hot
+fire and cold flow test stands usually include a similar propellant feed system and control system.
+Several universities currently have hot fire and cold flow testing capabilities. A review of the published
+work is discussed below. Hybrid test stands are also reviewed for additional information due to the
+similar nature of the test stand requirements. An example of a university-based hot fire test stand is
+shown in Figure 2-8.
+Figure 2-8: BURPG vertical hot fire test stand (Boston University, 2018)
+The liquid test stand developed by the Boston University Rocket Propulsion Group (BURPG) has both
+cold flow and hot fire test capabilities. The fluid systems used include high-pressure nitrogen, liquid
+nitrous oxide and liquid isopropyl alcohol. The main valves operate using a high-pressure pneumatic
+system operating at 1000 psi (69 bar). Solenoid valves allow for reliable and quick operation of the
+main propellant valves. The system includes an engine purge capability that operates at 150 psi
+(10.3 bar) and is controlled by a servo-operated ball valve. A water suppression system is also included
+for hot fire tests and is remotely or automatically activated based on abort conditions (Boston
+University, 2018).
+
+
+15
+The Liquid Propulsion Laboratory (LPL) at the University of Southern California (USC) has a dedicated
+cold flow test stand for evaluating the flow coefficients of newly developed injectors, Figure 2-9. The
+flow coefficient, C୴, is a measure of the flow rate through a device based on the pressure drop and the
+specific gravity of the fluid (SG). The flow coefficient is an imperial term, with the metric equivalent
+flow function, K୴, given by Equation 2-5:
+K୴ = Q ඨSG
+∆P (2-5)
+Here, Q is the mass flow rate, ∆P is the change in pressure across the flow device and SG is the specific
+gravity of the fluid.
+Figure 2-9: LPL cold flow test stand (Moruzzi et al., 2018)
+The LPL cold flow test stand uses a regulated blow down pressurization system with an electro
+pneumatic regulator to control the tank ullage pressure. The mass flow rate was initially determined by
+monitoring the force produced by the spray of the injector. However, turbulence in the collector
+decreased the accuracy of the mass flow rate measurement. Therefore, the total mass collected over the
+test period was used to calculate the mass flow rate. Using this method, the LPL is able to evaluate the
+flow coefficient with an error of less than 1 % (Moruzzi et al., 2018).
+The University of California in San Diego designed a mobile test stand to hot fire test liquid rocket
+
+
+16
+engines. The test stand is known as Colossus, Figure 2-10. The propellants, namely LOX and kerosene,
+are stored on the trailer in separate tanks made from seamless stainless-steel tubes with welded end
+flanges. A regulated blowdown system with a dome loaded regulator is used to drive the propellants to
+the combustion chamber. This ensures a constant ullage pressure is maintained for the full duration of
+the burn. The control system employs National Instruments hardware with a LabVIEW software control
+system. For cold flow testing, isopropyl alcohol and cryogenic liquid nitrogen were used as analogue
+fluids. Isopropyl alcohol was selected as it cleans the internal plumbing system while also acting as an
+analogue fluid (Seshadri, 2016).
+Figure 2-10: Colossus test stand (Seshadri, 2016)
+The University of Alabama in Huntsville has facilities for cold flow and hot fire testing. The injector
+spray facility is used to cold flow test liquid and gaseous rocket injectors with inert fluids. The cold
+flow testing outputs are the flow performance, spray patterns and droplet size. These outputs can be
+observed at atmospheric pressure or at high chamber pressures to simulate supercritical injection.
+Previous studies conducted using this facility include impingement and the self-pulsation of swirl
+coaxial bipropellant injectors (Kenny, Hulka, Moser, et al., 2009). The facility uses high-speed video
+cameras, a 2-D phase Doppler particle analyser (PDPA) and a 2-D particle image velocimetry (PIV)
+system to capture atomization and velocity profile characteristics.
+The design and commissioning of a bi-propellant liquid rocket engine test facility were conducted by
+Youngblood (2015) at the Energetic Materials Research and Testing Center (EMRTC) in New Mexico.
+
+
+17
+The facility was used to test an ethanol/nitrous oxide engine. The results were used to validate an in
+house combustion model predicting engine performance based on the propellants flow rates and engine
+dimensions. The facility is separated into three sections, namely the test stand, control console and fuel
+galley. The SAFFIRE cold flow test facility will have a similar layout due to the safety benefits. The
+facility used a regulated blowdown system with nitrogen as the pressurant gas and single stage pressure
+regulators to control the tank ullage pressures. The chamber pressure decreased during the burn duration
+due to a decrease in tank ullage pressure. This was caused by the large pressure drop across the regulator
+and nitrogen tank valve. The facility controls the valves and data acquisition with National Instruments
+hardware, coupled with a LabVIEW control system.
+2.7 Ground Support Equipment
+When performing cold flow tests ground equipment is required to control the various steps within each
+experiment. LabVIEW software uses a graphical programming approach such that control, data
+acquisition and debugging are made easier through a visual approach. LabVIEW was selected as the
+control system software for the SAFFIRE test stand because of the experience and hardware held within
+the Aerospace Systems Research Group (ASReG) at the University of KwaZulu-Natal (UKZN).
+Furthermore, LabVIEW software has been used extensively for previous ground support equipment as
+it provides a user interface that facilitates the required operations (Miklaszewski, Dadson, Fox, et al.,
+2013; Moruzzi et al., 2018; Youngblood, 2015).
+Test stands are composed of numerous sub-systems including the propellant feed system, pressurization
+system and data acquisition system. These components require a control system to operate as a complete
+system. Valves are required to control pressurization and flow within the system and provide the means
+to start, stop and throttle the propellants. Sensors are needed to measure temperature, pressure, valve
+positions and thrust in the case of hot fire tests. Often redundant regulators and relief valves are added
+to increase the reliability of the system. Regulated pressurization systems are relatively simple when
+compared to turbo-pump engine cycles because they have fewer moving parts. On flight weight vehicles
+helium is used for pressurization because of its lighter weight. However, nitrogen is used on static
+ground test equipment due to its availability and low cost (Ito, 1995).
+2.8 CFD Verification and Validation
+The American Institute of Aeronautics and Astronautics (AIAA) (1998) defines verification as the
+process of determining the accuracy of a computational model and the conceptual model it represents.
+Validation is the process of determining whether a computational model accurately represents the real
+world physics. When validating a computational simulation, the accuracy is based on experimental data.
+
+
+18
+Verification involves determining the accuracy of a CFD analysis based on benchmark solutions of
+simplified model problems. The objective of verification is to identify and quantify errors in a
+computational model. The errors arise from four sources, namely spatial discretization, temporal
+discretization, lack of iterative convergence and programming errors. Spatial discretization error can be
+identified by performing a mesh independence study to evaluate how computational simulation results
+vary with a decrease in mesh size.
+Validating a computational simulation according to the AIAA’s recommendations is a lengthy process
+and involves a building block approach. Complex geometries must be separated into sub-systems which
+are tested individually. Often even unit problem geometries are manufactured to test for specific flow
+phenomena. A suggested validation assessment method is provided, in which the complete system is
+broken down to single-unit problems (Figure 2-11). The complete system is the actual hardware or
+system being validated. It includes all flow features and physical flow effects occur simultaneously.
+Complete system analyses often result in limited measurement data collected during operating
+conditions. Therefore, the data collected has a higher degree of uncertainty when compared to unit
+problems. The recommended phases are referred to as guidelines as practical limitations and the
+required degree of accuracy will dictate which phases are necessary (AIAA, 1998).
+Figure 2-11: Validation phases (AIAA, 1998)
+A general guideline suggested by Aeschliman and Oberkampf (1997) is to develop an experimental
+validation setup with the input of the CFD code developer. This process helps determine the necessary
+measurement tools to capture all flow physics and boundary conditions assumed by the flow. The
+development stages require this interaction. However, the process of collecting experimental and
+simulation data should be conducted independently to ensure there is no influence on either data set. A
+better understanding of both the simulation results and experimental data will result from comparing
+the final independent data from both sets. Oberkampf and Trucano (2002) also recommend supplying
+Complete System
+Subsystem Cases
+Benchmark Cases
+Unit Problems
+
+
+19
+detailed information regarding the experimental setup and results, including accurate measurements
+instead of nominal or average data, surface roughness conditions, potential mismatches in experimental
+and simulation components and detailed dimensions of all model and instrumentation mounting
+locations.
+Model geometry uncertainties arise from two sources, namely model geometry deviations and model
+imperfections. Geometry deviations are defined as differences between the fabricated model and the
+conceptual model arising from various sources, for example, poor tolerances, accidental surface damage
+or warpage from heating. Geometry imperfections are defined as model features that are not part of the
+original geometric model but which influence the flow and resulting measurements, for example, poor
+fabrication resulting in burrs on small diameter holes or a pressure leak between a pressure tap and
+transducer (Aeschliman & Oberkampf, 1998). Geometry deviations are a concern for the SAFFIRE
+injector as a small increase of an orifice diameter will result in a significant increase of the flow rate
+through the orifice.
+Verification of a CFD simulation must be conducted before a CFD validation study to ensure a false
+validation does not occur (Pelletier, 2010). To verify a CFD simulation, a grid and time-step
+convergence analysis must be conducted. This involves evaluating the discretization error by refining
+the grid size and time step, ensuring the solution is independent of the mesh and time step size. When
+the grid size and time step approach zero the discretization error should asymptotically approach zero,
+excluding computer round-off errors (AIAA, 1998). Once in this asymptotic region, a Richards
+Extrapolation Method (REM) can be used to estimate the ‘zero-grid’ spacing and time step (Celik &
+Zhang, 1995). Another method of analysing the grid convergence is a Grid Convergence Index (GCI)
+(Roache, 1998). This is based on a generalised Richards extrapolation using two discrete solutions at
+two different grid spacings. This method provides an error band between the solution and asymptotic
+value. The GCI is given by Equation 2-6:
+GCIଵ,ଶ =
+Fୱ ฬfଶ − fଵ
+fଵ ฬ r௣ − 1
+(2-6)
+Here, Fୱ is a factor of safety equal to 1.25 for the comparison of three grids or more, f is the monitored
+solution for the simulation and subscripts 1 and 2 describe the mesh size of the fine and coarse meshes
+respectively, r is the refinement ratio and p is the order of mesh convergence given by Equation 2-7:
+
+
+20
+p=
+ln ൬fଷ − fଶ
+fଶ − fଵ
+൰
+ln(r)
+(2-7)
+Here, f is the monitored solution for the simulation and subscripts 1, 2 and 3 describe the mesh size of
+the fine, medium and coarse meshes respectively. The GCI for the fine and medium meshes is given by
+GCIଵ,ଶ and the medium and coarse meshes by GCIଶ,ଷ. A check can be conducted to determine if the grid
+convergence is within the asymptotic range. If the relationship given below in Equation 2-8 is true, it
+can be concluded that the grid convergence is within the asymptotic range.
+GCIଶ,ଷ
+r௣ GCIଵ,ଶ
+≈ 1 (2-8)
+Lastly, by applying the REM the continuum value, P୸ୣ୰୭ , for a zero-grid spacing can be calculated from
+Equation 2-9:
+P୸ୣ୰୭ = fଵ + fଵ − fଶ
+r௣ − 1 (2-9)
+Martin (2019) conducted CFD verifications on the SAFFIRE injector simulations and concluding that
+the simulation results were independent of the mesh size for the fuel and oxidiser domains. Since the
+simulation fluid properties were updated to the analogue fluid (water) and the volumes were remeshed,
+new simulation verifications were required for each domain.
+Two practical issues must be considered during a validation assessment. First, the number of validation
+test cases and the accuracy required by each test case are highly application-dependant. Secondly, the
+validation process must be realistically achievable. To summarise, the validation process must allow
+for varying levels of accuracy with possible incremental improvements as time and funding permit
+(AIAA, 1998).
+2.9 Turbulence Models and Wall Functions
+To model a flow accurately within any CFD package, the physics models selected must accurately
+represent the conditions in which the flow exists. One physics model parameter that has a large impact
+on the results of a CFD simulation is the turbulence model. When turbulence is present, it is often the
+dominant flow phenomenon. Therefore, successfully modelling the turbulence will increase the
+accuracy of the results produced by the simulation (Sodja, 2007). Currently, two predominant methods
+exist for modelling turbulence, namely Direct Numerical Simulations (DNS) and Reynolds Averaged
+Navier-Stokes (RANS). Using a DNS involves modelling the large-scale turbulent fluctuations using
+
+
+21
+time-dependent Navier-Stokes equations. This process requires immense computational resources
+because of the small-time step requirements. A simplification of this approach is the Large Eddy
+Simulation (LES) where only the large-scale turbulence is simulated directly with the smaller
+turbulence scales being modelled. Alternately, Reynolds Averaged Navier-Stokes (RANS) models are
+used to determine the averaged turbulence within a flow. Since the RANS equations are not being
+solved directly, models are required to calculate the Reynolds stresses. These models consist of simple
+eddy viscosity models or more complex models that solve the transport equations directly for the
+Reynolds stresses (Hirsch, 2007). A RANS model was selected to model the performance of the
+SAFFIRE injector.
+The selected wall treatment of a CFD simulation dictates how the boundary layer is resolved. A low
+wall y+ model solves the viscous sublayer near the wall whereas a high y+ solver will approximate the
+boundary layer with a wall function. An all-wall y+ model is a hybrid approach that solves the boundary
+layer using the low y+ wall treatment for fine meshes and the high y+ wall treatment for coarse meshes.
+A blending function is used for the transition layer (Siemens, 2019). Utilising a low y+ wall treatment
+usually leads to an increase in computational resource requirements due to the addition of multiple
+small cells near the wall required to capture the viscous sublayer.
+2.10 Uncertainty and Error
+Measurement uncertainty is described as the parameter that is associated with a measured value. It
+characterizes the variation from the measurand, which is also referred to as the ‘true value’. This
+uncertainty serves to represent the validity of a measured value, such that the measured value can be
+compared to those of other studies or measurements. Uncertainties can be evaluated by two different
+methods. A type A evaluation is derived statistically and a type B evaluation is determined through
+means other than statistical analyses. For example, calibration certificates, device specifications and
+published information are type B uncertainties. Type A uncertainties are determined through a
+probability distribution and the resulting uncertainties are expressed as a variance or standard deviation.
+Type B uncertainties are expressed as an estimated variance or standard deviation based on an assumed
+probability density function. The SAFFIRE injector test stand will contain type A and type B
+uncertainties.
+Errors are classified as either random or systematic and arise during the measurement process. Random
+errors cannot be quantified, but they can be reduced by increasing the number of observations. These
+random effects are caused by unpredictable spatial and temporal variations of influencing quantities
+(JCGM, 2008). Systematic errors are unavoidable but can be reduced. If a reoccurring effect is
+recognised and quantified, it can be accounted for using a correction factor. However, this is only
+
+
+22
+deemed appropriate if the quantity is significant when compared to the required accuracy of the
+measurement. Once a correction factor has been applied, the identified systematic error is assumed to
+be zero. Unidentified systematic errors still exist within the system. A calibration testing campaign was
+conducted with the SAFFIRE injector test rig to identify and mitigate systematic errors.
+Repeatability is defined as the closeness of agreement between numerous measurements of the same
+measurand carried out under similar conditions (JCGM, 2008). Variables that must be kept constant
+include the observer and the measurement procedure. Additionally, the location must be the same and
+the period must be short. Reproducibility is described as the agreement of measured results of the same
+measurand that are carried out under different conditions (JCGM, 2008). The different conditions
+include the method of measurement, the observer, the measuring instrument, location and time.
+Reproducibility can be expressed quantitatively in terms of the dispersion characteristic of the result.
+Experimental standard deviation s(q୨) characterises the dispersion of the quantities (q୨) of a repeated
+number of measurements (n) from the mean of the data set (qത) and is given by Equation 2-8:
+s൫q୨൯ = ඨ∑ (q୨ − qത)ଶ
+௡ ୨ୀଵ
+n − 1 (2-8)
+The standard error of the mean (SEM) describes the standard deviation of numerous mean quantities
+qത୩, obtained from multiple repeated data sets (n). The SEM indicates the repeatability of numerous
+experiments as it shows how the repeated mean measurements vary. The SEM is a standard deviation
+given by Equation 2-9:
+SEM = s(qത୩)
+√n (2-9)
+Here, s(qത୩) is the standard deviation of the mean quantities qത୩.
+A measurement device’s resolution also contributes to the uncertainty of its measurement. Since a range
+of input signals to the measurement instrument may result in the same output there exists uncertainty
+as to the true measurement of the device. This uncertainty can be described by a rectangular probability
+distribution using Equation 2-10:
+
+
+23
+σଶ = (δ)ଶ
+12
+(2-10)
+Here δ is the resolution of the device and σ is the standard deviation.
+Measurements obtained by a calibrated device will have a specific uncertainty based on the device’s
+specifications. This variance can then be assumed for the measurement obtained using the device.
+Furthermore, if a device’s uncertainty is not provided, an assumption of the measurement variance can
+be made based on the nature of the measuring apparatus.
+Often the process of determining a measurement will involve numerous uncertainties. These can be
+combined and are defined as combined standard uncertainties. Combined standard uncertainties are
+expressed as a standard deviation. When adding uncertainties together the combined standard
+uncertainty can be calculated by equating the positive square root of the variances (JCGM, 2008). The
+type A and type B uncertainties for the SAFFIRE injector test rig will be combined to determine the
+combined standard uncertainty.
+An expanded uncertainty U is determined by multiplying the combined standard uncertainty with a
+coverage factor k. This term U expresses a large range that has a high probability of encompassing the
+measurand. The k value usually ranges from two to three and is determined by the coverage probability
+or level of confidence required for the interval (JCGM, 2008). The coverage factor can be reduced by
+increasing the number of observations. The number of observations for the SAFFIRE injector tests will
+depend on the required accuracy and selected confidence level.
+The calculation of the coverage factor and confidence intervals is dependent on the sample size and
+probability distribution. For example, consider a set of three pressure transducer readings obtained from
+three repeated experiments that are normally distributed. For a 99% confidence interval, containing
+three observations, the required coverage factor is 9.925. If the number of observations is increased to
+six, then the required coverage factor for a 99% confidence interval is 4.032. This example demonstrates
+how even a small increase in observations can decrease the uncertainty of a measurement. The coverage
+factor is dependent on the sample distribution of the collected data. The central limit theorem states
+that the distribution of a sum of random variables will tend more towards a normal distribution as the
+number of random variables increase. Experimental error comprises the summation of numerous
+random errors. Therefore, it can be concluded by the central limit theorem that the experimental
+measurements will follow a normal distribution (Peters, 2001).
+
+
+24
+Furthermore, statistical analysis is usually conducted on an average of experimental data that contains
+numerous random errors. This is the further summation of values that are likely to be normally
+distributed. Based on central limit theorem, it can be assumed that measurement data is normally
+distributed irrespective of the sample size (Peters, 2001).
+A confidence interval for a normally distributed population with a known population mean μ and
+variance σଶ can be calculated using equation 2-11:
+x̅ − zఈ/ଶ σ
+√n ≤ μ ≥ x̅ + zఈ/ଶ σ
+√n (2-11)
+Here, n is the number of samples, x̅ is the sample mean and Zఈ/ଶ is the upper percentage point of the
+standard normal distribution. For a population where the mean μ and variance σଶ is unknown a
+common solution is to replace the population standard deviation σ with the sample standard deviation
+S. The variable Z determined from the normal distribution table is now given by t obtained from a
+t-distribution table. The confidence interval can then be calculated using Equation 2-12. The t
+distribution is symmetrical like a normal distribution. However, the t-distribution variance is dependent
+on the degrees of freedom which is defined as n-1 where n is the sample size (Peters, 2001).
+x̅ −
+tఈ
+ଶ,௡ି ଵ S
+√n ≤ μ ≥ x̅ +
+tఈ
+ଶ,௡ି ଵ S
+√n
+(2-12)
+2.11 Orifice Pressure Drop and Tolerances
+The pressure drop through an orifice for a given mass flow rate can be calculated using Equation 2-13.
+Equation 2-13 is based on an empirical model for orifices with a length to diameter ratio (L/D) of 3 or
+greater since the coefficient of discharge (Cௗ) approaches 0.82 asymptotically when L/D ≥ 3.
+∆P = 0.811Kṁ ଶ
+ρdସN୭୰୧୤୧ୡୣୱ
+ଶ (2-13)
+Here, ∆P is the change in pressure across the orifice, K is the head loss coefficient equal to 1.7 for sharp
+edge orifices, ṁ is the mass flow rate, ρ is the density of the fluid, d is the diameter of the orifices and
+N is the number of orifices. This equation can be used to estimate the change in flow rate through an
+orifice resulting from machining tolerances. Orifices with small diameters become sensitive to slight
+diameter variations due to machining tolerances. Often, a ∆P tolerance is provided based on the orifice
+diameter or in locations where an unpredictable flow will cause engine failure. The J-2 injector
+
+
+25
+employed such precautions. Smaller ∆P tolerances were specified on the elements near the combustion
+chamber wall. For low ∆P tolerances, a machining tolerance of ±0.005 mm is recommended. For a
+larger ∆P tolerance, machining tolerances of +0.008 mm are acceptable (Gill & Nurick, 1976).
+2.12 SAFFIRE Injector
+In this study, the performance of the SAFFIRE injector was validated using the SAFFIRE injector test
+rig. The test rig design and testing methodology were developed considering the literature reviewed in
+this chapter. A cross-section of the SAFFIRE injector designed by Martin (2019) is shown in
+Figure 2-12. It consists of two separate flow domains, namely the fuel and oxidiser domains. These
+domains have separate inlets and outlets. Therefore, the propellants are kept separate until they mix,
+atomize and combust within the combustion chamber. The validation of the SAFFIRE injector included
+determining the required pressure drops for the oxidiser and fuel domains, for the design mass flow
+rates, and the propellant distribution for each domain. Separate fuel and oxidiser test articles were
+manufactured and tested independently on the SAFFIRE test stand.
+Fuel inlet
+Oxidiser inlet
+Figure 2-12: SAFFIRE injector cross-section (Martin, 2019)
+
+
+26
+3. Test Facility
+3.1 Introduction
+The test facility was designed to determine the performance of a liquid rocket engine injector through
+cold flow testing techniques. In this study, the test facility was developed to validate the modelled
+performance of the SAFFIRE injector conducted by Martin (2019). The required performance
+parameters were the fuel and oxidiser inlet pressures for a mass flow rate of 2.28 kg/s and 5.66 kg/s
+respectively. Secondly, the propellant distribution for each domain was determined. The facility used
+a regulated blowdown system to drive the analogue fluid to the injector inlet at a constant pressure.
+Therefore, the cold flow testing results were collected during a relatively steady-state period. The test
+facility layout ensured all test articles and high-pressure zones were isolated during testing.
+3.2 Test Facility
+The test facility contains three main areas, namely the control room, tank storage and blast-proof area.
+The tank storage and blast-proof area are considered hazardous and are closed off when testing is
+conducted. The control room is a safe area where test personnel conduct and monitor test proceedings.
+The test facility schematic and zone designations are shown in Figure 3-1.
+Figure 3-1: Test Facility Layout
+3.2.1. Propellant Storage & Pressurization
+The analogue fluid was driven to the injector inlet by a high-pressure ullage in the propellant tank. The
+Tank storage Pressure vessel Pressurization system Nitrogen cylinder
+Control room Data acquisition Control computer
+Blast-proof area Test stand Compressor
+
+
+27
+ullage pressure was controlled using a single-stage regulator and a high-pressure nitrogen supply. The
+pressure vessel and pressurization system are shown in Figure 3-2. The nitrogen was supplied to the
+tank through a flexible hose with a quick connect fitting. The pressurisation inlet was located at the top
+of the tank.
+Figure 3-2: Pressure vessel and pressurization system
+The pressurization system components were in the tank storage area and included the pressure vessel
+and a high-pressure nitrogen cylinder. A discharge line ran through the wall to supply the test stand
+with the analogue fluid. The pressure vessel was designed to the American Society of Mechanical
+Engineers (ASME) standards with a working pressure of 30 bar. Seven ports on the tank were used to
+pressurize, vent, fill/drain, inspect and monitor the tank level. The pressure vessel was designed for
+category four hazardous fluids, namely kerosene and helium. For the cold flow tests the pressure vessel
+contained water and nitrogen. The water supply was filtered through a y strainer to remove any small
+particle contamination. This filter reduced the probability of blocking an orifice or passage within the
+injector. The tank was filled through the fill port located at the bottom of the tank. The fill port was
+positioned next to the main discharge port running to the test stand. The tank fluid level was inspected
+before pressurizing the tank using a manometer located next to the tank.
+Nitrogen supply (220 bar)
+Single stage regulator
+Pressurization inlet
+Pressure vessel
+Test stand fluid supply
+
+
+28
+PT5
+The pressurization system included two solenoid valves, one pressure relief valve, two pressure
+transducers, a high flow single stage pressure regulator and a high-pressure cylinder of nitrogen. These
+components are shown in Figure 3-3. The pressure transducer located on the tank monitored the ullage
+pressure during operation. The pressure transducer on the pressurant inlet line measured the set pressure
+of the regulator before a test was conducted. This was required as the analogue gauge on the outlet side
+of the pressure regulator lacked the required resolution for setting the outlet pressure. A solenoid valve
+was positioned between the regulator and the tank pressurant inlet to control the inlet of pressurant.
+Figure 3-3: Pressurization system
+A piping and instrumentation diagram (P&ID) is shown in Figure 3-4. It shows all the major
+components used by the test stand. The components functions are given in Table 3-1.
+Figure 3-4: P&ID
+PT4
+Single stage regulator
+Pressure transducer Pressure relief valve
+Pressurant inlet solenoid
+Pressure transducer
+Manual vent
+Vent solenoid
+
+
+29
+Table 3-1: P&ID description
+Code Description Function
+CV1 Manual cylinder valve 1 Isolates the nitrogen cylinder
+N2 Nitrogen cylinder High-pressure nitrogen supply
+Regulator Single-stage high flow regulator Regulates the nitrogen supply
+NV1 Solenoid nitrogen valve 1 Isolates the pressurant system
+NV2 Solenoid nitrogen valve 2 Pressurant inlet valve
+PRV1 Pressure relief valve 1 Passive pressure relief (30 bar)
+NV3 Solenoid nitrogen valve 3 Vent valve
+PT1 Pressure transducer Ullage pressure
+PT2 Pressure transducer port Manometer port
+TBV1 Throttle butterfly valve Throttling capabilities
+PT3 Pressure transducer Main valve inlet pressure
+BV1 Manual purge ball valve Purge line
+PBV1 Pneumatic ball valve 1 Main isolation valve
+PT4 Pressure transducer Injector inlet pressure
+PS1 Pilot solenoid valve Main ball valve actuation
+MFV1 Manual fill valve Fill and drain
+PT5 Pressure transducer Pressurant line pressure
+Injector Fuel or LOX test articles Injector mounting position
+3.2.2. Test Stand
+The test stand shown in Figure 3-5 was positioned in the blast-proof area. It includes the supply line, a
+throttle valve and the main pneumatic valve. The compressed air supply for the main pneumatic valve
+was supplied from a compressor also stored in this area. Figure 3-5 displays the test stand during the
+assembly process without an injector test article attached. The throttle valve was left fully open during
+testing as throttling was not investigated. The supply line is shown at the bottom of the tank coming
+through the wall from the pressure vessel. The supply line runs up the side of the test stand where it is
+isolated by the main ball valve.
+
+
+30
+Figure 3-5: Test stand during assembly in a blast-proof area
+A detailed view of the test stand with the fuel test article attached is shown in Figure 3-6. The main
+additions from Figure 3-5 are the test article, injector mounting bracket and two pressure transducers.
+Figure 3-6:Test stand with the fuel test article
+Throttle valve (butterfly)
+Fluid supply from pressure vessel
+Flexible hose
+Main ball valve (pneumatic)
+Inlet pressure transducer
+Manifold pressure transducer
+Fuel test article
+Pneumatic supply
+Main ball valve
+Injector mounting bracket
+
+
+31
+3.2.3. Control Room and System
+The control room contained the control computer and the data acquisition hardware. The control system
+included a National Instruments (NI) C-DAQ chassis and input modules with a LabVIEW software user
+interface to control the cold flow test stand. The hardware for the data acquisition and control system
+was wired into the control box located in the control room. This included the NI chassis and modules,
+a relay for hardwired safety switches and a 24 V power supply as shown in Figure 3-7.
+Figure 3-7: Main control box
+The designed LabVIEW user interface is shown in Figure 3-8. The required inputs are listed in
+Table 3-2 with the default values. The control system automatically sequenced the timing of the valves
+after the ‘start auto sequence’ button was activated.
+Table 3-2: LabVIEW input parameters
+Parameter Description Default input
+Auto vent set pressure Pressure at which safety valve opens 15 bars
+Test duration Total test time 12 seconds
+The LabVIEW user interface (UI), Figure 3-8, allowed the user to operate the pneumatic valve,
+24 V DC power supply
+Relay switch
+NI chassis and modules
+
+
+32
+pressurisation inlet valve and vent valve without starting the auto sequence. This control setup allowed
+the user to prime the injector before a test. Furthermore, the user could increase or decrease the tank
+ullage pressure using the inlet and vent solenoids. The UI displayed the real-time pressure
+measurements taken during a test. The safety panel allowed the user to set the auto vent pressure and
+displayed the tank ullage pressure.
+Figure 3-8: LabVIEW cold flow testing user interface
+Before a test was conducted the following procedure was followed.
+1. The pressure vessel was filled with water to 90 % of its 378 L capacity. The level
+measurement of the tank was obtained using a manometer installed next to the tank.
+2. The pressurant supply line was connected to the tank with a flexible hose and quick
+connect fitting.
+3. The regulator outlet pressure was set to the required ullage pressure plus the regulator
+pressure ‘droop’ for the mass flow rate of nitrogen through the regulator.
+4. The final test stand safety and setup procedure shown in Figure 3-9 was conducted.
+This involved ensuring the tank and test stand were set up correctly before the auto
+sequence was started.
+
+
+33
+Figure 3-9: Testing safety and setup procedure
+
+
+34
+The control system comprised two loops, namely the main loop and the auto sequence loop. The main
+loop controlled the data acquisition and valve relays. The safety relief code ran within this loop. If the
+tank ullage pressure exceeded the user-defined vent pressure, the vent solenoid valve would open.
+Furthermore, if the control system were to malfunction a permanently installed pressure relief valve
+with an opening pressure of 30 bar acted as a fail-safe. The main loop control code is shown in
+Appendix D.
+The data acquisition module in this loop reads all the pressure transducer inputs at a rate of 500 Hz. The
+received outputs from the pressure transducers are 4-20 mA current signals. These signals are scaled
+depending on the pressure transducer range. The pressure transducer type, measurement range and
+accuracy are listed in Table 3-3.
+Table 3-3: Pressure transducer locations and accuracies
+Pressure transducer location Type Measurement range (bar) Accuracy (%)
+Pressure vessel ullage S10 0-25 0.25
+Pressurant line inlet A10 0-100 0.5
+Main ball valve (upstream) A10 0-100 0.5
+Main ball valve (downstream) A10 0-100 0.5
+Manifold pressure tap S10 0-25 0.25
+Once the start auto-sequence button was activated the following actions were initiated. The program
+was instructed to save all incoming data to file. The main pneumatic valve and the pressurant inlet
+solenoid valve were instructed to open simultaneously. After the user-defined duration ‘test duration’
+had passed the main pneumatic and inlet solenoid valves were instructed to close. Writing the data to
+file was halted after an additional five seconds to ensure all data collected had been recorded. The output
+file contained pressure readings obtained during the test duration. The weight of the water collected
+was measured and recorded with the data file for post-processing. The LabVIEW auto sequence loop is
+given in Appendix D.
+The auto sequence controlled the timing of the main pneumatic ball valve and the pressurant solenoid
+valves. A LabVIEW relay module was used to operate the tank solenoid valves and the pilot solenoid
+valve that supplied the main pneumatic ball valve with 8 bar air pressure. These solenoids were powered
+by the 24 V DC power supply. The solenoids positions and functions are listed in Table 3-4. Each tank
+solenoid valve was hardwired with a manual override switch. In the event of a loss of power, the system
+was designed such that the solenoid valves would return to the normally closed position.
+
+
+35
+Table 3-4: Solenoid valve locations and function
+Valve Function Activation
+Vent solenoid Depressurizes the tank Automatic
+Pressurization inlet solenoid Controls the inlet of pressurant gas Automatic with manual
+override switch
+Pilot solenoid Controls the actuation of the main
+pneumatic ball valve
+Automatic with manual
+override switch
+3.3 Summary
+The test facility was designed to cold flow test injectors in a safe and controlled environment. The
+control system used NI hardware and LabVIEW software to control valves and monitor pressures at
+various points on the test stand. Software with an in-built ‘auto sequencer’ managed the valve timing,
+pressurisation system and data acquisition during the duration of a test. The test duration was a user
+defined input. The system also included hardwired safety switches to safely shut down the system in
+the event of a control system malfunction.
+
+
+36
+4. Test Stand Calibration
+4.1 Introduction
+Initial tests aimed to determine and quantify the timing and mechanical delays produced by the control
+system and physical hardware. Furthermore, experiments were conducted to determine the line losses
+through the piping system. These losses were added to the estimated injector pressure drop to set the
+tank ullage pressure, such that the required fuel and LOX mass flow rates were achieved. Sources of
+error and uncertainty were identified and mitigated during the calibration process where possible.
+4.2 Tank Pressure and Manifold Pressure Relationship
+A regulated blowdown system was used to pressurise the analogue fluid during testing. This included
+a high-pressure nitrogen cylinder and a single stage regulator. The regulator reduced the cylinder
+pressure from 220 bar to a user-defined outlet pressure. The regulator was responsible for maintaining
+a constant tank pressure during the full duration of a test. Initial testing concluded the regulator was
+unable to maintain a constant tank pressure because of the high mass flow rate of nitrogen producing a
+pressure drop across the regulator. This is known as pressure ‘droop’ and is illustrated in Figure 4-1.
+Figure 4-1: Swagelok regulator pressure curve
+The regulator droop resulted in a decrease of the manifold pressure over the test duration, shown in
+Figure 4-2. This graph resembles the injector pressure of a simplified blowdown system without a
+regulator. This is the result of an insufficient amount of nitrogen entering the tank.
+
+
+37
+Figure 4-2: Decreasing manifold pressure
+A solenoid valve was installed between the regulator and the tank pressure inlet port. This solenoid was
+referred to as the pressurant inlet solenoid described in Chapter 3. The solenoid decoupled the tank and
+the regulator pressures. It allowed for an initial increase of the regulator pressure to account for the
+regulator pressure ‘droop’. This allowed the tank pressure to be set to the required ullage pressure to
+deliver the correct mass flow rate while ensuring a constant tank pressure was maintained during the
+duration of a test. The increased regulator pressure would drop to the tank ullage pressure due to the
+regulator pressure ‘droop’, resulting in a constant tank ullage pressure.
+An auto sequence is a list of commands that are carried out sequentially once the initial command has
+been activated. The auto sequence described in Chapter 3 ensured the inlet solenoid valve opened
+simultaneously with the main ball valve. The tank ullage pressure fluctuations were reduced to 0.1 bar
+using this method. The manifold pressure using this method is shown in Figure 4-3.
+Figure 4-3: Relatively constant manifold pressure
+-0.5
+0
+0.5
+1
+1.5
+2
+2.5
+0.00 1.00 2.00 3.00 4.00 5.00 6.00 7.00 8.00
+Pressure (bar)
+Time (sec)
+Injector Manifold
+-0.5
+0
+0.5
+1
+1.5
+2
+2.5
+3
+0.00 1.00 2.00 3.00 4.00 5.00 6.00 7.00
+Pressure (bar)
+Time (sec)
+Manifold pressure
+
+
+38
+4.3 Line Loss Calibration
+Calibration tests were conducted to determine the accuracy of the analytical pressure drop through the
+piping system. The analytical values were based on the major and minor losses through the lines and
+fittings for the design mass flow rate. The tank ullage pressure was set to overcome the estimated line
+losses for the resulting mass flow rates of 2.28 kg/s and 5.66 kg/s. The mass flow rates were determined
+and the initial ullage pressure was altered accordingly until the correct mass flow rates were achieved.
+The line pressure drops were 1.8 bar and 5.3 bar for the fuel and LOX mass flow rates respectively.
+These pressure drops were used to set the starting tank pressure for the final injector tests. The actual
+line pressure drop varied from the analytical calculations by roughly 10%. This was due to the incorrect
+estimation of the flow coefficient for the butterfly valve.
+4.4 Main Valve Calibration
+A positioner located on the main pneumatic ball valve contained two relays and a visual display to
+indicate an open or closed position. The opening and closing times of the main valve were determined
+using the two relays. The mechanical switches on the relays were activated by two cams on the main
+valve stem. An example of a positioner with the opening cam (green) and closing cam (red) are shown
+in Figure 4-4. Calibration tests were conducted to compare the opening and closing valve times to the
+total test duration. A longer start-up and shutdown time would increase the transient periods of a test
+and reduce the accuracy of the mass flow rate calculation. The relay outputs were connected to the
+LabVIEW current input module. The input signals were monitored during operation and the response
+times were determined. Based on the relay specifications, a maximum internal armature delay of 40 ms
+could be expected.
+Figure 4-4: Main valve positioner (APL, 2006)
+During testing, immediately after the main value was actuated, the pressure in the injector manifold
+increased to the setpoint based on the tank ullage pressure as shown in Figure 4-3. The injector manifold
+pressure resulted in a specific mass flow rate. The initial start-up ramp was found to be 600 ms. This
+
+
+39
+was with a single-acting pneumatically actuated ball valve with an air supply pressure of 6 bar. The
+main valve was converted to a double-acting valve by removing the springs and adding a second pilot
+solenoid valve. The pneumatic pressure was also increased to 8 bar. The start-up ramp was decreased
+to 300 ms. Lastly, two dump valves were positioned after the solenoid valves to reduce the start-up and
+shut-down ramp times to approximately 250 ms. The dump valves reduced the actuation time since the
+air pressure resisting the motion of the actuator piston was expelled from the pneumatic cylinder faster.
+The decreased start-up ramp was deemed acceptable as the start-up and shutdown durations equated to
+4.2 % of the total test duration for a twelve-second test. The final construction of the pneumatically
+actuated ball valve is shown in Figure 4-5.
+Figure 4-5: Double acting pneumatic ball valve
+4.5 Summary
+Calibrating the test stand determined the required tank pressure for the design mass flow rates for both
+the fuel and oxidiser domains. The issue of maintaining a constant tank pressure using a single-stage
+regulator was resolved by installing a solenoid valve to decouple the tank and regulator initial set
+pressures. The mass flow rate measurement accuracy was increased by decreasing the main valve
+actuation time.
+Dump valves
+Solenoid valve
+Solenoid valve
+Pneumatic actuator
+Positioner
+Ball valve
+Mounting bracket
+
+
+40
+5. Validation Methodology
+5.1 Introduction
+The CFD simulations conducted by Martin (2019) modelled the required pressure drop across the
+SAFFIRE injector for each flow domain to drive the LOX and kerosene at mass flow rates of 5.66 kg/s
+and 2.28 kg/s respectively. Another performance output was the propellant distribution. As part of this
+study the accuracy of the modelled pressure drop and propellant distribution were compared to the
+experimental data collected using the SAFFIRE cold flow test stand. The test stand operated with water,
+as an analogue fluid, pressurized by a regulated blow down system. The mass flow rate and propellant
+distribution were calculated using the mass collected over a steady state period. The manifold pressure
+was monitored during injector tests and combined with the flow rate to calculate the flow function for
+each domain.
+5.2 Validation Methodology
+Martin (2019) conducted two CFD simulations for the SAFFIRE injector. The oxidiser and fuel
+simulations comprised the oxidiser domain, with LOX as the simulation fluid, and the fuel domain,
+with kerosene as the simulation fluid. Validating the simulations involved machining two separate test
+articles since it was not practical to test both domains at the same time, nor could they be tested
+independently with a single test article. The fuel and oxidiser test articles were therefore separate and
+contained the fuel and oxidiser domains respectively. The test articles were inspected to ensure no
+geometric imperfections, such as burrs, were present. Secondly, each test article was analysed to
+identify any significant geometry deviations. The computer-aided design (CAD) models used by the
+simulations were updated to include any geometric deviations. The measurement and model update
+process ensured the CAD models being simulated and the physical articles being tested contained the
+same geometries. Therefore, a deviation between the simulation and experimental results would be the
+result of a simulation or experimental error. Simulation errors are categorised as a deviation from the
+experimental data. The experimental error was represented by a combined uncertainty.
+The output parameters of the simulations were the mass flow rates for each orifice. These flow rates
+were used to calculate the total mass flow rate and the propellant distribution for each injector domain.
+To validate the performance of each domain, the simulations fluid properties were updated to water,
+such that the simulation fluid and analogue fluid used for testing were the same. The oxidiser and fuel
+simulations required remeshing to capture the flow accurately. This was caused by the change in density
+and viscosity of the fluid. Updated performance results for the pressure drop and propellant distribution
+were obtained using the updated simulations. The accuracy of each simulation was determined based
+on the deviation from the experimental results. The pressure measurement results from the simulation
+
+
+41
+and cold flow tests were measured relative to atmospheric pressure. The validation process followed
+for the injector fuel and oxidiser domains is shown in Figure 5-1.
+Figure 5-1: Validation process and outcomes
+
+
+42
+5.3 Steady State Comparison
+The simulation results were based on a steady state model as a Reynolds Averaged Navier Stokes
+turbulence model was selected to reduce computational resource requirements. The experimental data
+points were collected during a steady state period and were averaged over the test duration. Therefore,
+the results are comparable as both the computational model and experimental data contain averaged
+results.
+The transience flow rate experienced during start-up and shutdown was removed by employing a two
+test method. A single full duration test of twelve-seconds was followed by a separate transient test of
+two-seconds. Subtracting the mass collected during the transient test from the total mass of the full
+duration test yielded a weight corresponding to a steady manifold pressure. Dividing the steady state
+weight by the difference in test durations resulted in the mass flow rate for the steady state period. The
+steady state and transient regions are shown in Figure 5-2. The full duration test data are labelled as
+“Full” and the transient valve test data are labelled as “Valve”. The portion labelled “Start-up
+transience” is the pressure in the manifold during the start-up sequence of a test. This is when water
+begins to flow through the injector. The “Steady state” pressure is when the flow is steady through the
+injector. Finally, the “Shut down transience” is when the main ball valve is closed and the flow through
+the injector decreases then stops. To obtain a mass flow rate two tests are required. These two tests
+result in a single data point for the mass flow rate. Numerous sets of two tests were conducted to obtain
+repeated measurements for the mass flow rate.
+Figure 5-2: Resulting steady state pressures
+The two-test method assumed that the two tests were conducted at identical mass flow rates. However,
+this was not practical as a slight variation in the tank ullage pressure would affect the mass flow rate.
+Therefore, an estimate of the uncertainty for the mass flow rate was calculated, resulting from slight
+-1
+0
+1
+2
+3
+4
+5
+6
+7
+8
+0 1 2 3 4 5 6 7 8 9 10 11 12 13
+Pressure (bar)
+Time (s)
+Manifold (Full) Tank (Full) Manifold (Valve) Tank (Valve)
+Start-up transience
+Shut down transience
+Steady state region
+
+
+43
+mass flow rate variations between tests. The mass flow rate through a device for a given change in
+pressure across the device can be expressed using a flow function. An uncertainty was calculated using
+the flow function and the difference in manifold pressures between tests. In general, the difference in
+manifold pressures between tests was within 0.5% and 1% for the fuel and oxidiser tests respectively.
+These low-pressure differences resulted in a low uncertainty for the mass flow rate calculation. The
+estimated uncertainty calculations are covered in Chapter 6.
+The steady state region in Figure 5-2 is composed of a full duration twelve-second test (Figure 5-3) and
+a truncated two-second transient valve test (Figure 5-4). Figure 5-2 depicts how the two-test approach
+was applied to remove the transient periods during start-up and shutdown. The result is a constant
+manifold pressure for the calculated mass flow rate. This data was required for a direct comparison to
+the simulation results. The manifold pressure in the steady state region was averaged and the standard
+deviation calculated to account for the uncertainty in this mean value.
+Figure 5-3: 12-second full duration test pressures
+Figure 5-4: 2-second valve test pressures
+-2
+0
+2
+4
+6
+8
+0 1 2 3 4 5 6 7 8 9 10 11 12 13
+Pressure (bar)
+Time (s)
+Manifold Pressure Tank Pressure
+-2
+0
+2
+4
+6
+8
+0 0.5 1 1.5 2 2.5 3
+Pressure (bar)
+Time (s)
+Manifold Pressure Tank Pressure
+
+
+44
+5.4 Mathematical Model
+Validating the simulation performance parameters involved determining the required injector pressure
+drop for a mass flow rate of 2.28 kg/s and 5.66 kg/s for the fuel and oxidiser domains respectively. The
+actual injector pressure drops for the design mass flow rates were evaluated based on two sets of ten
+repeated experiments. Obtaining an identical mass flow rate per test was impractical due to the
+sensitivity of the initial tank ullage pressure and the resulting flow rate. Therefore, as per the
+recommendations made by the AIAA (1998), a mathematical model was used that describes the
+relationship between the pressure drop and the mass flow rate. The flow factor K୴ is given by Equation
+2-5. It describes the mass flow rate as a function of the pressure drop across a device and the specific
+gravity of the fluid.
+5.5 Test Articles
+The SAFFIRE injector contains two independent flow domains. These domains are integrated, as shown
+in Figure 5-5. They can be separated into the fuel and oxidiser domains. These domains contain
+independent inlets and outlets. Therefore, the performance of each flow domain was tested
+independently by machining two test articles, namely the fuel test article and the LOX test article. Since
+the domains were separated, propellant mixing tests were not conducted.
+Figure 5-5: Integrated flow domains
+Fuel inlet
+Oxidiser inlet
+
+
+45
+5.6 Fuel Test Piece
+The fuel test article contains the fuel domain, shown in Figure 5-6. It was designed to deliver kerosene
+to the combustion chamber at a flow rate of 2.28 kg/s. The fuel inlet supplies an annular manifold where
+a total of 8 radial passages with various diameter down-coming holes supply five concentric rings. The
+four inner rings supply the main orifices with 2.07 kg/s of propellant. The outer ring supplies the film
+cooling orifices with 0.207 kg/s of propellant.
+Figure 5-6: Fuel domain
+The nominal design mass flow rates for the fuel and film cooling orifices are listed in Table 5-1. These
+are the required flow rates for each orifice to deliver the same amount of propellant for the correct O/F
+ratio across the chamber cross-section. This O/F ratio excluded the film cooling. These nominal mass
+flow rates were used to calculate the percentage deviation per orifice for the distribution results.
+Table 5-1: Nominal mass flow rates per orifice
+Parameter Main orifice (kg/s) Film cooling (kg/s)
+Mass flow rate 0.0259 0.0069
+The fuel domain was manufactured from three bodies, namely the top manifold, injector body and
+faceplate. These bodies were secured together using annular bolts. The faceplate was secured to the
+injector body using countersunk cap screws to ensure the O-ring seals did not leak from the deflection
+of the faceplate during operation. The manufacturing drawings can be found in Appendix E.
+
+
+46
+The fuel test article was machined from aluminium 6082 T6 plate. This aluminium was selected because
+of its corrosion resistance, high yield strength and availability. Finite Element Analysis (FEA)
+simulations and analytical calculations verified the bolted connections and O-ring sealing design. A
+total of 12 O-rings sealed the fuel test article, including 10 O-rings to seal the concentric rings and 2 O
+rings to seal the injector body and top manifold interface. An integrated injector with both flow domains
+requires the faceplate to be brazed to the injector body. This is due to geometric constraints and sealing
+material compatibility issues (Martin, 2019). The faceplate was machined from stainless steel 316 plate.
+All the orifices were Wire Electrical Discharge Machining (WEDM) cut based on the high tolerance
+requirements on the 1.5 mm and 0.8 mm holes. An exploded view of the fuel test piece is shown in
+Figure 5-7.
+Figure 5-7: Fuel test piece exploded view
+The simulations performed by Martin (2019) for the fuel domain included a 12 mm inlet due to
+geometrical constraints. The fuel test article was machined with a 12 mm inlet to resemble the modelled
+geometry. The test stand used 1” tubing with an internal diameter of 19.8 mm. Figure 5-8 depicts the
+step at the inlet. This step had a large analytical pressure drop of roughly 0.72 bar and was added to the
+simulation CAD model (Fox et al., 2012).
+
+
+47
+Inlet Step
+Figure 5-8: Fuel inlet step
+The fuel simulation calculated the average pressure at the inlet surface of the injector domain. This was
+impractical from a testing perspective due to the mounting position of the injector. Instead, a pressure
+tap was inserted into the test article for a pressure transducer, as shown in Figure 5-9. This monitored
+the pressure at an accessible reference point within the annular manifold. An identical pressure tap was
+inserted into the simulation CAD model for a direct comparison.
+Figure 5-9: Fuel test article pressure tap
+Manifold pressure transducer
+Inlet step
+Flexible hose inlet
+Fuel test article
+
+
+48
+5.6.1. Geometric Simplifications
+Geometric simplifications reduced the machining complexity of the fuel test article. The fillet on the
+down-coming holes from the radial passages into each concentric ring were removed. This is shown in
+Figure 5-10 and Figure 5-11. This simplification was included in the simulation CAD model. The CAD
+model update ensured the model being simulated and the physical model being tested contained the
+same geometry.
+Figure 5-10: Fillets on down-coming holes
+Figure 5-11: Updated geometry with no fillets
+5.6.2. Machining Imperfections
+The down-coming hole diameters for rings two and five were increased due to poor tolerances during
+machining. To save both time and money the simulation CAD model was updated to include these
+geometric deviations. The new dimensions are tabulated below in Table 5-2.
+Table 5-2: Fuel test piece dimension updates
+Down-coming hole location Design diameter (mm) Machined diameter (mm)
+Ring 2 2.4 2.6
+Ring 5 1.7 1.75
+The fuel faceplate comprises 112 small diameter orifices, including 80 main orifices and 32 film cooling
+orifices with diameters of 1.5 mm and 0.8 mm respectively. These orifices were WEDM cut
+perpendicular to the faceplate. Therefore, the profile projector ( Figure 5-12), with a ×50 magnification,
+was used to measure the diameters with a high degree of accuracy.
+
+
+49
+Figure 5-12: Profile projector with fuel faceplate
+The profile projector bed contained a vertical and horizontal adjustment resolution of one micron. Each
+orifice diameter was calculated based on two bed measurements taken using reference markers and the
+magnified image on the display. The main orifices on average had a +30 microns tolerance, although
+the shape was adequately circular as shown in Figure 5-13.
+Figure 5-13: Fuel faceplate main orifice
+Magnified 1.5 mm orifice
+Fuel faceplate
+Magnified orifice
+
+
+50
+The process of WEDM cutting a hole involves spark eroding a 0.5 mm hole for the wire to be fed
+through before the specific hole diameter is cut. This process is often done on a separate machine which
+increases the possibility of an error resulting from an offset in the second setup. When inspecting the
+film cooling orifices, Figure 5-14, it was evident that a setup error had occurred as majority of the
+orifices were oval. An average edge to edge distance was taken and the simulation CAD model was
+updated to include both the main and film cooling orifices tolerances. This process involved measuring
+all 112 orifices on the test article faceplate and updating the diameters of the simulation CAD model to
+ensure the simulation results did not contain errors due to geometric deviations.
+Figure 5-14: Film cooling defective orifice
+5.6.3. Structural Design & FEA Analysis
+The structural integrity and sealing design were verified using a Finite Element Analysis on ANSYS
+Mechanical. The bolted connections and material strength were verified to ensure the components did
+not yield under the operating pressures. A maximum of 5 bar (static pressure) was experienced during
+steady state conditions. A safety factor of two was used on this static pressure. Therefore, the static
+pressure was set to 10 bar for the simulation and analytical calculations. The main force separating the
+three components resulted from the internal pressure. This force was resisted by the annular bolts and
+countersunk screws.
+The simulation treated the bolts and threaded interfaces as bonded sections. This resulted in unrealistic
+stresses at cell vertices within these bonded regions, as shown in Figure 5-15. These stresses were
+disregarded based on the analytical thread calculation shown in Appendix B.
+Initial spark eroded hole
+0.8 mm orifice outline
+
+
+51
+Figure 5-15: Injector body maximum Von-Mises stress
+The deformation of the faceplate was modelled to ensure leak paths were not introduced during
+operating conditions. Countersunk cap screws torqued to 5 Nm secured the faceplate to the injector
+body and ensured minimal separation occurred due to internal pressures. The maximum deformation of
+the faceplate near the concentric rings was 0.0351 mm, as depicted in Figure 5-16. The resulting
+decrease in compression of the O-rings in this maximum deflection region was 1.167%. The initial
+compression of the O-rings was roughly 40% with a lower recommended limit of 30%. Therefore, this
+deflection was deemed acceptable.
+Figure 5-16: Faceplate deformation
+5.7 LOX Test Piece
+The LOX test article was constructed from three parts, namely the LOX dome, injector body and
+faceplate. The oxidiser inlet was positioned at the centre of the LOX dome. The injector body contained
+down-coming slots that supplied five concentric rings with propellant. These rings were located above
+the orifice inlets on the faceplate.
+
+
+52
+Figure 5-17: LOX domain top and bottom view
+The LOX dome and injector body were manufactured from aluminium 6082 T6 due to its high yield
+strength and corrosive resistance. The faceplate was machined from a half-hardened copper plate to
+evaluate the expected tolerances of the 1.4 mm holes drilled at an angle of 30°. This was the original
+material selected for the SAFFIRE injector faceplate (Martin, 2019). O-rings were used to seal the
+concentric rings and the injector body/LOX dome interface. The LOX test article exploded view is
+shown in Figure 5-18. The manufacturing drawings can be found in Appendix E.
+Figure 5-18: Lox test piece exploded view
+A pressure tap was machined into the LOX test article for a practical reference pressure. The pressure
+tap was also inserted into the simulation CAD model at the same position for a comparative pressure
+reading. The LOX test article is shown in Figure 5-19.
+
+
+53
+Figure 5-19: LOX test article
+5.7.1. Machining Tolerances
+The LOX faceplate included 160 orifices with a design diameter of 1.4 mm. The orifices were drilled
+then reamed at a 30° angle. Therefore, using the profile projector was not a viable method of measuring
+the orifices tolerances. A sample part containing five perpendicular holes made with the same
+manufacturing techniques, shown in Figure 5-20, was supplied with the faceplate. The tolerances of the
+sample holes were measured using the profile projector. It was concluded that the average tolerance for
+the perpendicular orifices was ±4 microns.
+Figure 5-20: 1.4 mm hole sample
+The manufacturer ensured all the angled orifices were within ±10 microns of 1.40 mm. This was
+Flexible
+hose Pressure transducer
+LOX test
+Test stand mounting bracket
+
+
+54
+determined using a pin gauge set with a 10-micron resolution. The quality of the entry and exit holes of
+each orifice was inspected using a profile projector. Figure 5-21 shows the exit quality of an orifice in
+ring 1. This exit quality was similar for rings 2 and 3. Rings 4 and 5 contained orifices with poor quality
+exits, as depicted in Figure 5-22. The possible effects of the poor-quality exits are discussed in Chapter
+7.
+Figure 5-21: Ring 1 orifice exit (good quality)
+Figure 5-22: Ring 4 orifice exit (poor quality)
+5.7.2. Structural Design & FEA Analysis
+The LOX test article structural and sealing designs were verified using an FEA simulation on ANSYS
+Mechanical. This simulation used symmetry to reduce the computational requirements. The main
+objective of this simulation was to ensure the deflection between the injector body and faceplate did
+Uniform exit profile
+Non-uniform exit profile
+
+
+55
+not cause an O-ring seal to leak due to inadequate compression. Secondly, the bolt and screw
+connections were verified. The resulting Von-Mises stresses on the injector were below the yield stress
+of 240 MPa for aluminium 6082 T6, as shown in Figure 5-23. Further analytical calculations shown in
+Appendix B verified the bolted connections were adequate for an internal pressure of 10 bar.
+Figure 5-23: Injector body Von-Mises stress
+Proper sealing of the concentric rings was required to obtain accurate distribution results. The sealing
+design of the faceplate and injector body was verified by inspecting the gap of the faceplate and injector
+body at a maximum operating pressure of 10 bar. Figure 5-24 depicts the gap between the faceplate and
+injector body due to internal pressures. The scale assumes a gap below the injector body surface is
+negative. Therefore, the maximum gap is near the outer ring, with a magnitude of 0.0206 mm. This
+results in a maximum decrease in compression of 0.69 %. Therefore, based on the minimum required
+compression of 30% and the initial compression of 40 %, the O-ring sealing design was accepted.
+Figure 5-24: LOX faceplate and injector body gap
+
+
+56
+5.8 CFD Simulations Updates
+The SAFFIRE injector design was modelled using commercial CFD software, Star CCM+. The
+objective was to aid the design phase and to determine the predicted performance of the injector. The
+full methods and results of the simulations have been published by Martin (2019) who conducted
+separate simulations to determine the performance of the fuel and oxidiser domains with the fluids set
+as kerosene and liquid oxygen respectively. A user-defined velocity inlet boundary set the mass flow
+rate at the injector inlet. The orifices exits were set as separate pressure outlet boundaries with the
+pressures defined as the chamber pressure. The performance outputs for each domain were the pressure
+drop across the injector, for the user-defined mass flow rate, and the propellant distribution. The
+propellant distribution was calculated using the modelled mass flow rate and the nominal mass flow
+rate per orifice. The nominal mass flow rate per orifice was calculated using the total mass flow rate
+and the total number of orifices. The simulations conducted by Martin concluded the orifices mass flow
+rates varied by a maximum of 2 % from the nominal mass flow rates per orifice. The simulation
+boundary conditions and solver settings for the oxidiser and fuel simulations are given in Table 5-3.
+Table 5-3: LOX and fuel simulation boundary conditions and solver settings
+LOX Fuel
+Inlet boundary Velocity inlet Velocity inlet
+Outlet boundary Pressure outlet Pressure outlet
+Physics continuum Steady
+Three dimensional
+Turbulent
+K-Epsilon Turbulent
+Liquid
+Two-layer all y+ wall treatment
+Reynolds averaged Navier Stokes
+Realizable K-Epsilon two-layer
+Constant density
+Segregated flow
+Steady
+Three dimensional
+Turbulent
+K-Epsilon Turbulent
+Liquid
+Two-layer all y+ wall treatment
+Reynolds averaged Navier Stokes
+Realizable K-Epsilon two-layer
+Constant density
+Segregated flow
+Mesh count (cells) 7.79 × 10଻ 9.78 × 10଻
+
+
+57
+The fuel and oxidiser simulations used the K-Epsilon turbulence model with different wall treatments
+to model the flow through the respective domains. The fuel simulation used an all wall yା model with
+the first cell near the wall having a yା value ≤ 1. Therefore, the viscous sublayer was modelled rather
+than approximated with a wall function. The oxidiser simulation used an all wall yା model with the
+first cell near the wall having a yା range of 30 ≤ yା ≥ 300. Therefore, the viscous sublayer and
+transient region were approximated with a wall function.
+A mesh refinement was required since the working fluids for both simulations were changed to water.
+The update to the fluid properties, namely density and viscosity, resulted in different flow
+characteristics through the respective domains. Therefore, the prism layer mesh thicknesses for both
+simulation domains were updated, such that the yା values still fell within the acceptable ranges.
+Acceptable y+ ranges for both simulations were achieved, as shown in Figure 5-25 and Figure 5-26. The
+mesh refinement process involved an iterative approach of refining the prism layer thickness and
+observing the y+ values.
+Figure 5-25: Fuel domain wall y+ scene
+
+
+58
+Figure 5-26: LOX domain wall y+ scene
+5.9 Fuel Propellant Distribution
+The fuel domain was designed to deliver 2.28 kg/s of kerosene through 80 main orifices and 32 film
+cooling orifices with diameters of 1.5 mm and 0.8 mm respectively. The main orifices are the centres
+of each triplet element and were drilled perpendicular to the faceplate to produce axial liquid jets, as
+shown in Figure 5-27. The injector design stated that the individual orifices mass flow rates were within
+2 % of the nominal mass flow rate. The nominal value was based off even distribution across the
+injector.
+Figure 5-27: Fuel faceplate during cold flow testing
+To determine the mass flow rate per orifice, a collection attachment was designed and manufactured
+specifically for the fuel element layout. It was attached below the faceplate, as shown in Figure 5-28.
+The attachment separated the axial streams into separate 500 ml containers. Each container was supplied
+by a short length of PVC flexible tubing.
+
+
+59
+Figure 5-28: Fuel collection attachment
+The PVC tubes were connected to an aluminium distribution plate with aluminium tubes positioned
+below each orifice, as shown in Figure 5-29.
+Figure 5-29: Distribution plate construction
+The aluminium distribution plate was secured to the injector faceplate with a clearance of 1 mm to
+ensure the water in the tubes remained under free-flow conditions. The collection apparatus could be
+separated into two parts, namely the upper portion, containing the tubes and aluminium distribution
+plate, and the lower removable section housing the containers. The lower section was removed after
+each test to determine the weight collected in each 500 ml container. The individual bottle masses were
+measured using a laboratory scale.
+A large sample mass per container was required due to the low mass flow rates for the orifices. This
+ensured the residual water contained in each flexible tube did not account for a large percentage of the
+collected samples.
+Fuel test
+article Aluminium distribution plate
+PVC flexible tubing
+Sample containers
+
+
+60
+Figure 5-30 shows the percentage error of a main and film cooling orifice sample, based on an excess
+of 1 g of water for varying test durations. The estimation of 1 g of water was a conservative value as on
+average the total residual water in each tube was 0.75 g. This value was calculated using the weight of
+the upper section of the collection attachment before and after numerous cold flow tests. It was assumed
+the increase in weight due to residual water was evenly distributed between the 112 tubes. The film
+cooling samples included the most significant error percentage due to the lower flow rate. A test
+duration of twelve seconds was deemed acceptable with an error percentage of ±0.32 % and ±1.29 %
+for the main and film cooling orifices respectively. The uncertainty due to the residual water in the
+tubes was a component of the combined standard uncertainty associated with the distribution results
+calculated in Chapter 6.
+Figure 5-30: Percentage error of an additional 1g of water vs test duration
+Comparing the propellant distribution results for the simulation orifices and test article orifices required
+the respective orifices to be matched according to their x and y coordinates. The simulation data
+containing the orifices mass flow rates and coordinates were exported as a .txt file from Star CCM+. A
+mapping chart was made during the construction of the propellant distribution apparatus. This linked
+each orifice to a numbered container. Each container was given an x and y coordinate based on the
+orifice supplying the container. A Python script sorted and matched the mass flow rates based on the
+corresponding x and y coordinates. This process ensured the correct orifices were being compared for
+the simulation and experimental distribution results.
+5.10 LOX Propellant Distribution
+The oxidiser domain was designed to deliver 5.66 kg/s of LOX to the combustion chamber through 160
+orifices with diameters of 1.4 mm. The unlike triplet element configuration selected results in 80 orifice
+pairs that impinge below the faceplate as depicted in Figure 5-31. The orifice pairs are supplied from 5
+concentric rings. Each ring only supplies propellant to one of the two orifices within an element pair. It
+is critical for each orifice in a pair to contain the same momentum to ensure no skewed spray fans cause
+hot spots of the chamber walls (Huzel & Huang, 1992).
+0.00
+5.00
+10.00
+15.00
+20.00
+-3 2 7 12 17
+Percentage error (%)
+1 ml of additional water (main) 1 ml of additional water (film)
+
+
+61
+Figure 5-31: LOX domain impinging streams
+To measure the flow rate through each orifice, a collection attachment was designed and manufactured
+specifically for the LOX element layout. This device incorporated a 3D printed distribution part shown
+in Figure 5-32. PVC tubing pressed into this part which included a slight angle at the inlet to reduce the
+effects of blowback caused by the high-velocity jets impinging on the tubing walls.
+Figure 5-32: 3D printed distribution attachment
+The part was positioned below the injector faceplate to separate the liquid jets before impingement
+occurred, as shown in Figure 5-33. The PVC tubes directed the liquid jets into individual 500 ml
+containers. The mass flow rates of each orifice were calculated based on the mass collected using the
+two-test method. This collection apparatus was positioned 0.5 mm below the faceplate to ensure the
+water in the tubes remained in a free-flowing state.
+
+
+62
+Figure 5-33: LOX distribution attachment
+The error percentage of the mass flow rate for a full duration test of 12 seconds with a variance of 1 g
+of water was ± 0.28 % for the LOX tests. This conservative 1 g estimate was based on the difference in
+weight of the upper portion of the distribution attachment before and after cold flow testing. It was
+assumed that each tube contained an equal amount of water after testing. By dividing the total additional
+weight by 160 tubes, it was estimated that each tube on average contained 0.9 g of residual water.
+5.11 Summary
+The validation methodology described in this chapter was developed to gather steady state experimental
+data to determine the accuracy of CFD simulation results conducted on the fuel and oxidiser domains
+of the injector. This was accomplished by utilising a two-test method. This method yielded an accurate
+measurement of the experimental mass flow rate without the use of a flow meter. The flow rate was
+determined using this method for the pressure drop and distribution tests. The design and manufacturing
+procedures for each test article were covered. This included the required updates applied to the
+simulation CAD model due to machining tolerances and errors. Lastly, the procedures and devices
+developed to determine the propellant distributions were discussed. The actual test results obtained from
+the cold flow rig are described in Chapter 7.
+LOX test
+article 3D printed distribution part
+PVC flexible tubing
+Sample containers
+
+
+63
+6. Uncertainty Calculations and Measurement Limitations
+6.1 Introduction
+This chapter summarises the uncertainties of each performance parameter measured or calculated using
+the experimental methods described in Chapter 5. This includes uncertainties relating to pressure
+readings, calculated mass flow rates, flow factor calculations and propellant distribution results for both
+the fuel and oxidiser domains. The uncertainty components of the measured or calculated parameters
+are shown in Figure 6-1.
+Figure 6-1: Uncertainty components
+6.2 Pressure Drop and Flow Factor Uncertainties
+Based on the literature reviewed in Chapter 2, the most appropriate method of expressing uncertainty
+for a term that combines multiple measurement uncertainties is a combined standard uncertainty. To
+calculate the flow factor (K୴) the manifold pressure was required which was measured by an S-10
+pressure transducer. The flow rate was also required. The calculated flow rate was based on mass and
+test duration differences referred to as the ‘two-test method’ in Chapter 5. The calculated mass flow
+rate contained uncertainties due to the practical considerations that the mass flow rates were not
+identical for the two tests. Therefore, to state the calculated flow factor with confidence, it should
+encompass all the combined uncertainties that contribute to its evaluation. Additionally, a coverage
+factor and confidence interval must be calculated based on repeated measurements. This process was
+applied to the distribution results where applicable.
+Flow factor uncertainty
+Flow rate uncertainty
+Measurement resolution
+(mass and time)
+Flow rate variance
+(two-test method)
+Pressure uncertainty
+Non-linearity
+(Type B)
+Standard deviation
+(Type A)
+
+
+64
+The calculated uncertainty of the flow factor is based on the manifold pressure (P୑) and flow rate (Q)
+which is based on a test weight m, the test duration t, and the fluid density (ρ). All these terms have an
+uncertainty (u( )) based on the measurement method used. These values are given in Table 6-1.
+Table 6-1: Absolute uncertainties of flow factor variables
+Parameter Measurement device
+uncertainty
+Resolution uncertainty
+(rectangular probability
+distribution)
+Total uncertainty
+u(P୑) ± 0.0625 bar
+(Non-linearity)
+2.89 × 10ି ଻bar
+(Negligible)
+± 0.063 bar
+u(m) Resolution limited 0.0029 kg ± 0.0029 kg
+u(t) Resolution limited 0.00058 s ± 0.00058 s
+A relative uncertainty method was adopted to calculate the uncertainties of Q and K୴ due to the process
+involving multiplication or division of uncertainties with unlike units. The relative uncertainty for the
+flow rate, u(Q ), was calculated using Equation 6-1:
+u(Q )
+Q = ඨ൬u(m)
+m൰
+ଶ
++ ൬u(t)
+t൰
+ଶ
+(6-1)
+The relative uncertainty for the flow factor, u(K୴ ), was calculated using Equation 6-2:
+u(K୴ )
+K୴
+= ඨ൬u(Q)
+Q൰
+ଶ
++ ൬ u(P୑)
+2 × P୑
+൰
+ଶ
+(6-2)
+The measurement method for obtaining the manifold pressure was an average based on the steady-state
+portion of a test as described in Chapter 5. This mean pressure included the standard deviation. This
+will be a component of the combined standard uncertainty attached to the data points in Chapter 7 as it
+varied between tests.
+6.3 Propellant Distribution Uncertainties
+The propellant distribution results were obtained using the apparatus described in Chapter 5. The sample
+measurements (mୈ) contained uncertainties based on 1) the residual water in the PVC tubes, 2) the
+measurement resolution of the scale used to measure the weight of each sample and 3) the two-test
+
+
+65
+method flow rate uncertainty. The value of each uncertainty is tabulated in Table 6-2. The combined
+uncertainty for the sample measurements is given by u(mୈ). Furthermore, the type A uncertainties
+determined from multiple distribution tests were calculated as the standard deviation from the mean.
+This value was added to the type B uncertainties and summarised as a combined standard uncertainty
+in Chapter 7.
+Table 6-2: Distribution test uncertainty
+Parameter Measurement device
+uncertainty
+Resolution uncertainty
+(rectangular probability
+distribution)
+Combined standard
+uncertainty
+u(m஽) ± 1.14 g (Method) 0.029 g ± 1.14g
+For the distribution tests, the deviation (D୭୰୧୤୧ୡୣ ) is based on the collected mass of water per orifice
+(m୭୰୧୤୧ୡୣ ) relative to the nominal mass of water ( ഥm୭୰୧୤୧ୡୣ ). The nominal mass is given by Equation 6-3:
+ഥm୭୰୧୤୧ୡୣ = m୲୭୲ୟ୪
+N୭୰୧୤୧ୡୣୱ (6-3)
+Here, N୭୰୧୤୧ୡୣୱ is the number of orifices and m୲୭୲ୟ୪ is the total mass collected from all the samples. The
+percentage deviation per orifice (D୭୰୧୤୧ୡୣ ) from the nominal mass is given by Equation 6-4:
+D୭୰୧୤୧ୡୣ = m୭୰୧୤୧ୡୣ − mഥ ୭୰୧୤୧ୡୣ
+mഥ ୭୰୧୤୧ୡୣ
+× 100
+(6-4)
+Table 6-3 summarises the uncertainties for the fuel and LOX distribution tests. This total uncertainty is
+based on the measurement uncertainty of ±1.143 g of water per orifice sample. These values indicate
+the type B uncertainties and will be added to the type A uncertainties obtained through repeated
+experiments in Chapter 7.
+Table 6-3: Distribution test deviation uncertainty
+Parameter Fuel distribution Film cooling LOX distribution
+Orifice deviation uncertainty (%) 0.44 1.77 0.36
+
+
+66
+6.4 Two-Test Method Justification
+The uncertainty for the two-test method is determined below. This uncertainty is the result of a slight
+manifold pressure variation between tests, leading to a minor difference in flow rates for the full
+duration and transient tests. The two-test method calculates the mass flow rate corresponding to a
+manifold pressure using two tests, assuming the flow rates are identical. Therefore, the uncertainty for
+this calculated mass flow rate was required. A detailed description of the two-test method can be found
+in Chapter 5.
+A flow factor was calculated using the total mass collected during a full duration test and the steady
+state time period. This flow factor was used to calculate the predicted change in mass flow rate due to
+a manifold pressure variation between tests. The variation of the calculated mass flow rate, using the
+flow factor, was used to determine an uncertainty for the mass flow rate measurement, determined using
+the two-test method.
+A maximum allowable pressure deviation of 0.5 % was set for the pressure deviations between tests. A
+sample calculation for the maximum pressure deviation and the resulting change in the mass flow rate
+can be found in Appendix C.
+Based on the method described above, using a maximum pressure difference of 0.5 %, the difference
+in mass flow rates between the full duration test and the transient test was 0.0057 kg/s. Over the transient
+test duration, a maximum of 15.35 g of additional water could be collected due to this mass flow rate
+difference. This yields a relative uncertainty of 0.066 % for the calculated mass flow rate using the two
+test method.
+The uncertainties for the actual pressure deviations between tests are shown in Table 6-4. These tests
+all had a relative mass flow rate uncertainty of less than 0.066 %. Therefore, it was concluded that the
+two-test method is an appropriate method for calculating the mass flow rates accurately.
+
+
+67
+Table 6-4: Fuel manifold pressure variation between tests
+Full duration manifold pressure (bar)
+Transient test manifold pressure (bar)
+Average manifold pressure (bar)
+Percentage difference (%)
+Flow rate uncertainty (g/s)
+3.394 3.390 3.392 -0.11 0.17
+3.392 3.390 3.391 -0.06 0.09
+3.334 3.338 3.337 0.01 0.03
+3.338 3.338 3.337 0.01 0.01
+3.323 3.312 3.318 -0.32 0.44
+The above method was applied for the LOX test results. The uncertainties based on the difference in
+manifold pressure between full duration and transient tests are shown in Table 6-5.
+Table 6-5: LOX manifold pressure for start-up and full duration tests
+Full duration manifold pressure (bar)
+Start-up and shut down test manifold pressure (bar)
+Average manifold pressure (bar)
+Percentage difference (%)
+Flow rate uncertainties (g/s)
+5.000 4.994 4.997 -0.13 3.9
+5.035 5.003 5.019 -0.64 19.0
+5.123 5.121 5.122 -0.04 1.1
+5.121 5.088 5.104 -0.65 18.9
+5.059 5.035 5.047 -0.45 13.1
+6.5 CFD Verification
+This study builds on the design and analysis of the SAFFIRE injector conducted by Martin (2019). The
+previous study included a verification based on the GCI for the steady state simulations and a basic
+validation based on benchmarks with similar fluids and complex geometries. This validation technique
+was used due to the lack of published experimental data regarding liquid rocket engine injectors.
+This study updated the simulations performed by Martin (2019). The required changes included
+updating the working fluid to water and editing the meshes to capture the boundary layer flow
+adequately. The complex geometry and fine mesh size used by Martin required the resources of the
+Centre for High-Performance Computing (CHPC). This facility allows users to login, via a Linux
+terminal, to upload simulation and script files to run computations on a cluster with up to 240 cores.
+CHPC was employed for all the simulations conducted in this study due to the intensive resource
+requirement set by the recommended mesh sizes.
+
+
+68
+The GCI was calculated to ensure grid convergence was achieved for the updated simulations. The
+continuum value monitored was the static inlet pressure for the fuel and LOX domains. The values for
+each mesh refinement are shown in Table 6-6 and Table 6-7.
+Table 6-6: Fuel simulation GCI inputs
+Mesh Base size (mm) Inlet static pressure (bar)
+Coarse 1.2 3.56
+Medium 0.6 3.34
+Fine 0.3 3.33
+Table 6-7: LOX simulation GCI inputs
+Mesh Base size (mm) Inlet static pressure (bar)
+Coarse 1.2 5.598
+Medium 0.6 4.680
+Fine 0.3 4.676
+The static inlet pressure for a zero-grid spacing and a GCI comparison were obtained using the output
+data and Equations 2-6 and 2-7 respectively. An estimated error, listed in Table 6-8, was calculated
+based on the fine mesh continuum value and the zero-grid spacing output for both domains.
+Table 6-8: Grid convergence outputs
+Simulation Pinlet,zeroି grid (bar) GCI comparison Estimated error (%)
+Fuel 3.33 0.996 -0.024
+LOX 4.68 0.999 -0.00037
+The GCI comparisons and estimated errors show the simulations are mesh independent using a base
+size of 0.3 mm. The residual graphs for each simulation can be found in Appendix A. These graphs
+show the two simulations converge with mesh refinement occurring for base sizes of 1.2, 0.6 and 0.3
+mm.
+The validation of the CFD simulations performed by Martin (2019) for the K-Epsilon turbulence model
+was based on previous experimental studies conducted on systems resembling the geometry and flow
+features of a liquid rocket engine injector. These included the flow around a butterfly valve (Song &
+Park, 2007), a diesel intake manifold (Emara, Ahmed & Razek, 2015), flow through an orifice (Shah,
+Joshi, Kalsi, et al., 2012) and two co-axial injector elements (Farmer, et al., 2016). Before this study,
+
+
+69
+the two most appropriate models were the K-Epsilon and K-Omega SST turbulence models (Martin,
+2019). Therefore, using the acquired experimental data, the accuracy of the K-Epsilon and K-Omega
+SST models were investigated. The results of these investigations are discussed in Chapter 7.
+6.6 Summary
+This chapter addressed the evaluation of specific uncertainties of measured and calculated quantities
+expected to be encountered in the testing of the injector, namely the flow factor, mass flow rate and
+distribution deviation. The uncertainty arising from the two-test method is determined using the
+relationship of the pressure drop through a device and the mass flow rate, given by the flow factor.
+The chapter also addresses the verification of CFD simulations based on the residuals of a mesh
+independence study.
+
+
+70
+7. Experimental and Simulation Results
+7.1 Introduction
+The data obtained through the experimental methods described in Chapter 5 were compared to the
+updated simulation results. A direct comparison between the results could be made due to the simulation
+updates and calibration procedures described in Chapters 4 and 5. The data collected contained the
+uncertainties documented in Chapter 6. The modelled pressure drop, flow factor and propellant
+distribution accuracies were determined based on the deviation from the experimental results.
+7.2 Simulation Data
+The performance parameters from the updated simulations, described in Chapter 5, were used as an
+initial testing point to validate the pressure drop through the SAFFIRE injector. The performance
+parameters for both flow domains are summarised in Table 7-1.
+Table 7-1: Fuel Simulation and Experimental starting point
+Variable Fuel domain LOX domain
+Fluid Water Water
+Gauge outlet pressure (bar) 0 0
+Manifold pressure (bar) 3.39 4.36
+Mass flow rate (kg/s) 2.28 5.66
+Flow factor (mଷ/h. bar଴.ହ) 4.46 9.76
+7.3 Pressure Drop Calibration
+Numerous inlet pressures were tested to calibrate the mass flow rate through the fuel test article.
+Figure 7-1 shows the simulation manifold pressures and the testing manifold pressures for 20
+experiments resulting in various mass flow rates. From the initial calibration tests, it was concluded that
+on average, the simulation was under predicting the manifold pressure by approximately 9%. At this
+stage, the injector was inspected for possible geometric imperfections. The down-coming holes were
+cleaned to ensure no burs were influencing the flow. During this process a small amount of material
+was removed from the down-coming holes of ring two. Figure 7-1 shows the mass flow rates and
+manifold pressures for the simulation and experimental results. Error bars are not shown as uncertainties
+were not considered during calibration tests.
+
+
+71
+Figure 7-1: Mass flow rate vs manifold pressure
+7.4 Fuel Domain Results
+The fuel test article was cold flow tested to determine the pressure drop and propellant distribution
+using water as an analogue fluid. The simulation results were gathered using the updated simulations
+discussed in Chapter 5 with the same fluid and geometry.
+7.4.1. Pressure Drop
+Based on the required tank pressure determined during the calibration tests, a final set of tests was
+conducted within 1% of the design mass flow rate of 2.28 kg/s. A total of ten tests were conducted,
+including five full duration and five transient tests. The tank pressure and manifold pressure varied
+slightly between tests due to practical limitation. The two-test method was used to calculate the mass
+flow rate corresponding to the manifold pressure of each test. The mass flow rate uncertainties were
+based on the two-test method uncertainties and the measurement limitations described in Chapter 6.
+In Figure 7-2, the mass flow rates and manifold pressures are shown for the simulation and experimental
+results. The error bars show the range of a 99 % confidence interval for the experimental data points.
+The minimum deviation obtainable was ±2.48 %. This was mainly attributed to a 0.0625 bar uncertainty
+for the manifold pressure transducer. Each simulation data point fell within the uncertainty limits of the
+experimental results as shown in Figure 7-2. It was concluded that the simulation accurately predicted
+the required pressure drop across the injector for the design mass flow rate of the fuel domain. The
+simulation deviated by a maximum of 2.48 % from the experimental results.
+1.5
+2
+2.5
+3
+3.5
+4
+4.5
+1.7 1.8 1.9 2 2.1 2.2 2.3 2.4
+Manifold pressure (bar)
+Mass flow rate (kg/s)
+Calibration tests Simulation data
+
+
+72
+Figure 7-2: Manifold pressure vs mass flow rate
+Another method of comparing the simulation and experimental data points was to calculate the flow
+factor (K୴ ) as described in Chapter 2. Table 7-2 shows the calculated flow factor, including the
+combined uncertainty for the experimental results. When comparing the simulation and experimental
+data, it was evident that on average, the simulation underestimated the flow factor by 2.22 % with an
+uncertainty of 1.1 %. This method shows that the pressure drop was accurately modelled by the
+simulation with a high degree of accuracy.
+Table 7-2: Flow factor for experimental and simulation data
+Parameter Experimental Data Simulation Percentage
+Difference
+Flow factor (mଷ/h. bar଴.ହ) 4.5 ± 0.049 4.46 2.22 % ± 1.1%
+7.4.2. Turbulence Model Sensitivity
+An investigation was conducted using different wall treatments and turbulence models for the
+simulation to determine the accuracy of the modelled pressure drop and propellant distribution. The
+pressure drop accuracy was based on the percentage difference between the experimental manifold
+pressure and the simulation manifold pressure for the same mass flow rate. The distribution accuracy
+was based on the total average deviation from the experimental distribution results. This data was
+normalised based on the contribution to the total mass flow rate.
+3.2
+3.25
+3.3
+3.35
+3.4
+3.45
+3.5
+2.28 2.285 2.29 2.295 2.3 2.305 2.31
+Manifold pressure (bar)
+Mass flow rate (kg/s)
+Experimental data Simulation data
+
+
+73
+Switching to a high y+ wall treatment decreased the accuracy based on the experimental data. The high
+y+ wall treatment model required five custom volume meshes to achieve an adequate y+ range for the
+entire domain. The decrease in accuracy and lengthy setup time leads to the conclusion that the most
+appropriate wall treatment was the low y+ model.
+The K-Omega turbulence model did not increase the accuracy, although a good correlation between the
+experimental results was still present. The percentage deviation of each model is shown in Figure 7-3.
+It is evident that the original turbulence model selected (K-Epsilon low y+) yielded the lowest deviation
+from the experimental results for the pressure drop and propellant distribution.
+Figure 7-3: Turbulence model and wall treatment sensitivity
+7.4.3. Fuel Distribution Results
+Each fuel distribution test resulted in a total of 112 mass flow rate data points. Each mass flow rate
+corresponded to an orifice on the fuel faceplate. The element layout contained five concentric rings, as
+shown in the chamber section of the fuel faceplate (Figure 7-4). Rings one to five contained 8, 16, 24,
+32 and 32 orifices respectively. The fastener holes used to secure the faceplate to the injector body are
+also shown. The average distribution per ring was investigated followed by an in-depth study of each
+ring. The orifice indices used for the distribution results were based on a counterclockwise rotation
+about the faceplate centre of the orifice index line shown in Figure 7-4.
+0
+1
+2
+3
+4
+5
+6
+K-Epsilon Low y+ K-Epsilon High y+ K-Omega Low y+
+Percentage deviation (%)
+Turbulence model and wall treatment
+Pressure deviation Distribution deviation
+
+
+74
+Figure 7-4: Fuel faceplate chamber section
+The experimental distribution results were compared to those of the updated simulation. The deviation
+from the nominal mass flow rate per orifice was calculated for the experimental and simulation results.
+The deviations were based on the design criteria of even distribution. This assumes that each orifice
+injects an equal amount of propellant into the combustion chamber. The deviations of the orifices flow
+rates from the nominal flow rate were calculated using Equation 6-3 and 6-4.
+The average deviation of each ring was calculated using the nominal flow rate per orifice and the
+number of orifices per ring. An important note is that the deviations from the nominal mass flow rates
+are not completely representative of the original injector design due to the minor geometric changes
+discussed in Chapter 5 and the change in fluid properties. The output from the distribution tests was the
+accuracy of the simulation when evaluating the propellant distribution, compared to the experimental
+data. Table 7-3 shows how the simulation distribution results deviated from the experimental results for
+each concentric ring. The contribution per ring to the total mass flow rate is also given. This represents
+the significance of the accuracy. The percentages are based on the mass flow rate for the correct O/F
+ratio. Film cooling was considered as additional fuel. Therefore, the four inner rings make up 100 % of
+the 2.07 kg/s designated for the main orifices and ring 5 makes up 100 % of the 0.207 kg/s designated
+for the film cooling.
+Ring 1
+Ring 5
+Fastener
+holes Orifice index
+
+
+75
+Table 7-3: Simulation percentage deviation from experimental results
+Ring Simulation deviation from experimental data (%) Total specific flow rate percentage (%)
+1 3.26 10 (Main orifices)
+2 -0.76 20 (Main orifices)
+3 -2.09 30 (Main orifices)
+4 1.11 40 (Main orifices)
+5 0.11 100 (Film cooling)
+Figure 7-5 shows the percentage deviation from the nominal mass flow rate for each ring. A 0 %
+deviation represents the nominal mass flow rate. The flow rate deviations are shown for the
+experimental data (blue) and the simulation data (orange). The CFD simulation on average predicts the
+propellant distribution with a relatively high accuracy based on the experimental results. On average
+rings two, three, four and five deviated by less than 3 % from the experimental results with ring one
+having the highest deviation of 3.26 %. Ring one contains the least significant contribution to the total
+mass flow rate. The film cooling ring has the largest uncertainty due to the lower flow rate.
+Figure 7-5: Average propellant distribution deviation per ring
+When analysing the individual rings, it was evident that the maximum deviation from the experimental
+results was larger than 3.26 %. However, the CFD simulation did accurately predict the change in flow
+rate between each orifice. These trends are visualised using a line graph with each orifice as a data
+point. Each data point is an average taken from ten tests, including five full duration tests and five
+transient tests. The error bars for the experimental data include all the uncertainties discussed in Chapter
+6. These uncertainties are multiplied by a coverage factor of 3.747 based on a t-distribution with four
+degrees of freedom to result in a level of confidence of 99 %.
+-10
+-5
+0
+5
+10
+15
+20
+12345
+Percentage deviation from nominal (%)
+Ring index
+Experimental data Simulation data
+
+
+76
+Figure 7-6 shows the data for ring one, containing eight orifices. This graph shows the deviation from
+the nominal mass flow rate for the simulation and experimental data. The specific deviation from the
+simulation results can be found in Appendix A. The data was representing in this manner as it displays
+the ability of the simulation to capture the trends between orifices. Red indicators identify simulation
+data points that fall outside of the experimental data error bars. The down-coming holes for this ring
+are positioned between orifices 4-5 and 8-1. The data from ring one implies the orifices near the down
+coming holes are captured more accurately by the simulation.
+Figure 7-6: Ring one simulation vs experimental distribution data
+Figure 7-7 displays the 16 orifices from ring two. A total of 20 % of the total flow rate is supplied from
+this ring. The simulation data shows good correlation to the experimental data as 14 of the 16 orifices
+are accuracy modelled by the simulation.
+Figure 7-7: Ring two simulation vs experimental distribution data
+-10
+-5
+0
+5
+10
+15
+12345678
+Percentage deviation from nominal
+(%)
+Orifice index
+Experimental data Simulation data
+0
+2
+4
+6
+8
+10
+12
+14
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+Percentage deviation from nominal (%)
+Orifice index
+Experimental data Simulation data
+
+
+77
+Ring three supplies 30 % of the total flow rate to the combustion chamber through a total of 24 orifices.
+The simulation only modelled 58 % of the orifices accurately. However, the change in mass flow rate
+between orifices is accurately modelled.
+Figure 7-8: Ring three simulation and experimental data
+Ring four supplies 40 % of the mass flow rate through 32 orifices. This is the largest contribution from
+a single ring. Figure 7-9 shows the major outliers for the simulation are located at orifices 12 and 13.
+The simulation was unable to accurately model the flow near these orifices. A custom volumetric mesh
+did not solve the problem of the simulation underpredicting the mass flow rate at these orifices. Ring
+four contains four orifices between each down-coming hole, identical to ring one, which suggested the
+simulation accuracy reduces as the distance of the orifice from the down-comer hole increases. This
+relationship was not reiterated by ring four.
+Figure 7-9: Ring four simulation and experimental data
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+10
+12
+14
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+Percentage deviation from nominal (%)
+Orifice index
+Experimental data Simulation data
+-20
+-15
+-10
+-5
+0
+5
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
+Percentage deviation from nominal
+(%)
+Orifce index
+Experimental data Simulation data
+
+
+78
+The film cooling was designed to supply a total of 0.207 kg/s of propellant to the outer ring of the
+combustion chamber, containing 0.8 mm orifices. The small diameter orifices increased the flow rate
+sensitivity caused by slight diameter variations. The diameters of the film cooling orifices were
+increased on the simulation CAD model to match the test article due to machining defects discussed in
+Chapter 5. Orifices 14, 15 and 16 contained the largest diameter variations. A minor diameter variation
+increased the flow rate by roughly 25 %. However, the simulation was able to capture this increase in
+flow rate accurately, as shown in Figure 7-10. The uncertainties of the film cooling distribution tests
+were larger than the main orifices due to the lower flow rates. Therefore, additional water collected
+amounted to a larger propellant deviation than the main orifices. For the film cooling, 1.143 g of
+additional water equated to an increase in deviation of 1.77 %. The 1.143 g was used as a reference as
+this is the total uncertainty resulting from the measurement method used.
+Figure 7-10: Ring five simulation and experimental distribution
+7.5 LOX Domain Results
+The LOX test article was tested to determine the pressure drop required to drive the analogue propellant
+through the SAFFIRE injector oxidiser domain at a mass flow rate of 5.66 kg/s. Secondly, the propellant
+distribution was determined using cold flow testing methods. The simulation results were compared to
+the experimental data. The experimental data shown below contains uncertainties based on the
+components described in Chapter 6. The experimental and simulation data consisted of water flowing
+through the same domain at the same mass flow rates, within practical limits. Therefore, the two data
+sets were compared to each other directly.
+-15
+-10
+-5
+0
+5
+10
+15
+20
+25
+30
+35
+40
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
+Percentage deviation fron nominal (%)
+Orifice index
+Experimental data Simulation data
+
+
+79
+7.5.1. Pressure Drop
+The pressure drop through the injector dictates the mass flow rate as described by the flow factor. The
+pressure tap positioned in the top manifold was used to compare the pressures from the simulation to
+the experimental results. Figure 7-11 shows the pressure readings and corresponding mass flow rates
+taken from a total of ten tests, including five full duration and five transient tests. These are compared
+to the updated simulations described in Chapter 5 at the same mass flow rates. Figure 7-11 shows that
+the simulation on average underpredicts the manifold pressure by 14.59 %. The turbulence model and
+wall treatment have a large impact on the modelled pressure in the flow domain. Therefore, a sensitivity
+study was conducted to evaluate the accuracy of different turbulence models and wall treatments.
+Figure 7-11: Manifold Pressure vs mass flow rate
+The average flow factor calculated using Equation 2-5 for the simulation data was 9.76 mଷ/h. bar଴.ହ.
+The experimental flow factor, including the uncertainty, was 8.99 ±0.055 mଷ/h. bar଴.ହ. The modelled
+flow factor deviated from the experimental data by 15.5 % ±0.74 %.
+The required pressure drop across the orifices was 4.374 bar using the empirical model described by
+Equation 2-11. For the simulation, the average pressure of each ring supplying the orifices was
+4.386 bar. The simulation and empirical model differ by 0.274%. Therefore, the empirical model was
+used to determine the increase in pressure due to a 10-micron decrease in orifice diameter. This quantity
+was used as the measurement resolution of the LOX orifices was 10 microns. The required pressure
+increased by 0.127 bar. The difference between the manifold pressures for the simulations and
+experiments was roughly 0.74 bar. This empirical comparison implies a small component of the
+difference in pressure drop could be a result of minor geometric deviations in the test article orifices.
+4
+4.2
+4.4
+4.6
+4.8
+5
+5.2
+5.4
+5.56 5.58 5.6 5.62 5.64 5.66 5.68 5.7 5.72
+Manifold pressure (bar)
+Flow rate (kg/s)
+Experimental data Simulation data
+
+
+80
+7.5.2. Turbulence Model Sensitivity
+Different wall treatments and turbulence models were investigated based on the recommendations made
+by Martin (2019). Additionally, a low y+ wall treatment was used due to the high accuracy obtained
+from this model for the fuel domain validation. The pressure drop accuracy is based on the percentage
+difference of the simulation manifold pressure and the experimental manifold pressure. The distribution
+deviation is based on the average propellant deviation of each ring. This data was normalised based on
+the percentage of propellant supplied by each ring. The low y+ model improved the accuracy of the
+modelled pressure drop. However, the accuracy of the propellant distribution was decreased. The K
+Omega SST turbulence model increased the accuracy of the modelled pressure drop slightly while
+decreasing the accuracy of the normalised propellant distribution. Based on these data outputs, the
+recommended turbulence model and wall treatment is the K-Epsilon high y+, because of the increased
+accuracy of the propellant distribution.
+Figure 7-12: Turbulence model and wall treatment sensitivity study
+7.5.3. LOX Distribution Results
+A total of 160 data points were produced from each LOX distribution test. This data was used to
+determine the experimental deviation from the nominal orifice flow rate, using Equation 6-3 and 6-4.
+These results included the same measurement uncertainties described for the fuel distribution tests as
+the ‘two-test’ method and an identical measurement method was followed. The uncertainties are listed
+in Table 6-2. The combined uncertainties include type A uncertainties based on eight tests which include
+four full duration tests and four transient tests. The uncertainties were multiplied by a coverage factor
+of 4.541 based on a t-distribution with 3 degrees of freedom to yield a 99 % confidence interval.
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+K-Epsilon high y+ K-Omega high y+ K-Epsilon low y+
+Percentage deviation(%)
+Turbulence model & wall treatment
+Pressure deviation Distribution deviation
+
+
+81
+The LOX faceplate contains five concentric rings. Ring one is positioned in the centre and ring five is
+the outer ring. The orifice indices used in the distribution results section are based on a counterclockwise
+rotation about the faceplate centre starting from the horizontal orifice index line shown in Figure 7-13.
+Figure 7-13: LOX faceplate
+The average ring deviation from nominal is displayed in Figure 7-14. This graph shows that the
+simulation accurately predicts the average mass flow rate per orifice for rings two, three and four. This
+was concluded due to the average distribution for the simulation falling within the error bars of the
+actual distribution determined through cold flow testing. These rings account for 75 % of the total mass
+flow rate. The largest deviations between the simulation and experimental results are rings one and five
+with deviations of 2.82 % and 2.99 % respectively. Ring one accounts for 5 % of the total mass flow
+rate and contains only eight orifices. Ring five contains 32 orifices and is designed to supply 20 % of
+the propellant to the combustion chamber. The causes of these deviations are discussed when
+investigating the individual rings.
+Ring 1
+Ring 5
+Fastener
+holes Orifice index
+
+
+82
+Figure 7-14: Ring average deviation for experimental and simulation data
+The mass flow deviation from nominal, based on even distribution for each orifice, was calculated from
+the data collected during propellant distribution tests. The results showed that the original turbulence
+model and wall treatment accurately predict the mass flow rate for most of the orifices. Each ring was
+investigated separately and its significance is described as a percentage of the total flow rate based on
+even distribution. Red indicators identify simulation data points that fall outside of the experimental
+error bands. The specific deviations for the simulation data from the experimental data are shown for
+the LOX domain in Appendix A. The visual representation used below displays the ability of the
+simulation to model the change in flow rate between orifices.
+Figure 7-15 shows the deviation for ring one which supplies 5 % of the total mass flow rate. The results
+indicate that the simulation on average underpredicts the mass flow rate by -2.82 %, although the
+general trends within the ring are accurately predicted. The centre down-comer geometry was deemed
+acceptable as the flow rate did not deviate by a large percentage between orifices. However, the down
+coming centre hole diameter could be reduced to decrease the mass flow rate for the ring.
+-6
+-4
+-2
+0
+2
+4
+6
+8
+10
+12345
+Percentage deviation from nominal (%)
+Ring index
+Experimental data Simulation data
+
+
+83
+Figure 7-15: Ring one experimental and simulation deviation from nominal
+Ring two supplies 15 % of the total flow rate through 24 orifices. Figure 7-16 shows the distribution
+results for the simulation and experimental data. Maximum and minimum valves are present at orifices
+8, 9, 20 and 21. These were caused by the position of the down-coming slots in the internal geometry.
+This ring is accurately modelled. However, the overall trend is skewed due to an overestimation of the
+flow rate near orifices 5 and 17.
+Figure 7-16: Ring two experimental and simulation deviation from nominal
+Ring three supplies 25 % of the total flow rate through 40 orifices. The average deviation was accurately
+modelled by the simulation within -1.08 %. From Figure 7-17, the results show that the simulation
+predicts the trends between orifices with a high degree of accuracy. The variations are due to
+geometrical error or computational errors. It is likely that these variations are due to the tolerances on
+the orifices since some of the orifices are modelled accurately and other are not.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+12345678
+Percentage deviation from nominal (%)
+Orifice index
+Experimental data Simulation data
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+8
+10
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+Percentage deviation from nominal (%)
+Orifice index
+Experimental data Simulation data
+
+
+84
+Figure 7-17: Ring three experimental and simulation deviation from nominal
+Ring four has the largest contribution to the total mass flow rate of 35 % through 56 orifices. The
+simulation accurately predicted the propellant distribution for ring four with an average deviation from
+the experimental results of -0.03 %. However, there are orifices that deviate by as much as 7 %, as
+shown in Figure 7-18. These deviations in the experimental results were possibly caused by non
+uniform orifices, as shown in Figure 5-22. The propellant distribution was expected to be symmetric
+due to the symmetrical nature of the injector flow domain.
+Figure 7-18: Ring four experimental and simulation deviation from nominal
+-6
+-4
+-2
+0
+2
+4
+6
+8
+1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39
+Percentage deviation from nominal (%)
+Orifice index
+Experimental data Simulation data
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55
+Percentage deviation from nominal (%)
+Orifice index
+Experimental data Simulation data
+
+
+85
+Ring five supplies 20 % of the total oxidiser flow rate through 32 orifices. The asymmetric nature of
+the experimental data, shown in Figure 7-19, suggests a geometric or setup error was present during
+testing. This deviation was concluded as a mixture of orifice defects and a minor offset between the
+injector body and the top manifold due to a possible misalignment during assembly. Figure 7-19 shows
+roughly half of ring five (16 orifices) produced a below average mass flow rate.
+Figure 7-19: Ring five experimental and simulation deviation from nominal
+Upon investigation, the total possible offset due to tolerances on the securing bolts was 0.5 mm. A
+simulation was run with a 0.5 mm step between the injector body and the top manifold. The results did
+not capture the same deviations as the experimental data, showed in Figure 7-19. An exaggerated offset
+of 1 mm resulted in the simulation diverging due to reverse flow within the LOX domain. The exact
+cause of the deviation was not identified. However, since roughly 50 % of the orifices produce a reduced
+flow rate, a geometric error was the most probable cause. Therefore, the interfaces of the injector bodies
+should not be positioned where a slight misalignment will cause an obstruction to the flow. Furthermore,
+the orifice entry, exit quality and diameters are critical for the correct performance of the SAFFIRE
+injector.
+7.6 Summary
+The results concluded that the simulations accurately predicted the average propellant distributions per
+ring for the fuel and LOX domains with a maximum average deviation per ring of 3.26 % and 2.97 %
+respectively. The individual orifice deviations showed the simulations accurately modelled the change
+in flow rate between orifices. This was achieved using the 112 and 160 data points collected when
+testing the fuel and LOX test articles respectively.
+-10
+-8
+-6
+-4
+-2
+0
+2
+4
+6
+1 2 3 4 5 6 7 8 9 1011121314151617181920212223242526272829303132
+Percentage deviation from nominal (%)
+Orifice index
+Experimental data Simulation data
+
+
+86
+Analysing the simulation and experimental results for the fuel domain showed that the major
+geometrical factors influencing the distribution were the down coming holes and the orifice diameters.
+The simulation updates made in Chapter 5 ensured the simulation CAD model contained the machined
+orifice diameters. The down coming holes could not be measured with a high degree of accuracy due
+to their locations. Therefore, a geometric deviation could exist between the physical test article and the
+simulation model. This was concluded as the most likely cause for the difference between the simulation
+and experimental data. Alternatively, the deviation of the simulation data could be due to simplifications
+of the simulation model made to reduce the computational resource requirements, for example, using a
+steady state solver to model the turbulence within the injector domains.
+The LOX test article contained high propellant distribution variations between the simulation and
+experimental data sets within rings four and five. The poor-quality orifice exits, shown in Figure 5-22,
+were concluded as the most probable cause for the propellant deviations in ring four. The deviations in
+ring five were concluded as the result of a geometric deviation caused by a misalignment between the
+injector body and top manifold since half the orifices performed poorly.

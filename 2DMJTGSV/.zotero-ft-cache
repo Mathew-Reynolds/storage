@@ -1,0 +1,532 @@
+GE Additive
+Production Playbook
+Planning a successful transition
+to serial additive production
+EXECUTIVE SUMMARY
+Metal additive manufacturing continues to gain momentum with many organizations starting to explore the technology for the first time.
+Those tentative steps still often involve prototyping or turning to service bureaus to produce one-off, difficult-to-find replacement parts. However, the shift to full-scale commercial production is another matter altogether. Organizations embarking on the industrialization phase of their additive journeys often encounter a similar set of industry barriers;
+• Part identification • Returning investment profit • An experience gap • A talent or resource shortage • Cultural resistance to change
+If not tackled correctly, these barriers and their key variables - machines, process, powder and parts - might derail your additive strategy.
+The path to serial additive production requires careful planning, patience, awareness of potential pitfalls, and enormous attention to detail – but, if done correctly, can also have enormous benefits, such as shorter production lead times, cost savings, consolidated part counts, reduced waste, improved sustainability and an enhanced supply chain.
+In this industry playbook, we will share some lessons learned on our own additive journey to help others as they take steps to shift to industrialization.
+NOVEMBER 2019 Jon Ortner and Steve Slusher, GE Additive
+
+
+23
+GE Aviation’s own serial additive production
+journey began almost ten years ago with the
+reimagining of the fuel nozzle on the CFM
+LEAP high-bypass turbofan engine.
+Traditionally, aircraft engine fuel nozzles
+were manufactured using an extensive
+sequence of complex parts that were
+brazed together to create the final form.
+The traditional process was low yield, low
+durability and didn’t provide the engineers
+the ability to optimize the design to meet
+requirements.
+Previously, this complex metal part was
+made from 20 components. Today, the fuel
+tip is printed as a single piece.
+GE Aviation produced its first Federal
+Aviation Administration-certified additive
+manufactured fuel nozzle in 2015. Since
+then, more than 60,000 such fuel tips have
+been manufactured, reduced inventory for
+that part by 95% and lowered cost on the
+component by 30%.
+By redesigning the nozzle from scratch
+with additive manufacturing in mind, it has
+reduced the part’s life cycle impact due to::
+• 25% lower fuel nozzle weight, resulting in
+reduced fuel consumption over the life of
+the aircraft;
+• 5 times longer fuel nozzle lifetime; and
+• Lower raw material consumption due to
+higher materials yields in manufacturing.
+Designers, manufacturing engineers and
+quality teams from GE Additive and GE
+Aviation were co-located during the part
+development process. This increased
+collaboration across the team and
+facilitated decision making, allowing them to
+quickly resolve any technical issues.
+The LEAP fuel tip
+LEAP is a trademark of CFM International, a 50/50 JV between GE and Safran Aircraft Engines
+Learning by doing PRINTED AS ONE PIECE
+
+
+45
+GEnx-2B power door opening system (PDOS) bracket
+In November 2018, GE Aviation received FAA approval to
+replace a traditional bracket on the GEnx-2B engine with
+an additively manufactured bracket. The new bracket,
+used for the power door opening system (PDOS), allows
+the GEnx’s fan cowl to be easily opened and shut for quick
+maintenance checks.
+By using existing powder and material qualifications and
+data set, GE Additive and GE Aviation engineers worked
+closely to accelerate the process, which can take years in
+the aviation industry. Leveraging all of GE’s best practice
+the part went from design to production in less than 10
+months.
+It is vital to ensure that the data you have for each material
+is representative of both the manufacturing process and
+the geometry of the parts you are printing.
+GE Aviation chose not to radically change the design of the
+PDOS bracket or optimize the design for additive. Rather,
+they made modifications to produce it more effectively. For
+instance, they chose to use a cobalt-chrome (CoCr) alloy
+that already had FAA approval, and used the data set from
+an already-certified fuel tip and applied both to this part.
+GE Additive Concept Laser M2 machines print four brackets
+- an aircraft’s worth of brackets - in each build, achieving
+one of the program goals of lowering part costs.
+The results with the additively manufactured PDOS bracket
+have been impressive. Using direct metal laser melting
+(DMLM) additive technology to make the new brackets has
+slashed scrap material waste by as much as 90%, reduced
+the part weight by 10%, and significantly reduced supply
+chain costs by manufacturing in-house.
+
+
+67
+At its facility in Cameri, in northern Italy,
+Avio Aero – a subsidiary of GE Aviation – is
+additively manufacturing turbine blades
+used in the GE9X engine for Boeing’s next
+generation 777X jets. These blades spin at
+2,500 times per minute inside the engine and
+face searing heat and titanic forces.
+Avio Aero’s modern factory houses a fleet
+of over 35 Arcam EBM A2X and Spectra
+H machines. Each A2X machine can
+simultaneously print six turbine blades using
+a powerful, 3-kilowatt electron beam in
+about three days. The new Arcam Spectra
+H machines can produce up to 10 blades, in
+around the same time.
+The electron beam heats and melts
+titanium aluminide (TiAl) powder, layer by
+layer, to form the blades that are each 40
+centimeters long.
+Additively manufactured TiAl blades are half
+the weight of traditional nickel alloy turbine
+blades used in aviation. For the GE9X engine,
+this means a fuel consumption reduction
+of 10% (as well as decreased emissions),
+compared to its predecessor, the GE90.
+Collaboration again has been key to Avio
+Aero’s successful shift to serial production.
+A dedicated team of GE Additive technicians
+are embedded at the Cameri plant, working
+directly with Avio Aero’s team to support and
+service the EBM machines. From Arcam’s
+headquarters in Gothenburg, Sweden,
+an additional team of ten people solely
+supporting Avio Aero – works closely with
+colleagues onsite in Italy.
+GE9X Titanium Aluminide low pressure turbine blades
+60,000* blades will be made a year
+Arcam EBM A2X Arcam EBM Spectra H
+*production peak forecasts for 2022-2023
+
+
+89
+These three, real-world case studies of serial
+additive production have also involved a
+significant learning curve for teams across
+GE, who along the way have absorbed
+valuable lessons in change management.
+It’s important to view the path to serial
+additive production as a marathon, not a
+sprint.
+Mapping out a plan and the business
+case, detailing the reasons why additive
+manufacturing makes sense in your own
+situation, should be the first step when
+shaping your additive technology strategy.
+Many users of metal additive technologies
+initially exhibit early exuberance, and are
+excited to dive in.
+However, production challenges, such as
+build stops, build failures, machine-to
+machine variations, and build variations,
+can cause consternation and lead to a drop
+in your team’s enthusiasm. Before those
+issues are addressed and overcome a phase
+called the “trough of disillusionment” might
+ensue.
+However, once those hurdles are resolved
+and serial production starts to become a
+reality, leadership realizes and embraces
+the impact additive can bring across its
+business.
+Embracing change
+Companies on the path to additive serial
+production typically encounter three
+primary production challenges:
+1. PRINTING REPEATABILITY
+This might include site-to-site or machine
+to-machine variation or powder lot-to-lot
+variation, which doesn’t come into play
+when you’re making a single prototype using
+one process from a single powder lot on a
+single machine.
+When addressing key factors contributing
+to variation, it is vital to identify the “critical
+Xs.” These include machine-related factors
+such as “tool path” settings (power, speed,
+spacing) in your parameters, chamber
+environment (i.e. gas flow and oxygen), or
+mechanical alignment. Other critical Xs
+might relate to powder chemistry, powder
+handling and post-processing.
+For matters such as power and gas flow,
+it is equally important to understand the
+ranges of control. What kind of variation can
+you withstand across the entire build plate?
+Issues also might occur when machines
+are not “locked down” in a production
+Addressing production challenges
+configuration, or when incomplete
+instructions are provided for operating and
+maintaining the machines.
+Also, consider your preventive maintenance
+schedule. How often, for example, do you
+need to validate your machine calibration?
+How often do you need to recalibrate the
+oxygen level sensors, or check the gas flow
+within the machine? How often do you
+need to change out your filters?
+It is important to document, maintain and
+control all these factors.
+2. PART QUALITY
+To achieve consistent part quality, it is
+important to establish a solid quality
+plan that involves multiple departments,
+including engineering, manufacturing and
+quality.
+Your quality organization needs to clearly
+understand what the design intent is, and
+how the manufacturing team is developing
+the part to meet that intent.
+First, develop an overall control plan,
+and establish an inspection plan as well
+as techniques for producing additive
+parts. The unusual and sometimes exotic
+geometries made possible by additive
+might create new challenges for those
+charged with inspecting those parts. What
+techniques are best for this – white light,
+CMM, X-Ray, FPI or CT – to ensure design
+intent is achieved?
+Part quality starts with powder - how you
+spec it from vendors and how you handle
+it. It is important to create and adhere
+to proper metal powder handling and
+storage procedures, while also exercising
+continuous process validation to ensure you
+have a stabilized process.
+Those active only with conventional
+manufacturing may be unfamiliar with
+aspects of this. Powder can be reused
+and recycled, but it needs to be carefully
+documented and controlled –– and must
+adhere to appropriate environmental, health
+and safety procedures.
+3. MANUFACTURING PRODUCTIVITY
+To maximize productivity, one needs a
+thorough understanding of the primary
+factors that influence build-time trade-offs.
+For example, going from a single-laser to
+a dual-laser system does not necessarily
+translate into twice the speed or output. You
+need to consider your tool path and your
+recoating time, while also ensuring you don’t
+have laser-to-laser interaction.
+To capture total manufacturing productivity,
+you also need to consider factors outside
+the machine.
+Managers need to have the ability to adopt
+and scale up a “lean” shop as a fleet of
+additive machines. Consider how you can
+reduce the time needed to switch over
+between builds, how best to manage the
+post-processing functions, and how to
+develop your parameters. You need to take
+a holistic view of the entire process when
+attempting to boost productivity.
+And, of course, from the outset you
+must also optimize and design the build
+platform and part supports for commercial
+production. Consider if you can use
+traditional machines or automation to
+remove supports.
+It’s important to view the path to serial additive production as a marathon, not a sprint.
+
+
+10 11
+As you begin planning your additive
+industrialization strategy and a shift to serial
+production, consider the following points:
+1. Build your design with production and process in mind
+Understand that there are hundreds, if
+not thousands, of variables in the additive
+manufacturing process – and include
+everything from how your vendor creates
+the powder, to your quality inspection
+techniques.
+2. Determine your vertical integration strategy and the impact it may have on productivity
+Lead time and hardware final cost can be
+highly influenced by your overall business
+strategy. Key post-processing steps (HIP, VSR,
+Support Removal final machining) should be
+researched to determine the best blend of
+in-sourcing vs. outsourcing.
+3. Identify your “critical Xs” and their
+related tolerance ranges
+The biggest hurdle we see in going from
+prototyping into production is in identifying
+and documenting which of your critical Xs are
+most important to your part, material and
+cost requirements.
+4. Employ statistical quality control measures
+You must determine how best to monitor
+and control those factors to ensure reliable
+consistency. Using statistical quality control
+measures will help to show that you have
+the repeatability required to satisfy the
+regulators in the demanding industries that
+you serve.
+5. Develop knowledge transfer processes and do cross training across the various engineering disciplines
+In our experience, we’ve come to understand
+the critical importance of collaboration
+and communication among all parts of
+the organization involved in this journey.
+Without co-locating our design, material,
+manufacturing, and quality engineers
+alongside one another during the part
+development process, the LEAP fuel tip might
+have taken several more years to complete.
+5 Considerations when transitioning
+to serial additive production
+Choosing the right partner
+Choosing the right machine for serial
+production starts with understanding the
+requirements of your finished designed
+additive part and marrying that with the
+business plan.
+As we have stated, additive manufacturing
+is like a marathon. And in this case, machine
+selection is like selecting running shoes. With
+the wrong pair of shoes, you can still finish
+the race, but it may be more painful, and not
+the desired outcome you were looking for.
+One major pitfall is evaluating piece part cost
+based on parts for platform. We have found
+that loading a platform with as many parts as
+possible is not necessarily the most productive
+strategy.
+Understanding trade-offs between different
+printing modalities will help determine which
+one is better suited to meet your requirements.
+Concept Laser M2 Series 5
+GE Additive has spent the past year working
+closely with GE Aviation on the latest iteration
+of the popular Concept Laser M2 system – the
+workhorse on our fleet of DMLM systems.
+The new Concept Laser M2 Series 5 meets
+customer expectations for high quality,
+repeatability, and usability.
+The M2 Series 5 is a system that allows our
+customers to take full advantage of design
+for additive to achieve design performance
+targets, consistent material properties and
+productivity to enable business outcomes
+Designed for maximum performance, the
+M2 Series 5 offers optimized system speed,
+uptime, productivity and reliability, part to part
+and machine to machine consistency, quality
+control, as well as process validation.
+The M2 Series 5 is the optimal system for
+customers wanting to unlock the potential of
+volume additive production.
+• Improved part consistency build-to-build,
+and machine-to-machine based on machine
+architecture, calibration and control
+• Higher productivity potential enabled by
+machine architecture (# of lasers, 3D optics,
+software, gas flow)
+• Utilization and reliability (operating time +
+corrective maintenance downtime)
+• Part yield
+• Up to 20% finer feature resolution
+• Unique safety system: glovebox system for
+non-contact handling of reactive materials,
+better filter change, inerted sieving and
+powder exchange
+
+
+12 13
+Concept Laser M Line Factory
+The M Line Factory offers a new type of
+modular machine architecture which offers
+an unprecedented level of automation and
+innovation, that allows economical series
+production on an industrial scale.
+The basic idea is to physically decouple the
+machine units used for part production and
+for set-up and dismantling processes. These
+tasks can now be carried out in parallel and
+physically separately from one another thanks
+to the modular architecture.
+As a result, current stoppage times for the
+machines, as a result of manual processes
+such as supplying or exhausting metal powder,
+are reduced to a minimum. This will deliver
+considerable time and cost savings.
+• Time-saving exposure coating strategy with
+supreme quality standards
+• Redundancy of build plate cover thanks to the
+lasers
+• Switchable filter units for maximum machine
+running time
+• Completely redeveloped and modular
+software, designed for series production
+• Unique innovative safety concept
+• Automatic tool changeover without
+any interruption to part production (in
+development)
+Arcam EBM Spectra H
+Setting the pace is GE Additive’s Arcam
+EBM Spectra H. With an extended build
+platform and capability to produce parts
+at temperatures exceeding 1,000 °C, the
+machine’s enhanced capacity opens new
+opportunities to produce high-integrity parts
+larger and faster than ever before.
+As part of a system that simplifies operation
+and maximizes output, Arcam EBM Spectra H
+is the evolution that’s helping the industry take
+the next step forward. The newly designed and
+expanded build chamber, 39% larger than the
+previous generation machine, allows Arcam
+EBM Spectra H to deliver market-leading, high
+temperature additive manufacturing.
+Movable heat shields create improved
+insulation, forming the ideal environment
+for exceptional part production. An auto
+calibrated, 6 kW beam provides a 100%
+increase in power to provide up to 50% faster
+builds, allowing manufacturers to begin
+transitioning into high-volume outputs.
+With this extended platform, it is possible to
+print larger parts than ever before and produce
+more parts at one time. And with Spectra H’s
+high-heat capability, users can incorporate
+new alloys into production to expand their
+offerings, including high-temperature, crack
+prone materials.
+• Largest EBM build volume for high-heat,
+crack prone materials
+• Auto-calibrated beam for precise part
+production
+• Closed powder handling system maintains
+powder batch integrity for optimal part
+production
+• Movable heat shields for improved
+temperature management
+• Automated powder distribution and powder
+recovery station
+• 100% increase in power to provide up to 50%
+faster builds
+• Automated system reduces operator
+dependency and ensures optimal quality
+control
+
+
+14 15
+Arcam EBM Spectra L
+Our latest innovation, the Arcam EBM
+Spectra L, offers increased productivity
+and reduces cost per part by 10%, from its
+predecessor the Arcam EBM Q20plus. Due
+to an increased beam power to 4.5kW and
+enhancements in the beam control, the build
+speed is increased by 20%.
+The improved melt process results in
+consistent material properties for thin and
+bulky geometries. In addition, the Spectra L
+offers the largest build volume of our Arcam
+EBM machines allowing enhanced capacity to
+produce high-integrity parts larger, and faster,
+than ever before.
+• Increased productivity reduces cost per parts,
+thanks to increased build speed and the
+largest build volume
+• Excellent part quality, consistent material
+properties for thin and bulky geometries
+• Integrated system architecture, with
+standardized IoT interface, data analytics
+for machine health monitoring and our new
+Powder Recovery Station, PRS 30
+AP&C Powders
+AP&C offers high-quality premium powders
+that are produced in-house. Certified
+to provide materials to highly regulated
+industries, such as aerospace and medical.
+At AP&C we apply our unique plasma
+atomization technology, unmatched expertise
+in metal powders, and unparalleled testing and
+quality standards to everything we make.
+We create powders that are highly spherical,
+with high processability, excellent flowability,
+and low porosity. We also create high
+performing powder equipment for every
+additive technology.
+That means fewer defects, more efficient
+processing, superior quality, and a faster entry
+into additive manufacturing. Because when
+your products need to be flawless every time,
+your powder solution does, too.
+GE Additive’s AddWorks Consulting Services
+Moving from prototyping to serial production
+can be a big leap for any organization. GE
+Additive’s AddWorks team can help make your
+journey easier. The AddWorks team consists
+of design, materials and manufacturing
+engineers that help organizations navigate the
+challenges associated with the development,
+industrialization, and qualification of complex
+additive components and systems – and can
+bring this expertise to help you. Working with
+GE Additive will help your organization:
+• Accelerate the adoption of additive in your
+product portfolio
+• Get your additive components and systems
+to serial production faster
+• Reduce trial and error costs (and time)
+• Bridge the additive talent gap while you are
+building your team
+
+
+16
+When you have a partner
+every step of the way,
+anything is possible.
+Learn more at ge.com/additive
+AUTHORS
+Steve Slusher, GE Additive
+Jon Ortner, GE Additive
+ABOUT GE ADDITIVE
+GE Additive – part of GE (NYSE: GE) is a world leader in additive
+design and manufacturing, a pioneering process that has the power
+and potential to transform businesses. Through our integrated
+offering of additive experts, advanced machines and quality
+materials, we empower our customers to build innovative new
+products. Products that solve manufacturing challenges, improve
+business outcomes and help change the world for the better. GE
+Additive includes additive machine providers Concept Laser and
+Arcam EBM; along with additive material provider AP&C.
+©2019 General Electric. All rights reserved. *Trademark of General Electric. All other brands or names are property of their respective holders.

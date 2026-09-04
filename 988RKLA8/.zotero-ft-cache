@@ -1,0 +1,346 @@
+Skip to main content
+Skip to article
+Reading Assistant
+Learn more
+Actions you could take:
+Summarize this article
+Summarize experiments
+
+Sign in to unlock the full response.
+
+Sign in
+Ask about this article
+View PDF
+Download full issue
+
+Switch to our new article page, redesigned for a smoother reading experience
+
+View new layout
+International Journal of Heat and Fluid Flow
+Volume 20, Issue 2, April 1999, Pages 142-148
+Flow characteristics of water in microtubes
+Author links open overlay panel
+Gh. Mohiuddin Mala
+, Dongqing Li
+Show more
+Share
+Cite
+https://doi.org/10.1016/S0142-727X(98)10043-7
+Get rights and content
+Full text access
+Abstract
+Water flow through microtubes with diameters ranging from 50 to 254 μm was investigated experimentally. Microtubes of fused silica (FS) and stainless steel (SS) were used. Pressure drop and flow rates were measured to analyze the flow characteristics. The experimental results indicate significant departure of flow characteristics from the predictions of the conventional theory for microtubes with smaller diameters. For microtubes with large diameters, the experimental results are in rough agreement with the conventional theory. For lower Re, the required pressure drop is approximately the same as predicted by the Poiseuille flow theory. But, as Re increases, there is a significant increase in pressure gradient compared to that predicted by the Poiseuille flow theory. The friction factor therefore is higher than that given in the conventional theory. The results also indicate material dependence of the flow behavior. For the same flow rate and the same diameter, an FS microtube requires a higher pressure gradient than a stainless steel microtube. The measured high pressure gradient may be due to either an early transition from laminar flow to turbulent flow or the effects of surface roughness of the microtubes. These phenomena are discussed in this paper. A roughness-viscosity model is proposed to interpret the experimental data.
+Previous
+Next
+Keywords
+Microchannel flowEarly flow transitionSurface roughnessRoughness-viscosity
+Notation
+
+	
+A	coefficients in the roughness-viscosity function
+C	friction constant, 
+f∗
+ Re
+C*	friction constant ratio, Eq. (10)
+D	diameter of the tube, m
+
+E1,E2,E3
+	parameters in ,
+FS	fused silica
+f	friction factor
+k	height of the roughness element, m
+l	length of the tube, m
+P	pressure at any point, N/m2
+Q	volume flow rate of water through the tube, m3/s
+R	radius of the microtube, m
+Re	Reynolds number, 
+(uavD/ν)
+
+Rek	Reynolds number based on the roughness 
+(Ukk/ν)
+
+RVM	roughness-viscosity model
+r	radial coordinate, m
+SS	stainless steel
+
+Uk
+	velocity at the top of the roughness element, m/s
+u	velocity component in flow direction, m/s
+
+uav
+	the average velocity, m/s
+x	coordinate in the axial/flow direction, m
+
+ΔP
+	pressure gradient across the tube, N/m2
+
+μ
+	dynamic viscosity of water, kg/m s
+
+ω
+	relaxation parameter
+
+ν
+	kinematic viscosity of water, m2/s
+
+ρ
+	density of water, kg/m3
+
+	
+Subscripts	
+exp	experimental value
+th	theoretical value
+1	shorter length
+2	longer length
+1. Introduction
+Over the years, significant attention has been given to liquid flow in microchannels due to the development in microfluidic devices and systems. Components such as liquid cooled microchannel heat sinks, micro-pumps, micro-valves and actuators have been miniaturized, integrated and assembled forming various microfluidic devices and systems. The fundamental understanding of flow characteristics such as velocity distribution and pressure loss is essential in design and process control of microfluidic devices.
+Peiyi and Little (1983) measured the friction factors for the flow of gases in fine channels, 130–200 μm wide. Their results showed different characteristics from that predicted by conventional theories of fluid flow. They attributed these differences largely to surface roughness of the microchannels. Wu and Little, 1983, Wu and Little, 1984 measured friction and heat transfer of gases in microchannels. They observed different experimental results of convective heat transfer from that obtained in conventional macroscale channels. They found that friction factors were larger than those obtained from the traditional Moody charts and indicated that the transition from laminar to turbulent flow occurred much earlier at Reynolds number of about 400–900 for various tested configurations.
+Tuckerman (1984) conducted one of the initial investigations of liquid flow and heat transfer characteristics in microchannels. He observed that the flow rates approximately followed Poiseuille flow predictions. Pfahler et al. (1990) conducted an experimental investigation of fluid flow in microchannels. They found that for large flow channels the experimental observations were in rough agreement with the conventional theory whereas for small channels the deviations increased. Later, Pfahler et al. (1991) presented measurements of friction factor or apparent viscosity of isopropyl alcohol and silicon oil flowing in microchannels. They observed that for larger channels the experimental results indicated a very good agreement with the predictions of classical theory. However, as the channel size decreased, the apparent viscosity began to decrease from the theoretical value for a given pressure drop, though distinctly different behaviors were observed between the polar isopropyl alcohol and non-polar silicon oil. Choi et al. (1991) investigated the friction factor, convective heat transfer coefficient and the effects of inner wall surface roughness for laminar and turbulent flow in microtubes. Their experimental results were significantly different from the correlations in the conventional theories.
+Wang and Peng (1994) experimentally studied the forced convention of liquid in microchannels, 0.2–0.8 mm wide and 0.7 mm deep. They found that the transition from laminar to turbulent flow occurred when Re < 800, and that the fully developed turbulent convection was initiated in the Reynolds number range of 1000–1500. Peng et al., 1994a, Peng et al., 1994b reported experimental investigation of forced flow convection of water in rectangular microchannels with hydraulic diameters ranging from 0.1333 to 0.367 mm and aspect ratios from 0.333 to 1. Their results indicated that the upper limits of the laminar flow and the beginning of the fully developed turbulent heat transfer regimes occurred at Reynolds number ranges of 200–700 and 400–1500, respectively. The transitional Reynolds number diminishes and the transition range becomes smaller as the microchannel dimensions decrease. They found that the geometrical parameter such as height to width ratio also affects the flow characteristics in microchannels.
+As the fluid flow characteristics in microchannels are quite different from those predicted by using the relationships established for macro-channels, it is therefore necessary to undertake fundamental investigations to understand the difference in these characteristics. The objective of this work is to investigate experimentally the characteristics of water flow in microtubes and attempt to explain the obtained results.
+2. Experimental apparatus, procedure and results
+The experimental apparatus is shown in Fig. 1. The apparatus consists of a precision pump, a microfilter, a flow meter, a pressure transducer, tube inlet and outlet assemblies and a PC data acquisition system. The pump used is a high precision pump (Ruska Instruments) having a flow rate range of 2.5–560 ± 0.02 cc/h. A 0.1-micron microfilter is placed between the pump and the microtube inlet to eliminate any particles and bubbles. Deionized water at room temperature is used as the working fluid. Two types of microtubes were used in this study, stainless steel (SS) (Small Parts) and fused silica (FS) tubes (Chromatographic Specialties). The pressure gauge and the pressure transducer measure the pressure inside the pump cylinder and the pressure across the microtube, respectively. During a run of the measurements, the pump is set to maintain a desired constant flow rate and the required pressure drop is measured. The flow rates were measured by three different ways: (a) read directly from the pump scale, (b) measured by the flow sensor, and (c) measured by collecting the liquid from the tube in a specified time interval. The difference between the three flow rates was found less than ±1.0%. For every measurement, pressure, time and flow-rate were measured and the data was acquired automatically by the data acquisition system. For every measurement, the flow was considered to have reached a steady state when the pressure drop value did not change any further. For smaller flow rates, it took longer time to reach a steady state compared to higher flow rates. At a steady state, the flow measurements were conducted for approximately 30 min. The data reported in this paper are for steady states. Each measurement was repeated at least three times.
+Download: Download full-size image
+
+Fig. 1. Schematic of experimental setup for flow in microtubes.
+
+The internal diameters of the microtubes used in this study range from 50 to 254 μm, and the details are given in Table 1. The experiments were performed with various flow rates, which yield Re up to 2500. In each test, the flow rate was kept constant and the pressure difference required to force the liquid through the microtube was measured. From conventional theory the pressure drop-volume flow rate correlation is given by the Poiseuille flow equation,
+(1)
+Q=πR48μlΔP.
+Eq. (1)is based on the assumption that the inlet and outlet losses are negligible. Therefore, to make an accurate comparison with the Poiseuille flow theory, the experimental pressure drop results should also be without any inlet and outlet losses. To achieve this, for every tube diameter experiments were performed with two different tube lengths. The inlet and outlet losses are the same for both lengths of the tubes as both have one end open to the atmosphere and the other is placed in the same inlet assembly. For the shorter tube, l=l1,ΔP=ΔP1, and for the longer tube, l=l2,ΔP=ΔP2. For two microtubes of the same material and diameter, the difference ΔP=(ΔP2−ΔP1) can be obtained for the same flow rate. This ΔP should be the pressure drop required to force the liquid through a microtube of length Δl=l2−l1 with no inlet and outlet losses.
+
+Table 1. Dimensions of SS and FS microtubes
+
+SS	Diameter D ± 2 μm	Length of the tubes (cm) ±0.005
+Shorter l1	Longer l2	Difference Δl
+	63.50	3.0	5.50	2.50
+	101.6	4.0	6.10	2.10
+	130.0	4.2	8.15	3.95
+	152.0	4.8	8.00	3.20
+	203.0	3.5	6.10	2.60
+	254.0	5.0	8.80	3.80
+
+				
+FS				
+	50.0	2.85	5.30	2.45
+	76.0	3.20	5.90	2.70
+	80.0	3.7	6.30	2.60
+	101.0	3.30	6.20	2.90
+	150.0	3.40	6.45	3.05
+	205.0	3.20	6.10	2.90
+	250.0	3.10	6.20	3.10
+	
+			
+	Mean surface roughness of both the SS and FS microtubes ±1.75 μm
+In Fig. 2, the experimentally measured value of the pressure gradient for each tube is plotted as a function of the Reynolds number for both SS and FS microtubes. The Reynolds number is related to the volumetric flow rate by
+(2)
+Re=4πQDν.
+For graphical clarity, the error bars are shown only for some data points. The experimental results are also compared to the predictions of Poiseuille flow, Eq. (1), shown by dotted lines in Fig. 2.
+Download: Download full-size image
+
+Fig. 2. Experimentally measured pressure gradient ΔP/Δl vs. Re for (a) SS and (b) FS microtubes, and comparison with the classical theory, Eq. (1).
+
+An uncertainty analysis of the experimental results was performed. The uncertainties in the microtube diameter, differential pressure and flow rate measurements were found to be less than ±2%. The resulting maximum uncertainties for other parameters are: average velocity, ±4.5%, Reynolds number, ±3%, and friction factor, ±9.2%. The repeatability test showed that the maximum standard deviation was ±2.5% for the measured pressure drop.
+From the conventional theory, the flow in a circular pipe driven by a pressure gradient is called the Hagen–Poiseuille flow. Under “usual” conditions, the critical Reynolds number based on the tube diameter is Recrit=2300, above which the flow is turbulent and below which the flow is laminar. However, this critical Reynolds number is influenced by external disturbances. If the flow is kept undisturbed, the flow can remain laminar for very large values of Reynolds number up to 50,000, Hinze (1975). If finite amplitude disturbances are introduced, turbulence can occur for Re as low as about 2000, as reported by Schlichting (1968). Below this value, the flow remains laminar even in the presence of very strong disturbances. Therefore, one would expect that, for laminar flow, i.e. Re < 2000, the experimental pressure drop-volume flow rate relationship be in a reasonable agreement with Eq. (1).
+As shown in Fig. 2, the theoretical curves as predicted by Eq. (1)are linear as expected, and fall below the experimental curves. For small Re (which implies small volumetric flow rate) the pressure gradient required is approximately equal to that predicted by Eq. (1). As the Re increases, the measured pressure gradient is significantly higher than that predicted by Eq. (1). The difference increases as the diameter of the tube decreases. The difference in pressure gradient is slightly larger for the FS tubes than the SS tubes. In addition, for the same Re, the pressure gradient required for the microtubes with smaller diameters is significantly higher than that required for microtubes of larger diameters. Clearly, for both the SS and FS microtubes, the ΔP/Δl∼Re relationship deviates from the conventional theory, and the deviation depends on the diameter of the microtubes. However, from Fig. 2, the difference between the measured ΔP/Δl∼Re relationships and the predictions of the conventional theory is less significant when the microtube diameter is above 150 μm.
+Then the question arises, why, although the flow seems to be in the laminar range, there is such a difference in the pressure drops between the experimental results and Eq. (1). As per our understanding, there are at least two possible explanations. Either, the flow is not laminar i.e., there is an early transition from laminar to turbulent flow, or the pressure difference is due to the surface roughness effects on microtube flow. In the case that the flow is not laminar, the Poiseuille Flow Equation can not be used, instead the full Navier–Stokes Equations should be used. If the difference is due to the surface roughness effects, then an appropriate correction should be applied to the momentum equation, which would incorporate the surface roughness effects. These two possible explanations are discussed in detail in the following sections.
+3. Early transition to turbulence
+From conventional theory, we know that when the Reynolds number increases to certain values, the internal flow undergoes a remarkable transition from laminar to turbulent regime. The origin of turbulence and the accompanying transition from laminar to turbulent flow is of fundamental importance to the science of fluid mechanics. In a flow at low Reynolds number through a straight pipe of uniform cross-section and smooth walls, every fluid particle moves with a uniform velocity along a straight path. Viscous forces slow the particles near the wall in relation to those in the center core. The flow is well ordered and particles travel along neighboring layers (laminar flow). However, this orderly pattern of flow ceases to exist at higher Reynolds number and strong mixing of the particles from different layers takes place. The fluctuation of streamlines at a fixed point causes an exchange of momentum in transverse direction. As a consequence, the velocity distribution over the cross section is considerably more uniform than in laminar flow. The most essential feature of the transition from laminar to turbulent flow is a noticeable change in the pattern of flow resistance. In laminar flow, the longitudinal pressure gradient, which maintains the motion, is proportional to the first power of average velocity, as can be seen from Eq. (1). By contrast, in turbulent flow this pressure gradient becomes nearly proportional to the square of the average velocity of flow, Schlichting (1968). This increase in the resistance to flow results from the turbulent mixing motion.
+The pressure gradient (ΔP/Δl) required to force liquid through a straight pipe of uniform cross-section generally has a relationship with the volume flow rate, (ΔP/Δl)∝Qn, where Q is related to Re by Eq. (2). In laminar region, n=1; in transitional flow region 1<n<2 and in the turbulent flow region n⩾2, Schlichting (1968). However, the experimental results obtained in this study for flow in microtubes in the conventional laminar flow region, i.e., Re < 2300, exhibit a nonlinear relationship between (ΔP/Δl) and Q. It is observed form Fig. 2, for both the SS and FS microtubes, that (ΔP/Δl)∼Re exhibits three distinct regions. For values of Re ⩽ 300–500, depending on the diameter of the microtube, the relation (ΔP/Δl)∼Q is approximately linear. For 300–500⩽Re⩽1000–1500 the experimental results indicate that the value of the exponential n is in the range 1<n<2. For higher values of Re⩾1000–1500, the measured (ΔP/Δl∼Q) relation yields n⩾2. As an example, these three distinct regions are shown separately in Fig. 3, for a 130 μm SS microtube. Fig. 3(a) shows that in a small Re region there is a rough agreement between the experimental results and that predicted by the conventional laminar flow theory. A relation as given below correlates the experimental data for the range of Re < 650,
+(3)
+ΔP/Δl=121.77Re1.072.
+Whereas the theoretical prediction given by Eq. (1)can be rewritten as
+(4)
+ΔP/Δl=118.91Re.
+However, with an increase in Re the flow characteristics in the microtube seems to change from laminar to transitional flow, as shown in Fig. 3(b). The following relation correlates the experimental data in the range of 650<Re<1500,
+(5)
+ΔP/Δl=19.25Re1.3204.
+The exponent in the above relation increases to 1.3204 from 1.072. This transitional flow pattern starts from Re ≈ 500 up to Re ≈ 1500. Re > 1500, the flow seems to be a fully developed turbulent flow as shown in Fig. 3(c), and the experimental data can be correlated by
+(6)
+ΔP/Δl=0.1341Re2.0167.
+The exponent changes from less than 2 to greater than 2. For all microtubes similar relations to , , , can be obtained, except that the range of Re values varies somewhat, depending on the diameter and the material of the microtube. Overall, from this analysis, it may be concluded that for microtubes there is an early transition from laminar to turbulent flow mode at Re > 300–900, and the flow changes to fully developed turbulent flow at Re⩾1000–1500.
+Download: Download full-size image
+
+Fig. 3. Comparison of the experimentally obtained correlations of ΔP/Δl vs. Re in three regions for a 130 μm. SS microtube with the classical theory, Eq. (1).
+
+4. Friction characteristics
+For a constant volume flow rate Q, the pressure gradient ΔP/Δl required to force the liquid through the microtube was measured. As discussed earlier the measured value of the ΔP/Δl is greater than that predicted by Eq. (1). The coefficient of flow resistance f, also known as friction factor, for a pipe of a length l and a diameter D is related to the pressure gradient by the Darcy–Weisbach Equation as
+(7)
+f=ΔPl2Dρuav2.
+For fully developed laminar flow in a macroscale pipe, Eq. (7)can be shown to be
+(8)
+f=64Re.
+Using the measured ΔP/Δl and Q data, we can determine the friction factor,
+fexp
+, in the experiment by using Eq. (7). The variation of friction factor,
+fexp
+, with the Re, for some SS and FS microtubes is shown in Fig. 4. The pattern of
+fexp
+ vs. Re for the other microtubes is similar. As seen from the Fig. 4, these curves exhibit three distinct regions. For small Re the friction factor decreases linearly with Re on the semi-log plots. When the Re becomes large, i.e. Re⩾1500, the slope of the curve decreases and approaches to zero. Between these two regions, the friction factor exhibits transitional characteristics. The regions are arbitarily marked as I, II and III. In region, I, there is a rough agreement between classical theory and experimental results, for Re up to about 500. Therefore, the Region I may be considered as the laminar flow region. As Re increases, the deviation from the theoretical prediction increases as can be seen in region II for the Re range of approximately 500–1500. In region, III, the difference between the theoretical and the experimental data is very large. However, as can be seen from Fig. 4, in this region the experimental data more or less follows the Blasius Equation, Schlichting (1968), given as
+(9)
+fBlasius=0.3164Re−0.25.
+The Blasius Equation gives the friction factor for turbulent flow in smooth pipes for Re⩽105. Thus, Blasius Equation can be used to determine the friction factor in microtubes for Re⩾1500 with reasonable accuracy. Such friction characteristics have also been observed by Peng et al. (1994b).
+Download: Download full-size image
+
+Fig. 4. Friction factor,
+fexp
+ vs. Re for some SS and FS microtubes and comparison with the classical theory, , .
+
+From the conventional theory we know that the product of the friction factor and the Reynolds number,
+f∗Re=C
+, has a constant value of C=64, for laminar flow (Re<2300) in pipes. However, for flow in microtubes
+f∗Re
+ is not equal to a constant. A friction constant ratio
+C∗
+ is introduced as
+(10)
+C∗=fexpRefthRe=fexpfth.
+As can be seen from Fig. 5,
+C∗
+ is always greater than 1. The value of
+C∗
+ changes as Re increases. Tuckerman (1984) also observed such a dependence of friction constant on Reynolds number.
+Download: Download full-size image
+
+Fig. 5. Friction constant ratio
+C∗
+ (Eq. (10)) vs. Re for some SS and FS microtubes.
+
+5. Effects of surface roughness
+The presence of surface roughness affects the laminar velocity profile and decreases the transitional Reynolds number. This has been shown by a number of experiments and a comprehensive review can be found elsewhere (Merkle et al., 1974; Tani, 1969). In the present work, based on Merkle's modified viscosity model the effects of the surface roughness on laminar flow in microtubes are considered in terms of a roughness-viscosity function. Generally, the roughness increases the momentum transfer in the boundary layer near the wall. This additional momentum transfer can be accounted for by introducing a roughness-viscosity μR in a manner similar to the eddy-viscosity concept in the turbulent flow model. Apparently, the roughness-viscosity μR should have a higher value near the wall and gradually diminish towards the center of the channel. The roughness-viscosity μR should also be proportional to Re. The ratio of the roughness-viscosity to the fluid viscosity is proposed to take the following form,
+(11)
+μRμ=ARekrk1−exp−RekRerk2.
+According to Merkle et al. (1974), the velocity at the top of the roughness element is given by
+(12)
+Uk=∂u∂rr=Rk.
+Then the roughness Reynolds number is defined as (Merkle et al., 1974):
+(13)
+Rek=Ukkν=∂U∂rr=Rk2ν.
+With , all the parameters except for the coefficient A in the roughness-viscosity function, Eq. (11), can be determined from the flow field, dimensions of the channel and the surface roughness. The coefficient A has to be determined by using the experimental data. By introducing the roughness-viscosity in the momentum equation in a manner similar to the eddy viscosity in the turbulent flow, the momentum equation for laminar flow through a cylindrical channel becomes:
+(14)
+dPdx=1r∂∂rμ+μRr∂u∂r.
+Dividing both sides of Eq. (14)by μ and using the viscosity ratio Eq. (11), we obtain
+(15)
+1μdPdx=1r∂∂r1+ARekrk1−exp−RekRerk2r∂u∂r.
+Eq. (15)can be further written as
+(16)
+E3(r)=E1(r)∂u∂r+E2(r)∂2u∂r2,
+where
+E3(r)=rμdPdx,
+(17.)
+E1(r)=2ARekrk1−exp−RekRerk×1−exp−RekRerk+RekRerkexp−RekRerk+1,E2(r)=r1+ARekrk1−exp−RekRerk2
+Eq. (16)is the modified momentum equation that accounts for the effects of surface roughness in a laminar flow. The equation is a second-order, one-dimensional nonlinear differential equation and cannot be solved analytically. Therefore, a finite difference solution is sought with the following boundary conditions:
+(18)
+Atr=0,∂u∂r=0,andatr=R,u=0
+The derivatives are written in central difference and are substituted back in Eq. (16). The resulting system of equations is solved by using the successive overrelaxation scheme, which is given as
+(19)
+uij+1=uij+ωūij+uij−1,
+where i is the computational index and j the iteration index. If the roughness height is zero then the solution of Eq. (16)should reduce to the conventional Poiseuille flow solution. This conditions is fulfilled as can be seen from Eq. (17). For k=0, the roughness Reynolds number is zero, which yields E1(r)=1, and E2(r)=r, thus Eq. (16)reduces to the conventional equation, for which the velocity distribution is given by
+(20)
+u=ΔP4μLR2−r2.
+Assuming an initial value of the coefficient A, Eq. (16)can be numerically solved to obtain the velocity distribution in the microtubes by using the measured pressure gradient ΔP/Δl for dP/dx. Once the velocity profile is known, the volume flow rate can be calculated. Since the experimentally measured volume flow rate Qexp and the pressure gradient (dP/dx)exp are known, the value of A is adjusted until the percentage difference between the calculated volume flow rate and the measured volume flow rate is smaller than ±2%. Physically, the effects of the surface roughness depend on the shape and the distribution of the roughness elements. For the microtubes used in this work, the mean roughness height of ±1.75 μm for each tube is provided by the manufacturers, but the shape and the distribution of the roughness elements are not known. As expected, the A value varies from tube to tube and ranges from 0.01 to 1 for all the microtubes used in this work. However, an empirical relationship was found as follows:
+(21)
+A=0.1306Rk0.3693expRe6×10−5Rk−0.0029.
+With this correlation, the roughness-viscosity function given by Eq. (11)can be computed. As mentioned earlier, the roughness-viscosity is higher near the wall and approaches to zero in the center of the channel. Fig. 6 shows the roughness-viscosity ratio vs. the non-dimensional radius for some microtubes at Re=950.
+Download: Download full-size image
+
+Fig. 6. Variation of roughness-viscosity ratio with non-dimensional radius for some SS and FS microtubes at Re=950.
+
+Fig. 7 shows the comparison of the volume flow rates predicted by the roughness viscosity model (, , with the measured volume flow rates. As can be seen clearly from Fig. 7, the curves predicted by the model and the experimental curves are in an excellent agreement with each other. This implies that the roughness-viscosity model proposed in the present work may be used to interpret the flow characteristics in microtubes. For the purpose of comparison, Fig. 7 also shows the volume flow rates predicted by using the Poiseuille flow equation and the measured pressured gradient.
+Download: Download full-size image
+
+Fig. 7. Comparison of volume flow rates predicted by the roughness viscosity model (RVM) with the measured flow rates for some SS and FS microtubes and comparison with Eq. (1).
+
+The velocity distribution in the microtubes obtained by using the roughness-viscosity model (RVM) and the experimental pressure gradient is shown in Fig. 8. The velocity is plotted as the ratio of the local velocity to the average velocity with the non-dimensional radius of the microtubes, for different diameters and Reynold numbers. As seen from Fig. 8, the Poiseuille flow and the RVM velocity profiles are parabolic. However, the velocity predicted by RVM is smaller than that predicted by the Poiseuille flow equation. As shown in Fig. 7, the RVM predicts the volumetric flow rates well. If the higher flow resistance is due to the surface roughness, one may expect that the velocity distribution resemble the RVM velocity profile in Fig. 8.
+Download: Download full-size image
+
+Fig. 8. Comparison of the velocity profiles predicted by the roughness viscosity model and the Poiseuille flow equation for some FS and SS microtubes.
+
+6. Summary
+Flow characteristics of water flowing through cylindrical microtubes of stainless steel and fused silica were studied. The diameter of the microtubes ranges from 50 to 254 μm. It was observed that for a fixed volume flow rate, the pressure gradient required to force the liquid through the microtube is higher than that predicted by the conventional theory. For small flow rates, i.e. small Reynolds numbers, the conventional theory and the experimental data are in a rough agreement. However, as the Reynolds number increases a significant deviation from the conventional theory was observed. The deviation increases as the diameter of the microtubes decreases. The flow behaviors also depend on the material of the microtubes. The friction factor and the friction constant are higher than that predicted by the conventional theory. The conventional friction constant value was found to depend on Reynolds number. Two possible reasons for this higher flow resistance are discussed. According to the measured (ΔP/Δl)∼Q relationships and the conventional fluid mechanics theory, it seems that there is an early transition from laminar to turbulent flow. However, these phenomena may also be explained as the surface roughness effects by using a surface RVM proposed in this work.
+Acknowledgements
+The authors wish to acknowledge the support of a University of Alberta Dissertation Fellowship (Gh. Mohiuddin Mala) and Research Grant of the Natural Science and Engineering Research Council of Canada (D. Li).
+References
+Choi et al., 1991
+S.B. Choi, R.R. Baron, R.O. Warrington
+Fluid flow and heat transfer in microtubes
+ASME DSC, 40 (1991), pp. 89-93
+View in ScopusGoogle Scholar
+Hinze, 1975
+Hinze, J.O., 1975. Turbulence. McGraw-Hill, New York, p. 707
+Google Scholar
+Merkle et al., 1974
+Merkle, C.L., Kubota, T., Ko, D.R.S., 1974. An analytical study of the effects of surface roughness on boundary-layer transition. AF Office of Scien. Res. Space and Missile Sys. Org., AD/A004786
+Google Scholar
+Peiyi and Little, 1983
+W. Peiyi, W.A. Little
+Measurement of friction factors for the flow of gases in very fine channels used for microminiature Joule–Thomson refrigerators
+Cryogenics, 23 (1983), pp. 273-277
+View PDF
+View articleView in ScopusGoogle Scholar
+Peng et al., 1994a
+Peng, X.F. Peterson, G.P., Wang, B.X., 1994a. Heat transfer characteristics of water flowing through microchannels. Exp. Heat Transfer 7, 265–283
+Google Scholar
+Peng et al., 1994b
+Peng, X.F. Peterson, G.P., Wang, B.X., 1994b. Frictional flow characteristics of water flowing through microchannels. Exp. Heat Transfer 7, 249–264
+Google Scholar
+Pfahler et al., 1990
+J. Pfahler, J. Harley, H.H. Bau, J. Zemel
+Liquid and gas transport in small channels
+AMSE DSC, 19 (1990), pp. 149-157
+View in ScopusGoogle Scholar
+Pfahler et al., 1991
+J. Pfahler, J. Harley, H. Bau, J. Zemel
+Gas and liquid flow in small channels
+ASME DSC, 32 (1991), pp. 49-60
+View in ScopusGoogle Scholar
+Schlichting, 1968
+Schlichting, H., 1968. Boundary Layer Theory. McGraw-Hill, New York, p. 433
+Google Scholar
+Tani, 1969
+Tani, I., 1969. Boundary-Layer Transition. Annual Reviews of Fluid Mechanics, vol. I, Annual Reviews. Tioga, Palo Alto, CA
+Google Scholar
+Tuckerman, 1984
+Tuckerman, D.B., 1984. Heat transfer microstructures for integrated circuits. Ph.D. Thesis, Dept. of Electrical Engineering, Stanford University, USA
+Google Scholar
+Wang and Peng, 1994
+Wang, B.W., Peng, X.F., 1994. Experimental investigation on forced flow convection of liquid flow through microchannels. Int. J. Heat Mass Transfer 37 (Suppl. 1), 73–82
+Google Scholar
+Wu and Little, 1983
+P.Y. Wu, W.A. Little
+Measurement of friction factor for the flow of gases in very fine channels used for microminiature Joule–Thompson refrigerators
+Cryogenics, 23 (1983), pp. 273-277
+View in ScopusGoogle Scholar
+Wu and Little, 1984
+P.Y. Wu, W.A. Little
+Measurement of the heat transfer characteristics of gas flow in fine channel heat exchanger used for microminiature refrigerators
+Cyrogenics, 24 (1984), pp. 415-423
+View in ScopusGoogle Scholar
+Cited by (737)
+Single-phase liquid friction factors in microchannels
+2006, International Journal of Thermal Sciences
+Show abstract
+Investigation of heat transfer in rectangular microchannels
+2005, International Journal of Heat and Mass Transfer
+Show abstract
+Single-phase convective heat transfer in microchannels: A review of experimental results
+2004, International Journal of Thermal Sciences
+Show abstract
+Pressure-driven water flows in trapezoidal silicon microchannels
+2000, International Journal of Heat and Mass Transfer
+Show abstract
+Boundary slip in Newtonian liquids: A review of experimental studies
+2005, Reports on Progress in Physics
+Fluid flow and heat transfer at micro- and meso-scales with application to heat exchanger design
+2000, Applied Mechanics Reviews
+View all citing articles on Scopus
+View Abstract
+Copyright © 1999 Elsevier Science Inc. All rights reserved.
+About ScienceDirect
+Remote access
+Contact and support
+Terms and conditions
+Privacy policy
+Cookie settings
+
+All content on this site: Copyright © 2026 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply.

@@ -1,0 +1,904 @@
+© The Authors, published by EDP Sciences. This is an open access article distributed under the terms of the Creative Commons Attribution License 4.0 (http://creativecommons.org/licenses/by/4.0/).
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+Reconsideration of the friction factor data and equations for smooth, rough and transition pipe flow
+Srbislav Geniü, and Branislav -DüLPRYLü
+Faculty of Mechanical Engineering of the University of Belgrade, Kraljice Marije 16, 11000 Belgrade, Serbia
+Abstract. The key element in design of pipelines is the friction factor estimation. After the brief review of the experimental data and friction factor correlations for isothermal single phase flow, we have checked the validity of well-known correlations through statistical criteria. During this process it was statistically proved that some of the well-known and permanently cited friction factor equations can be improved. Moreover we have prepared, for practical engineering purposes, equations that cover the entire range of laminar, critical and turbulent pipe flow.
+1 Introduction
+Transportation of various fluids absorbs a huge amount of energy in any project concerning chemical engineering and energy production and distribution plants. The key part in design of pipelines is the friction factor estimation. Although the best known handbooks in chemical, thermal and hydraulic engineering, like [1-6], cite “classical work” in the field of fluid mechanics, numerous continuously published papers about the fluid flow through the circular pipes indicate that this is still a very interesting topic. Generally speaking there are two phases in the development of the equations for the friction factor. Up to the middle of 20th century Prandtl, von Karman, Nikuradse, Colebrook and others set the equations that are still in use by virtue of their comprehensiveness and compliance with numerous experimental data. Since that time experimental and theoretical studies on liquid and gas flow in pipeline was carried out in order to: x improve the results and equations obtained by Prandtl, von Karman, Nikuradse, Colebrook and others achieved during the first half of the 20th century; x extend the friction factor equation in order to cover high Reynolds number flow (of relevance especially for natural gas pipelines); x explore the friction factor for a new class of tubes with very small diameter (micro tubes). In this paper we have tried to gather all of the available experimental data and correlations for friction factor and through the statistical analysis to clear all of their advantages and shortages. At the very end we made original equations that cover complete range of laminar, critical and turbulent flow in pipes in a form that is very practical for design purposes.
+1
+
+
+2
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+2 Brief review of the data and calculations of pressure drop in the pipes
+Hereby we will restrict the review to isothermal flow of Newtonian fluids. For calculations of pressure drop for incompressible flow Weisbach [7] proposed in 1845 the equation
+2
+u2
+D
+L
+'p U
+[ (1)
+where: x ǻp (Pa) is total friction loss; x ȟ is a friction factor coefficient; x L (m) is the length of the pipe; x D (m) is the pipe internal diameter; x u (m/s) is the average fluid velocity; x ȡ (kg/m3) is the fluid density. Pipe friction factor, in general, depends on Reynolds number (Re) that correlates the inertia and internal friction forces and relative pipe roughness (Rr). Osborne Reynolds [8] was the first to describe the transition from laminar to turbulent flow in smooth pipes and found that non-dimensionless group
+P
+u DU
+Re (2)
+that we nowadays call Reynolds number plays critical role in this transition (ȝ, Pa·s, is the fluid viscosity). Citation from [4]: “Reynolds numbers below 2000 to 2100 correspond to laminar or viscous flow; numbers from 2000 to 3000 ÷ 4000 correspond to a transition region of peculiar flow, and numbers above 4000 correspond to turbulent flow.“ Darcy [9], according to a large number of experiments, noticed that pressure drop differs for “new” and “old” pipes, so he provided separate equations for each case. Later on, a concept of relative pipe roughness was introduced by von Mises [10], in the following form
+D
+Rr H (3)
+where İ (m) is the absolute roughness of pipe internal surface.
+2.1 Period of classical research
+This era ends with the Colebrook’s friction factor equation for turbulent flow and Moody’s diagram.
+2.1.1 Laminar flow in pipes
+In laminar flow viscous forces prevail the inertia forces and fluid flows in layers. In this case pipe friction factor is calculated from Hagen-Poiseuille equation and depends only on the Reynolds number [11-12]
+Re
+64
+[ (4)
+2
+
+
+3
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+2.1.2 Turbulent flow in pipes
+As the Reynolds number increases, the inertia forces (proportional to the velocity squared) prevail the influence of fluid viscosity. Turbulent flow is characterized by the development of transverse velocity component that causes the mixing of fluid perpendicular to the flow direction. Prandtl and von Karman developed a theoretical analysis for pipe flow with suitable formulas for smooth and rough pipe. Smooth pipes are defined as those having small surface irregularities when compared with the thickness of the boundary layer. Rough pipes are characterized with irregularities of the walls sufficient to break up the laminar boundary layer. So, for turbulent flow the influence of the pipe wall roughness plays an important role and has been introduced in the friction factor computations. Three cases of turbulent flow are divided as follows [13-14]:
+x flow in hydraulically smooth pipes (smooth turbulent flow) Re Rr [/ 8 5 ;
+x flow in hydraulically rough pipes (complete turbulence, rough turbulent flow)
+Re Rr [/ 8 ! 70 ;
+x transitional turbulent flow in range Re Rr [/ 8 5 70 .
+There are also other opinions. For example:
+x transitional turbulent flow occurs in range Re Rr [/ 8 4 60 according to
+[15]; x in [16] it is said that “the flow showed the first symptoms of roughness when
+Re Rr [/ 8 | 3.5 ”;
+x according to [17] flow in hydraulically rough pipes occurs in range
+[ Re0.37 ! 2.8 and in [18] this region is defined by Re [1.1039 ! 35.235 .
+2.1.3 Turbulent flow in hydraulically smooth pipes
+For hydraulically smooth pipes Blasius [19] found the relation
+Re1/ 4
+0.3164
+[ (5)
+and this was the first correlation ever made for pipe friction versus Reynolds number. Recently, McKeon et al. [20] confirmed that (5) is valid for Re < 105. Koo [21] correlated his experimental data (Re = 3000 – 3·106) with the equation
+0.32
+Re
+0.5
+[ 0.0056 (6)
+that was simplified to Blasius form by McAdams [22] for range Re = 5000 – 200·103
+0.2
+Re
+0.184
+[ (7)
+Using the experimental data from [23] in range Re = 3100 – 3.2·106, Prandtl obtained “Prandtl’s universal law of friction” for smooth pipes in implicit form
+3
+
+
+4
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§
+[
+[
+[ Re
+2.51
+2 log Re 0.8 2 log
+1 (8)
+presented in Figure 1.
+A
+Re
+106
+105
+104
+4.103
+0.01
+0.02
+0.03
+0.04
+0.05
+0.06
+0.07
+eq. (7)
+0.0986
+0.198
+0.397
+0.833
+1.63
+3.33
+Rr, %
+B
+C
+[
+Figure 1 Prandtl’s universal law of friction (8) and Nikuradse’s data
+2.1.4 Turbulent flow in hydraulically rough pipes – complete turbulence
+In 1933 Nikuradse published the results of his experiments on artificially roughened pipe in [24], hereby reproduced in Figure 1. Nikuradse obtained the rough pipe relation (Re = 3100 – 106 and Rr 0.00394 0.033 ) in form
+ ̧1
+·
+ ̈©
+§
+3.7
+2 log 1.74 2 log
+1 Rr
+Rr
+[ (9)
+Equations (8) and (9) are sometimes called PKN equations after Prandtl, von Karman and Nikuradse. Shifrinson [25] proposed a simple power-law equation for complete turbulence
+0.25
+[ 0.11 Rr (10)
+2.1.5 Turbulent flow in transitional range between hydraulically smooth and rough pipes
+Generally speaking, the friction factor transition between turbulent flow in smooth and rough pipes is not well understood. Von Mises [10] published the first equations using experimental data known at his time
+4
+
+
+5
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+°°
+ ̄
+°°
+®
+ ̧1
+·
+ ̈©
+§
+Re
+8
+Re
+1000
+1 Re
+0.3
+Re
+1000
+0.0024 2 1
+Re
+0.3
+0.0024 2
+Rr
+Rr
+[ (11)
+Upper equation was valid for large Re, and lower equation was valid for small Re (near critical value). The experimental work of Nikuradse [23] on sand-grain roughed pipes showed that for small Re roughened pipes follow the line for smooth pipes up to a certain point (A) where lines are divided (point of departure from smooth line). Further increase in Re provides the decrease of friction factor until a minimal value (point B). After this point friction factor increases until the point C (point of collapse with rough line) after which it has a constant value regardless on further increase of Re. Point C is defined with
+Re [/ 8 70
+Rr , and points A and B are quantitatively not defined at all (Figure 1).
+Colebrook and White [15], on the basis of measurements on commercial pipes, concluded that non-uninform roughness of commercial pipes produces somewhat different behavior than inflectional friction factor behavior found by Nikuradse [24]. They pointed out that there is a smooth (aka gentle, monotonic) transition between PKN equations (8) and (9). Using and PKN equations, as well as their own data and data from other researchers gathered on commercial pipes, Colebrook [26] formed the following equation that covers the whole turbulent region
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§
+3.7
+Re
+2.51
+2 log Re
+9.35
+1.14 2 log
+1 Rr
+[ Rr [ [ (12)
+that became widely accepted design formula in for turbulent friction in range Re = 4000 ÷ 108 and Rr = 0 ÷ 0.05. Equation (12) consists of two parts: equation (8) for smooth pipes when Rr ĺ 0 and equation (9) for rough tubes when Re ĺ . Of course Colebrook’s equation is mathematically incorrect because
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§
+ ̧ ̧ z
+1
+·
+ ̈ ̈
+©
+§
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§
+3.7
+Re
+2.51
+log
+3,7
+log Re
+2,51
+log Rr Rr
+[ [ (13)
+but it fills the gap between smooth and rough pipe flow, and up to a certain extent it provides satisfactory results. The transition between smooth and rough pipe flow according to (12) is named “smooth transition”. Colebrook’s equation (12) published almost 80 years ago has been recognized by the engineers as the very useful, despite its implicit form. Among the first, Rouse [27] confirmed Colebrook’s equation (12) by his own measurements and provided a friction
+factor diagram using (12) with abscissa Re [ and ordinate 1 [ (he placed ȟ and Re on
+auxiliary axes of diagram). Equation (12) was also plotted in 1944 by Moody [28] into what is now called the “Moody chart” for pipe friction (in this diagram Re and ȟ are placed on main axes). Since the publication of mentioned diagrams Colebrook’s equation became the basis for friction factor estimations in chemical engineering, HVAC, energetics as well as in many other fields of engineering. Moody chart is probably the most famous and useful one in engineering fluid mechanics.
+5
+
+
+6
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+2.2 Subsequent research on Turbulent Flow friction factor
+PKN equations (8) and (9) and Colebrook’s equation (12) were published without any quantitative comparison with experimental data, so the reader cannot have any idea what the authors themselves thought or knew about their accuracy. Since the end of World War II equations (8), (9) and (12) were reviewed and only some of the important results of this process will be presented hereby.
+2.2.1 The nature of pipe wall roughness
+In 7 decades since Colebrook published his work [26] the important fact emerges. Nikuradse used meshed sand grains of 0.8 ± 0.02 mm to produce a relatively uniform roughness on his pipes (sand grain was glued to the inner pipe surface). This kind of roughness, named sand-grain roughness (ks), cannot be found in commercial pipes which are characterized with a “natural roughness”. The Colebrook’s correlation and Moody’s chart were also developed using the ks. In engineering books and handbooks like [1-6] Colebrook’s correlation and/or Moody’s chart are accompanied with values of pipe wall roughness (most commonly tabulated) for copper, steel, iron and other pipes. These ks values were determined by fitting a roughness height to match a measured pressure drop, so mentioned tables of pipe wall roughness contain values of “equivalent sand-grain roughness”. The important question arises: how is ks related to a physical roughness measured from surface topography. This is especially important since many of the commercial pipe surfaces listed along with Colebrook’s correlation or Moody’s diagram don’t have a consistent values of roughness. Some surfaces are listed with a roughness height that spans over an order of magnitude – for example concrete pipes have roughness in range 0.3 to 3 mm. Additionally, the equivalent sand-grain roughness height is unknown for numerous other surfaces of engineering interest. As a result, one can only expect to obtain accurate results using the Moody diagram if ks is known for the surface of interest and the flow is fully rough. Commercial pipes are characterized with random natural roughness, and in recent years two parameters were found to be of the special interest [29]: root-mean-square roughness height (krms) and skewness of the roughness elevation distribution (sk). Recently published research such as [16, 29-31] show that ks is 1.5 to 6 times greater than krms and that pretty simple correlations in form of ks f krms ; sk can be obtained [32].
+2.2.2 Comments on the accuracy of equations (4), (8), (9) and (12)
+The U. S. Bureau of Reclamation [33] reported large amounts of field data on commercial pipes: concrete, continuous-interior, girth riveted and full-riveted steel pipes. The conclusion in [33] is that some of the collected field data could not be explained by the Colebrook’s equation (12). In [34] estimation is given that “the probable variation of [ for commercial pipe
+is about ±10%, but this variation is masked by the uncertainty of quantifying the surface roughness.” One of the (rare explicit) comments on Colebrook’s equation (12) is given in [13] in which White comments that ”the equation (12) is accurate to ±15% percent for design calculations over the full range of Re and Rr. It can be used for circular and noncircular
+6
+
+
+7
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+pipe flows and for open-channel flows. The data can even be adapted as an approximation to boundary-layer flows.” Zagarola and Smits [30] stated that, based on experimental data form [23], the standard deviation of equation (8) is approximately ±4% and the largest discrepancy exceeds ±6%. This means that the same error is to be expected for Colebrook’s correlation (12). Recent studies on micro tubes have shown that there are some (almost neglectable) deviations from laminar flow equation (4) and authors presume that these deviations are present due to the certain role of pipe roughness [35] or compressibility of the fluid [36]. It must be noted that almost any set of experimental data gathered on non-micro pipes showed similar deviations. In turbulent region for Re < 100·103 experiments also agree with calculations done with (12), but in [37] it is stated that surface roughness should be more carefully studied. Schroeder [38] states that the Colebrook equation (12) is nothing else but simple combination of (8) and (9). He notices that (12) always predicts a higher friction factor than when (8) and (9) are used separately and that “the maximum difference in friction factor is about 17% which translates to an 8.5% difference in flow”. Schroeder claims that, from engineering point of view, this difference “is not large”.
+2.2.3 Extending of the range of Reynolds numbers in recent experimental research
+Nikuradse [24] conducted his experiments in the range Re = 3100 – 106. Without any explanation Moody drew his chart [28] with the upper limit Re = 108, assuming that the Colebrook’s equation (12) holds true for extended range. This assumption was seriously tested in past few decades because in magisterial natural gas pipelines Reynolds numbers is often greater than 107 due to gas pressure in range 80 – 180 bar. Also, natural gas pipelines are generally coated so, having in mind that their diameter is usually large, their relative roughness is very small. This is the reason that more than a few research teams tried to provide experimental data for Re > 106. For example, in [39] it was stated that the PKN correlation for smooth pipes (8) predicts too low values of the friction factor in case of high pressure natural gas flow, especially at high Reynolds numbers. Flack and Schultz [32] commented that all recent experimental results gathered in range Re > 106 show that the Moody diagram overestimates the pressure drop in the transitional flow regime for honed and commercial steel pipes (from an engineering standpoint Moody diagram provides a conservative estimate of pressure drop for a given roughness). This clearly indicates that the Colebrook roughness function used in the formulation of the Moody diagram may not be applicable to a wide range of roughness of engineering interest. Zagarola and Smits [30] using their own data they published the following correlation [30]
+1.889 log Re 0.358
+1[
+[ (14)
+for smooth pipe flow. This correlation, when compared with (8), differs as much as 5% at Re = 30·106. Using the experimental data from [20], as well as from [30] corrected in [40], McKeon et al. [41] proposed a new correlation for smooth pipes
+7
+
+
+8
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+0.55
+Re
+7.04
+1.920 log Re 0.475
+1
+[
+[
+[ (15)
+and states that for Reynolds numbers between 104 and 30·106 equation (14) predicts the friction factor to within 1.4%. Some researchers, as referred by Smith [42], made the following modification of (12)
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§
+3.7
+Re
+2.825
+2 log
+1 Rr
+[ [ (16)
+in order to obtain better agreement with experimental data at higher Reynolds numbers.
+2.2.4 Inflectional behavior and abrupt transition
+As said before, Nikuradse’s experiments show that the inflection of friction factor curve exists in transitional turbulent region. Experiments on a rough honed pipe published in [43] confirmed inflectional friction factor behavior, similar to Nikuradse but not so pronounced. Using the large set of experiment data (even recently gathered) Afzal [31] proposes the following relation in implicit form
+»»
+1⁄4
+o
+««
+¬
+a
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§
+[ [ Re [
+5.66
+exp
+3.7
+Re
+2.51
+2 log
+1
+Rr
+j
+Rr (17)
+For j = 11 equation (17) fits well with the inflectional roughness data, and for j = 0 equation (17) provides similar values to (12). The American Gas Association (AGA) presented two comprehensive reports analyzing the flow of natural gas in real pipelines [44, 45]. One of main conclusions was that friction factor shows a more abrupt transition from smooth to rough turbulent flow than the smooth and gentle transition predicted by Colebrook’s equation (12). Results from a joint research project involving four European natural gas transmission companies were presented in [46], and later also discussed in [47]. The new proposed friction factor formula is
+»»»
+1⁄4
+o
+«««
+¬
+a
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§n
+n
+Rr
+n 3,7
+Re
+1.499
+log
+12
+0.942
+[ [ (18)
+where n is used to control the shape of the transition region. For n = 1 a transition is smooth and results are close to equation (12), while for n = 10 there is a more abrupt transition (socalled point transition). The reader is not provided with any further advice about how the value of this parameter should be selected – in [47] it is said that any value in range n = 1 ÷ 10 is possible, and an average value n = 3 is pointed out in [48]. Sletfjerding also combined equations (8) and (9) with his own rough pipe flow data (Re = 2·106 – 30·106) in Colebrook’s manner to obtain [49]
+»»»
+1⁄4
+o
+«««
+¬
+a
+ ̧1
+·
+ ̈©
+§
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§n
+n
+Rr
+n
+1.06
+3.7
+Re
+1.55
+log
+1 1.89
+[ [ (19)
+8
+
+
+9
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+Parameter n provides smooth (n = 1) or abrupt transition (n = 10).
+2.2.5 Critical regime – transition between laminar and turbulent flow
+As the Reynolds number increases over 2000, the flow regime becomes unstable and inertia forces begin to dominate, and this causes a general increase of the friction factor. Experimental data in this range of Re show a large scatter and many of books show this range hatched. Concha [50] concludes that in the region Re = 2000 – 4000 friction factor is independent of the wall roughness so, using a straight line in the log(ȟ) versus log(Re) he obtained the relation [ 6.44 10 7 Re1.426 (20)
+2.2.6 Explicit forms of turbulent flow friction factor equations
+For smooth pipe flow Filonenko [51] provided the equation in explicit form
+ ̧1
+·
+ ̈©
+§
+Re
+8
+0.79 ln Re 1.64 1.82 log Re 1.64 1.82 log
+1
+[ (21)
+and Incropera and DeWitt [52] gave this equation applicable range of Re = 3·103 – 5·106. Explicit form of (16) is given in [31]
+»1⁄4
+o
+«¬
+a  ̧1
+·
+ ̈©
+§
+Re
+12.91
+exp
+3.7
+Re
+5.74
+2 log
+1
+0.9 Rr
+j
+Rr
+[
+(22)
+and explicit form of (18) is
+»»
+1⁄4
+o
+««
+¬
+a
+ ̧1
+·
+ ̈©
+§
+ ̧1
+·
+ ̈©
+§ n Rr n
+n
+1.16
+Re 3.7
+4.95
+log
+1 1.73
+[ (23)
+Altshul [53] introduced the following equation that covers the complete turbulent flow region 0.25
+Re
+68
+0.11  ̧1
+·
+ ̈©
+[ § Rr (24)
+It has be noted that Altshul’ s equation is a kind of combination of (5) and (13), i.e. for Rrĺ 24) becomes equal to (5 DQG IRU 5Hĺ LW LV Hqual to (10). ASHRAE Fundamentals [6] suggests the use of the equation (24) with Tsal’s correction [54] introduced for small relative roughnesses Rr < (0.000717 + 68 / Re) 0.25
+Re
+68
+0.0028 0.0935  ̧1
+·
+ ̈©
+[ § Rr (25)
+ASHRAE Fundamentals [6] states that “Friction factors obtained from the AltshulTsal equation are within 1.6% of those obtained by Colebrook’s equation”, but it was shown in [55] that (24) and (25) show significant deviation from (12), greater than 27%.
+9
+
+
+10
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+As well as in few other papers, it was shown in [55] that according to various statistical criteria, one of the best explicit approximations of Colebrook’s equation is the one published by Haaland [56] who proposed the following equation 2
+1.11
+Re
+6.9
+3.7
+log
+1.8
+°¿
+°3⁄4
+1⁄2
+° ̄
+°® »»
+1⁄4
+o
+««
+¬
+a
+ ̧1
+·
+ ̈©
+§
+ ̧1
+·
+ ̈©
+§nn
+Rr
+n
+[ (26)
+For n = 1 equation (26) provides good approximation of Colebrook’s equation (25), and according to author for n = 3 or n = 4 equation (26) shows so-called abrupt transition between smooth and rough pipe flow.
+2.2.7 Equations that cover the whole laminar-turbulent region
+There were two kinds of attempt to cover the whole laminar-turbulent region. In [57] authors gave the simple equation for smooth pipes b
+[ a Re (27)
+where a and b depend on Re as reproduced in Table 1.
+Table 1 Parameters for (18) Re < 2900 2900 ÷ 3050 3050 ÷ 240000 > 240000 a 64 4.1·10-16 0.351 0.118 b -1 4 -0.255 -0.165
+The other kind of approach was to obtain a single equation that spans through all cases of flow regimes: laminar flow, laminar – turbulent transition zone, and all cases of turbulent flow. Example of this kind of approach is the equation from [58] 1/8
+16
+6
+0.9
+8
+Re
+2500
+Re
+5.74
+3.7
+9.5 ln
+Re
+64
+°¿
+°3⁄4
+1⁄2
+° ̄
+°® »»
+1⁄4
+o
+««
+¬
+a
+ ̧1
+·
+ ̈©
+§
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§
+ ̧1
+·
+ ̈©
+§ Rr
+[ (28)
+2.2.8 Region of developing turbulent flow
+Besides aforementioned problems there is one more. With the exception of the smooth pipe flow, other available experimental data does not support the friction factor values calculated by (Colebrook) in region Re = 4000 – 20000. This is the region where the fluid flow develops from the unstable critical flow to stable turbulent flow. As Bratland [48] says “The traditional Moody diagram shows – in clear contrast both to Nikuradse’s measurements and the theoretical diagrams in figures 2.8.8 and 2.8.9 – an abrupt jump in the friction factor close to Re = 3000. Although the literature contains numerous claims that such a jump is supposed to exist, it is difficult to find hard evidence in the form of measurements to support it.” Using Kolmogorov’s theory [59] Bratland developed a kind of “theoretically based” diagram in Moody’s style [48] and showed that:
+10
+
+
+11
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+x “theoretical” curve shows the existence of inflection of friction factor curve exists in transitional turbulent region, although the numerical values are not the same as in Nikuradse’s experiment; x “theoretical” curve has no abrupt transition in region Re = 2000 ÷ 4000; x “theoretical” values of friction factor in range Re = 4000 ÷ 20000 are lesser than values obtained by Colebrook’s equation, especially for larger relative roughnesses.
+3 Friction factor correlations vs experimental data
+Having regard to the presented status of the problem, correlation and experiments, as well as the commitment of engineers to perform calculations as accurately as possible, we've collected numerical values of experimental research and created a reference database for: x smooth pipes from [23, 30, 40, 41, 60] and previously unpublished data [61], that contains z = 231 points and x sandgrain rough pipes from [24] that contains z = 181 points. Afterwards we reviewed some of the correlations listed above and the results are shown in Tables 2, 3 and 4. Statistical parameters are defined in Appendix.
+Table 2 Review of the correlations for turbulent flow in smooth pipes (database z = 231) Eq. SD, % CR, % meanRE, % maxRE+, % maxRE-, % (5) 10.89 99.98 5.79 42.19 -7.08 (6) 1.95 99.93 -0.58 4.65 -7.45 (7) 5.76 98.19 2.83 19.71 -7.45 (8) & (12) 2.14 99.55 1.06 6.00 -5.85 (14) 3.28 98.54 0.99 8.10 -5.85 (15) 3.45 99.35 -2.71 2.33 -9.29 (16) 2.38 99.93 -1.52 3.33 -8.51 (18) 3.42 98.19 1.15 8.41 -5.85 (19) 3.29 98.54 1.05 8.10 -5.85 (21) 1.72 99.84 0.42 4.68 -5.85 (23) 2.56 99.12 0.66 7.00 -5.85 (24) & (25) 10.91 99.98 5.84 42.22 -6.64 (26) 2.24 99.12 1.49 6.33 -4.79 (27) 5.01 95.31 -4.19 5.38 -12.83 (28) 5.79 96.43 3.99 18.05 -4.26
+4 New and practical approach to friction factor calculations
+As stated so far, wealth of data in the form of experimental results and correlations can confuse even skilled engineers. Summarizing statistical indicators from the Tables 2, 3 and 4 we have concluded that there are few ways to correlate experimental data again, through the simple expressions.
+11
+
+
+12
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+Table 3 Review of the correlations for turbulent flow in rough pipes (database z = 181) Eq. n SD, % CR, % meanRE, % maxRE+, % maxRE-, % (9) - 1.53 99.99 -0.36 3.55 -6.55 (10) - 13.58 100.00 10.67 22.89 -3.76 (12) - 2.29 99.97 -1.23 2.47 -7.80 (18) 1 2.34 99.96 -1.29 2.40 -7.93 (18) 2 1.55 99.99 -0.38 3.53 -6.56 (18) 3 - 10 1.53 99.99 -0.36 3.55 -6.55 (16) - 2.40 99.96 -1.34 2.33 -8.09 (19) 1 2.01 99.98 -0.76 2.97 -7.14 (19) 2 - 10 1.48 100.00 -0.02 3.88 -6.19 (24) & (25) - 13.17 99.98 9.83 22.63 -5.10 (26) 1 2.32 99.97 -1.38 2.36 -7.75 (26) 2 1.61 99.99 -0.58 3.34 -6.77 (26) 3 - 4 1.59 99.99 -0.56 3.36 -6.76 (28) - 2.34 99.96 -0.92 3.08 -7.99
+Table 4 Review of the correlations for turbulent transition pipe flow (database z = 412) Eq. n SD, % CR, % meanRE, % maxRE+, % maxRE-, % (12) - 2.21 99.86 0.05 6.00 -7.80 (16) - 2.39 99.84 -1.44 3.33 -8.51 (18) 1 3.00 99.84 0.08 8.41 -7.93 (18) 2 2.76 99.97 0.48 8.41 -6.56 (18) 3 - 10 2.76 99.97 0.49 8.41 -6.55 (19) 1 2.80 99.90 0.26 8.10 -7.14 (19) 2 2.65 99.98 0.57 8.10 -6.20 (19) 3 - 10 2.65 99.99 0.58 8.10 -6.19 (24) & (25) - 9.44 99.89 6.40 22.63 -5.32 (26) 1 2.28 99.86 0.23 6.33 -7.75 (26) 2 1.99 99.96 0.58 6.33 -6.77 (26) 3 - 4 1.99 99.96 0.59 6.33 -6.76 (28) - 2.35 99.82 0.04 6.33 -8.47
+4.1 Correlations for turbulent friction factor data in simple forms
+For smooth pipe flow, using Blasius form of equation (5), we obtained
+°°
+ ̄
+°°
+®
+yy
+y
+36 1/ 6
+3 1/ 4
+for Re 140 10 3.55 10 Re
+0.118
+for Re 3000 140 10 Re
+0.3164
+[ (29)
+Revisiting Prandtl’s equation (8) we obtained 2
+Re
+2.63
+2 log »»
+1⁄4
+o
+««
+¬
+a
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§
+[
+[ (30)
+12
+
+
+13
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+and in Filonenko’ s form (21) correlation is
+[ >0.78 ln Re 1.55@ 2 >1.79 log Re 1.55@ 2 (31)
+In case of rough pipe flow Nikuradse’s and Shifrinson’ s forms of equations (9) and (10) were used 2.1
+4.4
+1.8 log »1⁄4
+o
+«¬
+a  ̧1
+·
+ ̈©
+§ Rr
+[ (32)
+0.36
+[ 0.203 Rr (33)
+Altshul’ s equation (24) has to be modified since the exponents on Re and Rr are not equal in (29) and (33), so for transitional pipe flow the following correlation was obtained
+0.22 1.7 Re
+1.6
+0.21  ̧1
+·
+ ̈©
+[ § Rr (34)
+We also made the modification of Tsal’s form (25) to obtain
+0.33 1.3 Re
+13
+0.006 0.23  ̧1
+·
+ ̈©
+§ Rr
+[ (35)
+For transitional flow we also used the form of Haaland's equation (26) as a most appropriate and we obtain the following correlation
+2
+1.15
+Re
+7.4
+3.15
+log
+1.8
+°¿
+°3⁄4
+1⁄2
+° ̄
+°® »»
+1⁄4
+o
+««
+¬
+a
+ ̧1
+·
+ ̈©
+§
+ ̧1
+·
+ ̈©
+§ nn
+Rr
+n
+[ (36)
+and Swamee’s (28) for all cases of flow regimes 1/8
+16
+1.15 6 6
+8
+Re
+2000
+Re
+7.5
+3.15
+83 10 log
+Re
+64
+°¿
+°3⁄4
+1⁄2
+° ̄
+°® °¿
+°3⁄4
+1⁄2
+° ̄
+°®  ̧1
+·
+ ̈©
+§
+»»
+1⁄4
+o
+««
+¬
+a
+ ̧1
+·
+ ̈©
+§
+ ̧1
+·
+ ̈©
+§ Rr
+[ (37)
+Statistical parameters of (29), (30), (31), (32), (33), (34), (35), (36) and (37) are presented in Table 5, and we made the following conclusions: x Blasius equation (5) can be successfully used for Re<150·103 and for greater Re modification (29) has to be applied; x Prandtl’s, Filonenko’ s, Nikuradse’s, Haaland’s and Swamee’s equations (8), (21), (9), (26) and (28) could be only a slightly modified; x Shifrinson’ s equation (10) required significant modification, as well as equations of Altshul and Tsal.
+13
+
+
+14
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+Table 5 Statistical data for modified equations Eq. n SD, % CR, % meanRE, % maxRE+, % maxRE-, % Database (29) - 1,89 99.93 -0.02 8.08 -7.08 Smooth
+z = 231
+(30) - 1,82 99.84 0.07 5.00 -6.91 (31) - 1,69 99.93 -0.18 4.67 -6.91 (32) - 1,28 100.00 -0.10 3.96 -5.55 Rough z = 181
+(33) - 3,30 99.39 0.01 13.64 -5.92 (34) - 5,23 96.45 2.26 28.23 -9.04
+Transition z = 412
+(35) - 2,04 99.48 -0.06 6.08 -9.16 (36) 1 1,64 100.00 -0.09 4.67 -6.38 (36) 2 1,57 99.96 0.30 4.99 -6.38 (36) 3 - 4 1,57 99.96 0.31 5.01 -6.38 (37) - 1,65 100.00 0.00 5.00 -6.38
+4.2 Correlations for laminar-critical-turbulent friction factor data
+There are at least four zones of flow in pipes: laminar, critical, developing and (fully developed) turbulent. Besides laminar where friction factor depends only on Re, in all other zones friction factor is influenced by Re and Rr. Laminar flow is theoretically explained and experimentally confirmed up to Re = 2000, so equation (4) is used to express friction factor. In order to cover all zones of turbulent flow (developing, smooth, rough and transition) we have established new correlation
+2
+1.15
+1.25
+Re 3.15
+7.35 1200
+1.8 log
+°¿
+°3⁄4
+1⁄2
+° ̄
+°® »»
+1⁄4
+o
+««
+¬
+a
+ ̧1
+·
+ ̈©
+Rr § Rr
+[ (38)
+Correlation (38) covers the range Re = 4000 – 35.5·106 and Rr = 0 ÷ 0.0333. Statistical parameters of (38) are presented in Table 6.
+Table 6 Statistical parameters of (38) Eq. SD, % CR, % meanRE, % maxRE+, % maxRE-, % Database 1.65 99.84 0.10 4.67 -6.38 Smooth z = 231 (38) 1.72 100.00 0.60 4.36 -5.20 Rough z = 181 1.68 100.00 0.32 4.67 -6.38 Transition z = 412
+Critical zone occupies the range of Re = 2000 – 4000 and boundary conditions are as follows: x for Re = 2000 from (4) friction factor is ȟ = 0.032; x for Re = 4000 friction factor is in range ȟ = 0.041 – 0.048 according to various experimental data such as [23, 60, 62]. If we assume that for Re = 4000 friction can be calculated by using (38) i.e. ȟ = 0.0412 for smooth pipes (Rr = 0) and ȟ = 0.0480 for pipes with Rr = 0.0333 than the following equation enables the connection of (4) and (38)
+0.032 0.000052 Re 2000 0.8 0.089
+[ Rr (39)
+14
+
+
+15
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+4.3 Estimation of relative roughness according to experimental data
+Let’s use the data from [16] where Langelandsvik et al reported measurements in a commercial steel pipe covering the smooth, transitionally rough, and fully rough regimes. Their data are shown in Figure 2. Any of hereby presented equations can be applied to measured data in order to obtain equivalent sandgrain roughness, and results are shown in Table 6. It is obvious that (38) shows smooth transition and in order to cover the abrupt transition we have corrected the correlation (39) with additional factor n
+2 1.15
+1.25
+Re 3.15
+7.35 1200
+log
+1.8
+°¿
+°3⁄4
+1⁄2
+° ̄
+°®
+»»»
+1⁄4
+o
+«««
+¬
+a
+ ̧1
+·
+ ̈©
+§
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§n
+n
+Rr Rr
+n
+[ (40)
+According to statistics equation (40) can be used to predict abrupt transition of real pipelines (Table 7).
+Table 7 Equivalent sandgrain roughness for database from [16]
+Eq. Rr n SD, % CR, % maxRE+, % maxRE-, % (38) 5.64·10-5 1 2.66 98.62 3.44 -4.97 (40) 7.57·10-5 1.86 0.66 99.91 1.56 -1.74
+Re
+[
+0,008
+0,010
+0,012
+0,014
+0,016
+0,018
+106
+105 107 4.107
+n=1
+Rr = 5.64·10-5
+smoothpipe
+n = 1.86 Rr = 7.57·10-5
+Figure 2 New correlation for friction factor vs. measured data from [16]
+15
+
+
+16
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+5 Conclusion
+As stated earlier, for calculations of pressure drop in pipes the combination of Weisbach and Colebrook equations, (1) and (12), are cited and recommended in most of the chemical engineering and HVAC textbooks and handbooks. Despite its ambiguities there are numerous papers that treat Colebrook’s equation as the best that can be recommended for smooth/transition/rough turbulent flow. In last two decades in a certain number of articles a great attention is devoted to the problem of turbulent flow and attempts have been made to explain the nature of turbulence in commercial pipes: the database for flow in smooth pipes is expanded, data from commercial pipeline with low relative roughness (characterized by the abrupt transition) were analyzed, and so on. In this paper we have tried to mention the basic unsolved problems regarding to turbulent flow and to establish practical correlation (on the basis on available literature data) that covers turbulent flow in all its forms. Statistical parameters of (38) show that it correlates the experimental results very well and ensure that the calculations of friction factor can be done with verifiable accuracy. Furthermore, we have connected (38) with the equation for laminar flow (4) through a simple expression (39), which enables the computations in the critical zone of the flow for various relative roughness of the pipe. While (4) covers the range RI 5H HTXDWLRQV DQG HQDEOH WKH FDOFXODWLRQ LQ range Re = 2000 ÷ 35.5·106 and Rr = 0 ÷ 0.0333. In has to be noted that (38) provides smooth transition between smooth and rough pipe flow, and that (40) supports the inflectional behavior and abrupt transition. We also conducted a statistical analysis of known and often cited equations for the friction factor in turbulent flow and found that some forms of modified equations have far better statistical indicators than the original equations. At the very end we will once again repeat hereby suggested equation for calculations of the friction factor coefficient in the pipes
+°°°°
+ ̄
+°°°°
+®
+°¿
+°3⁄4
+1⁄2
+° ̄
+°® »»
+1⁄4
+o
+««
+¬
+a
+ ̧1
+·
+ ̈©
+§
+d
+6
+2
+1.15
+1.25
+0.8
+Re = 4000 35.5·10
+Re 3.15
+7.35 1200
+1.8 log
+0.032 0.000052 Re 2000 0.089 Re = 2000 4000
+Re 2000
+Re
+64
+Rr Rr
+[ Rr (41)
+that cover the range of relative roughness between Rr = 0 and Rr = 0.0333.
+Acknowledgement
+We thank the Ministry of Education, Science and Technological Development of Serbia for partial support of this study through the Project of Energy Efficiency.
+Appendix
+The comparison of experimental (ȟm,i) and correlated (ȟc,i) friction factor can be done by certain number of statistical parameters: x standard deviation
+16
+
+
+17
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+z
+SD
+z
+i mi
+mi ci
+¦  ̧ ̧
+1
+·
+ ̈ ̈
+©
+§
+1
+2
+,
+,,
+[
+[[
+x the mean relative error
+¦
+z
+i mi
+mi ci
+z
+meanRE
+1,
+,,
+1 [
+[[
+x the maximal positive error
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§
+mi
+mi ci
+maxRE
+,
+,,
+max [
+[[
+x the maximal negative error
+ ̧ ̧
+1
+·
+ ̈ ̈
+©
+§
+mi
+ci mi
+maxRE
+,
+,,
+max [
+[[
+x correlation ratio
+¦
+¦
+z
+i
+m i m av
+z
+i
+mi ci
+CR
+1
+2 ,,
+1
+2 ,,
+1
+[[
+[[
+where m,av
+[ is the average value of [m for complete set of z experimental data
+z
+z
+i
+mi
+m av
+¦
+1
+,
+,
+[
+[
+Nomenclature
+a, b, parameters D, m, pipe internal diameter j, n, transition parameters krms, m, root-mean-square roughness height ks, m, sand-grain roughness L, m, length of the pipe Re, Reynolds number Rr, relative pipe roughness sk, m, skewness of the roughness elevation distribution u, m/s, average fluid velocity ǻp, Pa, total friction loss İ, m, absolute pipe roughness ȟ, friction factor coefficient ȝ, Pa s , fluid viscosity ȡ, kg/m3, fluid density
+17
+
+
+18
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+References
+[1] D. W. Green, R. H. Perry, Perry's Chemical Engineers' Handbook, McGraw-Hill Professional, New York, 2007. [2] J. R. Couper, W. R. Penney, J. R. Fair, Chemical Process Equipment - Selection and Design, Gulf Professional Publishing, 2009. [3] E. E. Ludwig, Applied process design for chemical and petrochemical plants, Gulf Publishing Company, Houston, 1991. [4] A. K. Coker, Ludwig's Applied Process Design for Chemical and Petrochemical Plants - Volume 1, Elsevier Inc., Amsterdam, 2010. [5] H. Recknagel, E. Sprenger, E. R. Schramek, Taschenbuch für Heizung und Klimatechnik einschliesslich Warmwasser- und Kältetechnik, Deutscher Industrieverlag, 2012. [6] ASHRAE Handbook - Fundamentals, ASHRAE, Atlanta, 2013. [7] J. Weisbach, Lehrbuch der Ingenieur- und Maschinen-Mechanik, Braunschwieg, 1845. [8] O. Reynolds, An experimental investigation of the circumstances which determine whether the motion of water shall be direct or sinuous, and of the law of resistance in parallel channels, Philosophical Transactions of the Royal Society, 174 (1883) 935–982 [9] H. Darcy, Recherché Experimentales Relatives au Mouvement de L'Eau dans les Tuyaux, Mallet-Bachelier, Paris, 1857. [10] R. von Mises, Elemente der Technischen Hydrodynamik, Leipzig, BG Teubner, 1914. [11] J. L. Poiseuille, Recherché expérimentales sur le mouvement des liquides dans les tubes de très-petits diamètres, Comptes Rendus, Académie des Sciences, Paris, 11 (1840) 961–967 [12] G. Hagen, Über die Bewegung des Wassers in engen zylindrischen Röhren, Pogg. Ann., 46 (1839) 423-442 [13] F. White, Fluid Mechanics, McGraw-Hill, 2010. [14] J. H. Spurk, N. Aksel, Fluid Mechanics, Springer-Verlag Berlin, 2008. [15] C. F. Colebrook, C. M. White, Experiments with Fluid Friction in Roughened Pipes, Proc. R. Soc. Lond. A, 161 (1937) 367-381 [16] L. I. Langelandsvik, G. J. Kunkel, Smits A. J., Flow In a Commercial Steel Pipe, J. Fluid Mech, 595 (2008) 323–339 [17] R. G. Allen, Relating the Hazen-Williams and Darcy-Weisbach Friction Loss Equations for Pressurized Irrigation, Applied Engineering in Agriculture, 12-6 (1996) 685693 [18] P. M. Coelho, C. Pinho, Considerations About Equations for Steady State Flow in Natural Gas Pipelines, Journal of the Brazilian Society of Mechanical Sciences and Engineering, 29-3 (2007) 262 – 273 [19] H. Blasius, Das Ähnlichkeitsgesetz bei Reibungsvorgängen in Flüssigkeiten. Forschung Ingenieur, 134 (1913) 1–40 [20] B. J. Mckeon, High Reynolds Number Turbulent Pipe Flow, PhD Thesis, Princeton University, 2003. [21] E. C. Koo, Mechanisms Of Isothermal And Non-Isothermal Flow Of Fluids In Pipes, Sc.D. Thesis, Chem. Eng., Massachusetts Institute of Technology, Cambridge, MA, 1932. [22] W. H. McAdams, Heat Transmission, McGraw-Hill, New York, 1933. [23] J. Nikuradse, Gesetzmessigkeiten der turbulenten stromung in glatten rohren, Forschungsheft 356, volume B. VDI Verlag Berlin, 1932. 18
+
+
+19
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+[24] J. Nikuradse, Stromungsgesetze in rauhen rohren. Forschungsheft 361, volume B, VDI Verlag Berlin, 1933. Translated in NACA Technical Memorandum nr. 1292, 1950. [25] B. L. Shifrinson, New method for district water system optimization, Heat and Power, 2 (1937) 4-9 [26] C. F. Colebrook, Turbulent Flow In Pipes, With Particular Reference To The Transition Region Between Smooth And Rough Pipe Laws, Journal Of The Institution Of Civil Engineers, 2 (1939) 133-167 [27] H. Rouse, Evaluation Of Boundary Roughness, Proc. 2nd Hydraul. Conf., The University Of Iowa Studies In Engineering, Bulletin No. 27, Wiley, New York, 105–116. [28] L. F. Moody, Friction factors for pipe flow, Transactions of the ASME, 66-8 (1944) 671–684 [29] E. Sletfjerding, Gudmundsson J. S., Friction Factor In High Pressure Natural Gas Pipelines From Roughness Measurements, International Gas Research Conference, Amsterdam, November 5-8, 2001. [30] M. V. Zagarola, A. J. Smits, Mean-Flow Scaling Of Turbulent Pipe Flow, J. Fluid Mech. (1998), vol. 373, pp. 33-79 [31] N. Afzal, Friction Factor Directly From Transitional Roughness in a Turbulent Pipe Flow, Transactions of the ASME, Journal of Fluids Engineering, 129-10 (2007) 12551257 [32] K. A. Flack, M. P. Schultz, Review Of Hydraulic Roughness Scales In The Fully Rough Regime, Journal Of Fluids Engineering, 132 (2010) 4 [33] U. S. Bureau of Reclamation, Friction Factors For Large Conduit Flowing Full, Engineering Monograph, No. 7, U.S. Dept. of Interior, Washington DC, 1965. [34] R. L. Sanks, Tchobanoglous G., Bosserman B. E., Jones G. M., Pumping Station Design, Butterworth-Heinemann, 1998. [35] H. Y. Wu, P. Cheng, An Experimental Study Of Convective Heat Transfer In Silicon Microchannels With Different Surface Conditions, Int. J. Heat Mass Transfer, 46-14 (2003) 2547–2556 [36] G. P. Celata, M. Lorenzini, G. L. Morini, G. Zummo, Friction factor in micro pipe gas flow under laminar, transition and turbulent flow regime, International Journal of Heat and Fluid Flow, 30 (2009) 814–822 [37] S. L. Qi, P. Zhang, R. Z. Wang, L. X. Xu, Single-phase pressure drop and heat transfer characteristics of turbulent liquid nitrogen flow in micro-tubes, International Journal of Heat and Mass Transfer, 50 (2007) 1993–2001 [38] D. W. Schroeder, A Tutorial On Pipe Flow Equations, Stoner Associates Inc., Carlisle, Pennsylvania, August 2001 http://www.psig.org/papers/2000/0112.pdf [39] E. Sletfjerding, J. S. Gudmundsson, Friction Factor In High-Pressure Gas Pipelines In The North Sea, SPE/CERI Gas Technology Symposium, 3-5 April 2000, Calgary, Canada [40] B. J. Mckeon, J. Li, W. Jiang, J. F. Morrison, A. J. Smits, Further Observations On The Mean Velocity Distribution In Fully Developed Turbulent Pipe Flow. J. Fluid Mech., 501 (2004) 135–147 [41] B. J. Mckeon, M. V. Zagarola, A. J. Smits, A New Friction Factor Relationship For Fully Developed Pipe Flow, J. Fluid Mech., 538 (2005) 429–443 [42] R. V. Smith, Practical Natural Gas Engineering, Penn Well Books, 1990 [43] M. A. Shockling, J. J. Allen, A. J. Smits, Roughness effects in turbulent pipe flow, J. Fluid Mech., 564 (2006) 267–285
+19
+
+
+20
+ITM Web of Conferences 29, 02001 (2019) https://doi.org/10.1051/itmconf/20192902001 ICCMAE 2018
+[44] R. Smith, J. Miller, J. Ferguson, Flow of natural gas through experimental pipelines and transmission lines, Bureau of Mines, Monograph 9, American Gas Association, 1956. [45] A. Uhl, K. B. Bischoff, R. F. Bukacek, P. V. Burket, R. T. Ellington, D. V. Kniebes, Staats W. R., Worcester D. A., Steady flow in gas pipelines, Institute of Gas Technology Technical report no. 10 American Gas Association, 1965. [46] K. Gersten, H. H. Papenfuss, T. Kurschat, P. Genillon, F. Fernández Pérez, N. Revell, New Transmission-factor formula proposed for gas pipelines, 99-2 (2000) 58-62 [47] J. Piggott, N. Revell, T. Kurschat, (2002), Taking the Rough with the Smooth – a new look at transmission factor formulae, Proceedings of the 2002 PSIG Conference Portland Oregon [48] O. Bratland, Pipe Flow 1 Single phase flow assurance, 2013. http://drbratland.com/PipeFlow1/index.html [49] E. Sletfjerding, Friction Factor in Smooth and Rough Gas Pipelines, Dr.-Ing. thesis, Norwegian University of Science and Technology, Trondheim, 1999 [50] F. Concha, Settling velocities of particulate systems 15: Velocities in turbulent Newtonian flows, Int. J. Miner. Process., 88 (2008) 89–93 [51] G. K. Filonenko, Hydraulic resistance in pipes, Teploenergetika, 1-4 (1954) 40–44 [52] F. P. Incropera, D. P. De Witt, Fundamentals of Heat and Mass Transfer, John Wiley & Sons, New York, 2001. [53] Ⱥ Ⱦ Ⱥɥɬɲɭɥɶ Ɉɛɫɛɲɟɧɧɚɹ ɮɨɪɦɭɥɚ ɫɨɩɪɨɬɢɜɥɟɧɢɹ ɬɪɭɛɨɩɪɨɜɨɞɨɜ Ƚɢɞɪɚɜɥɢɱɟɫɤɢɟ ɫɬɪɨɢɬɟɥɶɫɬɜɨ (1952) [54] R. J. Tsal, Altshul-Tsal Friction Factor Equation, Heating, Piping And Air Conditioning, No. 8, 1989 [55] S. *HQLü I. $UDQGMHORYLü P. .ROHQGLü M. -DULü N. Budimir, V. *HQLü $ 5HYLHZ of Explicit Approximations of Colebrook’s Equation, FME Transactions 39 (2011) 67-71 [56] S. E. Haaland, Simple and explicit formulas for the friction factor in turbulent pipe flow, Trans. ASME, Journal of Fluids Engineering, 105-11 (1983) 89-90 [57] D. D. Joseph, B. H. Yang, Friction factor correlations for laminar, transition and turbulent flow in smooth pipes http://www.aem.umn.edu/people/faculty/joseph/PL-correlations/docs-ln/f_Re_smooth.pdf [58] P. K. Swamee, Design of a submarine oil pipeline, J. Transportation Eng., 119-1 (1993) 159-170 [59] A. N. Kolmogorov, The local structure of turbulence in incompressible viscous fluid for very large Reynolds numbers, Dokl. Akademik Nauk SSSR 30, 299-303 (In Russian), 1941. [60] C. J. Swanson, B. Julian, G. G. Ihas, R. J. Donnelly, Pipe flow measurements over a wide range of Reynolds numbers using liquid helium and various gases, J. Fluid Mech., 461 (2002) 51–60 [61] R. Milenkovic, Convective heat transfer in fluid flow through pipes with turbulators -MSc thesis (In Serbian), University of Belgrade - Faculty of Mechanical Engineering, 1999. [62] A. J. Ghajar, K. F. Madon, Pressure drop measurements in the transition region for a circular tube with three different inlet configurations, Experimental Thermal and Fluid Science, 5 (1992) 129-135
+20

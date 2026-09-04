@@ -1,0 +1,385 @@
+Improved heat transfer predictions on rough surfaces
+B. Aupoix
+ONERA, The French Aerospace Lab, F-31055 Toulouse, France
+article info
+Article history:
+Received 16 March 2015 Received in revised form 5 June 2015 Accepted 15 July 2015 Available online 8 August 2015
+Keywords: Heat transfer Turbulence modelling Wall roughness
+abstract
+The equivalent sand grain approach is the only approach to account for wall roughness in industrial CFD. As roughness effects are reproduced via a modification of the turbulence model in the wall region, the roughness correction preserves the Reynolds analogy. However, wall roughness increases much more the drag than the wall heat flux, so that the wall heat flux is overestimated with the equivalent sand grain approach. Due to the relative lack of detailed experimental data, the discrete element approach, which accounts for the different dynamical and thermal behaviours of wall roughness, was used to generate a large database to investigate thermal roughness effects. It turns out that, besides the equivalent sand grain height, another parameter has to be introduced to characterize roughness thermal effects. A correction of the turbulent Prandtl number was derived from the database and can be coupled to any roughness correction developed using ONERA’s technique. The thermal correction was validated for a wide range of roughness geometries, including academic roughness, in-service turbine blades and vanes and different ice shapes, for reduced equivalent sand grain heights kþ
+s ranging from 10 to 6000, and for flows with pressure gradient. Heat transfer predictions are significantly improved, although heat transfer is generally still slightly overpredicted. Ó 2015 Elsevier Inc. All rights reserved.
+1. Introduction
+Although most fluid mechanics research deals with smooth surfaces, wall roughness can be encountered in a wide variety of situations. The very first studies of roughness effects were motivated either by the influence of sea-weeds and shells on a ship hull drag or by the impact of pipe casting on pressure losses Nikuradse (1933, 1937). A large amount of research work is devoted to geophysical flows for which surface roughness naturally occurs, thanks to vegetation canopy on the ground or to rocks and stones in a river. An airplane can be slightly rough, e.g. because of the aging of the paint. In all these cases, the key rôle of roughness is an increase of surface friction. Surface roughness can moreover lead to an heat transfer increase. This occurs on airplanes, thanks to ice accretion on the leading edge, the change in heat transfer impacting the ice formation rate. On turbine blades, many different processes such as deposit, erosion, pitting or spallation induce roughness which is detrimental to the blade lifetime (Bons et al., 2001). Solid propellant rocket nozzles or reentry nosecaps are designed to stand high heat fluxes thanks to ablation, which makes them rough. Drag and heat transfer increases due to wall roughness are very different processes. In the fully rough regime, the drag increase is
+due to pressure forces on the roughness elements. On the other hand, heat transfer increase is mainly due to the combined effects of wetted surface increase and of increased turbulence levels and heat transport within the boundary layer. Consequently, wall roughness increases less the heat transfer than the drag, the Reynolds analogy no longer holds on rough surfaces (Cope, 1945; Dipprey and Sabersky, 1963; Owen and Thomson, 1963; Bons, 2002). Various approaches can be used to predict flows over rough surfaces. The ‘‘highest fidelity’’ strategy is to compute the flow around the roughness elements. This is presently done at a research level, using Direct Numerical Simulations or Large Eddy Simulations, mainly over simple geometries. A review of such attempts can be found e.g. in Busse and Sandham (2012). Work is usually focused on dynamical aspects of wall roughness, very few works as those of Miyake et al. (2001) accounting for thermal aspects. Flow computations around roughness elements were also performed using a Reynolds Averaged Navier–Stokes (RANS) approach and more realistic geometries such as the Vulcain engine nozzle (Oswald’s contribution in Reijasse et al. (1998)) or turbine blades (Bons et al., 2008). The discrete element approach solves equations for a flow, spatially averaged over the roughness elements, modifying the mean flow equations to account for blockage effects due to the presence of roughness elements as well as drag and heat flux on the
+http://dx.doi.org/10.1016/j.ijheatfluidflow.2015.07.007 0142-727X/Ó 2015 Elsevier Inc. All rights reserved.
+E-mail address: bertrand.aupoix@onera.fr
+International Journal of Heat and Fluid Flow 56 (2015) 160–171
+Contents lists available at ScienceDirect
+International Journal of Heat and Fluid Flow
+journal homepage: www.elsevier.com/locate/ijhff
+i An update to this article is included at the end
+
+
+roughness elements. The technique was introduced by Robertson (1961) from ideas from Schlichting (1936, 1973). This approach finely accounts for roughness effects but requires to alter the flow equations, which precluded its use in general RANS solvers. Therefore, the most popular and the only engineering approach is the so-called equivalent sand grain approach. It is made up of two parts. On the one hand, correlations are used to characterize the surface by the sand grain height which, in experiments by Nikuradse (1933, 1937), will give the same drag increase in the fully rough regime. On the other hand, this sand grain roughness height is introduced as a new parameter in the turbulence model to enhance turbulence in the wall region, increase the momentum transport towards the wall and reproduce the drag increase. The first two approaches deal with the dynamical and thermal problems in different ways and are thus suited to reproduce the difference between drag and heat transfer increases over rough surfaces. On the contrary, the equivalent sand grain approach, which does not reproduce the physics of wall roughness and uses classical turbulence models in such a way that the Reynolds analogy is preserved, overestimates heat flux increase due to wall roughness. The goal of this article is thus to take advantage of more accurate modelling to improve the heat flux prediction in the framework of the equivalent sand grain approach. The paper is organised as follows. The key characteristic features of flows over rough surfaces, which will be used later, are quickly recalled in Section 2, as well from the dynamical as from the thermal point of view. The discrete element approach, which will be used to derive the thermal correction, is shortly presented in Section 3. Section 4 details the one-dimensional approach and its use to generate a database about dynamical and thermal wall roughness effects. A thermal correction is derived from this database in Section 5 and validated versus a wide panel of experimental data
+in Section 6. At last, conclusions are drawn and perspectives proposed.
+2. Main characteristics of flows over rough surfaces
+Only distributed roughness, i.e. for which the roughness size and spacing are small compared to the boundary layer thickness, and of k-type according to Perry et al. (1969) classification, are considered. Let us just recall that k-type roughness, for which roughness effects are linked to the height of the roughness elements, are the most usual ones.
+2.1. Velocity shift
+Near the wall, the flow is highly perturbed by the presence of the roughness elements so that three to five roughness heights above the surface is needed to recover a flow which is locally homogeneous in planes parallel to a reference surface and no longer depends upon the location w.r.t. individual roughness elements. This region, strongly affected by the exact location of the roughness elements, is called the roughness sublayer. Above it, the main flow characteristics are similar to those over a smooth surface, once scaled by the increased friction level. Nikuradse pointed out that, above the roughness sublayer, the logarithmic law is preserved but is shifted, as schematically shown in Fig. 1. The logarithmic law thus reads
+uþ 1⁄4 1
+j ln yþ þ C Duþ uþ 1⁄4 u
+us
+yþ 1⁄4 yus
+m ð1Þ
+where us is the friction velocity based upon the drag sw and the density q as sw 1⁄4 qus2; y a wall distance and m the viscosity.
+Nomenclature
+Latin alphabet
+C intercept of the logarithmic velocity law Ch intercept of the logarithmic temperature law Cd roughness drag coefficient Cf skin friction coefficient CP specific heat capacity d local roughness diameter h roughness height hi stagnation enthalpy k turbulent kinetic energy ks equivalent sand grain roughness height L; Lx; Lz roughness spacing Nud roughness Nusselt number P Prandtl number Pt turbulent Prandtl number p pressure Rh Reynolds number based upon the momentum thickness Red roughness local Reynolds number S wetted surface ratio Scorr corrected wetted surface ratio St Stanton number s analogy factor T temperature Ts friction temperature u longitudinal velocity component us friction velocity v wall normal velocity component
+x longitudinal coordinate y wall normal coordinate
+Greek alphabet
+b blockage parameter pressure gradient coefficient
+DTþ shift of the logarithmic temperature law due to wall roughness Duþ shift of the logarithmic velocity law due to wall roughness d boundary layer thickness e eccentricity h boundary layer momentum thickness j von Kármán constant jh thermal von Kármán constant k thermal conductivity l viscosity q density sw wall friction Uw wall heat flux x specific dissipation rate
+Symbols
++ value in wall units e value at the outer edge of the boundary layer w wall value 0 turbulent fluctuation ensemble average
+B. Aupoix / International Journal of Heat and Fluid Flow 56 (2015) 160–171 161
+
+
+This velocity shift Duþ characterizes the drag increase due to roughness. Considering Fig. 1, the velocity at the boundary layer outer edge can be written as
+uþ
+e 1⁄4 ue
+us
+1⁄4
+ffiffiffiffiffi 2
+Cf
+s
+ð2Þ
+where ue is the external flow velocity and Cf
+2 the skin friction coefficient. Following Nikuradse, Townsend (1976) pointed out that the boundary layer outer region is affected by the roughness only through a change in the friction level. In other words, the outer region velocity profile can still be written in a defect form, as
+ue u
+us
+1⁄4F y
+d ; b ð3Þ
+where b is a pressure gradient parameter, which may also be affected by the change in wall friction. This hypothesis holds only if the roughness elements are small enough, compared to the boundary layer thickness, as discussed by Jiménez (2004) and Flack et al. (2007). Assuming Townsend’s hypothesis is valid, for a zero pressure gradient boundary layer (b 1⁄4 0), the wake region is just shifted downwards in Fig. 1 so that the figure shows that, for boundary layers having the same reduced thickness dþ
+Duþ 1⁄4
+ffiffiffiffiffi 2
+Cf
+s
+smooth
+ffiffiffiffiffi 2
+Cf
+s
+rough
+ð4Þ
+2.2. Temperature shift
+The temperature profile can be plotted in a similar form as the velocity profile, to evidence a wall region, where the temperature profile reads
+Tw T Ts
+1⁄4 f ðyþ; PÞ Ts 1⁄4 Uw
+qCpus
+ð5Þ
+where Ts is the friction temperature, based upon the wall heat flux Uw, Cp the specific heat capacity and P the Prandtl number. In the following, only air at moderate temperature is considered so that P 0:725. In the outer region, the temperature profile can be expressed with a defect form as
+T Te Ts
+1⁄4 Fh
+y
+d ; b ð6Þ
+As for the velocity profile, the wall and outer regions overlap in a logarithmic region which, on rough surfaces, is also shifted, and reads
+Tþ 1⁄4 1
+jh
+ln yþ þ ChðPÞ DTþ Tþ 1⁄4 Tw T
+Ts
+ð7Þ
+so that a figure similar to Fig. 1 is obtained for the temperature profile. The non-dimensional temperature at the outer edge of the boundary layer can be expressed as
+Tþ
+e 1⁄4 Tw Te
+Ts
+1⁄4
+ffiCffifffiffi
+2
+q
+St
+St 1⁄4 Uw
+queCp Tw Te
+ð Þ ð8Þ
+where St is the Stanton number. Using Townsend’s hypothesis on the preservation of the outer region, the same kind of argument leads to relate the temperature shift DTþ to the Stanton number and skin friction coefficient increases as
+DTþ 1⁄4
+ffiCffifffiffi
+2
+q
+St
+1
+A
+smooth
+ffiCffifffiffi
+2
+q
+St
+1
+A
+rough
+ð9Þ
+dþ being again assumed identical for the smooth and rough solutions. This last relation can be used to investigate the values of the temperature shift, which deserves some discussion. Introducing the analogy factor
+s 1⁄4 St
+Cf 2
+ð10Þ
+relations (4) and (9) allow to relate the analogy factor over a rough surface to the one over the smooth surface as
+srough 1⁄4 ssmooth
+1 Duþ
+ffiCffifffiffi
+2
+q
+smooth
+1 ssmoothDTþ
+ffiCffifffiffi
+2
+q
+smooth
+ð11Þ
+This relation was used to analyse the three roughest experiments by Bons (2002), to be presented later in Table 1. The velocity shift was estimated from the equivalent sand grain roughness and Nikuradse’s correlation for fully rough regime, giving values about 11–12. Eq. (4) and the skin friction level on the rough surface give the skin friction coefficient on a smooth surface, for the same dþ, about 1:5 10 3. Then, from the measured analogy factor about 0.6–0.65, assuming the standard value ssmooth 1⁄4 1:24, temperature shifts DTþ between 1.5 and 2.5 are deduced. Downward (i.e. positive) temperature shifts are generally reported in the literature. From Pimenta et al. (1975) data, Kays and Crawford (1993) proposed
+DTþ 1⁄4 1
+jh
+ln kþ
+s
+32:6 þ ChðPÞ 1:25P0:44kþ 0:2
+s ð12Þ
+Miyake et al. (2001) reported negative values of the temperature shift, but the boundary conditions they used in their simulations made this result quite questionable. The above presented analysis of Bons’ experiments shows that, to obtain the low values of the analogy factor measured on very rough surfaces, significant deviations from a quasi-logarithmic behaviour as proposed by Kays and Crawford are required and negative temperature shifts can be obtained. As concerns wall roughness corrections, Eq. (4) shows that good predictions of the drag increase require to fairly reproduce the velocity shift Duþðkþ
+s Þ. Moreover, good predictions of the heat transfer require to fairly reproduce the temperature shift DTþ, as shown by Eq. (9).
+Fig. 1. Velocity profiles over smooth and rough walls plotted in wall variables.
+162 B. Aupoix / International Journal of Heat and Fluid Flow 56 (2015) 160–171
+
+
+3. The discrete element approach
+3.1. Introduction
+In order to improve the thermal predictions with the equivalent sand grain approach, a large data set of the relative evolutions of the temperature and velocity shifts is thus required. Experimental data sets, including velocity and temperature profiles, are quite rare so that numerical simulations have to be used to cover a wide enough range of parameters. As pointed out in the introduction, only ‘‘high fidelity’’ solutions capturing the exact roughness geometry or the discrete element approach are able to reproduce the difference between drag and heat transfer enhancement by surface roughness. As ‘‘high fidelity’’ computations are quite expensive while rather reliable results can be obtained at a very low cost with the discrete elements approach, the discrete element approach was favoured.
+3.2. The ‘‘classical’’ discrete element approach
+Schlichting (1936, 1973) pointed out that the rôle of roughness elements is a flow blockage together with drag and heat flux on the roughness elements. To mimic these phenomena, Robertson (1961) developed the discrete element approach, which was popularized by Finson (see e.g. Finson (1982) and references herein). After some debates on the correct form of the equations, Coleman et al. (1983) and Taylor et al. (1985) proposed, from a balance over a volume including roughness elements, a set of equations which is now considered as the standard form of the discrete element approach. For a steady, two-dimensional boundary layer, respectively noting x and y the flow and ‘‘wall normal’’ directions and u and v the velocity components along these directions, the equations read
+@bqu
+@x þ @bqv
+@y 1⁄4 0 ð13Þ
+bqu @u
+@x þ bqv @u
+@y 1⁄4 @bp
+@x þ @
+@y bl @u
+@y qu0v0 1
+2 qCdu2 dðyÞ
+LxLz
+ð14Þ
+0 1⁄4 @bp
+@y ð15Þ
+bqu @hi
+@x þ bqv @hi
+@y 1⁄4 @bp
+@t
+@
+@y qv0h0 þ uqu0v0
+þ@
+@y blu @u
+@y þ bk @T
+@y þ p k Nud
+1
+Lx Lz
+Tr
+hi CP
+ð16Þ
+where, as usual for boundary layer flows, the energy equation is written for the stagnation enthalpy hi. Compared to boundary layer equations above a smooth surface, a blockage factor, or more precisely as suggested by McClain et al. (2004) an aperture factor, bðyÞ appears. It represents the fraction of space available for the flow at the altitude y, due to the presence of roughness elements. When dealing with elements of circular cross-section of diameter dðyÞ, spaced by Lx and Lz in the longitudinal and transverse directions, the blockage parameter reads
+b 1⁄4 1 pd2ðyÞ
+4Lx Lz
+ð17Þ
+The presence of roughness elements also induces extra terms in the momentum and energy equations, through a local drag coefficient of roughness elements Cd and a Nusselt number Nud to respectively model roughness element drag and heat transfer. For elements of
+circular cross-section, the classical closure relates these coefficients to the Reynolds number based upon the roughness local diameter
+Red 1⁄4 qudðyÞ
+l ð18Þ
+Model forms were obtained by the Mississippi State University by modifying  ̆Zukauskas’ experimental data (Z ̆ukauskas, 1972) to achieve a good agreement with experiments (Taylor et al., 1984; Hosni et al., 1991). The drag coefficient reads
+Cd 1⁄4
+Red 1000
+0:125
+Red 6 60000
+0:6 Red P 60000
+8<
+: ð19Þ
+while the local Nusselt number is given as
+Nud 1⁄4 1:7Re0:49
+d P0:4 Red 6 13776
+0:0605Re0:84
+d P0:4 Red P 13776
+(
+ð20Þ
+At last, a standard mixing length model is used to represent the Reynolds stress and turbulent heat flux. This approach has been validated by many groups, for a wide range of applications (Taylor et al., 1985, 1988; Glikson, 1996; Turner et al., 2000; McClain et al., 2004; Bons and McClain, 2004; Bons et al., 2008).
+3.3. Improvements of the ‘‘classical’’ approach
+The initial model form, as given above, assumes that all roughness elements have the same shape and are uniformly distributed. The approach was extended by Taylor et al. (1988) to cope with a regular mixture of different shapes of roughness elements and by McClain et al. (2004), using probability density functions, to more random roughness elements. In the initial model form, only roughness elements of circular cross-section can be accounted for. McClain et al. (2004) proposed to deal with elements of elliptical cross-section, which can be a fair approximation in many practical cases. Defining the eccentricity e as the ratio, at every altitude y, between the width of the element in the direction normal to the flow and its length in the flow direction, the drag coefficient is multiplied by e0:73456, based upon cylinder drag data. Due to the lack of data, the heat transfer correction is simply the perimeter ratio between an ellipse and a circle. Although used in the following, this correction has to be taken with caution as it lacks direct experimental validation. At last, Klett and Kithcart (1992) and McClain et al. (2006) pointed out the failure of the approach for dense roughness, drag and heat transfer being overestimated. McClain et al. noticed that the lower part of the roughness elements should be submitted to a very weak flow and have little influence. Defining the reference surface (or melt-down surface) as the smooth surface corresponding to the same amount of material, i.e. the mean elevation which could be obtained by locally melting the roughness elements, they propose to replace the real surface by the corrected surface i.e. the real surface where it is above the reference surface, the reference surface otherwise, in order to get rid of the contribution of the troughs between roughness elements. Although not discussed by McClain et al., this change of bottom surface also leads to a change in the altitude and thus in the mixing length, which reduces the turbulence levels and thus the drag and heat transfer.
+3.4. Going further
+The discrete element approach was also applied with other turbulence models than the mixing length model by Tarada (1990) and by Glikson and Aupoix (1996). Using the volume averaging technique proposed by Whitaker (1986) together with the triple decomposition of Raupach
+B. Aupoix / International Journal of Heat and Fluid Flow 56 (2015) 160–171 163
+
+
+(Raupach and Shaw, 1982; Raupach et al., 1991), Aupoix (1994) derived the discrete element equations in a more formal way, moreover getting rid of the boundary layer framework. He so pointed out some deficiencies of the above presented classical formulation. First, the location of the blockage coefficients slightly changes, the difference being due to a short-coming in the initial derivation. Moreover, extra terms should appear, which represent the mixing of the volume-averaged flow due to spatial flow variations. At last, the turbulence model should also be altered. A part of the above pointed out errors seems to be partly compensated by the tuning of the drag and heat flux coefficients Cd and Nud so that the approach described in Sections 3.2 and 3.3, which is highly validated, is preferred for this study.
+4. One-dimensional approach
+4.1. Introduction
+As recalled above, provided the roughness element height is not too large compared to the boundary layer thickness, the outer region is affected by wall roughness only through the change in friction and heat flux levels. Moreover, RANS approaches have the nice, although unphysical, property to provide a unique solution in the inner region whatever the Reynolds number, once written in wall units. These two facts allow us to reduce the problem to the solution of the discrete element approach equations in the wall region, i.e. to a very simple, one-dimensional system.
+4.2. Governing equations
+Considering incompressible flow, using wall scaling, and assuming infinite Reynolds number Eqs. (13)–(16) for the inner region of a zero pressure gradient boundary layer reduce to
+01⁄4 @
+@yþ b þ mþ
+t
+@uþ @yþ
+1
+2 Cduþ2 dþ
+Lþ
+x Lþ
+z
+ð21Þ
+01⁄4 @
+@yþ
+b
+P þ mtþ
+Pt
+@Tþ
+@yþ p 1
+Lþ
+x Lþ
+z
+Nud
+P Tþ ð22Þ
+where the reduced eddy viscosity mþ
+t 1⁄4 mt
+m is given by the mixing length model and Pt is the turbulent Prandtl number. This set of equations is solved using a pseudo-unsteady approach on a very fine grid. The first grid point is set at yþ 1⁄4 0:01, the expansion ratio is 1.05, 250 grid points are used to set the last point far in the logarithmic region and grid convergence was checked. Special attention has to be paid to the boundary conditions at the upper limit, to ensure that the inner region is a constant total shear and total heat flux region. The code was first validated with respect to experiments conducted by Pimenta et al. (1975) and Ligrani and Moffat (1986) on most densely packed spheres and by Hosni et al. (1989) on hemispheres with various spacings to check that the velocity and temperature shifts in the logarithmic region are correctly reproduced.
+4.3. Simulation results
+In order to build a reference database of roughness effects, various roughness element shapes were considered, namely hemispheres, pairs of hemispheres of different diameters, cones with various half angle (30°, 45° and 60°), cones of 30° half angle with spherical covers of various extend (labelled ‘‘SC’’ in the figure captions), ellipsoids with circular or elliptic cross-section in planes parallel to the reference surface and various eccentricities (respectively labelled ‘‘Ellips.’’ and ‘‘Excent’’ in the figure captions). For each roughness element shape, different spacing were selected, from the densest one to very sparse roughness configurations.
+This led to a total of 99 different geometries. For each geometry, 50 test cases were computed, for reduced roughness height hþ from 10 to 500 with a step of 10, which led to 4950 simulations. Fig. 2 gives a typical example of the relative evolution of the velocity and temperature shifts in the case of hemispheres (all cases are not plotted for the sake of clarity). A curve corresponds to a given spacing L=h. As all curves stop for a reduced height hþ 1⁄4 500, it can be seen that the most closely packed hemispheres (L=h 1:86) do not give the largest velocity shift Duþ, i.e. the rougher surface. The maximum velocity shift Duþ first increases as the hemispheres are less dense, the maximum being achieved for L=h 2:50. Above this value, dynamical roughness effects decrease. The key result is that, in all cases, there is not a simple linear relation between the velocity and temperature shift. There seems to be an asymptote for small roughness effects (Duþ ! 0) and then a parabolic behaviour, the temperature shift finally decreasing while the velocity shift keeps on increasing. For low values of the velocity shift, the proportionality between the velocity and temperature shifts is consistent with Kays and Crawford formula (12) and results from Pimenta et al. (1975), Ligrani and Moffat (1986) or Hosni et al. (1989), which all considered cases for which the velocity shift Duþ is below eight. The decrease of the temperature shift reflects the different nature of drag and heat transfer increases due to roughness and is consistent with the negative temperature shifts discussed above. When the shielding effect of roughness elements is weaker, e.g. for cones, the maximum roughness effect is obtained for the denser configuration. Whatever the roughness element shape, the parabolic behaviour of the temperature shift versus the velocity shift is recovered. As the heat transfer increase is linked to the increase of the wetted surface, the ratio of the rough wetted surface to the smooth, or reference, wetted surface is plotted in Fig. 3 for hemispheres and cones. For each geometry, two ratios are plotted. The upper curve corresponds to the real geometry (S) and the lower one (Scorr) to the corrected geometry, i.e. to the geometry with troughs below the reference or melt-down surface neglected, as in the computations. As expected, in all cases, the corrected surface ratio is lower than the uncorrected one and the difference decreases as the roughness elements are more sparsely distributed. Moreover, the wetted surface always decreases with the spacing while the
+Fig. 2. Evolutions of the velocity and temperature shifts for hemispheres.
+164 B. Aupoix / International Journal of Heat and Fluid Flow 56 (2015) 160–171
+
+
+corrected surface can first increase when the shielding is important, as it is the case for hemispheres but not for cones.
+4.4. Database analysis
+Various attempts were performed to try to evidence universal behaviours, once properly scaled, which could be the foundations for modelling. As an example, re-plotting Fig. 2 in a non-dimensional form as DTþ
+DTþmax versus Duþ
+Duþmax does not lead to a col
+lapse of all the parabolas, there is no simple universal behaviour. Moreover, changing the roughness element shape, similar values of the maximum temperature shift DTþ
+max can be obtained for different values of the maximum velocity shift Duþ
+max, which shows that there is a need for an extra parameter to characterize thermal effects of surface roughness, the use of the equivalent sand grain ks being insufficient as the non-dimensional velocity shift Duþ is directly linked to non-dimensional equivalent sand grain roughness height kþ
+s . This need of an extra parameter was already pointed out from experimental data by Turner et al. (2000) and by Bons (2002). The other significant information extracted from the database is that the use of the corrected surface leads to a better (but far from perfect) grouping of the results, as shown e.g. in Fig. 4 in which the maximum temperature shift is plotted versus the surface ratio. It has however to be recalled that the corrected surface is one of the ingredients of the discrete element approach, so that this may be an artifact due to the use of this approach.
+5. Thermal correction development
+As pointed out above, the roughness modelling in the framework of the equivalent sand grain approach is unphysical: the pressure force on the roughness elements is replaced by an increase in the turbulence level to achieve the same wall friction. Therefore, the velocity profiles in the roughness layer significantly differ between the equivalent sand grain and the discrete element approaches. Consequently, there is no simple way to directly derive a thermal correction from the knowledge of e.g. temperature profiles in the roughness layer, only an ad-hoc correction to recover the correct heat flux level, or more precisely the correct temperature shift, can be considered.
+As the eddy viscosity is already altered in the equivalent sand grain approach, the only available tool to improve the heat flux prediction is a modification of the turbulent Prandtl number. Increasing the turbulent Prandtl number decreases the turbulent conductivity and hence the heat transfer towards the wall and the heat flux. Therefore, a correction is looked for with the form
+Pt 1⁄4 Pt smooth þ DPt rough ð23Þ
+where Pt smooth is the standard value ( 0:89). The correction DPt rough should be restricted to the wall region and be linked to dynamical roughness effects and surface increase. It thus can be expressed as DPt rough ðy; h; ks; Duþ; S; Scorr . . .Þ. It turned out that the discrete element approach does not allow to determine an equivalent sand grain for a given geometry as the quantity Duþ 1
+j ln hþ does not tend towards a constant value in the fully rough regime, as expected, but slightly decreases as the roughness element height increases. Therefore, the velocity shift Duþ is used to characterize dynamical roughness effects, which will be more convenient, as shown below. The correction can be reformulated, splitting variables, as
+Fig. 3. Ratio of the wetted surface and the corrected wetted surface to the reference surface for hemispheres and cones.
+Fig. 4. Evolution of the maximum temperature shift with the wetted surface ratio. Top: wetted surface – Bottom: corrected wetted surface.
+B. Aupoix / International Journal of Heat and Fluid Flow 56 (2015) 160–171 165
+
+
+DPt rough 1⁄4 F Duþ; S; Scorr
+ð ÞG y
+h ð24Þ
+where G restricts the correction to the roughness layer. The thermal correction was developed for roughness corrections based upon ONERA’s technique (Aupoix, 2007). This technique takes advantage of the fact that the wall region is a total shear stress region. Imposing as wall conditions for a rough surface, the values of the turbulent variables at a given altitude on a smooth surface, and possibly shifting the wall distance by this altitude if the wall distance appears in the turbulence model, the solution on the rough wall (turbulent quantities but also velocity gradient) is the same as on the smooth wall, once shifted. Consequently, as the velocity gradient is shifted, the velocity profile will be shifted by the value of velocity on a smooth wall at the selected altitude. This technique was successfully applied to the Spalart and Allmaras (1992, 1994) model in Aupoix and Spalart (2003), Smith (1995) k L model in Aupoix (2007) and k x BSL and SST models (Menter, 1994) in Aupoix (2015). It can also be applied to a mixing length model. Except for the eddy viscosity very close to the wall, it was checked that all the considered turbulence models give very similar velocity and temperature profiles in all the wall region, so that the roughness thermal correction can be derived using the mixing length model and then applied to other models. Here again, a simple one-dimensional code is used to compute the flow in the wall region. The velocity profile is first computed and, for a given case in the database, the velocity shift Duþ is used to determine the shift of the solution on the rough surface. Then, DPt rough has to be determined to recover the desired temperature shift. Various forms for F and G were guessed to try to determine them using optimization techniques. It turned out that there were several local minima so that the optimum coefficients were difficult to determine. It was then preferred to proceed in two steps. First, G was tuned in order to have ‘‘nice’’ forms for F , i.e. forms simple to represent and similar whatever the roughness geometry. This led to the simple form
+Gy
+h 1⁄4 exp y
+h ð25Þ
+which restricts the correction to the roughness sublayer. An example of a so-obtained F evolutions is plotted in Fig. 5 for cones with spherical cover. It can be noticed that some unexpected negative values are observed for small roughness effects. The key point is that, in the fully rough regime, the evolution looks parabolic, whatever the considered roughness geometry. A simple model for F was sought for as
+F 1⁄4 ADuþ þ BDuþ 2 ð26Þ
+A much better (but far from perfect) grouping is obtained using the wetted corrected surface ratio Scorr than using the wetted surface ratio to define coefficients A and B. All data are plotted in Fig. 6 together with the proposed model forms which read
+A 1⁄4 0:0155 0:0035Scorr
+ð Þð1 exp 1⁄2 12 ðScorr 1:Þ Þ ð27Þ B 1⁄4 0:08 þ 0:25 exp 1⁄2 10ðScorr 1:Þ ð28Þ
+It can be noticed from these figures that it was difficult to generate rough surfaces with values of Scorr larger than 1.4. For B, the available data confirm the observed trend towards a plateau value while, for A, the model for large values of Scorr is deduced from a reduced set of data. This is however not dramatic since it will be shown below that real rough surfaces also correspond to values of Scorr below 1.4. To sum up, the corrected turbulent Prandtl number reads
+Pt 1⁄4 Pt smooth þ ADuþ þ BDuþ 2 exp y
+h ð29Þ
+with A and B given by the above formulae. The model requires three input parameters: the roughness element height h, the associated equivalent sand grain height ks, which will give the velocity shift Duþ as discussed below, and the corrected wetted surface ratio Scorr. It can be applied to any roughness correction using ONERA’s strategy although these corrections are not all based upon the same velocity shift relation Duþðkþ
+s Þ thanks to the use of Duþ instead of kþ
+s
+in the model formulation. Therefore, the velocity shift Duþ in the above relation has to be evaluated from the reduced equivalent sand grain height kþ
+s using relation (3) in Aupoix (2007) for the Smith k l model or the Spalart and Allmaras model and relation (4) or (8) in Aupoix (2015) for k x models.
+6. Thermal correction validation
+Model validation was performed using the ONERA boundary layer code CLICET (Aupoix, 2010) which has a self-adaptive grid and several grid levels so that grid convergence is easily ensured. Academic roughness as well as rough surfaces representative of iced airfoil or in-service turbine blades and vanes were considered, together with pressure gradient effects. Forty-six test-cases were computed; only the most significant ones are presented here for the sake of brevity. Test cases in the fully rough regime (kþ
+s > 100), with significant roughness effects, are favoured. Computations were performed with all roughness corrections developed using ONERA’s strategy but, for the sake of clarity, results are shown only for the Spalart and Allmaras (Aupoix and Spalart, 2003) (curves labelled ‘‘SA’’ in the figures) and k x SST models, the ‘‘Colebrook’’ type correction (Aupoix, 2015) being used for this model (curves labelled SST). Classical computations, using a constant turbulent Prandtl number, are labelled as ‘‘Constant Pt’’ while those using the present correction are labelled ‘‘Variable Pt’’.
+6.1. Stanford experiments
+Several experimental campaigns were conducted at Stanford University on flows over a surface covered with most closely packed spheres (Healzer et al., 1974; Pimenta et al., 1975; Coleman et al., 1976; Coleman et al., 1977; Ligrani et al., 1979). The spheres are 0.635 mm diameter and the equivalent sand grain is 1.25 times the diameter, as recommended in the publications. In
+Fig. 5. Evolution of F with the roughness effect quantified by the velocity shift for cones with spherical cover.
+166 B. Aupoix / International Journal of Heat and Fluid Flow 56 (2015) 160–171
+
+
+the discrete element approach, the flow below the maximum cross-section (i.e. the equator) of the spheres is neglected so that they are considered as hemispheres to evaluate the corrected wetted area ratio as 1.1418. The skin friction coefficient is deduced from a momentum balance in Healzer et al. experiments, which were latter duplicated by Pimenta et al. (1975) and Ligrani et al. (1979), using hot wire to measure the turbulent shear stress and validate the skin friction determination. Stanton numbers are deduced from a thermal balance for each heated plate element. For the zero pressure gradient test cases, the highest velocity case, which was measured by Healzer et al. (1974), is presented. The velocity speed is 242 fts 1 or 73.8 ms 1. The flow is turbulent from the beginning of the measurement region and the reduced sand grain height kþ
+s is about 200. Predictions of the skin friction coefficient and of the Stanton number are plotted in Fig. 7. On the upper figure, four curves are drawn, skin friction predictions assuming a constant turbulent Prandtl number or the proposed thermal correction being identical as expected, temperature being here a passive scalar. The skin friction level is nearly doubled, but is underestimated by the Spalart and Allmaras model. For the Stanton number, assuming a constant turbulent Prandtl number gives the two upper curves, i.e. levels
+similar to the skin friction coefficient and a definite overestimation. The use of the proposed thermal correction leads to the two lower curves, i.e. much lower Stanton number levels, in better agreement with experiments. Coleman et al. (1976, 1977) investigated the influence of flow acceleration. The considered test case is case 3, which corresponds to an equilibrium solution, i.e. a friction coefficient plateau, with the strongest acceleration. As this test case is less standard, the levels on a smooth plate are also plotted (bottom curves) in Fig. 8. The reduced sand grain height is about 100. Here again, the friction levels is doubled and the SST model predicts higher levels than the Spalart and Allmaras one. The acceleration already breaks the Reynolds analogy as the Stanton number does not exhibit a plateau and, here again, a constant turbulent Prandtl number assumption leads to an overestimation of the Stanton number while the proposed correction improves the results. It has to be kept in mind that the results are sensitive to the equivalent sand grain height. Slightly decreasing it would lead to worse results for the Spalart and Allmaras model, better ones for the SST model.
+Fig. 6. Evolution of the coefficients A (upper figure) and B (lower figure) with the corrected wetted surface.
+Fig. 7. Healzer et al. experiment – most closely packed spheres – predictions of the skin friction coefficient (upper figure) and the Stanton number (lower figure).
+B. Aupoix / International Journal of Heat and Fluid Flow 56 (2015) 160–171 167
+
+
+6.2. Mississippi State University experiments
+Many experiments over rough surface were conducted at the Mississippi State University, first for pipe flow and then for boundary layer flow by Hosni et al. (1989, 1991, 1993). Roughness elements are hemispheres or truncated cones, two, four or ten base diameters apart. The skin friction coefficient is deduced from the turbulent shear stress measurement and the Stanton number from a thermal balance for each heated plate element. The presented test case is for cones, which have a base diameter of 1.27 mm, a height of 0.635 mm and a 40° half angle, which means a height of 0.76 mm if they were not truncated. According to Hosni et al., for cones two base diameters apart, the equivalent sand grain height is 1.16 mm. The corrected wetted area ratio is 1.22. The reduced sand grain height is about 300. Stanton number predictions are plotted in Fig. 9, using a log–log representation as in the original article. Here again, higher levels are obtained with the SST model and a significant reduction and improvement is achieved with the proposed thermal correction.
+6.3. Ice shapes
+Dukhan et al. (1999) copied ice shape obtained in NASA’s Icing Research Tunnel. Seven surfaces, corresponding to different icing regimes, were investigated. The experimental set up is a flat plate, with a smooth part 0.0508 m long before the rough insert. The smooth part is adiabatic while the rough element is heated. Several free-stream velocities were investigated but only the highest velocity case of 47.24 ms 1 is considered, the low velocity case being polluted by transition effects. The laminar/turbulent transition is assumed to take place at the beginning of the rough insert. Only Stanton number data are available, they are determined from a thermal balance in the steady regime. The mean height and spacing is given for each surface. The equivalent sand grain is deduced using Dirling (1973) correlation. This correlation requires another parameter, linked to the slope of the roughness element on the windward face. This parameter highly affects the results for dense roughness, so only sparse roughness cases are presented here. The wetted area ratio is also provided. As the corrected wetted area ratio is always lower, as shown in Fig. 3, it is limited to 1.22, maximum value for hemispheres. This value is the one used for the first two cases presented below. For the intermediately spaced rough glaze (shape 3 in Fig. 10), the equivalent sand grain height is 15.63 mm and the reduced value kþ
+s is about 4000. As this value is very large, the Stanton number is highly overestimated assuming a constant turbulent Prandtl number. The proposed thermal correction allows to recover levels in fair agreement with experiments. For rime feathers (shape 4 in Fig. 10), the equivalent sand grain height is 23.04 mm and the reduced value kþ
+s is about 6000. The same behaviours are observed, the Stanton number being reduced by a factor close to two with the proposed thermal correction. For the smooth rime (shape 7 in Fig. 10), the equivalent sand grain height is 2.25 mm and the reduced value kþ
+s is about 400. Here, the uncorrected value of the wetted surface ratio of 1.08 is used. Again, the proposed thermal correction significantly improves the predictions.
+6.4. In-service turbines blades and vanes
+Bons et al. (2001) investigated more than one hundred in-service turbines blades and vanes to evidence the way the
+Fig. 8. Coleman et al. experiment – most closely packed spheres – predictions of the skin friction coefficient (upper figure) and the Stanton number (lower figure). Fig. 9. Hosni et al. experiment – cones – predictions of the Stanton number.
+168 B. Aupoix / International Journal of Heat and Fluid Flow 56 (2015) 160–171
+
+
+surface degrades. Bons (2002) selected characteristic surfaces for each type of degradation and, from topography measurements, created homothetic surfaces to reproduce the same reduced
+roughness height hþ in a low speed wind tunnel. Table 1, from Bons (2002), summarizes the main characteristics of each surface, TBC meaning Thermal Barrier Coating. The measured friction coefficient is obtained by a balance over the whole rough insert. Stanton number is deduced from the
+Fig. 10. Dukhan et al. experiment – predictions of the Stanton number intermediately spaced rough glaze (upper figure), rime feathers (middle figure), smooth rime (lower figure).
+Fig. 11. Bons et al. experiment – in-service turbine blades and vanes surfaces prediction of the skin friction coefficient (upper figure) and of the Stanton number (lower figure) for zero pressure gradient flow.
+Table 1
+Main characteristics of the in-service turbine blades and vanes surfaces.
+N Type Ra (mm)
+Height h (mm)
+Wetted surface ratio
+Equivalent sand grain
+(mm) kþ
+s
+1 Pitted 0.12 1.14 1.016 0.51 20 2 TBC debond
+0.30 1.67 1.009 0.40 15
+3 TBC spalled
+0.84 4.51 1.080 2.9 135
+4 Deposit 1.17 5.96 1.224 6.2 322 5 Dep/ Erosion
+0.46 3.10 1.197 6.3 330
+6 Erosion 0.52 3.83 1.198 8.8 481
+B. Aupoix / International Journal of Heat and Fluid Flow 56 (2015) 160–171 169
+
+
+thermal transient at the tunnel start-up, only at one point close to the insert centre. For zero pressure gradient configuration, measurements are performed for two Reynolds numbers, only the highest Reynolds number (Rx 1⁄4 9 105) is considered here and in the values of kþ
+s
+in the table. Predictions are compared to experimental values in Fig. 11. As only one measurement point is available for each surface, the horizontal axis is the surface number, the values for a smooth surface being added as surface 0. The agreement on the skin friction level is fair whatever the surface and the flow regime. For the Stanton number, two or three levels are plotted for each surface. The highest levels correspond to the constant turbulent Prandtl number assumption and are very similar to the skin friction levels. The model preserves the Reynolds analogy so that the Stanton number is overestimated. The lowest levels for surface 1 to 3 and the intermediate levels for surfaces 4 to 6 are the one obtained with the proposed thermal correction, using the wetted surface ratio given in the table. The agreement is fair for surfaces 1 to 3 and the improvement significant for the other surfaces. For these three surfaces (4 to 6), the lowest levels correspond to a
+value of the corrected surface ratio Scorr of 1.1, i.e. assuming the surface is symmetric w.r.t. its mean elevation, the corrected wetted surface increase is half the wetted surface increase. The agreement is thus nice for these three surfaces. Heat transfer measurements are also available for accelerated and decelerated flows for four surfaces and are compared with predictions in Fig. 12. The same behaviours are recovered whatever the pressure gradient: strong overestimation of the Stanton number when assuming a constant turbulent Prandtl number, better predictions with the proposed thermal correction and, for the last two surfaces, fair results when the wetted surface is corrected. However, the Stanton number levels are nicely predicted for accelerated flows but overestimated for decelerated flows. Experiments performed at ONERA in the framework of the Physice project were also used for the validation. The experiments, together with the computation will be presented in a different paper, in which it will be shown that the proposed thermal correction also improves the temperature profile predictions.
+7. Conclusions and perspectives
+The discrete element approach was used easily to generate a large database to investigate the differences between skin friction and heat transfer enhancement on a rough surface. For that purpose, a large variety of roughness element shape, spacings and heights was investigated. Different behaviours of the velocity and temperature profile shifts in the logarithmic region were evidenced. This simply generated database provided a much larger information than available in the literature but no simple laws could be deduced from it. It however puts in evidence the need of an extra parameter to quantify thermal effects and the importance of the corrected wetted surface. A correction of the Prandtl number was deduced, only using this database. A correction of the turbulent Prandtl number in the wall region was looked for to reproduce the fact that the heat transfer increases less than the drag. The correction is made of two parts, a term which restricts it to the roughness layer and a maximum level which depends upon the roughness dynamic effect through the velocity shift Duþ and upon the corrected wetted surface ratio. The final model form is given by Eq. (29). Although this correction does not perfectly collapse all the database data, it brings significant improvements in the predictions over a wide variety of tests cases, although the heat flux remains slightly overestimated in some cases. It has to be recalled that this correction was developed without any calibration w.r.t. experimental data used in the validation. Moreover, this correction can be used with every roughness correction developed using ONERA’s strategy. Its weak point is the need to evaluate the corrected wetted surface ratio. Two ways of improvement can be envisioned. Now that a correction form is stated, the coefficients could be optimised w.r.t. the available experimental database used in the validation. Another route could be to get rid of the discrete element approach and use ‘‘higher fidelity’’ solutions, with more general surface roughness, to generate a more reliable (but much more expensive) database.
+Acknowledgments
+The DGAC (Direction Générale de l’Aviation Civile) is acknowledged for supporting the Physice project under which this research work was conducted. The author wishes to acknowledge Prs J. Bons and S. McClain for providing validation data for flow over surfaces representative of in-service turbine blades and vanes, and for fruitful exchanges.
+Fig. 12. Bons et al. experiment – in-service turbine blades and vanes surfaces prediction of the Stanton number for accelerated (upper figure) and decelerated (lower figure) flows.
+170 B. Aupoix / International Journal of Heat and Fluid Flow 56 (2015) 160–171
+
+
+References
+Aupoix, B., 1994. Modelling of boundary layers over rough surfaces. In: Benzi, R. (Ed.), Advances in Turbulence V. Fifth European Turbulence Conference. Kluwer, Sienna, pp. 16–20, July 5–8. Aupoix, B., 2007. A general strategy to extend turbulence models to rough surfaces – application to Smith’s k l model. J. Fluid Eng. 129 (10), 1245–1254, October. Aupoix, B., 2010. Couches limites bidimensionnelles compressibles. Descriptif et mode d’emploi du code CLICET – version 2010. Tech. Rep. RT 1/117015 DMAE, ONERA, October. Aupoix, B., 2015. Roughness corrections for the k x shear stress transport model: status and proposals. J. Fluids Eng. 137, 021202, February. Aupoix, B., Spalart, P., 2003. Extensions of the Spalart–Allmaras turbulence model to account for wall roughness. Int. J. Heat Fluid Flows 24, 454–462. Bons, J., 2002. St and Cf augmentation for real turbine roughness with elevated freestream turbulence. J. Turbomach. 124, 632–644, October. Bons, J., McClain, S., 2004. The effect of real turbine roughness with pressure gradient and heat transfer. J. Turbomach. 126, 385–394, July. Bons, J., McClain, S., Wang, Z., Chi, X., Shih, T., 2008. A comparison of approximate versus exact representations of roughness for CFD calculations of Cf and St. J. Turbomach. 130, 021024-1–021024-10. April. Bons, J., Taylor, R., McClain, S., Rivir, R., 2001. The many faces of turbine surface roughness. J. Turbomach. 123, 739–748, October. Busse, A., Sandham, N., 2012. Parametric forcing approach to rough-wall turbulent channel flow. J. Fluid Mech. 712, 169–202. Coleman, H., Hodge, B., Taylor, R., 1983. Generalized roughness effects on turbulent boundary layer heat transfer – a discrete element predictive approach for turbulent flow over rough surfaces. Air Force Armament Laboratory AFATL-TR83-90, Mississippi State University, November. Coleman, H., Moffat, R., Kays, W., 1976. Momentum and energy transport in the accelerated rough turbulent boundary layers. Tech. Rep. HMT-24, Stanford University, Thermosciences Division, Department of Mechanical Engineering, May. Coleman, H., Moffat, R., Kays, W., 1977. The accelerated fully rough turbulent boundary layer. J. Fluid Mech. 82, 507–528. Cope, W., 1945. The friction and heat transmission coefficients of rough pipes. Proc. Inst. Mech. Eng. Lond. 145, 99–105. Dipprey, D., Sabersky, R., 1963. Heat and momentum transfer in smooth and rough tubes at various Prandtl numbers. Int. J. Heat Mass Transfer 6, 329–353. Dirling, Jr., R., 1973. A method for computing rough wall heat transfer rates on reentry nosetips. In: AIAA Paper 73-763, AIAA 8th Thermophysics Conference, Palm Springs, California, July 16–18. Dukhan, N., Masiulaniec, K., De Witt, K., van Fossen Jr., G., 1999. Experimental heat transfer coefficients from ice-roughened surfaces for air deicing design. J. Aircraft 36 (6), 948–956, November–December. Finson, M., 1982. A model for rough wall turbulent heating and skin friction. AIAA Paper 82-0199 20th Aerospace Science Meeting, Orlando, Florida, January 1114. Flack, K., Schultz, M., Connelly, J., 2007. Examination of a critical roughness height for outer layer similarity. Phys. Fluids 19 (095104), 1–9. Glikson, F., 1996. Couche limite sur paroi rugueuse (Ph.D. thesis). École Nationale Supérieure de l’Aéronautique et de l’Espace, Toulouse, 16 Décembre. Glikson, F., Aupoix, B., 1996. Modelling of compressible boundary layer flows over rough surfaces. In: Rodi, W., Bergeles, G. (Eds.), Third International Symposium on Engineering Turbulence Modelling and Measurements. Elsevier, Heraklion, Crete, Greece, pp. 687–696, May 27–29. Healzer, J., Kays, W., Moffat, R., 1974. The turbulent boundary layer on a rough, porous plate: experimental heat transfer with uniform blowing. Tech. Rep. HMT-18, Stanford University, Thermosciences Division, Department of Mechanical Engineering, May. Hosni, M., Coleman, H., Gardner, J., Taylor, R., 1993. Roughness element shape effects on heat transfer and skin friction in rough-wall turbulent boundary layer. Int. J. Heat Mass Transfer 36 (1), 147–153. Hosni, M., Coleman, H., Taylor, R., 1989. Measurements and calculation of surface roughness effects on turbulent flow and heat transfer. Tech. Rep. TFD-89-1, Thermal & Fluid Dynamics Laboratory, Mechanical and Nuclear Engineering Department, Mississippi State University, December. Hosni, M., Coleman, H., Taylor, R., 1991. Measurements and calculations of roughwall heat transfer in the turbulent boundary layer. Int. J. Heat Mass Transfer 34 (4/5), 1067–1082. Jiménez, J., 2004. Turbulent flows over rough walls. Annu. Rev. Fluid Mech. 36, 173196. Kays, W., Crawford, M., 1993. Convective Heat and Mass Transfer, third ed. McGraw-Hill, New York.
+Klett, D., Kithcart, M., 1992. Uniform roughness studies. Technical Report WL-TR92-3041, Mechanical Engineering Department, North Carolina Agricultural and Technical State University, Greensboro, N.C., May. Ligrani, P., Kays, W., Moffat, R., 1979. The thermal and hydrodynamic behavior of thick rough-wall turbulent boundary layers (Ph.D. thesis). Thermosciences Division, Department of Mechanical Engineering, Stanford University, August. Ligrani, P., Moffat, R., 1986. Structure of transitionally rough and fully rough turbulent boundary layers. J. Fluid Mech. 162, 69–98. August. McClain, S., Collins, S., Hodge, B., Bons, J., 2006. The importance of the mean elevation in predicting skin friction for flow over closely packed surface roughness. J. Fluids Eng. 128, 579–586, May. McClain, S., Hodge, B., Bons, J., 2004. Predicting skin friction and heat transfer for turbulent flow over real gas turbine surface roughness using the discrete element method. J. Turbomach. 126, 259–267. April. Menter, F., 1994. Two-equation eddy-viscosity turbulence models for engineering applications. AIAA J. 32 (8), 1598–1605. August. Miyake, Y., Tsujimoto, K., Nakaji, M., 2001. Direct numerical simulation of roughwall heat transfer in a turbulent channel flow. Int. J. Heat Fluid Flows 22, 237244. Nikuradse, J., 1933. Strömungsgesetze in rauhen Rohren. Tech. Rep. 361, VDIForschungsheft, July/August. Nikuradse, J., 1937. Laws of flows in rough pipes. Technical Memorandum 1292, NACA, Washington, April. Owen, P., Thomson, W., 1963. Heat transfer across rough surfaces. J. Fluid Mech. 15, 321–334. Perry, A., Schofield, W., Joubert, P., 1969. Rough wall turbulent boundary layers. J. Fluid Mech. 37, 383. Pimenta, M., Moffat, R., Kays, W., 1975. The turbulent boundary layer: an experimental study of the transport of momentum and heat with the effect of roughness. Tech. Rep. HMT-21, Stanford University, Thermosciences Division, Department of Mechanical Engineering, May. Raupach, M., Antonia, R., Rajagopalan, S., 1991. Rough-wall turbulent boundary layers. Appl. Mech. Rev. 44 (1), 1–25, January. Raupach, M., Shaw, R., 1982. Averaging procedures for flow within vegetation canopies. Bound. Layer Meteorol. 22, 79–90. Reijasse, P., Oswald, J., Aupoix, B., Steinfeld, P., 1998. Expert evaluation of Ariane 502 roll causes. In: 3rd European Symposium on Aerothermodynamics for Space Vehicles. ESTEC, Noordwijk, The Netherlands, 24–26 November. Robertson, J., 1961. Surface resistance as a function of the concentration and size of roughness elements (Ph.D. thesis). State University of Iowa, August. Schlichting, H., 1936. Experimentelle Untersuchungen zum Rauhigkeitsproblem. Ing. Arch. VII (1), 1–34, February. Schlichting, H., 1937. Experimental investigation of the problem of surface roughness. Technical Memorandum 823, NACA, Washington, April. Smith, B., 1995. Prediction of hypersonic shock wave turbulent boundary layer interactions with the k l two equation turbulence model. In: AIAA Paper 950232 33rd Aerospace Sciences Meeting & Exhibit, Reno, Nevada, January 9–12. Spalart, P., Allmaras, S., 1992. A one-equation turbulence model for aerodynamic flows. In: AIAA Paper 92-0439, 30th Aerospace Sciences Meeting and Exhibit, Reno, Nevada, January 6–9. Spalart, P., Allmaras, S., 1994. A one-equation turbulence model for aerodynamic flows. La Recherche Aérospatiale 1, 5–21. Tarada, F., 1990. Prediction of rough-wall boundary layers using a low Reynolds number k e model. Int. J. Heat Fluid Flow 11 (4), 331–344, December. Taylor, R., Coleman, H., Hodge, B., 1984. A discrete element prediction approach for turbulent flow over rough surfaces. Tech. Rep. TFD-84-1, Mississippi State University, Thermal & Fluid Dynamics Group, Mechanical and Nuclear Engineering Department, February, February. Taylor, R., Coleman, H., Hodge, B., 1985. Prediction of turbulent rough-wall skin friction using a discrete element approach. J. Fluids Eng. 107, 251–257, June. Taylor, R., Scaggs, W., Coleman, H., 1988. Measurement and prediction of the effects of nonuniform surface roughness on turbulent flow friction coefficients. J. Fluids Eng. 110, 380–384, December. Townsend, A., 1976. The structure of turbulent shear flow. In: Cambridge Monographs on Mechanics and Applied Mathematics, second ed. Cambridge University Press. Turner, A., Hubbe-Walker, S., Bayley, F., 2000. Fluid flow and heat transfer over straight and curved rough surfaces. Int. J. Heat Mass Transfer 43, 251–262. Whitaker, S., 1986. Flows in porous media I: a theoretical derivation of Darcy’s law. Transp. Porous Media 1, 3–25. Z ̆ukauskas, A., 1972. Heat transfer from tubes in crossflow. In: Hartnett, J.P., Irvine, T.F. (eds.), Advances in Heat Transfer. vol. 8, pp. 93–160.
+B. Aupoix / International Journal of Heat and Fluid Flow 56 (2015) 160–171 171
+
+
+Update
+International Journal of Heat and Fluid Flow
+Volume 65, Issue , June 2017, Page 363
+DOI: https://doi.org/10.1016/j.ijheatfluidflow.2016.06.008
+
+
+International Journal of Heat and Fluid Flow 65 (2017) 363
+Contents lists available at ScienceDirect
+International Journal of Heat and Fluid Flow
+journal homepage: www.elsevier.com/locate/ijhff
+Corrigendum
+Corrigendum to “Improved Heat Transfer Predictions on Rough Surfaces” [International Journal of Heat and Fluid Flows, 56(2015), pp. 160–171]
+B. Aupoix
+ONERA, The French Aerospace Lab, F-31055, Toulouse, France
+A typing error was unfortunately introduced when retyping equations from the report to fit the article constraints. The group A u+ + B u+ 2 shoud be A u+ 2 + B u+ so that equation (26) should read
+F = A u+ 2 + B u+
+and equation (29) should read
+Pt = Pt smooth + (A u+ 2 + B u+) exp
+(
+−y
+h
+)
+DOI of original article: 10.1016/j.ijheatfluidflow.2015.07.007
+http://dx.doi.org/10.1016/j.ijheatfluidflow.2016.06.008 0142-727X/© 2016 Elsevier Inc. All rights reserved.

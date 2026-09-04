@@ -1,0 +1,467 @@
+Vol.:(0123456789)
+13
+Tribology Letters (2023) 71:29 https://doi.org/10.1007/s11249-023-01700-z
+ORIGINAL PAPER
+On the Use of Surface Roughness Parameters
+B. N. J. Persson1,2
+Received: 4 January 2023 / Accepted: 30 January 2023 / Published online: 18 February 2023 © The Author(s) 2023
+Abstract
+In most practical applications, surface roughness is characterized by just one or two parameters (numbers). I show that the standard maximum surface height parameters fluctuate strongly between different surface realizations (or measurements), and should not be used in the design of engineering components. I show how some roughness parameters depend on the size of the roll-off region in the surface roughness power spectra, and introduce a new height parameter which is very reproducible. The numerical results presented agree well with experimental observations.
+Graphical Abstract
+-0.08
+-0.04
+0
+0.04
+0.08
+height (μm)
+(a) no roll-off
+-0.1
+0
+0.1
+(b) with roll-off
+Keywords Surface roughness · Roughness parameter · Surface area · rms slope · Anisotropic roughness
+1 Introduction
+The quality of surfaces of solids has become extremely important in the design and production of components in particular in high tech applications. This is particularly true for the microgeometry (surface roughness). The most complete information about surface roughness is the height probability distribution Ph and the surface roughness power spectrum C(q), and the surface roughness parameters presented below can be obtained from these functions [1–5]. However, in most engineering applications just one or two parameters (numbers) are
+* B. N. J. Persson b.persson@fz-juelich.de
+1 Peter Grünberg Institute (PGI-1), Forschungszentrum Jülich, Jülich 52425, Germany
+2 Multiscale Consulting, Wolfshovener Str. 2, Jülich 52428, Germany
+
+
+Tribology Letters (2023) 71:29
+13
+29 Page 2 of 9
+given to characterize the surface roughness. The most common parameters are the arithmetical average Ra and the maximum height parameter Rz, both of which can be obtained from a single line scan of the height topography [6, 7]. In this communication, I will discuss the relation and usefulness of a few of the most common surface roughness parameters. I note that very many surface roughness parameters have been defined [7], but in my opinion most of them are not very useful.
+2 Some Definitions and Analytical Results
+We first define the parameters which will be discussed below. We assume that the surface topography is measured over a square area A0 = L × L, where L = Na, where a is the lattice constant [see Fig. 1a]. Topography measurements over a two-dimensional (2D) area can be performed using optical instruments or Atomic Force Microscopy (AFM). The height coordinate z = h(x) with x = (x, y) is assumed given in N × N data points, where typically N ≈ 1000. The studied surface area may be part of the surface of a curved body but we assume that the macroscopic curvature is removed so that ⟨h⟩ = 0, where ⟨..⟩ stands for averaging over the surface area, i.e.,
+The surface arithmetic average roughness amplitude is defined by
+and the mean square roughness amplitude
+⟨f (x)⟩ = 1
+A0 A0
+d2x f (x).
+ha = ⟨�h(x)�⟩,
+Usually ha and hrms are denoted as Sa and Sq, respectively. For randomly rough surfaces, where the height probability distribution Ph is a Gaussian, one have
+hrms = (π∕2)1∕2ha ≈ 1.25ha. The maximum surface height hz is the difference between the highest and lowest point on the surface A0, and is often denoted as Sz. The mean square surface slope
+and the total surface area
+where A0 is the nominal surface area (the surface area projected on the xy-plane). Note that as ξ → 0 we have
+The quantities hrms and ξ can be calculated from the surface roughness power spectrum using
+For surfaces with randomly roughness with isotropic statistical properties (see Appendix B in Ref. [8] and Ref. [9, 10]):
+where erf(x) is the error function. In the Appendix A we give the expression for Atot∕A0 for surfaces with anisotropic roughness. The quantities above involve all the N × N data points on the square area A0. Engineering stylus instruments usually measure the topography z = h(x) only along a 1D line segment 0 < x < L in N points with L = Na. We assume the curvature of the line is removed so that ⟨h(x)⟩ = 0, where ⟨f (x)⟩ is defined as the average
+For surfaces with isotropic roughness the rms roughness amplitude is the same for the 1D line scan and from the 2D
+surface, but the rms slope is a factor of √2 bigger in the 2D case.
+h2
+rms = ⟨[h(x)]2
+⟩.
+ξ2 = (∇h)2 ,
+(1)
+Atot = A0 1 + (∇h)2 1∕2 ,
+(2)
+Atot
+A0
+≈1+ 1
+2 ξ2.
+h2
+rms = d2q C(q),
+ξ2 = d2q q2C(q).
+(3)
+Atot
+A0
+=
+∞
+0
+dx �1 + ξ2x�1∕2e−x
+=1+
+√π
+2 ξ�1 − erf�ξ−1��exp�ξ−2�,
+⟨f (x)⟩ = 1
+L
+L
+0
+dx f (x).
+x
+y
+Lx = Na
+00
+Ly = Na
+hmax
+hmin
+(a)
+(b)
+Fig. 1 a The surface height z = h(x, y) is given on a square surface
+area A0 = L × L in N × N points. The lattice constant a = L∕N . The 5 dashed lines (parallel with the x-axis) are uniformly distributed along the y-axis. b The height h(x) along one of the dashed lines in (a) (Color figure online)
+
+
+Tribology Letters (2023) 71:29
+13
+Page 3 of 9 29
+The maximum surface height in the 1D case is usually defined as hmax + hmin [see Fig. 1(b)] averaged over 5 equally long segments obtained at different locations on the studied surface. We will denote this as h1z but it is often denoted as Rz. In the numerical study below we use the 5 well separated (in the y-direction) line segments indicated by the dashed line segments in Fig. 1a. We also consider a second procedure where we average hmax + hmin over all the N lines in the
+y-direction. We denote this quantity by h∗
+1z.
+While the rms roughness amplitude and the rms slope are well-defined quantities both in the 1D and 2D cases, this is not the case for the maximum surface heights hz and h1z which exhibit large fluctuations from one realization of the roughness to another (or experimentally from one topography measurement to another) [2]. Thus, these quantities should not be used in the design of engineering components. We will now show that this is the case even in the idealized case where there are no surface defects like scratches or indentations.
+3 Numerical Results
+No two surfaces have the same surface roughness, and hz will depend on the surface used. To take this into account we have generated surfaces (with linear size L) with different random surface roughness but with the same surface roughness power spectrum. That is, we use different realizations of the surface roughness but with the same statistical properties. For each surface size we have generated 60 rough surfaces using different set of random numbers. The surface roughness was generated as described in appendix A in Ref. [3] (see also Ref. [11–13]) by adding plane waves with random phases φq and with the amplitudes determined by the power spectrum:
+where Bq = (2π∕L)[C(q)]1∕2. We assume isotropic roughness so Bq and C(q) only depend on the magnitude of the wavevector q. We have used surfaces of square unit size, L × L, with 7 different sizes, where L increasing in steps of a factor of 2 from L = 79 nm to L = 5.06 μm, corresponding to increasing N from N = 256 to N = 16384. The lattice constant a ≈ 0.309 nm. Note that the results does not depend on the “lattice constant” which could be any number. For example, if we choose a = 1 μm, as is a typical resolution of optical instruments, then the largest system size would be
+L = 16.384 mm.
+The longest wavelength roughness which can occur on a surface with size L is λ ≈ L so when producing the
+h(x) =
+q
+Bqei(q⋅x+φq), roughness on a surface we only include the part of the
+power spectrum between q0 < q < q1 , where q0 = 2π∕L and where q1 is a short distance cut-off corresponding to
+atomic dimension (we use q1 = 1.4 × 1010 m−1). This is illustrated in Fig. 2 which shows the different short wavenumber cut-off q0 used. Figure 3 shows the surface topography for the L = 0.63 μm system size without (a) and with (b) a roll-off region of nearly one decade in width. Surfaces of bodies of engineering interest, e.g., a ball in a ball bearing or a cylinder in a combustion engine, have always a roll-off region for small wavenumbers q, because such bodies have some macroscopic shape, but are designed to be smooth at length scales smaller that the shape of the body. In these cases, the roll-off wavelength is determined by the machining process, e.g., by the size of the particles in sand paper or on a grinding wheel. If the roll-off region matters in a particular application
+-44
+-42
+-40
+-38
+-36
+-34
+-32
+-30
+-28
+6 7 8 9 10
+log10 q (1/m)
+log10 C (m4)
+with roll-off
+H=1
+0.08
+0.16
+0.32
+0.63
+1.26
+2.53
+5.06 L (μm)
+-44
+-42
+-40
+-38
+-36
+-34
+-32
+-30
+-28
+-26
+-24 (a)
+(b)
+without roll-off
+H=1
+log10 C (m4)
+qr
+q0
+q0
+q1
+q0
+q0
+q0
+q0
+q0
+q0
+q1
+Fig. 2 The surface roughness power spectra as a function of the wave number (log–log scale) used in the calculations of the surface height
+profile for surfaces with the Hurst exponent H = 1 without (a) and with (b) a roll-off region. In (a) we indicate the large and small wavenumber cut-off q1 and q0, and the (b) also the roll-off wavenumber qr.
+For each system size L = 2π∕q0 the power spectra have been chosen so the rms roughness amplitude hrms are the same with and without the roll-off region (Color figure online)
+
+
+Tribology Letters (2023) 71:29
+13
+29 Page 4 of 9
+it depends on the size of the relevant or studied surface area. Thus, if the lateral size L is small the wavenumber q = 2π∕L may be so large that it will fall in the region where the surface roughness power spectrum exhibits self-affine fractal scaling, and the roll-off region will not
+matter. We note that some natural surfaces, such as surfaces produced by brittle fracture, have fractal-like roughness on all length scales up to the linear size of the body. Figure 4 shows the difference between the highest and lowest point on a randomly rough surface, divided by the rms roughness amplitude hrms as a function of the logarithm of the size L = Na of the unit. Note that the unit has N × N height points. If hmax is the height of the highest point in the L × L unit, and hmin the lowest point, then hz = hmax + hmin.
+We define h∗
+1z in a similar way for each scan line, but averaged over all N scan lines, while h1z is defined in a similar
+way as h∗
+1z but where we average over 5 lines instead of all the N lines. Results are shown for a power spectrum with roll-off (solid lines) and without roll-off (dashed lines). The solid and dashed lines in Fig. 4 are averages over all the 60 realizations of the rough surfaces. For the smallest and largest system sizes the + symbols indicate the results for each of the 60 realizations of the surface roughness with roll-off. Note the huge fluctuations in hz∕hrms (from 4.27 to 6.03 for the smallest system size, and 8.54 to 11.02 for the biggest size), and even bigger percentage fluctuations in h1z∕hrms (from 1.38 to 4.04 for the smallest size, and 4.67 to
+7.84 for the biggest size). However, h∗
+1z∕hrms exhibit much smaller fluctuations (from 2.66 to 2.77 for the smallest size, and 5.94 to 6.10 for the biggest size).
+Figure 5 shows the height ratios hz∕h∗
+1z (green line) and hz∕h1z (blue line) as a function of the logarithm of the size L = Na of the unit. The results are again after averaging over all the 60 realizations of the rough surfaces. Results are shown for a power spectrum with roll-off (solid lines) and without roll-off (dashed lines). Averaging over the 60 realizations of the rough surfaces is essentially ensemble averaging. Ensemble averaging
+-0.08
+-0.04
+00.04
+0.08
+height (μm)
+(a) no roll-off
+-0.1
+0
+0.1
+(b) with roll-off
+Fig. 3 The surface topography for one representation (a) without and
+b with a roll-off region. For the system size L = 0.63 μm where the
+roll-off region in b has nearly one decade in width, qr∕q0 = 8 (Color figure online)
+0
+2
+4
+6
+8
+10
+12
+-7 -6.6 -6.2 -5.8 -5.4
+log10 L (m)
+hz /hrms
+h1z* /hrms
+h1z /hrms
+roll-off
+no roll-off
+height / hrms
+Fig. 4 The difference between the highest and lowest point on a randomly rough surface, divided by the rms roughness amplitude hrms as
+a function of the logarithm of the size L = Na of the unit. Note that
+the unit has N × N height points. If hmax is the height of the highest
+asperity in the L × L unit and hmin the depth of the deepest well then
+hz = hmax + hmin. We define h∗
+1z in a similar way for each scan line,
+but averaged over all N scan lines. We define h1z in a similar way as
+h∗
+1z but we average only over 5 lines instead of all N lines. Results
+are shown for a power spectrum with roll-off (solid lines) and without roll-off (dashed lines) (Color figure online)
+0
+1
+2
+-7 -6.6 -6.2 -5.8 -5.4
+roll-off
+no roll-off
+log10 L (m)
+hz /h1z*
+hz /h1z
+hz /h1z and hz /h1z*
+Fig. 5 The height ratios hz∕h∗
+1z (green line) and hz∕h1z (blue line) as
+a function of the logarithm of the size L = Na of the unit. Results are shown for a power spectrum with roll-off (solid lines) and without roll-off (dashed lines) (Color figure online)
+
+
+Tribology Letters (2023) 71:29
+13
+Page 5 of 9 29
+removes the noise in calculated quantities but is in practice never used as it would require measuring the topography over very many surface areas on the body under study. Still it is a very useful concept in theory development where the ⟨..⟩ averaging introduced in Sec. 2 would stand for ensemble averaging rather than integration over the surface area (or for both).
+4 Discussion
+In the experimental study in Ref. [14], the ratio h1z∕ha (usu
+ally denoted as Rz∕Ra) was found to be in the range 5.8−9.5
+for ground surfaces and 3.4−7.5 for turned surfaces. Assum
+ing hrms ≈ 1.25ha this gives h1z∕hrms in the range 4.6−7.6
+for ground surfaces and 2.7−6.0 for turned surfaces. This difference between the two cases reflects the size of the rolloff region, which is smallest for the turned surface. These results are consistent with what we found in the simulations
+above, where h1z∕hrms is in the range 4.8−7.8 for nearly 2
+decades of roll-off, and 1.4−4.0 without roll-off. In Ref. [14] the power spectra were not given but pictures of the roughness clearly showed more long-wavelength surface roughness for the turned surface, which correspond to a smaller roll-off region assuming a fixed measurement length L. In another study (see Ref. [15]) hz∕h1z was in the range
+1.67−2.10 for a milled steel surface, 1.73−1.80 for a polymer
+surface produced by a sintering process, and 1.63−1.69 for the surface of a saw spruce wood block. These values are very similar to what we found above where on the average hz∕h1z is in the range ≈ 1.5 − 2 depending on the width of the roll-off region. In Ref. [15] it was found that hrms and ha as obtained from 1D stylus measurements and 2D optical measurements where nearly the same as expected from theory as they are averages involving all the measured height data points. On the other hand the extreme value-forming parameters hz and h1z vary greatly and should not be used for design purposes. If (reproducible) information about the difference between high and low surface points is needed one should instead
+use h∗
+1z which exhibits much smaller fluctuations from one surface realization (or measurement) to another. Since optical topography data can be obtained rapidly over a square
+surface area it should be easy to obtain h∗
+1z for most surfaces. We note that optical method often cannot accurately describe the short wavelength roughness but this should not
+be a problem in the present context because h∗
+1z is determined mainly by the long-wavelength (large amplitude) roughness components. Here, I note that optical topography data often contain artifacts and must be used very carefully. Thus surface area with large slopes often result in undefined height data (sometimes denoted by NaN) which must be filled out by
+interpolation. Sometimes large spikes occur which are artifacts of the measurement process or method [16]. Thus before using optical topography data for calculating maxi
+mum height parameters (hz, h1z , and h∗
+1z) the data should be checked using a graphic software, e.g., gnuplot. Surface roughness parameters are often used to construct topological maps, the most well-known case being the skewness–kurtosis xy-map where measured data approximately follow a parabolic-like curve with turning and electric discharge machining typically located on the right half of the map, while grinding, milling, and honing are dominantly placed on the left side [14, 17]. A similar construction was proposed by Czifra and Baranyi who observed that for a large body of measured data the change in the surface area ΔA = Atot − A0 correlates closely with the rms slope. This is not unexpected as for small rms slope the surface area is determined by the rms slope [see (2)]. Thus in Fig. 6 we show the increase in the surface area ΔA as a function of the rms slope ξ using the full theory [green line, from (3)] and using the leading expansion in ξ [blue line, from (2)]. Also shown as + symbols are experimental data from Ref. [14]. It is interesting to note that the measured data follow the fulltheory prediction more closely than the asymptotic expansion result [18]. The full theory is based on the assumption of randomly rough surfaces which appears to be a good approximation in the studied range of rms slope. Czifra and Baranyi found that surfaces with anisotropic roughness (such as turned, ground or milled surfaces) tend to occupy the small rms slope part of the ξ − ΔA map. They argued this is due to a small rms average slope of such surfaces in one direction, which reduces the total slope. However, the surface slope is determined by the roughness on all length scales, with the short wavelength roughness being particular important, and for surfaces with anisotropic
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+0.12
+0.14
+0 0.1 0.2 0.3 0.4 0.5 0.6
+experiment
+theory
+leading order expansion
+rms average slope
+Atot/A0 - 1
+Fig. 6 The increase in the surface area A − A0 as a function of the rms slope ξ using the full theory [green line, from (3)] and using the
+leading expansion in ξ [blue line, from (2)]. The + symbols are experimental data from Ref. [14] (Color figure online)
+
+
+Tribology Letters (2023) 71:29
+13
+29 Page 6 of 9
+roughness it is not clear that the same strong anisotropy occurs on all length scales. Thus, the study in Sec. 5 for a grinded aluminum surface shows a slight decrease in the anisotropy with increasing wavenumber. I note here that the surface area depends mainly on the rms slope ξ. Thus even for anisotropic surface roughness where the slope in the x-direction (denoted ξx) is different from in the y-direction (denoted ξy) the surface roughness is to a good approximation given by the case of isotropic
+roughness with the rms slope ξ = (ξ2
+x + ξ2
+y )1∕2. Thus for the grinded steel surface studied in Sec. 5 we have ξx = 0.2637, ξy = 0.5950 so that ξ = 0.6508. Using (3) this gives Atot∕A0 = 1.182 while a calculation for anisotropic roughness (see Sect. 5) gives Atot∕A0 = 1.178 , i.e., only ≈ 0.3% less area than predicted for the case of isotropic roughness. In Ref. [19] I studied the influence of surface roughness on press fits. According to DIN 7190 standard the surface roughness is included in an empirical way by using the effective compression
+where b = 0.4, and where we have assumed that only one of the surfaces has surface roughness. In Ref. [19] I used for h1z the 2D result (here denoted hz) since I assumed that hz ≈ h1z. However, this is not the case but h1z is smaller than hz and increases from ≈ 3hrms to 6hrms as the roll-off region increases from zero to two decades in length scale. In the Discussion section in Ref. [19] I assumed the roll-off region to be one decade in length scale and for this case h1z ≈ 4hrms giving bh1z ≈ 1.6hrms which is in good agreement with the theory predicted in Ref. [19]. Nevertheless, using the empirical equation (4) is not a good approach because of the large fluctuations in h1z between different measurements at different places of the same surface. And even if h1z is replaced
+by the more well-defined quantity h∗
+1z the empirical approach is flawed as in reality the roughness correction to the compression depends on the elastic properties of the solids, and on the full surface roughness power spectrum rather than a single roughness parameter (see Ref. [19]). The fatigue life of a machined part depends strongly on its surface quality. In general, the fatigue strength of engineering components increases with a decrease in the surface roughness. The fatigue life of machined specimen is closely related to the stress concentration factor induced by surface roughness, and the height parameter h1z and other height parameters have been used in empirical expressions for stress concentration factor [20]. I suggest that one should
+instead use h∗
+1z as it is a well-defined quantity. The fact that the difference between the highest and lowest point on a
+surface is larger than h∗
+1z could be taken into account in the empirical approach as an (average) enhancement factor which depends on the roll-off region in the power spectrum.
+(4)
+δeff = δstylus − bh1z,
+We note that different applications will depend on different surface roughness parameters. This has been discovered only recently from analytical contact mechanics theories [21]. Thus assuming only elastic deformations the area of real contact depends mainly on the rms slope ξ. Similarly, the leakage of seals is mainly dependent on ξ in contrast to the general assumption that the rms roughness amplitude hrms is most important, and often used in design criteria [22]. The interfacial contact stiffness K depends mainly on the hrms, unless the applied pressure is so high as to result in nearly complete contact, or so low as to result in contact with just a few of the highest asperities. This latter case is referred to as a finite-size (or finite-height) effect [23], and in this limit information about the highest asperities would be important. But mechanical components operating in this limit may exhibit strong fluctuations in their properties depending on the component used, and such machine elements are of little practical interest. In many cases physical quantities, e.g., the adhesion force, will depend on the surface roughness on all length scales from the atomic distance to the (macroscopic) size of the system. In these cases one must use several measurement methods, e.g., AFM and engineering stylus or optical methods to cover all relevant length scales. Combining the individual power spectra from each measurement one can obtain a power spectrum covering all length scales, from which one can calculate many roughness parameters such as the rms roughness amplitude hrms and the rms slope ξ. However, in most applications the standard surface roughness parameters are not enough, but the full surface roughness power spectrum C(q) is needed. When calculating power spectra it is important not to use any filter, but use the raw data from the measurement instrument.
+5 A Case Study: Grinded Aluminum Surface
+As an example consider an aluminum surface grinded in one direction (see Fig. 7). We have measured the surface topography along and orthogonal to the grinding direction (x- and y-direction, respectively). The resulting 1D surface roughness power spectra are shown in Fig. 8. Note that while the surface has a ∼ 2.5 decades roll-off region in the y-direction, there is no clear roll-off region in the x-direction. This is consistent with the much larger value for hz∕hrms obtained in the y-direction: 7.623 (y-direction) and 4.407 (x-direction). Why is there no clear roll-off region in the x-direction? The grinding is performed by a grinding wheel rotating while moving in the x-direction. Hence, an asperity on the grinding wheel will only be in contact with the aluminum surface for a finite distance which result in a wear track of finite (short) length. Thus there will be a distribution of length of the wear tracks on the surface depending on the
+
+
+Tribology Letters (2023) 71:29
+13
+Page 7 of 9 29
+height of the asperities and on the relative rotation vR and translation vx velocities. However, these distances are very short and cannot explain the long-wavelength roughness in the x-direction. If the grinding wheel has a radius R which varies very slightly in the angular direction, or if the surface of the grinding wheel has properties which varies in the angular direction, then it will generate “roughness” with wavelength up to λ = 2πRvx∕vR. In a typical case R = 0.15 m, vR = 20 m∕s , and vx = 0.2 m∕s giving λ ≈ 1 cm. This will generate longer wavelength “roughness” in the x-direction than in the y-direction (in the y-direction the longest wavelength roughness is of order the width of the asperities on
+the grinding wheel). This conclusion is supported by the topography picture shown in Fig. 9. In an earlier study (Ref. [19]) I have shown that a randomly rough surface with a long enough roll-off region will have a Gaussian height distribution while the height distribution of a surface without a roll-off region in nonGaussian and different in each measurement. However, if the height distribution is ensemble averaged then also for a randomly rough surface with no roll-off the height distribution will be Gaussian (see Ref. [19]).
+x
+y grinded aluminum surface
+1 mm
+Fig. 7 Optical picture of a grinded aluminum surface
+-22
+-21
+-20
+-19
+-18
+-17
+-16
+-15
+-14
+-13
+234567
+parallel to grinding direction
+rms = 8.37 μm
+rms-slop = 0.264
+orthogonal to grinding direction
+rms = 5.31 μm
+rms-slope = 0.595
+log10 q (1/m)
+log10 C1D (m3)
+Fig. 8 The 1D surface roughness power spectra as a function of the wavenumber q (log–log scale) of a grinded aluminum surface, along and orthogonal to the grinding direction. The power spectra have been obtained by averaging the power spectra obtained from three
+25 mm long scans (each consisting of N = 50000 data points) for each direction (Color figure online)
+-60
+-50
+-40
+-30
+-20
+-10
+0
+10
+20
+0 5 10 15 20 25
+orthogonal, h(y)
+parallel, h(x)
+distance (mm)
+height (μm)
+Fig. 9 The surface height as a function of distance along (red line) and orthogonal (blue line) the grinding direction. The height h(x) along the grinding direction is shifted downwards not to overlap with the height h(y) orthogonal to the grinding direction (Color figure online)
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+-30 -20 -10 0 10 20 30
+parallel
+orthogonal
+grinded aluminum
+height h (μm)
+relative probability Ph (1/μm)
+Fig. 10 The surface roughness height probability distribution Ph as a function of the surface height h as obtained by averaging over 3 line scans each of 25 mm length along the grinding direction (red), and orthogonal to the grinding direction (blue). For the grinded aluminum surface shown in Fig. 7 (Color figure online)
+
+
+Tribology Letters (2023) 71:29
+13
+29 Page 8 of 9
+In the present case there is a relative long roll-off region in the power spectrum of the grinded aluminum surface in the direction orthogonal to the grinding direction so we expect in this direction a nearly Gaussian height distribution as is indeed the case (see the blue curve in Fig. 10). However, along the grinding direction there is no clear roll-off and we expect a non-Gaussian height distribution which is the case (see the red curve in Fig. 10). Including all the roughness components with wavenumbers indicated in Fig. 8 gives the rms slope ξx = 0.2637 along the grinding direction, and ξy = 0.5950 orthogonal to the grinding direction. Using these rms slopes in (A2) [or (A1)] gives the total area Atot = 1.178A0. It is interesting to compare this area with what would be obtained for a surface with isotropic roughness but for the same value of the trace of the αij tensor (which is invariant
+under rotations). For the isotropic roughness the trace is ξ2 and for
+the anisotropic case ξ2
+x + ξ2
+y giving ξ = (ξ2
+x + ξ2
+y )1∕2 ≈ 0.6508.
+Using this in (3) gives Atot = 1.182A0 which is very close to the case of anisotropic roughness. We have shown that assuming (anisotropic) randomly rough surfaces the total surface area can be calculated from just two line scans along the principal directions of the roughness. Note, however, that the calculated area depends on the large wavenumber cut-off q1 and the true total area is obtained only when the roughness is studied down to atomic distances. The short wavenumber cut-off q0 is not very important for the contact area and the rms slope, assuming it falls in the roll-off region of the power spectrum.
+6 Summary andConclusions
+Many engineering components require strict limits on the surface roughness in order to function properly. In most practical applications surface roughness is characterized by just one or two parameters (numbers). We have shown that the maximum surface height parameters used today are not well defined but fluctuate strongly when measured on different surface areas on the same component or object. Because of the random nature of surface roughness, this is the case even in the ideal case of no surface defects such as scratches or indentations. Since the standard maximum surface height parameters fluctuate strongly between different surface realizations (or measurements), they should not be used in the design of engineering components. I have shown how to define a surface height parameter which is very reproducible. I have discussed how roughness parameters depends on the size of the power spectra roll-off region. The theory is in good agreement with experimental observations.
+Appendix A
+The relation (3) between the rms slope ξ and the total area Atot can be easily extended to roughness with anisotropic properties with the power spectrum C(q) depending on the direction of the wave vector q. We define the tensor
+For isotropic roughness where the power spectrum C(q) only depends on the magnitude of the wave vector one get
+αij = (ξ2∕2)δij. In general, αij can be diagonalized and we
+denote the diagonal elements as ξ2
+x and ξ2
+y which are the mean square slopes along the x and y directions. Note that
+the 2D ms slope is ξ2 = ξ2
+x + ξ2
+y which is equal to the trace of the tensor αij. Following the procedure in Appendix B of Ref. [8] one obtains
+Defining x = w2∕(2ξxξy) gives
+For the case of isotropic roughness where ξx = ξy = ξ∕√2 (A1) reduces (3). An alternative form of (A1) is obtained if
+we define y = e−x which gives
+which is convenient for numerical calculations. One limiting case of (A1) is the case of roughness in one dimension (1D roughness) corresponding to ξx∕ξy = 0 (or ξx∕ξy = ∞). Using (A1) as ξx∕ξy → 0 gives
+Fig. 11 shows the relative surface area Atot∕A0 as a function of the surface rms slope ξ for randomly rough surfaces with isotropic roughness ξx∕ξy = 1 (green line, from (3)), for anisotropic roughness with ξx∕ξy = 0.5 (or ξx∕ξy = 2) (red line, from (A2)) and for 1D roughness ξx∕ξy = 0 (or ξx∕ξy = ∞)
+αij = d2q qiqjC(q)
+Atot
+A0
+=1
+ξxξy
+∞
+0
+dw w(1 + w2)1∕2
+×1
+2π
+2π
+0
+dφ exp − 1
+2
+cos2φ
+ξ2
+x
++ sin2φ
+ξ2
+y
+w2
+(A1)
+Atot
+A0
+=
+∞
+0
+dx (1 + 2ξxξyx)1∕2
+×1
+2π
+2π
+0
+dφ exp − ξy
+ξx
+cos2φ + ξx
+ξy
+sin2φ x
+(A2)
+Atot
+A0
+=
+1
+0
+dy (1 − 2ξxξylny)1∕2
+×1
+2π
+2π
+0
+dφ y(ξy∕ξx−1)cos2φ+(ξx∕ξy−1)sin2φ
+(A3)
+Atot
+A0
+=1
+√π
+∞
+0
+dx 1
+√x (1 + 2ξ2x)1∕2e−x
+
+
+Tribology Letters (2023) 71:29
+13
+Page 9 of 9 29
+(blue line, from (A3)). It is remarkable how weakly Atot∕A0 depends on ξx∕ξy.
+Acknowledgements I thank A. Czifra (University Obuda, Budapest) for supplying the experimental data presented in Fig. 5.
+Author Contributions I am alone author and all results presented has been obtained by me!
+Funding Open Access funding enabled and organized by Projekt DEAL. Open Access funding enabled and organized by Projekt DEAL. The authors have not disclosed any funding.
+Declarations
+Conflict of interest The author declare no conflict of interest in this study.
+Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article's Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+References
+1. Nayak, P.R.: Random process model of rough surfaces. ASME J. Lubr. Technol. 93, 398 (1971) 2. Pawar, G., Pawlus, P., Etsion, I.: The effect of determining topography parameters on analyzing elastic contact between isotropic rough surfaces. J. Tribol. 135, 011401 (2013)
+3. Persson, B.N.J., Albohr, O., Tartaglino, U., Volokitin, A.I., Tosatti, E.: On the nature of surface roughness with application to contact mechanics, sealing, rubber friction and adhesion. J. Phys. 17, R1 (2004) 4. Persson, B.N.J.: On the fractal dimension of rough surfaces. Tribol. Lett. 54, 99 (2014) 5. Jacobs, T.D.B., Junge, T., Pastewka, L.: Quantitative characterization of surface topography using spectral analysis. Surf. Topogr. 5, 013001 (2017) 6. Palasti-Kovacs, B., Sipos, S., Czifra, A.: Interpretation of
+“Rz = 4 × Ra’’ and other roughness parameters in the evaluation
+of machined surfaces, ICT-2012, 13th International Conferance on Tools. Miskoloc, Hungary (2012) 7. Gadelmawla, E.S., Koura, M.M., Maksoud, T.M.A., Elewa, I.M., Soliman, H.H.: Roughness parameters. J. Mater. Process. Technol. 123, 133 (2002) 8. Persson, B.N.J., Tosatti, E.: The effect of surface roughness on the adhesion of elastic solids. J. Chem. Phys. 115, 5597 (2001) 9. Persson, B.N.J.: Adhesion between an elastic body and a randomly rough hard surface. Eur. Phys. J. E 8, 385 (2002) 10. Dalvi, S., Gujrati, A., Khanal, S.R., Pastewka, L., Dhinojwala, A., Jacobs, T.D.B.: Linking energy loss in soft adhesion to surface roughness. PNAS 116, 25484 (2019) 11. Persson, B.N.J., Biele, J.: On the stability of spinning asteroids. Tribol. Lett. 70, 1 (2022) 12. Persson, B.N.J., Biele, J.: Heat transfer in granular media with weakly interacting particles. AIP Adv. 12, 105307 (2022) 13. Persson, B.N.J.: Heat transfer in granular media consisting of particles in humid air at low confining pressure. Eur. J. Phys. B (submitted) 14. Czifra, A., Baranyi, I.: Sdq-Sdr Topological map of surface topographies. Front. Mech. Eng. 6, 50 (2020) 15. Schmidt, J., Thorenz, B., Schreiner, F., Döpper, F.: Comparison of areal and profile surface measurement methods for evaluating surface properties of machined components. Proc. CIRP 102, 495 (2021) 16. Podulka, P., Pawlus, P., Dobrzanski, P., Lenart, A.: Spikes removal in surface measurement. J. Phys. 483, 012025 (2014) 17. Whitehouse, D.J.: Handbook of Surface Metrology. Inside of Physics, Bristol (1994) 18. The rms-slope and the contact area in Ref. [14] are calculated using two different numerical methods: the mean square slope is calculated from the mean of the square of the gradient in the x and y directions, while the surface area is determined by covering the digitized surface with triangular plates formed between nearby grid points 19. Persson, B.N.J.: Influence of surface roughness on press fits. Tribol. Lett. 71, 19 (2023) 20. Zhengkun, C., Ridong, L.: Effect of surface topography on stress concentration factor. Chin. J. Mech. Eng. 28, 1141 (2015) 21. Persson, B.N.J.: Functional properties of rough surfaces from an analytical theory of mechanical contact. MRS Bull. (2023). https://doi.org/10.1557/s43577-022-00472-6 22. Persson, B.N.J.: Fluid leakage in static rubber seals. Tribol. Lett. 70, 1 (2022) 23. Pastewka, L., Prodanov, N., Lorenz, B., Müser, M.H., Robbins, M.O., Persson, B.N.J.: Finite-size scaling in the interfacial stiffness of rough elastic contacts. Phys. Rev. E 87, 062809 (2013)
+Publisher's Note Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+1
+1.2
+1.4
+1.6
+1.8
+2
+2.2
+012
+ξx /ξy = 1 ξx /ξy = 0.5 ξx /ξy = 0
+Atot /A0
+surface rms slope ξ
+Fig. 11 The relative surface area A∕A0 as a function of the surface rms slope ξ for randomly rough surfaces with isotropic roughness
+ξx∕ξy = 1 (green line), for anisotropic roughness with ξx∕ξy = 0.5 (or
+ξx∕ξy = 2) (red line) and for 1D roughness ξx∕ξy = 0 (or ξx∕ξy = ∞) (blue line) (Color figure online)

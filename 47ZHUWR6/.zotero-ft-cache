@@ -1,0 +1,1278 @@
+Skip to main content
+Skip to article
+Reading Assistant
+AI-generated content may vary in quality. 
+Learn more
+.
+Questions you could ask:
+Suggested question:
+What are the main concerns regarding the formation quality and microstructure evolution in Additive Manufacturing of Duplex Stainless Steels (DSSs)?
+Suggested question:
+How do processing conditions affect the microstructure and properties of Duplex Stainless Steels produced by Additive Manufacturing?
+Suggested question:
+What common microstructural features were observed in as-built DSS samples produced by Laser Powder Bed Fusion?
+Actions you could take:
+Summarize this article
+
+Sign in to unlock the full response and ask your own questions.
+
+Sign in
+View PDF
+Download full issue
+Journal of Manufacturing Processes
+Volume 73, January 2022, Pages 496-517
+Review
+Additive manufacturing of duplex stainless steels - A critical review
+Author links open overlay panel
+Di Zhang a 1
+,
+Aobo Liu b 1
+,
+Bangzhao Yin b
+, Peng Wen b c
+Show more
+Share
+Cite
+https://doi.org/10.1016/j.jmapro.2021.11.036
+Get rights and content
+Full text access
+Abstract
+Duplex stainless steels (DSSs) are promising materials in many fields due to their excellent corrosion resistance and mechanical properties, which are resulted from their microstructure consisted of a roughly equal amount of austenite and ferrite phases. As a revolutionary production technology, additive manufacturing (AM) has exhibited tremendous advantages for the fabrication of metal parts of complicated or customized geometry. Wire arc additive manufacturing (WAAM), laser metal deposition (LMD) and laser powder bed fusion (L-PBF) have been utilized to fabricate DSSs. However, it is of a great challenge to achieve expected formation quality and microstructure at the same time, considering the complicated layer-upon-layer process. A delicate control of processing conditions is highly required based on the understanding of DSS materials and AM processes. In this work, an overview of the up-to-date research status and future perspectives on the AM of DSSs is presented from extensive viewpoints including materials, processing, microstructure and properties. The microstructure evolution during the AM processes is highlighted in detail, which explains the change of mechanical properties and corrosion resistance, and provides the direction of processing optimization.
+Previous
+Next
+Keywords
+Duplex stainless steelsAdditive manufacturingMicrostructureMechanical propertiesCorrosion resistance
+1. Introduction
+1.1. Duplex stainless steels
+Duplex stainless steels (DSSs) have a two-phase microstructure consisting of ferrite (α) and austenite (γ) phases. Fig. 1a shows the typical microstructure of DSSs. The ideal phase ratio (α:γ) is about 1:1, which provides an excellent combination of mechanical properties and corrosion resistance [1], [2], [3]. DSSs have attracted more and more attentions for structures in corrosive environment such as ship building, marine engineering, chemical engineering, paper, pulp and petrochemical industries [4], [5]. It was reported that the percentage of DSSs in the total consumption of stainless steels worldwide had increased 4 times in the last 5 years [6]. It has been widely acknowledged that the competitivity of DSSs is increasingly rising up considering the market demand of high quality corrosion-resistant materials, the advancement of manufacturing technologies and the raw material pressure of nickel which has been a major element in austenite stainless steels (ASSs).
+Download: Download high-res image (362KB)
+Download: Download full-size image
+
+Fig. 1. Duplex stainless steels: (a) microstructure of DSS 2205 [2], (b) Schaeffler diagram of DSSs, Nieq = Ni + Co + 30 C + 25 N + 0.5 Mn + 0.3 Cu and Creq = Cr + 2 Si + 1.5 Mo + 5 V + 5.5 Al + 1.75 Nb + 1.5 Ti + 0.75 W [7], (c) pseudo-binary Fe-Cr-Ni phase diagram at 70% Fe [16], (d) equilibrium phase fractions for the DSS 22Cr [17].
+
+As shown in Fig. 1b, alloying elements in DSSs are divided into two categories: ferrite stabilizing elements such as Cr and Mo, and austenite stabilizing elements such as Ni and N [7]. The phase transformation tendency can be evaluated by the value of Creq/Nieq. A higher Creq/Nieq means a higher tendency to form ferrite, namely a lower tendency to form austenite. The Creq/Nieq of common DSSs ranges 1.7–3 as shown in Table 1; for comparison, it is approximately 1.6 for 304 austenite stainless steel [8], [9], [10]. Besides the influence on phase transformation, the addition of alloying elements in DSSs contributes to solution strengthening effect. Cr improves corrosion resistance and oxidation resistance. Mo increases corrosion resistance and high temperature strength [11], [12], [13], [14]. The pitting resistance equivalent number (PREN) can evaluate the beneficial influence of alloying elements on the corrosion resistance as shown in Eq. (1) [15]. A higher PREN indicates better corrosion resistance.
+(1)
+PREN=Cr%+3.3Mo%+16N%
+
+Table 1. Chemical compositions (wt%), Creq/Nieq and PREN of typical duplex stainless steels [10].
+
+Types	Materials	Cr	Ni	Mo	N	Cu	Others	Creq/Nieq	PREN
+Lean duplex	S32003	19.5–22.5	3–4	1.5–2	0.14–0.2		2 Mn	2.7	29.5
+Standard grade	S32205	22–23	4.5–6.5	3–3.5	0.14–0.2		2 Mn	2.5	35.9
+High alloyed grades	S32550	24–27	4.5–6.5	2.9–3.9	0.1–0.25	1.5–2.5	1.5 Mn	2.6	39.5
+Super-duplex	S32750	24–26	6–8	3–5	0.24–0.32	0.5	1.2 Mn	2.1	42.7
+Hyper-duplex	S32707	26–29	5.5–9.5	4–5	0.3–0.5	1	1.5 Mn 0.5–2 Co	1.7	48.8
+According to the Fe–Cr–Ni pseudo-binary diagram in Fig. 1c, DSSs solidify into fully ferrite from the liquid at first, and austenite nucleates from ferrite below the ferritic solvus temperature [16]. For a solution treatment at the temperature approximately 1100 °C, the ratio of α:γ can be adjusted to 1:1 as shown in Fig. 1d [17]. In addition to the two-phase ratio, properties of DSSs are highly related to secondary precipitates, which mainly include nitrides such as CrN and Cr2N, carbides such as M7C3 and M23C6 (M = Fe or Cr), and intermetallic compounds such as sigma (σ), chi (χ), τ, R, and π phases. These precipitates considerably affect both mechanical properties and corrosion resistance, especially regarding the formation of notorious σ and χ phases. The precipitation tendency can be roughly evaluated by the cooling rate from 800 to 500 °C [18]. Therefore, it is critical to maintain the two-phase ratio as well as to avoid the harmful precipitates at the same time.
+The microstructure evolution of DSSs depends on chemical compositions and manufacturing processes. With regard to compositions, a proper Creq/Nieq is beneficial to stabilize the two-phase ratio; while the refinement and purification contribute greatly to eliminate precipitates. On manufacturing aspects, the cooling rate in the range 1200–800 °C (t12/8) should be adjusted to generate adequate austenite from the primary ferrite. Moreover, the cooling rate in the range 800–500 °C (t8/5) should be adjusted as rapid as possible to inhibit the formation of harmful precipitates [19], [20], [21]. It seems difficult to achieve such a variant cooling rate in a specific process, causing a big problem for the manufacturing and application of DSSs. Nevertheless, a great progress has been made on the development of the material and manufacturing of DSSs.
+The development of DSSs had started since the 1930s [4], [5], [22], [23], [24], [25]. The first commercial DSS of 25Cr-5Ni was developed in 1929. The increased content of Cr led to high resistance to intergranular corrosion compared with contemporary austenite stainless steels. The addition of Mo increased the resistance to pitting corrosion. 25Cr-5Ni-1Mo was developed later in 1933. 20Cr-8Ni-2.5Mo exhibited high strength and corrosion resistance in a variety of corrosive media. With the addition of Cu in 1935, 25Cr-5Ni-2.5Mo-2.5Cu further improved the stabilization of austenite phase. The above first generation DSSs were invented with purposes of high corrosion resistance as well as the reduction of Ni content in general. However, the weldability of the first generation DSSs was poor. Since 1970s, with the development of refining technologies, the second generation DSSs, represented by 2205 and called as standard DSSs, had substantially suppressed the formation of harmful precipitates by reducing the content of impurities such as C, S and O. Moreover, the addition of strong austenite-stabilizing element N helped to maintain the balance of two phases after welding.
+The third generation DSSs, represented by 2507 and called as super DSSs, had been developed since the late 1980s. They had an even lower C content and an even higher amount of austenite stabilizing elements including N and Ni, thus a combined improvement of corrosion resistance and weldability was achieved. The PREN of super DSSs exceeded 40 generally. The unbalanced two-phase ratio as well as the harmful precipitates had been greatly alleviated during the welding process. Until now, five typical groups of DSSs have been developed as shown in Table 1 [10]. The various types of DSSs can meet with different demanding applications, and play a significant role as key structural materials used in corrosive environment [26], [27]. The weldability of DSSs has been greatly improved. Various welding methods have been attempted to fulfill different requirements. [2], [28], [29], [30], [31].
+1.2. Additive manufacturing
+Additive manufacturing (AM), commonly known as “3D printing”, is a process to make physical objects from a three-dimensional digital model, typically by depositing discrete materials layer-upon-layer [32]. Each layer is in very thin thickness and follows the digitalized pattern. By bonding a series of layers, 3D structures are fabricated efficiently, providing advantages such as free design, less material wastage, and short lead time. By all accounts, AM is amazingly energizing the manufacturing world. For example, General Electric (GE), an American company, has invested over 1 billion dollars on the AM field, and increasingly gets benefits from the continued investment [33]. Led by the concept of “Industry 4.0”, Europe has achieved a substantial progress for the research and application of AM [34]. So far, the most successful fields of AM applications include aerospace, medicine, and personalized consumption products [35], [36], [37].
+Generally speaking, there are dozens of AM processes developed over the last three decades for different purposes. According to ASTM F2792-12a, AM processes have been categorized into 7 families [32]. Among them, binder jetting (BJ), direct energy deposition (DED) and powder bed fusion (PBF) are main AM methods for the fabrication of metallic components [38], [39]. In BJ process, a liquid binder is dispensed on powder bed to form structures by adhesion. It is simple and occurs at room temperature. No fusion, oxidation and phase transformation are involved. However, the parts by BJ usually show a low relative density and poor mechanical properties [40], [41]. DED and PBF are most commonly used metal AM processes in industrial fields. Both of them can provide reliable parts of mechanical properties equivalent to those produced by conventional manufacturing methods. In DED process, localized heat sources, such as laser (L), electron beam (EB) and electrical arc (A), create a moving molten pool accompanied by robots. Feedstock materials in forms of powder or wire are deposited into the molten pool layer by layer to form a 3D structure. In PBF process, the powder is spread as a thin layer on the platform in advance, so called a powder bed. Highly focused heat sources, including laser beam and electron beam, selectively melt the powder layer in an inert gas shielded chamber or in a vacuum according to digitalized patterns. Compared to DED, a smaller beam spot, a finer powder size and a powder bed endow PBF with better dimensional accuracy and geometric freedom without rigid support, more suitable for complicated structures. However, the dimensional size of PBF parts is limited by the size of processing chamber, and the production time of PBF is longer than that of DED [38], [42], [43], [44]. Compared to PBF, DED is more suitable for large structures therefore.
+The research on AM of metals has received extensive attention and made a great progress. Titanium alloys, steels, aluminum alloys and nickel alloys have been mostly studied materials. The processing optimization, microstructure evolution, mechanical properties and corrosion resistance have been widely investigated [45], [46], [47], [48]. Advanced technologies, such as digital twin, in-situ quality monitoring, synchrotron x-ray imaging and machine learning, are increasingly combined with AM to explore the mechanisms and advantages of this digital manufacturing method [49], [50], [51], [52]. In spite of the extensive research scope, DED and PBF entail the interaction between heat sources and materials in essence. The material gets heated, melted and solidified into the final part. The properties of final parts largely depend on the formation quality and microstructure evolution.
+Three indicators are generally used to evaluate the energy input from heat sources during the DED and PBF [38]. The first one is the energy intensity Ei (Ei = 4P/πd2). P is the input power and d is the diameter of direct action area of heat sources. A focused heat source with a small d is an efficient way to increase the Ei and to improve the utilization efficiency of energy. Laser beam, electron beam and plasma are typical heat sources with a small d, thus a high Ei. A keyhole is formed due to the recoil force of metal vaporization when the Ei approximately exceeds 106 W/cm2 [53]. A keyhole is generally observed during the L-PBF process, and doesn't occur in DED laser or DED arc process [38]. The second one is the linear energy input El (El = P/Vs), which is dependent on input power P and scanning speed Vs. El is widely used to evaluate the heat input during welding processes. The third one is the specific heat input intensity Ev (Ev = P/(Vs ∙ hs ∙ tl)), representing the heat input available in unit volume, where hs and tl are hatching space and layer thickness respectively. Ev is widely used to evaluate the heat input of PBF processes. A high energy intensity enables a low heat input to melt the material and to form a certain penetration depth, while a low heat input indicates a high cooling rate, small thermal stress and low distortion.
+Fig. 2a shows the typical value of El and the corresponding cooling rate of three major metal AM methods [54]. The El ranks in the order of DED arc > DED laser > L-PBF, and the cooling rate ranks in a reverse order of El. The cooling rate of L-PBF is about 104 times that of DED arc. It should be noticed that the cooling rate differs much according to measurement locations and temperature ranges. The cooling rate in Fig. 2a indicates that measured at the center of the melt pool within the solidification temperature range. Fig. 2b shows the power and scanning speed used in AM of DSSs. The heat input of L-PBF is approximately 103 times that of DED arc, and 102 times that of DED laser.
+Download: Download high-res image (228KB)
+Download: Download full-size image
+
+Fig. 2. Energy input of different AM processes: (a) cooling rate with respect to heat input reproduced from [54], (b) commonly used process windows regarding AM of DSSs, the data was collected from [55], [57], [59], [60], [63], [64], [65], [67], [70], [72], [73], [75], [77], [78].
+
+The study on AM of DSSs has just started in recent years, and is still in its infancy. Currently, wire arc additive manufacturing (WAAM, namely DED arc), laser metal deposition (LMD, namely DED laser), and laser powder bed fusion (L-PBF, also referred as selective laser melting SLM) have been used to fabricate DSSs, as summarized in Table 2, Table 3, Table 4 [17], [55], [56], [57], [58], [59], [60], [61], [62], [63], [64], [65], [66], [67], [68], [69], [70], [71], [72], [73], [74], [75], [76], [77], [78]. The selection of processing conditions combined with the starting material show substantial influence on the microstructure and properties of DSSs parts produced by AM. Therefore, an investigation on the influence of processing parameters on formation quality, microstructure and properties, as well as a comparison among the different AM processes and DSS materials, are needed to be reviewed and analyzed.
+
+Table 2. Processing conditions, microstructure and mechanical properties of DSSs fabricated by WAAM [55], [56], [57], [58], [59], [60], [61], [62], [63].
+
+Materials	Heat input
+(kJ/mm)	Shielding gas	Ferrite percentage
+(vol%)	Secondary phases	Hardness
+(HV)	Tensile strength
+(MPa)	Elongation
+(%)
+2205 [55]	0.50–0.51	98%Ar + 2%N2	33.9–38.5	/	242–248	/	/
+2209 [56]	0.29	Ar + 2.5%CO2	26–29	γ2	266–270	717	28
+2209 [57]	0.55, 0.84	Ar	40–65	Nitrides, γ2, σ, χ	/	/	/
+2209 [58]	0.32, 0.37	Ar	25–35	γ2, MnO	293–340	682	60
+2209 [59]	0.99	CO2	34	Nitrides, γ2	/	/	/
+52–72a
+2594 [60]	0.80	Ar	1.55–48.22 (wt%)	Nitrides, γ2, σ, χ	/	852	35
+2594 [61]	0.45	Ar	/	γ2	/	/	/
+2594 [62], [63]	0.4, 0.54, 0.87	Ar + 2%CO2 + 0.03%NO	15–27	Nitrides, γ2	/	/	/
+a
+After heat treatment.
+
+Table 3. Processing conditions, microstructure and mechanical properties of DSSs fabricated by LMD [69], [77], [78].
+
+Materials	AM methods	Heat input
+(J/mm)	Shielding gas	Austenite percentage
+(vol%)	Secondary phases	Hardness
+(HV)	Tensile strength
+(MPa)	Elongation
+(%)
+2209 [69]	LMD-Wa	350	Ar, N	33–39c	Nitrides, γ2	/	/	/
+53–67d
+23Cr [77]	LMD-Pb	162.5	/	47	Nitrides	328	795	31
+2101 [78]	LMD-P	188.7	Ar	16.1	/	208	/	/
+28.2e	216f
+2205 [78]	LMD-P	188.7	Ar	38.5	/	284	/	/
+57.6f	258f
+2507 [78]	LMD-P	188.7	Ar	58.3	σ	294	/	/
+66.5f	277f
+a
+LMD with wires.
+b
+LMD with powders.
+c
+Using Ar as the shielding gas.
+d
+Using N2 as the shielding gas.
+e
+After heat treatment.
+
+Table 4. Processing conditions, microstructure and mechanical properties of DSSs fabricated by L-PBF [17], [64], [65], [66], [67], [68], [70], [71], [72], [73], [74], [75].
+
+Materials	Heat input
+(J/mm)	Shielding gas	Relative density
+(%)	Austenite percentage
+(vol%)	Secondary phases	Hardness
+(HV)	Tensile strength
+(MPa)	Elongation
+(%)
+2205 [64]	0.35	Ar	99.6	1	Nitrides, γ2	/	940	12
+21–34a	720–770a	28a
+2205 [67]	0.2–0.7	N2	97.7–98.7	0.7	/	419	872	11
+48.3a	258a	622a	21.3a
+2507 [66]	/	Ar	99.99a	43.3a	/	/	1031	14
+802a	43a
+22Cr [17]	/	N2	/	1	/	/	/	/
+45a
+2507 [70]	0.25	Ar	99.5	22–25	Nitrides	450	1321	>45
+2507 [71]	/	Ar	91.6	31.2	Nitrides	408.4	/	/
+2507 [72]	0.27	/	99a	71 (wt%)a	σ	450	1320	8
+400a	920a	1.8a
+2507 [73], [74]	0.2–2	N2	/	1.1–10.7	/	/	/	/
+11.4–19.7a
+25Cr [17]	/	N2	/	2	/	/	/	/
+52a
+2707 [75], [76]	0.24	/	98.2	0.2	σ, nitrides	528.7	1493	13.2
+36.6–88.4a	285.4–523.8a	593–941a	24.6–38.7a
+a
+After heat treatment.
+In this paper, the research status of AM of DSSs is reviewed, including WAAM, LMD and L-PBF processes. The processing conditions, formation quality, microstructure, mechanical properties and corrosion resistance of DSSs produced by AM are analyzed and discussed. The emphasis is put on the control of microstructure evolution, namely the two-phase ratio and precipitates. The current development and future prospective on the AM of DSSs are summarized in the end. To the best of the authors' knowledge, it is the first comprehensive review paper on the AM of DSSs.
+2. Additive manufacturing of duplex stainless steels
+2.1. Wire arc additive manufacturing (WAAM)
+Gas metal arc (GMA), gas tungsten arc (GTA) and plasma arc (PA) are used as heat sources for WAAM. Wires are generally used as the feedstocks to build up metal parts [79], [80]. Heat sources usually moves with robot arms to achieve customized patterns, and wires are fed automatically as shown in Fig. 3 [62], [81]. Key processing parameters during the WAAM include welding current A, welding voltage U, wire feed rate Vf and welding speed Vs. Pulsed arc, cold metal transfer (CMT) and hot wire are sometimes used to provide more flexibility on the control of heat input and deposition rate [82]. The heat input of WAAM is bigger than that of LMD and L-PBF as shown in Fig. 2. Welding filler wires can be directly adopted as feedstocks, thus saving a lot of material cost. The common wire diameter ranges from 0.8 to1.2 mm. The high heat input and wire diameter result in low dimensional accuracy, but allow a high deposition rate and high processing efficiency. Rigid supports are necessary to hold up the melt pool. Generally, WAAM is applied to large structures with relatively regular geometry such as frames and cylinders. The equipment investment of arc sources is relatively lower than that of laser sources. Although the large heat input of WAAM causes a big heat affected zone (HAZ), coarse grains and large stress/distortion, WAAM costs less in equipment investment and is superior in processing efficiency, when compared to L-PBF and LMD. The post machining and heat treatment are generally necessary for practical uses [79], [80], [83].
+Download: Download high-res image (320KB)
+Download: Download full-size image
+
+Fig. 3. WAAM of DSSs: (a) equipment [81], (b) schematic diagram [62], (c) as-built samples: (c1) DSS 2205; (c2) DSS 2209 [55], [56].
+
+Some typical DSSs have been fabricated by WAAM as shown in Table 2. Kannan et al. built walls of DSS 2594, which were devoid of obvious formation defects [61]. The austenite percentage was higher than that of ferrite. The pitting resistance of the WAAM samples was equivalent to that of wrought alloy. Zhang et al. found that the ferrite content was only 1.55 wt% in the DSS 2594 wall-body produced by WAAM [60]. The formation of nitrides and inclusions led to low impact toughness and low ductility. Hejripour et al. built walls and tubes of DSS 2209, and made a thermal analysis of the WAAM process by finite element method (FEM) [58]. The formation of intermetallic phases was prevented because of the high cooling rate. However, the ferrite fraction was much lower than the austenite one. Though the hardness of WAAM parts was lower than that of wrought samples, the tensile strength at the layer direction was comparable to that of the wrought samples.
+The as-built DSS parts by WAAM usually exhibit microstructures with excessive austenite content and harmful secondary phases (nitrides and γ2) due to the large heat input. The microstructure can be adjusted by processing parameters such as heat input and interlayer temperature. Knezović et al. investigated the influence of interlayer temperature on the microstructure and properties of DSS 2205 [55]. With decreasing the interlayer temperature, both the porosity and ferrite content rose. Hosseini et al. studied the relationship between thermal cycles and the microstructure [57]. The austenite fraction of as deposited DSS 2209 beads was 46% for LHLT (low heat input and low interlayer temperature) and 38% for HTHH (high heat input and high interlayer temperature). The fraction of secondary phases (nitrides, σ, χ) was higher in HHHT sample because of the slow cooling rate. The high heat input not only resulted to more harmful secondary phases, but also reduced the dimensional accuracy of DSSs due to thermal distortion.
+In order to increase the dimensional accuracy of DSS walls, Posch et al. took use of CMT as the heat sources of WAAM to manufacture DSS 2209, which greatly reduced the heat input [56]. The as-built surface roughness was comparable to that produced by sand casting. No porosity or lack of fusion, but non-metallic inclusions were found in the samples. The ferritic content was 26–29%. The tensile strength and toughness were equivalent to those of filler metals. Wittig et al. investigated the influence of arc energy on the microstructure of DSS parts produced by CMT-WAAM [84]. The ferrite content tended to decrease with increasing arc energy, as shown in Fig. 4a. Eriksson et al. investigated the microstructure of DSS 2760 built by CMT-WAAM using different heat input [63]. The ferrite content ranged from 15% to 27%, and varied according to different heat inputs and positions, as shown in Fig. 4b. The tensile strength decreased with increasing the heat input.
+Download: Download high-res image (205KB)
+Download: Download full-size image
+
+Fig. 4. Ferrite content of WAAM DSSs: (a) the ferrite content as a function of arc energy and position [84], (b) the influence of heat input on the ferrite content of WAAM DSS 2594 [63].
+
+2.2. Laser metal deposition (LMD)
+As Fig. 5 shows, LMD typically relies upon the feeding of powder or wire into the molten pool created by a laser beam to deposit material layer-by-layer upon a substrate. A shielding gas is used to protect the molten metal from oxidation and to carry the powder stream into the molten pool [69], [77], [85]. The process is quite like laser cladding except the need to precisely control the robot movement in three-dimensional space. The key processing parameters include laser power P, spot diameter dL, wire or powder feed rate Vf and welding speed Vs. A relatively big melt pool is necessary to hold the filler materials. The dL normally takes several millimeters. High powder diode laser provides beam spots of adjustable sizes and uniform energy distribution, and is increasingly used for LMD [86].
+Download: Download high-res image (385KB)
+Download: Download full-size image
+
+Fig. 5. LMD of DSSs: (a) manufacturing equipment of LMD with powders [77], (b) robots for LMD with wires [69], schematic figures of LMD with wires (c) and with powders (d) processes [90].
+
+The laser directly melts the irradiation area, and conducts heat to the substrate and filler material. The advantages of filler wire include commercial availability, low price, nearly 100% utilization ratio, and freedom of position or gravity. However, the absorptivity of laser energy on solid wire is quite low, and the stability of wire transfer during LMD is not as good as that of WAAM. A high laser energy input and a large melt pool increase the processing stability, but result in rough surface finish and extensive machining allowance. The use of powder increases the dimensional accuracy and material flexibility by mixing different powders, but sacrifices the deposition rate and the utilization ratio of materials. Nonetheless, the dimension accuracy is better when fine powder is used. The heat input of LMD falls in between the L-PBF and WAAM as shown in Fig. 2 [38], [54]. The deposition rate, dimensional accuracy and mechanical properties of LMD also lie in between. The melt pool needs solid substrate or deposited metal as the support, and it is difficult to build complicated parts with delicate overhang structures. However, LMD is much suitable for coating or repairing damaged parts [87], [88]. As WAAM and LMD can be operated in open air with local shielding gas, they can build parts of big sizes [89].
+DSS parts have been fabricated by LMD as shown in Table 3. Iams et al. investigated the microstructure produced by LMD using lean, standard and super DSS powders [78]. The austenite percentage was 16.1%, 38.5%, and 58.3% respectively, and a small amount of σ phase was found in DSS LMD parts. Bermejo et al. utilized N2 as the shielding gas to increase the nitrogen content during the LMD of DSS 2209. The austenite percentage increased to 53–67% by N2 from 33–39% by Ar [69]. Wen et al. used customized intensive-dual-phase (IDP) alloy powder with relatively high Ni content to maintain the austenite content after the LMD [77]. The proportions of austenite and ferrite were about 47% and 37%, respectively. Fe3Ni2 and nitrides were observed in cladding layers. The hardness of the cladding layers was increased by approximately 15% compared with that of the 2205 substrate. The tensile strength was higher and the corrosion resistance was lower than that of the substrate. The research on the LMD of DSSs is still in its infancy, and more investigations are expected, especially on the microstructure and corrosion resistance.
+2.3. Laser powder bed fusion (L-PBF)
+During the L-PBF process as shown in Fig. 6, the part is built up by selectively melting the powder bed layer-upon-layer following the designed pattern under the computer control. Fusion occurs by a raster motion of the focused laser beam controlled by galvanometer driven mirrors [38], [91]. Key processing parameters include laser power P, spot diameter dL, scanning speed Vs, layer thickness Ds and hatching space Hs. The dL is roughly in the range of 30–100 μm, much smaller than that of LMD. Considering a laser power over 100 W, the highly focused laser beam provides energy intensity Ei exceeding 106 W/cm2, which is generally much higher than that of LMD. Compared to WAAM and LMD, the heat input is the lowest, the temperature gradient is the highest, and the cooling rate is the fastest for L-PBF.
+Download: Download high-res image (276KB)
+Download: Download full-size image
+
+Fig. 6. L-PBF of DSSs: (a) equipment [105], (b) schematic diagram [38], (c) as-built samples [73], [68], [104].
+
+The stable spreading of powder into uniform thin layers is significant to the L-PBF process. General requirements for L-PBF powder include spherical shape, uniform size distribution, high density without defects such as pores and inclusions, etc. [38], [42], [44], [92]. The mean size of powder and the layer thickness usually range 20–50 μm, much finer than those used in LMD. The L-PBF powder is usually produced by gas atomization (GA) and plasma rotating electrode process (PREP) to ensure powder quality [93], [94], [95]. The strict requirement of the powder increases material cost, but the combined utilization of a highly focused laser beam and a fine powder bed endows L-PBF huge advantages such as geometric freedom without rigid support, high dimensional accuracy, high performance, and so on [38], [96], [97], [98], [99], [100]. However, Cunningham et al. found out that the keyhole occurred in most L-PBF processes due to the applied laser energy intensity Ei [53]. The metal evaporation, the resulting recoil force and the keyhole hugely influence the L-PBF process, and make stable formation quality a major concern [101], [102], [103].
+Davidson et al. investigated the influence of L-PBF processing parameters on formation quality, microstructure and mechanical properties of DSS 2507 [71], [104]. The relative density of components varied according to laser energy input as shown in Fig. 7a. Defects including lack of fusion and porosity were observed inside the L-PBF samples. The average ferrite percentage was 68.8% and the ferritic grain grew along the building direction. The precipitation of CrN was observed due to the high cooling rate. The maximum hardness was 449.4 HV, higher than that of the wrought substrate. With enhancing the laser energy input, the austenite percentage rose up, and the hardness fell down. The layer-upon-layer melting resulted to heterogeneous distribution of microstructure and hardness. Murkute et al. deposited DSS 2507 on the substrate of low carbon steel by using L-PBF [73]. With decreasing scanning speed, the Cr content dropped in the deposited layers due to the increased evaporation loss, and the austenite percentage increased. It was reported that the increased scanning speed had a negative effect on the surface roughness and corrosion resistance. The deposited layer showed comparable corrosion resistance to the rolled and annealed DSS sample when the scanning speed was 100 mm/s.
+Download: Download high-res image (246KB)
+Download: Download full-size image
+
+Fig. 7. The influence of L-PBF processing conditions on formation quality and microstructure of DSS 2507: (a) relative density as a function of laser energy density [104], (b) microstructural texture [70].
+
+Nigon et al. investigated the influence of processing parameters on the formation quality of DSS 2205 [67]. The highest relative density was 98.6% when laser power was 187 W and scanning speed was 800 mm/s. Oriented ferritic grains with [0 0 1] texture were observed in the as-built samples, and could be changed according to scanning strategies. The austenite showed disordered orientations. The hardness of the heat treated L-PBF samples was comparable to that of wrought ones. The tensile strength and elongation were inferior to those of wrought samples. Saeidi et al. obtained a relative density of 99.5% by the L-PBF of DSS 2507 [70]. A unique macroscopic texture was found as shown in Fig. 7b. The percentage of ferrite was approximately 75–78% in the sample. Nitrogen enriched phases were detected in the microstructure. They compared mechanical properties of ferrite, austenite and duplex stainless steel samples. The tensile strength, yield strength and hardness of DSS 2507 were 1321 MPa, 1214 MPa and 450 HV respectively, superior to those of counterpart samples. By using an adequate laser energy input and a scanning strategy with 66° rotation between layers, Papula et al. obtained DSS 2205 samples with a relative density of 99.97% [65]. The austenite percentage was 40–46% after solution treatment.
+Hengsbach et al. investigated the influence of solution temperature on the microstructure and mechanical properties of DSS 2205 parts built by L-PBF [64]. The ferrite percentage was 99% in the as-built condition. After 1000 °C solution treatment, the austenite percentage increased to 34%. The tensile strength of the as-built samples was higher than that of the wrought samples, which was explained by refined grains and high dislocation density. The elongation at fracture increased from 12 to 28% after the heat treatment. Shang et al. investigated the influence of solution treatment on the L-PBF of super DSS 2707 [75]. After 1100 °C treatment, the ratio of α:γ approached to 59.5:40.5. According to mechanical and corrosion test, the solution treated L-PBF samples respectively exhibited better mechanical properties at 1150 °C and higher pitting resistance at 1100 °C.
+According to the present results on the L-PBF of DSSs as shown in Table 4, the as-built samples usually exhibited excessive ferrite grain orienting towards the building direction and nitrogen enriched phases (nitrides) inside the ferrite grains [17], [64]. Few formation defects were found when proper processing parameters were used. Regarding mechanical properties, the as-built samples of high formation quality generally showed higher hardness, higher strength, lower ductility and lower toughness, compared to the wrought samples [72], [75]. The corrosion resistance of as-built samples was generally comparable or inferior to that the wrought samples. Proper solution treatments of DSSs restored the two-phase ratio and improved the mechanical properties and corrosion resistance.
+3. Key issues on additive manufacturing of duplex stainless steels
+3.1. Formation quality
+3.1.1. Densification
+Lack of fusion and porosity are common defects during the AM of DSSs that need to be minimized due to their adverse effects on properties, which are usually evaluated by the relative density. The lack of fusion indicates irregular voids between scan tracks and layers as shown in Fig. 8a, and is caused by incomplete fusion due to insufficient heat input [38]. This defect can be eliminated by increasing Ev accordingly [104]. There are two major mechanisms for porosity during the AM: metallurgical pores and keyhole pores [103], [106]. For WAAM and LMD, the porosity is resulted by metallurgical pores, which mainly refer to those resulted by the solution difference of gas between solid and liquid. The entrapped gas can come from the surrounding atmosphere, filler wires or powder particles. The filler materials must be dense and clean, and properly kept before the use in order to eliminate the gas sources. In addition, gas pores may also be formed due to the entrapment of the shielding gas or air due to poor shielding effect. Regarding L-PBF, the melt pool is fully protected in a closed chamber, and thus there is little concern on metallurgical pores resulted by the inclusion of surrounding air. The metallurgical pores in L-PBF mainly come from powder particles or shielding gas. The entrapped gas results in microscopic spherical gas pores, as shown in Fig. 8a and b [55], [104].
+Download: Download high-res image (234KB)
+Download: Download full-size image
+
+Fig. 8. Densification of AM DSSs: (a) pore morphology of L-PBF DSS 2507 with different energy densities [104], (b) X-ray inspection pictures of the WAAM DSS 2205 with different interlayer temperatures [55], (c) parametric optimization of L-PBF DSS 2205 [67], (d) pore size distribution of DSS 2205 and 2507 produced by L-PBF [66].
+
+Keyhole model melting occurs in most L-PBF processes considering the applied energy intensity. The keyhole constantly vibrates under the dynamic balance of momentum according to the in-situ X-ray observation [101], [102], [103]. The keyhole can be seriously unstable with inadequate energy input. It repeatedly generates and collapses, leaving blowholes inside the deposited metal that consist of entrapped metal vapor or shielding gas. The size of keyhole pores can vary depending on the shape and size of the keyhole. The keyhole pores contribute to the majority of porosity during the L-PBF and are directly related to energy input. Therefore, a general law exists regarding the processing optimization as shown in Fig. 8c. Too small energy input Ev results in the lack of fusion; too big Ev causes the keyhole porosity; only an adequate Ev is able to obtain high densification. Due to the nature of keyhole, it is regarded almost impossible to eliminate all keyhole pores in the L-PBF parts [67]. The tiny pores have little influence on tensile strength, but damage fatigue strength largely. If the pores occur at the surface, they naturally become the initiation locations of pit corrosion, deteriorating corrosion resistance. Hot isostatic pressing (HIP) has been applied to increase the densification, thus improving the performance of DSSs parts produced by AM as shown in Fig. 8d [66].
+3.1.2. Surface quality
+Surface roughness (SR) doesn't only determine the appearance of products, but also influence fatigue and corrosion to a great extent [107], [108]. The surface quality of WAAM and LMD parts are not acceptable for final parts, thus post machining is generally necessary. Dimensional allowance must be considered in the AM designing and manufacturing period. The SR of L-PBF parts is relatively small, ranging dozens of micrometers. Instead of machining, sandblasting and etching are usually used to improve the surface quality if necessary [42], [79], [80]. Processing conditions also have an influence on the SR. As shown in Fig. 9a, the SR of L-PBF parts decreases with increasing Ev [67]. High densification usually indicates good surface quality and vice versa. Excessive energy input increases the temperature of the melt pool, which contributes to spatter and deteriorates surface quality. Fig. 9b exhibits that the SR increases with increasing scan speed. It can be explained by balling effect, caused by melt splash and high scanning speed [38], [73], [109]. Therefore, it concludes that a relatively high energy input with a low scanning speed is beneficial to improve surface quality regarding the AM of DSSs.
+Download: Download high-res image (116KB)
+Download: Download full-size image
+
+Fig. 9. Surface roughness of DSS parts produced by L-PBF [67], [73].
+
+3.1.3. Residual stress and distortion
+The local melt pool moves, and an uneven temperature distribution exists during the AM process. The solidification shrinkage and thermal contraction cause stress and distortion [110], [111]. The physical properties of DSSs, such as thermal conductivity and expansion coefficient, fall in between ASSs and carbon steels and are much closer to those of ASSs. The cracking susceptibility of DSSs is relatively low since the ferrite occurs first during the solidification [9], [19]. Regarding AM processes, the residual stress and distortion increase with increasing heat input, and rank as WAAM > LMD > L-PBF. The residual stress and distortion become major concerns when parts of big size are built, especially for the WAAM. Reinforced supports are used to inhibit thermal distortion during the building process [79]. Post heat treatment can be used to relieve the residual stress.
+Fig. 10a shows the residual stress distribution of DSS 2205 parts produced by L-PBF [65]. The tensile stress in red color occurred at the surface, while the compressive stress in blue color appeared at the inside. The maximum residual tensile stress was recorded as 800 MPa for as-built DSS 2205. After heat treatment at 1000 °C for 5 min, the stress level substantially fell down compared with the as-built sample. The tensile stress occurred at the inside, and the compressive stress appeared at the surface interestingly, as Fig. 10b shows. So far, few reports have been found on the investigation into the residual stress of DSS parts produced by WAAM and LMD. The influence of residual stress on fatigue and corrosion resistance requires further investigation on aspects of experiment and simulation.
+Download: Download high-res image (110KB)
+Download: Download full-size image
+
+Fig. 10. Residual stress distribution of DSS 2205 produced by L-PBF: (a) as-built, (b) after heat treatment [65].
+
+3.2. Chemical composition
+3.2.1. Distribution of elements
+The distribution coefficient of alloying elements in the two phases of DSS is different and varies with heating temperatures and phase ratios. Interstitial N element diffuses easier than substitutional element including Cr, Ni and Mo. The ferrite phase tends to be enriched with ferrite forming elements, and the austenite phase tends to be enriched with austenite forming elements. The distribution of elements of DSSs has an important impact on the mechanical properties and corrosion resistance. Zhang et al. reported the element partitioning during the WAAM of DSS 2594 as shown in Fig. 11 [112]. Compared with the filler wire, heterogeneous distribution of elements including Cr, Ni, Mo in the two phases was observed in the as-built parts. In the top layer, the austenite phase had a higher content of Cr and Mo, and a lower content of Ni compared with those in root and wall regions. The composition in liquid is homogeneous. During the solidification process in WAAM, the diffusion of alloying elements was impeded due to the rapid cooling rate. Because of the reheating by the deposition of successive layers in root and wall regions, Cr and Mo were preferred to concentrate in ferrite, and Ni showed a higher content in austenite.
+Download: Download high-res image (181KB)
+Download: Download full-size image
+
+Fig. 11. Distribution alloying elements (Cr, Ni, Mo) in the austenite (a) and ferrite (b) phases at different positions of DSS 2594 WAAM parts and wires [112].
+
+In the LMD process, the austenite and ferrite of as-built DSSs showed almost identical content of alloying elements, as reported by Iams et al. [78]. The rapid cooling rate suppressed the diffusion of elements, which was also reported in laser welding of DSSs [113]. After the HIP, the distribution of alloying elements changed. Cr and Mo concentrated in ferrite, while the content of Ni was higher in austenite, as shown in Table 5. So far no report has been found on the element distribution regarding the L-PBF of DSSs. It is supposed that the element distribution of two phases is almost the same, considering much higher cooling rate than that of the LMD.
+
+Table 5. Alloying element content of ferrite and austenite phases of DSS parts produced by LMD for as-deposited (AD) and post-processed HIP conditions, reproduced from [78].
+
+wt%	Lean, S32101	Standard, S32205	Super, S32507
+AD	HIP	AD	HIP	AD	HIP	AD	HIP	AD	HIP	AD	HIP
+α	α	γ	γ	α	α	γ	γ	α	α	γ	γ
+Cr	21.6	22.1	21.6	19.7	23.5	24.5	23.3	22.2	26.1	26.4	25.8	24.8
+Ni	1.6	1.4	1.5	1.8	5.7	4.2	6.0	7.3	6.6	6.0	7.6	8.4
+Mo	–	–	–	–	2.9	3.7	3.0	2.6	3.9	5.1	4.3	3.6
+Mn	5.3	5.2	5.6	5.7	1.2	1.5	1.6	1.5	–	–	–	–
+3.2.2. Evaporation loss of elements
+The evaporation loss of alloying elements can be considerable due to the elevated temperature of the melt pool. The volume of evaporation loss is dependent upon the evaporation flux, the surface area and the duration time of the melt pool [101]. The evaporation flux is largely influenced by the energy intensity Ei, and ranks in the order of L-PBF > LMD > WAAM. For L-PBF, the formation of keyhole hugely increases evaporation loss due to the high temperature and the recoil pressure of metal vapor. Elements with low boiling points show high evaporation loss. For a specific AM process, the evaporation loss increases with increasing heat input. The different evaporation loss of various elements leads to composition change between the starting material and the final part, thus directly affecting the microstructure and properties [69], [73].
+As Fig. 12a shows, the Cr content decreases from 25.2 to 12.2 wt% with the reduction of scan speed from 1000 to 100 mm/s during the L-PBF of DSS 2507 [73]. Bermejo et al. studied the loss of N content during the LMD of DSS 2209 when Ar was used as the shielding gas. As shown in Fig. 12b, the N content in the as-built parts was 0.1–0.14 wt%, lower than 0.16 wt% of the starting powder [69]. The increase of heat input increased the loss of N element. Fig. 12c shows the mechanism of N loss in the welding process of DSSs. It mainly occurs due to the difference of the N concentration between the molten pool and the shielding gas. When the concentration gradient from the melt pool to the shielding gas is negative, the N element escapes from the melt pool to the atmosphere. Moreover, the loss of N element is also resulted from the metal vapor. For L-PBF, the existence of the keyhole considerably increases the evaporation loss of element [114]. As it illustrated in Fig. 12d, the weld beads are surrounded by other beads and the base metal. The contact between the melt pool and the shielding gas is limited, thus resulting in the lower N loss than AM processes [57]. In order to effectively compensate the evaporation loss of N, the shielding gas containing N2 can be used. As shown in Fig. 12b, a considerable increase of N has been achieved in the DSS parts by changing the shielding gas from Ar to N2 [69].
+Download: Download high-res image (307KB)
+Download: Download full-size image
+
+Fig. 12. Evaporation loss of elements: (a) Cr content [73] and (b) N content during LMD (the vertical red line indicates N content in the feedstocks) [69], (c) mechanism of N loss in laser welding process [114], (d) comparison of shielding conditions between multi-pass welding and WAAM [57]. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)
+
+3.3. Microstructure
+3.3.1. Grain structure
+3.3.1.1. Grain size and morphology
+The grain size of AM parts is mainly determined by the cooling rate during solidification temperature range. A high cooling rate results to refined grains. The cooling rate is approximately 105–106, 103–104 and 102–103 K/s respectively for L-PBF, LMD and WAAM [38]. The grain size of L-PBF parts is the finest, which improves both strength and ductility due to grain refining effect. Grain size also has a significant effect on corrosion resistance [115], [116]. According to the present literatures, the typical grain size is in the order of 1–10 μm for L-PBF, which is much smaller than those of LMD and WAAM. The grain size is biggest for WAAM. The cooling rate decreases and the grain size increases with elevating the heat input [76], [77], [112]. As reported by Murkute et al., the average grain size decreased from 108 to 19 μm2 when the scan speed was increased from 100 to 1000 mm/s during the L-PBF of DSS 2507 [73].
+Since the ferrite phase forms directly from the solidification, its grain morphology is determined by G/R, namely the temperature gradient (G) divided by the solidification rate (R) at the solidification front. Columnar grains occur with a large G/R and equiaxed grains occur with a small G/R [54], [96]. The G/R ranks in the order of L-PBF > LMD > WAAM. The primary ferrite in DSS parts generally shows columnar for L-PBF, equiaxed for WAAM and columnar or mixed for LMD. The ferrite transforms to austenite following the solidification by solid transformation. The austenite can exhibit four different morphologies according to AM processing conditions and DSS materials: intragranular austenite (IGA), grain boundary austenite (GBA), Widmanstätten austenite (WA) and secondary austenite (γ2), as shown in Fig. 13 [112]. During the cooling period, the transformation from ferrite to GBA occurs at first in the temperature range of 1350–800 °C. WA nucleates and grows from GBA with further decreasing temperature. WA usually shows lath-shaped morphology. IGA precipitates in the ferrite matrix if sufficient time is provided at elevated temperature. The precipitation of IGA is limited due to high activation energy of lattice diffusion [78], [117], [118]. The precipitation of secondary austenite is mainly caused by the reheating process from the deposition of successive layers, and will be discussed in detail in Section 3.3.2.
+Download: Download high-res image (571KB)
+Download: Download full-size image
+
+Fig. 13. Different morphologies of austenite: (a–b) Optical images of WAAM DSSs: (a) the last layer of DSSs, (b) the wall-body of DSSs [112], (c) schematic diagram of the precipitation of austenite [118].
+
+3.3.1.2. Texture
+As shown in Fig. 14a–b, the primary ferrite grows along the building direction (BD) due to the great temperature gradient. The width of ferrite grains is small under fast cooling rate during the L-PBF process [17]. For WAAM parts, the columnar ferrite exhibits a strong [001] texture in the deposition direction, while austenite presents [001, 101] orientations, as shown in Fig. 15 [112]. The columnar grains with a certain orientation lead to anisotropic properties [119]. Zhang et al. found the anisotropy of tensile properties in DSS 2594 samples. The tensile strength at the horizontal direction (HD) was higher than that at the BD [60]. Nigon et al. reported anisotropic corrosion resistance of DSS 2205 samples produced by L-PBF. The corrosion current of sample surface vertical to BD was 83.2 nA/cm2, higher than 65.4 nA/cm2 of surface parallel to BD, which was explained by the oriented grains and the resulting different grain boundaries at the exposed areas [68]. By the L-PBF with scanning strategy rotated by 66° layer-upon-layer, Papula et al. mitigated the grain texture of DSS 2205 samples, as shown in Fig. 14c [65].
+Download: Download high-res image (498KB)
+Download: Download full-size image
+
+Fig. 14. EBSD picture of the as-built DSS samples by LPBF: (a) DSS 22Cr, (b) DSS 25Cr [17] (c) DSS 2205 with 66° scanning rotation [65].
+
+Download: Download high-res image (513KB)
+Download: Download full-size image
+
+Fig. 15. EBSD images of DSS 2594 produced by WAAM: (a) SEM image, (b) phase map (red: austenite, blue: ferrite), (c) relationship between EBSD and WAAM deposition coordinate systems, IPF images of the austenite (d) and ferrite(e) in the Z direction [112]. (For interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)
+
+3.3.2. Phase transformation
+3.3.2.1. Two-phase ratio
+The two-phase ratio depends on two factors: chemical compositions and AM processing conditions. A high Creq/Nieq and a small t12/8 increase the ferrite percentage, while a low Creq/Nieq and a big t12/8 promote the formation of austenite. During welding processes, a larger heat input results to a bigger t12/8 and more austenite. Generally, the rapid cooling rate at the heat affect zone (HAZ) causes excessive ferrite, especially for laser welding with a relatively small heat input. Super DSS with a low Creq/Nieq has been developed to inhibit the formation of ferrite and improve the weldability [29], [120]. For the AM of DSSs, a similar pattern has been observed. Compared with welding, multiple repeated heating is performed in AM processes. For WAAM, the accumulated heat input is greater than that of arc welding. The cooling rate of t12/8 is much lower, therefore excessive austenite is usually found in DSS parts produced by WAAM. However, excessive ferrite is usually found in the DSS parts produced by LMD and L-PBF due to the small heat input. Austenite phases can be hardly observed in some DSS parts produced by L-PBF. The austenite percentage of DSS 2205 samples fabricated by L-PBF, LMD and WAAM was 1% [64], 38.5% [78] and 61.5–66.1% [55] respectively, although the original austenite percentage of the starting feedstocks was all kept as 50%.
+The austenite percentages were 16.1, 38.5, 58.3% for the as-built LMD parts of DSS 2201, 2205 and 2507 parts respectively. Super DSS 2507 had the lowest value of Creq/Nieq, which positively contributed to the increased content of austenite [78]. Wen et al. used customized DSS powder which had a higher Ni content than that of DSS 2205, and obtained DSS parts with the austenite percentage of 47% by LMD [77]. For WAAM, extra efforts are necessary to inhibit the formation of excessive austenite on the contrary. Stützer et al. fed a second customized wire of 2253 to the melt pool during the WAAM of DSS 2293. By adjusting the feeding ratios of the two wires and the heat input, DSS parts of thin walls were deposited with different values of Creq/Nieq. The two wires were homogeneously mixed and the ferrite contents in the specimens varied in the range of 39–72% [121]. In addition to the feedstock materials, the evaporation loss and the use of different shielding atmosphere also influence the two-phase ratio. When Ar gas is used, the evaporation loss causes a reduction of N element. The use of N2 as the shielding gas can increase the content of N in the DSS parts. It was reported that the austenite content was nearly doubled during the LMD of DSS 2205: from 39% when Ar-shielded to 67% when N2-shielded [69].
+Knezović et al. increased the ferrite content from 33.9 to 38.5% by decreasing the interlayer temperature from 150 to 50 °C during the WAAM of DSS 2205. The transformation from ferrite to austenite required time for diffusion. Wall produced using the interlayer temperature of 150 °C was made for more than twice less time than the one with 50 °C while having about 5% lower ferrite amount [55]. Murkute et al. found that the austenite content increased from 1.1 to 10.7% with decreasing scanning speed from 1000 to 100 mm/s during the L-PBF of DSS 2507. A low scan speed provided more time for the phase transformation from ferrite to austenite [73]. The austenite content was respectively 51.78, 98.45 and 84.77 wt% in the top layer, wall-body and root region during the WAAM of DSS 2594, caused by the different thermal cycles in different layers [60]. The bottom layers on the substrate had the highest cooling rate, leading to the lowest content of austenite. The middle layers had a much slower cooling rate due to the heat accumulation [122]. At the same time, the subsequently depositing layers provided heat treatment to the previously deposited layers, and contributed to an increase of austenite content in the previously deposited layers. The top layer had a lower austenite proportion since it was not further reheated [58], [63]. The difference of the phase ratio of different layers led to the inhomogeneous properties of DSSs. As shown in Fig. 16, the microhardness of WAAM DSSs 2954 varied with different positions of the wall [60].
+Download: Download high-res image (52KB)
+Download: Download full-size image
+
+Fig. 16. Hardness distribution of WAAM DSS 2594 in different positions [60].
+
+It seems difficult for the AM of commercial DSSs to achieve the expected two-phase ratio and the uniform distribution of microstructure just by adjusting processing conditions. Post solution treatment is used to regulate the two-phase ratio and homogenize the distribution of microstructure. Jiang et al. studied the effect of heat treatment on the two-phase ratio during the L-PBF of two customized DSS powder: 22Cr (22.5Cr-5.5Ni-3.5Mo-0.21N) and 25Cr (25.7Cr-7.3Ni-4.4Mo-0.3N). The phases presented in the as-built 22Cr and 25Cr DSS parts were quantified as nearly 100% ferrite. After the solution treatment, the austenite to ferrite ratio restored to 45:55 for 22Cr and 52:48 for 25Cr. The peak temperature was set at 1100 and 1170 °C respectively for 22Cr and 25Cr. The holding times were both set as 5 min followed by water quenching [17]. Iams et al. realized the increase of austenite percentage from 38.5% to 57.6% by HIP at 1170 °C and 145 MPa for 3 h after the LMD of DSS 2205 [78]. The average austenite percentage in the as-deposited DSS 2209 walls by the WAAM was 66%, and changed into 48%, 45% and 28% in the samples after heat-treated at 1250, 1300 and 1350 °C, as shown in Fig. 17. The proportion of austenite decreased with the increasing of the heat-treatment temperature. A balanced two-phase ratio was achieved at the heat-treatment temperature of 1250 and 1300 °C [59].
+Download: Download high-res image (172KB)
+Download: Download full-size image
+
+Fig. 17. Austenite content distribution along the deposition direction using different post heat treatment temperatures [59].
+
+3.3.2.2. Secondary phases
+In addition to the matrix phases of austenite and ferrite, secondary phases may also occur according to the applied thermal cycles during the AM processes as shown in Fig. 1c, such as intermetallic compounds (σ and χ), nitrides (CrN and Cr2N), secondary austenite (γ2), carbides [16], [123], [124]. The formation of σ phase mostly originates from the eutectoid transformation of ferrite (δ → σ + γ2), and occurs at the temperature range of 600 to 1000 °C. The brittle σ phase enriches in Fe, Cr and Mo, and usually precipitates at δ/γ phase boundaries or triple junctions. A short t8/5, namely a rapid cooling rate, inhibits the formation of σ phase [29]. The formation of σ phase has been scarcely observed during the LMD and L-PBF processes due to the rapid cooling rate as shown in Table 2, Table 3, Table 4. Gas tungsten arc melting was applied to DSS 2507 samples in order to physically simulate the influence of WAAM thermal cycles, so called a duplicated additively manufactured structure (DAMS) [125]. As shown in Fig. 18, nitrides and σ phase were observed in the high and low temperature heat affected zones respectively. The presence of σ phase decreased the toughness and ductility, but increased the tensile strength of DSSs [126]. As for the influence on corrosion behavior, Moura et al. reported that the pitting potential of DSS 2205 significantly decreased from 1.03 to 0.42 VSCE at room temperature with the increase of σ phase from 4.7 to 28.1% [127]. Martins et al. found that the σ phase disappeared by solution annealing at temperature above 1060 °C followed by quenching [128]. The effect of sigma phase morphology on the degradation of properties in a super DSS was also reported [129].
+Download: Download high-res image (251KB)
+Download: Download full-size image
+
+Fig. 18. SEM images of sigma phase (σ) in the base metal (BM) and duplicated additively manufactured structure (DAMS) of DSS 2507 samples [125].
+
+The addition of nitrogen in DSS promotes the formation of austenite, but it also increases the tendency of nitride precipitation. Nitrogen atoms are designed to be uniformly dissolved in ferrite and austenite phases for DSS materials. The solubility and diffusion rate of nitrogen are different in the two phases, leading to the supersaturated N in the ferrite [14], [114], [115]. Nitrides precipitate from the ferrite due to the rapid cooling rate, since there is insufficient time for nitrogen to diffuse into the austenite [130]. The formation of nitrides also relates to the absence of adequate austenite content, since there is not enough austenite to dissolve the nitrogen. Davidson et al. observed spherical and acicular CrN phases during the L-PBF of DSS 2507 as shown in Fig. 19a–b [71]. Hengsbach et al. observed the precipitation of intragranular nitride during the solidification, and the precipitation of intergranular nitride during successive thermal cycles in DSS 2205 fabricated by L-PBF [64]. The presence of CrN and Cr2N was also reported during the WAAM of DSS 2594 as shown in Fig. 19c–d [60]. Nitrides lead to the deterioration of toughness and corrosion resistance of DSSs [131], [132]. By increasing the austenite percentage with the use of N2 shielding gas or solution heat treatment, more nitrogen is dissolved in the matrix, which inhibits the precipitation of nitrides [133], [134].
+Download: Download high-res image (446KB)
+Download: Download full-size image
+
+Fig. 19. Nitride precipitation of AM DSSs: (a–b) CrN precipitate formation in the L-PBF DSSs [71], (c–d) CrN precipitation of LMD DSS, (c) a SEM image, (d) an EBSD image [60].
+
+The repeated heating of previous layers can lead to the transformation from ferrite into γ2 phase. Lervåg et al. observed γ2 during the WAAM of DSS 2507, as shown in Fig. 20a–b. The γ2 phase appeared inside the ferrite grain (intragranular γ2) and the boundary between ferrite and primary austenite (intergranular γ2) [62]. According to Zhang et al., the intragranular γ2 commonly presented delicate particle clusters in the ferrite grains, while the intergranular γ2 presented a texture of thin films on the periphery of the primary austenite (Fig. 20c–d) [60]. Compared with the primary austenite, the secondary austenite had a lower content of Cr, Mo, and N elements, leading to deteriorated corrosion resistance [135]. The proper solution heat treatment reduced the difference in composition between secondary austenite and primary austenite [136].
+Download: Download high-res image (474KB)
+Download: Download full-size image
+
+Fig. 20. Secondary austenite in WAAM: (a–b) DSS 25Cr [62], (c–d) DSS 2594 [60].
+
+3.4. Mechanical properties
+3.4.1. Hardness
+As shown in Table 2, Table 3, Table 4, the hardness of DSS parts varies with chemical compositions and processing conditions. The hardness of austenite and ferrite increases with increasing their dissolved alloying elements [137], [138]. The diffusion of alloying elements depends on the temperature and cooling rate, resulting in the redistribution of chemical compositions, microstructure and hardness. The hardness changes with the two-phase ratio. In addition, the precipitation of secondary brittle phases generally increases the hardness. Take DSS 2205 as an example, the average hardness was 419, 284 and 245 HV for the as-built samples of L-PBF [67], LMD [78] and WAAM [55] respectively. For the comparison, the hardness of wrought DSS 2205 was 267 HV [67]. The hardness is also influenced by the grain size. The finest grain size during the L-PBF partly explains the difference of hardness among various AM processing conditions. The rapid cooling rate promotes the formation of nitrides during the L-PBF, which significantly increases the hardness [71]. The heat treatment largely influences the distribution of alloying elements, the two-phase ratio and the secondary phases, thus has a huge effect on the hardness of samples produced by various AM processes [65], [78].
+3.4.2. Tensile properties
+Generally, the tensile strength of DSSs can be 1.5 times higher than that of ASSs [139]. The existence of two phases impedes the growth of grains. The grain size of DSSs can be much finer than that of ASSs, which explains the higher strength and ductility of DSSs to a great extent. The increase of alloying elements may also increase the strength due to solution strengthening effect [140], [141]. With increasing the ferrite percentage, the strength increases, but the ductility and toughness decreases. The FCC structure of austenite can tolerate more plastic deformation, and improves the ductility of DSSs [142], [143]. According to Table 2, Table 3, Table 4, DSSs samples made by L-PBF have the highest tensile strength, over 900 MPa, but the lowest elongation, normally around 10%, which is attributed to fine grains, excessive ferrite phase, nitride precipitation and high dislocation density [70], [144]. Compared with L-PBF, the DSSs made by WAAM have a lower strength but a higher elongation, mainly attributed to the bigger grain size and higher proportion of austenite caused by the larger heat input. The precipitation of σ phase considerably deteriorates the ductility [126].
+3.4.3. Fatigue properties
+A higher yield strength normally results to a higher fatigue strength. However, the fatigue strength is sensitive to surface roughness and internal formation defects such as porosity and lack of fusion. They act as the regions of stress concentration and greatly damage fatigue strength [145]. There has been only one published paper on the investigation of fatigue strength of DSS parts produced by AM processes however. According to Kunz et al. [66], the ultimate tensile strength and yield strength were as high as 865 and 773 MPa respectively, the fatigue strength of as-built DSS 2205 was only 203 MPa, much lower than 367 MPa of sand-cast samples. The lower fatigue strength was explained by the high surface roughness resulted by the attachment of powder particles, the formation of porosity defect and the anisotropic microstructure. Moreover, austenite phase had higher plastic deformation capacity than ferrite, which absorbed the energy and reduced the notch sensitivity. The L-PBF samples had a fully ferritic microstructure, thus leading to high notch sensitivity resistance. Surface modification, post heat treatment and HIP were adopted to improve the fatigue properties of L-PBF samples. Solution treatment increased the fatigue strength from 203 to 372 MPa by eliminating the predominant ferritic structure. HIP further improved the fatigue strength to 470 MPa due to the significant reduction of the porosity.
+3.4.4. Toughness
+The impact toughness of ferrite phase can drop suddenly at certain low temperature, so called the ductile-brittle transition temperature (DBTT). The impact toughness is evaluated by the absorbed energy and the DBTT for ferrite steels. The impact toughness of austenite phase doesn't show obvious change with varying temperature. ASSs usually have excellent impact toughness even at very low temperature. The impact toughness of DSS falls in between ferrite steels and ASSs [146], [147], [148]. The proportion of austenite positively contributes to the toughness of DSSs. With increasing the austenite percentage of DSSs, the toughness increases and vice versa [60], [70]. The precipitation of secondary phases deteriorates the toughness to a great extent, especially the σ phase [149]. Shang et al. reported the tensile properties and impact toughness of DSS 2707 samples built by L-PBF. According to Charpy V-notched impact test, the absorbed energy of rectangular as built samples with the size of 55 × 10 × 10 mm was only 18 J at room temperature. The as-built samples had 0.2% austenite only. After solution treatment at 1050 °C, the austenite percentage increased to 88.4%. Meanwhile, the σ phase was observed and took up 10% in volume. The impact toughness further dropped. After solution treatment at 1150 °C, the ferrite to austenite ratio recovered to 61.4:38.6, and no secondary phase was observed. The toughness increased to 132 J [75].
+The absorbed energy of DSS 2209 as-built samples produced by WAAM-CMT was 77 J, comparable to 70 J of the filler metal according to the Charpy V-notched test. The austenite percentage was approximately 70%, and no secondary phase was observed. Additionally, the measured oxygen content was low, which also contributed to the high toughness [56]. The absorbed energy of super DSS 2594 was around 100 J for the as-built WAAM samples, approximately 30–35% of that of DSS 2507 base metal. The decreased toughness was attributed to the coarse grain and the formation of defects in the WAAM samples. A slight reduction of toughness was observed with increasing the heat input from 0.4 to 0.87 kJ/mm [62], [63]. There have been no reports on the impact toughness of DSSs made by LMD. Nevertheless, no report has been found on the fracture toughness for the DSSs made by the mentioned AM processes.
+3.5. Corrosion resistance
+The corrosion resistance of DSSs is generally equivalent or superior to that of ASSs, and is a critical concern for the application of AM of DSSs. Corrosion is a complicated physical and chemical process, and can be categorized into uniform corrosion, intergranular corrosion, pitting corrosion, crevice corrosion, stress corrosion cracking and so on [150], [151]. The pitting corrosion has been observed most commonly for the DSSs and the pits can be the sources of stress corrosion cracking and fatigue corrosion. The influence of chemical compositions on the pitting corrosion resistance can be evaluated by the value of PREN as shown in Eq. (1). The pitting corrosion resistance decreased with decreasing the content of Cr, Mo and N [152]. During AM processes, the evaporation loss of alloying elements led to the deterioration of corrosion resistance [69], [73]. Nevertheless, the redistribution of alloying elements during the AM processes also played an important role on the corrosion resistance [112], [153]. In terms of formation quality, surface defects acted as the initiation points of pitting corrosion, and decreased the corrosion resistance of DSS [73], [154].
+Generally speaking, corrosion resistance decreases with decreasing the grain size for DSSs. Fine grain size increases the area of grain boundaries of high energy, which speeds up the corrosion [155]. However, there are also some reports exhibiting the opposite conclusion. Ma et al. reported that grain refinement caused by friction stir welding decreased the corrosion current from 8.26 × 10−7 to 2.72 × 10−7 A/cm2 for DSSs 2507 [156]. It was explained by the enhancement of passive films due to the enlarged area of grain boundaries. The texture on the surface has an effect on the composition of passive film, thus affecting the corrosion behavior of DSSs. The passive film with 〈001〉//X texture was found porous and less protective with more NiO and less Cr2O3. The passive film with 〈111〉//X texture was less porous with more Cr oxides, thus leading to the higher corrosion resistance [59].
+The effect of two-phase ratio on corrosion resistance mainly depends on the content of alloying elements dissolved in the phases [6], [9], [19], [20]. During the early development stage of DSSs, it was regarded that the corrosion resistance of DSSs dropped down if the content of alloying elements in the two phases was different, since the two phases might generate galvanic current in corrosive medium because of potential difference. Considering that it was difficult to maintain the equivalent content of alloying elements in two phases during the manufacturing and service, to a certain extent it had become a great concern for the application of DSSs. However, the recent development has shown that the corrosion resistance of DSSs is acceptable even if the two-phase ratio deviates from the ideal 1:1 or the alloying elements are not uniformly distributed [17], [68]. The latest findings provide more confidence for the application of DSSs.
+The precipitation of secondary phases, especially the σ phase, greatly deteriorates the corrosion resistance, as discussed in Section 3.3.2. Kannan et al. investigated the corrosion behavior of super DSS 2594 walls produced by WAAM. The corrosion rate ranged between 1.54 and 1.61 mpy and pitting resistance was excellent compared to wrought alloy with stable micro-level pits. The PREN was >40 and this was attributed to the increased wt% of Cr and Mo in the wall component. The double-loop electrochemical potentiodynamic reactivation (DLEPR) test revealed no sensitization, which was due to the absence of detrimental phases and comparable microstructure [61]. Zhang et al. investigated the effect of heat treatment on the corrosion resistance of DSS 2209 produced by WAAM. The pitting corrosion resistance was improved after heat-treatment at 1300 °C, and was comparable to that of the DSS 2205 rolled samples. The good pitting corrosion resistance was the integrated result of the balanced phase ratio, the absence of secondary phases, the ⟨111⟩//X texture of austenite, the low crystalline defect density and the recrystallization of austenite [59].
+The large heat input of WAAM promotes the formation of excessive austenite and secondary phases due to slow cooling rate, and results to relatively coarse grains. While the small heat input of L-PBF promotes the formation of excessive ferrite and nitride due to rapid cooling rate, and results to relatively fine columnar grains with prominent texture. Nigon et al. investigated the effect of building orientation and heat treatment on corrosion resistance of DSS 2205 made by L-PBF. No stable pit formation occurred; metastable pitting was observed on all samples except the as-built parallel ones. The cause of the metastable pitting was likely attributed to the residual porosity and/or chemical inhomogeneity. Despite clear textural and microstructural differences among the samples at different building orientations and heat treatment, the measured pitting corrosion resistance was similar for all the L-PBF samples, and comparable to that of DSS 2205 wrought samples. It suggested that the bulk chemical composition was the governing factor for pitting corrosion resistance [68]. Papula et al. found that the cold-rolled/solution-treated samples and the L-PBF as-built samples of DSS 2205 showed a lower passive current density than the solution-treated L-PBF samples. The high corrosion resistance of L-PBF samples may be related to the fine grain size and the non-existence of harmful secondary phases [65].
+Except standard DSS 2205, the corrosion resistance of super DSSs by L-PBF is widely reported. Murkute et al. found that the increasing scan speeds from 100 to 1000 mm/s resulted in decreasing corrosion resistance of the deposited super DSS 2507 layers. The low scan speed clads (Vs = 100 mm/s) showed a comparable corrosion resistance to the rolled and annealed super DSS [73]. The solution-treated samples showed significantly lower corrosion rates than as-built samples. The residual tensile stress resulted in a high corrosion rate for as-built samples. Heat treatment eliminated the residual stress, and restored corrosion resistance [74]. Shang et al. found that the proper solution treatment increased the austenite percentage from 0.2% to 40.5%, and greatly improved pitting corrosion resistance [75].
+Jiang et al. investigated the influence of chemical compositions and solution treatment on corrosion resistance of L-PBF samples. The results from cyclic potentiodynamic polarization revealed that both of as-built and solution-treated samples showed an equivalent response to wrought counterpart samples at room temperature [17]. Kohler et al. mixed ASS 316 and DSS 2205 powder into 3 ratios: 70:30, 50:50 and 30:70, named as M7-3, M5-5 and M3-7 respectively. The as-built M7-3 had a significantly improved pitting corrosion resistance compared to AISI 316L. [157].
+There have been fewer reports so far on the corrosion resistance of DSS sample produced by LMD compared to WAAM and L-PBF. Wen et al. deposited layers on the DSS 2205 substrate with customized DSS powders. The corrosion resistance of deposited layers was slightly lower than that of DSS 2205 substrate, which was explained by the two-phase ratio and chromium nitrides [77]. Wang et al. deposited DSS layers on low alloy steels by LMD with a commercial powder named KF-JG-3. The corrosion resistance was much better than that of the substrate, confirming that the LMD of DSSs can be a promising candidate for the protective coating of low alloy steels [158].
+4. Concluding remarks and perspectives
+The unique advantages and increasingly applications of DSSs and AM has made the research on AM of DSSs attract more and more attention. Among the published peer-review papers, WAAM, LMD and L-PBF are used for the AM of standard and super DSSs mostly. The precise control of formation quality as well as the microstructure evolution has been the major concern for the AM of DSSs. The influence of AM processing parameters and post treatment on mechanical properties and corrosion resistance has been chiefly investigated. The main conclusions are summarized as following.
+(1)
+Processing conditions and formation quality
+The heat input ranks in the order of WAAM > LMD > L-PBF. With decreasing heat input, the dimensional accuracy rises. WAAM-CMT is beneficial to decrease the heat input. In any case, the adequate heat input is necessary to achieve good formation quality for all the three AM processes. Compared with the use of powder as feedstock, feeding wire shows merits such as a higher deposition rate, a lower cost and few limitations by gravity, but weakness such as the low dimensional accuracy and the requirement to a large heat input. Compared with conduction mode melting in the WAAM and LMD, keyhole mode melting occurs in the L-PBF. The keyhole porosity is much sensitive to the heat input. The densification behavior can be improved by the optimization of processing parameters however. HIP can also be used to eliminate internal defects in DSS parts. Compared with the relatively good finish in the L-PBF, the surface quality of WAAM and LMD are not acceptable for final parts, thus post machining is generally necessary. High cooling rates in AM process suppress the partitioning of alloying elements between austenite and ferrite phases. The loss of elements, such as Cr and N, occurs in AM process. The use of N2 as the shielding gas compensates the evaporation loss of N. Post solution heat treatment releases the residual stress and modulates the microstructure.
+(2)
+Materials and microstructure
+Standard and super DSSs have been mainly used for the present studies. Super DSSs help to maintain the content of austenite during the LMD and L-PBF processes in which rapid cooling rates are used. The slow cooling rate during the WAAM probably results to the formation of excessive austenite, decreasing the strength to a certain extent. On the contrary, L-PBF DSSs have a microstructure with predominant ferrite grains due to the extremely high cooling rate, resulting in the low ductility and toughness. Secondary phases, nitrides, secondary austenite and sigma, can be observed in the microstructure of AM DSSs especially with a large heat input, greatly influencing mechanical properties and corrosion resistance of materials. Solution treatment has been generally regarded necessary for the AM of all the present DSS materials to maintain the two-phase ratio and to eliminate the precipitation of harmful secondary phases. The high cooling rate during L-PBF results to refined grains with the size of 1–10 μm, much smaller than those obtained by LMD and WAAM, leading to the higher hardness and strength. The grain texture is also more prominent during the L-PBF due to the larger temperature gradient.
+(3)
+Mechanical properties
+The mechanical properties are determined by formation quality and microstructure. The hardness, tensile strength, elongation, impact toughness and fatigue strength of AM DSSs have been covered in the published papers. Generally speaking, the hardness and tensile strength of DSS parts produced by the L-PBF are higher mainly due to the finer grain, while the ductility and toughness are lower than those produced by the other two AM processes due to the existence of tiny defects and the reduction of austenite content. AM DSSs exhibit anisotropic properties. The strength is higher in horizontal direction than in vertical direction for tensile samples produced by WAAM.
+(4)
+Corrosion resistance
+The corrosion resistance of DSSs mainly depends on the chemical composition, formation quality and microstructure. As reported by previous investigations, the corrosion resistance of AM DSSs is commonly comparable or inferior to that of traditionally manufactured counterparts. The loss of alloy elements, porosity, surface roughness, residual tensile stress, secondary phases and unbalanced two-phase ratio during the AM of DSSs deteriorate the corrosion resistance. In order to effectively restore the pitting resistance of DSSs, post heat treatment, surface modification and HIP can be used.
+Until now, the studies on the AM of DSSs have just started. The reported industrial applications are few. The following aspects are critical for the future investigation.
+1)
+Alloying design
+The chemical compositions of filler wires and powder particles directly influence the performance of processing and service. So far, the used wire and powder are not designed for the AM processes. The special requirements for the control of formation quality and microstructure evolution of DSSs are not considered for AM processes. Proper alloying design and preparation of DSS materials for the specific AM process are expected to reduce manufacturing difficulties and achieve customized performance. For example, the content of ferrite forming elements can be increased for the WAAM materials, and the content of austenite forming elements can be increased for the LMD and L-PBF materials in order to improve the two-phase ratio.
+2)
+Processing control
+The temperature evolution during the AM process is critical to the control of microstructure evolution. The large t12/8 and t8/5 in present WAAM cause excessive austenite and harmful precipitates respectively, while the small t12/8 in present LMD and L-PBF causes excessive ferrite. A precise control of heat input, scanning strategy, shielding gas and interlayer temperature is required to achieve expected formation quality and microstructure at the same time. Moreover, in-situ quality monitoring is beneficial to achieve a stable manufacturing process. Auxiliary measures, such as preheat, heat treatment, HIP, sandblasting, polishing, machining, may be necessary to further improve the performance of DSS parts produced by various AM processes according to the specific demand.
+3)
+Characterization of microstructure and performance
+There is still much work to do on the establishment of the interaction among starting materials, processing parameters, microstructure and performance for different AM processes and various DSS materials. The understanding of microstructure evolution is critical to select processing conditions and estimate performance including mechanical properties and corrosion resistance. Moreover, the fatigue properties and fracture toughness of AM DSSs remain to be studied. Their corrosion behavior and mechanism under specific environments are unexplored. Besides the two-phase ratio and harmful precipitates, the influence of AM processing characteristics, such as typical defects, residual stress and grain texture, on the mechanical properties and corrosion resistance needs to be quantitatively investigated.
+4)
+Numerical simulation
+Numerical simulation is a powerful tool to understand mechanism, optimize processing and predict performance. The numerical modeling of AM processes has developed very fast and achieved some applications, but just started in the case of AM of DSSs so far. The simulation can provide the detailed temperature evolution during the AM processes, which is significant for the selection of parameters to control the microstructure. With information of the applied thermal cycles and material properties, it is possible to predict the residual stress, microstructure and properties.
+5)
+Structural design for potential applications
+AM processes provide much freedom on the structural design. The time is substantially shortened from the design concept to the final part. Many novel structures become feasible due to this digital printing process. WAAM and LMD are suitable for large structures and in-situ operation. L-PBF is fit for complicated small-size structures with delicate characteristics. All the AM processes are not adopted to mass production. With the thorough understanding and consideration of the performance, the operation and the cost, proper structural design is quite significant for the future application. Some promising potential cases include repairing, preparing spare parts, and manufacturing light weight or customized structures.
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+Acknowledgments
+This research was supported by the National Natural Science Foundation of China (Grant No. 51771238). Peng Wen is thankful for the financial support of the Open Project Program of Research Centre of Energy Engineering Advanced Joining Technology, Beijing Institute of Petrochemical Technology.
+References
+[1]
+S.K. Ghosh, S. Mondal
+High temperature ageing behaviour of a duplex stainless steel
+Mater Charact, 59 (12) (2008), pp. 1776-1783
+View PDF
+View articleView in ScopusGoogle Scholar
+[2]
+A.V. Jebaraj, L. Ajaykumar, C.R. Deepak, K.V.V. Aditya
+Weldability, machinability and surfacing of commercial duplex stainless steel AISI2205 for marine applications–a recent review
+J Adv Res, 8 (3) (2017), pp. 183-199
+Google Scholar
+[3]
+K.D. Ramkumar, P.S. Goutham, V.S. Radhakrishna, V.S. Radhakrishna, A. Tiwari, S. Anirudh
+Studies on the structure–property relationships and corrosion behaviour of the activated flux TIG welding of UNS S32750
+J Manuf Process, 23 (2016), pp. 231-241
+View PDF
+View articleView in ScopusGoogle Scholar
+[4]
+J. Charles, P. Chemelle
+The history of duplex developments, nowadays DSS properties and duplex market future trends
+World Iron Steel, 6 (2011), pp. 1-21
+View in ScopusGoogle Scholar
+[5]
+J. Charles, P. Chemelle
+The history of duplex developments, nowadays DSS properties and duplex market future trends
+World Iron Steel, 1 (2012), pp. 46-57
+Google Scholar
+[6]
+S. Patra, A. Agrawal, A. Mandal, A.S. Podder
+Characteristics and manufacturability of duplex stainless steel: a review
+<sb:contribution></sb:contribution><sb:host><sb:issue><sb:series><sb:title>Trans Indian Inst Metals</sb:title></sb:series></sb:issue></sb:host>, 74 (5) (2021), pp. 1089-1098
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[7]
+V. Kain
+5 - Stress corrosion cracking (SCC) in stainless steels
+V.S. Raja, T. Shoji (Eds.), Stress corrosion cracking, Woodhead Publishing, Sawston (2011), pp. 199-244
+View PDF
+View articleCrossrefView in ScopusGoogle Scholar
+[8]
+Standard specification for stainless steel bars and shapes
+ASTM International (2017)
+A276/A276M-17
+Google Scholar
+[9]
+J.C. Lippold, D.J. Kotecki
+Welding metallurgy and weldability of stainless steels
+John Wiley & Sons Inc, New York (2005)
+Google Scholar
+[10]
+Standard specification for seamless and welded ferritic/austenitic stainless steel pipe
+ASTM International (2020)
+A790/A790M-20
+Google Scholar
+[11]
+J.B. Lee
+Effects of alloying elements, Cr, Mo and N on repassivation characteristics of stainless steels using the abrading electrode technique
+Mater Chem Phys, 99 (2–3) (2006), pp. 224-234
+View PDF
+View articleView in ScopusGoogle Scholar
+[12]
+S.A. Tavara, M.D. Chapetti, J.L. Otegui, C. Manfredi
+Influence of nickel on the susceptibility to corrosion fatigue of duplex stainless steel welds
+Int J Fatigue, 23 (7) (2001), pp. 619-626
+View PDF
+View articleView in ScopusGoogle Scholar
+[13]
+H. Tian, X. Cheng, Y. Wang, C. Dong, X. Li
+Effect of mo on interaction between α/γ phases of duplex stainless steel
+Electrochim Acta, 267 (2018), pp. 255-268
+View PDF
+View articleView in ScopusGoogle Scholar
+[14]
+J.W. Simmons
+Overview: high-nitrogen alloying of stainless steels
+Mater Sci Eng A, 207 (2) (1996), pp. 159-169
+View PDF
+View articleView in ScopusGoogle Scholar
+[15]
+A.B. Tahchieva, N. Llorca-Isern, J.M. Cabrera
+Duplex and superduplex stainless steels: microstructure and property evolution by surface modification processes
+Metals, 9 (3) (2019), p. 347
+View at publisherCrossrefView in ScopusGoogle Scholar
+[16]
+J. Charles
+Duplex families and applications: a review. Part 1: from duplex pioneers up to 1991
+Stainless SteelWorld (2015), pp. 1-5
+View in ScopusGoogle Scholar
+[17]
+D. Jiang, N. Birbilis, C.R. Hutchinson, M. Brameld
+On the microstructure and electrochemical properties of additively manufactured duplex stainless steels produced using laser-powder bed fusion
+Corrosion, 76 (9) (2020), pp. 871-883
+View at publisherCrossrefView in ScopusGoogle Scholar
+[18]
+Y. Fan, T.G. Liu, L. Xin, Y.M. Han, Y.H. Lu, T. Shoji
+Thermal aging behaviors of duplex stainless steels used in nuclear power plant: a review
+J Nucl Mater, 152693 (2020)
+Google Scholar
+[19]
+I. Alvarez-Armas, S. Degallaix-Moreuil
+Duplex stainless steels
+John Wiley & Sons, Hoboken (2013)
+Google Scholar
+[20]
+R. Francis
+The corrosion of duplex stainless steels: A practical guide for engineers
+NACE International, Houston (2018)
+Google Scholar
+[21]
+J.K.L. Lai, C.H. Shek, K.H. Lo
+Stainless steels: an introduction and their recent developments
+Bentham Science Publishers, Beijing (2012)
+Google Scholar
+[22]
+H.M. Cobb
+The history of stainless steel
+ASM International, Ohio (2010)
+Google Scholar
+[23]
+K.H. Lo, C.H. Shek, J.K.L. Lai
+Recent developments in stainless steels
+Mater Sci Eng R Rep, 65 (4–6) (2009), pp. 39-104
+View PDF
+View articleView in ScopusGoogle Scholar
+[24]
+M. Chen
+Investigate on shot peenig treatment on SAF2507 duplex stainless steel and its characterization
+Shanghai Jiaotong University, Shanghai (2019)
+[dissertation]
+Google Scholar
+[25]
+J. Charles
+Past, present and future of the duplex stainless steels
+Proceeding of International Conference and Expo on Duplex Stainless Steels, Grado, Italy (2007), pp. 18-20
+View in ScopusGoogle Scholar
+[26]
+Z. Brytan, J. Niagaj
+Corrosion resistance and mechanical properties of TIG and A-TIG welded joints of lean duplex stainless steel S82441/1.4662
+Arch Metall Mater, 61 (2A) (2016), pp. 771-784
+View at publisherCrossrefView in ScopusGoogle Scholar
+[27]
+I. Alvarez-Armas
+Duplex stainless steels: brief history and some recent alloys
+Recent Patents Mech Eng, 1 (1) (2008), pp. 51-57
+View at publisherCrossrefGoogle Scholar
+[28]
+L. Karlsson
+Welding duplex stainless steels-a review of current recommendations
+Weld World, 56 (5) (2012), pp. 65-76
+View in ScopusGoogle Scholar
+[29]
+J. Verma, R.V. Taiwade
+Effect of welding processes and conditions on the microstructure, mechanical properties and corrosion resistance of duplex stainless steel weldments—a review
+J Manuf Process, 25 (2017), pp. 134-152
+View PDF
+View articleView in ScopusGoogle Scholar
+[30]
+A.N. Chaudhari, K. Dixit, G.S. Bhatia, P. Singhal, K. Saxena
+Welding behaviour of duplex stainless steel AISI 2205: a review
+Mater Today Proc, 18 (2019), pp. 2731-2737
+View PDF
+View articleView in ScopusGoogle Scholar
+[31]
+A. Pramanik, G. Littlefair, A.K. Basak
+Weldability of duplex stainless steel
+Mater Manuf Process, 30 (9) (2015), pp. 1053-1068
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[32]
+Standard terminology for additive manufacturing technologies
+ASTM Int (2013), Article F2792-12a
+Google Scholar
+[33]
+Materials Today [Internet]. GE to invest $1.4 billion in 3D printing. [accessed 29 September 2016]. Available from: https://www.materialstoday.com/additive-manufacturing/news/ge-to-invest-14-billion-in-3d-printing-/.
+Google Scholar
+[34]
+M. Mehrpouya, A. Dehghanghadikolaei, B. Fotovvati, A. Vosooghnia, S.S. Emamian, A. Gisario
+The potential of additive manufacturing in the smart factory industrial 4.0: a review
+Appl Sci, 9 (18) (2019), p. 3865
+View at publisherCrossrefView in ScopusGoogle Scholar
+[35]
+F.P.W. Melchels, M.A.N. Domingos, T.J. Klein, J. Malda, P.J. Bartolo, D.W. Hutmacher
+Additive manufacturing of tissues and organs
+Prog Polym Sci, 37 (8) (2012), pp. 1079-1104
+View PDF
+View articleView in ScopusGoogle Scholar
+[36]
+K.V. Wong, A. Hernandez
+A review of additive manufacturing
+Int Sch Res Not, 2012 (2012), pp. 30-38
+View at publisherCrossrefView in ScopusGoogle Scholar
+[37]
+W. Gao, Y. Zhang, D. Ramanujan, K. Ramani, Y. Chen, C.B. Williams, et al.
+The status, challenges, and future of additive manufacturing in engineering
+Comput Aided Des, 69 (2015), pp. 65-89
+View PDF
+View articleView in ScopusGoogle Scholar
+[38]
+T. DebRoy, H.L. Wei, J.S. Zuback, T. Mukherjee, J.W. Elmer, J.O. Milewski, et al.
+Additive manufacturing of metallic components–process, structure and properties
+Prog Mater Sci, 92 (2018), pp. 112-224
+View PDF
+View articleView in ScopusGoogle Scholar
+[39]
+N.D. Parab, J.E. Barnes, C. Zhao, R.W. Cunningham, K. Fezzaa, A.D. Rollett, et al.
+Real time observation of binder jetting printing process using high-speed X-ray imaging
+Sci Rep, 9 (1) (2019), pp. 1-10
+Google Scholar
+[40]
+M. Ziaee, N.B. Crane
+Binder jetting: a review of process, materials, and methods
+Addit Manuf, 28 (2019), pp. 781-801
+View PDF
+View articleView in ScopusGoogle Scholar
+[41]
+A. Mostafaei, A.M. Elliott, J.E. Barnes, F. Li, W. Tan, C.L. Cramer, et al.
+Binder jet 3D printing–process parameters, materials, properties, and challenges
+Prog Mater Sci, 100707 (2020)
+Google Scholar
+[42]
+D.D. Gu, W. Meiners, K. Wissenbach, R. Poprawe
+Laser additive manufacturing of metallic components: materials, processes and mechanisms
+Int Mater Rev, 57 (3) (2012), pp. 133-164
+View in ScopusGoogle Scholar
+[43]
+W.J. Sames, F.A. List, S. Pannala, R.R. Dehoff, S.S. Babu
+The metallurgy and processing science of metal additive manufacturing
+Int Mater Rev, 61 (5) (2016), pp. 315-360
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[44]
+W.E. King, A.T. Anderson, R.M. Ferencz, N.E. Hodge, C. Kamath, S.A. Khairallah, et al.
+Laser powder bed fusion additive manufacturing of metals; physics, computational, and materials challenges
+Appl Phys Rev, 2 (4) (2015), Article 041304
+View at publisherCrossrefView in ScopusGoogle Scholar
+[45]
+P. Bajaj, A. Hariharan, A. Kini, P. Kürnsteiner, D. Raabe, E.A. Jägle
+Steels in additive manufacturing: a review of their microstructure and properties
+Mater Sci Eng A, 772 (2020), Article 138633
+View PDF
+View articleView in ScopusGoogle Scholar
+[46]
+S. Liu, Y.C. Shin
+Additive manufacturing of Ti6Al4V alloy: a review
+Mater Des, 164 (2019), Article 107552
+View PDF
+View articleView in ScopusGoogle Scholar
+[47]
+C. Zhang, Y. Li, M. Gao, X. Zeng
+Wire arc additive manufacturing of Al-6Mg alloy using variable polarity cold metal transfer arc as power source
+Mater Sci Eng A, 711 (2018), pp. 415-423
+View PDF
+View articleView in ScopusGoogle Scholar
+[48]
+V. Dhinakaran, J. Ajith, A.F.Y. Fahmidha, T. Jagadeesha, T. Sathish, B. Stalin
+Wire arc additive manufacturing (WAAM) process of nickel based superalloys–a review
+Mater Today Proc, 21 (2020), pp. 920-925
+View PDF
+View articleView in ScopusGoogle Scholar
+[49]
+G.L. Knapp, T. Mukherjee, J.S. Zuback, H.L. Wei, T.A. Palmer, A. De, et al.
+Building blocks for a digital twin of additive manufacturing
+Acta Mater, 135 (2017), pp. 390-399
+View PDF
+View articleView in ScopusGoogle Scholar
+[50]
+S.A. Shevchik, C. Kenel, C. Leinenbach, K. Wasmer
+Acoustic emission for in situ quality monitoring in additive manufacturing using spectral convolutional neural networks
+Addit Manuf, 21 (2018), pp. 598-604
+View PDF
+View articleView in ScopusGoogle Scholar
+[51]
+C.L.A. Leung, S. Marussi, R.C. Atwood, M. Towrie, P.J. Withers, P.D. Lee
+In situ X-ray imaging of defect and molten pool dynamics in laser additive manufacturing
+Nat Commun, 9 (1) (2018), pp. 1-9
+View in ScopusGoogle Scholar
+[52]
+C. Wang, X.P. Tan, S.B. Tor, C.S. Lim
+Machine learning in additive manufacturing: state-of-the-art and perspectives
+Addit Manuf, 101538 (2020)
+Google Scholar
+[53]
+S. Gong, S. Pang, H. Wang, L. Zhang
+Weld pool dynamics in deep penetration laser welding
+Springer, Singapore (2021)
+Google Scholar
+[54]
+T. Mukherjee, T. DebRoy
+A digital twin for rapid qualification of 3D printed metallic components
+Appl Mater Today, 14 (2019), pp. 59-65
+View PDF
+View articleView in ScopusGoogle Scholar
+[55]
+N. Knezović, I. Garašić, I. Jurić
+Influence of the interlayer temperature on structure and properties of wire and arc additive manufactured duplex stainless steel product
+Materials, 13 (24) (2020), p. 5795
+View at publisherCrossrefGoogle Scholar
+[56]
+G. Posch, K. Chladil, H. Chladil
+Material properties of CMT—metal additive manufactured duplex stainless steel blade-like geometries
+Weld World, 61 (5) (2017), pp. 873-882
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[57]
+V.A. Hosseini, M. Högström, K. Hurtig, M.A.V. Bermejo, L.E. Stridh, L. Karlsson
+Wire-arc additive manufacturing of a duplex stainless steel: thermal cycle analysis and microstructure characterization
+Weld World, 63 (4) (2019), pp. 975-987
+Google Scholar
+[58]
+F. Hejripour, F. Binesh, M. Hebel, D.K. Aidun
+Thermal modeling and characterization of wire arc additive manufactured duplex stainless steel
+J Mater Process Technol, 272 (2019), pp. 58-71
+View PDF
+View articleView in ScopusGoogle Scholar
+[59]
+Y. Zhang, F. Cheng, S. Wu
+Improvement of pitting corrosion resistance of wire arc additive manufactured duplex stainless steel through post-manufacturing heat-treatment
+Mater Charact, 171 (2021), Article 110743
+View PDF
+View articleView in ScopusGoogle Scholar
+[60]
+X. Zhang, K. Wang, Q. Zhou, J. Ding, S. Ganguly, G. Marzio, et al.
+Microstructure and mechanical properties of TOP-TIG-wire and arc additive manufactured super duplex stainless steel (ER2594)
+Mater Sci Eng A, 762 (2019), Article 138097
+View PDF
+View articleView in ScopusGoogle Scholar
+[61]
+A.R. Kannan, N.S. Shanmugam, V. Rajkumar, M. Vishnukumar
+Insight into the microstructural features and corrosion properties of wire arc additive manufactured super duplex stainless steel (ER2594)
+Mater Lett, 270 (2020), Article 127680
+Google Scholar
+[62]
+M. Lervåg, C. Sørensen, A. Robertstad, B.M. Brønstad, B. Nyhus, M. Eriksson, R. Aune, X. Ren, O.M. Akselsen, I. Bunaziv
+Additive manufacturing with superduplex stainless steel wire by CMT process
+Metals, 10 (2) (2020), p. 272
+View at publisherCrossrefView in ScopusGoogle Scholar
+[63]
+M.C.F. Eriksson, M. Lervåg, C. Sørensen, A. Robertstad, B.M. Brønstad, B. Nyhus, et al.
+Additive manufacture of superduplex stainless steel using WAAM
+MATEC Web of Conferences, 188 (2018), p. 03014
+View at publisherCrossrefView in ScopusGoogle Scholar
+[64]
+F. Hengsbach, P. Koppa, K. Duschik, M.J. Holzweissig, M. Burns, J. Nellesen, et al.
+Duplex stainless steel fabricated by selective laser melting-microstructural and mechanical properties
+Mater Des, 133 (2017), pp. 136-142
+View PDF
+View articleView in ScopusGoogle Scholar
+[65]
+S. Papula, M. Song, A. Pateras, X.B. Chen, M. Brandt, M. Easton, et al.
+Selective laser melting of duplex stainless steel 2205: effect of post-processing heat treatment on microstructure, mechanical properties, and corrosion resistance
+Materials, 12 (15) (2019), p. 2468
+View at publisherCrossrefView in ScopusGoogle Scholar
+[66]
+J. Kunz, A. Boontanom, S. Herzog, P. Suwanpinij, A. Kaletsch, C. Broeckmann
+Influence of hot isostatic pressing post-treatment on the microstructure and mechanical behavior of standard and super duplex stainless steel produced by laser powder bed fusion
+Mater Sci Eng A, 794 (2020), Article 139806
+View PDF
+View articleView in ScopusGoogle Scholar
+[67]
+G.N. Nigon, O.B. Isgor, S. Pasebani
+The effect of annealing on the selective laser melting of 2205 duplex stainless steel: microstructure, grain orientation, and manufacturing challenges
+Opt Laser Technol, 134 (2021), Article 106643
+View PDF
+View articleView in ScopusGoogle Scholar
+[68]
+G.N. Nigon, O.B. Isgor, S. Pasebani
+Effect of build orientation and annealing on corrosion resistance of additively manufactured duplex stainless steel in 3.5% NaCl
+J Electrochem Soc, 167 (14) (2020), Article 141508
+View at publisherCrossrefView in ScopusGoogle Scholar
+[69]
+M.A.V. Bermejo, K.T. Pandian, B. Axelsson, E. Harati, A. Kisielewicz, L. Karlsson
+Microstructure of laser metal deposited duplex stainless steel: influence of shielding gas and heat treatment
+Weld World, 65 (3) (2021), pp. 525-541
+Google Scholar
+[70]
+K. Saeidi, L. Kevetkova, F. Lofaj, Z. Shen
+Novel ferritic stainless steel formed by laser melting from duplex stainless steel powder with advanced mechanical properties and high ductility
+Mater Sci Eng A, 665 (2016), pp. 59-65
+View PDF
+View articleView in ScopusGoogle Scholar
+[71]
+K.P. Davidson, S.B. Singamneni
+Metallographic evaluation of duplex stainless steel powders processed by selective laser melting
+Rapid Prototyp J, 23 (6) (2017), pp. 1146-1163
+View articleView in ScopusGoogle Scholar
+[72]
+K. Saeidi, S. Alvi, F. Lofaj, V.I. Petkov, F. Akhtar
+Advanced mechanical strength in post heat treated SLM 2507 at room and high temperature promoted by hard/ductile sigma precipitates
+Metals, 9 (2) (2019), p. 199
+View at publisherCrossrefView in ScopusGoogle Scholar
+[73]
+P. Murkute, S. Pasebani, O.B. Isgor
+Metallurgical and electrochemical properties of super duplex stainless steel clads on low carbon steel substrate produced with laser powder bed fusion
+Sci Rep, 10 (1) (2020), pp. 1-19
+Google Scholar
+[74]
+P. Murkute, S. Pasebani, O.B. Isgor
+Effects of heat treatment and applied stresses on the corrosion performance of additively manufactured super duplex stainless steel clads
+Materialia, 14 (2020), Article 100878
+View PDF
+View articleView in ScopusGoogle Scholar
+[75]
+F. Shang, X. Chen, Z. Wang, Z. Ji, F. Ming, S. Ren, et al.
+The microstructure, mechanical properties, and corrosion resistance of UNS S32707 hyper-duplex stainless steel processed by selective laser melting
+Metals, 9 (9) (2019), p. 1012
+View at publisherCrossrefView in ScopusGoogle Scholar
+[76]
+F. Shang, X. Chen, P. Zhang, Z. Ji, F. Ming, S. Ren, et al.
+Novel ferritic stainless steel with advanced mechanical properties and significant magnetic responses processed by selective laser melting
+Mater Trans, 60 (6) (2019), pp. 1096-1102
+Google Scholar
+[77]
+J.H. Wen, L.J. Zhang, J. Ning, F. Xue, X.W. Lei, J.X. Zhang, et al.
+Laser additively manufactured intensive dual-phase steels and their microstructures, properties and corrosion resistance
+Mater Des, 192 (2020), Article 108710
+View PDF
+View articleView in ScopusGoogle Scholar
+[78]
+A.D. Iams, J.S. Keist, T.A. Palmer
+Formation of austenite in additively manufactured and post-processed duplex stainless steel alloys
+Metall Mater Trans A, 51 (2) (2020), pp. 982-999
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[79]
+B. Wu, Z. Pan, D. Ding, D. Cuiuri, H. Li, J. Xu, et al.
+A review of the wire arc additive manufacturing of metals: properties, defects and quality improvement
+<sb:title>J Manuf Process</sb:title><sb:volume-nr></sb:volume-nr>, 35 (2018), pp. 127-139
+View PDF
+View articleView in ScopusGoogle Scholar
+[80]
+C.R. Cunningham, J.M. Flynn, A. Shokrani, V. Dhokia, S.T. Newman
+Invited review article: strategies and processes for high quality wire arc additive manufacturing
+Addit Manuf, 22 (2018), pp. 672-686
+View PDF
+View articleView in ScopusGoogle Scholar
+[81]
+M. Köhler, S. Fiebig, J. Hensel, K. Dilger
+Wire and arc additive manufacturing of aluminum components
+Metals, 9 (5) (2019), p. 608
+View at publisherCrossrefView in ScopusGoogle Scholar
+[82]
+S. Selvi, A. Vishvaksenan, E. Rajasekar
+Cold metal transfer (CMT) technology-an overview
+Defence Technol, 14 (1) (2018), pp. 28-44
+View PDF
+View articleView in ScopusGoogle Scholar
+[83]
+T.A. Rodrigues, V. Duarte, R.M. Miranda, T.G. Santos, J.P. Oliveira
+Current status and perspectives on wire and arc additive manufacturing (WAAM)
+Materials, 12 (7) (2019), p. 1121
+View at publisherCrossrefView in ScopusGoogle Scholar
+[84]
+B. Wittig, M. Zinke, S. Jüttner
+Influence of arc energy and filler metal composition on the microstructure in wire arc additive manufacturing of duplex stainless steels
+Weld World, 65 (1) (2021), pp. 47-56
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[85]
+L. Yan, Y. Chen, F. Liou
+Additive manufacturing of functionally graded metallic materials using laser metal deposition
+Addit Manuf, 31 (2020), Article 100901
+View PDF
+View articleView in ScopusGoogle Scholar
+[86]
+D. Ding, Z. Pan, D. Cuiuri, H. Li
+Wire-feed additive manufacturing of metal components: technologies, developments and future interests
+Int J Adv Manuf Technol, 81 (1) (2015), pp. 465-481
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[87]
+B. Graf, A. Marko, T. Petrat, A. Gumenyuk, M. Rethmeier
+3D laser metal deposition: process steps for additive manufacturing
+Weld World, 62 (4) (2018), pp. 877-883
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[88]
+B. Graf, A. Gumenyuk, M. Rethmeier
+Laser metal deposition as repair technology for stainless steel and titanium alloys
+Phys Procedia, 39 (2012), pp. 376-381
+View PDF
+View articleView in ScopusGoogle Scholar
+[89]
+A. Langebeck, A. Bohlen, H. Freisse, F. Vollertsen
+Additive manufacturing with the lightweight material aluminium alloy EN AW-7075
+Weld World, 64 (3) (2020), pp. 429-436
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[90]
+M. Molitch-Hou
+Overview of additive manufacturing process
+J. Zhang, Y.G. Jung (Eds.), Additive manufacturing, Butterworth-Heinemann, Oxford (2018), pp. 1-38
+View PDF
+View articleView in ScopusGoogle Scholar
+[91]
+S.L. Sing, W.Y. Yeong
+Laser powder bed fusion for metal additive manufacturing: perspectives on recent developments
+Virtual Phys Prototyp, 15 (3) (2020), pp. 359-370
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[92]
+D. Gu, Y. Shi, R. Poprawe, D.L. Bourell, R. Setchi, J. Zhu
+Material-structure-performance integrated laser-metal additive manufacturing
+Science, 372 (6545) (2021)
+Google Scholar
+[93]
+W. Chen, G. Yin, Z. Feng, X. Liao
+Effect of powder feedstock on microstructure and mechanical properties of the 316L stainless steel fabricated by selective laser melting
+Metals, 8 (9) (2018), p. 729
+Google Scholar
+[94]
+K.H. Leitz, C. Grohs, P. Singer, B. Tabernig, A. Plankensteiner, H. Kestler, et al.
+Fundamental analysis of the influence of powder characteristics in selective laser melting of molybdenum based on a multi-physical simulation model
+Int J Refract Met Hard Mater, 72 (2018), pp. 1-8
+View PDF
+View articleView in ScopusGoogle Scholar
+[95]
+R. Baitimerov, P. Lykov, D. Zherebtsov, L. Radionova, A. Shultc, K.G. Prashanth
+Influence of powder characteristics on processability of AlSi12 alloy fabricated by selective laser melting
+Materials, 11 (5) (2018), p. 742
+View at publisherCrossrefView in ScopusGoogle Scholar
+[96]
+H.L. Wei, T. Mukherjee, W. Zhang, J.S. Zuback, G.L. Knapp, A. De, et al.
+Mechanistic models for additive manufacturing of metallic components
+Prog Mater Sci, 116 (2021), Article 100703
+View PDF
+View articleView in ScopusGoogle Scholar
+[97]
+A.A. Martin, N.P. Calta, S.A. Khairallah, J. Wang, P.J. Depond, A.Y. Fong, et al.
+Dynamics of pore formation during laser powder bed fusion additive manufacturing
+Nat Commun, 10 (1) (2019), pp. 1-10
+Google Scholar
+[98]
+N. Kouraytem, X. Li, R. Cunningham, C. Zhao, N. Parab, T. Sun, et al.
+Effect of laser-matter interaction on molten pool flow and keyhole dynamics
+Phys Rev Appl, 11 (6) (2019), Article 064054
+View in ScopusGoogle Scholar
+[99]
+S.L. Sing, J. An, W.Y. Yeong, F.E. Wiria
+Laser and electron-beam powder-bed additive manufacturing of metallic implants: a review on processes, materials and designs
+J Orthop Res, 34 (3) (2016), pp. 369-385
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[100]
+Y. Qin, P. Wen, H. Guo, D. Xia, Y. Zheng, L. Jauer, et al.
+Additive manufacturing of biodegradable metals: current research status and future perspectives
+Acta Biomater, 98 (2019), pp. 3-22
+View PDF
+View articleGoogle Scholar
+[101]
+L. Wang, Y. Zhang, W. Yan
+Evaporation model for keyhole dynamics during additive manufacturing of metal
+Phys Rev Appl, 14 (6) (2020), Article 064039
+View in ScopusGoogle Scholar
+[102]
+S.A. Khairallah, A.T. Anderson, A. Rubenchik, W.E. King
+Laser powder-bed fusion additive manufacturing: physics of complex melt flow and formation mechanisms of pores, spatter, and denudation zones
+Acta Mater, 108 (2016), pp. 36-45
+View PDF
+View articleView in ScopusGoogle Scholar
+[103]
+C. Zhao, N.D. Parab, X. Li, K. Fezzaa, W. Tan, A.D. Rollett, et al.
+Critical instability at moving keyhole tip generates porosity in laser melting
+Science, 370 (6520) (2020), pp. 1080-1086
+View at publisherCrossrefView in ScopusGoogle Scholar
+[104]
+K. Davidson, S. Singamneni
+Selective laser melting of duplex stainless steel powders: an investigation
+Mater Manuf Process, 31 (12) (2016), pp. 1543-1555
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[105]
+S. Greco, K. Gutzeit, H. Hotz, B. Kirsch, J.C. Aurich
+Selective laser melting (SLM) of AISI 316L—impact of laser power, layer thickness, and hatch spacing on roughness, density, and microhardness at constant input energy density
+Int J Adv Manuf Technol, 108 (2020), pp. 1551-1562
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[106]
+A. du Plessis
+Effects of process parameters on porosity in laser powder bed fusion revealed by X-ray tomography
+Addit Manuf, 30 (2019), Article 100871
+View PDF
+View articleView in ScopusGoogle Scholar
+[107]
+M.A. Melia, J.G. Duran, J.R. Koepke, D.J. Saiz, B.H. Jared, E.J. Schindelholz
+How build angle and post-processing impact roughness and corrosion of additively manufactured 316L stainless steel
+npj Mater Degrad, 4 (1) (2020), pp. 1-11
+View at publisherCrossrefGoogle Scholar
+[108]
+S. Lee, J.W. Pegues, N. Shamsaei
+Fatigue behavior and modeling for additive manufactured 304L stainless steel: the effect of surface roughness
+<sb:title>Int J Fatigue</sb:title><sb:volume-nr></sb:volume-nr>, 141 (2020), Article 105856
+View PDF
+View articleView in ScopusGoogle Scholar
+[109]
+D. Gu, Y. Shen
+Balling phenomena in direct laser sintering of stainless steel powder: metallurgical mechanisms and control methods
+Mater Des, 30 (8) (2009), pp. 2903-2910
+View PDF
+View articleView in ScopusGoogle Scholar
+[110]
+C. Li, Z.Y. Liu, X.Y. Fang, Y.B. Guo
+Residual stress in metal additive manufacturing
+Procedia Cirp, 71 (2018), pp. 348-353
+View PDF
+View articleView in ScopusGoogle Scholar
+[111]
+A. Salmi, E. Atzeni
+History of residual stresses during the production phases of AlSi10Mg parts processed by powder bed additive manufacturing technology
+Virtual Phys Prototyp, 12 (2) (2017), pp. 153-160
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[112]
+X. Zhang, K. Wang, Q. Zhou, J. Kong, Y. Peng, J. Ding, et al.
+Element partitioning and electron backscatter diffraction analysis from feeding wire to as-deposited microstructure of wire and arc additive manufacturing with super duplex stainless steel
+Mater Sci Eng A, 773 (2020), Article 138856
+View PDF
+View articleView in ScopusGoogle Scholar
+[113]
+E. Capello, P. Chiarello, B. Previtali, M. Vedani
+Laser welding and surface treatment of a 22Cr–5Ni–3Mo duplex stainless steel
+Mater Sci Eng A, 351 (1–2) (2003), pp. 334-343
+View PDF
+View articleView in ScopusGoogle Scholar
+[114]
+R. Lai, Y. Cai, Y. Wu, F. Li, X. Hua
+Influence of absorbed nitrogen on microstructure and corrosion resistance of 2205 duplex stainless steel joint processed by fiber laser welding
+J Mater Process Technol, 231 (2016), pp. 397-405
+View PDF
+View articleView in ScopusGoogle Scholar
+[115]
+H. Li, Z. Jiang, Z. Zhang, Y. Yang
+Effect of grain size on mechanical properties of nickel-free high nitrogen austenitic stainless steel
+J Iron Steel Res Int, 16 (1) (2009), pp. 58-61
+View PDF
+View articleGoogle Scholar
+[116]
+K.D. Ralston, N. Birbilis
+Effect of grain size on corrosion: a review
+Corrosion, 66 (7) (2010), pp. 075005-075005-13
+Google Scholar
+[117]
+Y. Ohmori, K. Nakai, H. Ohtsubo, Y. Isshiki
+Mechanism of Widmanstätten austenite formation in a δ/γ duplex phase stainless steel
+ISIJ Int, 35 (8) (1995), pp. 969-975
+View at publisherCrossrefView in ScopusGoogle Scholar
+[118]
+W.N. Khan, S. Mahajan, R. Chhibber
+Investigations on reformed austenite in the microstructure of dissimilar super duplex/pipeline steel weld
+Mater Lett, 285 (2021), Article 129109
+View PDF
+View articleView in ScopusGoogle Scholar
+[119]
+A. Röttger, K. Geenen, M. Windmann, F. Binner, W. Theisen
+Comparison of microstructure and mechanical properties of 316 L austenitic steel processed by selective laser melting with hot-isostatic pressed and cast material
+Mater Sci Eng A, 678 (2016), pp. 365-376
+View PDF
+View articleView in ScopusGoogle Scholar
+[120]
+D. Zhang, P. Wen, B. Yin, A. Liu
+Temperature evolution, phase ratio and corrosion resistance of duplex stainless steels treated by laser surface heat treatment
+J Manuf Process, 62 (2021), pp. 99-107
+View PDF
+View articleGoogle Scholar
+[121]
+J. Stützer, T. Totzauer, B. Wittig, M. Zinke, S. Jüttner
+GMAW cold wire technology for adjusting the ferrite–austenite ratio of wire and arc additive manufactured duplex stainless steel components
+Metals, 9 (5) (2019), p. 564
+View at publisherCrossrefView in ScopusGoogle Scholar
+[122]
+J. Xiong, R. Li, Y. Lei, H. Chen
+Heat propagation of circular thin-walled parts fabricated in additive manufacturing using gas metal arc welding
+J Mater Process Technol, 251 (2018), pp. 12-19
+View PDF
+View articleView in ScopusGoogle Scholar
+[123]
+K.W. Chan, S.C. Tjong
+Effect of secondary phase precipitation on the corrosion behavior of duplex stainless steels
+Materials, 7 (7) (2014), pp. 5268-5304
+View at publisherCrossrefView in ScopusGoogle Scholar
+[124]
+B. Deng, Z. Wang, Y. Jiang, T. Sun, J. Xu, J. Li
+Effect of thermal cycles on the corrosion and mechanical properties of UNS S31803 duplex stainless steel
+Corros Sci, 51 (12) (2009), pp. 2969-2975
+View PDF
+View articleView in ScopusGoogle Scholar
+[125]
+E. Cederberg, V.A. Hosseini, C. Kumara, L. Karlsson
+Physical simulation of additively manufactured super duplex stainless steels–microstructure and properties
+Addit Manuf, 34 (2020), Article 101269
+View PDF
+View articleView in ScopusGoogle Scholar
+[126]
+S. Atamert, J.E. King
+Sigma-phase formation and its prevention in duplex stainless steels
+J Mater Sci Lett, 12 (14) (1993), pp. 1144-1147
+View in ScopusGoogle Scholar
+[127]
+V.S. Moura, L.D. Lima, J.M. Pardal, A.Y. Kina, R.R.A. Corte, S.S.M. Tavares
+Influence of microstructure on the corrosion resistance of the duplex stainless steel UNS S31803
+Mater Charact, 59 (8) (2008), pp. 1127-1132
+View PDF
+View articleView in ScopusGoogle Scholar
+[128]
+M. Martins, L.C. Casteletti
+Effect of heat treatment on the mechanical properties of ASTM A 890 Gr6A super duplex stainless steel
+J ASTM Int, 2 (1) (2005), pp. 1-14
+View at publisherCrossrefGoogle Scholar
+[129]
+V.A. Hosseini, L. Karlsson, S. Wessman, N. Fuertes
+Effect of sigma phase morphology on the degradation of properties in a super duplex stainless steel
+Materials, 11 (6) (2018), p. 933
+View at publisherCrossrefView in ScopusGoogle Scholar
+[130]
+N. Pettersson, R.F.A. Pettersson, S. Wessman
+Precipitation of chromium nitrides in the super duplex stainless steel 2507
+Metall Mater Trans A, 46 (3) (2015), pp. 1062-1072
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[131]
+H. Kokawa, M. Tomita, T. Kuwana
+Effect of nitrogen on impact toughness of duplex stainless steel weld metal
+Weld Int, 9 (3) (1995), pp. 217-224
+View at publisherCrossrefView in ScopusGoogle Scholar
+[132]
+M. De Marco, M. Palombo, A. Pianezze, A. Taiche, V. Spinelli, D. Marina
+Effects of nitrides precipitation in duplex stainless steel
+NACE international corrosion conference proceedings, NACEInternational (2018), pp. 1-10
+View in ScopusGoogle Scholar
+[133]
+Z. Zhang, H. Jing, L. Xu, Y. Han, L. Zhao
+Investigation on microstructure evolution and properties of duplex stainless steel joint multi-pass welded by using different methods
+Mater Des, 109 (2016), pp. 670-685
+View PDF
+View articleView in ScopusGoogle Scholar
+[134]
+S.T. Kim, S.H. Jang, I.S. Lee, Y.S. Park
+Effects of solution heat-treatment and nitrogen in shielding gas on the resistance to pitting corrosion of hyper duplex stainless steel welds
+Corros Sci, 53 (5) (2011), pp. 1939-1947
+View PDF
+View articleView in ScopusGoogle Scholar
+[135]
+J.O. Nilsson, L. Karlsson, J.O. Andersson
+Secondary austenite formation and its relation to pitting corrosion in duplex stainless steel weld metal
+Mater Sci Technol, 11 (3) (1995), pp. 276-283
+View at publisherCrossrefView in ScopusGoogle Scholar
+[136]
+Z. Zhang, H. Jing, L. Xu, Y. Han, L. Zhao, X. Lv
+Effect of post-weld heat treatment on microstructure evolution and pitting corrosion resistance of electron beam-welded duplex stainless steel
+Corros Sci, 141 (2018), pp. 30-45
+View PDF
+View articleCrossrefGoogle Scholar
+[137]
+E.C.D. Souza, S.M. Rossitti, C.A. Fortulan, J.M.D.D.A. Rollo
+Influence of ferrite phase content on the electrochemical properties of duplex stainless steels
+Mater Res, 20 (1) (2017), pp. 21-29
+View at publisherCrossrefGoogle Scholar
+[138]
+K. Vijayalakshmi, V. Muthupandi, R. Jayachitra
+Influence of heat treatment on the microstructure, ultrasonic attenuation and hardness of SAF 2205 duplex stainless steel
+Mater Sci Eng A, 529 (2011), pp. 447-451
+View PDF
+View articleView in ScopusGoogle Scholar
+[139]
+H. Hwang, Y. Park
+Effects of heat treatment on the phase ratio and corrosion resistance of duplex stainless steel
+Mater Trans, 50 (6) (2009), pp. 1548-1552
+View in ScopusGoogle Scholar
+[140]
+R. Badji, M. Bouabdallah, B. Bacroix, C. Kahloun, B. Belkessa, H. Maza
+Phase transformation and mechanical behavior in annealed 2205 duplex stainless steel welds
+Mater Charact, 59 (4) (2008), pp. 447-453
+View PDF
+View articleView in ScopusGoogle Scholar
+[141]
+F. Dupoiron, J.P. Audouard
+Duplex stainless steels: a high mechanical properties stainless steels family
+Scand J Metall, 25 (3) (1996), pp. 95-102
+View in ScopusGoogle Scholar
+[142]
+H. Yilmaz, C.J. Williams, B. Derby
+Size effects on strength and plasticity of ferrite and austenite pillars in a duplex stainless steel
+Mater Sci Eng A, 793 (2020), Article 139883
+View PDF
+View articleView in ScopusGoogle Scholar
+[143]
+M. Pan, X. Zhang, P. Chen, X. Su, R.D.K. Misra
+The effect of chemical composition and annealing condition on the microstructure and tensile properties of a resource-saving duplex stainless steel
+Mater Sci Eng A, 788 (2020), Article 139540
+View PDF
+View articleView in ScopusGoogle Scholar
+[144]
+Y.M. Wang, T. Voisin, J.T. McKeown, J. Ye, N.P. Calta, Z. Li, et al.
+Additively manufactured hierarchical stainless steels with high strength and ductility
+Nat Mater, 17 (1) (2018), pp. 63-71
+Google Scholar
+[145]
+R. Molaei, A. Fatemi
+Fatigue design with additive manufactured metals: issues to consider and perspective for future research
+Procedia Eng, 213 (2018), pp. 5-16
+View PDF
+View articleView in ScopusGoogle Scholar
+[146]
+T.H. Chen, K.L. Weng, J.R. Yang
+The effect of high-temperature exposure on the microstructural stability and toughness property in a 2205 duplex stainless steel
+Mater Sci Eng A, 338 (1–2) (2002), pp. 259-270
+View PDF
+View articleView in ScopusGoogle Scholar
+[147]
+I. Calliari, M. Zanesco, E. Ramous
+Influence of isothermal aging on secondary phases precipitation and toughness of a duplex stainless steel SAF 2205
+J Mater Sci, 41 (22) (2006), pp. 7643-7649
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[148]
+S.S.M. Tavares, V.F. Terra, J.M. Pardal, M.P.C. Fonseca
+Influence of the microstructure on the toughness of a duplex stainless steel UNS S31803
+J Mater Sci, 40 (1) (2005), pp. 145-154
+View at publisher
+CrossrefView in ScopusGoogle Scholar
+[149]
+I. Zucato, M.C. Moreira, I.F. Machado, S.M.G. Lebrão
+Microstructural characterization and the effect of phase transformations on toughness of the UNS S31803 duplex stainless steel aged treated at 850 °C
+Mater Res, 5 (3) (2002), pp. 385-389
+View at publisherCrossrefGoogle Scholar
+[150]
+J. Verma, R.V. Taiwade, R.K. Khatirkar, S.G. Sapate, A.D. Gaikwad
+Microstructure, mechanical and intergranular corrosion behavior of dissimilar DSS 2205 and ASS 316L shielded metal arc welds
+<sb:contribution></sb:contribution><sb:host><sb:issue><sb:series><sb:title>Trans Indian Inst Metals</sb:title></sb:series></sb:issue></sb:host>, 70 (1) (2017), pp. 225-237
+CrossrefView in ScopusGoogle Scholar
+[151]
+D. Upadhyay, M.A. Panchal, R.S. Dubey, V.K. Srivastava
+Corrosion of alloys used in dentistry: a review
+Mater Sci Eng A, 432 (1–2) (2006), pp. 1-11
+View PDF
+View articleView in ScopusGoogle Scholar
+[152]
+L.F. Garfias-Mesias, J.M. Sykes, C.D.S. Tuck
+The effect of phase compositions on the pitting corrosion of 25 Cr duplex stainless steel in chloride solutions
+Corros Sci, 38 (8) (1996), pp. 1319-1330
+View PDF
+View articleView in ScopusGoogle Scholar
+[153]
+Z. Zhang, H. Jing, L. Xu, Y. Han, L. Zhao, J. Zhang
+Influence of microstructure and elemental partitioning on pitting corrosion resistance of duplex stainless steel welding joints
+Appl Surf Sci, 394 (2017), pp. 297-314
+View PDF
+View articleView in ScopusGoogle Scholar
+[154]
+Y. Tang, N. Dai, J. Wu, Y. Jiang, J. Li
+Effect of surface roughness on pitting corrosion of 2205 duplex stainless steel investigated by electrochemical noise measurements
+Materials, 12 (5) (2019), p. 738
+CrossrefView in ScopusGoogle Scholar
+[155]
+M. Soleimani, H. Mirzadeh, C. Dehghanian
+Effect of grain size on the corrosion resistance of low carbon steel
+Mater Res Express, 7 (1) (2020), Article 016522
+CrossrefGoogle Scholar
+[156]
+C.Y. Ma, L. Zhou, R.X. Zhang, D.G. Li, F.Y. Shu, X.G. Song, et al.
+Enhancement in mechanical properties and corrosion resistance of 2507 duplex stainless steel via friction stir processing
+J Mater Res Technol, 9 (4) (2020), pp. 8296-8305
+View PDF
+View articleView in ScopusGoogle Scholar
+[157]
+M.L. Köhler, J. Kunz, S. Herzog, A. Kaletsch, C. Broeckmann
+Microstructure analysis of novel LPBF-processed duplex stainless steels correlated to their mechanical and corrosion properties
+Mater Sci Eng A, 801 (2021), Article 140432
+View PDF
+View articleView in ScopusGoogle Scholar
+[158]
+X. Wang, K. Du, Q. Zhou, P. Ou, D. Zhang, W. Yang, et al.
+Laser melting deposition of duplex stainless-steel coating on high strength low alloy pipeline steels for improving wear and corrosion resistance
+Mater Express, 9 (9) (2019), pp. 1009-1016
+CrossrefView in ScopusGoogle Scholar
+Cited by (140)
+Revolutionizing manufacturing: A comprehensive overview of additive manufacturing processes, materials, developments, and challenges
+2023, Journal of Manufacturing Processes
+Show abstract
+Control of grain structure, phases, and defects in additive manufacturing of high-performance metallic components
+2023, Progress in Materials Science
+Show abstract
+Toward a smart wire arc additive manufacturing system: A review on current developments and a framework of digital twin
+2023, Journal of Manufacturing Systems
+Citation Excerpt :
+
+As the first step towards monitoring, control, and simulation, WAAM models are widely used to investigate welding defects, deposition physics, and product properties. For example, thermal models can provide detailed temperature evolution during the deposition, thus helping the selection of process parameters [98]. To develop an automatic system, model accuracy, adaptiveness, scalability, as well as time efficiency are the main concerns during the modeling phase.
+
+Show abstract
+A specially-designed super duplex stainless steel with balanced ferrite:austenite ratio fabricated via flux-cored wire arc additive manufacturing: Microstructure evolution, mechanical properties and corrosion resistance
+2022, Materials Science and Engineering A
+Citation Excerpt :
+
+Each corrosion test was conducted two or three times to ensure repeatability [25]. The microstructure evolution of DSS depends on its manufacturing processes and chemical compositions [5]. Thus, the alloy design and the microstructure evolution investigations of the FCWA-AM SDSS had to be based on the thermal history it experienced during manufacturing, as presented in Fig. 2.
+
+Show abstract
+Laser-aided additive manufacturing of high entropy alloys: Processes, properties, and emerging applications
+2022, Journal of Manufacturing Processes
+Show abstract
+Hydrogen Embrittlement as a Conspicuous Material Challenge─Comprehensive Review and Future Directions
+2024, Chemical Reviews
+View all citing articles on Scopus
+1
+Equal contribution, Joint first authors.
+View Abstract
+© 2021 The Society of Manufacturing Engineers. Published by Elsevier Ltd. All rights reserved.
+About ScienceDirect
+Remote access
+Contact and support
+Terms and conditions
+Privacy policy
+
+Cookies are used by this site.Cookie Settings
+
+All content on this site: Copyright © 2025 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply.

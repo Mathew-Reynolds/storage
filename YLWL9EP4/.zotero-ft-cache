@@ -1,0 +1,1024 @@
+POLITECNICO DI TORINO
+Master’s Degree in Aerospace Engineering
+Master’s Degree Thesis
+Experimental Investigation of
+Hydraulic and Thermal Properties in
+Additively Manufactured Channels with
+Air Flow
+Supervisors
+Prof. Dario Giuseppe PASTRONE
+Ph.D. Mats KINELL
+Candidate
+Vincenzo MADONIA
+October 2024
+
+
+
+
+Summary
+Additive manufacturing (AM) of metal alloys enables the creation of components with complex internal geometries that are often unachievable with traditional methods, offering reduced time and costs. A key application is the production of micro-channels for cooling high-temperature gas turbine components. However, the AM process introduces higher surface roughness compared to conventional methods, which significantly affects hydraulic and thermal performance, as well as material fatigue behavior. This experimental study aims to characterize the effect of relative roughness on these phenomena, focusing on two key performance parameters: the Darcy friction factor and the Nusselt number. Tests were conducted on aluminum and Inconel-939 specimens, featuring straight channels of various lengths and cross-sectional shapes, using air as the working fluid. The results revealed that, in the turbulent regime, surface roughness has a significant impact on pressure losses, increasing the Darcy friction factor compared to smooth channels. Additionally, the Nusselt number also increased due to the roughness-induced turbulence, enhancing flow mixing and heat transfer efficiency. Further analysis demonstrated that the Prandtl number does not significantly affect the Darcy friction factor, as predicted by theory, but plays a critical role in determining the Nusselt number, in line with parallel studies conducted on waterbased rigs. Although clear trends were observed, further research is required to develop predictive correlations that account for different materials and geometries.
+ii
+
+
+Summary
+La manifattura additiva (AM) di leghe metalliche consente la realizzazione di componenti con geometrie interne complesse, spesso irrealizzabili con metodi tradizionali, garantendo tempi e costi ridotti. Un’applicazione rilevante è la produzione di microcanali per il raffreddamento di componenti ad alta temperatura nelle turbine a gas. Tuttavia, il processo AM introduce una maggiore rugosità superficiale rispetto ai metodi convenzionali, con implicazioni significative sulle prestazioni idrauliche, termiche e sulla resistenza a fatica dei materiali. Questo studio sperimentale si propone di caratterizzare l’effetto della rugosità relativa su questi fenomeni, focalizzandosi su due parametri adimensionali: il Darcy friction factor e il numero di Nusselt. I test sono stati condotti su provini in alluminio e Inconel-939, con canali rettilinei, di diverse lunghezze e sezioni trasversali, utilizzando l’aria come fluido operante. I risultati hanno evidenziato che, in regime turbolento, la rugosità superficiale ha un impatto significativo sulle perdite di pressione, incrementando il Darcy friction factor rispetto ai canali lisci. Inoltre, anche il numero di Nusselt risulta aumentato, poiché la turbolenza indotta dalla rugosità favorisce un miglior mescolamento del flusso e un più efficiente scambio termico. Un’ulteriore analisi ha evidenziato che il numero di Prandtl non ha un’influenza significativa sul Darcy friction factor, come previsto dalla teoria, ma è fondamentale per il numero di Nusselt, in linea con quanto riportato da studi paralleli condotti su impianti ad acqua. I risultati indicano che, sebbene siano state osservate tendenze chiare, ulteriori studi sono necessari per sviluppare correlazioni predittive che tengano conto di materiali e geometrie differenti.
+iii
+
+
+
+
+Table of Contents
+List of Tables vii
+List of Figures viii
+Acronyms xi
+List of Symbols xii
+1 Introduction 1 1.1 Objective of the Study . . . . . . . . . . . . . . . . . . . . . . . . . 4 1.2 Limitations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+2 Experimental and Theoretical review 7 2.1 Literature Review . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7 2.2 Work Conducted at the Siemens Energy Fluid-Dynamic Laboratory 10
+3 Theoretical background 12 3.1 Boundary layer dynamics and flow regimes . . . . . . . . . . . . . . 12 3.1.1 Boundary layer . . . . . . . . . . . . . . . . . . . . . . . . . 12 3.1.2 Flow regime . . . . . . . . . . . . . . . . . . . . . . . . . . . 16 3.1.3 Flow development . . . . . . . . . . . . . . . . . . . . . . . . 17 3.2 Pressure losses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18 3.3 Heat transfer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21 3.4 Additive manufacturing . . . . . . . . . . . . . . . . . . . . . . . . . 23
+4 Experimental setup 29 4.1 qSSHT Air Rig . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29 4.1.1 qSSHT Air Rig system scheme . . . . . . . . . . . . . . . . . 32 4.1.2 Measure instruments scheme . . . . . . . . . . . . . . . . . . 33 4.2 Test objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34
+5 Methodology 38 5.1 Test Procedures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38 5.1.1 Microscope Photos of Specimens . . . . . . . . . . . . . . . . 38 5.1.2 Leakage test . . . . . . . . . . . . . . . . . . . . . . . . . . . 40 5.1.3 Darcy friction factor test . . . . . . . . . . . . . . . . . . . . 42 5.1.4 Nusselt test . . . . . . . . . . . . . . . . . . . . . . . . . . . 44 5.2 Data Processing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46
+v
+
+
+5.2.1 Geometrical Evaluation of Specimens . . . . . . . . . . . . . 46 5.2.2 Darcy Friction Factor Evaluation . . . . . . . . . . . . . . . 48 5.2.3 Nusselt number evaluation . . . . . . . . . . . . . . . . . . . 51 5.2.4 Roughness Evaluation . . . . . . . . . . . . . . . . . . . . . 57
+6 Rig validation 60
+7 Results 64 7.1 Effect of Geometry . . . . . . . . . . . . . . . . . . . . . . . . . . . 65 7.1.1 Hydraulic diameter . . . . . . . . . . . . . . . . . . . . . . . 65 7.1.2 Length and cross-sectional shape . . . . . . . . . . . . . . . 70 7.2 Material effect . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72 7.3 Effect of the Prandtl Number . . . . . . . . . . . . . . . . . . . . . 75
+8 Conclusions and future work 82 8.1 Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82 8.2 Future work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 84
+A Appendix A 86 A.1 Uncertainty analysis . . . . . . . . . . . . . . . . . . . . . . . . . . 86
+B Appendix B 89 B.1 Geometrical evaluation code . . . . . . . . . . . . . . . . . . . . . . 89 B.2 Darcy friction factor evaluation code . . . . . . . . . . . . . . . . . 92 B.3 Nusselt number e evaluation code . . . . . . . . . . . . . . . . . . . 98
+Bibliography 105
+vi
+
+
+List of Tables
+3.1 Coefficients c1 and c2 for different flow regimes . . . . . . . . . . . . 20 3.2 Roughness parameters . . . . . . . . . . . . . . . . . . . . . . . . . 27
+4.1 Inconel 939 chemical composition [49]. . . . . . . . . . . . . . . . . 34 4.2 Aluminium chemical composition [50]. . . . . . . . . . . . . . . . . 35 4.3 Test objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 36
+5.1 Darcy Test Procedure [18] . . . . . . . . . . . . . . . . . . . . . . . 43 5.2 Heat transfer test procedure [18] . . . . . . . . . . . . . . . . . . . . 44
+A.1 Measurement instrument uncertainties . . . . . . . . . . . . . . . . 86
+vii
+
+
+List of Figures
+1.1 Example of a gas turbine diagram . . . . . . . . . . . . . . . . . . . 1 1.2 Ideal Brayton cycle . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 1.3 Siemens Energy SGT-800 . . . . . . . . . . . . . . . . . . . . . . . . 3 1.4 Turbine blade cooling techniques . . . . . . . . . . . . . . . . . . . 4
+2.1 Nikuradse experimental data in rough pipes . . . . . . . . . . . . . 9
+3.1 Different velocity profiles within the boundary layer [35] . . . . . . 13 3.2 Thermal and velocity boundary layer [35] . . . . . . . . . . . . . . . 15 3.3 Laminar boundary layer development in a circular pipe . . . . . . . 17 3.4 Moody diagram . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20 3.5 Effect of SLM process parameters [46] . . . . . . . . . . . . . . . . . 24 3.6 Working principle of SLM process [46] . . . . . . . . . . . . . . . . . 25 3.7 Ra and Rv definitions . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+4.1 qSSHT Air Rig . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29 4.2 New insulationg design of the Rig . . . . . . . . . . . . . . . . . . . 30 4.3 qSSHT Air rig configuration . . . . . . . . . . . . . . . . . . . . . . 31 4.4 Hydraulic scheme of the Air rig . . . . . . . . . . . . . . . . . . . . 32 4.5 Measure instruments scheme . . . . . . . . . . . . . . . . . . . . . . 33 4.6 EOSM 400 − 4 model used at Siemens Energy . . . . . . . . . . . . 34 4.7 CAD model of a generic specimen . . . . . . . . . . . . . . . . . . . 35
+5.1 Zeiss CL 1500 ECO microscope . . . . . . . . . . . . . . . . . . . . 39 5.2 Input and output sections of a generic TO . . . . . . . . . . . . . . 40 5.3 Example of a leak at the 9116 NetScanner . . . . . . . . . . . . . . 41 5.4 Example of a leak at a pressure tap . . . . . . . . . . . . . . . . . . 41 5.5 Pressure drop displayed using RigView . . . . . . . . . . . . . . . . 42 5.6 Real-time approximate estimation of Nusselt enhancement . . . . . 45 5.7 Image selected for geometric evaluation . . . . . . . . . . . . . . . . 46 5.8 Selected points along the perimeter . . . . . . . . . . . . . . . . . . 47 5.9 Spline creation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47 5.10 Pressure loss scheme . . . . . . . . . . . . . . . . . . . . . . . . . . 49 5.11 Model with thermal resistances [18] . . . . . . . . . . . . . . . . . . 52 5.12 Specimen discretization . . . . . . . . . . . . . . . . . . . . . . . . . 54 5.13 Iterative cycle to calculate h [18] . . . . . . . . . . . . . . . . . . . 55 5.14 CAD models of complex geometries . . . . . . . . . . . . . . . . . . 56 5.15 Geometry of a generic sample imported to C3D . . . . . . . . . . . 56
+viii
+
+
+5.16 C3D results of a generic test object . . . . . . . . . . . . . . . . . . 57 5.17 Skidded roughness measurement . . . . . . . . . . . . . . . . . . . . 58 5.18 Example of a roughness profile graph . . . . . . . . . . . . . . . . . 58
+6.1 Smooth Aluminum sample inlet section . . . . . . . . . . . . . . . . 60 6.2 Darcy friction factor test for smooth test specimen . . . . . . . . . 61 6.3 Nusselt test for smooth test specimen . . . . . . . . . . . . . . . . . 62
+7.1 Darcy friction factor results for Aluminum TOs . . . . . . . . . . . 65 7.2 Darcy friction factor results for IN939 TOs . . . . . . . . . . . . . . 66 7.3 Nusselt results for Aluminium TOs . . . . . . . . . . . . . . . . . . 67 7.4 Nusselt enhancement results for Aluminium TOs . . . . . . . . . . . 68 7.5 Nusselt results for IN939 TOs . . . . . . . . . . . . . . . . . . . . . 69 7.6 Nusselt enhancement results for IN939 TOs . . . . . . . . . . . . . 69 7.7 Effect of length and cross-sectional shape on the fD . . . . . . . . . 70 7.8 Effect of length and shape on the N uenh . . . . . . . . . . . . . . . 71 7.9 Effect of material on the fd for TOs with Dh = 1mm and L = 90mm 72 7.10 Comparison of Aluminum and Inconel-939 roughness . . . . . . . . 73 7.11 Effect of material on the N u for TOs with Dh = 2mm and L = 90mm 74 7.12 Effect of P r on the fD for TOs with Dh = 2mm . . . . . . . . . . . 75 7.13 Effect of P r on the N u for Al TOs with Dh = 2mm . . . . . . . . . 76 7.14 Effect of P r on the N u for IN939 TOs with Dh = 2mm . . . . . . . 77 7.15 Real trends for Aluminum specimens in a reduced Re range . . . . 78 7.16 Aligned trends for Aluminum specimens . . . . . . . . . . . . . . . 79 7.17 Real trends for IN939 specimens in a reduced Re range . . . . . . . 80 7.18 Aligned trends for IN939 specimens . . . . . . . . . . . . . . . . . . 80
+8.1 fD results for tested channels . . . . . . . . . . . . . . . . . . . . . 83 8.2 N u results for tested channels . . . . . . . . . . . . . . . . . . . . . 83 8.3 CFD analysis of the qSSHT Air Rig with Joule heating . . . . . . . 85
+ix
+
+
+
+
+Acronyms
+AM Additive Manufacturing
+CIP Compressor Inlet Pressure
+DMLS Direct Metal Laser Sintering
+htc Heat Transfer Coefficient
+IN939 Inconel-939
+L-PBF Laser Powder Bed Fusion
+PBF Powder Bed Fusion
+qSSHT quasi-Steady State Heat Transfer
+SLS Selective Laser Sintering SLM Selective Laser Melting
+TIT Turbine Inlet Temperature TO Test Object
+xi
+
+
+List of symbols
+Variable Description SI Unit A Cross-sectional area of the conduit m2 Awet Wetted surface area of the conduit m2 cp Specific heat at constant pressure J/kgK Dh Hydraulic diameter of the conduit m Do Outer diameter of the specimen m fD Darcy friction factor h Convective heat transfer coefficient W/Km2 hcontact Contact heat transfer thermal paste resistance W/Km2 k Thermal conductivity W/Km kair Air thermal conductivity W/Km km Metal thermal conductivity W/Km ks Size of Nikuradse sand grains μm L Test object axial length m Lc Characteristic length m N u Nusselt number N u/N u0 Nusselt enhancement number N u0 Nusselt number from Gnielinski correlation N uenh Nusselt enhancement number N ux Local Nusselt number N u∞ Nusselt number of a fully developed flow p Static pressure Pa pdynamic Dynamic pressure Pa ploss,in Inlet pressure loss Pa ploss,out Outlet pressure loss Pa P Cross-sectional perimeter of the conduit m P r Prandtl number r Nikuradse tube radius m R Universal gas constant of air J/KgK Re Reynolds number Ra Arithmetic average roughness μm Rku Kurtoisis Rp Mean roughness peak μm Rq Root mean square roughness μm Rsk Skewness Rv Mean roughness valley μm
+xii
+
+
+Variable Description SI Unit Rz Mean roughness depth μm Rz/Dh Relative roughness T Temperature K T3 Turbine inlet temperature K Te Freestream Temperature K Tcu Copper temperature K Tin Inlet air temperature K Tfluid Fluid temperature K Tout Outlet air temperature K Twall Wall temperature K u Flow velocity m/s ue Free-stream flow velocity m/s uwall Wall flow velocity m/s V Wetted volume of the conduit m3 x Distance from leading edge m xfd,h Hydrodynamic entry length m  ̇m Mass flow rate kg/s q ̇ Heat flux W/m2 α Thermal diffusivity m2/s δ Velocity boundary layer thickness m δT Thermal boundary layer thickness m ∆p Pressure difference Pa ∆ptot Total pressure difference Pa ε Surface roughness μm μ Dynamic viscosity Pa·s ν Kinematic viscosity m2/s ρ Density kg/m3 ρin Inlet air density kg/m3 ρout Outlet air density kg/m3 τ Shear stress Pa
+xiii
+
+
+
+
+Chapter 1
+Introduction
+A gas turbine is a mechanical device that converts energy from fuel (chemical energy) into mechanical work by harnessing the expansion of high-temperature, high-pressure gases. It is used primarily in power generation, aviation, and industrial applications. The main components of a gas turbine system include an upstream compressor, a combustor, and a downstream turbine (Figure 1.1). The turbine expands the hot, high-pressure gases, converting thermal energy into mechanical energy [1].
+Figure 1.1: Example of a gas turbine diagram
+The thermodynamic cycle that governs the operation of gas turbines is the Brayton cycle, as shown in Figure 1.2. Within a gas turbine there are three main stages based on this cycle. Assuming ideal transformations, the air is first compressed isentropically in the compressor. The compressed air is mixed with fuel and burned
+1
+
+
+Introduction
+at constant pressure, producing high-temperature, high-pressure gases. Finally, these gases expand isentropically through the turbine, producing mechanical work.
+Figure 1.2: Ideal Brayton cycle
+Some of the key parameters that characterize the operation of a gas generator are the Compressor Inlet Pressure (CIP), the Turbine Inlet Temperature (TIT, corresponding to T3 in Figure 1.2), and the rotational speed. Among these, the Turbine Inlet Temperature is particularly important, as it directly affects the overall efficiency and performance of the system. An increase in the TIT significantly enhances thermal efficiency and the power output of the system. However, raising this temperature also presents engineering challenges, including higher thermal stress on turbine materials and a potential increase in wear rates. Advanced materials and cooling techniques are employed to manage these high temperatures, which would otherwise damage internal components [1]. A representative example is the Siemens Energy SGT-800 turbine (Figure 1.3), which reaches TIT levels up to 1700◦C. These extreme temperatures are critical for high efficiency but exceed the thermal limits of turbine blades, which can generally withstand only 1000 − 1100◦C without deformation or structural damage.
+2
+
+
+Introduction
+Figure 1.3: Siemens Energy SGT-800
+To manage this risk, advanced cooling systems are employed to keep the turbine blade surface temperatures within acceptable limits, thereby extending the operational life of the turbine and maintaining the efficiency of the Brayton cycle. These cooling systems use air bled from the compressor. However, air bleeding reduces the amount of air available for combustion, thereby reducing the total power output [2]. In addition, this diversion of air results in a loss of efficiency because the energy used to compress the air is not fully utilized within the Brayton cycle. The more air is diverted, the more turbine performance and efficiency are reduced. To minimize the negative effects of air bleeding, solutions are sought to maintain system performance with reduced air extraction. Therefore, designing a cooling system that ensures efficient heat transfer while minimizing pressure losses during distribution is crucial. One effective way to enhance convective heat transfer in turbine cooling channels is by increasing the wetted surface area and turbulence levels. Examples of cooling strategies for turbine blades, such as pin fins, rib turbulators, and film cooling, are shown in Figure 1.4 [3]. In recent decades, the advent of new technologies and manufacturing processes has radically changed the approach to challenges such as turbine cooling. Additive Manufacturing (AM) enables the production of cooling channels using superalloy materials, that offer high mechanical properties even at elevated temperatures. This process also allows for the creation of complex geometries due to fewer geometric constraints, and it reduces the production time and cost of certain components compared to traditional manufacturing methods [4].
+3
+
+
+Introduction
+However, the use of AM also presents challenges, such as managing the internal surface roughness of the channels and the need for rigorous quality controls to ensure the structural integrity of the manufactured components. The sintering process generates microstructures and porosity, limiting the mechanical properties of AM elements. Increased surface roughness in additive-manufactured cooling channels has a significant impact on fluid dynamics and thermal performance, resulting in higher pressure drop and heat transfer due to increased turbulence induced by the rough surface. Therefore, thorough experimental analysis is required to fully understand these effects.
+Figure 1.4: Turbine blade cooling techniques
+1.1 Objective of the Study
+As described earlier, additive manufacturing enables the fabrication of cooling system ducts for turbines made from superalloys with complex geometries in a shorter time and at a lower cost. Such a process would be extremely challenging and often impractical using traditional manufacturing methods. This technology offers not only greater design freedom but also improves heat transfer performance
+4
+
+
+Introduction
+and enables operation at higher temperatures without damaging the materials. AM, despite its advantages, is still in development and presents significant limitations, particularly concerning surface accuracy. One principal attribute of the manufactured parts is the elevated surface roughness, which frequently exceeds the limits of what can be attained through conventional techniques. This phenomenon has important implications, affecting both hydraulic and thermal performance, as well as the fatigue behavior of materials. In light of the lack of theoretical or experimental studies in the literature concerning cooling channels produced via AM with high surface roughness, the purpose of this study is to further investigate and characterize the relationship between the increased surface roughness caused by additive manufacturing and the hydraulic and thermal performance of turbine cooling channels. The objective is to analyze the behavior of key performance indicators, particularly the Darcy friction factor (fD) for hydraulic performance and the Nusselt number (N u) for thermal performance, as a function of relative roughness and Reynolds number (Re). In addition, this study aims to compare experimental data from a variety of test objects to evaluate the impact of roughness in relation to channel geometry, length and material. This is essential for the development of accurate numerical models and the generation of reliable predictions. The final objective of this research is to integrate the data obtained with those from a parallel study conducted at the Siemens Energy fluid-dynamics laboratory. The present study employed a similar methodology but utilized water instead of air within the test objects. The combined goal is to examine the influence of the Prandtl number (P r) and to develop a correlation that predicts the behavior of the Nusselt number as a function of Reynolds and Prandtl numbers. Finally, the correlations found were compared with those currently available in the literature.
+1.2 Limitations
+The limitations of this study are as follows:
+• The project was limited to a seven-month period, from October 2023 to April 2024.
+• It was not possible to study the internal geometry of the channels because no computed tomography scan was available. The inlet section, captured by microscopic images, was considered representative of the internal geometry.
+• Measurements of thermodynamic quantities were only taken at the inlet and outlet, with no intermediate measurements possible inside the channel.
+• The work is purely experimental, with no computational fluid dynamics simulations performed, except for simplified ones using the internal software C3D.
+5
+
+
+Introduction
+• Only pre-existing test objects were used due to the long wait times for new specimens.
+• During the parallel study with the plant using water as the working fluid, it was not possible to test the same samples due to the different heating methods of the test object in the two configurations. Therefore, samples with comparable materials and geometries were used for comparison.
+6
+
+
+Chapter 2
+Experimental and Theoreti
+cal review
+The objective of this chapter is to present a comprehensive overview of the research conducted within the scope of this study, divided into two main sections. The initial section focuses on the results available in the literature regarding the effect of roughness on pressure losses and heat transfer. In the second section, previous studies conducted on the quasi Steady State Heat Transfer (qSSHT) Air rig at the Siemens Energy fluid dynamics laboratory will be examined.
+2.1 Literature Review
+Additive manufacturing has introduced a significant transformation in the production of complex geometries, particularly in the aerospace and automotive sectors where the need for lightweight components with high mechanical properties is of great importance. Among the most common AM techniques for producing metallic parts are Direct Metal Laser Sintering (DMLS) and Selective Laser Melting (SLM). These processes enable the creation of components with intricate geometries through layer-by-layer melting of metal powders using a laser. In particular, components made from superalloys through SLM are ideal for applications requiring high-temperature resistance and high loads, such as gas turbine operations [5]. The surface quality, mechanical properties, and overall performance of the final product largely depend on the process parameters used, such as layer thickness, laser speed, and build orientation [6]. Surface roughness plays a crucial role in components produced via SLM and DMLS, as it significantly affects performance in terms of heat transfer and pressure losses [7, 8]. The study conducted by J. C. Snyder et al. highlighted that parts built in a vertical orientation exhibit lower surface roughness and better mechanical performance compared to those manufactured horizontally, this discrepancy was attributed to the alignment of grains during the solidification process [7]. Khaing et al., on the other hand, focused their studies on the optimization of process parameters for DMLS, noting that the use of thinner layers and reduced scanning speed tends to produce higher quality surface finishes, although this results in a significant increase in production time [9]. The dimensional errors associated with
+7
+
+
+Experimental and Theoretical review
+the SLM process range from 3μm to 82μm [9]. This variability underscores the necessity for sophisticated quality control methodologies, such as X-ray computed tomography, which is widely used for non-destructive analysis of components [10, 5].
+Early research on pressure losses in channels dates back to Henry Darcy in 1857, who developed an equation, still widely used today, to calculate pressure drop in fluids flowing through conduits [11, 12]. A fundamental contribution to the understanding of pressure losses in systems with rough surfaces was made by Nikuradse, who studied flow behavior in tubes with artificially roughened surfaces. Nikuradse created internally coated conduits with sieved sand and measured the size of the sand grains (ks), relating it to the tube radius (r), obtaining a parameter comparable to relative roughness (Rz/Dh) [13, 14]. His studies led to the formulation of the renowned Colebrook-White equation, used to describe the friction factor in rough conduits [15]. Subsequently, in 1944, the Moody diagram correlated the friction factor with the Reynolds number and relative roughness, providing an effective tool for predicting pressure losses in conduits. The Moody diagram clearly shows that, in pipes with high relative roughness, the turbulent regime is characterized by a higher friction factor, leading to a significant increase in pressure losses [16]. An important observation emerging from the diagram is that, in the transitional regime, roughness has a nonlinear effect on the friction factor. In this regard, Cheng’s study offers an interpolation function useful for calculating the friction factor in transitional regimes [17]. Nikuradse’s data, presented in Figure 2.1, show a reduction in the transition from the fully smooth to the fully rough regime, a phenomenon that differs from what is illustrated in the Moody diagram. Colebrook attributed this behavior to the orderly arrangement of sand grains and suggested that the effect is negligible in commercial pipes, which are characterized by a non-uniform roughness distribution [16, 18].
+8
+
+
+Experimental and Theoretical review
+Figure 2.1: Nikuradse experimental data in rough pipes
+Huang et al. conducted a study on pressure losses in mini-channels (0.2 − 3mm) with high relative roughness, up to 42%, demonstrating that as roughness increases, there is an early transition from laminar to turbulent flow. This phenomenon results in a significant increase in the friction factor and deviations from the theoretical laminar flow line 64/Re [19]. Dai et al. reached similar conclusions, observing that relative roughness below 1% has a minimal impact on flow. They suggested that a value of Rz/Dh = 1% could be considered a threshold for distinguishing smooth mini-channels from rough ones [20]. Furthermore, their study highlighted that the channel geometries (circular or rectangular) have a negligible influence on friction characteristics and flow transition [20]. In one of the early studies concerning heat transfer in surfaces characterized by high surface roughness, Cope demonstrated that rough channels can develop higher temperature gradients compared to smooth ones, affecting overall heat transfer. This phenomenon was highlighted through heat transfer curves showing a linear relationship between the Nusselt number and the Péclet number [21]. Studies combining heat transfer and pressure losses began in the 1940s, primarily for applications in nuclear reactors. Using distilled water and air as working fluids, research conducted by Dipprey and Sabersky (1963) showed how surface roughness can increase the heat transfer coefficient in pipes, with a maximum increase of 270% compared to smooth pipes, especially in turbulent flow [21, 22]. In 1976, Gnielinski proposed a formula for calculating the Nusselt number (N u) in rough conduits, incorporating the friction factor (fD) and the Prandtl number
+9
+
+
+Experimental and Theoretical review
+(P r). This correlation is widely used to predict the thermal performance of rough conduits. Mills, on the other hand, focused his studies on the influence that flow entry has on heat transfer in the initial region of a conduit. He showed that the heat transfer coefficient in the entrance region is significantly higher than in sections where the flow is fully developed. This effect is particularly relevant in microchannels, where the length of velocity profile development is notably reduced. Morini’s review paper on heat transfer in small channels (Dh = 0.001mm − 1mm) concluded that the heat transfer behavior in microchannels differs significantly from classical theory. The experimentally observed Nusselt number was lower than that predicted by conventional theories, due to the interaction between roughness and flow conditions [23]. Attalla et al. found an improvement in the universal evaluation parameter for rectangular channels with low relative roughness, especially in laminar flow, compared to smooth conduits [18, 24]. Kandlikar provided one of the most comprehensive analyses on heat transfer and flow in microchannels. He demonstrated that roughness has a much more significant impact in microchannels than in conventionally sized ducts, proposing correlations that take into account both surface properties and duct geometry [25]. In recent years, Pennsylvania State University has conducted several studies to analyze the correlation between heat transfer and friction in micro- and mini-channels, intending to develop advanced turbine technologies. The results obtained for objects produced by Direct Metal Laser Sintering show a significant increase in the Darcy friction factor, especially for small-diameter channels, and an improvement in heat transfer, although not proportional to the increase in friction. The relative roughness of the samples was defined using the arithmetic mean roughness value Ra (Section 3.4), which appears to correlate consistently with Nikuradse’s ks/r parameter, with some corrections [26, 7, 10]. However, this choice contrasts with the observations of Townsend et al. and Han et al., who argue that the average roughness depth (Rz) is the most appropriate parameter for analyzing surfaces obtained through additive manufacturing [27, 28].
+2.2 Work Conducted at the Siemens Energy Fluid
+Dynamic Laboratory
+The reviewed studies were all conducted at the Siemens Energy Fluid-Dynamic Laboratory, utilizing the qSSHT Air rig experimental setup for analyzing the hydrodynamic and thermal properties of additively manufactured specimens. R. Pagani developed a MATLAB code specifically designed for the geometric evaluation of specimen sections, essential for obtaining a more accurate estimate of the hydraulic diameter (Dh) of the Test Object (TO) compared to previously available measurements. During his study, an important experimental campaign was also
+10
+
+
+Experimental and Theoretical review
+conducted, focusing on pin fins and Tesla valves. The latter, passive flow control devices, underwent detailed hydraulic and thermal characterization, thanks to the experimental results obtained by Pagani [18]. C. Venturi performed a series of indepth experiments on the influence of the printing angle of additively manufactured components to assess the impact of this parameter on thermal and hydrodynamic performance. The results demonstrated that alterations in the printing angle can significantly affect surface roughness, and consequently, pressure losses and heat transfer efficiency [29]. S. Caponio conducted a targeted experimental campaign on pin fins, with a particular focus on helical channels, testing the performance of these structures. Although the results obtained for the helical channels are confidential for industrial secrecy reasons, they provided crucial information on the thermal and hydrodynamic performance of these complex geometries [30].
+11
+
+
+Chapter 3
+Theoretical background
+This chapter will present a summary of the key theoretical aspects that underpin the present study. As previously mentioned, this study aims to investigate the performance in terms of pressure losses and heat transfer in additive manufacturing channels, as well as the effects of increased surface roughness resulting from the additive manufacturing process. To summarize the key concepts behind these phenomena, the chapter will begin by describing some of the main theoretical principles of fluid mechanics (Section 3.1). Subsequently, two sections will address the characterization of total pressure losses (Section 3.2) and heat transfer (Section 3.3) within the channel. Finally, a concluding section will outline the fundamental concepts of additive manufacturing and provide an in-depth analysis of surface roughness (Section 3.4).
+3.1 Boundary layer dynamics and flow regimes
+3.1.1 Boundary layer
+The concept of the boundary layer was first introduced by Ludwig Prandtl in 1904. Prandtl proposed the idea that, near a solid surface immersed in a fluid, the effects of fluid viscosity are predominant and are concentrated in a thin region adjacent to the surface itself [31]. Due to viscous effects, there is a region where the velocity varies from zero to the value of the undisturbed free-stream velocity, known as the velocity boundary layer. Similarly, there is a flow region near a solid surface where heat transfer occurs between the surface and the fluid, defined as the thermal boundary layer [32]. Since the increase in roughness caused by the additive manufacturing process leads to a modification of the internal surface of the channel, near which the velocity boundary layer and the thermal boundary layer develop, a more detailed description of the two boundary layers previously defined is essential for a better understanding of the phenomena involved. The description of the boundary layers will be carried out with reference to a flat plate, although the concepts discussed are largely applicable to the present study involving internal flow.
+12
+
+
+Theoretical background
+Velocity boundary layer
+The velocity boundary layer is an important aspect of fluid dynamics theory and involves the study of fluid flow behavior in the vicinity of a solid surface. This concept marked a turning point in the understanding of viscous flow. Due to viscous friction, the fluid immediately adjacent to the surface adheres to it, while further away from the surface, the fluid tends to reach a velocity similar to that of the external inviscid flow [31]. This concept simplifies the analysis of viscous flows, because it allows the separation of flow behavior into two regions: an inner region, the boundary layer, where viscous effects are dominant, and an outer region, where the flow can be treated as inviscid [33]. When a fluid flows over a solid surface, the velocity of the fluid at the boundary is zero due to the adhesion of the fluid to the surface (no-slip condition uwall = 0). As the distance from the surface increases, the velocity gradually rises until it reaches the value of the free-stream velocity outside the boundary layer. The point at which the fluid velocity reaches u = 0.99ue, where ue is the free-stream velocity, is commonly considered the upper limit of the boundary layer. In this way, the boundary layer thickness δ is defined [34]. The variation of u between y = 0 and y = δ defines the velocity profile u = u(y) within the boundary layer, which, as shown in Figure 3.1, varies for each x-position.
+Figure 3.1: Different velocity profiles within the boundary layer [35]
+The boundary layer thickness increases with the distance from the leading edge x and depends on the flow regime. For instance, in the case of laminar flow over a flat plate, the boundary layer thickness δ is proportional to x1/2, as described by Blasius [34]. In the case of turbulent flow, however, the boundary layer thickness increases more rapidly than in the laminar case and follows a different dependency: δ ∝ x4/5. In addition, the turbulent boundary layer equations are more complex and require empirical models to accurately describe the flow behavior [33]. The variation in
+13
+
+
+Theoretical background
+velocity within such a narrow region causes significant velocity gradients in the y-direction, leading to high shear stresses within the boundary layer, which are calculated for Newtonian fluids using Formula 3.1:
+τ = μ∂u
+∂y (3.1)
+τ represents the shear stress, and since both the velocity u and the boundary layer thickness δ are functions of the distance from the leading edge x, the value of the shear stress will also vary with x. Another parameter that affects the shear stress is surface roughness. The shear stress, and consequently the pressure loss, increases as the surface roughness increases [35].
+Thermal boundary layer
+The concept of the thermal boundary layer is a crucial aspect in understanding heat transfer phenomena between a fluid and a solid surface. This boundary layer develops when a fluid flows over a surface with a temperature different from that of the fluid itself. The thermal boundary layer is the region where temperature variations occur due to heat exchange between the surface and the fluid [32]. In this context, the thermal boundary layer thickness δT is defined as the region where the temperature changes from a value equal to the wall temperature Twall to a temperature of T = 0.99Te, where Te represents the temperature that the fluid would have outside the boundary layer, far from the surface [32]. Within the thermal boundary layer, the temperature varies along the y-direction, and the temperature profile T (y) changes with the x-position relative to the leading edge. The thermal boundary layer thickness δT also varies as a function of x.
+14
+
+
+Theoretical background
+Figure 3.2: Thermal and velocity boundary layer [35]
+For a given distance from the leading edge, the boundary layer thicknesses δ and δT generally do not coincide (Figure 3.2). A key parameter to define the relationship between δ and δT is the Prandtl number, a dimensionless number that describes the ratio between momentum and heat transfer in a fluid, defined by the following Formula 3.2:
+Pr = α
+ν = μcp
+k (3.2)
+Where ν is the kinematic viscosity of the fluid (ν = μ
+ρ ), α is the thermal diffusivity (α = k
+ρcp ), μ is the dynamic viscosity, ρ is the density of the fluid, cp is the specific heat at constant pressure, and k is the thermal conductivity of the fluid [35]. When the Prandtl number is equal to P r = 1, it indicates that the momentum and heat transfer occur with the same efficiency, and thus the velocity and thermal boundary layer thicknesses are approximately equal (δ = δT ) [35]. If Pr < 1, the thermal boundary layer is thicker because heat diffuses more rapidly than momentum. Conversely, for Pr > 1, momentum transfer is more significant than heat transfer, resulting in a velocity boundary layer thickness greater than the thermal boundary layer thickness [32]. In the present study, air was used as the working fluid within the channels, and a constant Prandtl number equal to Pr = 0.71 was assumed, resulting in δT > δ. The heat flux between a surface and a fluid can be described using the Newton’s law:
+q ̇ = −hAwet(Twall − Tfluid) (3.3)
+The Formula 3.3 clearly indicates the dependence of the heat flux on the wetted surface area. The increase in surface roughness induced by the additive manufacturing
+15
+
+
+Theoretical background
+process affects heat transfer in two ways:
+• When a surface is rough, the effective area wetted by the fluid increases compared to a smooth surface, as the surface asperities enlarge the area exposed to the fluid. Consequently, the value of Awet increases. Since the
+heat flux Q ̇ is proportional to the wetted area, under the same conditions, an increase in Awet leads to an increase in heat flux.
+• The presence of surface roughness leads to the formation of micro-vortices that intensify local turbulence near the surface. This phenomenon enhances fluid mixing, resulting in increased heat transfer and a reduction in thermal boundary layer thickness.
+3.1.2 Flow regime
+The term "flow regime" refers to the various characteristics that a fluid can exhibit when moving through a duct or in proximity to a solid surface. There are two main flow regimes: laminar and turbulent. The transition region represents the zone where the flow gradually shifts from laminar to turbulent. Laminar flow is characterized by an organized fluid motion, where streamlines follow well-defined and parallel trajectories. In this regime, fluid velocities are generally lower than those observed under turbulent conditions, and viscous forces dominate over inertial forces. This results in an increase in the internal resistance of the fluid, which prevents the onset of chaotic and turbulent motions. Turbulent flow, on the other hand, is distinguished by its chaotic and unpredictable behavior. In this regime, inertial forces prevail over viscous forces, generating vortices and turbulence that enhance the exchange of energy and momentum between fluid layers. Turbulent flow is more challenging to model mathematically compared to laminar flow, as it requires the use of equations and statistical models to describe the structure and behavior of vortices [34]. As previously discussed, the transition between the two flow regimes described does not occur instantaneously, but through a transition zone where small instabilities amplify the velocity fluctuations within the fluid [33]. In this region, the flow behavior becomes unpredictable, and the fluid may exhibit characteristics similar to laminar flow, turbulent flow, or present an intermediate state where properties of both regimes coexist [36]. The transition from a laminar to a turbulent boundary layer is influenced by several factors, including surface roughness, surface temperature, pressure gradient, and upstream flow conditions. Surface roughness is a critical factor as it induces the formation of micro-vortices and disturbances that destabilize the laminar flow, thereby accelerating the transition to a turbulent regime [37]. To classify and analyze the flow regimes of fluids, a dimensionless parameter known as the Reynolds number (Re) is employed. This is defined by Formula 3.4:
+16
+
+
+Theoretical background
+Re = ρuLc
+μ (3.4)
+Where u is the characteristic velocity of the fluid, Lc is the characteristic length (e.g., the hydraulic diameter in a duct), and μ is the dynamic viscosity of the fluid. The Reynolds number is used to describe the ratio between inertial and viscous forces within a fluid. When Re is low, the flow is dominated by viscous forces and is therefore laminar. A high Reynolds number, on the other hand, indicates that inertial forces are predominant, resulting in higher mixing between fluid layers and promoting the transition to a turbulent regime. In the case of internal flow within a channel, the flow is generally considered to be laminar when Re < 2300, and turbulent when Re > 4000, with the transition region lying between these two values [32].
+3.1.3 Flow development
+Another important aspect in the case of flow through a channel is the concept of flow development. When the fluid enters the duct with a uniform velocity, a velocity boundary layer begins to develop from the internal surface of the tube and gradually extends toward the center of the duct. During this phase, the central region of the tube initially remains inviscid, while viscous forces are predominant within the boundary layer adjacent to the walls. As previously described, the boundary layer thickness increases with the distance from the leading edge x. At a certain point, the velocity profiles merge across the entire cross-section of the tube, marking the point where the flow becomes fully developed. From this point onward, the velocity distribution assumes a parabolic shape and does not vary along the flow direction.
+Figure 3.3: Laminar boundary layer development in a circular pipe
+17
+
+
+Theoretical background
+The distance from the tube inlet to the section where the flow becomes fully developed is defined as the hydrodynamic entrance length and is generally denoted by the symbol xfd,h [38]. The hydrodynamic entrance length is a function of the flow regime and, in the laminar regime, can be estimated using the empirical relation:
+xfd,h ≈ 0.05 · Re · Dh (3.5)
+For the turbulent regime:
+xfd,h ≈ 10 · Dh (3.6)
+In laminar flow, the entrance length is greater than in turbulent flow due to the slower development of the velocity profile [34]. In the entrance region, the velocity gradients are higher than in fully developed flow, resulting in an increased local frictional resistance and, consequently, a greater pressure drop. Heat transfer is also enhanced in this zone, as the presence of strong velocity and temperature gradients facilitates thermal exchange between the fluid and the surface of the duct [38]. In the present study, considering the relatively long tube length compared to the entrance section, it is assumed that the flow is fully developed along the entire length of the specimen.
+3.2 Pressure losses
+This section will address pressure losses, which represent one of the primary sources of inefficiency in turbine cooling systems and are influenced by various factors. Among these, flow regime, surface roughness, geometric discontinuities, and fluid velocity play a significant role. To describe these losses, the main theories and correlations available in the literature regarding friction pressure losses and pressure losses due to contraction and expansion will be outlined.
+Friction pressure losses
+A widely used model for calculating frictional pressure losses in ducts is the DarcyWeisbach equation (Formula 3.7), which expresses the pressure loss as [12]:
+∆p = fD · L
+Dh
+· ρu2
+2 (3.7)
+where ∆p is the pressure loss, fD is the Darcy friction factor, L is the channel length, u is the average fluid velocity, and Dh is the hydraulic diameter of the duct, defined as:
+18
+
+
+Theoretical background
+Dh = 4A
+P (3.8)
+Alternatively, if the channel has a complex geometry or is not straight, it is defined as:
+Dh = 4V
+Awet
+(3.9)
+The Formula 3.7 applies to both laminar and turbulent flow regimes. However, to calculate the pressure losses, it is necessary to first determine the friction factor, which depends on the flow regime, Reynolds number, and relative roughness, while being independent of other parameters such as the Prandtl number. Assuming that the flow is fully developed, the friction factor in the laminar regime is calculated using Formula 3.10 [13]:
+fd = 64
+Re (3.10)
+From the above relation, it is evident that in the laminar regime, the friction factor is inversely proportional to the Reynolds number and independent of the relative roughness. To calculate the friction factor in the turbulent regime, the ColebrookWhite equation, based on Nikuradse’s experiments, is used and is expressed by Formula 3.11 [15]:
+√1fD
+= −2 log
+A ε/Dh
+3.7 + 2.51
+Re√fD
+B
+(3.11)
+This equation shows that in the turbulent regime, the friction factor depends not only on the Reynolds number but also on the relative roughness [13]. The Colebrook-White equation must be solved iteratively and is often used for turbulent flows in rough-walled ducts. Pressure losses are significantly higher in the turbulent regime than in the laminar regime due to vortex formation and fluctuations in the velocity field. An important tool for the graphical determination of the friction factor is the Moody diagram. The diagram consists of a series of curves representing the behavior of the friction coefficient (fD) a function of Re and ε/Dh. For laminar flows, Formula 3.10 is plotted, while in the turbulent regime a series of curves, based on the ColebrookWhite equation, illustrate the variations of the friction factor as a function of the relative roughness [39]. In this study, the relative roughness is calculated as ε/Dh, where Dh is the hydraulic diameter of the specimen’s inlet section, and ε = Rz, with Rz representing the maximum peak-to-valley height of the profile over the evaluation length [40].
+19
+
+
+Theoretical background
+Figure 3.4: Moody diagram
+Contraction and expansion pressure losses
+If the L/Dh ratio is small, the pressure losses caused by sudden contractions and expansions can become significant. These losses are associated with variations in cross-sectional area and are primarily caused by effects such as flow separation and vortex formation. According to Idel’chik, these losses are mainly related to the ratio between the cross-sectional areas [41].
+pin, loss = c1
+ ̇m2
+2ρinA2 pout, loss = c2
+ ̇m2
+2ρoutA2 (3.12)
+The above expressions describe the estimation of pressure losses (ploss) at the inlet and outlet of a duct due to contractions and expansions. Equations 3.12 provide the losses through coefficients c1 and c2, which vary depending on the flow regime and are summarized in Table 3.1.
+Flow Regime c1 c2
+Laminar 0.5 2.0
+Turbulent 0.5 1.0
+Table 3.1: Coefficients c1 and c2 for different flow regimes
+20
+
+
+Theoretical background
+3.3 Heat transfer
+Heat transfer is defined as the process through which thermal energy is transferred from a region of higher temperature to a region of lower temperature. This process can occur through three different mechanisms: conduction, convection, and radiation. Conduction primarily occurs through a solid medium and is based on the diffusion of thermal energy via the motion of molecular particles. Convection, on the other hand, takes place in fluids and is associated with heat transport through the mass movement of the fluid. Radiation is the transfer of energy in the form of electromagnetic waves and can also occur in a vacuum [42]. Each heat transfer mechanism is governed by specific physical laws and is described by mathematical equations that quantify its behavior. Since thermal radiation has a negligible effect in this study, only conduction and convection processes will be described.
+Conduction
+Conduction occurs when heat is transferred within a body or between bodies in direct contact and represents the process by which thermal energy is transported within a material through the motion of microscopic particles within the material’s structure. This form of transport takes place without macroscopic motion, and heat is transferred from regions of higher temperature to regions of lower temperature [32]. The law governing this process is Fourier’s law (Formula 3.13):
+q ̇ = −k dT
+dx (3.13)
+The heat flux q is directly proportional to the temperature gradient dT
+dx (with a
+negative sign). k represents the thermal conductivity of the material, acting as the proportionality coefficient and indicating the dependency on the material’s nature [42].
+Convection
+Convection is a heat transfer mechanism that occurs between a solid surface and an adjacent moving fluid and manifests through the combination of conductive heat transfer and the transport due to the motion of the fluid itself. There are two main types of convection: natural convection and forced convection. Natural convection occurs due to density differences generated by temperature variations in the fluid, which create buoyancy forces. In contrast, forced convection is driven by
+21
+
+
+Theoretical background
+fluid motion imposed by an external force [43]. The law that governs this process is Newton’s law (Formula 3.14):
+q ̇ = hA(Ts − T∞) (3.14)
+This law states that the heat flux q is directly proportional to the temperature difference between the surface and the fluid. The product of area A and the heat transfer coefficient h acts as a proportionality parameter. h depends on the flow conditions in the boundary layer and the type of flow regime [32]. For example, in the turbulent regime, heat transfer is more effective due to the presence of vortices and chaotic motions that promote a more intense mixing of the fluid [42].
+A parameter used to describe the efficiency of convective heat transfer relative to conductive heat transfer is the Nusselt number (Nu) [43]. This parameter is defined as the ratio between convective heat transfer and conductive heat transfer. When considering air flowing inside a channel, the Nusselt number can be expressed by Formula 3.15:
+Nu = hDh
+kair
+(3.15)
+Given the complexity of determining the convective heat transfer coefficient h, empirical correlations have been developed to estimate the Nusselt number. Consequently, h can be determined if the hydraulic diameter and thermal conductivity of the air are known. As previously mentioned, the convective heat transfer coefficient depends on the flow regime; therefore, empirical correlations exist to estimate the Nusselt number in both laminar and turbulent flow regimes. For fully developed laminar flows inside circular ducts, factors such as Reynolds number and surface roughness have a negligible effect, and the Nusselt number can be assumed to be constant. In the case of a uniform surface temperature, the Nu is equal to N u = 3.66, while for a uniform heat flux at the surface N u = 4.36 [32]. Several empirical correlations have been developed for turbulent flow regimes. A widely used relation for calculating the Nusselt number in smooth channels is the Dittus-Boelter correlation (Formula 3.16):
+Nu = 0.023 · Re0.8 · Pr0.4 (3.16)
+This correlation shows how the Nusselt number varies with the Reynolds number and the Prandtl number and is valid for Re ≥ 104, L/Dh ≥ 10, and 0.7 ≤ Pr ≤ 160. In the present study, channels with high surface roughness are being tested. When surface roughness plays a significant role, it is preferable to use the Gnielinski correlation (Formula 3.17):
+22
+
+
+Theoretical background
+Nu = (fD/8)(Re − 1000)P r
+1 + 12.7(fD/8)0.5(P r2/3 − 1) (3.17)
+where fD is the friction factor, which can be obtained using the Colebrook-White equation [32]. This correlation is valid for Reynolds numbers between 3000 ≤ Re ≤ 5 · 106 and Prandtl numbers between 0.5 ≤ P r ≤ 2000. Unlike the Dittus-Boelter formula, the Gnielinski correlation reduces errors to less than 15% and accounts for variations in duct length and the contributions due to surface roughness [32]. When a fluid enters a duct, the velocity and temperature profiles are not yet fully developed. Due to the interaction between the thermal boundary layer development and turbulence, pressure losses and heat transfer can be significantly higher in the entrance regions of a duct compared to fully developed regions. To estimate the increase in the local Nusselt number N ux relative to a fully developed flow N u∞, several correlations have been developed. The Mills correlation (Formula 3.18) is provided below [44]:
+N ux
+N u∞
+= 1 + 8.7
+L/Dh + 5 (3.18)
+For micro-channels (10 μm < Dh < 200 μm), additional correlations have been developed to account for reduced dimensions, the Knudsen number, and microconvection phenomena. One of the most widely used correlations in these cases is the correlation developed by Shah and London:
+Nu = C1 + C2 Re0.5 Pr0.33 (3.19)
+where C1 and C2 are empirical constants that vary depending on the micro-channel geometry and fluid properties [42]. In this study, channels with hydraulic diameters ranging between 0.75 mm < Dh < 3 mm were tested, and thus, micro-convection phenomena were neglected, primarily referring to the Gnielinski correlation.
+3.4 Additive manufacturing
+Additive manufacturing is a process that differs significantly from traditional methods. One of the main distinctions lies in the fact that material is deposited layer by layer to create the component, rather than being machined or removed from an existing block [45]. This innovative technology allows for the creation of complex structures in various materials, including metals, using techniques such as Laser Powder Bed Fusion (L-PBF). One of the main challenges in AM is the management of surface roughness generated during the manufacturing process, which significantly affects the mechanical and thermal properties of the produced components. Several studies, such as the one conducted by J. Delgado et al.,
+23
+
+
+Theoretical background
+demonstrate that the overall performance and the surface quality of the product are influenced by the process parameters employed, such as scanning speed, laser power, hatch distance, layer thickness, build direction, and part orientation [6, 45, 46]. Figure 3.5 shows a schematic representation of the effect of the main parameters on the final characteristics of the components.
+Figure 3.5: Effect of SLM process parameters [46]
+The process used for the fabrication of the specimens tested in this study is Selective Laser Melting (SLM). The operational sequence of this process is divided into the following stages (Figure 3.6):
+• CAD Model Preparation.
+• Model Slicing and Laser Path Definition: the CAD model is divided into thin layers (between 20 and 50μm), called slices, which represent the sections that the machine will construct. For each layer, the scanning parameters and laser path are defined.
+24
+
+
+Theoretical background
+• Powder Preparation and Distribution: the metallic powder used must meet specific requirements in terms of size, shape (typically spherical), and granulometric distribution. A thin layer of powder is distributed over the build platform using a recoater blade.
+• Selective Laser Melting: the material is melted using a high-power laser beam that follows the contour and fills each layer according to the predefined path. The laser selectively melts the powder, forming a solid section of the component.
+• Layer-by-Layer Process Repetition: once the melting of a layer is completed, the build platform is lowered by an amount equal to the next layer’s thickness, and a new layer of powder is distributed. This sequence is repeated until the entire three-dimensional component is completed.
+• Post-Processing: to achieve the desired mechanical and surface characteristics, heat treatments, sandblasting, or other finishing techniques can be applied [46, 47].
+Figure 3.6: Working principle of SLM process [46]
+One of the main aspects of the SLM process is the increase in surface roughness. This can affect both the thermal and hydraulic performance of the component. Numerous studies have been carried out in order to improve the resulting surface quality. This can be done by adjusting the process parameters: surfaces inclined with respect to the build plane tend to have higher roughness, while orientations perpendicular to the build plane result in lower roughness. Increasing the laser power helps reduce roughness due to more complete material melting, while the use of thinner layers allows for better surface definition, although it extends the overall
+25
+
+
+Theoretical background
+build time (Figure 3.5) [46]. Similarly, adjustments can be made to the powder: using particles with uniform size and spherical shape ensures a more homogeneous distribution and reduces surface roughness. Furthermore, the chemical composition of the powder affects the laser absorption capability, leading to variations in surface quality [48].
+Roughness
+Surface roughness is an important parameter in the additive manufacturing process and has a significant impact on heat transfer performance and pressure drop. Therefore, it is essential to identify the surface roughness parameters used for profile measurement, as defined in the ISO 4287 standard (Table 3.2).
+Figure 3.7: Ra and Rv definitions
+26
+
+
+Theoretical background
+Parameter Formula
+Ra Ra = 1
+Ls
+s Ls
+0 |z(x)| dx
+Rv Rv = 1
+n
+qn
+i=1 |min zi(x)|
+Rp Rp = 1
+n
+qn
+i=1 max zi(x)
+Rz Rz = Rv + Rp
+Table 3.2: Roughness parameters
+The definitions of the parameters listed in Table 3.2 are provided below:
+• Ra (Arithmetic Mean Roughness): represents the arithmetic mean of the absolute deviations of the profile from the mean line. This parameter is used to describe the overall surface roughness.
+• Rp (Maximum Peak Height): represents the maximum height of the highest peak relative to the mean line.
+• Rv (Maximum Valley Depth): defines the maximum depth of the lowest valley relative to the mean line.
+• Rz (Total Profile Height): it is the sum of the height of the highest peak (Rp) and the depth of the deepest valley (Rv). It provides a representation of the overall vertical distance between the most extreme points on the surface [40].
+The ISO 4287 standard includes additional parameters that, although not used in this study, are worth describing to provide a comprehensive overview:
+• Rq (Root Mean Square Roughness): indicates the square root of the mean of the squared deviations of the profile from the mean line.
+ó1
+Lr
+Ú Lr
+0
+z(x)2 dx (3.20)
+• Rsk (Skewness): measures the degree of asymmetry of the profile relative to the mean line. A positive value indicates the predominance of peaks, while a negative value suggests the prevalence of valleys.
+1
+Rq3
+C1
+Lr
+Ú Lr
+0
+Z(x)3 dx
+D
+(3.21)
+27
+
+
+Theoretical background
+• Rku (Kurtosis): Indicates the degree of concentration of the profile deviations relative to the mean line. A high Rku value indicates the presence of sharp peaks or deep valleys, while a low value suggests a flatter and more uniform distribution of the profile.
+1
+Rq4
+C1
+Lr
+Ú Lr
+0
+Z(x)4 dx
+D
+(3.22)
+The average roughness depth (Rz) is often considered the most representative parameter for characterizing the surface quality in channels manufactured using additive manufacturing technologies. Moreover, it is the parameter that most closely corresponds to the one used by Nikuradse in his experimental studies. For this reason, Rz was chosen as the primary parameter to evaluate roughness in this work (Section 2.1 [27, 28]).
+28
+
+
+Chapter 4
+Experimental setup
+In the first part of this chapter, the entire system will be presented, with a detailed description of all the components involved, focusing specifically on the main part of the setup (Section 4.1). The second part of the chapter will provide a description of the specimens used during the experiments (Section 4.2).
+4.1 qSSHT Air Rig
+The Figure 4.1 shows the CAD model of the main part of the system. As shown, the system consists of a central copper block where the sample will be placed, which in turn is connected to two side parts produced by selective laser sintering (SLS) with polyamide 12, which represent the inlet and outlet of the QSSHT Air Rig.
+Figure 4.1: qSSHT Air Rig
+29
+
+
+Experimental setup
+The side parts are characterized by several holes:
+• A main axial hole through which the air involved in the experiment flows;
+• Six holes on each side for screws that secure the copper block to the system;
+• One hole on each side for the insertion of PT-100 sensors to measure the air temperature at the inlet and outlet of the test specimen;
+• Two additional holes at the inlet for PT-100 sensors to measure the temperature of the copper block at two different radial distances from the sample;
+• One hole per side to connect the pressure taps needed to acquire air pressure data at the inlet and outlet of the specimen.
+During previous studies conducted at the Siemens Energy Fluid-Dynamic Lab, the need to improve insulation at the outlet section was identified. As a result, volumes of nylon polymer powder were installed within the test bench to minimize heat exchange (Figure 4.2).
+Figure 4.2: New insulationg design of the Rig
+The copper block is cylindrical in shape and has the following characteristics:
+• An axial hole to accommodate the test object;
+30
+
+
+Experimental setup
+• Six holes on each side for securing it to the test bench;
+• Two holes at the inlet section for inserting PT100 sensors to collect temperature data from the copper block.
+A layer of thermal paste is applied between the test object and the copper block to enhance thermal contact. The copper block is covered with heaters that make full contact with its lateral surface and are essential for heating the walls during the heat exchange test. O-rings are inserted between the test object and the rig’s lateral parts to ensure a perfect seal and minimize air leakage. Throughout the experiments, three copper blocks of varying lengths were used, depending on the length of the test object:
+• 45mm;
+• 90mm;
+• 150mm;.
+Figure 4.3 illustrates the qSSHT Air rig configuration as described above.
+Figure 4.3: qSSHT Air rig configuration
+31
+
+
+Experimental setup
+4.1.1 qSSHT Air Rig system scheme
+Figure 4.4 presents a diagram that outlines the equipment used for constructing the rig system.
+Figure 4.4: Hydraulic scheme of the Air rig
+The system, as can be easily deduced from Figure 4.4, operates as an open cycle. Air is supplied from a pressurized tank at approximately 6.5bar. Downstream of the tank, there is a valve that regulates the air pressure and acts as a filter. The air then flows through tubes to the mass-flow meter. During the experiments, two different mass-flow meters were used: the Coriolis21 for large airflow rates and the Coriolis10, characterized by higher accuracy, for flow rates below 1g/s. Downstream of the Coriolis, connected via flexible tubing, are two inlet valves that direct the airflow into the main part of the rig. The air then passes through the test bench and exits through two outlet valves before being discharged into the
+32
+
+
+Experimental setup
+environment via flexible tubing. As explained in subsequent sections, the inlet and outlet valves are essential for regulating airflow and performing the leakage test. The rig setup also includes a power supply that provides electricity to the heaters, which are necessary to heat the copper block via conduction in case a heat transfer test needs to be conducted.
+4.1.2 Measure instruments scheme
+Figure 4.5 illustrates the schematic of the equipment used for data acquisition and measurement.
+Figure 4.5: Measure instruments scheme
+As previously mentioned, the flow rate data is measured using the Coriolis10 or Coriolis21 flow meters, depending on the desired flow rate to be measured. These data, along with those from the absolute pressure meter, are acquired through the DataScan 7220 data acquisition system. The air pressure inside the test object is measured using pressure taps connected to the 9116 NetScanner differential pressure measurement system. Temperature data is collected via PT-100 sensors and acquired using the Agilent 34972A. All data is processed through the in-house software RigView for further analysis.
+33
+
+
+Experimental setup
+4.2 Test objects
+The specimens used in this study were produced through the powder bed fusion process, specifically Selective Laser Melting, using EOS machines (Figure 4.6).
+Figure 4.6: EOSM 400 − 4 model used at Siemens Energy
+The study focused on testing specimens made from Incone-l939 and Aluminum. Siemens Energy manufactured the Inconel-939 (IN939) specimens using the SLM technique. IN939 is a nickel-based alloy known for its high resistance to temperature, mechanical stress, and corrosion, making it suitable for turbomachinery applications. The Aluminum specimens were printed by Materials Solutions – A Siemens Energy Business – due to the high risk of fire and explosion associated with Aluminum powders. These specimens were printed using AlSi10Mg, a widely used alloy that offers a combination of lightness and good mechanical properties. The chemical composition and particle size used in the SLM process significantly affect the final component properties, making this information strictly confidential. Below is an example of the chemical composition typically provided by an SLM manufacturer for IN939 (Table 4.1) and AlSi10Mg (Table 4.2) parts.
+IN939 Element Cr Co Ti W Al Ta Nb C Zr B Ni
+wt.-% 22.5 19 3.7 2 1.9 1.4 1 0.15 0.1 0.01 Balance
+Table 4.1: Inconel 939 chemical composition [49].
+34
+
+
+Experimental setup
+Aluminium Element Al Si Fe Cu Mn Mg Ni Zn Pb Sn Ti
+wt.-% Balance 11.0 0.55 0.05 0.45 0.05 0.05 0.10 0.05 0.05 0.15
+Table 4.2: Aluminium chemical composition [50].
+During the experiments, specimens with lengths of 90mm and 150mm were tested, featuring an outer diameter of 10mm and an internal hydraulic diameter varying between 0.75mm and 3mm.
+Figure 4.7: CAD model of a generic specimen
+In the past, Siemens Energy Fluid-Dynamic Lab has studied both specimens with simple internal geometries, such as channels with circular, square, and rectangular cross-sections, and test objects with more complex internal geometries like Tesla valves, pin fins, and helical channels. The goal of this study, after modifying the parts in polyamide 12 of the experimental setup (Section 4.1), was to test specimens with straight channels and simple geometries. This allowed for a comparison with the results obtained from previous versions of the QSSHT Air rig and aimed to achieve more reliable and precise outcomes. Only specimens with straight channels and circular or square cross-sections were tested. Table 4.3 lists all the straight specimens tested within the Siemens Energy Fluid-Dynamic Lab, with bolded entries indicating the specimens subjected to experiments during this study.
+35
+
+
+Experimental setup
+Table 4.3: Test objects
+Material Geometry Length Dh Printing Rz [μm]
+[mm] [mm] [mm] angle [deg] (profilometer)
+STAL15 (◦) 0.75 90 0.792 90 64.3
+STAL15 (□) 0.75x0.75 90 0.857 90 55.1
+STAL15 (□) 0.75x1 90 0.949 90 68.2
+STAL15 (□) 0.75x1.5 90 1.107 90 61.6
+STAL15 (□) 0.75x2 90 1.164 90 60.4
+STAL15 (◦) 1 90 1.048 90 59.2
+STAL15 (□) 1x1 90 1.076 90 56.1
+STAL15 (□) 1x1.5 90 1.281 90 66.0
+STAL15 (□) 1x2 90 1.425 90 62.7
+STAL15 (□) 1.5x1.5 90 1.557 90 62.9
+STAL15 (□) 1.5x1.5 90 1.570 90 58.8
+STAL15 (□) 1.5x2 90 1.805 90 56.7
+STAL15 (◦) 2 90 2.075 90 64.5
+STAL15 (□) 2x2 90 2.087 90 51.4
+Haynes282 (□) 1.5x2 150 1.814 90 47.5
+Haynes282 (□) 2.25x1.5 150 1.903 90 43.5
+Haynes282 (□) 3x1.5 150 2.105 90 44.9
+Haynes282 (□) 3.75x1.5 150 2.245 90 46.4
+Haynes282 (□) 4.5x1.5 150 2.346 90 46.6
+Haynes282 (□) 5.25x1.5 150 2.424 90 42.6
+Haynes282 (□) 2x2 150 2.120 90 44.6
+Haynes282 (□) 3x2 150 2.531 90 36.4
+Haynes282 (□) 4x2 150 2.795 90 40.9
+Haynes282 (□) 5x2 150 2.978 90 43.3
+Haynes282 (□) 6x2 150 3.113 90 43.6
+IN939 (□) 0.75x0.75 90 0.755 90 68.5
+IN939 (□) 0.75x1 90 0.927 90 64.2
+IN939 (□) 0.75x1.5 90 0.950 90 61.7
+36
+
+
+Experimental setup
+Material Geometry Length Dh Printing Rz [μm]
+[mm] [mm] [mm] angle [deg] (profilometer)
+IN939 (□) 0.75x2 90 1.148 90 67.7
+IN939 (□) 1x1.5 90 1.225 90 75.7
+IN939 (□) 1x2 90 1.358 90 61.9
+IN939 (□) 1.5x1.5 90 1.638 90 76.3
+IN939 (□) 1.5x2 90 1.733 90 60.8
+IN939 (□) 2x2 90 2.049 90 61.9
+IN939 (□) 2x2 150 2.001 90 
+IN939 (◦) 2 90 2.155 90 71.9
+IN939 (◦) 0.75 90 0.697 0 
+IN939 (◦) 0.75 90 0.727 45 
+IN939 (◦) 0.75 90 0.756 90 86.1
+IN939 (◦) 1 90 1.013 0 108.29
+IN939 (◦) 1 90 0.995 45 90.18
+IN939 (◦) 1 90 1.042 90 75.26
+IN939 (◦) 1.25 90 1.258 0 93.12
+IN939 (◦) 1.25 90 1.225 45 88.39
+IN939 (◦) 1.25 90 1.237 90 96.80
+IN939 (◦) 1.5 90 1.522 0 157.02
+IN939 (◦) 1.5 90 1.526 45 117.21
+IN939 (◦) 1.5 90 1.493 90 83.81
+IN939 (◦) 2 90 2.132 90 
+Aluminium (◦) 1 90 0.745 90 
+Aluminium (◦) 1 90 0.709 90 
+Aluminium (◦) 1.5 90 1.238 90 
+Aluminium (◦) 1.5 90 1.236 90 
+Aluminium (◦) 2 90 1.692 90 43.2
+Aluminium (◦) 2 90 1.706 90 
+37
+
+
+Chapter 5
+Methodology
+This chapter describes all the procedures necessary to conduct the tests performed during this study in Section 5.1. In Section 5.2, the methods used to process the data from the experiments, leading to the final results, will be described.
+5.1 Test Procedures
+During this study, two types of experiments were conducted on each tested specimen: the Darcy friction factor test to investigate hydraulic properties and the Nusselt test to analyze thermal properties. Before performing the tests, it is crucial to obtain the most accurate possible geometric evaluation of the specimen, as this aspect plays a key role in the analysis. Additionally, it is essential to ensure that the experimental setup is perfectly sealed to prevent any airflow leakage that could affect the test results.
+5.1.1 Microscope Photos of Specimens
+The additive manufacturing process introduces significant dimensional tolerances, especially for small objects like the specimens used in this study. This makes a detailed geometric evaluation indispensable before conducting the tests, as relying solely on the nominal perimeter and area dimensions would not provide sufficient accuracy. Tolerances and surface irregularities typical of AM can significantly affect the hydraulic and thermal properties of the specimens, making precise measurements essential for obtaining reliable and consistent results. To ensure an accurate geometric evaluation of each tested specimen, the Zeiss CL 1500 ECO microscope (Figure 5.1) located in the Siemens Energy Material Lab was employed. This tool, alongside the software ZEN 3.5, enabled the acquisition of detailed images of the test object. The software also provided a scale bar, which was important for determining the hydraulic diameter, as detailed in Section 5.2.1.
+38
+
+
+Methodology
+Figure 5.1: Zeiss CL 1500 ECO microscope
+The inlet section was used as the reference for the geometric evaluation of the samples. The outlet section and the arithmetic mean of the inlet and outlet sections were not chosen as the reference because the outlet section is attached to the basement plate during the additive manufacturing process. Once the component is completed and removed from the plate, the outlet section is subjected to mechanical treatments that alter its original geometry and properties and therefore may not be representative of the internal channel geometry (Figure 5.2). This choice also ensures consistency with previous studies conducted at the Siemens Energy Fluid Dynamics Lab.
+39
+
+
+Methodology
+Figure 5.2: Input and output sections of a generic TO
+However, relying solely on the inlet section is a significant limitation, as it does not account for internal geometric variations. Unfortunately, there are no available tools for detailed internal evaluation, as noted in Section 1.2.
+5.1.2 Leakage test
+In a system where air is used as the working medium, it is common to encounter leaks, especially at joints, valves, and sensors. These leaks can reduce both flow rate and pressure, affecting the accuracy of measurements and potentially compromising experimental results. Therefore, it is essential to implement preventive measures and conduct a leakage test before each experiment. This test assesses the magnitude of the leaks, ensuring that while inevitable, they remain within acceptable limits, thus minimizing their impact on the final results. The leakage test is divided into two phases. The first phase begins by positioning the specimen inside the copper block and assembling the rig. Next, the outlet valves are closed, and the main flow valve is opened to pressurize the system. Once full pressure is achieved, a soap and water mixture is sprayed on critical areas, such as pressure taps and connections. The appearance of bubbles indicates air leakage. Figures 5.3 and 5.4 show examples where bubbles formed due to leaks at the 9116 NetScanner and a pressure tap connection.
+40
+
+
+Methodology
+Figure 5.3: Example of a leak at the 9116 NetScanner
+Figure 5.4: Example of a leak at a pressure tap
+During the second phase of the leakage test, the main flow valve is closed while the outlet valves remain sealed, keeping the pressurized air inside the system. This isolates the rig at the maximum pressure achieved. The internal pressure is then monitored through the software RigView. If the pressure decreases over time, it
+41
+
+
+Methodology
+indicates air leakage within the system. Figure 5.5 shows the inlet pressure over time, clearly demonstrating a pressure drop after the main flow valve is closed, signifying the presence of leaks in the system.
+Figure 5.5: Pressure drop displayed using RigView
+If leaks are detected, it is necessary to take corrective actions such as replacing the plastic tubes or springs associated with the pressure taps, applying adhesive to seal the leakage, or reassembling the rig. These measures are taken before each test to ensure that the leakage is minimized to a point where it can be considered negligible and will not significantly affect the test results.
+5.1.3 Darcy friction factor test
+The test for determining hydraulic performance follows a strict sequence of steps, as outlined in Table 5.1. Initially, hose and device connections are checked, pressure and flow measurement instruments are reset, and a leakage test is performed to ensure system integrity. The airflow is then adjusted using the valves until the desired flow rate is reached. The data point is collected when the differential pressure stabilizes over time, indicating a fully operational flow condition. This process is repeated for both laminar and turbulent flow regimes to collect sufficient data. Finally, the main flow is shut off, and the system is depressurized, completing the test. The test begins by setting an initial flow rate of approximately 0.005g/s. The flow rate is then gradually increased by adjusting the inlet and outlet valves until the maximum allowable rate is reached with the available pressure. Key variables, such as differential pressure, are continuously monitored using the in-house software RigView. Once the system reaches fully operational conditions, data is collected
+42
+
+
+Methodology
+Step Action
+1 Check hoses and devices connections
+2 Zero adjustment of pressure and mass flow rate instruments
+3 Close the outlet valve, turn on the main flow, and open the inlet valve to pressurize the system
+4 Perform leakage tests
+5 Open fully the outlet valve and slightly the inlet one to reach the desired mass flow rate, and wait until a new stable point is reached
+6 Collect the point when the differential pressure behavior is stable (flat line)
+7 Close slightly the outlet valve to avoid compressibility effects and open the inlet valve until it is fully open
+8 Once the inlet valve is fully open, start opening the outlet valve
+9 Turn off the main flow and depressurize the rig
+Table 5.1: Darcy Test Procedure [18]
+at a frequency of one data point per second for 30 seconds. The average of the recorded values is then calculated and saved in a text file for further analysis. For each data point collected, compressibility effects were minimized by carefully adjusting the inlet and outlet valves to allow controlled variations in the upstream and downstream pressures of the specimen. Mach numbers greater than 0.3 were reached only at very high Reynolds numbers. To ensure maximum precision, a high-accuracy flow meter was used at low flow rates, and more sensitive pressure scanner channels were employed for differential pressures below 206kP a. Whenever the flow meter or pressure scanner channels were changed, double measurements were performed to ensure the comparability of the collected data. Pressure taps were strategically positioned to avoid recirculation zones forming near the inlet and outlet of the specimen, ensuring accurate pressure measurements. During the Darcy friction factor test, the PT-100 sensor used to measure the outlet temperature is placed 15cm away from the test object. This distance is significantly greater than that used during the Nusselt test. The rationale for this positioning is to prevent the formation of back pressure, which could distort measurement results. Back pressure can affect both temperature and pressure
+43
+
+
+Methodology
+readings, leading to an unreal increase in values and ultimately compromising the accuracy of the calculations derived from the test.
+5.1.4 Nusselt test
+The thermal performance test is carried out through a strict sequence of steps, as shown in Table 5.2. Initially, the hose and device connections are checked, pressure and mass flow rate instruments are zeroed, and a leakage test is performed. Once this step is complete, the main flow is shut off, and the heating system is activated. When the copper temperature reaches 60 − 70◦C, the main flow is opened with both inlet and outlet valves fully open. A data point is collected when the behavior of the Nusselt enhancement number (N u/N u0) stabilizes. This process is repeated by progressively closing the outlet valve until a sufficient number of data points are gathered. Finally, the heater is turned off, and the system is allowed to cool down completely before turning off the main flow and concluding the test.
+Step Action
+1 Check hoses and devices connections
+2 Zero adjustment of pressure and mass flow rate instruments
+3 Close the outlet valve, turn on the main flow, and open the inlet valve to pressurize the system
+4 Perform leakage tests
+5 Close the main flow, open the valves and turn on the heating system
+6 Once the copper temperature reaches around 50-60 °C, open the main flow at fully open inlet and outlet valves
+7 Collect the point when the Nu/Nu0 behavior is stable (flat line)
+8 Close slightly the outlet valve and wait until a new stable point for collection is reached
+9 Turn off the heater and wait until the rig is cooled down
+10 Turn off the main flow
+Table 5.2: Heat transfer test procedure [18]
+To ensure high accuracy during the test, similar to the Darcy friction factor test, a high-precision flow meter was used for low flow rates, and more sensitive pressure
+44
+
+
+Methodology
+scanner channels were employed for differential pressures below 206kP a. Additionally, for the Nusselt test, each time the flow meter or pressure scanner channels were changed, a double measurement was taken to ensure data comparability. Unlike the Darcy friction factor test, the thermal transfer experiment begins with the highest possible flow rate given the available pressure, then progressively decreases it through valve adjustments. This methodology stems from previous observations at the Siemens Energy Fluid-Dynamic Lab, which indicated that this approach achieves stability faster than the inverse method used in the Darcy friction factor test [18]. During the test, data points are collected as soon as the ratio N u/N u0 stabilizes. To monitor this, a Python code is employed, which analyzes the data gathered every second via RigView and provides a preliminary estimate of the Nusselt enhancement (N u/N u0) in real-time, as shown in Figure 5.6. When the system approaches near the steady state, the data point is collected. Similar to the Darcy friction factor test, RigView records data every second for 30 seconds, and the average of these values is calculated to determine the final measurement for each data point. These averaged data are saved in a file for later analysis. Reaching the steady state for the first data point may take several hours. Subsequent points generally stabilize more quickly but still require several minutes. As a result, completing this test for each specimen can take up to an entire workday or even two.
+Figure 5.6: Real-time approximate estimation of Nusselt enhancement
+45
+
+
+Methodology
+5.2 Data Processing
+This section describes the methods used to process the data collected during the previously mentioned experiments. It will detail the processes involved in analyzing the microscopic images of the specimens, as well as the data from experimental tests such as the Darcy friction factor and Nusselt tests. The aim is to provide a comprehensive overview of the techniques employed for evaluating the hydraulic and thermal properties of the test objects under investigation.
+5.2.1 Geometrical Evaluation of Specimens
+For the geometrical analysis of the tested specimens, a MATLAB code (Appendix B.1 [18]) was developed to accurately select the image of the test object and evaluate its geometric dimensions. The code allows the user to select the desired image, specify the reduction scale, and manually mark several points along the perimeter of the channel inlet. Typically, 20 − 25 points are averaged to ensure sufficient precision and avoid the fractal mechanism issue, which could lead to inaccurate evaluations of the hydraulic diameter and, consequently, the channel’s hydraulic and thermal properties. Subsequently, the code generates a spline curve that interpolates the averaged nodes. The spline function produces a smooth and continuous curve of the selected points, avoiding the inclusion of all microscopic peaks and valleys of the rough surface. Figures 5.7, 5.8 and 5.9 illustrate the various steps of the procedure just described [18].
+Figure 5.7: Image selected for geometric evaluation
+46
+
+
+Methodology
+Figure 5.8: Selected points along the perimeter
+Figure 5.9: Spline creation
+Once the interpolating spline is defined from the averaged points, the code proceeds to calculate the perimeter and area of the channel’s inlet section. Finally, the hydraulic diameter of the specimen can be computed using Formula 5.1.
+Dh = 4A
+P (5.1)
+The process of selecting points for calculating the perimeter, area, and hydraulic
+47
+
+
+Methodology
+diameter of the specimen is repeated four times. This is done by changing the starting position for selecting the first point or altering the direction of rotation when marking the points. These variations help minimize repeated errors in the selection process. Finally, an additional MATLAB script averages the four measurements, providing the mean values of area, perimeter, and hydraulic diameter, which are used in the subsequent experimental tests. As previously mentioned, the channel’s inlet section is used as a reference for all test objects studied.
+5.2.2 Darcy Friction Factor Evaluation
+To evaluate the pressure losses within the channels of the tested specimens, the Darcy friction factor formula is used, expressed as follows:
+fD = 2 · Dh
+L · ∆p
+ρu2 (5.2)
+In this formula, the friction factor fD is calculated based on the hydraulic diameter Dh, the channel length L, the pressure difference ∆p, the fluid density ρ, and the fluid velocity u. Therefore, accurately determining the Darcy friction factor requires careful calculation of all variables involved. The Python code developed (Appendix B.2) takes as input the file created during the test and stores relevant quantities, such as the air temperatures at the inlet and outlet, the airflow rate, the atmospheric pressure, and the static pressures at the inlet and outlet. Assuming that air behaves as an ideal gas, the density can be calculated using the following formula:
+ρ= p
+RT (5.3)
+Additionally, knowing the density, the mass flow rate, and the cross-sectional area of the specimen (obtained from the geometrical evaluation), it is possible to calculate the airflow velocity using the continuity equation:
+u = m ̇
+ρA (5.4)
+In the formula used to calculate the Darcy friction factor, ∆p represents the effective pressure drop along the specimen’s channel. This value, as described by Formula 5.5, is computed by subtracting the pressure losses due to sudden compression and expansion at the inlet and outlet of the specimen from the total pressure difference between the inlet and outlet.
+∆p = ∆ptot − ploss,in − ploss,out (5.5)
+48
+
+
+Methodology
+During the Darcy friction factor test, the pressures measured and recorded via RigView are static. To obtain total pressures, dynamic components must be added, which can be calculated by knowing the fluid velocity and density. The dynamic pressures, determined at both the inlet and outlet of the specimen, allow the total pressures to be calculated as follows.
+ptot = pstatic + pdynamic (5.6)
+Where the dynamic pressure is defined as:
+pdynamic = 1
+2 ρu2 (5.7)
+Once the total pressures have been calculated, the next step is to determine the pressure losses due to contraction and expansion, which will be used to find the ∆p in Formula 5.2. Figure 5.10 provides a schematic that clearly illustrates the location of the pressure taps and highlights the regions where pressure losses occur due to sudden compression and expansion.
+Figure 5.10: Pressure loss scheme
+To calculate pressure losses caused by compression and expansion at the inlet and outlet of the channel, multiplication coefficients known as c1 and c2 are used. These coefficients are derived from literature studies (such as the correlations of Idelchik and Miller) and are essential for quantifying the impact of losses due to geometries and flow transitions [41]. The coefficients depend on the flow regime (laminar or turbulent) and are multiplied by the dynamic pressures at the inlet and outlet, as described by Formulas 5.8 and 5.9.
+ploss,in = c1 · pin, dynamic (5.8)
+49
+
+
+Methodology
+ploss,out = c2 · pout, dynamic (5.9)
+In Section 3.2, Table 3.1 presents the values of the coefficients c1 and c2 for laminar and turbulent flows, which are also restated in Formula 5.10 for clarity.
+Laminar: c1 = 0.5 c2 = 2.0
+Turbulent: c1 = 0.5 c2 = 1.0 (5.10)
+After determining the value of ∆p, which accounts for both total pressures and pressure losses due to compression and expansion, the Darcy friction factor (fD) can be calculated using Formula 5.2. The developed Python code then correlates the calculated Darcy friction factor with the Reynolds number, computed as:
+Re = m ̇ · Dh
+μ(T ) · A (5.11)
+Where μ(T ) represents the fluid viscosity as a function of temperature, calculated using Sutherland’s law.
+The geometric assessment of the specimen is critical for the accuracy of the Darcy friction factor calculation. The dependency of the Darcy friction factor on the hydraulic diameter is particularly significant, as this parameter, as shown in Formula 5.12, is raised to the fifth power. Consequently, even a slight variation in the hydraulic diameter calculation results in a substantial change in the Darcy friction factor.
+fD = 2 Dh
+L
+∆p
+ρu2
+fD = 2 Dh
+L
+ρA2∆p
+m ̇ 2
+A=πr2
+−−−−→ fD = πD5
+hρ∆p 8L  ̇m2
+fD ∝ D5
+h
+(5.12)
+This is why it is crucial to ensure a precise and accurate measurement of the hydraulic diameter through the procedure described in Section 5.2.1.
+50
+
+
+Methodology
+5.2.3 Nusselt number evaluation
+To assess the heat transfer within the channels of the tested specimens, the Nusselt number was used, expressed by Formula 5.13:
+N u = h · Dh
+kair
+(5.13)
+Where:
+• h is the convective heat transfer coefficient;
+• Dh is the hydraulic diameter of the channe;
+• kair is the thermal conductivity of air.
+To accurately determine the Nusselt number, it is essential to have precise measurements of the variables in the formula. Various measurements obtained during the experimental test are used for this purpose, including the inlet and outlet air temperatures, the copper temperature measured by two PT-100 sensors placed at different radial distances from the specimen, the air mass flow rate, and the channel geometry. In the model used to calculate the Nusselt number, several key assumptions were introduced. These assumptions reflect both the necessity to simplify the system and theoretical considerations that reduce calculation complexity:
+• Steady-state: the model assumes that the system is in steady-state conditions, meaning all thermal and flow variables are constant over time. However, in practice, only a quasi-steady-state is achieved, as it is impossible to perfectly balance the heat supplied with the energy absorbed by the airflow in a reasonable timeframe. The quasi-steady-state condition is accepted since the remaining variations over time are minimal and do not significantly alter the final results, allowing for accurate Nusselt number evaluation.
+• Cylindrical conduit geometry: for simplicity, each tested channel is assumed to have a cylindrical geometry, enabling the use of an axially symmetric conduction model. This model assumes a uniform temperature distribution along the circular sections of the channel, facilitating theoretical calculations. However, this simplification can introduce errors if the real conduit geometry significantly deviates from the cylindrical shape. To mitigate this potential error, the software C3D is later used to consider the actual conduit geometry, eliminating the assumption of cylindricity and providing a more accurate estimate of the heat transfer coefficient.
+51
+
+
+Methodology
+• Constant convective heat transfer coefficient (h): the convective heat transfer coefficient (h) is assumed constant along the length of the channel. This assumption simplifies the analysis by treating the problem as one-dimensional, ignoring local effects that could influence h, such as temperature or velocity variations.
+Another important assumption is that heat transfer primarily occurs in the radial direction. This means that thermal conduction is considered dominant along the radius of the channel compared to other directions. The only difference in heat transfer between two cross-sections located at different lengths along the specimen’s axis is attributed to the variation in air temperature along the axis itself. In the calculation of the system’s unknowns, a model based on electrical analogy is used, as the heat transfer equation shares the same mathematical form as Ohm’s law. This allows heat transfer to be represented through a network of thermal resistances, similar to an electric circuit.
+Figure 5.11: Model with thermal resistances [18]
+Figure 5.11 illustrates how the heat transfer model, derived using the electrical analogy, results in an equivalent circuit of thermal resistances arranged in series along the radial direction. The three main resistances modeled in this system are: contact resistance, conduction resistance, and convection resistance.
+• The contact resistance is associated with the thermal paste placed between the copper block and the test object. This paste enhances thermal contact,
+52
+
+
+Methodology
+although some contact resistance remains. Newton’s approach was used for calculating this thermal resistance, providing a conservative estimate by assuming a higher resistance than more complex models. The contact thermal conductivity, hcontact, of the thermal paste was assumed to be 104W/m2K, with a paste thickness of 0.05mm.
+• The conduction resistance represents the opposition to heat flow within the test object’s material. Assuming a cylindrical geometry for the channel enables the use of an axisymmetric conduction model.
+• The convection resistance pertains to the forced convective heat transfer between the channel’s inner surface and the air flowing through it. The convective heat transfer coefficient, h, is considered constant along the channel’s length, as local effects are disregarded.
+In the radial thermal model just described, the main unknowns are the outer surface temperature of the test object, the inner surface temperature, and the air convective heat transfer coefficient, h. The only known airflow temperatures are those at the inlet (Tin) and outlet (Tout), measured by the sensors installed in the system. The airflow temperatures along the axis of the specimen are not known. To solve for the unknowns in the radial thermal model, discretization is applied along the axial direction of the test object, as shown in Figure 5.12.
+53
+
+
+Methodology
+Figure 5.12: Specimen discretization
+This procedure divides the specimen into infinitesimal segments. By knowing the copper temperature and the inlet air temperature, an initial assumption for the convective heat transfer coefficient h is made. Using this assumption, the outlet temperature of the first segment is calculated. This temperature then becomes the inlet temperature for the next segment, and the process continues along the axis until the outlet temperature of the final segment is determined. The outlet air temperature for one element, which is the inlet temperature for the next element, is calculated using Formula 5.14.
+54
+
+
+Methodology
+Ti+1 = Ti + q ̇ · dx
+m ̇ · cp
+(5.14)
+Where q ̇ represents the heat flux per unit length, calculated as:
+q ̇i = TCu − Ti
+1
+P h + ln Do
+Dh
+2πkm + 1
+π Do hcontact
+(5.15)
+Through this iterative procedure, the outlet air temperature of the last element of the discretization is determined, which corresponds to the outlet air temperature of the test object. This temperature is a known value, as it is measured by the PT-100 sensor positioned near the outlet of the test object. At this point, an iterative calculation is performed, as shown in Figure 5.13.
+Figure 5.13: Iterative cycle to calculate h [18]
+As described in the figure, the process begins with the discretization of the domain into 200 elements, introducing an initial estimated value of h. The heat flux qi and the air temperature Ti are calculated for each section until an estimated outlet temperature Tout,est is obtained. This temperature is then compared with the real outlet temperature Tout measured by the sensors. If the difference exceeds the established tolerance (0.001), h is updated iteratively based on the discrepancy. If Tout,est is lower than Tout, h is decreased, and if it’s higher, h is increased. The iterative process continues until the difference between Tout,est and Tout is within the tolerance. At this point, the Nusselt number N u is calculated using the final value of h according to Formula 5.13 (Appendix B.3).
+55
+
+
+Methodology
+The assumption of circular symmetry for the conduits limits the accuracy of the results obtained for square-section specimens and for those with complex geometries, such as Tesla valves or helical channels analyzed in previous studies. To overcome this limitation, a more accurate assessment was introduced using an in-house software called C3D. This tool addresses the same heat transfer problem but accounts for the actual geometry of the specimen. For each TO, a CAD model is created using Siemens NX, as shown in Figure 5.14, which displays CAD models of two of the most complex geometries tested in previous studies at Siemens Energy Fluid-Dynamic Lab. The geometry is then imported into C3D (Figure 5.15), along with the experimental data collected.
+Figure 5.14: CAD models of complex geometries
+Figure 5.15: Geometry of a generic sample imported to C3D
+56
+
+
+Methodology
+The software C3D employs a finite element scheme to calculate internal thermal conduction. The fluid dynamics of the airflow are simplified as one-dimensional, neglecting the local effects of turbulence and vorticity. To evaluate the global convective heat transfer coefficient (h), an iterative process similar to the one shown in Figure 5.16 was used. As expected, the results for straight circular channels closely match those produced by the Python code, while the results for square-section channels are slightly underestimated, making the software more conservative in its estimates.
+Figure 5.16: C3D results of a generic test object
+In previous studies, a significant difference was observed between the discretization method and the software C3D when assessing heat transfer in complex internal geometries [18]. The assumptions of the discretization model become invalid in such cases, leading to a considerable overestimation of the h value. In contrast, plausible h values were obtained using the tool developed internally by Siemens Energy. The results presented in this study, for both circular and square-section channels, were obtained using the C3D evaluation to ensure consistency and reliable comparisons across different samples.
+5.2.4 Roughness Evaluation
+To accurately determine the surface roughness of the test objects, a sliding measurement device was employed, which uses a stylus as a reference for vertical amplitude during its movement across the sample surface (Figure 5.17). As the stylus moves
+57
+
+
+Methodology
+along the surface, it detects profile variations, providing a precise measurement of roughness. The sliding measurement device is particularly effective at filtering roughness values by focusing on more significant amplitude variations rather than microvariations.
+Figure 5.17: Skidded roughness measurement
+The profile length analyzed for each sample was 4mm, a standard measure that provides an accurate representation of the surface. The measurement process was repeated three times for each test object to ensure the reproducibility and reliability of the results obtained. After completing the measurements, the average roughness value Rz was calculated for each sample using Formula 5.16.
+Rz = avg(Rvi) + avg(Rpi) (5.16)
+Figure 5.18: Example of a roughness profile graph
+The Rz value is fundamental as it is used to determine the relative roughness of the channel. Relative roughness is defined as the ratio between the average Rz value
+58
+
+
+Methodology
+and the hydraulic diameter (Dh) of the channel, where Dh is separately calculated through the geometrical evaluation of the channel. This methodology ensures that the roughness considered is directly correlated with the actual channel geometry, providing a precise indication of how the surface influences the system’s thermal and fluid dynamic performance.
+59
+
+
+Chapter 6
+Rig validation
+During the earlier phases of this research, a significant issue emerged related to the measurement of the air temperature at the outlet of the test object in the rig used by previous students. Despite multiple troubleshooting attempts, including checking and replacing codes, sensors, and data acquisition systems, the issue remained unresolved. Consequently, it was decided to reprint the parts in polyamide 12 of the qSSHT Air rig. With the new components installed, a new validation of the rig was required to ensure accurate measurements and system reliability. For the validation process, a smooth Aluminum test object with a circular cross-section and a hydraulic diameter of Dh = 2mm (Figure 6.1) was selected.
+Figure 6.1: Smooth Aluminum sample inlet section
+This sample was selected because there are numerous theoretical correlations and experimental data available in the literature for calculating both the Darcy friction factor and the Nusselt number for smooth specimens. This allowed the results obtained during the test to be compared with well-documented data, thereby ensuring an accurate validation of the rig and the methodology employed.
+60
+
+
+Rig validation
+Figure 6.2: Darcy friction factor test for smooth test specimen
+Figure 6.2 presents a logarithmic graph illustrating the relationship between the Darcy friction factor and the Reynolds number. The Reynolds number is plotted on the x − axis, while the Darcy friction factor is shown on the y − axis.The dashed straight line visible in the low Reynolds number region represents the theoretical behavior of the friction factor in the laminar regime, described by Formula 3.10 This theoretical relationship shows that in the laminar regime, the friction factor is inversely proportional to Reynolds number and independent of relative roughness, making it applicable to both smooth and rough samples. The shaded area highlights the most probable transition zone from laminar to turbulent flow. At higher Reynolds numbers, the graph shows a dashed curve representing the Colebrook correlation for turbulent flow. This correlation, valid for smooth specimens with zero relative roughness, describes how the friction factor decreases as the Reynolds number increases in the turbulent regime. The experimental data (blue points) closely follow the theoretical trend in both the laminar and turbulent regions, where the Darcy friction factor decreases as the Reynolds number increases, as predicted by the Colebrook correlation. Despite uncertainties related to sensor measurements, data acquisition systems, and hydraulic diameter evaluation, the results align with theoretical expectations. The slight increase in the Darcy friction factor in the last points compared to the theoretical curve may be due to minimal surface roughness in the "smooth" specimen or compressibility effects, including potential choking at high Reynolds numbers, which could alter the predicted friction factor behavior.
+61
+
+
+Rig validation
+Figure 6.3: Nusselt test for smooth test specimen
+In the graph shown in Figure 6.3, the Reynolds number is plotted on the x − axis, while the Nusselt number is on the y − axis. The dashed curve represents the Gnielinski correlation, as expressed by Formula 3.17. This correlation is valid for smooth conduits. However, to account for the entrance effect, which becomes significant in short conduits, the formula has been adjusted by adding a corrective term.
+Nenh = N u
+
+1 + 8.7
+L
+Dh + 5
+
+ (6.1)
+The entrance effect is crucial in this study because, in many conduits, especially short ones or those with irregular cross-sections, the initial portion of the flow is not fully developed. This leads to an alteration in the velocity and temperature profiles, impacting both heat transfer and pressure drop. The experimental data, shown in blue on the graph, fall between the Gnielinski correlation and the modified version accounting for the entrance effect, indicating that the experimentally obtained Nusselt number values align with theoretical predictions. In the presented graph, no data points were collected in the laminar flow region. This is because, in that range, the mass flow is very low, making it difficult for the sensors to accurately capture temperature values. From the analysis of both the Darcy friction factor and the Nusselt number, it can be observed that the results closely align with theoretical expectations. This consistency supports the validity of the test rig and experimental procedures,
+62
+
+
+Rig validation
+indicating that the setup and methodology were correctly implemented and are reliable for future studies and applications.
+63
+
+
+Chapter 7
+Results
+This chapter presents the results from the analysis of the specimens described in Section 4.2 It is structured into three main parts: the effect of geometry, material, and the Prandtl number. This organization allows for a detailed analysis of how each factor impacts the specimen’s performance.
+• The effect of geometry will be analyzed by evaluating the influence of the hydraulic diameter and of different configurations, such as circular and square sections, on both hydraulic and thermal performance. Variations due to channel length, with specimens of 90mm and 150mm, will also be considered.
+• The effect of material will be examined by comparing Aluminum specimens with those made of Inconel-939 (IN939). This section will focus on how the material composition influences flow resistance and heat transfer, with particular attention to the differences due to the higher absolute roughness of IN939 compared to Aluminum.
+• The effect of the Prandtl number will be explored by comparing the results of this study with those obtained using water, characterized by a higher Prandtl number, in another experimental rig operating in parallel. This comparison will allow the evaluation of how variations in the P r number affect the behavior of the Nusselt number and the Darcy friction factor.
+64
+
+
+Results
+7.1 Effect of Geometry
+7.1.1 Hydraulic diameter
+Hydraulic performance
+Figure 7.1: Darcy friction factor results for Aluminum TOs
+The graph in Figure 7.1 shows the relationship between the Darcy friction factor and the Reynolds number for Aluminum test objects with a length of 90mm and circular cross-section. The experimental results indicate that all the specimens closely follow the theoretical trend in the laminar region. However, in this region, the uncertainty is higher due to measurement limitations and the estimation of the hydraulic diameter. In the turbulent region, the results show an increase in friction factor compared to the theoretical values for the smooth Aluminum specimen. This increase can be attributed to surface roughness, which becomes significant in this flow regime. Additionally, unlike the smooth specimen, the data indicate that in the turbulent region, the Darcy friction factor tends to stabilize, forming a plateau, rather than decreasing with increasing Reynolds number. This behavior aligns with observations from the Moody diagram and other studies in the literature [39, 15]. Moreover, the graph indicates that an increase in hydraulic diameter leads to a transition to turbulence at higher Reynolds numbers. At the same time, a larger diameter results in a lower friction factor, as relative roughness decreases. For
+65
+
+
+Results
+specimens with a smaller hydraulic diameter, it was not possible to reach higher Reynolds numbers due to the limitations in inlet pressure within the rig. This analysis highlights how geometry, particularly hydraulic diameter, significantly impacts flow behavior, especially concerning the transition from laminar to turbulent flow and the effect of roughness on flow resistance.
+Figure 7.2: Darcy friction factor results for IN939 TOs
+Figure 7.2 presents the results of tests performed on Inconel-939 specimens with a length of 90mm and a circular cross-section. Similar phenomena to those observed in the Aluminum specimens are noted. In the laminar region, the experimental data align with theoretical predictions, while in the turbulent region, a plateau in the Darcy friction factor appears, indicating the influence of surface roughness. Additionally, a larger hydraulic diameter results in a lower friction factor due to decreased relative roughness. The transition from laminar to turbulent flow occurs at higher Reynolds numbers in wider channels, attributed to greater flow inertia delaying the onset of turbulence. Similarly, the transition in channels with larger diameters is more gradual and extends over a wider Reynolds number range, unlike smaller diameter channels, where the shift is sharper and more abrupt. The same phenomenon was observed by Nikuradse in his experimental studies (Figure 2.1 [13]) and can be attributed to the fact that flow instabilities grow faster in smaller channels, leading to a more rapid regime change, emphasizing the importance of channel size and surface roughness in determining flow behavior.
+66
+
+
+Results
+Thermal performance
+Geometry also affects the Nusselt number and, consequently, heat transfer within the channels. In Figure 7.3, the relationship between the Nusselt number and Reynolds number is shown for Aluminum specimens with a circular cross-section and a length of 90mm. The theoretical Gnielinski correlation and results from smooth specimens, obtained during rig validation, are also shown. The tested specimens show higher Nusselt values due to surface roughness, which increases turbulence near the walls, enhancing heat transfer. This effect is more pronounced for smaller hydraulic diameters, as greater relative roughness has a more pronounced effect on flow. Specimens with smaller hydraulic diameters stop at lower Reynolds numbers due to inlet pressure limitations.
+Figure 7.3: Nusselt results for Aluminium TOs
+The graph in Figure 7.4 shows the Nusselt enhancement (N u/N u0) as a function of the Reynolds number for Aluminum specimens with a circular cross-section and a length of 90mm. The line corresponding to N uenh = 1 represents the theoretical Gnielinski correlation. The experimental results for the smooth specimen, shown with blue points, maintain a Nusselt enhancement close to N uenh = 1 across the entire Reynolds range. For the other specimens, however, the Nusselt enhancement increases with Reynolds until reaching a plateau, indicating improved heat exchange efficiency as Reynolds increases.
+67
+
+
+Results
+Figure 7.4: Nusselt enhancement results for Aluminium TOs
+Figure 7.5 highlights that the IN939 specimens also exhibit an increase in the Nusselt number compared to the theoretical curve representing the smooth specimen. Similarly to the Aluminum samples, the Nusselt number increases with the hydraulic diameter. However, Figure 7.6 reveals a significant difference: unlike Aluminum, for IN939, the Nusselt enhancement does not stabilize after reaching a peak but instead gradually decreases as the Reynolds number increases. This suggests a distinctive behavior of the material, which will be further explored in Section 7.2.
+68
+
+
+Results
+Figure 7.5: Nusselt results for IN939 TOs
+Figure 7.6: Nusselt enhancement results for IN939 TOs
+69
+
+
+Results
+7.1.2 Length and cross-sectional shape
+Hydraulic performance
+Figure 7.7 presents the results of the Darcy friction factor as a function of the Reynolds number for IN939 test objects with a nominal hydraulic diameter of Dh = 2mm. The samples differ in length (90mm and 150mm) and cross-sectional shape (circular and square). Although the nominal diameter is the same, the effective hydraulic diameter varies due to unavoidable differences from the additive manufacturing process. In the turbulent region, there are no significant differences in friction factor values, which converge despite instrumental uncertainty and geometric variability. The transition occurs at comparable Reynolds numbers, and for all samples, this transition spans a broad Reynolds range, as previously described for channels with larger hydraulic diameters.
+Figure 7.7: Effect of length and cross-sectional shape on the fD
+Thermal performance
+The graph in Figure 7.8 shows the Nusselt enhancement as a function of the Reynolds number for Iconel-939 samples of different lengths (90mm and 150mm) and with circular and square cross-sections. The trend of Nusselt enhancement is very similar for all the samples, and no significant effect is observed due to variations in length or cross-sectional shape. This contrasts with the results observed when the hydraulic diameter was modified, which had a more pronounced impact on the
+70
+
+
+Results
+flow behavior.
+Figure 7.8: Effect of length and shape on the N uenh
+As shown in the previous two graphs, unlike the variations observed with hydraulic diameter, changes in length and cross-sectional shape do not appear to have a significant effect on pressure losses or heat transfer. This is because pressure losses, for a given Reynolds number, are primarily a function of relative roughness, which remains constant regardless of changes in length or shape. Although a square cross-section might increase the contact surface and improve heat transfer, the dominant influence comes from turbulence, generated mainly by the flow and internal roughness. Thus, experimental results demonstrate that changes in length and shape (from circular to square) do not produce evident effects as observed with hydraulic diameter. The same result was observed in a study conducted by Dai et al., as mentioned in Section 2.1 [20].
+71
+
+
+Results
+7.2 Material effect
+Having analyzed the effect of geometry on flow and heat transfer parameters, the influence of the material used in the specimens is now to be investigated.
+Hydraulic performance
+Figure 7.9 presents the results for the Darcy friction factor for Aluminum and Inconel-939 specimens, both 90mm long with a nominal hydraulic diameter of 1mm. In the laminar regime, the Darcy friction factor behaves similarly for both materials, following the linear trend predicted by theory. In this phase, friction depends solely on the Reynolds number, and surface roughness does not play a significant role. However, in the turbulent regime, the Darcy friction factor begins to depend not only on the Reynolds number but also on the relative surface roughness. Here, a clear difference emerges between the two materials: the Darcy friction factor for IN939 is significantly higher than that of Aluminum, despite having the same nominal hydraulic diameter.
+Figure 7.9: Effect of material on the fd for TOs with Dh = 1mm and L = 90mm
+This difference can be attributed to the greater absolute roughness of IN939 (Figure 7.10). Since both specimens have the same hydraulic diameter, IN939 exhibits a higher relative roughness. Consequently, IN939 specimens experience greater flow resistance compared to the smoother Aluminum specimens.
+72
+
+
+Results
+This result aligns with turbulent flow theory, which states that an increase in surface roughness significantly impacts pressure losses and, therefore, increases friction [15].
+Figure 7.10: Comparison of Aluminum and Inconel-939 roughness
+Thermal performance
+The material effect affects not only the Darcy friction factor, but also the Nusselt number, as greater roughness increases heat transfer. Figure 7.11 compares the Nusselt number for an IN939 specimen and an Aluminum one, both with a hydraulic diameter of 2mm. As observed, the Nusselt number for IN939 is higher across the entire Reynolds range. This aligns with the fact that increased roughness creates a larger surface area, increases turbulence, and enhances flow mixing, thereby improving heat transfer. Thus, the higher Nusselt for IN939 results from this enhanced thermal performance.
+73
+
+
+Results
+Figure 7.11: Effect of material on the N u for TOs with Dh = 2mm and L = 90mm
+As demonstrated in Section 7.1.1, the material’s influence extends beyond altering the absolute Nusselt number value; it also affects its overall trend. This is particularly evident in the analysis of Nusselt enhancement. For Aluminum, as shown in Figure 7.4, the enhancement increases with Reynolds and eventually stabilizes into a plateau. In contrast, for IN939, the Nusselt enhancement peaks before gradually decreasing as Reynolds increases (Figure 7.6). These differences suggest that the material affects not only thermal performance but also its evolution with changing flow conditions.
+74
+
+
+Results
+7.3 Effect of the Prandtl Number
+In this study, using air as the working fluid, the Prandtl number was considered constant at P r = 0.71. To evaluate the effect of the Prandtl number, results obtained from the qSSHT Air rig were compared with those from the qSSHT Water rig, operating in parallel. Although the samples had the same materials and comparable geometries, the same specimens could not be tested. This was due to the different heating methods: the QSSHT Air rig relies on conduction, whereas the QSSHT Water rig employs Joule heating. Consequently, the specimens from the water rig underwent mechanical surface treatment, preventing a direct comparison.
+Hydraulic performance
+Figure 7.12: Effect of P r on the fD for TOs with Dh = 2mm
+Figure 7.12 illustrates the behavior of the Darcy friction factor for two samples identical in Dh and material but subjected to fluids with different Prandtl numbers (air and water). Experimental data for Aluminum specimens with Prandtl numbers of P r = 0.71 (air) and P r = 7 (water) confirm that variations in the Prandtl number do not significantly affect the Darcy friction factor in either the laminar or turbulent regimes. This aligns with the theory that the Darcy friction factor depends on the Reynolds number and relative roughness, but not on the Prandtl number. The transition also seems to occur at comparable Reynolds numbers for
+75
+
+
+Results
+both tests at different Prandtl numbers Even considering instrumental uncertainties and the fact that different specimens were tested in the two rigs, the results remain consistent, reinforcing the idea that Prandtl does not directly influence the Darcy friction factor.
+Thermal performance
+Figures 7.13 and 7.14 clearly illustrate the behavior of the Nusselt number as a function of both Reynolds and Prandtl numbers for two different materials: Aluminum and Inconel-939. For both materials tested, at a given Reynolds number, a higher Prandtl number results in a higher Nusselt number, highlighting the importance of Prandtl in determining heat transfer. However, the variation in the Nusselt number between different Prandtl numbers is more pronounced for Aluminum than for IN939, suggesting that the influence of Prandtl also depends on the material.
+Figure 7.13: Effect of P r on the N u for Al TOs with Dh = 2mm
+76
+
+
+Results
+Figure 7.14: Effect of P r on the N u for IN939 TOs with Dh = 2mm
+To verify the influence of the Prandtl number in relation to the material, an attempt was made to find a correlation between Nusselt, Reynolds, and Prandtl in the form:
+N u = a · Reb · P rc (7.1)
+Similar to the theoretical correlation for smooth specimens found in the literature, namely [32]:
+N u = 0.023 · Re0.8 · P r0.4 (7.2)
+To achieve this, data from both rigs were analyzed, narrowing the range of Reynolds numbers to a common interval (Figure 7.15) and an iterative procedure was developed using a MATLAB code. This method involved dividing the experimental values of N u by P rn, while varying the value of the exponent. The optimal value of n was determined when the initially distinct curves aligned in such a way as to reveal a clear correlation between the variables under consideration (Figure 7.16). This approach made it possible to identify the exponent n that most accurately describes the influence of the Prandtl number on the Nusselt number. A similar procedure was employed to determine the exponent characterizing the relationship between the Nusselt number and the Reynolds number.
+77
+
+
+Results
+The correlation derived from the experimental data was as follows:
+N u = 0.069 · Re1.201 · P r0.655 (7.3)
+By comparing the coefficients with those found in the theoretical correlation in the literature, it becomes evident that, in the present study, the influence of both dimensionless numbers (Reynolds and Prandtl) is greater than what has been reported for smooth specimens.
+Figure 7.15: Real trends for Aluminum specimens in a reduced Re range
+78
+
+
+Results
+Figure 7.16: Aligned trends for Aluminum specimens
+A similar approach was followed for the IN939 samples. By applying the same methodology used for Aluminum, the following correlation was obtained:
+N u = 0.004 · Re1.035 · P r0.375 (7.4)
+By comparing these results with the correlation found in the literature (Equation 7.2), it becomes evident that the Prandtl coefficient in this case is very similar. The experimental correlations for Aluminum (Equation 7.3) and IN939 (Equation 7.4) confirm that, as previously suggested, the material also affects the heat transfer behavior related to the Prandtl number. The correlation for Aluminum shows a stronger dependence on both Reynolds and Prandtl compared to IN939, where the coefficients for both parameters are lower.
+79
+
+
+Results
+Figure 7.17: Real trends for IN939 specimens in a reduced Re range
+Figure 7.18: Aligned trends for IN939 specimens
+This suggests that although both materials exhibit increased heat transfer with higher Reynolds and Prandtl numbers, the smoother surface and material properties
+80
+
+
+Results
+of Aluminum lead to a greater influence of Prandtl. Conversely, Inconel-939, with its higher roughness, shows a lower dependence on Prandtl. This aligns with the understanding that rougher surfaces induce greater turbulence, thereby reducing sensitivity to variations in fluid properties like Prandtl. In conclusion, the material affects not only flow resistance but also thermal behavior, including its interaction with fluid properties such as the Prandtl number.
+81
+
+
+Chapter 8
+Conclusions and future work
+8.1 Conclusions
+During this work, two main experimental tests were conducted: the Darcy friction factor test and the Nusselt number test. Both tests highlighted the significant influence of increased surface roughness caused by the additive manufacturing process, showing an increase in pressure losses and an improvement in heat transfer due to the higher level of induced turbulence. Various samples with different geometries and materials were tested to observe the influence of these parameters on the overall performance of the channel. A comparison with the results from the qSSHT Water rig was carried out to assess the effect of the Prandtl number.
+By analyzing a smooth Aluminum sample with a circular section and a hydraulic diameter of Dh = 2mm, and comparing the results obtained with those available in the literature for both the Darcy friction factor (Figure 6.2) and the Nusselt number (Figure 6.3), it was demonstrated that consistent results with the theory can be achieved, despite uncertainties associated with the sensors and the data acquisition system. This validated both the experimental setup, including the new parts produced via selective laser sintering, and the methodology used for both tests. After validating the setup, the experimental tests were conducted. To provide a comprehensive overview of the results obtained during the study, the graphs illustrating the experimental results for all the samples, both for the Darcy friction factor and the Nusselt number, are presented in Figure 8.1 and Figure 8.2, respectively.
+82
+
+
+Conclusions and future work
+Figure 8.1: fD results for tested channels
+Figure 8.2: N u results for tested channels
+• The geometry of the channels, particularly the hydraulic diameter, plays a crucial role in determining the hydraulic and thermal behavior of the flow within the ducts, as it directly affects the relative roughness of the surface. An increase in hydraulic diameter leads to a reduction in the friction factor and greater flow stability, while a decrease in diameter increases turbulence and improves heat transfer, albeit at the cost of higher pressure losses. The
+83
+
+
+Conclusions and future work
+variation in length from 90mm to 150mm and the change in cross-sectional shape from circular to square, however, show a limited impact on performance.
+• The effect of the material is significant as surface roughness plays a key role in determining both pressure losses and heat transfer. Inconel-939 samples, characterized by higher roughness, exhibit greater pressure losses but also a higher Nusselt number compared to Aluminum samples. The results also reveal a different trend in Nusselt enhancement as a function of the Reynolds number, depending on the material. Inconel-939 reaches high Nusselt enhancement values at low Reynolds numbers but tends to decrease at higher Reynolds numbers. Conversely, Aluminum TOs, after reaching a peak in Nusselt enhancement, show a stabilization. The increase in roughness initially enhances heat transfer, but beyond a certain threshold, the formation of local vortices and excessive turbulence can reduce flow stability, limiting the gain in the Nusselt number.
+• The Prandtl number has a significant impact on thermal performance, while it does not affect the Darcy friction factor. In Aluminum samples, an increase in the Prandtl number results in a notable rise in the Nusselt number, whereas for Inconel-939, this influence is less pronounced. For both materials tested, correlations have been identified to estimate the Nusselt number as a function of the Reynolds number and the Prandtl number. These correlations were then compared with the Dittus-Boelter correlation for smooth channels, highlighting that the dependencies of the Nusselt number on the Reynolds and Prandtl numbers vary based on the specific roughness and, consequently, the material.
+8.2 Future work
+Considering the results and methodologies developed in this study, several directions for future research have emerged. Below are the main proposals for future work:
+• In Section 5.2.2, it was highlighted that the Darcy friction factor is proportional to the hydraulic diameter raised to the fifth power. Currently, the evaluation of the internal channel geometry is based solely on the inlet section of the specimen. Adopting a more accurate method for analyzing the internal geometry would therefore be crucial to obtaining more precise results and reducing measurement uncertainties. To this end, advanced imaging techniques such as computed tomography could be employed, allowing for a more detailed geometric evaluation of the specimen.
+• To expand upon the results obtained, future tests should investigate channels characterized by more complex internal geometries. The inclusion of elements
+84
+
+
+Conclusions and future work
+such as pin fins, which increase the contact area with the flow, or the use of specimens with helical channels, could provide more efficient solutions in terms of reducing pressure losses and enhancing heat transfer in turbine cooling systems.
+• Although this study has provided important insights regarding the influence of the Prandtl number on the Nusselt number, further experiments focusing on the analysis of different materials at varying Prandtl numbers are necessary. This approach would enable the development and refinement of predictive correlations.
+• A new experimental setup utilizing Joule heating, similar to the one used in water-based experiments, should be designed. This would allow for the insertion of sensors along the entire length of the channel, enabling real-time monitoring of flow development within the channel. This approach would make it possible to identify the transition point, characterized by a temperature jump and a corresponding change in the flow regime.
+Figure 8.3: CFD analysis of the qSSHT Air Rig with Joule heating
+85

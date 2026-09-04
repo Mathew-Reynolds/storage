@@ -1,0 +1,795 @@
+Skip to Main Content
+Open Menu
+Skip Nav Destination
+Volume 143, Issue 7
+July 2021
+Previous Article
+Next Article
+Article Contents
+Abstract
+Introduction
+Experimental Methodology
+Computational Fluid Dynamics Methodology
+Results
+Conclusions
+Acknowledgment
+Disclaimer
+Conflict of Interest
+Data Availability Statement
+Nomenclature
+References
+RESEARCH PAPERS
+Flow in a Simulated Turbine Blade Cooling Channel With Spatially Varying Roughness Caused by Additive Manufacturing Orientation
+Available
+Stephen T. McClain,David R. Hanson,Emily Cinnamon,Jacob C. Snyder,Robert F. Kunz,Karen A. Thole
+Author and Article Information
+J. Turbomach. Jul 2021, 143(7): 071013 (12 pages)
+Paper No: TURBO-20-1292 https://doi.org/10.1115/1.4050389
+Published Online: April 19, 2021
+Article history
+Split-Screen
+Views 
+Open Menu
+Open the
+PDF
+for in another window
+Share 
+Cite
+Permissions
+Search Site
+Abstract
+
+Because of the effects of gravity acting on the melt region created during the laser sintering process, additively manufactured surfaces that are pointed upward have been shown to exhibit roughness characteristics different from those seen on surfaces that point downward. For this investigation, the roughness internal flow tunnel (RIFT) and computational fluid dynamics models were used to investigate flow in channels with different roughness on opposing walls of the channel. Three rough surfaces were employed for the investigation. Two of the surfaces were created using scaled, structured-light scans of the upskin and downskin surfaces of an Inconel 718 component which was created at a 45 deg angle to the printing surface and documented by Snyder et al. (2015). A third rough surface was created for the RIFT investigation using a structured-light scan of a surface similar to the Inconel 718 downskin surface, but a different scaling was used to provide larger roughness elements in the RIFT. The resulting roughness dimensions (Rq/Dh) of the three surfaces used were 0.0064, 0.0156, and 0.0405. The friction coefficients were measured over the range of 10,000 < ReDh < 70,000 for each surface opposed by a smooth wall and opposed by each of the other rough walls. At multiple ReDh values, x-array hot-film anemometry was used to characterize the velocity and turbulence profiles for each roughness combination. The friction factor variations for each rough wall opposed by a smooth wall approached complete turbulence. However, when rough surfaces were opposed, the surfaces did not reach complete turbulence over the Reynolds number range investigated. The results of inner variable analysis demonstrate that the roughness function (ΔU+) becomes independent of the roughness condition of the opposing wall providing evidence that Townsend’s hypothesis holds for the relative roughness values expected for additively manufactured turbine blade cooling passages.
+
+Issue Section:
+Research Papers
+Keywords:
+computational fluid dynamics (CFD), fluid dynamics and heat transfer phenomena in compressor and turbine components of gas turbine engines, heat transfer and film cooling
+Topics:
+Surface roughness, Flow (Dynamics), Friction
+Introduction
+
+Additive manufacturing (AM) approaches present designers with a great deal of geometric freedom for creating parts with complicated internal structures. Because of this feature, AM has the potential to enlarge the design space for the internal cooling passages of gas turbine blades beyond what can be accomplished with established subtractive techniques.
+
+However, AM produces distinctive roughness that has been found to depend on surface geometry during printing. The effects of gravity on the melt pool may produce differing roughness for surfaces that point upward than for surfaces that point downward during the sintering process [1,2]. The influence of surface orientation will cause an internal flow passage to exhibit different roughness characteristics on each passage wall.
+
+Passages with spatially varying roughness have been investigated mainly using one wall roughened with the opposing wall smooth. Schlichting’s experiments are a classic example [1]. To the authors’ knowledge, there have been to date few investigations of high-aspect ratio passages with different roughness on opposing walls. Snyder et al. [2], Schlichting [3], and Stimpson et al. [4,5] have considered engine-scale AM internal cooling channels which inherently have different roughness characters on the upskin and downskin faces. These studies present pressure loss and heat transfer measurements on AM engine-scale internal cooling passages built using various process parameters. The studies show a wide variation in pressure loss and heat transfer depending on the build parameters and the resulting roughness.
+
+The present work takes the approach of scaling the roughness on an AM internal cooling channel up to wind tunnel size. Detailed measurements of the velocity and turbulence profiles over the rough surfaces become readily available at this larger scale.
+
+The primary objective of this work is to investigate the interactions of flow with different roughness levels reflective of the differences caused by surface orientation during AM. The objective is achieved by investigating the flow in a rectangular duct with different roughness values representing realistic AM roughness properties relative to the duct size applied to opposing walls. In addition to the experimental measurements, computational fluid dynamics (CFD) simulations are employed to investigate the internal flow physics and interactions.
+
+The essence of this investigation is a test of Townsend’s hypothesis [6], which when applied to boundary layers over roughness implies that roughness information is not passed beyond the inner region where turbulent fluid motion contributes to fluid shear on the surface [7]. If Townsend’s hypothesis holds for flow between two opposed surfaces with different roughness values, the flow in the inner region on each wall acts almost independently of the other wall. The exception to the outer layer near-independence is that the overall pressure gradient in the streamwise direction must balance; consequently, the bulk flow is shifted towards the wall with the lesser frictional resistance. The large roughness sizes of AM surfaces relative to the desired hydraulic diameters required for gas turbine cooling passages, which may be on the order of 20%, represent a significant challenge for Townsend’s hypothesis. However, if the outer layer is insensitive to the roughness and the inner region turbulence at these roughness length scales, then predicting friction losses for AM cooling passage flow using current modeling approaches is feasible.
+
+Experimental Methodology
+
+For this study, components were created using AM to reflect differences in orientation during the AM process. The surfaces were then scanned using either optical or computed tomography (CT) X-ray systems to characterize the surfaces. The surface topographies were then scaled to representative turbine blade geometries relative to the duct (wind tunnel) test section geometry. The flow profiles and resistance of the surfaces were investigated when opposed by smooth walls. The flow and resistances of the surfaces were subsequently investigated when opposed by the walls of different roughness. The details of each step in the process are described in the following subsections.
+
+Surface Generation.
+
+The Inconel 718 Upskin and Inconel 718 Downskin surfaces used in this study were taken from a test coupon built to measure bulk flow and heat transfer through millimeter scale channels. The geometry of this coupon was first introduced in a study by Stimpson et al. [4]. Inconel 718 powder was used in a common laser powder bed fusion (L-PBF) machine with the manufacturer’s recommended process parameters to create the test coupon. The coupon was oriented such that two of the four channel surfaces were at a 45 deg angle relative to the build floor (β = 45 deg). These two angled surfaces, upward facing (upskin) and downward facing (downskin), were the surfaces of interest for this study. Figure 1 presents a representation of the printed coupon and the cooling channel print orientation.
+
+Fig. 1
+View largeDownload slide
+
+Representation of the coupon build geometry and scan locations (not to scale)
+
+To extract the morphology of these surfaces, the coupon was first sliced open along the length of the channel using wire electrical discharge machining (EDM). This process was necessary to provide optical access to the surfaces of interest. Next, the surfaces were scanned with an optical profilometer, generating a 1.6 mm × 1.6 mm patch of roughness heights having lateral resolution of 1.7 µm. Scans were taken at multiple sequential locations on the surface, then stitched together to create one large contiguous dataset. The output of this process was a 3D point cloud for each surface.
+
+A third rough surface, identified as the “Real_x102” surface, was created for the study using Hastelloy-X, a nickel–chromium–iron–molybdenum alloy. Details on the generation of the Real_x102 surface can be found in Ref. [8]. The gross dimensions and build orientation were identical to those used for the Inconel 718 parts.
+
+Rough Surface Scaling.
+
+To focus only on the nature of additively manufactured component roughness, the large-scale variations were removed using a two-dimensional self-organizing map (SOM) approach with z-axis planar surface fitting (2D-SOM-ZR) developed by McClain [9]. The surface features were then scaled to fit the 0.229 m × 0.914 m (9 in. × 36 in.) wall area of the test section. For the Inconel 718 surfaces, the original surface point clouds were scaled by 50×. 127 mm × 76.2 mm (5 in. × 3 in.) sections from the scaled point cloud were then shifted to the center of the test section. The scaled section was then reflected in the streamwise and spanwise flow directions to cover the entire test surface for each surface. A bi-quadratic interpolation scheme was then used to create the surface stereo-lithography files for three-dimensional printing. The two new surfaces are hereafter referred to as the “Inco718_Upskin” and the “Inco718 _Downskin” surfaces.
+
+The third surface used in the investigation, the L-2x-Ha (Hastelloy-X) surface, was originally reported by Hanson et al. [8]. Details about the scaling to the roughness internal flow tunnel (RIFT) floor may be found in Ref. [8]. The Real_x102 surface was included in this investigation because the different scaling used enabled a geometric progression of roughness characteristics. That is, the roughness characteristics of the Real_x102 surface are approximately 2.5× the characteristics of the Inco718_Downskin surface, which are approximately 2.5× the characteristics of the Inco718_Upskin surface. Furthermore, the addition of the Real_x102 broadens the range of roughness to hydraulic diameter ratios of the study relative to the ratios that may be employed on future additively manufactured turbine blades.
+
+Figure 2 presents the topographies of the three surfaces employed in the investigation. The progression of roughness characteristics between the surfaces is visible.
+
+Fig. 2
+View largeDownload slide
+
+Surfaces used in the investigation: (a) Real_x102, (b) Inco718_Downskin, and (c) Inco718_Upskin (dimensions shown in inches)
+
+Roughness Characteristics.
+The characteristics of the scaled surface topographies were characterized using the average roughness, Ra, as defined in Eq. (1), the root-mean-square (RMS) roughness, Rq, as described in Eq. (2), and the surface skewness, Skw, as described by Eq. (3).
+
+
+Ra=[1NP∑i=1NP|Y′|]
+(1)
+
+
+Rq=[1NP∑i=1NP(Y′2)]1/2
+(2)
+
+
+Skw=1Rq3[1NP∑i=1NP(Y′3)]
+(3)
+In Eqs. (1)–(3), Y′ is defined as the local surface elevation relative to the mean surface elevation,
+Y′=Y−Y¯
+⁠, where
+
+
+Y¯=1NP∑i=1NPY
+(4)
+In addition to these basic statistical characteristics, predictions of the equivalent sand-grain height were made using the Flack and Schultz [10] correlation, shown in Eq. (5), and the Stimpson and Thole [5] correlation, shown in Eq. (6).
+ks,FS=4.43Rq(1+Skw)1.37
+(5)
+ks,STDh=18RaDh−0.05
+(6)
+
+Table 1 presents the quantitative surface characterizations. Like Fig. 2, Table 1 demonstrates the progression of roughness values. Interrogating the Rq values, the Inco718_Downskin Rq value is 2.4 times the Inco718_Upskin value, and the Real_x102 Rq value is 2.6 times the Inco718_Downskin value. While the roughness length scales exhibit an increasing progression, Table 1 indicates that the Inco718_Upskin exhibits the highest surface skewness, while the Real_x102 surface has the lowest skewness.
+
+Table 1
+
+Roughness properties of each surface
+
+Roughness property	Real_x102	Inco718 Downskin	Inco718 Upskin
+Abbreviation	“Real”	“Down”	“Up”
+Ra (mm)	1.887	0.737	0.303
+Rq (mm)	2.436	0.936	0.386
+ks,FS (mm)	6.933	4.623	2.182
+ks,ST (mm)	30.85	12.00	4.179
+Skw	−0.276	0.082	0.195
+Rq/Dh	0.0391	0.0150	0.0062
+ks,FS/Dh	0.1113	0.0742	0.0350
+ks,ST/Dh	0.4951	0.1927	0.0671
+ɛ/Dh	0.0875	0.0205	0.0055
+ɛ (mm)	5.452	1.277	0.343
+Roughness Internal Flow Tunnel.
+
+The RIFT was used for the experimental measurements of friction factors and mean velocity profiles. The RIFT has been previously described in Ref. [8]. The test section of the RIFT was created to have a 228.6 mm × 36.07 mm (9 in. × 1.42 in.) cross-sectional area with a roughness section length of 914 mm (36 in.). The aspect ratio of the test section is 6.3:1, and the resulting hydraulic diameter of the test section is 62.3 mm (2.45 in.). An isometric view of the RIFT with relevant streamwise dimensions and a cut-away of the test section are presented in Fig. 3.
+
+Fig. 3
+View largeDownload slide
+
+RIFT and test section cross-sectional view
+
+The RIFT has a 254 mm (10 in.) inlet contraction with a 5:1 area ratio. Downstream of the inlet contraction, two 203 mm (8 in.) sections create an entrance length or settling region. At the beginning of the test section, a 100 mm (3.94 in.) smooth region exists created by the wind tunnel header. The total entrance length before the roughness region is 0.506 m (19.94 in.), and the entrance length from the contraction exit to the first set of pressure taps is 698.5 mm (27.5 in.) resulting in a settling region ratio, Ls/Dh = 11.2.
+
+As shown in the cut-away view in Fig. 3, ceiling and floor panels that are attached to the smooth sidewalls of the tunnel define the roughness test section. When panels with roughness are attached to the RIFT, the panels are created such that the mean elevation of the rough surfaces is at the same elevation as a smooth panel would exhibit when attached to the RIFT. This panel construction approach makes the area averaged velocity consistent along the length of the test section and maintains consistent area averaged velocity comparisons between surfaces.
+
+Flow through the tunnel is established using a small centrifugal fan controlled using a variable autotransformer. The tunnel volumetric flowrate and average velocity are determined using a pressure tap installed in the first settling section located 58.4 mm (2 in.) downstream of the contraction exit. Based on the contraction exit static pressure, measured using a pressure transducer with a 0–2 in.-of-water range, the volumetric flowrate is determined using Eq. (7).
+Q=CoAts2ΔPvρ
+(7)
+where Ats is the area of the test section, ΔPv is the gage pressure measured at the contraction exit, and Co is the discharge coefficient. The value of the discharge coefficient was determined to be 0.915 by comparison to Pitot-static measurements acquired at the test section exit and by integrating hot-film probe velocity profiles in the test section.
+
+The atmospheric conditions of air entering are measured using USB-based sensors for barometric pressure, relative humidity, and temperature. Based on the measured atmospheric conditions, the aggregate moist air density and molecular viscosity were determined using the water and steam saturated vapor expressions [11], Sutherland’s law [12], and Wilke’s equation for gas mixtures [13].
+
+Pressure taps were placed on each sidewall of the test section at the mid-channel height. The first (upstream) set of pressure taps is 190.5 mm (7.5 in.) downstream of the start of the roughness section. The downstream pressure taps were placed 685.8 mm (27.0 in.) from the upstream taps. The Darcy–Weisbach friction factors, i.e., the Bernoulli major loss coefficients, were determined using Eq. (8), which is expressed completely in terms of measured quantities.
+fDW=DhΔPtsC02LtsΔPv
+(8)
+
+In Eq. (8), ΔPts is the pressure drop between the upstream and downstream sets of pressure taps. Hanson et al. [8] present a more detailed development of Eq. (8).
+
+For each surface and for the combinations of surfaces, the friction factor variation was measured over the range of 10,000 < ReDh < 70,000. However, as the surface roughness increased, the increasing power requirements limited the upper Reynolds number limit. For example, the maximum Reynolds number tested for the Real_x102 and Inco718_Downskin combination was 50,000.
+
+The details of the uncertainty analysis for the friction factor measurements of Eq. (8) are described in Ref. [8]. In the turbulent region, the uncertainties of the friction factor measurements are around 2% of the measured quantities. However, for the smooth surface and low roughness cases at Reynolds numbers below 10,000, the low pressure gradients and the intermittency in the turbulent flow cause the uncertainty in the measured friction factors to be as high as 10%.
+
+Velocity and Turbulence Profile Measurements.
+
+The velocity profiles were measured using a 1249A-10, x-array hot-film anemometer probe and an AN-1002 anemometry system. The probe was placed at a single x-location which was 0.902 m (35.5 in.) downstream of the start of the test section. At the x-location, the probe is moved through a 29.21 mm (1.15 in) trace in the wall-normal direction in increments of 0.254 mm (0.01 in.) using a stepper-motor controlled stage.
+
+The 1249A-10, x-array probe was calibrated over the range of 0–30 m/s wind tunnel speed and for pitch angles of −20 deg, −10 deg, 0 deg, 10 deg, and 20 deg. The resulting calibration curves for the effective velocity of each wire exhibited standard estimates of error values of less than 0.11 m/s.
+
+At each y-station in the profile, 300,000 samples were acquired simultaneously from each wire at a rate of 50,000 samples/s. Based on the instantaneous velocities, the mean velocity components were evaluated using Eqs. (9) and (10).
+
+
+u¯=1NP∑i=1NPui
+(9)
+
+
+v¯=1NP∑i=1NPvi
+(10)
+Using the mean velocity components, the apparent Reynolds stress was calculated using Eq. (11).
+
+
+τRS=−u′v′¯=−1NP∑i=1NP(ui−u¯)(vi−v¯)
+(11)
+The hot-film probe was selected for this investigation because of its robustness, which was vital in positioning the probe near roughness elements without sustaining damage. However, the diameter of the probe wires and the sampling volume of the array are sufficiently large relative to the size of the turbulent features and to the size of the Reynolds stress plateau region that the sensitivity of the probe to short timescale fluctuations in the flow field is reduced. Consequently, the Reynolds stress term in Eq. (11) is attenuated by the hot-film wires. To correct for the probe attenuation of Reynolds stress, an attenuation factor, Fa, is introduced into the total shear expression, Eq. (12).
+τm=μ∂u¯∂y−Faρu′v′¯
+(12)
+The maximum Reynolds stress in the velocity profile is used to determine the skin friction coefficient using Eq. (13).
+Cf=τM(1/2)ρ(Q/Ats)2
+(13)
+
+To minimize the Reynolds stress measurement uncertainty in determining the maximum shear, the values of the measured shear at the five nearest Y-stations above and below the local maximum were used to evaluate a second-order polynomial fit of the raw Reynolds stress values as a function of the wall-normal distance, y. The maximum value of the polynomial fit was then used as the maximum shear of the velocity profile.
+
+Based on the measured skin friction coefficient from Eq. (13), the friction velocity was determined for each velocity profile using Eq. (14).
+u*=τMρ=QAtsCf2
+(14)
+Finally, the inner variable velocity and height were determined using Eqs. (15) and (16).
+u+=u¯u*
+(15)
+y+=ρyu*μ
+(16)
+
+As with the friction factor measurements, the velocity profiles were acquired over the range of 10,000 < ReDh < 70,000. The velocity profiles were acquired in Reynolds number increments of 10,000. If the next increment of 10,000 could not be obtained for a rough surface or surface combination, a profile was obtained at the highest Reynolds number achieved by the centrifugal fan for that surface or surface combination.
+
+Because of the finite radius of the x-array probe used in the study, the traces used in the study could not be used to traverse the entire height of the channel. The finite radius of the probe does not allow the probe to reach the top surface of the test section. For the surface combinations investigated, two sets of hot-film traces were acquired for each combination of rough panels. The first set was acquired with one surface at the bottom, and the second set was acquired with the panels swapped such that the other surface was on the bottom of the test section.
+
+Calibration and Uncertainty Analysis.
+To calibrate the Reynolds stress attenuation factor in Eq. (12), velocity boundary layer traces were acquired for smooth surface panels attached to the RIFT. The inner variables were then compared to the law of the wall as presented in Eq. (17).
+u+=1κln(y+)+B
+(17)
+where von Karman’s constant, κ, was taken to be 0.41 and B was taken to be 5.1. The value of the attenuation factor was adjusted until the smooth wall profiles agreed with the law of the wall.
+
+Figure 4 demonstrates the process. Figure 4(a) shows mean streamwise velocity profiles based on an outer scaling of the flow. Figure 4(b) presents the profiles of Reynolds stress identifying the “plateau” region where Reynolds stress reaches a maximum value. Figure 4(b) demonstrates that for most of the Reynolds number cases, the Reynolds stress decreases linearly with increasing distance from the wall above the “plateau” region. The ReDh = 10,000 profile deviates the most from the expected behavior, which is a result of the ReDh = 10,000 not being fully transitioned from laminar to turbulent flow.
+
+Fig. 4
+View largeDownload slide
+
+Smooth channel validation measurements: (a) velocity profiles, (b) normalized Reynolds shear, and (c) inner variable profiles
+
+Finally, Fig. 4(c) presents the comparison of the resulting inner variable profiles to the law of the wall. The resulting value of the attenuation factor which best collapses the smooth wall profiles onto the expected overlap region described by Eq. (17) is 2.4. Like the results of Fig. 4(b), the ReDh = 10,000 inner variable profile in Fig. 4(c) also demonstrates that the profile has still not fully transitioned to turbulent behavior. That is, the viscous sublayer penetrates more deeply than expected for a turbulent profile before transitioning to a log-linear region.
+
+The uncertainty associated with the maximum shear stress was determined using an approach based on the method of Coleman and Steele [14], which is an extension and formalization of the approach of Kline and McClintock [15]. Substituting Eq. (14) into Eq. (15) results in the data reduction equation used to calculate the inner velocities based on the skin friction coefficient and measured velocities.
+u+=u¯ρτM
+(18)
+The uncertainty propagation equation is shown in Eq. (19).
+Ru+2=(∂u+∂τMRτM)2+(∂u+∂u¯Ru¯)2+(∂u+∂ρRρ)2
+(19)
+Assuming the uncertainty in u+ comes completely from the total shear measurements, the upper bound on the total shear uncertainty can be inferred from the uncertainty of u+ values. Investigating Fig. 4(c), the uncertainty of a calculated u+ value was assessed at y+ = 100 as ±0.50 based on one-half of the spread of the u+ values around the law of the wall. The partial derivative of the inner velocity with respect to the skin friction coefficient is presented in Eq. (20).
+∂u+∂τM=−u¯ρ2τM32
+(20)
+
+Using the ReDh = 40,000 as an example case, u+ = 16.33,
+u¯=8.38m/s
+⁠, and τM = 0.318 Pa at y+ = 100. Solving for the random uncertainty in the total shear values from Eq. (19) results in an uncertainty of 0.019 Pa or 6% of the measured value. The resulting percentage uncertainty does not change significantly from 6% over the range of 10,000 < ReDh < 70,000.
+
+Computational Fluid Dynamics Methodology
+
+An in-house, CFD code is used to solve the steady, incompressible Reynolds-averaged Navier–Stokes (RANS) equations for the present roughened-wall channel flows. This code uses a finite-volume discretization and a block-implicit algorithm with artificial compressibility to solve the fluid equations of motion on a block-structured grid. Inviscid fluxes are third-order accurate using a monotonic upstream-centered scheme for conservation laws (MUSCL) scheme. The Spalart–Allmaras [16] and Menter k–ω shear stress tranport (SST) [17] models provide turbulence closure.
+
+The RIFT settling region and test section, as well as an extended exit region, shown in Fig. 5(a), are discretized using a block-structured grid with approximately 60 million cells. The smooth settling region upstream of the test section is included in the simulations in order to establish the velocity and turbulence profiles as flow enters the test section. Of the total cell count, approximately 45 million cells are used to discretize the test section. The grid size normal to the floor, ceiling, and sidewalls is 1 × 10−5 m, sufficiently fine for y+ < 1 at the solid surface, and stretches with a growth rate of 1.1 toward the interior of the channel until it achieves a maximum wall-normal size of 0.001 m. The grid size in the streamwise direction is 0.001 m over the length of the test section. The cell size in the wall-parallel direction is such that a typical roughness element, or distance from valley to valley in the streamwise direction, on the Real_x102 surface is ∼30 cells across. The streamwise size of the cells within the smooth setting region is allowed to expand to 0.003 m. A detail view of the CFD mesh is shown in Fig. 5(b).
+
+Fig. 5
+View largeDownload slide
+
+CFD domain for the Upskin–Downskin simulation: (a) schematic view and (b) detailed view of the Downskin surface mesh
+
+The upstream inlet boundary condition is a constant axial flow velocity and a constant turbulence intensity (⁠
+ν~/ν=0.2
+ for S–A; k = 0.6425 and ω = 3700 for k–ω SST). The downstream tunnel exit is modeled as a constant-pressure outlet.
+
+The total force acting in the axial direction is integrated for each surface (top, bottom, sides) of the test section separately for comparison with the experimental measurements. This force contains contributions from both viscous shear and pressure; the pressure contribution is expected to dominate on the rough surfaces.
+
+An apparent wall skin friction coefficient using the total drag acting on each surface is calculated in analogy to Eq. (13):
+Cf=Fx(1/2)ρUmean2APF
+(21)
+where Fx is the total integrated force on the surface in the downstream direction and APF is the planform area of the surface. For the cases with different roughness on opposing walls, this skin friction coefficient may be different for the two surfaces. This skin friction coefficient is used to define the friction velocity for the inner variable scaling.
+
+The smooth surface validation results of the CFD simulation approach using both the S–A and k–ω SST turbulence models are presented in Figs. 4(a)–4(c). Figure 4 demonstrates broad agreement between the CFD simulations and the hot-film velocity measurements in outer and inner scaling for the smooth channel, as expected.
+
+A single simulation of each channel configuration is run at ReDh = 65,000. This Reynolds number is near or slightly above the maximum for the experiments in order to compare with the limiting high-Reynolds-number behavior.
+
+Results
+
+The results of the investigation are grouped into three sections. First, the friction factor variations of the flow over the surface combinations are presented. The velocity and inner scaling profiles are then presented and compared to the CFD simulations. Finally, the inner and outer layer interactions with the surfaces are explored using the inner velocity defect, or as it is commonly known, the Hama roughness function.
+
+Friction Factor Comparisons.
+
+The friction factors, evaluated as in Eq. (8), for the surfaces and surface combinations are presented in Fig. 6. In Fig. 6, the closed symbols are used for the surfaces opposed by smooth walls, and the open symbols are used for combinations of rough walls on opposing surfaces.
+
+Fig. 6
+View largeDownload slide
+
+Combination friction factor comparisons
+
+Figure 6 demonstrates that when the rough surfaces are opposed by smooth walls, each friction factor profile reaches the complete turbulence regime as evidenced by the slope approaching zero with increasing Reynolds number. For these single-sided surfaces, the equivalent sand-grain roughness was evaluated based on the Colebrook formula provided in Eq. (22). The resulting relative and absolute roughness sizes are reported in Table 1.
+1fDW=−2log10(ε/Dh3.7+2.51ReDhfDW)
+(22)
+
+Inspecting Fig. 6, a significant observation about the rough surface combinations is that none of the three combinations reaches complete turbulence as identified by the friction factor becoming constant as a function of Reynolds number. This suggests that the outer region of the flow is still adjusting to the presence of the roughness on both sides of the wall at the highest Reynolds number considered.
+
+Velocity and Inner Variable Profiles.
+
+The velocity profiles for the single-sided roughness cases are presented in Fig. 7 in outer scaling. The expected shift in the location of maximum velocity toward the smooth wall is seen in the profiles over the larger roughnesses (Figs. 7(b) and 7(c)). Little difference is seen between the various Reynolds number cases over this Reynolds number range.
+
+Fig. 7
+View largeDownload slide
+
+Velocity profiles for the rough surfaces opposed by a smooth wall: (a) Inco718_Upskin, (b) Inco718_Downskin, and (c) Real_x102
+
+Figures 7(a) and 7(b) show that the CFD simulations capture the velocity profiles and the elevation of the maximum flow velocity well for the Inco718_Upskin and Inco718_Donwskin cases, respectively. Figure 7(c) shows that, for the surface with the largest roughness elements, the CFD profiles agree with each other, but the location of the maximum velocity is shifted upward slightly from the measured velocity profiles.
+
+The inner variable profiles for the single-sided roughness cases are presented in Fig. 8. The friction velocity used to scale these curves is evaluated using the skin friction coefficient defined in Eqs. (13) and (21) for measurements and CFD, respectively. The expected downward shift in the velocity profiles over the rough surfaces is seen, growing larger with increasing Reynolds number. For the Inco718_Upskin case, shown in Fig. 8(a), the S–A turbulence model performed better than the k–ω SST model. This is a result of the SST model under-predicting the drag on the Upskin surface. In general, predicting the drag on the Upskin surface, in contrast to the other two surfaces with larger roughness, proved to be challenging for both of the RANS models. This is likely caused by the RANS models incorrectly maintaining attached flow over the small, isolated roughness elements typical of this surface. Figures 8(b) and 8(c) demonstrate that for both of the surfaces with the larger roughness elements, the RANS models performed well in capturing the inner variable profiles.
+
+Fig. 8
+View largeDownload slide
+
+Inner variable profiles for the rough surfaces opposed by a smooth wall: (a) Inco718_Upskin, (b) Inco718_Downskin, and (c) Real_x102
+
+Figure 9 shows the flow velocity profiles at the measurement location for the double-sided roughness combinations in outer scaling. In the legend of Fig. 9, the surface configuration is identified by the abbreviated surface names. For example, “Down-Up” indicates that the Inco718_Downskin surface was on the bottom, while the Inco718_Upskin surface was on the top of the test section. As was the case for the surfaces opposed by smooth walls, there is little visible difference between the profiles for the various Reynolds numbers. As is the case for the single-sided roughness, the RANS models show overall agreement with the shape of the measured profiles. The exception is the SST prediction for the Real_x102-Inco718_Downskin combination, shown in Fig. 9(c). In this case, the separated flow region behind a large roughness element that sits directly upstream persists to the measurement profile location, causing the location of maximum velocity to shift incorrectly toward the lower wall.
+
+Fig. 9
+View largeDownload slide
+
+Velocity profiles for the rough surface combinations: (a) Inco718 Downskin and Inco718_Upskin, (b) Real_x102 and Inco718_Upskin, and (c) Real_x102 and Inco718_Downskin
+
+Figure 10 shows the velocity profiles for the rough-rough wall combinations in inner scaling. Because each wall in the combined configurations has its own apparent wall shear, and therefore its own friction velocity, there are two groups of curves in each plot of Fig. 10, one for each rough wall. In other words, for example, the curve labeled ReDh = 60,000, Up in Fig. 10(a) shows the measured velocity profile, in inner scaling, starting at the Upskin surface and using the wall shear on the Upskin surface to define the friction velocity.
+
+Fig. 10
+View largeDownload slide
+
+Inner variable profiles for the rough surface combinations: (a) Inco718_Downskin and Inco718_Upskin, (b) Real_x102 and Inco718_Upskin, and (c) Real_x102 and Inco718_Downskin
+
+The velocity profiles in Fig. 10 show the expected progressive downward shift with increasing Reynolds number. They also show a progressive downward shift with increasing surface roughness from Upskin to Downskin to Real_x102.
+
+Similar to the case when opposite a smooth wall, the RANS models have difficulty capturing the drag increase on the Upskin surface in opposition to a rough wall. This is seen in the inner variable plots for the rough-rough cases involving the Upskin surface (Figs. 10(a) and 10(b)). The SST model and, to a lesser extent, the S–A model predict a velocity profile in inner variables that is shifted upward compared with the measurements, indicating an under-prediction of the wall shear. For the other combinations not involving the Upskin surface, except for the aforementioned SST simulation of the Realx102-Downskin combination, the RANS models show broad agreement with the measured velocity profiles in inner scaling.
+
+The simulation results in Figs. 7–10 reflect the facts that the turbulence models used in this work (1) struggle in regions of strong pressure gradients or flow separation and (2) invoke local isotropy arguments in some of the closure schemes. Resolved surface roughness therefore is uniquely challenging for such models because a strong favorable pressure gradient exists on the upstream faces of most roughness peaks while a strong adverse pressure gradient, or even flow separation, exists on the downstream faces. Furthermore, the turbulence is expected to be highly anisotropic near and between the roughness peaks. However, because of the practical limitations of using more sophisticated, scale-resolving approaches such as large eddy simulation, using RANS models to canvass a large number of geometries at high Reynolds numbers within the constraints of available computing resources is still valuable.
+
+Hama Roughness Function Variation.
+The Hama [18] roughness function, ΔU+, is defined based on the downward shift of the inner variable profile as described in Eq. (23).
+u+=1κln(y+)+B−ΔU+
+(23)
+In the transitional regime, the roughness function associated with a surface is expected to be a function of
+ks+
+ only, where
+ks+=ksu*ν
+(24)
+
+If the inner regions of two opposing surfaces are interacting, the roughness function variation with
+ks+
+ should differ based on which surface is placed opposite a given surface. However, if Townsend’s hypothesis holds and the inner regions of the opposing surfaces do not interact, then
+ks+
+ for each surface does not depend on which surface is placed opposite.
+
+To investigate the variations in the roughness function depending on the opposing surface condition, the equivalent roughness value from the Colebrook formula, reported in Table 1, and the measured friction velocity from Eq. (14) were used to calculate the inner roughness height. To determine the roughness function, the difference between the measured inner variable profiles was evaluated using Eq. (25).
+Δu+=[1κln(ym+)+B]−um+
+(25)
+
+The roughness function was determined in two ways. First, if the profile exhibited a logarithmic section, a plateau region is evident in the Δu+ profile, and the roughness function, ΔU+ was evaluated as the value of Δu+ in the plateau region. Second, for profiles with no clearly defined logarithmic section, the roughness function was evaluated as the maximum value of Δu+.
+
+In many publications, the roughness function is evaluated using the difference between the rough skin friction coefficient and the smooth friction coefficient, as shown in Eq. (26).
+ΔU+=(2Cf)Smooth1/2−(2Cf)Rough1/2
+(26)
+
+However, revisiting Figs. 7 and 9, the velocity profiles and the location of the maximum velocity shift based on the condition of the opposing wall. Consequently, the question regarding Eq. (26) is “which ‘Smooth’ condition should be used to compare the rough skin friction coefficient?” Is the Cf for the same bulk velocity and smooth walls on both sides the appropriate condition, or should the comparison condition with the maximum velocity and the “boundary layer height” from the mean wall location to the location of maximum fluid velocity be more appropriate? Because of the ambiguity in the “Smooth” comparison, the direct profile defect approach of Eq. (25) was employed.
+
+The resulting tabulations of the friction velocity, the roughness inner Reynolds number based on the Colebrook roughness,
+ε+=εu*/ν
+⁠, and the roughness function results are presented for the Inco718_Upskin, Inco718_Downskin, and Real_x102 surfaces in Tables 2–4, respectively. The resulting roughness function values are presented versus ɛ+ in Fig. 11, which includes the roughness function predictions from Refs. [19–21]. The uncertainties shown in Fig. 11 are all equal to 0.5 based on the agreement of the smooth surface inner variable profiles demonstrated in Fig. 4.
+
+Fig. 11
+View largeDownload slide
+
+Hama roughness function variation
+
+Table 2
+
+Roughness function results for the Inco718_Upskin surface
+
+Opposition surface	ReDh (nom.)	
+u*(m/s)
+	ɛ+	ΔU+
+Smooth	20,000	0.329	7.3	1.5
+Smooth	30,000	0.527	11.7	3.7
+Smooth	40,000	0.677	15.1	3.4
+Smooth	50,000	0.827	18.4	3.8
+Smooth	60,000	0.959	21.4	4.5
+Smooth	68,000	1.078	24.0	4.0
+Downskin	20,000	0.355	7.9	1.1
+Downskin	30,000	0.583	13.0	3.0
+Downskin	40,000	0.764	17.0	3.3
+Downskin	50,000	0.959	21.4	3.5
+Downskin	60,000	1.136	25.3	3.6
+Realx102	20,000	0.443	9.9	2.9
+Realx102	30,000	0.694	15.5	4.0
+Realx102	40,000	0.878	19.6	4.3
+Realx102	50,000	1.152	25.7	5.4
+Realx102	56,000	1.320	29.4	5.7
+Table 3
+
+Roughness function results for the Inco718_Downskin surface
+
+Opposition surface	ReDh (nom.)	
+u*(m/s)
+	ɛ+	ΔU+
+Smooth	10,000	0.184	15.3	4.1
+Smooth	20,000	0.465	38.6	8.5
+Smooth	30,000	0.722	60.0	10.1
+Smooth	40,000	0.964	80.2	11.0
+Smooth	50,000	1.235	102.7	11.9
+Smooth	60,000	1.474	122.5	11.8
+Smooth	65,000	1.609	133.7	12.1
+Upskin	10,000	0.177	14.7	2.6
+Upskin	20,000	0.455	37.8	7.7
+Upskin	30,000	0.729	60.6	9.5
+Upskin	40,000	0.987	82.0	10.2
+Upskin	50,000	1.187	98.7	10.3
+Upskin	60,000	1.445	120.1	10.9
+Realx102	10,000	0.220	18.3	2.9
+Realx102	20,000	0.551	45.8	7.6
+Realx102	30,000	0.889	73.8	8.9
+Realx102	40,000	1.191	98.9	9.7
+Realx102	50,000	1.499	124.6	10.4
+Table 4
+
+Roughness function results for the Real_x102 surface
+
+Opposition surface	ReDh (nom.)	
+u*(m/s)
+	ɛ+	ΔU+
+Smooth	10,000	0.306	108.4	10.1
+Smooth	20,000	0.742	263.1	13.6
+Smooth	30,000	1.181	419.1	15.1
+Smooth	40,000	1.634	579.6	16.2
+Smooth	50,000	2.036	722.3	16.7
+Smooth	60,000	2.445	867.4	17.2
+Upskin	10,000	0.293	103.8	9.2
+Upskin	20,000	0.717	254.2	12.7
+Upskin	30,000	1.215	430.9	14.6
+Upskin	40,000	1.648	584.6	15.7
+Upskin	50,000	2.092	742.1	16.2
+Upskin	56,000	2.370	840.6	16.5
+Downskin	10,000	0.285	101.2	8.2
+Downskin	20,000	0.747	265.1	12.5
+Downskin	30,000	1.204	426.9	14.3
+Downskin	40,000	1.699	602.6	15.2
+Downskin	50,000	2.154	764.1	15.9
+
+The universality of the Hama roughness function is often argued as demonstrated by the difference in the functions provided by Grigson [19] and Jimenez [21] for either sand-grain or commercial roughness. However, the essence of the Hama roughness function is that
+ΔU+=f(ks,u*/ν)
+⁠. In other words, for transitional flows, once a stress
+(u*/ν)
+ is imposed on the inner region, the inner region responds to the imposed stress by displacing the overlap region (ΔU+) based on the roughness size. If the opposing walls are interacting or altering the inner regions of a flow on one wall, through increased outer flow turbulence intensity or simply through wall-normal inertia injection caused by the peaks of the roughness elements, then the interaction should be observable as a change in the displacement of the overlap region for a given imposed shear on the inner region for a specific rough surface.
+
+Revisiting Fig. 2, the maximum peak on the Real_x102 surface is approximately 7.5 mm from the mean elevation, while the maximum peak on the Inco718_Downskin surface is approximately 3 mm from its mean elevation. When these two surfaces oppose each other in the RIFT test section, the mean elevations are 36 mm apart. This separation indicates that the unblocked flow distance between the surfaces, that is the distance between the maximum peaks on each surface, is only 25.5 mm. This represents free flow in only 70% of the volume between the mean elevations, which is on the order of sizes expected for turbine component cooling passages created with AM.
+
+The measurements shown in Fig. 11 indicate that there is negligible difference in the roughness function (ΔU+) variation with ɛ+ depending on the opposing surface, within our ability to measure the difference as indicated by the uncertainty bars, for the Real_x102 and the Upskin surfaces. The lack of a demonstrated influence of the opposing wall means that the inner roughness regions on the opposite walls are not communicating across the outer region. They interact by deforming the outer region to balance the shear at the edge of the outer regions, but the inner regions do not communicate turbulence information or wall-normal inertia changes across the outer region. This lack of communication between the inner regions on opposing walls supports Townsend’s hypothesis even given such large roughness regions expected for additively manufactured cooling passages.
+
+Inspecting Fig. 11, a trend indicating lower roughness function values as the roughness values on the opposing wall increases is present in the region of 30 < ɛ+ < 1000. For the Real_x102 surface, this trend is generally within the uncertainty bands of the measurements. For the Downskin surface, the trend is more statistically significant. However, the differences in the variations of the roughness function measurements for the Downskin surface are smaller than the difference between the two roughness function predictions by Grigson [19] and Jimenez [21] for sand-grain and commercial roughness. Given that the variation in the roughness function values for the Downskin surface is smaller than the variation in the historical predictions based on the equivalent sand-grain roughness, the Downskin data do not represent a clear violation of Townsend’s hypothesis.
+
+In addition to providing further evidence for Townsend’s hypothesis, the result indicates that current CFD modeling approaches should not require substantial modification to investigate flows with geometric similarity to additively manufactured turbine blade cooling passages. For these cases, the difficulty in modeling the roughness will remain developing approaches to predict the equivalent sand-grain roughness a priori or during the design phase when the roughness metrics are unknown. While the results indicate that current modeling approaches are feasible, the results of Fig. 9(c) demonstrate that grid-resolved simulations with such large roughness elements relative to the hydraulic diameter will remain challenging using standard RANS-based solvers.
+
+Conclusions
+
+Three rough surface coupons are generated using CT scans and optical tomography scans of AM engine-scale cooling channels. The resulting computer aided design models are post-processed via a SOM procedure, scaled up 50× or 100×, and printed for use in the RIFT. This results in a series of three surfaces with progressively larger roughness, with the Downskin surface having approximately 2.5× larger RMS roughness than the Upskin surface and the Real_x102 having approximately 2.5× larger RMS roughness than the Downskin surface.
+
+Velocity and turbulence profiles were measured in the flow over the three surfaces in two types of configurations. Each surface was placed first in opposition to a smooth wall and then in opposition to each of the other rough surface plates in turn. This provided a way to evaluate the behavior of asymmetric wall roughness such as is seen in AM cooling passages. In addition, RANS-based CFD simulations were run for each configuration and compared with the measurements. The resulting measured and predicted velocity profiles demonstrate that RANS-based simulations employing grid-resolved roughness features with standard turbulence models struggle to capture the separated flow downstream of the larger roughness elements for the cases investigated.
+
+Finally, Townsend’s hypothesis was evaluated for the present roughness configurations. Within the uncertainty bounds of the measurements, the hypothesis was supported for two of the three roughness cases. That is, the roughness function was found to be dependent on the equivalent sand-grain roughness height evaluated for each surface independent of which surface roughness was placed on the opposite wall. For the third surface, a reduction in wall function values with an increase in roughness on the opposing surface is indicated. However, the reduction of the roughness function demonstrated in the experiments for the third surface is still less than the difference between the historical predictions of the roughness function from Grigson [19] and Jimenez [21].
+
+The results suggest that, for flows in passages with large roughness aspect ratios (Rq/Dh) found in additively manufactured gas turbine cooling passages, the difficulty in developing simulation and predictive approaches for modeling the friction and convection performance will be the prediction of the roughness geometric characteristics a priori or before experimental measurements of the equivalent sand-grain roughness are performed. In contrast, if Townsend’s hypothesis was not supported, then predictive or design models would need to simultaneously account for the roughness on a given channel surface and also the roughness on the opposing surface.
+
+Acknowledgment
+
+This material is based upon work supported by the Department of Energy under Award Number(s) DE-FE0001730.
+
+Disclaimer
+
+This report was prepared as an account of work sponsored by an agency of the United States Government. Neither the United States Government nor any agency thereof, nor any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof.
+
+Conflict of Interest
+
+There are no conflicts of interest.
+
+Data Availability Statement
+
+The datasets generated and supporting the findings of this article are obtained from the corresponding author upon reasonable request.
+
+Nomenclature
+u =
+
+the velocity component in the flow direction
+
+v =
+
+the velocity component in the wall-normal direction
+
+y =
+
+location in the wall-normal location in the fluid domain
+
+B =
+
+the law of the wall intercept
+
+H =
+
+the channel height 36.07 mm (1.42 in.)
+
+Q =
+
+volumetric flowrate
+
+R =
+
+random uncertainty
+
+Y =
+
+wall-normal direction and ordinate of a specific surface location
+
+Y¯
+ =
+
+mean surface location
+
+Y′ =
+
+surface elevation relative to the mean elevation
+
+fDW =
+
+Darcy–Weisbach friction factor
+
+ks =
+
+the equivalent sand-grain roughness height
+
+ks,FS =
+
+the predicted equivalent sand-grain roughness height using Flack and Schultz correlation
+
+ks,ST =
+
+the predicted equivalent sand-grain roughness height using Stimpson and Thole correlation
+
+Ats =
+
+test section cross-sectional area = 8200 mm2
+
+APF =
+
+the planform area (top-view projected area)
+
+C0 =
+
+nozzle or Venturi discharge coefficient
+
+Cf =
+
+skin friction coefficient
+
+Dh =
+
+the RIFT hydraulic diameter = 62.3 mm (2.45 in.)
+
+Fa =
+
+the Reynolds stress attenuation correction factor
+
+Fx =
+
+the force on the section from the simulations
+
+Ls =
+
+length of the flow settling region from the nozzle exit to the first pressure tap
+
+Lts =
+
+length of the RIFT pressure drop metered section = 685.8 mm (27.0 in.)
+
+Np =
+
+number of points in surface point cloud
+
+Ra =
+
+the arithmetic mean roughness height
+
+Rq =
+
+the RMS roughness height
+
+Umean =
+
+average flow speed over the tunnel cross section
+
+Skw =
+
+roughness height relative skewness distribution
+
+ReDh =
+
+Reynolds number based on the hydraulic diameter, ReDh = ρUmeanDh/μ
+
+Greek Symbols
+β =
+
+the build angle relative to printer platform
+
+ΔPv =
+
+gage pressure at the nozzle or Venturi exit
+
+ΔPts =
+
+pressure drop from first to last pressure taps
+
+ɛ =
+
+Colebrook equivalent roughness
+
+κ =
+
+the von Karman constant
+
+μ =
+
+the molecular viscosity of air
+
+ρ =
+
+the density of air
+
+τm =
+
+the local measured total shear
+
+τM =
+
+the maximum total shear
+
+τRS =
+
+the local measured Reynolds turbulent shear
+
+Subscripts and Accents
+m =
+
+measured quantity
+
+(·)′ =
+
+instantaneous fluctuating quantity relative to the mean
+
+(⋅)¯
+ =
+
+time averaged quantity
+
+(·)+ =
+
+inner variable or friction quantity
+
+References
+1.
+Snyder, J. C., Stimpson, C. K., Thole, K. A., and Mongillo, D., 2016, “Build Direction Effects on Additively Manufactured Channels,” ASME J. Turbomach., 138(5), p. 051006.
+Google ScholarCrossref 
+2.
+Snyder, J. C., Stimpson, C. K., Thole, K. A., and Mongillo, D., 2015, “Build Direction Effects on Microchannel Tolerance and Surface Roughness,” ASME J. Mech. Des., 137(11), p. 111411.
+Google ScholarCrossref 
+3.
+Schlichting, H., 1936, “Experimental Investigation of the Problem of Surface Roughness,” Ing. Arch., 7(1), pp. 1–34.
+Google ScholarCrossref 
+4.
+Stimpson, C. K., Snyder, J. C., Thole, K. A., and Mongillo, D., 2016, “Roughness Effects on Flow and Heat Transfer for Additively Manufactured Channels,” ASME J. Turbomach., 138(5), p. 051008.
+Google ScholarCrossref 
+5.
+Stimpson, C. K., Snyder, J. C., Thole, K. A., and Mongillo, D., 2017, “Scaling Roughness Effects on Pressure Loss and Heat Transfer in Additively Manufactured Channels,” ASME J. Turbomach., 139(2), p. 021003.
+Google ScholarCrossref 
+6.
+Townsend, A. A., 1976, The Structure of Turbulent Shear Flow, (2nd ed.) , Cambridge University Press, Cambridge.
+7.
+Schultz, M. P., and Flack, K. A., 2007, “The Rough-Wall Turbulent Boundary Layer From the Hydraulically Smooth to the Fully Rough Regime,” J. Fluid Mech., 580, pp. 381–405.
+Google ScholarCrossref 
+8.
+Hanson, D. R., McClain, S. T., Snyder, J. C., Kunz, R. F., and Thole, K. A., 2019, “Flow in a Scaled Turbine Coolant Channel With Roughness Due to Additive Manufacturing,” Proceedings of the ASME Turbo Expo 2019: Turbomachinery Technical Conference and Exposition, Volume 5B: Heat Transfer, Phoenix, AZ, June 17–21, p. V05BT21A004, Paper No. GT2019-90931.
+Google ScholarCrossref 
+9.
+McClain, S. T., 2017, “Spanwise Form Extraction for Ice Roughness Measurements From Misaligned Airfoils or Tapered Wings,” 9th AIAA Atmospheric and Space Environments Conference, Denver, CO, June 5–9, Paper No. AIAA-2017-3585.
+Google ScholarCrossref 
+10.
+Flack, K. A., and Schultz, M. P., 2010, “Review of Hydraulic Roughness Scales in the Fully Rough Regime,” ASME J. Fluids Eng., 132(4), p. 041203.
+Google ScholarCrossref 
+11.
+The International Association for the Properties of Water and Steam, 2007, “Revised Release on the IAPWS Industrial Formulation 1997 for the Thermodynamic Properties of Water and Steam,” [Online], http://wwww.iapws.org
+12.
+Sutherland, W., 1893, “The Viscosity of Gases and Molecular Force,” Philos. Mag., 5(36), pp. 507–531.
+Google ScholarCrossref 
+13.
+Wilke, C., 1950, “A Viscosity Equation for Gas Mixtures,” J. Chem. Phys., 18(4), pp. 517–519.
+Google ScholarCrossref 
+14.
+Coleman, H. W., and Steele, W. G., 1999, Experimentation and Uncertainty Analysis for Engineers, (2nd ed.) , Wiley, New York.
+15.
+Kline, S. J., and McClintock, F. A., 1953, “Describing Uncertainties in Single Sample Experiments,” ASME Mech. Eng., 75(1), pp. 3–8.
+16.
+Spalart, P., and Allmaras, S., 1992, “A One-Equation Turbulence Model for Aerodynamic Flows,” 30th Aerospace Sciences Meeting and Exhibit, Reston, VA, Paper No. AIAA-1992-439.
+Google ScholarCrossref 
+17.
+Menter, F., 1994, “Two-Equation Eddy-Viscosity Turbulence Models for Engineering Applications,” AIAA J., 32(8), pp. 1598–1605.
+Google ScholarCrossref 
+18.
+Hama, F. R., 1954, “Boundary-Layer Characteristics for Rough and Smooth Surfaces,” Trans. SNAME, 62, pp. 333–351.
+19.
+Grigson, C., 1992, “Drag Losses of New Ships Caused by Hull Finish,” J. Ship Res., 36(2), pp. 182–196.
+Google ScholarCrossref 
+20.
+Nikuradse, J., 1933, “Laws of Flow in Rough Pipes,” VDI Forschungsh. 361 and NACA TM-1292.
+21.
+Jimenez, J., 2004, “Turbulent Flows Over Rough Walls,” Annu. Rev. Fluid Mech., 36(1), pp. 173–196.
+Google ScholarCrossref 
+Copyright © 2021 by ASME
+24
+View Metrics
+Get Email Alerts
+Article Activity Alert
+Accepted Manuscript Alert
+New Issue Alert
+Cited By
+Web Of Science (25)
+Google Scholar
+CrossRef (22)
+Latest
+Most Read
+Most Cited
+Effect of Purge-Mainstream Density Ratio on the Secondary Flow Field of a Turbine Blade Row
+J. Turbomach
+Partial Admission Loss Modelling of Radial Inflow Turbines
+J. Turbomach
+A novel cooling design and improvement of a radial-inflow turbine rotor blade
+J. Turbomach
+Comparisons of Measured Blade Temperatures with Predictions Using Available Correlations
+J. Turbomach
+Related Articles
+Amplitude and Wavelength Effects for Wavy Channels
+J. Turbomach (March,2023)
+Optimization of Rib Shape and Inclination in a Square Duct With Response Surface Methodology
+J. Turbomach (May,2022)
+Thermohydraulic Performance and Flow Structures of Diamond Pyramid Arrays
+J. Turbomach (July,2025)
+Impact of Ceramic Matrix Composite Topology on Friction Factor and Heat Transfer
+J. Turbomach (March,2022)
+Related Proceedings Papers
+Impact of Print Parameters on Pressure Drop in Turbulent Flow Through 3-D Printed Pipes
+FEDSM2020
+Effect of Directionality of Grinding Marks on Friction at Different Surface Roughness Using Inclined Scratch Test
+WTC2005
+Surface Profile and Third-Body Layer Accumulation Measurement Using a 3D Laser Profiler
+JRC2020
+Related Chapters
+Other Components and Variations
+Axial-Flow Compressors
+The Design and Implement of Remote Inclinometer for Power Towers Based on MXA2500G/GSM
+International Conference on Mechanical and Electrical Technology, 3rd, (ICMET-China 2011), Volumes 1–3
+Hydraulic Resistance
+Heat Transfer & Hydraulic Resistance at Supercritical Pressures in Power Engineering Applications
+Issues
+Accepted Manuscripts
+All Years
+Purchase
+Twitter
+About the Journal
+Editorial Board
+Information for Authors
+Call for Papers
+Rights and Permission
+Online ISSN 1528-8900Print ISSN 0889-504X
+ASME Journals
+About ASME Journals
+Information for Authors
+Submit a Paper
+Call for Papers
+Title History
+ASME Conference Proceedings
+About ASME Conference Publications and Proceedings
+Conference Proceedings Author Guidelines
+ASME eBooks
+About ASME eBooks
+ASME Press Advisory & Oversight Committee
+Book Proposal Guidelines
+Resources
+Contact Us
+Authors
+Librarians
+Frequently Asked Questions
+Publication Permissions & Reprints
+ASME Membership
+Opportunities
+Faculty Positions
+LinkedIn
+Twitter
+Facebook
+ASME Instagram
+Accessibility Privacy Statement Terms of Use Get Adobe Acrobat Reader
+Copyright © 2025 The American Society of Mechanical Engineers
+This site uses cookies. By continuing to use our website, you are agreeing to our privacy policy.
+Accept
+PDF
+Help

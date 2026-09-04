@@ -1,0 +1,154 @@
+THE METAL 3D PRINTING GUIDE
+Metal 3D Printing
+
+Due to rapid technological advancement, metal 3D printing has grown massively in recent years. Many innovative startups and suppliers have proposed new and increasingly affordable metal additive manufacturing processes, and more and more compatible materials.
+
+Metal 3D printing is popular in many industries, including the aerospace, automotive, and medical industries, allowing the printing of complex metal parts for a relatively low price when compared to traditional manufacturing processes.
+
+Recently, there have been many improvements made to metal 3D printers. Hybrid systems, metal deposition, recovery materials, and many other innovative projects mean the process is more efficient than ever. Therefore, we created this guide to help explain everything to do with metal 3D printing, the main companies involved, the applications of metal AM, and more!
+
+Aluminium 3D printing
+There are different metal technologies
+You can create complex geometries with metal technologies
+
+
+ 
+
+3D Printing Technologies
+
+Though imagined as far back as the 1970s, powder fusion technologies are based on a relatively simple principle, a power source sinters or melts metal powders to create the finished piece, layer-by-layer. The most well-known metal 3D printing technology based on this principle is Direct Metal Laser Sintering (DMLS), patented in the 1990s by ERD and EOS.
+
+Another major metal 3D printing technology is Direct Energy Deposition (DED), similar to FDM. This method involves construction of metal parts through a CLAD laser. During the process, powder is projected by the nozzle, and fuses at the outlet through a laser beam to weld together. This method allows for printing directly onto a piece or part, unlike most other technologies. Companies such as BeAM, Sciaky, and Optomec use this technology.
+
+In the 1990s, CIRTES developed a new hybrid method combining machining and additive manufacturing, called stratification. This starts with the creation of an STL or CAD file that is sliced into layers before supports are inserted. Each metal layer is then manufactured, either by micro-milling, laser cutting, wire cutting, or another process. The layers are then assembled to form the finished part.
+
+On technology that is also increasingly gaining favor for metal 3D printing is binder jetting. In this well-known process, a binding agent is selectively deposited (through jetting, similar to inkjet technology) on a layer of powder, building the part layer-by-layer. After curing, a green part is ready but must undergo additional post-processing, namely sintering, infiltration or hot isostatic pressing (HIPing) in order to reduce porosity and get the final part. Its use for metal has grown in popularity thanks to the extensive design freedom among other benefits.
+
+Cold spraying is another metal additive manufacturing process, also known as Cold Spray. This method involves joining metal powders by projecting them, without heat, onto a support. This projection uses helium to secure the metal powder. This metal AM method is however only used rarely, as it is expensive due to the use of helium.
+
+Some manufacturers have developed their own patented technologies which differ from the ones we mentioned above. These include Vader Systems’ liquid metal 3D printing, or Pollen AM’s Metal Injection Molding (MIM) technologies. You can find all the new technologies here.
+
+DMLS Technology
+CLAD Technology
+Cold Spray
+
+
+ 
+
+Metal 3D Printing Materials
+
+Among the most commonly used materials in metal 3D printing, there is firstly aluminium, mainly used in alloy form. Aluminium is useful as it offers good resistance whilst being light. It is mainly used when keeping weight down is essential, such as in the aeronautics and automotive industries. Steel is also popular, especially in industrial applications. Steel offers strong mechanical properties and a good surface finish. Due to this, it’s the most popular metal used in 3D printing.
+
+In addition, there are also metal such as gallium, cobalt-chrome for medical uses, and titanium due to its good corrosion resistance and biocompatibility for medical applications.
+
+Precious metal are mainly used in jewelry. Despite its high cost, gold, silver, and bronze are all used with 3D printing to create complex pieces of jewelry. The main challenges within this however is in the finish.
+
+
+
+
+The Main Metal 3D Printing Companies
+
+More and more companies are getting involved with 3D printing now it is becoming more popular. Some leading metal 3D printer manufacturers include 3D Systems which offers a full range of machines (through their 2013 acquisition of French company Phenix Systems); SLM Solutions, a pioneer of selective laser sintering with EOS and Concept Laser; and Arcam, who use Electron Beam Melting technology in their printers.
+
+New manufacturers are entering the market offering metal 3D printing at lower costs than the industrial solutions that exist currently. These include Desktop Metal with their Studio System and Production System 3D printers that aim to make metal printing 10x cheaper. Additionally, Markforged have released a lower-cost metal 3D printer in the Metal X capable of creating parts up to 250 x 220 x 200 mm.
+
+Outside America there are also manufacturers such as Israeli company XJet, who use NanoParticle Jetting technology involving fine metal droplets to 3D print. Additionally, companies such as Pollen AM use 3D printing alongside subtractive technology to create metal 3D printed parts.
+
+EOS a historical player in metal AM
+3D printed piece from Desktop Metal
+XJet’s technology
+
+
+
+Metal 3D Printing Applications
+
+Metal 3D printing is currently used in industry to create tool components and finished parts in sectors such as the aerospace and automotive sectors. 3D printing can produce aircraft components or rocket motors, saving weight and lowering costs. Metal additive manufacturing also has uses in the medical sector such as in creating implants to analyse, especially in dental. Metal additive manufacturing can even be used in the marine sector to design boat propellers!
+
+	
+	
+	
+NEWS
+AEROSPACE AND DEFENSE
+AUTOMOTIVE AND TRANSPORT
+MEDICAL AND DENTAL
+3D PRINTERS
+3D SCANNERS
+3D SOFTWARE
+BUSINESS
+INTERVIEWS
+RANKINGS
+MATERIALS
+3D PRINTING GUIDES
+3D PRINTING TECHNOLOGIES
+3D PRINTING SOFTWARE
+THE METAL 3D PRINTING GUIDE
+3D PRINTER TESTS
+BUSINESS DIRECTORY
+3D PRINTING SERVICE
+3D PRINTER MANUFACTURER
+3D SOFTWARE
+USA 3D PRINTING BUSINESS
+UK 3D PRINTING BUSINESS
+EVENTS
+WEBINARS
+ADDITIV EVENTS
+3D PRINTING JOBS
+Search by keyword
+STAY UPDATED
+Subscribe to get the most important news from the world of 3D printing on a regular basis.
+Your email
+
+I agree to have my personal data saved in accordance with the privacy policy.
+
+SUBSCRIBE NOW
+ABOUT US
+
+3Dnatives is the largest international online media platform on 3D printing and its applications. With its in-depth analysis of the market, 3Dnatives gets over 1.3 million unique visitors per month and is currently available in English, French, Spanish, German and Italian. 3Dnatives works with key additive manufacturing market players and offers a variety of services such as B2B consulting and B2B brand content, event management and much more!
+
+84 countries and 85k+ stakeholders strong, SPE unites plastics professionals worldwide – helping them succeed and strengthening their skills through networking, events, training, and knowledge sharing. For more information, visit www.4spe.org.
+
+POWERED BY SPE
+
+ 
+
+LINKS
+
+3D Printing Directory
+Choose a 3D printer
+Event Board
+Job Board
+Newsletter
+Advertising
+
+LOCATIONS
+
+3Dnatives Europe
+157 Boulevard Macdonald
+75019, Paris
+France
+
+SPE US Office
+83 Wooster Heights Road, Suite 125
+Danbury, CT 06810
+P +1 203.740.5400
+
+SPE Europe
+Serskampsteenweg 135A
+9230 Wetteren
+Belgium
+P +32 498 85 07 32
+
+SPE Middle East
+Office N. ESO:14, Desk 34
+Sheikh Rashid Tower, Seventh Floor
+Dubai World Trade Center
+P.O. Box 9204
+Dubai, UAE
+
+ 
+
+About us
+Our Privacy Policy
+Legal Disclaimer
+Contact
+© 3Dnatives 2026

@@ -1,0 +1,286 @@
+Numerical Heat Transfer, Part A: Applications
+An International Journal of Computation and Methodology
+ISSN: 1040-7782 (Print) 1521-0634 (Online) Journal homepage: www.tandfonline.com/journals/unht20
+Effective Modeling of Conjugate Heat Transfer and Hydraulics for the Regenerative Cooling Design of Kerosene Rocket Engines
+Seong-Ku Kim, Miok Joh, Hwan Seok Choi & Tae Seon Park
+To cite this article: Seong-Ku Kim, Miok Joh, Hwan Seok Choi & Tae Seon Park (2014) Effective Modeling of Conjugate Heat Transfer and Hydraulics for the Regenerative Cooling Design of Kerosene Rocket Engines, Numerical Heat Transfer, Part A: Applications, 66:8, 863-883, DOI: 10.1080/10407782.2014.892396
+To link to this article: https://doi.org/10.1080/10407782.2014.892396
+Published online: 25 Jun 2014.
+Submit your article to this journal
+Article views: 700
+View related articles
+View Crossmark data
+Citing articles: 5 View citing articles
+Full Terms & Conditions of access and use can be found at https://www.tandfonline.com/action/journalInformation?journalCode=unht20
+
+
+EFFECTIVE MODELING OF CONJUGATE HEAT TRANSFER AND HYDRAULICS FOR THE REGENERATIVE COOLING DESIGN OF KEROSENE ROCKET ENGINES
+Seong-Ku Kim1, Miok Joh1, Hwan Seok Choi1, and
+Tae Seon Park2
+1Combustion Chamber Department, Korea Aerospace Research Institute, Daejeon, Republic of Korea 2School of Mechanical Engineering, Kyungpook National University, Daegu, Republic of Korea
+The present work is motivated to develop a unified framework to simulate multi-physical processes which are crucial for trade-off design of liquid rocket thrust chambers among propulsive performance, regenerative cooling, and pressure budget. In this paper, an effective modeling of conjugate heat transfer and hydraulics through the regenerative cooling passage has been performed to quantitatively evaluate detailed cooling designs, including spirally twisted channels and bidirectionally branched circuit, as well as to provide the wall heat flux to a compressible reacting flow solver in an interactively coupled manner. The kerosene fuel used as coolant is modeled by a three-component physical surrogate, and the fluid properties required for calculation of a Nusselt number correlation and empirical resistance coefficients are computed over the entire thermodynamic states from compressed liquid to supercritical fluid using the NIST SUPERTRAPP. The present method has been applied to an actual regeneratively cooled thrust chamber and validated against measurement of hot-firing tests in terms of temperature increase and pressure drop of the coolant through the cooling passages. Based on the numerical results, supplementary effects of peripheral fuel cooling injection and thermal barrier coating are addressed.
+1. INTRODUCTION
+For modern pump-fed LPREs (liquid propellant rocket engines), regenerative cooling has long been a standard method [1, 2], which circulates one of the propellants through cooling passages inside the chamber wall before it is provided to the injection head. In particular, it has been recognized as one of the key technologies for development of an expander-cycle engine, in which the heat pickup in the cooling channels is the main source to provide the driving power to the turbopump [3]. Moreover, this cooling method has also been studied for thermal management of scramjet applications [4].
+Received 25 November 2013; accepted 20 January 2014. Address correspondence to Tae Seon Park, School of Mechanical Engineering, Kyungpook National University, 80 Daehak-ro, Buk-gu, Daegu 702-701, Republic of Korea. E-mail: tsparkjp@knu.ac.kr Color versions of one or more of the figures in the article can be found online at www.tandfonline. com/unht.
+Numerical Heat Transfer, Part A, 66: 863–883, 2014 Copyright # Taylor & Francis Group, LLC ISSN: 1040-7782 print=1521-0634 online DOI: 10.1080/10407782.2014.892396
+863
+
+
+The regenerative cooling design has to be performed not only to ensure the structural integrity and lifetime, but also to meet simultaneously other conflicting design requirements such as high propulsive performance, limited pressure budget, and minimal chamber weight. For a trade-off study, therefore, it is necessary to develop a reliable and efficient tool to predict conjugate heat transfer among the combustion gas flow, channeled wall, and coolant flow, and hydraulic characteristics through the regenerative cooling passages. In order to tackle this complex problem, many research and engineering efforts have been made at various levels of modeling ranging from simple models based on empirical correlations to fully coupled simulations by means of 3-D CFD (computational fluid dynamics). For a traditional example, Naraghi et al. [5] proposed a design and analysis method for regeneratively cooled thrust chambers by combining two proven engineering codes, i.e., TDK (two-dimensional kinetics nozzle performance code) and RTE (rocket thermal evaluation code). The TDK, which is a MOC (method of characteristic) code with additional modeling of chemistry and boundary layer, computes the hot-gas-side heat transfer. On the other hand, the RTE calculates
+NOMENCLATURE
+Aw area of chamber wall occupied by a cooling channel Cf friction coefficient cp constant pressure specific heat dh hydraulic diameter of a rectangular channel hc convective heat transfer coefficient of coolant flow heff effective heat transfer coefficient (1⁄4 hcgfin) Hrib height of channel rib k thermal conductivity _mc coolant mass flow rate though a channel segment Nuc Nusselt number for coolant flow (1⁄4hcdh=kc) p static pressure Pr Prandtl number qc heat flux at coolant side of chamber wall qw heat flux at hot gas side of chamber wall Re Reynolds number T temperature V coolant velocity through channel Wch width of cooling channel yp normal distance of the first grid to the wall Greek Symbols
+arec correction factor for rectangular cross section
+b factor for heat flux direction d thickness D0 wall roughness of channel DL flow passage length DP pressure loss dp normal distance of the nearest grid from wall gfin fin efficiency of cooling channel rib m molecular viscosity q density n parameter for calculation of fin efficiency nl local resistance coefficient
+Subscripts
+bc no slip wall boundary for hot gas c coolant (bulk) i streamwise index of channel grid points layer coating layer p first grid point normal to wall rib cooling channel rib wall inner wall of chamber wc coolant side of inner wall wg hot gas side of inner wall
+Superscripts
+i incoming coolant flow o outgoing coolant flow latest updated value
+864 S.-K. KIM ET AL.
+
+
+the convective heat transfer to the coolant flow based on Nusselt-type correlations together with quasi-3D heat conduction analysis along the channeled wall. The integration of these codes is achieved iteratively via an interface file [5]. Later, the numerical framework is extended to a CFD–RTE model where the TDK is replaced with a commercial CFD code to calculate the axisymmetric flow and thermal fields of hot gas in the thrust chamber [6]. A similar, but more comprehensive, effort has been made by researchers of Astrium Space Transportation, who have developed and improved continuously their own multiphysics simulation codes named ROCFLAM-II [7] and RCFS-II [8]. The ROCFLAM-II is an axisymmetric spray-combustion Navier–Stokes code with various physical models relevant to liquid rocket combustion [9]. In the RCFS-II, Nusselt-type correlations are adopted for the coolant flow, while heat transfer through the channeled wall is calculated either by 2-D heat conduction simulation or by 1-D analysis with fin factor correction. Basically, each of them has been developed as a stand-alone running code. The ROCFLAME-II requires a prescribed profile of wall temperature except for radiatively cooled walls. On the other hand, the RCFS-II conducts the conjugate heat transfer simulation either by prescribed input of wall heat flux or by internal module for one-dimensional combustion gas flow. To achieve a converged solution for the conjugate heat transfer problem, these individual simulations are loosely coupled by exchange of the wall boundary condition [8]. Zhang et al. [10] proposed a closely coupled procedure where a 1-D empirical model is adopted for the coolant flow and heat transfer in regenerative cooling channels whereas a 2-D axisymmetric simulation is performed for the combustion gas flow with film cooling in a high-pressure thrust chamber. Recently, Pizzarelli et al. [11] developed a quasi-2-D empirical model for regenerative cooling, which is modified based on a 2-D governing equation for coolant energy balance with 1-D conservation equations for coolant mass and momentum, to evaluate the radial thermal stratification pronounced in the HARCC (high-aspect-ratio cooling channels). In the contrast to the aforementioned works which rely on the empirical correlations for the coolant flow, 3-D simulations have recently been carried out to precisely investigate the flow and heat transfer characteristics in the cooling channels. Pizzarelli et al. [12] analyzed supercritical hydrogen flows heated asymmetrically in HARCC with single or double curvature, and reported that strong recirculation induced by the curvature has significant influence on global heat transfer coefficient, pressure loss, and bulk temperature increase. Park [13] investigated numerically effects of aspect ratio on 3-D characteristics of turbulent flow and heat transfer in cooling channels with a convex–concave–convex curvature. Kang and Sun [14] simulated the convective and radiative heat transfer of the hot gas, heat conduction within the channel, and the coolant flow in a regeneratively cooled rocket nozzle in a fully coupled manner to assess the modeling effects such as chemistry, radiation, and empirical correlations. Negishi et al. [15] calculated conjugate heat transfer between coolant flow and heat conduction for a subscale methane-cooled thrust chamber with focus on the large property variation occurring in the transcritical flow. In their simulation, the computational grid system of about fifty millions is used for a circumferential half of the thrust chamber, including coolant manifolds, cooling channels, and chamber liners, while distribution of the wall heat flux on
+EFFECTIVE MODELING OF CONJUGATE HEAT TRANSFER 865
+
+
+the hot-gas side is prescribed as thermal boundary condition from another hot-firing test with a calorimetric chamber. From a practical point of view, however, a 3-D CFD simulation of the channel flows seems to be still inefficient for trade-off design due to excessive loads on the preprocessing and computation. This is especially true when there are substantial variation of cooling design parameters, spirally twisted channels, and bidirectionally branched coolant circuit which are main features of an actual thrust chamber under consideration in this study. In this context, the present study is motivated by pursuing a simple but sufficiently reliable method to evaluate the effects of various design parameters on cooling capability and pressure loss as well as to provide the interface boundary condition to the turbulent reacting flow solver in a closely coupled manner. Since the heat flux through the chamber wall directs predominantly outward in the radial direction, one-dimensional thermal resistance model based on a Nusselt-type correlation and fin efficiency is adopted in this study. The pressure distribution in the cooling passage is calculated by means of empirical correlations for the friction and local flow resistance. The present model has been applied to an actual regeneratively cooled thrust chamber as shown in Figure 1. In order to realistically predict the wall heat flux from the combustion gas, the cooling analysis module is incorporated into the turbulent reacting flow solver in a unified framework as schematically illustrated in Figure 1. With regard to simulation of the turbulent reacting flow field within the nonadiabatic thrust chamber, numerical modeling and comparisons with measured propulsion parameters have already been reported in detail through our recent publication [16] and will not be repeated here. As the other part of the unified methodology, this paper presents numerical modeling issues related to regenerative cooling itself. Detailed discussions are made for various cooling parameters such as convective heat transfer coefficient of coolant flow, effectiveness of channel ribs, heat flux distribution, and wall temperatures with emphasis on effects of
+Figure 1. Schematic layout for the two-way coupling simulation of 265 kN-class kerosene-fueled regeneratively cooled thrust chamber.
+866 S.-K. KIM ET AL.
+
+
+supplementary cooling by means of fuel injection near the periphery of the injector plate. In order to assess the applicability to the cooling design, the present model is validated against experimental data of the coolant temperature and pressure for various ranges of the overall mixture ratio.
+2. MODELING OF REGENERATIVE COOLING PASSAGE
+2.1. Cooling Configuration of Target Thrust Chamber
+Figure 1 illustrates the regeneratively cooled thrust chamber [17] under consideration in this study. At the design operating condition, the overall mixture ratio defined as mass flow ratio of oxidizer to fuel and chamber pressure are 2.4 and 6 MPa, respectively. The propellants separately fed into the mixing head are injected and mixed in the combustion chamber through 270 main injectors. In order to supplement the regenerative cooling, 12% of total fuel mass flow is injected equally through 54 fuel cooling injectors installed near the periphery of the face plate. More details regarding the injection system and its modeling can be found in our preceding paper [16]. The chamber consists of four parts, cylindrical combustion chamber (Section A), nozzle throat (Section B), first divergent nozzle (Section C), and second one (Section D), which were fabricated separately and electron beam welded together. As presented in Table 1, the chamber is designed to have different number of cooling channels for each section due to the substantial change of the cross-sectional area along the thrust chamber contour. A copper-alloy with high thermal conductivity is used as inner wall material except for the second part of the divergent nozzle (Section D), which is made of a stainless steel because of relatively lower heat flux on this part. In order to evenly disperse circumferentially nonuniform heat loads caused by the discretely distributed injectors, the cooling channels are spirally arranged for the cylindrical and nozzle throat sections. Also, the spiral flow pattern enhances the cooling capability due to higher coolant velocity than that of a straight one. For additional heat protection, the entire chamber wall is coated by a zirconia ceramic TBC (thermal barrier coating) with thickness of about 400 mm, which consists approximately of 250 mm top coating (ZrO2) and 150 mm bonding layer (NiCrAlY). As shown in Figure 1, the kerosene fuel at ambient temperature is fed into a curved pipe and distributed circumferentially through the fuel ring on the middle of the second divergent nozzle (Section D). And then, the coolant flow is divided
+Table 1. Configuration of the regeneratively cooled thrust chamber
+Section Channel number Channel angle ( ) Wall material
+Cylinder A 450 30 Copper alloy Nozzle throat B1 450 15 Copper alloy B2 225 15 Copper alloy 1st nozzle C1 225 0 Copper alloy C2 450 0 Copper alloy 2nd nozzle D1 450 0 Stainless steel D2 520 0 Stainless steel
+The sections are divided longitudinally according to Figure 1.
+EFFECTIVE MODELING OF CONJUGATE HEAT TRANSFER 867
+
+
+bidirectionally toward the nozzle exit and the mixing head, respectively. This bidirectional cooling design is conceptually illustrated in Figure 2a. Through the first hole on the bottom of the fuel ring, a portion of the coolant is fed equally into the two inner channels toward the nozzle exit, where it turns 180 and flows oppositely through the neighboring outer channels. The remainder of the coolant is provided directly through the second hole and mixed with the heated coolant in the collector. In the target thrust chamber, the mass flow rate into the first holes was designed to be 60% of total coolant flow. The increased complexity due to the bidirectional flow circuit design is compensated by compactness of the engine envelop, including the fuel ring and feeding pipe, which are allowed to be located in the middle of the nozzle rather than the nozzle exit.
+Figure 2. Schematic illustration for the regenerative cooling passages. (a) Coolant circuit with bidirectional branches near the fuel ring; (b) configuration of cooling channels at section A-A0.
+868 S.-K. KIM ET AL.
+
+
+The modeling effort of this study has been devoted to effectively accommodate these important features of the actual cooling design. The overall cooling design using the kerosene fuel can frequently be found from the historical heritages of Russia, Ukraine, and the former Soviet Union [2]. Accordingly, the empirical correlations required for analysis of convective heat transfer and hydraulics through the cooling channels are taken from Russian literatures [18, 19], which have long been utilized in cooling design and analysis of their LPREs.
+2.2. Conjugate Heat Transfer Model
+Figure 2b illustrates the double-wall construction in which rectangular channels are milled into the inner wall and brazed with the outer jacket. As previously mentioned, the heat transfer through the chamber wall occurs predominantly outward in the radial direction, the longitudinal heat conduction in the chamber wall is assumed to be negligible. In order to model the convective heat transfer of the coolant flow, the present study employs the following Nusselt type correlation proposed for cooling channels of liquid rocket engines subject to high heat flux [18].
+Nuc 1⁄4 0:021 Re0:8
+c Pr0:43
+c b ð1Þ
+Here, b is considered to take into account the dependence of heat transfer on the direction of heat flux and temperature difference, and defined as
+b 1⁄4 Prc
+Prwc
+0:25
+ð2Þ
+With the definitions of the dimensionless numbers, Eq. (1) is rewritten for the convective heat transfer coefficient as
+hc 1⁄4 0:021 kc
+dh
+qc Vd h
+mc
+0:8 mccpc
+kc
+0:43
+b ð3Þ
+In the context of one-dimensional analysis based on thermal resistances, the effect of two-dimensional channel ribs is accounted for by introducing fin efficiency as follows [18].
+gfin 1⁄4 Wch
+Wch þ drib
+þ 2Hrib
+Wch þ drib
+tan hðnÞ
+n ð4Þ
+where
+n1⁄4
+ffiffiffiffiffiffiffiffiffiffiffiffiffiffi
+2hcdrib
+krib
+s
+Hrib
+drib
+ð5Þ
+Consequently, the heat flux to the coolant through cooling channel wall can be effectively expressed by multiplying the convective heat transfer coefficient by the fin efficiency, that is,
+EFFECTIVE MODELING OF CONJUGATE HEAT TRANSFER 869
+
+
+qc 1⁄4 hcgfinðT wc T cÞ 1⁄4 heff ðT wc T cÞ ð6Þ
+Considering the steady-state conjugate heat transfer, the following relationships are obtained as conceptually illustrated in Figure 1.
+qc 1⁄4 k
+d layer
+ðT bc T wgÞ 1⁄4 k
+d wall
+ðT wg T wcÞ 1⁄4 heff ðT wc T cÞ ð7Þ
+On the other hand, the convective heat transfer from the combustion gas is calculated by the turbulent reacting flow solver, that is,
+qw 1⁄4 kp
+yp
+ðTp TbcÞ ð8Þ
+where Tp and kp denote hot gas temperature and thermal conductivity, respectively, which are computed at the nearest interior point to the wall boundary by a low-Reynolds number turbulence model with near-wall grid resolution in the viscous sublayer (ypþ 1). More details can be referred to our preceding paper [16]. By combining Eqs. (7) and (8) through the thermal equilibrium (qc 1⁄4 qw), the interface temperature between the cooling analysis module and the flow solver can be expressed as
+T bc 1⁄4
+d
+k layerþ d
+k wallþ 1
+heff
+hi
+T p þ yp
+kp T c
+d
+k layerþ d
+k wallþ 1
+heff
+hi
+þ yp
+kp
+ð9Þ
+Here, the asterisk represents the latest updated value. Once the interface temperature, Tbc, is obtained by Eq. (9), the wall heat flux (qw) and other wall temperatures (Twc, Twg) are subsequently updated through Eqs. (8) and (7), respectively. The solution procedure will be discussed later in Subsection 2.5. In the case with the pair of bidirectional channels in the second divergent nozzle as shown in Figure 2a, a special care has to be taken because the coolant temperature of the returning flow from the nozzle exit is higher than that in the adjacent inner channel having the opposite flow direction. It also affects the effective heat transfer coefficient through variations in the thermophysical properties and velocity of the coolant. As conceptually illustrated in Figure 2b, this study assumes that the heat transferred from hot gas flow is divided into the two adjacent channels depending on the cooling characteristics of each channel, that is,
+2qwAw 1⁄4 qi
+cAw þ qo
+c Aw ð10Þ
+Considering the effective heat transfer coefficient and coolant temperature of each channel, Eq. (10) is rewritten as
+qw 1⁄4 1
+2 hi
+eff ðTwc T i
+cÞ þ ho
+eff ðT wc T o
+c Þ 1⁄4 hi
+eff þ ho
+eff
+2 Twc
+hi
+eff T i
+c þ ho
+eff T o
+c hi
+eff þ ho
+eff
+ð11Þ
+870 S.-K. KIM ET AL.
+
+
+Equation (11) can be expressed in a simpler form as
+qw 1⁄4 heff ðT wc T cÞ ð12Þ
+Here, the equivalent values of effective coefficient and temperature are defined as follows.
+heff 1⁄4 hi
+eff þ ho
+eff
+2 ð13Þ
+T c 1⁄4 hi
+eff T i
+c þ ho
+eff T o
+c hi
+eff þ ho
+eff
+ð14Þ
+When heff and Tc in Eq. (9) are replaced with heff and T c, the aforementioned analysis procedure can be identically applied to the bidirectional cooling channels. The increment of coolant temperature by absorbing heat in the upstream channel segment is accumulated along the coolant flow direction by the following relation.
+T c;iþ1 1⁄4 T c;i þ qcAw
+m_ ccpc iþ1
+2
+ð15Þ
+2.3. Hydraulic Analysis
+In design of a regeneratively cooled thrust chamber, pressure budget is one of the most critical requirements, and in general, has a trade-off relationship with the cooling capacity. In the present study, therefore, the hydraulic losses through the cooling passages are also estimated during the conjugate heat transfer analysis. The pressure gradient across a channel segment can be expressed by the modified Bernoulli equation.
+pi þ qiV 2
+i
+2 1⁄4 piþ1 þ qiþ1V 2
+iþ1
+2 þ DPiþ1
+2 ð16Þ
+Here, the total pressure loss is determined by the following formula which represents hydraulic resistances due to friction and local flow changes [19].
+DP 1⁄4 Cf
+DL
+dh
+qV 2
+2 þ nl
+qV 2
+2 ð17Þ
+First, the friction coefficient is obtained for a circular tube with equivalent diameter from empirical database as a function of Reynolds number and normalized surface roughness (see Diagram 2-2 in reference [19]).
+Cf ;cir 1⁄4 f Rec; D0
+dh
+ð18Þ
+Subsequently, a correction factor is considered to take into account the rectangular cross section of the cooling channel (see Diagram 2–6 in reference [19]).
+EFFECTIVE MODELING OF CONJUGATE HEAT TRANSFER 871
+
+
+Cf 1⁄4 arecCf ;cir ð19Þ
+The local flow resistance takes place with sudden change in flow direction and=or cross-sectional area. The local flow resistance coefficients, nl, are suitably taken from the Idelchik’s handbook [19], where an extensive compilation for various flow cases is provided. For the flow turning at the nozzle exit as shown in Figure 2a, the symmetric planes are regarded as walls, and subsequently the coefficient is taken from
+that of F-shaped rectangular cross-sectional elbows with sharp corners (Diagram 6–15 in reference [19]). The incoming and outgoing flows at the collector are separately modeled as the flows with sudden expansion and contraction, respectively (Diagrams 4–1 and 3–1 in reference [19]). The flow entering the fuel manifold of the mixing head at the cooling passage end is also regarded as the sudden expansion flow.
+2.4. Thermophysical Properties
+For the regenerative cooling analysis, thermophysical properties of the kerosene fuel under the supercritical-pressure heating conditions have to be known in terms of density, constant-pressure specific heat, molecular viscosity, and thermal conductivity. It has been widely recognized that kerosene fuels, including Jet-A and RP-1, are complex mixtures composed of hundreds of hydrocarbons such as paraffins, cycloparaffins, and aromatics, and modeling of the thermophysical properties or chemical kinetics is still a very challenging research subject. In this study, the kerosene fuel is modeled as a physical surrogate consisting of n-dodecane, n-tetradecane, and 1,2,4-trimethylbenzene with mass fractions of 0.31, 0.38, and 0.31, respectively, which has recently been proposed to reproduce the thermophysical properties of the aviation kerosene (Jet-A) by Bruno and Huber [20]. Figure 3 presents the thermophysical properties calculated for a wide range of pressure and temperature using the NIST SUPERTRAPP program [21], which can predict accurately the properties of more than 200 different hydrocarbon components and their mixtures based on the NIST extended corresponding states model [22]. The predicted critical point is approximately at pressure and temperature of 2.4 MPa and 688 K, respectively. The predicted properties are stored into a lookup table as functions of temperature and pressure for the cooling analysis module. The thermal conductivities of the metallic walls are taken from experimental data measured for the copper alloy and the stainless steel used in the actual chamber with varying temperature. For example, the thermal conductivities of the copper alloy and the stainless steel at 573.15 K are 281.28 and 18.18 W=(m K). The thermal conductivities of the zirconia ceramic TBC vary depending on detailed processing and porosity. Because the measurement has not yet been done for the present TBC, the conductivities of the top coating and bonding layers are estimated from a previous literature [23] as follows.
+kZrO2 1⁄4 0:00022 TðKÞ þ 1:09 ðW=m KÞ ð20Þ
+kNiCrAlY 1⁄4 0:0083 T ðKÞ þ 6:7 ðW=m KÞ ð21Þ
+872 S.-K. KIM ET AL.
+
+
+2.5. Solution Procedure
+The present study has developed a turbulent combustion model based on the flamelet approach to incorporate nonequilibrium chemistry of the kerosene fuel, turbulent mixing, enthalpy loss, and pressure variations occurred within the nonadiabatic thrust chamber. In addition, the nonuniform mixing field formed initially by the peripheral fuel cooling injection is predicted by a simplified mixing model based on integration of a presumed mass flow distribution of individual injector over the whole face plate, which provides the inlet boundary condition of the axisymmetric CFD solver. The present paper presents numerical procedure for regenerative cooling analysis model and its linkage with the CFD solver, whereas more details regarding the turbulent reacting flow simulation can be found in our preceding paper [16]. For interactive coupling, node points for calculation of the coolant flow through the regenerative cooling passage are longitudinally distributed to be identical to those at the wall boundary of the computational grids for the CFD solver (see Figure 6 of Ref. [16]). At each node, the channel data needed for the cooling analysis, such as number, spiral angle, height, and width, as well as the wall material and thickness, are specified from the actual design. During one time step of the CFD solver, the turbulent reacting flow simulation [16] is carried out with latest updated distribution of wall heat flux as thermal boundary condition along the entire chamber wall. With the newly calculated hot gas
+Figure 3. Thermophysical properties of kerosene surrogate predicted by NIST SUPERTRAPP [21]. (a) Density; (b) constant-pressure specific heat; (c) viscosity; (d) thermal conductivity.
+EFFECTIVE MODELING OF CONJUGATE HEAT TRANSFER 873
+
+
+properties at the nearest cell to the wall (kp and Tp in Eq. (9)), subsequently, the cooling analysis are performed starting from the first node at the fuel ring to the last one adjacent to the manifold of mixing head along the coolant flow direction. At a node point, the interface temperature, heat flux, and wall temperatures are calculated by Eqs. (9), (8), and (7), respectively. Before moving to the next downstream node, the coolant temperature increment by absorbing the heat flux and pressure losses due to friction and local flow resistances through the current channel segment are computed by Eqs. (15) and (17), respectively. Whenever the coolant temperature and pressure are updated, the thermophysical properties of the coolant are interpolated from the preconstructed lookup table, as mentioned in Subsection 2.4. The thermal conductivities of the metallic wall and TBC coating layers are updated by their latest temperatures. The renewed distribution of the wall heat flux is used in the CFD calculation at the next time step. The solution procedure is repeated until the convergence is achieved for both the nozzle flow field and the coolant flow.
+3. RESULTS AND DISCUSSION
+In order to analyze comparatively effects on the fuel cooling injection on the propulsive performance and cooling characteristics, two different calculations have been performed by the baseline model (denoted by Model A hereafter) and uniform mixing model (Model B) not taking into account the peripheral fuel cooling injectors, respectively. The performance losses due to the fuel cooling injection have already been discussed in terms of characteristic velocity, thrust coefficient, and specific impulse in our preceding paper [16], and therefore, its effects on the thermal and hydraulic characteristics of the regenerative cooling are quantitatively addressed in the present paper. Figure 4 presents the predicted distributions of the coolant velocity and density along the regenerative cooling passage. The coolant velocity has the highest value at the nozzle throat whose cross-sectional area is minimized. The coolant density
+Figure 4. Distributions of coolant velocity and density along the regenerative cooling passage at the design operating condition. The bold line indicates the chamber wall contour.
+874 S.-K. KIM ET AL.
+
+
+decreases gradually due to the heat absorption as it flows further downstream toward the mixing head. The abrupt increase of the density just downstream of the fuel ring represents the mixing between the preheated flow through Section D2 in Figure 1 and the fresh coolant injected through the second holes. The Reynolds number is predicted to be above 104 throughout the cooling passage with maximum value of 4.9 104 at the nozzle throat. Figure 5a indicates clearly that the convective heat transfer (hc) is governed mainly by the coolant velocity while the effective heat transfer coefficient (heff) is greatly affected by other design parameters. The discontinuities are attributed to the sudden changes in the channel design parameters summarized in Table 1. As shown in Figure 5b, in the case of the chamber wall made of the high-conductivity material (Sections A to C), the channel ribs enhance the cooling capability by more
+Figure 5. Distributions of convective heat transfer coefficients of cooling channels predicted by Model A. (a) Heat transfer coefficients; (b) fin efficiency.
+EFFECTIVE MODELING OF CONJUGATE HEAT TRANSFER 875
+
+
+than double. In contrast, the fin efficiency (gfin 1⁄4 heff=hc) is approximately 1.2 in Section D made of the stainless steel, which has lower conductivity than the copper alloy by an order of magnitude. Although not presented here, Model B yields slightly higher effective heat transfer coefficient than that of Model A due to the difference in the coolant flow shown in Figure 4. As given in Figure 6, comparison of wall heat flux between Model A and Model B reveals that overall heat transfer is significantly influenced by the presence of the fuel cooling injection. The heat flux predicted at the nozzle throat by Model A is 5.05 MW=m2, which is half of that by Model B (10.73 MW=m2). It is because the fuel-rich mixture formed due to the fuel cooling injection reduces substantially the gas temperature in the vicinity of the chamber wall as shown in Figure 1. The discontinuity of heat flux between Section C and D represents again higher thermal resistance of the stainless steel wall. The unrealistic overprediction of the heat flux near the face plate is attributed to the defect of the present model to be unable to capture the flame developing region of the actual injectors, which is reported by Daimon et al. [3]. On the aspect of structural integrity and durability, the maximum temperature of the inner wall has to be kept below a certain limit, above which the mechanical properties of the wall material deteriorate rapidly. For example, the maximum temperature for the copper alloy is nearly 800–850 K [9], while the stainless steel allows usually a higher limit. As shown in Figure 7a, even in the case without fuel cooling injection, the wall temperature remains below the limit over the entire chamber. Figure 7b presents the TBC temperature distributions predicted at the surface exposed to the hot combustion gas and at the interface between top coating (ZrO2) and bonding (NiCrAlY) layers. The steep temperature gradient through the ceramic coating layer (ZrO2) demonstrates that it provides effective insulation to the current cooling design, and probably allows reduction of the fuel cooling injection amount up to a thermally durable limit of the TBC for further design improvement.
+Figure 6. Distributions of wall heat flux along the thrust chamber.
+876 S.-K. KIM ET AL.
+
+
+Although no experimental data for local heat flux are available in hot-firing tests of the present thrust chamber, the coolant temperature and pressure are measured at six locations within the regenerative cooling passage, including the feeding pipe and fuel manifold. In Figure 8a, the prediction by Model A shows reasonable agreement with experimental data measured from two hot-firing tests under the design operating condition. On the other hand, the neglect of the fuel cooling injection leads to substantial overprediction of the coolant temperature. Figure 8b presents the comparison of static pressure between prediction and measurement along the cooling passage. The fuel cooling injection has a little influence on the hydraulics of the cooling passage at the design operating condition. The numerical results coincide with the measurement in the divergent nozzle sections whereas the present model underestimates the pressure drop across Section B. The discrepancy is
+Figure 7. Predicted temperatures of inner wall and coating layers. (a) Inner wall; (b) thermal barrier coating.
+EFFECTIVE MODELING OF CONJUGATE HEAT TRANSFER 877
+
+
+attributed to the shortcoming of the present hydraulic analysis to be unable to take into account effects of large curvature near the nozzle throat. It is worth to refer to the research of Pizzarelli et al. [12] in that the effect of curvature on heat transfer and hydraulics is investigated through computations of high-Reynolds-number supercritical hydrogen flow in curved channels and the pressure drop in a double curvature configuration is reported to be about 20% higher than that of a straight channel. As can be seen in Eq. (17), the pressure loss is proportional to square of the coolant velocity. Therefore, as shown in Figure 9, the total pressure decreases steeply near the nozzle throat where the coolant has the highest velocity. The total pressure loss is predicted as 2.32 MPa, 85% of which is caused by friction. The losses due to flow turning at the nozzle exit and sudden expansion into the fuel manifold are
+Figure 8. Comparisons of coolant temperature and pressure distributions with the regenerative cooling passage at design operating condition. (a) Temperature; (b) static pressure.
+878 S.-K. KIM ET AL.
+
+
+predicted as 0.06 and 0.09 MPa, respectively. The remainder loss results from the local flow resistances near the collectors at several locations. From a viewpoint of thermodynamic state, Figure 10 shows the coolant flow conditions through the cooling passage on P–T diagram. The cooling system operates at much higher pressure than the critical value, there exists no occurrence of surface boiling problem, which could take place due to phase change on the heated wall
+Figure 9. Distributions of stagnation pressure and local resistance losses along the regenerative cooling passage.
+Figure 10. Thermodynamic state of the coolant flow predicted by the Model A on the kerosene P–T diagram.
+EFFECTIVE MODELING OF CONJUGATE HEAT TRANSFER 879
+
+
+at a subcritical pressure. Moreover, for the present cooling design at the design operating condition, the coolant is predicted to remain in compressed liquid state without transcritical phenomena [24] because its conditions are far from the pseudo-critical points where the thermodynamic properties change remarkably as shown in Figure 3. Figure 11 gives comparison of the coolant temperature rise and total pressure loss through the whole cooling passage with varying overall mixture ratio at the same chamber pressure of 6 MPa. The increase in overall mixture ratio means that the fuel mass flow rate in the cooling passage as well as the fuel cooling injection decreases relatively. Moreover, as the overall mixture ratio increases to the stoichiometry, the higher flame temperature enhances the heat transfer to the wall. As shown in Figure 11a, Model A gives a relative coincidence with the experimentally
+Figure 11. Comparisons of coolant temperature increase and pressure drop through the whole cooling passage with varying overall mixture fraction. (a) Temperature increase; (b) pressure drop.
+880 S.-K. KIM ET AL.
+
+
+observed dependence on the mixture ratio. In order to resolve the quantitative discrepancy between Model A and measurement, further study needs to take into account insulation by black-carbon deposit layer on the chamber wall and radiative heat transfer which are neglected in the present study, as well as to reduce the uncertainty from the thermal resistance of the TBC. Figure 11b indicates that the lower mixture ratio leads to the more fuel mass flow through the cooling channel, and substantially increases the pressure loss. Although the simple hydraulic model based on empirical correlations is adopted, the present model reproduces well the measured dependence of pressure loss on overall mixture ratio.
+4. CONCLUSION
+In this study, effective modeling of conjugate heat transfer and hydraulics has been carried out with focus on its applicability to regenerative cooling design of actual kerosene-fueled thrust chamber. The present model is incorporated as a subroutine into the axisymmetric turbulent reacting flow solver in interactively coupled manner. Based on numerical results, the following conclusions can be drawn:
+. The present model is capable to effectively accommodate the main features of actual regenerative cooling such as detailed channel designs varying significantly along the chamber wall and bidirectionally branched coolant circuit on the divergent nozzle as well as fuel cooling injection and ceramic TBC as supplementary methods. . From an engineering point of view, the numerical results show good agreement with the measurement of hot-firing tests in terms of coolant temperature and pressure distributions. The present model also reproduces well the experimentally measured dependence of total coolant temperature rise and pressure drop on the overall mixture ratio. . In order to improve the predictive capability of cooling analysis, further modeling efforts are needed to accommodate the possible insulation by the soot layer and radiative heat transfer as well as to accurately measure the thermal resistances of the TBC layers. . The unified framework proposed by this work is expected to serve as an effective design tool for trade-off study among propulsive performance, reliable cooling, and pressure budget on the preliminary design phase.
+FUNDING
+The present work was carried out under the Research and Development of the Korea Space Launch Vehicle-II program sponsored by the Ministry of Science, ICT & Future Planning.
+REFERENCES
+1. D. K. Huzel and D. H. Huang, Modern Engineering for Design of Liquid-Propellant Rocket Engines, AIAA, Washington, DC, 1992.
+EFFECTIVE MODELING OF CONJUGATE HEAT TRANSFER 881
+
+
+2. G. P. Sutton, History of Liquid Propellant Rocket Engines, AIAA, Reston, VA, 2005.
+3. Y. Daimon, H. Negishi, N. Yamanishi, Y. Nunome, M. Sasaki, and T. Tomita, Combustion and Heat Transfer Modeling in Regeneratively Cooled Thrust Chambers, 48th AIAA=ASME=SAE=ASEE Joint Propulsion Conference & Exhibit, AIAA 2012-4009, Atlanta, Georgia, 2012. 4. F. Zhong, X. Fan, G. Yu, J. Li, and C.-J. Sung, Heat Transfer of Aviation Kerosene at Supercritical Conditions, Journal of Thermophysics and Heat Transfer, vol. 23, pp. 543550, 2009.
+5. M. H. Naraghi, S. Dunn, and D. Coats, A Model for Design and Analysis of Regeneratively Cooled Rocket Engines, 40th AIAA=ASME=SAE=ASEE Joint Propulsion Conference & Exhibit, AIAA 2004-3852, Fort Lauderdale, FL, 2004. 6. J. Jokhakar and M. H. Naraghi, A CFD-RTE Model for Thermal Analysis of Regeneratively Cooled Rocket Engines, 44th AIAA=ASME=SAE=ASEE Joint Propulsion Conference and Exhibit, AIAA-2008-4557, Hartford, CT, 2008. 7. J. Go ̈ rgen, T. Aichner, and M. Frey, Spray Combustion and Heat Transfer Modeling in LOx=H2, LOx=HC and MMH=NTO Combustion Chamber, 3th European Conference for Aerospace Sciences, EUCASS 2009-104, Versailles, France, 2009. 8. O. Knab, M. Frey, J. Go ̈ rgen, C. Maeding, K. Quering, and D. Wiedmann, Progress in Combustion and Heat Transfer Modelling in Rocket Thrust Chamber Applied Engineering, 45th AIAA=ASME=SAE=ASEE Joint Propulsion Conference & Exhibit, AIAA 2009-5477, Denver, Colorado, 2009. 9. D. Preclik, O. Knab, J. Go ̈ rgen, and G. Hagemann, Simulation and Analysis of Thrust Chamber Flowfields: Cryogenic Propellant Rockets, in V. Yang, M. Habiballah, J. Hulka, and M. Popp (eds.), Liquid Rocket Thrust Chambers: Aspects of Modeling, Analysis and Design, chap. 15, AIAA, Reston, VA, pp. 527–551, 2004.
+10. H. W. Zhang, Y. L. He, and W. Q. Tao, Numerical Study of Film and Regenerative Cooling in a Thrust Chamber at High Pressure, Numerical Heat Transfer, Part A, vol. 52, pp. 991–1007, 2007.
+11. M. Pizzarelli, S. Carapellese, and F. Nasuti, A Quasi-2-D Model for the Prediction of the Wall Temperature of Rocket Engine Cooling Channels, Numerical Heat Transfer, Part A, vol. 60, pp. 1–24, 2011.
+12. M. Pizzarelli, F. Nasuti, and M. Onofri, Analysis of Curved-Cooling-Channel Flow and Heat Transfer in Rocket Engines, Journal of Propulsion and Power, vol. 27, pp. 1045–1053, 2011.
+13. T. S. Park, Effects of Aspect Ratio on the Turbulent Heat Transfer of Regenerative Cooling Passage in a Liquid Rocket Engine, Numerical Heat Transfer, Part A, vol. 64, pp. 710–728, 2013.
+14. Y.-D. Kang and B. Sun, Numerical Simulation of Liquid Rocket Engine Thrust Chamber Regenerative Cooling, Journal of Thermophysics and Heat Transfer, vol. 25, pp. 155–164, 2011. 15. H. Negishi, Y. Daimon, H. Kawashima, and N. Yamanishi, Flowfield and Heat Transfer Characteristics of Cooling Channel Flows in a Methane-Cooled Thrust Chamber, 48th AIAA=ASME=SAE=ASEE Joint Propulsion Conference & Exhibit, AIAA 2012–4122, Atlanta, Georgia, 2012. 16. S.-K. Kim, M. Joh, H. S. Choi, and T. S. Park, Multidisciplinary Simulation of a Regeneratively Cooled Thrust Chamber of Liquid Rocket Engine: Turbulent Combustion and Nozzle Flow, International Journal of Heat and Mass Transfer, vol. 70, pp. 1066–1077, 2014.
+17. H. S. Choi, Y.-M. Han, Y.-M. Kim, and G.-R. Cho, Development of 30-tonf LOx=Kerosene Rocket Engine Combustion Devices(I) – Combustion Chamber, Journal of The Korean Society for Aeronautical and Space Sciences (in Korean), vol. 37, pp. 1027–1037, 2009.
+882 S.-K. KIM ET AL.
+
+
+18. M. B. Dobrovolskij, Liquid Rocket Engines: Basic Design, 2nd ed. (in Russian), ISBN 5-7038-2649-7, MGTU imeni N.E. Baumana, 2006.
+19. I. E. Idelchik, Handbook of Hydraulic Resistance, 3rd ed., Begell House, New York, 1996. 20. T. J. Bruno and M. L. Huber, Evaluation of the Physicochemical Authenticity of Aviation Kerosene Surrogate Mixtures. Part 2: Analysis and Prediction of Thermophysical Properties, Energy & Fuels, vol. 24, pp. 4277–4284, 2010.
+21. M. L. Huber, NIST Thermophysics Properties of Hydrocarbon Mixtures Database (SUPERTRAPP), Version 3.1 User’s Guide, U.S. Department of Commerce, Gaithersburg, MD, 2003.
+22. M. L. Huber and H. J. M. Hanley, The Corresponding-States Principle: Dense Fluids, in J. Millat, J. H. Dymond, and C. A. Nieto de Castro (eds.), Transport Properties of Fluids, pp. 283–295, Cambridge University Press, 1996.
+23. N. Carlson and B. L. Stoner, Thermal Barrier Coating on High Temperature Industrial Gas Turbine Engines, NASA CR-135147, February, 1977.
+24. M. Pizzarelli, A. Urbano, and F. Nasuti, Numerical Analysis of Deterioration in Heat Transfer to Near-Critical Rocket Propellants, Numerical Heat Transfer, Part A, vol. 57, pp. 297–314, 2010.
+EFFECTIVE MODELING OF CONJUGATE HEAT TRANSFER 883

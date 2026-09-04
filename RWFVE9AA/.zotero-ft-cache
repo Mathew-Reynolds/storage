@@ -1,0 +1,412 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/268479389
+Improved Correlations for Curvature Effects in Cooling Channels of Rocket
+Engines
+Conference Paper · July 2012 DOI: 10.2514/6.2012-3992
+CITATIONS
+5
+READS
+229
+2 authors, including:
+Some of the authors of this publication are also working on these related projects:
+Rocket Thermal Analysis View project
+Engineering pedagogy View project
+Mohammad Naraghi Manhattan College
+100 PUBLICATIONS 737 CITATIONS
+SEE PROFILE
+All content following this page was uploaded by Mohammad Naraghi on 23 July 2016.
+The user has requested enhancement of the downloaded file.
+
+
+American Institute of Aeronautics and Astronautics
+1
+Improved Correlations for Curvature Effects in Cooling Channels of Rocket Engines
+Mohammad H. Naraghi1 and Robin Dassonville2
+Department of Mechanical Engineering, Manhattan College, Riverdale, NY 10471, USA
+New improved correlations for developing and diminishing coolant flow heat transfer coefficient as the coolant flow enters and leaves curved section of cooling channels are developed. The correlations are based on rectangular cooling channels and it is demonstrated that the heat transfer coefficients variation behave differently for the three surfaces of cooling channels. The three variables that are incorporated in the heat transfer coefficient correlations include, dimensionless distance from entrance or exit of the curved section, the dimensionless radius of curvature and cooling channel aspect ratio.
+Nomenclature
+A,!,",# = correlation coefficients and exponents
+AR = aspect ratio
+Dh = hydraulic diameter
+h = heat transfer coefficient
+Le = distance from exit of the curved section
+Lc = distance from entrance to the curved section
+H = cooling channel height
+Nuc = Nusselt number for the curved section
+Nus = Nusselt number for the straight section
+R = radius of curvature
+Rh = hydraulic radius
+W = cooling channel width
+I. Introduction
+ccurate modeling of coolant flow in regeneratively cooled rocket engines is an essential step in design of cooling circuits. The coolant flow and heat transfer in these engines are influenced by the cooling channel configuration as well as hot-gas-side heating pattern and wall material. Hence, accurate modeling of cooling channel flow and heat transfer require conjugating thermal phenomena among three components of these engines: hot-gas-side combustion and convection, wall conduction, and coolant flow and heat transfer. Three-dimensional integrated numerical model, which combines CFD for the hot-gas combustion environment, coolant flow thermal analysis and finite difference model for wall conduction have been used by Wang and Luong1 to perform a comprehensive thermal analysis of a regeneratively cooled rocket engine. Such CFD models however, are computationally intensive and time consuming.
+1 Professor, AIAA Associate Fellow 2 Graduate student, as a part dual Master program with ECAM, Lyon, France
+A
+48th AIAA/ASME/SAE/ASEE Joint Propulsion Conference & Exhibit
+30 July - 01 August 2012, Atlanta, Georgia AIAA 2012-3992
+Copyright © 2012 by the American Institute of Aeronautics and Astronautics, Inc. All rights reserved.
+
+
+American Institute of Aeronautics and Astronautics
+2
+A more computationally efficient approach, which is also integrates the three modes of heat transfer, combines two commonly used liquid rocket engine software: RTE and TDK2. In the RTE3 the coolant flow is treated as a one-dimensional flow and the heat transfer from the wall to the coolant is evaluated via Nusselt number correlations for various commonly used coolants. This results in quick convergence of the code making it suitable for cooling circuit design and determining dimensions of cooling channels.
+Cooling channels in regenerative cooled liquid rocket engines, as shown in Figure 1, go through curvatures that result in changes (enhancement or diminution) of heat transfer from coolant flow to the walls of cooling channels. Recently, it has been shown that the heat transfer varies differently on various surfaces of cooling channel as the coolant flow enters and exits a curved region4,5,6. The previous work did not include the effect of aspect ratio and treated the developing and depleting secondary flow separately. Similar to the previous work in the present analysis a U-shaped rectangular channel shown in Figure 2 is considered. As the coolant flow enters the straight section of the cooling channel it develops to a fully developed straight channel (the straight channel is long enough to make the flow fully developed). Then the coolant enters the curved section, which results in developing the secondary flow and enhancement in the secondary flow. The fully developed secondary flow is accomplished at some point along the curved section of the cooling channel. As the coolant flow with the secondary flow enters the straight section at the other side of the U-shaped cooling channel the secondary flow diminishes resulting in some changes in the heat transfer coefficient.
+Figure 1: Configuration of a cooling channel
+Previous studies demonstrated that, as the flow enters the curved region of the cooling channel, the secondary flow and its resulting changes in heat transfer develop gradually along the curved section of the cooling channel. At some point, if the curved region is long enough, the secondary flow becomes fully developed and no further change in heat transfer occurs. It was also demonstrated that the effect of secondary flow on the heat transfer coefficient varies with the position of the wall. Indeed, for the outer wall, there is a significant increase of the heat transfer coefficient while it moderately increases at the sidewalls and even decreases at the inner wall, as show in Figure 3. The exact opposite effects were later noticed for the diminishing secondary flow as the coolant re-enters a straight part of the cooling channel (see Figure 4). Primary correlations were then developed based on those observations but they did not account for the aspect ratio of the channel.
+The purpose of this work is to develop a set of comprehensive correlations for heat transfer coefficients as functions of dimensionless radius of curvature, dimensionless distance from the entrance of curvature and the cooling channel aspect ratio. Both developing and diminishing secondary flow will be considered to establish correlations for each wall of the cooling channel: inner wall, outer wall and sidewall. The present work uses a CFD model to establish these correlations.
+
+
+American Institute of Aeronautics and Astronautics
+3
+II. Modeling of the Curved Channel Flow
+In order to analyze the curvature effect on the coolant flow heat transfer a U-shaped rectangular channel, shown in Figure 2, is used. A large number of CFD runs for various radii of curvature and aspect ratios are performed to evaluate the heat transfer coefficients (Nusselt numbers) at different surfaces along the U-shaped tube. The radii of curvature chosen are 100, 150 and 200mm and the aspect ratios are 1, 2, 3 and 3.57 (SSME-like).
+Figure 2: Straight and curved channel model used for correlation development
+The algorithms of FLUENT software7, which are based on a finite volume method, are used for the CFD modeling in this study. Two solvers can be chosen in FLUENT: a pressure-based solver and a density-based one. The latter is more commonly used to solve high speed and compressible flow fields. The velocities in the cooling channel are expected to vary between 40 m/s and 400 m/s, the fluid was assumed incompressible and the pressure-based solver was used. The incompressible flow was used to eliminate the
+V
+W
+H
+Developing
+flow
+in
+a
+straight
+channel
+Fully developed h
+Developingflowinacurvedchannel
+Fully developed secondary flow in curved channel
+R
+Diminishing
+secondary
+flow
+Le
+Lm
+Inlet
+Outlet
+
+
+American Institute of Aeronautics and Astronautics
+4
+effects of variable fluid properties on the heat transfer coefficients and only capture the curvature effect and not the heat transfer coefficient variation due to property changes. Hence, liquid hydrogen with constant properties is considered. Finally, the standard Spalart-Allmaras model is used as the turbulent model.
+Figure 3: Variation of heat transfer coefficient distribution for transitional flow from a straight channel to fully developed curved channel for curvature radius of 150mm (taken from reference 6)
+The largest aspect ratio of the channel is based on the SSME cooling channel at the throat area: with the width of W=0.889mm and the height of H=3.175mm. Those dimensions correspond to the aspect ratio of 3.57. To obtain the other aspect ratios, the height is maintained at 3.175 but the width was varied to obtain aspect ratios of 1, 2 and 3. The straight sections of the channel, before and after the curved section, are 205mm long. The U-shaped channel is divided into several cross-sections in order to retrieve the heat transfer coefficient values along all sections. The sections are placed every 10mm along the straight sections of the channel. In the curved part, the sections are placed every 5 degrees. The numerical model takes advantage of the symmetry of the coolant flow and the grid has 30 ! 40 ! 300 nodes (in the halfwidth, height and axial direction, respectively). The mesh is more refined near the walls to obtain better accuracy where the velocity and temperature gradients are largest.
+The boundary conditions used for this analysis are consistent with the previously published data for the SSME4 and are as follows:
+• The inlet velocity is defined at 39.93 m/s corresponding to a typical coolant velocity of the SSME.
+• The inlet coolant temperature is set to 52.4K.
+• To the pressure outlet boundary condition was applied a gauge pressure value of 25.93MPa.
+• The wall temperature was set to 500K to isolate the effect of curvature on the flow.
+In order to analyze only the effect of curvature and eliminate any variation of heat transfer due to the change of coolant properties, it was decided to use constant properties of liquid hydrogen close to its critical point. The properties of Liquid hydrogen used with this model are listed in Table 1.
+
+
+American Institute of Aeronautics and Astronautics
+5
+Figure 4: Variation of Nusselt number ratios for transitional flow from fully developed curved channel to a straight channel for curvature radius of 100mm (taken from reference 4).
+Table 1: liquid hydrogen properties used in the curvature analysis model
+Density 70.78 kg/m3
+Specific heat 9660 J/Kg.K
+Thermal conductivity 0.09892 W/m K
+Viscosity 132 μPoise
+III. Results and discussion
+As stated earlier, the main objective of this work is to develop improved correlation to account for the effect of both developing and diminishing secondary flow on the heat transfer coefficient. An investigation was first conducted in order to confirm the observations previously made4. Figure 5 represents a plot of contours of z-velocity of the cooling channel in the middle of the curved section of U-shaped channel, obtained using FLUENT software7. A significant variation of velocity is observed with opposite directions on top and bottom of the channel. These results confirm the presence of the secondary flow, which forms two counter rotating secondary flow loops (using the symmetry).
+Figure 6 displays contours lines of z-velocity component of the channel flow, computed by FLUENT software, as it exits the curved section and enters the straight section. The results show gradual diminishing secondary flow after the end of the curved section.
+Figure 7 shows the variation of heat transfer coefficient along the curved channel with a 50mm radius of curvature and an aspect ratio of 2. The curvature of the channel starts at x=0.205m and it ends at x=0.372m. This figure validates the observations made in the previous studies5. As the flow is entering the curved section of the channel, the heat transfer coefficient increases significantly for the outer wall while it increases by a small amount for the side wall and decreases for the inner wall. Conversely, when re
+
+
+American Institute of Aeronautics and Astronautics
+6
+entering a straight section of the channel, the heat transfer coefficient decreases for both outer and sidewall and increases for the inner wall.
+Figure 5: Cross-section contours of z-velocity (m/s) in the throat region for the half channel
+To quantify the variation of heat transfer coefficient for developing and diminishing flows their Nusselt number over developed flow Nusselt number for each surface (inner, outer and side) are used. For the case of the developing secondary flow, the ratio will be the ratio of the Nusselt number at a certain position along the curved part of the channel over the Nusselt number for the fully developed straight section. For example, Figure 8 shows the ratio of the curved section Nusselt number ( Nuc ) over the fully developed
+straight channel Nusselt number ( Nus ) versus dimensionless locations measured from the start of curve
+section as the secondary flow due to the curvature effect develops. For this case the non-dimensional length is the length from the entrance of curved section over the channel hydraulic diameter. The results of Figure 8 confirm the information retrieved from Figure 7 regarding the transition from the straight part of the cooling channel to the curved section. The Nusselt number ratio, which is a dimensionless representation of the heat transfer coefficient, increases significantly for the outer wall and then somewhat stabilizes. The ratio applied to the side wall gradually increases along the curved section of the channel but vary moderately compared to the Nusselt number for outer wall. Finally, the Nusselt ratio decreases for the inner wall.
+In the case of the diminishing secondary flow, the ratio will be the ratio of the Nusselt number at various positions after exiting the curved section over the fully developed curved channel Nusselt number.
+Figure 9 shows variation of diminishing Nusselt number versus Le / Dh . Those ratios are plotted versus a
+dimensionless length for each wall. In the case of the diminishing secondary flow, the length from the exit of curvature over the hydraulic diameter is used. Figure 9 shows that the Nusselt number ratios for the outer and sidewalls decrease once exiting the curved part of the channel and then stabilize. On the contrary,
+
+
+American Institute of Aeronautics and Astronautics
+7
+the ratio for the inner wall increases when re-entering a straight part of the channel before stabilizing to a constant value.
+Figure 6: Multiple cross-section contours of z-velocity (m/s) along the channel showing diminishing secondary flow
+Figure 7: Heat transfer coefficient distribution along the curved channel with a curvature radius of 50 mm and an aspect ratio of 2
+
+
+American Institute of Aeronautics and Astronautics
+8
+Figure 8: Variation of Nusselt ratios for transitional flow from fully developed straight channel to curved section for curvature radius of 50 mm and aspect ratio of 2
+Figure 9: Variation of Nusselt ratios for transitional flow from fully developed curved channel to a straight section for curvature radius of 50 mm and aspect ratio of 2
+
+
+American Institute of Aeronautics and Astronautics
+9
+IV. Development of Correlations
+To develop the correlations for both developing and diminishing secondary flow, the ratios of Nusselt numbers ( Nuc / Nus for transition from straight to curved channel and Nus / Nuc for transition from curved
+to straight channel) are expressed as functions of the dimensionless radius of curvature !/!!, the aspect ratio AR and a dimensional distance. For cases of developing secondary flow, this distance is the dimensionless distance from the entrance of curvature !!/!! and in the case of the diminishing secondary flow, the dimensionless distance from the exit of curvature !!/!! is considered. The nondimensionalization of distances are done by dividing them by the hydraulic radius !!, which contains the dimensions of the rectangular channel: !! = !!/2 = !"/(! + !). The proposed correlation for transitional flow from straight to curved channel is in the following arrangement:
+Nuc
+Nus
+=1± A R
+Rh
+! "#
+$ %&
+' Lc
+Rh
+! "#
+$ %&
+(
+AR
+( )) (1)
+and the proposed correlation for transitional flow from curved to straight channel is in the following format:
+Nus
+Nuc
+=1± A R
+Rh
+! "#
+$ %&
+' Le
+Rh
+! "#
+$ %&
+(
+AR
+( )) (2)
+The least square method is used to determine the coefficient A and exponents ! , ! and ! in the
+above correlations. The difference between the numerical value based on the CFD model and the correlation estimation for data point i is calculated via:
+Nus
+Nuc
+!
+"# $
+%&
+i
+' 1± A R
+Rh
+( )*
++ ,
+. Le
+Rh
+( )*
++ ,
+/
+AR
+( )0
+!
+"
+##
+$
+%
+&&i
+= 1i
+(3)
+Using the equation (3), the Least Square Method can be applied following the following equation:
+LSM = !i
+2
+i=1
+n
+"
+(4)
+where !i represent the errors at data point i . An optimization model is then used to minimize the value of
+!"# and find the values of the unknown coefficients of correlation.
+There are six cases for variation of heat transfer coefficients on three surfaces (inner, outer and side) as the coolant flow enters and leaves the curved section. The coolant flow correlations for these cases are presented and discussed in the following sections.
+1. Correlation for developing outer wall
+As the coolant flow enters the curved section the heat transfer coefficient at the outer surface increases. This increase is due to the increased pressure forces on the outer surface. The optimized parameters in equation (1) based on the model described earlier are: A = 1.3468, ! = 0.545, ! = -0.790 and ! =
+0.305. The magnitude and sign of these variables are indicative of the significance of these variables on the heat transfer enhancement. The large positive value of A indicates that the heat enhances considerably for the outer surface.
+The resulting correlation line and data points are shown in Figure 10. The abscissas caption of this
+graph is the product of three terms in the correlation, i.e., R / Rh
+( )0.545 Le / Rh
+( )-0.790 AR
+( )0.305 . The value of
+
+
+American Institute of Aeronautics and Astronautics
+10
+Least Mean Square for this case is LMS = 1.27 and the correlation for the ratio of Nusselt numbers is given by equation (5).
+Figure 10: Data points and correlation line for developing outer wall curved channel Nusselt number over fully developed straight channel Nusselt number
+Nuc
+Nus
+= 1+ 1.3468 R
+Rh
+! "#
+$ %&
+0.545 Le
+Rh
+! "#
+$ %&
+-0.790
+AR
+( )0.305 (5)
+It should be noted that based on the results shown in Figure 10 the above correlation is valid within the following range:
+R
+Rh
+! "#
+$ %&
+0.545 Le
+Rh
+! "#
+$ %&
+-0.790
+AR
+( )0.305 < 0.7
+2. Correlation for developing sidewall
+Similar to the outer wall the sidewall’s heat transfer coefficient increases significantly as the coolant enters the curved section. The correlation coefficient and exponents A, ! , and ! have similar signs and
+order of magnitudes as the outer wall case. The sign of aspect ratio exponent however, is negative. This is due to the fact that larger aspect ratio results in larger sidewall friction and lesser enhancement in heat transfer coefficient. It is well known that higher aspect ratio causes more suppression of secondary flow. The correlation for this case is given by the following equation:
+
+
+American Institute of Aeronautics and Astronautics
+11
+Nuc
+Nus
+= 1+ 1.239 R
+Rh
+! "#
+$ %&
+0.552 Le
+Rh
+! "#
+$ %&
+-0.956
+AR
+( )'0.744 (6)
+Figure 11 shows the correlation line and data points for this case. The least square method value based on equation (4) is LMS=0.458, indicating a good fit. The correlation based on equation (6) is valid as long as the following inequality holds:
+R / Rh
+( )0.552 Le / Rh
+( )-0.956 AR
+( )!0.744 < 3.5
+Figure 11: Data points and correlation line for developing side-wall curved channel Nusselt number over fully developed straight channel Nusselt number
+3. Correlation for developing inner wall
+The trend for variation of inner wall Nusselt number is different than those of outer wall and sidewall. Specifically, the Nusselt number decreases as the flow enters the curved region. For this case the value of coefficient A is negative, but three exponents (! , ! and ! ) have the same signs as those for the outer
+wall. The correlation for this case is given by:
+Nuc
+Nus
+= 1! 0.0762 R
+Rh
+" #$
+% &'
+0.310 Le
+Rh
+" #$
+% &'
+!0.131
+AR
+( )0.273 (7)
+The correlation data points along with the correlation line for this case are shown in Figure 12. The least square method value based on equation (4) is LMS=0.575, indicating a good fit. The correlation given by equation (7) is valid as long as the following inequality holds:
+
+
+American Institute of Aeronautics and Astronautics
+12
+R
+Rh
+! "#
+$ %&
+0.310 Le
+Rh
+! "#
+$ %&
+'0.131
+AR
+( )0.273 < 0.35
+Figure 12: Data points and correlation line for developing inner wall curved channel Nusselt number over fully developed straight channel Nusselt number
+4. Correlation for diminishing outer wall
+As the coolant flow exits the curved channel and enters the straight section the heat transfer enhancement due to secondary flow starts diminishing. This results in reduction of centrifugal force (pressure) on the outer surface and lower Nusselt number, which is reversal of the enhancement of heat transfer coefficient as it enters the curved region (case 1 considered earlier). For this case the value of A coefficient is negative and the correlation is given by:
+Nus
+Nuc
+= 1! 0.0297 R
+Rh
+" #$
+% &'
+0.551 Le
+Rh
+" #$
+% &'
+!0.145
+AR
+( )0.214 (8)
+Figure 13 shows the correlation line and data points for this case. The Least Square Method value based on equation (4) is LMS=0.433, which the best fit for all cases considered. It should be noted that the correlation given by equation (8) is valid as long as the following inequality holds:
+R
+Rh
+! "#
+$ %&
+0.551 Le
+Rh
+! "#
+$ %&
+'0.145
+AR
+( )0.214 < 0.5
+
+
+American Institute of Aeronautics and Astronautics
+13
+Figure 13: Data points and correlation line for diminishing outer wall straight channel Nusselt number over fully developed curved channel Nusselt number
+5. Correlation for diminishing sidewall
+As the coolant exits the curved section and enters straight part of channel the secondary flow weakens, hence the heat transfer coefficient decreases. The correlation for this case is given by the following equation:
+Nus
+Nuc
+= 1! 0.183 R
+Rh
+" #$
+% &'
+0.417 Le
+Rh
+" #$
+% &'
+!0.426
+AR
+( )!0.398 (9)
+The graph of correlation line and data points is shown in Figure 14. The Least Square Method value based on equation (4) is LMS=0.496, indicating a good fit. Based on the data points presented in Figure 14 the range of validity of equation (9) is based on the following inequality:
+R
+Rh
+! "#
+$ %&
+0.417 Le
+Rh
+! "#
+$ %&
+'0.426
+AR
+( )'0.398 < 0.3
+6. Correlation for diminishing inner wall
+As the coolant exits the curved section the centrifugal pressure force on the inner surface reliefs resulting an increase in the heat transfer coefficient at this surface. The correlation for this case is given by:
+Nus
+Nuc
+= 1+ 0.000284 R
+Rh
+! "#
+$ %&
+0.848 Le
+Rh
+! "#
+$ %&
+0.510
+AR
+( )0.188 (10)
+
+
+American Institute of Aeronautics and Astronautics
+14
+The correlation line and data points for this case are given in Figure 15. The data points for some cases are slightly off-track, which resulted in a higher least square method value of LMS=0.679. The range of validity of the above correlation based on the following inequality:
+R
+Rh
+! "#
+$ %&
+0.848 Le
+Rh
+! "#
+$ %&
+0.510
+AR
+( )0.188 < 0.7
+Figure 14: Data points and correlation line for diminishing sidewall straight channel Nusselt number over fully developed curved channel Nusselt number
+V. Concluding Remarks
+Correlations for heat transfer coefficients on three surfaces (outer, inner and side) of rectangular cooling channels as the coolant enters and leaves curved section of cooling channels are developed. It is shown that the heat transfer coefficients (Nusselt numbers) vary differently during transition from straight channel to the curved channel and curved channel to the straight one.
+The ratio of Nusselt numbers for the transitional flow over fully developed one, in these correlations, are functions of dimensionless radius of curvature, distance from entrance or exit of curved section, and the cooling channel aspect ratio. Two factors influence variation of heat transfer coefficient and Nusselt number: the centrifugal force (pressure) and development of secondary flow. The effects of centrifugal pressure on heat transfer coefficient are mostly present on the outer and inner surfaces of channel. As the coolant enters the curved section due to the increase in the pressure on the outer surface the heat transfer coefficient enhances, while the opposite happens on the inners surface (i.e., the heat transfer coefficient decreases due to the reduction in the pressure forces on the inner surface). As the coolant exits the curved section this process reverses, the heat transfer coefficient on the outer surface lowers while on the inner surface heat transfer coefficient increases.
+
+
+American Institute of Aeronautics and Astronautics
+15
+Figure 15: Data points and correlation line for diminishing inner wall straight channel Nusselt number over fully developed curved channel Nusselt number
+The effect of aspect ratio on the heat transfer coefficient is more noticeable at the sidewall. For the inner and outer walls the exponent of the aspect ratio (! ) are relatively small positive numbers – approximately
+0.2 for exits of curved section and 0.3 for entrance to the curved section. This positive exponent is an indicative of the fact that as aspect ratio increases it results in an increase in the radial mass depth for coolant flow and larger variation of radial pressure forces. For the sidewall, however, the exponent of aspect ratio is a relatively large negative number – approximately -0.7 for the developing and -0.4 for diminishing cases. This negative exponent results in lowering the effect of aspect ratio increase on the heat transfer coefficient. The increase in the aspect ratio results in larger surface frictional forces and slowing the secondary flow and consequently, lower heat transfer coefficient on the sidewall.
+References
+1 Wang, T-S., and Luong, V. ,“Hot-Gas-Side and Coolant-Side Heat Transfer in Liquid Rocket Engine Combustor”, AIAA Journal of Thermo-physics and Heat Transfer, 1994, Vol. 8, No. 3, pp 524530. 2 Naraghi, M.H., Dunn, S.S., and Coats, D., “A Model for Design and Analysis of Regeneratively Cooled Rocket Engines”, AIAA paper 2004-3852, Joint Propulsion Conference, Fort Lauderdale, 2004. 3 Naraghi, M.H.N., “RTE - A Computer Code for Three-Dimensional Rocket Thermal Evaluation,” User Manual, Tara Technologies, LLC, Yorktown Heights, NY 2002. 4 Naraghi, M.H., Pizzarelli, M. and Champagnon, R., “Heat Transfer Correlations for Transitional Coolant Flow fro Curved to Straight Cooling Channels Sections, AIAA 2011-5843, presented at the 47th AIAA/ASME/SAE/ASEE Joint Propulsion Conference & Exhibit, San Diego, California, July 31-August 03, 2011. 5 Pizzarelli, M., Nasulti, F., Onofri, M., “CFD Analysis of Curved Cooling Channel Flow and Heat Transfer in Rocket Engines,” AIAA 2010-6722, presented at the 46th AIAA/ASME/SAE/ASEE Joint Propulsion Conference & Exhibit, Nashville, TN, July 25-28, 2010.
+
+
+American Institute of Aeronautics and Astronautics
+16
+6 DiValentin, J., Naraghi, M.H., “Effects of Cooling Channel Curvature on Secondary Flow and Heat Transfer,” AIAA 2010-6973, presented at the 46th AIAA/ASME/SAE/ASEE Joint Propulsion Conference & Exhibit, Nashville, TN, July 25-28, 2010. 7 CFD Flow Modeling Software & Solutions from Fluent. Web. <http://www.ansys.com>.
+View publication stats

@@ -1,0 +1,402 @@
+1 Copyright © 2005 by ASME
+Proceedings of ICMM2005 3rd International Conference on Microchannels and Minichannels June 13-15, 2005, Toronto, Ontario, Canada
+Paper No. ICMM2005-75111
+EFFECTS OF REPEATING MICROSTRUCTURES ON PRESSURE DROP IN RECTANGULAR
+MINICHANNELS
+Derek J. Schmitt Rochester Institute of Technology
+Satish G. Kandlikar Rochester Institute of Technology
+ABSTRACT
+A literature review in laminar incompressible flow in microchannels has shown both early and late transitions from laminar to turbulent flow as well as no deviation from the conventional flow transition of Re=2300. In the present work, air and water flow through rectangular channels with hydraulic diameters ranging from 325μm to 1819μm. Smooth
+surface conditions are tested to validate the test section, while a repeating roughness is used to show the effects of surface roughness and its orientation on flow characteristics in minichannels. Testing has shown that smooth channels show no deviation, while artificially roughened channels show considerable deviation from the macroscale flow transition of Re=2300.
+INTRODUCTION
+The transition from laminar to turbulent flow in microfluidics is an important topic, as microchannels are being used increasingly in areas such as fuel cell research, on chip cooling, flow mixing, ect. Much research has been done to determine the effects of frictional losses in both mini and microchannels. A quick review of some important research has been identified and is given as follows: Peiyi and Little (1983) looked at microminiature refrigerators with test sections made using lithographic processes on glass and silicon substrates. Channels ranged in hydraulic diameter from 45.46 to 83.08 μm with roughness values ranging from 28 to 65 μm. When gasses were passed
+through the channel, they noticed flow transition at low Reynolds numbers (400-900). The high relative roughness was determined to be the cause as it was shown that many factors may affect the friction factor in micro channels.
+Later, Wu and Little (1984) used parallel microchannels made using the same lithographic process by Peiyi and Little (1983). Using channels with hydraulic diameters of approximately 150 μm, they found the friction factors were
+quite large, which may have caused the difference in transition from laminar to turbulent flow, Rec = 400-900.
+Pfahler (1991) used a wide variety of test fluids which included alcohol, silicone oil, isopropanol, nitrogen, and helium. Test channels were fabricated in silicon wafers using planar photolithographic micromachining techniques. Test results showed that for larger channel dimensions, the pressure drop agreed with Navier-Stokes flow theory. However, as the channel dimensions shrank, it was apparent that the friction factor was higher than theoretically predicted. Mala (1998) found similar results when he passed deionized water through channels with a circular cross section 880 mm long with diameters ranging from 50-254μm. The
+three regions of flow; laminar, transition, and turbulent were identified as Re < 650, 650 < Re < 1500, and Re > 1500 respectively. Pressure drop was reported as being higher than theory predicts at higher Reynolds numbers. Thus the friction factor was higher than predicted using Navier-Stokes theory. Kandlikar et al. (2001) investigated the fluid flow characteristics of water in two circular tubes measuring 0.62mm and 1.067mm in diameter. Their findings showed that flow transitioned at approximately Re = 2300 for the 1.067mm tube with relative roughness ranging from 0.00178 to 0.00281. A surface roughness dependence was shown to occur on the pressure drop, and flow transition in the smaller 0.62mm tube. Higher roughness values increased pressure drop while lower roughness values had less of an effect on the pressure drop.
+
+
+2 Copyright © 2005 by ASME
+Recently, Kandlikar et al. (2005) used a repeating roughness structure t o establish a diameter correction that should be applied in the channels root diameter. The corrected diameter is called the constricted diameter, Dcf, and is obtained by subtracting twice the surface roughness height, ε from the
+root diameter, D. A modified Moody diagram was presented using this corrected diameter and is shown in Figure 1. Also, it was shown that the laminar to turbulent transition is unaffected as the hydraulic diameter is decreased in smooth channels. However, as the roughness increases, the transition Reynolds number was found to decrease. From the research presented, it can be seen that there is a definite trend which shows a departure from macro scale flow theory of flow transition at Re = 2300 as a result of the increased roughness effects. Mini and microscale channels with roughness elements have produced flow transition with a Reynolds number between 400 and 1500, which is far earlier than the classical value as reported by Moody (1944).
+NOMENCLATURE α∗ aspect ratio
+b channel base, m B bias error c geometry factor used to calculate f Dh hydraulic diameter, m
+Dh,cf constricted flow hydraulic diameter, m
+e surface roughness height ε/d relative roughness ƒ friction factor
+l channel length, m
+p pitch, m P pressure at any point x, Pa Pe precision error
+R2 coefficient of determination Ra average roughness, m Re Reynolds number Rku kurtosis Rq root mean square roughness, m Rsk skewness Ry peak roughness, m Rz average maximum roughness height, m w channel width, m x distance from channel entrance, m Z any point along the roughness profile, m
+OBJECTIVES OF THE PRESENT WORK
+The objectives of the present work are to determine the validity of roughness parameters on pressure drop in minichannel flow, quantify the effect of different roughness orientations on pressure drop in minichannel flow, and to determine a value for the critical Reynolds number for flow transition in minichannel flow.
+EXPERIMENTAL SETUP
+Both air and water have been used as test fluids in the present work. The following section details the different test setups involved along with the test section and pressure manifold. Ultra zero grade compressed air containing: hydrocarbons<0.1ppm, CO2<1ppm, CO<1ppm,
+Figure 1 – Modified Moody diagram based on the constricted flow diameter, Kandlikar, et al. (2005)
+
+
+3 Copyright © 2005 by ASME
+moisture<5ppm is used in the experimental air test setup. A two stage regulator delivers air at a pressure suitable for testing (<200psi). The air passes through a 5μm Gelman Acro
+50A filter before passing through a bank of Omega FL-5500NV rotameter flow meters. Since the accuracy of the flowmeter is based on a percentage of the flowmeterís full scale range, three flowmeters have been used to limit experimental error. K type thermocouples are used to measure the fluid temperature before and after the test section. A series of 100μm diameter holes drilled into the cover plate serve as
+static pressure taps along the test section. The pressure tap holes were center located in 1/8 in. pilot holes drilled from the back side of the plate. The pressure tap holes were drilled using a 0.040 in. drill bit in a high speed drill. A pressure manifold allows for a single pressure tap to be isolated, and its pressure measured using a diaphragm pressure transducer. To ensure accuracy over the entire range of pressure, the following pressure transducers were used: Omega PX170 07in H20 gage transducer, Omega PX26 ±1psi, ±5psi, ±15psi,
+and ±30psi differential pressure transducer. The air is vented to atmosphere once it has exited the test section.
+Figure 1 Schematic of Experimental Test Setup, Air
+The test setup using deionized, degassed water is shown in Fig. 2. Deionized, degassed water is used as a second test fluid. The water is degassed using the procedure described in Kandlikar et al. (2002). The deionized, degassed water is drained into a Fisher Scientific Isotemp 3013 water bath. A positive displacement 1/4 HP bronze gear pump capable of pumping up to 0.9 GPM feeds the test section. A by-pass loop is used to control the gear pumps output flow rate. The water is then filtered using a Shelco FOS housing with a 1μm wound
+fiber filter. Three Omega FL-5500-NV rotameter flow meters control the flow rate to the test section. A pressure manifold controls the static pressure being measured by an Omega PX26 ±1psi, ±5psi, ±15psi, or ±30psi differential pressure transducer. K type thermocouples measure the water temperature before and after the test section. Once the fluid passes through the test section, it is recirculated into the constant temperature water bath.
+Figure 2 Schematic of Test Setup, Degassed DI Water
+EXPERIMENTAL PROCEDURE
+First, the high pressure air tank is opened to allow air to pass through the tankís two stage regulator. An output pressure is then set, and an outlet valve is opened. A valve on the two stage flow controller is then set to the desired value. The volumetric flow rate is noted using the rotameter. Once the flow rate is set, LabVIEW was run as the primary data acquisition system. The local static pressures were measured by closing all of the valves to the pressure manifold, except for the pressure being measured. Measurements were taken starting from the outlet to inlet until each pressure was taken. Once the data reached a steady pressure, a minimum of 30 data points for each pressure tap were averaged and recorded as the local pressure. After each pressure was recorded, the flow was adjusted using the flow controller and the process was repeated.
+SURFACE ROUGHNESS DESCRIPTORS
+Characterization of surface roughness is important when calculating pressure drop, especially when dealing with random roughness. Four parameters have been used to characterize the surface roughness which have been defined by ANSI. They are as follows: Average Roughness [Ra]: the arithmetic average of the absolute values of the profile deviations measured from the mean line.
+∫
+=
+L
+Z x dx
+L
+Ra
+0
+()
+1 (1)
+For ANSI, Ra is defined over the entire evaluation length. Root Mean Square Roughness (Rq): the root mean square of the profile height deviations measured from the mean line. The rms roughness value is used rather than the average roughness (Ra), since average roughness tends to cancel equal and opposite values of roughness, whereas rms roughness accounts for both positive and negative roughness values.
+
+
+4 Copyright © 2005 by ASME
+∫
+=
+L
+Z x dx
+L
+Rq
+0
+( )2
+1 (2)
+Skewness (Rsk): represents the degree of bias, or asymmetry of the profile about the mean line. A positive skew represents peaks, whereas a negative skew indicates valleys.
+∫
+=
+L
+q
+Z x dx
+L
+R
+Rsk
+0
+3
+3 ()
+1 1 (3)
+Kurtosis (Rku): the measure of the peakedness of the profile about the mean line. Kurtosis is an indication of how quickly a roughness feature rises over a given length. High kurtosis values represent quickly rising features, while low kurtosis values indicate gradual rising roughness features.
+∫
+=
+L
+q
+Z x dx
+N
+R
+Rku
+0
+4
+4 ()
+1 1 (4)
+Average Maximum Roughness Height (Rz): the average of successive values of the sum of the profile peak height and the profile valley depth within the evaluation length. (usually five sampling lengths within an evaluation length).
+5
+Rt1 Rt2 Rt3 Rt 4 Rt5
+Rz + + + +
+= (5)
+Roughness Length to Height Ratio [p/e]: the element pitch divided by the roughness height as shown in Fig. 3.
+Figure 3 p/e Roughness Parameters, Webb, et al. (1971)
+Surface roughness descriptor values are listed in Table 1.
+SURFACE ROUGHNESS
+Three surfaces are tested in the current study: (i) smooth, (ii) aligned sawtooth roughness, and (iii) offset sawtooth roughness. The smooth channel is shown in Fig. 4.
+Figure 4 Smooth Channel
+The channel is relatively smooth with a maximum average roughness height, Rz of 1.22μm. The sidewalls of the
+channel are of the same surface roughness. The smooth minichannel is used to validate the test section since a smooth channel will not deviate from the conventional flow transition of Re=2300. The aligned sawtooth roughness is shown in Fig. 5.
+Figure 5 Aligned Sawtooth Roughness
+The aligned roughness is a rectangular minichannel consisting of parallel surfaces with machined ribs running perpendicular to the flow direction. The surface roughness peaks on one side of the channel are lined up to match the surface roughness peaks on the opposite side of the channel. The roughness is said to be aligned. The offset sawtooth roughness consists of parallel surfaces with machined ribs perpendicular to the flow field. The surface roughness peaks are lined up such that the point of one surface roughness peak on one side lies between the two surface roughness peaks directly across from it. This is shown in Fig. 6. The surface roughness of the sidewalls in both the aligned and offset sawtooth roughnesses are that of the smooth walls.
+Figure 6 Offset Sawtooth Roughness
+ERROR ANALYSIS
+To ensure meaningful results, an error analysis was performed. The experimental uncertainty is given as:
+22
+U = B + Pe (6)
+Table 1 Minichannel Roughness Parameters Ra (μm)
+Rq (μm) Rsk Rku
+Rz (μm) p/e Smooth 0.21 0.25 -0.19 3.07 1.22 Aligned 17.0 20.8 1.19 3.45 72.9 6.86 Offset 17.0 20.8 1.19 3.45 72.9 6.86
+
+
+5 Copyright © 2005 by ASME
+where U is the uncertainty, B is the bias error, and Pe is the
+precision error. Bias error is induced by the error in the measuring instrumentation and is determined by the measuring instrumentationís least count. The bias error is calculated by dividing the accuracy by the target value:
+Measured Value
+Instrumentation Accuracy
+B = (7)
+Precision error is error induced by a number of measurements. Precision is calculated as:
+n
+P ts
+e
+= ± × σ (8)
+where t is determined from standard T-tables, σs is the sample
+standard deviation, and n is the number of samples. Temperature readings are accurate to ±0.1∞C, air and water flow rates are accurate to ±3% full scale, minichannel dimensions are accurate to ±5 μm, pressure readings are
+accurate to ±0.25% full scale, pressure tap distances are accurate to ±5 μm, and pressure tap locations are accurate to ± 5 μm. The friction factor uncertainty was calculated to be
+8.81%.
+RESULTS
+The results have been divided up into two sections, one for air and one for water. Tests were conducted for both air and water in minichannels with hydraulic diameters ranging from 325μm to 1819μm over a range of Reynolds numbers
+ranging from 200 to 7200 for air and 200 to 5700 for water. Static pressure was measured along the length of the minichannel in 13 different locations given in Table 2. The pressure taps are located at the peak of the sawtooth roughness.
+Table 2 Pressure Tap Location from Channel Entrance Tap # Location (m) 10 2 0.00910 3 0.01418 4 0.01924 5 0.02408 6 0.02925 7 0.03406 8 0.03904 9 0.04403 10 0.05110 11 0.05815 12 0.06507 13 0.07209
+The results for the different test fluids are discussed in the following sections.
+Results for Air
+The data was first analyzed by plotting the local static pressure against the non dimensional inlet distance (x/Dh) and
+comparing the data with the theoretical pressure drop calculated using the friction factor for a rectangular flow passage for each Reynolds number experimentally tested. The pressure drop is given as:
+Dh
+fL V
+P2
+42
+ρ
+∆ = (9)
+where the hydraulic diameter is calculated by:
+2( )
+4
+bw
+bw
+Dh +
+= (10)
+Figure 9 in an example representative of these plots.
+0.00
+1.00
+2.00
+3.00
+4.00
+5.00
+6.00
+7.00
+8.00
+9.00
+10.00
+0 50 100 150 200 250
+x/Dh distance from inlet
+Static Gage Pressure (kPa)
+Experimental Pressure Drop Theoretical Pressure Drop
+Figure 7 Differential Pressure Drop Along Channel Axis, Smooth Channel, Air, Dh=325μμμμm, b=165μμμμm, w=10.03mm,
+Re=215
+From Fig. 7, the inlet and exit effects can be seen as deviations in the experimental data from the theoretical data
+before the 4th data point and after the 10th data point respectively. Experimental data that falls between these points agrees with the theoretical data and lies in the fully developed flow region. Friction factors were calculated using the
+measurements from the taps located between the 4th and 10th pressure tap locations to negate the effects of entrance and exit effects. The theoretical laminar Fanning friction factor is calculated using the relationship:
+Re
+c
+f = (11)
+
+
+6 Copyright © 2005 by ASME
+where
+c = 24(1-1.3553 α*+
+1.9467 α*2-1.7012 α*3+
+0.9564 α*4-0.2537 α*5) (12)
+as given by Kakac, et al. (1987). Next, the fully developed experimental Fanning friction factor is calculated by Eq. 9 and is plotted against Reynolds number.
+2
+2L V
+DP
+fh
+ρ
+∆
+= (13)
+The turbulent Darcy friction factor given by Miller (1996) is divided by four to convert to the Fanning friction factor and is given as:
+4
+Re
+5.74 3.7
+/
+0.25 log
+2
+0.9 
+
+
+
+
+ 
+
+
++
+=
+−
+e Dh
+f (14)
+The experimental friction factor for the smooth pipe is plotted versus Reynolds number along with the theoretical friction factor given by Eq.14. smooth channels were tested with hydraulic diameters ranging from 325μm to 1818μm.
+Figure 8 is a representative plot with a hydraulic diameter 1203μm.
+0.00
+0.02
+0.04
+0.06
+0.08
+0.10
+0.12
+0 500 1000 1500 2000 2500 3000 3500 4000
+Reynolds Number
+f
+Experimental Laminar Theoretical Turbulent Theoretical
+Figure 8 Fully Developed Friction Factor Vs. Reynolds Number, Smooth Channel, Air, Dh=1203μμμμm, b=640μμμμm,
+w=10.03mm
+As shown in Fig. 8, the experimental friction factor agrees with the laminar theoretical friction factor for Re<2000. At approximately Re=2000, the experimental friction factor increases, which shows the transition from laminar to turbulent flow. This agreement with classical theory of flow transition at Re=2300 validates conventional laminar and
+turbulent friction factor equations for minichannels in the range of 325μm<Dh<1818μm.
+Once these equations are validated using smooth minichannels, the aligned and offset sawtooth surface roughness profile orientations are tested with hydraulic diameters of 769μm, 953μm, 1203μm, 1378μm, 1525μm, and 1819μm. The same procedure used to validate the
+conventional friction factor equations for the smooth minichannel is used to test the surface roughness profile orientations of the aligned and offset sawtooth roughness profile conditions. Figure 9 is a representative plot of the experimental friction factor over the range of Reynolds numbers.
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+0.35
+0.40
+0 500 1000 1500 2000 2500 3000 3500 4000
+Reynolds Number
+f
+Laminar Theoretical Turbulent Theoretical
+Aligned Sawtooth Profile Offset Sawtooth Profile
+Figure 9 Fully Developed Friction Factor Vs. Reynolds Number, Air, Dh=1203μμμμm, b=640μμμμm, bcf=494μμμμm, w=10.03mm, εεεε/Dh=0.0582
+The experimental friction factor in Fig. 9 has large errors when compared to the theoretical laminar and turbulent friction factors calculated using Eqns. 12 and 14 respectively. A critical Reynolds number is observed between 440<Re<630. A diameter correction must be made to compensate for the decrease in diameter caused by the repeating surface profile. The dotted lines in Figs. 10 and 11 represent the flow boundary which develops over repeated roughness elements which causes a decrease in the free flow area.
+Figure 10 Aligned Roughness with Flow Boundaries
+
+
+7 Copyright © 2005 by ASME
+Figure 11 Offset Roughness with Flow Boundaries
+The decreased channel height shown in Figs. 10 and 11 will be known as the constricted height, bcf. The constricted
+height is given as:
+bcf = b-2Rz (15)
+A new constricted hydraulic diameter, Dh,cf can be
+calculated using the constricted height given in Eq. 12. The constricted hydraulic diameter is given as:
+2( )
+4
+, bw
+bw
+D
+cf
+cf h cf +
+= (16)
+The experimental friction factor data presented in Fig. 9 is recalculated using the constricted hydraulic diameter (Dh,cf) to
+account for the reduction in free flow area. Figure 12 shows the effect of the reduction in the free flow area.
+0.00
+0.02
+0.04
+0.06
+0.08
+0.10
+0.12
+0.14
+0 500 1000 1500 2000 2500 3000 3500 4000
+Reynolds Number, Recf
+fcf
+Laminar Theoretical Turbulent Theoretical Constricted Aligned Sawtooth Profile Constricted Offset Sawtooth Profile
+Figure 12 Fully Developed Friction Factor Vs. Reynolds Number, Constricted Flow, Air, Dh,cf=942μμμμm, b=640μμμμm, bcf=494μμμμm, w=10.03mm, εεεε/Dh,cf=0.0812
+The experimental friction factor in Fig. 12 follows the theoretical laminar friction factor until a critical Reynolds number is reached. For Re>Rec, the experimental friction
+factor increases until the flow becomes fully turbulent. Once the flow is fully turbulent, the experimental friction factor is between 3.5-4.5 greater than the theoretical turbulent friction factor predicts using Eq. 11. In Fig. 9 and Fig. 12, the average surface roughness height, Rz is effectively used as ε to calculate ε/d. The
+constricted hydraulic diameter (Dh,cf) must be used to calculate
+experimental friction factors for the aligned and offset surface roughness minichannels. Also, it is shown that as ε/d
+decreases, the critical Reynolds number (Rec) increases.
+These observations are in accordance with the findings in Kandlikar, et al. (2005) To neglect the effects of compressibility, the velocity of the air must be less than Mach 0.3,Fox and McDonald (1998), where the Mach number is calculated as the ratio of the local velocity, v, to the local speed of sound, s.
+s
+v
+M = (17)
+Using the ideal gas law, the maximum velocity before the fluid is considered to be compressible can be calculated by
+v ≤ 0.3 γRT (18)
+Under the conditions tested, v ≤ 104.16m/s, for incompressible flow. Since a maximum velocity of 98m/s is seen in the test section, the air is considered to be incompressible.
+Results for Water
+Deionized, degassed water has been passed through minichannels with hydraulic diameters ranging from 325μm to 1819μm. Smooth, aligned, and offset minichannels have been
+tested between Reynolds numbers ranging from 200 to 5700. The results are discussed in detail in the following section. Figure 13 shows static pressure plotted against the non dimensional distance from inlet (x/Dh) and compared to the
+theoretical pressure drop calculated using Eq. 9.
+0.00
+1.00
+2.00
+3.00
+4.00
+5.00
+6.00
+7.00
+8.00
+9.00
+0 50 100 150 200
+x/Dh distance from inlet
+Static Gage Pressure
+(kPa)
+Experimental Pressure Drop Theoretical Pressure Drop
+Figure 13 Pressure Drop Along Pipe Axis, Smooth Channel, Water, Dh=1378μμμμm, b=740μμμμm, w=10.03mm,
+Re=2026
+The entrance and exit effects can be seen in Fig. 13 as deviations from the predicted pressure drop. The fully developed flow free of entrance and exit effects is calculated
+between the 4th and 10th data points to eliminate entrance and exit effects. The fully developed experimental friction factor is calculated by Eq. 14 and plotted against Reynolds number in
+
+
+8 Copyright © 2005 by ASME
+Fig. 14, with a hydraulic diameters of 1203μm. The
+experimental friction factor is compared with the laminar and turbulent friction factor calculated using Eqns. 11 and 14.
+0.00
+0.02
+0.04
+0.06
+0.08
+0.10
+0.12
+0 1000 2000 3000 4000 5000 6000
+Reynolds Number
+f
+Experimental
+Laminar Theoretical
+Turbulent Theoretical
+Figure 14 Fully Developed Friction Factor Vs. Reynolds Number, Smooth Channel, Water, Dh=1203μμμμm, b=640μμμμm,
+w=10.03mm
+The experimental friction factor agrees with the laminar theoretical friction factor calculated using Eq. 8 for Re<2000. For Re>2000, the experimental friction factor begins to deviate from the theoretical laminar values, which illustrates the transition to turbulent flow. The agreement with NavierStokes theory in Figs. 22-24 validates the friction factor equations for laminar and turbulent flow in smooth passages with ε/d<0.000375 for hydraulic diameters of 325μm <Dh<1818μm.
+The aligned and offset sawtooth surface roughness profile orientations were tested with water for hydraulic diameters of 769μm, 953μm, 1203μm, 1378μm, 1525μm, and 1819μm.
+Experimental friction factors are plotted versus Reynolds number for the aligned and sawtooth roughness profile configurations. The experimental data is compared to the theoretical laminar and turbulent friction factors calculated using Eqns. 11 and 14 respectively. A representative plot with a hydraulic diameter of 1203μm is shown in Fig. 15.
+Figure 15 shows the experimental friction factors for the aligned and offset roughness orientations for Dh=1203μm
+plotted against the theoretical laminar and turbulent friction factor. As with the data for air, the experimental data for water is in large error with the theoretical laminar and turbulent values. A critical Reynolds number is reached at 600<Rec<830.
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+0 500 1000 1500 2000 2500 3000 3500
+Reynolds Number
+f
+Laminar Theoretical Turbulent Theoretical Aligned Sawtooth Profile Offset Sawtooth Profile
+Figure 15 Fully Developed Friction Factor Vs. Reynolds Number, Water, Dh=1203μμμμm, b=640μμμμm, bcf=494μμμμm, w=10.03mm, εεεε/Dh=0.0582
+The experimental friction factors plotted in Fig. 15 shows large discrepancie with the theoretical laminar and turbulent friction factors. A diameter correction must be made to account for the reduction in free flow area caused by the surface roughness microstructures and the flow boundary that develops across these structures. The friction factor data in Fig. 15 has been recalculated using the constricted hydraulic diameter given in Eq. 13. The recalculated friction factor data, which has been corrected to include the constricted flow area, is plotted in Fig. 16.
+0.00
+0.02
+0.04
+0.06
+0.08
+0.10
+0.12
+0.14
+0 1000 2000 3000 4000
+Reynolds Number, Recf
+fcf
+Laminar Theoretical Turbulent Theoretical Constricted Aligned Sawtooth Profile Constricted Offset Sawtooth Profile
+Figure 16 Fully Developed Friction Factor Vs. Reynolds Number, Constricted Flow, Water, Dh,cf=942μμμμm, b=640μμμμm, bcf=494μμμμm, w=10.03mm, εεεε/Dh,cf=0.0812
+Figures 16 shows the recalculated friction factor data using the constricted hydraulic diameter, Dh,cf. In the laminar
+region, the experimental friction factor values agree with the values predicted by the classical laminar flow theory. The corrected experimental friction factor data shown in Fig. 16 is laminar until it reaches a critical Reynolds number, Rec. Once
+a critical Reynolds number is reached, the roughness
+
+
+9 Copyright © 2005 by ASME
+structures trigger an early transition to turbulent flow. Once the flow transitions, the departure from the laminar theory increases dramatically. Thus, the theory correctly predicts friction factors in the laminar flow regime, but under predicts these values in the turbulent regime. Experimental friction factors are between 3.5 and 4 times greater than predicted using conventional turbulent friction factor theory. As with the data for air, these observations are in agreement with those in Kandlikar, et al. (2005).
+Effect of Roughness on Critical Reynolds Number
+As the hydraulic diameter decreases, the effect of roughness becomes more prevalent. The decreased hydraulic diameter provides a smaller free flow area, thus the surface roughness can interact more freely with the free flowing fluid. This increased interaction allows the surface roughness to act as a turbulator and trip the laminar flow, causing early transition to turbulence. The critical Reynolds numbers have been plotted against the constricted relative roughness in Figure 17.
+100
+1000
+10000
+0.01 0.1 1 εεεε/dh,cf
+Rec
+Air Water Trendline
+Figure 17 Critical Reynolds Number in Minichannels
+The critical Reynolds number has been modeled as a power
+curve fit and is given as Rec = 118.67(ε/dh,cf) -0.7885 with a
+coefficient of determiniation (R2) of 0.9196.
+CONCLUSIONS
+Once the conventional friction factor equations have been validated with air and water in the smooth channel configuration, air and water are tested in the aligned and offset roughness configuration in minichannels with hydraulic diameters ranging from 769μm to 1.82mm. The following
+conclusions are drawn from the present work:
+1. Smooth rectangular minichannels with relative roughness of ε/Dh<0.000375 and hydraulic diameters of 325μm≤Dh≤1819μm show no signs of early
+transition to turbulent flow, thus validating conventional flow transition of Re=2300. 2. The experimental laminar friction factor is valid in calculating the friction factor in rectangular
+minichannels, and should be calculated using the constricted hydraulic diameter, Dh,cf .
+3. Aligned and offset surface roughness microstructures show different relative roughness values. 4. As the relative roughness decreases, the critical Reynolds number increases for a machine roughened surface. The early transition is caused by the effects of the microstructure roughness and can be modeled
+as Rec = 118.67(ε/dh,cf) -0.7885.
+REFERENCES
+Carrano, A. L., 2000, "Characterization of Wood Surface Preparation," Doctoral Dissertation, NC State University. Kakac, S., Shah, R. K., Aung, W., 1987, Handbook of Single-Phase Convective Heat Transfer, John Wiley and Sons, pg. 3-122. Kandlikar, S. G., Schmitt, D. J., Carrano, A. L., Taylor, J. B., 2005, ìCharacterization of Surface Roughness Effects on Pressure Drop in Single-phase Flow,î Physics of Fluids, Vol. 17, No. 5. Kandlikar, S. G., Steinke, M. E., Balasubramanian, P., 2002, ìSingle-phase Flow Characteristics and Effect of Dissolved Gases on Heat Transfer Near Saturation Conditions in Microchannels,î Proceedings of IMECE02, November, New Orleans, LA. Mala, G. M., Li, D., 1999, ìFlow Characteristics of Water in Microtubes,î International Journal of Heat and Fluid Flow, Vol. 20, pp. 142-148
+Miller, R. W., 1996, Flow Measurement Engineering
+Handbook, 3rd ed. New York: McGraw-Hill. Moody, L. F., 1944, ìFriction Factors for Pipe Flow.î Transactions of the A.S.M.E., pp. 671-683. Nikuradse, J., 1933, ìStromungsgesetze in Rauen Rohren.î VDI-Forschungsheft 361., Beilage zu ìForschung auf dem Gebiete des Ingenieurwesens.î Ausgabe B Band 4. Peiyi, W., Little, W.A., 1983, ìMeasurement of Friction Factors for the Flow of Gases in Very Fine Channels used for Microminiature Joule-Thomson Refrigerators,î Cryogenics, Vol. 23, pp. 273-277. Peng, X. F., Peterson, G. P., 1994, ìFrictional Flow Characteristics of Water Flowing Through Rectangular Microchannels,î Experimental Heat Transfer, Vol. 7, pp. 249264. Pfahler, J., Harley, J. Bau, H., Zemel J. N., 1991, ìGas and Liquid Flow in Small Channels,î Micromechanical Sensors, Actuators, and Systems, ASME, Vol. 32, pp. 49-61. Webb, R. L., Eckert, E. R. G., and Goldstein, R. J., 1971, ìHeat Transfer and Friction in Tubes with Repeated-Rib Roughness,î International Journal of Heat and Mass Transfer, Vol. 14, pp. 601-617. Wu, P., Little, W.A., 1984, ìMeasurement of Heat Transfer Characteristics in the Fine Channel Heat Exchangers used for Microminiature Refrigerators,î Cryogenics, Vol. 24, pp. 415-420.

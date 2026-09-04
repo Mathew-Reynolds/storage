@@ -1,0 +1,213 @@
+1065-5131/23/$35.00 © 2023 by Begell House, Inc. www.begellhouse.com 69
+Journal of Enhanced Heat Transfer 30(4):69–82 (2023)
+EXPERIMENTAL INVESTIGATION OF HEAT TRANSFER AND PRESSURE DROP CHARACTERISTICS FOR VERTICAL DOWNFLOW USING TRADITIONAL AND 3D-PRINTED MINI TUBES
+Jia Hang Chen,1 Yi Fan Yang,1 Lam Lam,1 Min Zeng,2 Ting Ma,2 Lap Mou Tam,1,3,* & Afshin J. Ghajar 4
+1Department of Electromechanical Engineering, Faculty of Science and Technology, University of Macau, Macau SAR, China
+2Key Laboratory of Thermo-Fluid Science and Engineering, MOE, Xi’an Jiaotong University, Xi’an, Shaanxi 710049, China
+3Institute for the Development and Quality, Macau, Macau SAR, China
+4School of Mechanical and Aerospace Engineering, Oklahoma State University, Stillwater, Oklahoma, USA
+* Address all correspondence to: Lap Mou Tam, Department of Electromechanical Engineering, Faculty of Science and Technology, University of Macau, Macau SAR, China; Tel.: +853 2837 1009; Fax: +853 2835 6102, E-mail: fstlmt@um.edu.mo
+Original Manuscript Submitted: 11/24/2022; Final Draft Received: 1/7/2023
+In this study, an investigation on the influences of different manufacturing techniques on the heat transfer and pressure drop in the developing and fully developed regions of mini-tube under different flow regimes is introduced. The purpose of this research is to experimentally investigate the heat transfer and pressure drop characteristics using 3D-printed tubes and traditional stainless steel tubes in the vertical direction under isothermal and non-isothermal boundary conditions. Experiments are conducted using distilled water (Prandtl numbers varying from 4 and 7) at Reynolds numbers of 800–10000 with heat fluxes between 30 and 500 kW·m−2. Test tubes with inside diameters of 2 mm are used, and the average surface roughness is 1.6 μm and 15.3 μm, respectively. The results are compared with previous studies. It is verified that the heat transfer characteristics are almost the same for the traditional tube and the 3D-printed tube in the laminar region. The average deviation between these two tubes is 7.7%. However, for the turbulent region, the Nusselt numbers of 3D-printed tube in the turbulent region increases by an average of 45% as compared with a traditional tube. The friction factors under heating conditions also increased by an average of 209%. In addition, the 3D-printed tube enters the transition region earlier. The results show that the average critical Reynolds number of a traditional tube and 3D-printed tube is around 2300 and 2000, respectively. Correlations in the turbulent region are developed to predict the friction factors and heat transfer coefficients with good accuracy.
+KEY WORDS: heat transfer, pressure drop, transition, 3D-printed mini tube
+
+
+Journal of Enhanced Heat Transfer
+Chen et al.
+70
+NOMENCLATURE
+cp specific heat capacity, J·kg–1·K–1 Di inside diameter of the test section,
+μm D equivalent diameter of a duct, μm e height of a roughness element, μm f friction factor, dimensionless h heat transfer coefficient, W·m–2·K–1 k thermal conductivity, W·m–1·K–1 Nu Nusselt number (= h·Di·k–1),
+dimensionless
+Pr Prandtl number (= cp·μb·k–1),
+dimensionless
+Re Reynolds number (= ρ·V·Di·μb
+–1),
+dimensionless
+St Stanton number (= Nu·Pr–1·Re–1), dimensionless
+Tb local bulk temperature of the test
+fluid, °C Tw local inside wall temperature, °C
+V velocity, m·s–1 x local axial distance along the test section from the inlet, m
+Greek Symbols
+ε average surface roughness, μm μ absolute viscosity of the test fluid, Pa·s μb absolute viscosity of the test fluid
+evaluated at Tb, Pa·s
+μw absolute viscosity of the test fluid
+evaluated at Tw, Pa·s
+ρ density of the test fluid evaluated at Tb, kg·m–3
+Subscripts
+b bulk temperature cor value calculated by correlation exp value measured by experiment i inside diameter of the test tube l laminar flow s refers to smooth surface t turbulent flow w wall temperature
+1. INTRODUCTION
+Additive manufacturing is an advanced manufacturing technology that draws the attention from the thermal engineers. In heat exchanger applications, Thompson et al. (2015) indicated that SLM technology has high potential as it can produce more compact devices while maintaining high mechanical properties and good thermal conductivity such as compact heat exchangers or even full-size heat exchangers with specially designed geometries. Shah and Sekulic (2003) presented that compact heat exchangers (CHE) are characterized by the use of micro- and minichannels, resulting in a high heat transfer rate in a reduced volume. The mini- and micro-tubes are the most basic components in the compact systems, and a full understanding of their heat transfer and pressure drop characteristics can provide useful information for the design and application of such systems. Various researchers have conducted studies to investigate whether the traditional heat transfer and pressure drop results for macro-tubes can directly apply to the micro-tubes. Discrepancies were found with some agreements and disagreements. Guo (2018) conducted a comprehensive review about heat transfer enhancement. In his review, passive techniques such as the rough surface was one of the methods for heat transfer augmentation. Celata (2004) indicated that roughness is considered to be one of the reasons for the difference in the prediction of correlation between micro-scale tube and macro-scale tube. In the middle of the last century, Nikuradse (1933) systematically summarized the effect of rough surface on flow characteristics by using a brass tube. He believed that the relative roughness in the laminar flow region was negligible when the relative roughness was less than 5%, while for the turbulent flow region, he proposed
+
+
+Volume 30, Issue 4, 2023
+Heat Transfer and Pressure Drop Characteristics 71
+an empirical correlation for calculating the friction factor for turbulent flow in pipes. Under the combination of different relative roughness and pipe diameters (0.62 mm and 1.067 mm), Kandlikar et al. (2003) found that the coefficients of pressure drop and heat transfer increase as the values of relative roughness increase for the small diameter tubes. Moreover, changing the roughness value also affected the transition to turbulence. Yu et al. (1995) performed heat transfer experiments in micro-tubes using distilled water as test fluid. Their experiments found that the transition occurred for Reynolds numbers from 1700 to 6000, in agreement with the conventional theory. But the Nusselt numbers were larger than the expected theoretical values for Reynolds numbers, ranging between 6000 and 20,000. Choi et al. (1991) measured the Nusselt number and the friction factor through micro-tubes having a diameter of 3, 7, 10, 53, 81 μm with Reynolds numbers ranging between 30 and 20,000. They found that the friction factor for microtubes was lower than predicted by the Blasius (1913) equation, while the Nusselt number obtained by experiment was higher than the Nusselt number predicted by the conventional theory. Celata et al. (2002) investigated the hydraulic and single-phase heat transfer of a traditional stainless steel capillary tube with a very small internal diameter (130 μm), for Reynolds numbers in the range of 100 and 8000. Experimental results were compared to the empirical correlation. In the turbulent region, Colebrook et al. (1939) equation with the experimental mean value of the roughness overpredicts the friction factors in the entire experimental range, while the Nusselt numbers were significantly higher than that of conventional correlations. Therefore, they proposed that heat transfer and pressure drop correlations in the turbulent regime developed for macro-tubes are not applicable to micro-tubes. Stimpson et al. (2016) studied the pressure drop and heat transfer behaviors for gas flow inside 3D-printed mini rectangular channels. Special attention was paid to the surface roughness. They concluded that pressure drop and heat transfer were both increased in comparison with the smooth rectangular channel. Based on the experimental results, Stimpson et al. (2017) analyzed the roughness effect on pressure drop and heat transfer systematically and developed an empirical correlation to predict heat transfer and pressure drop. However, this correlation is only applicable to air flow according to the authors. It can be noted from the above reviews that the previous research focused on traditional tubes, while studies on 3D-printed tubes were less involved. Whether the existing research results for traditional tubes can be applied in 3D-printed tubes is still unclear. Selective Laser Melting (SLM) metal 3D-printing technology is the most commonly used and high-precision metal laser 3D-printing forming technology. Therefore, the purpose of this study is to experimentally investigate the heat transfer and pressure drop characteristics using tube printed by SLM technology and traditional cold rolled stainless steel tube in the vertical direction under isothermal and non-isothermal boundary conditions.
+2. EXPERIMENTAL SETUP
+A schematic diagram of the overall experimental apparatus used for hydraulic characteristics and thermal behavior experiments is shown in Fig. 1. In order to accurately measure heat transfer and pressure drop characteristics, the experimental setup consists of four parts, namely fluid circulation system, test bench and instruments, test section, and the data acquisition system. Distilled water was selected as the working fluid of the fluid circulation system. At the beginning of the experiment, the pressure valve was opened to push the test fluid out of the pressure vessel; it passed through the flow meter and test section and was finally recovered by the receiving tank. After the experiment, the working fluid in the receiving tank was re-pumped into the pressure vessel by the water pump to complete the cycle. The mass flow rate was measured by a micro-motion F series flow meter with an accuracy of ± 1.75%. Although there is a real-time monitor on the flow meter, for a more precise measurement, it was connected to the data acquisition system and the LabVIEW program was used to record the average value of the flow rate.
+
+
+Journal of Enhanced Heat Transfer
+Chen et al.
+72
+The experiments were divided into two groups based on different manufacturing techniques. One of the test sections was a traditional cold rolled stainless steel circular tube. The total length of the traditional tube was 1060 mm, providing a heating length of 700 mm (see Fig. 2). Another test section was made by SLM and restricted by the SLM machine. The test tube had a total measured length of 300 mm and therefore a maximum heating length of 250 mm (see Fig. 3). For the comparisons of heat transfer and pressure drop behaviors between the traditional tube and the 3D-printed tube the tube length was identical (200 mm). All the data for the traditional tube
+FIG. 1: Schematic diagram of the experimental setup
+FIG. 2: Schematic diagram of test section for traditional tube
+
+
+Volume 30, Issue 4, 2023
+Heat Transfer and Pressure Drop Characteristics 73
+beyond 200 mm was only used in experimental setup verifications. The left and right ends of the test section were welded to the holes of the copper terminal. Meanwhile, the wires were tightly fixed into the copper terminal and were connected in parallel fashion to a DC power supply to obtain a uniform wall heat flux boundary condition. In this study, specially customized bulge tubes were employed as pressure taps, which were welded on the tube to prevent it from entering the fluid flowing area and causing any flow obstructions within the test section. The pressure taps were installed on the left of the copper terminals to prevent damage. However, the length for heat transfer and pressure drop measurements was the same. In addition, the inlet and exit bulk temperatures were measured by means of thermocouple probes (Omega TMQSS-020U-6) inserted in three-way valve. To compare the heat transfer results in the developing and fully developed region for the traditional and 3D-printed tubes, thermocouples (Omega 5TC-TT-T-40-36) were placed at the same dimensionless axial position for x/Di ≤ 100.
+In this study, the inside diameters Di, the average surface roughness ε, and relative rough
+ness Di for the traditional and 3D-printed tubes were measured by Inverted Microscope (Leica DMI3000M) and optical profilometer (Bruker ContourGT-X), respectively, and the results are shown in Table 1. From the table, the surface roughness and relative roughness of the 3D-printed tube is about 10 times larger than the traditional tube. Figure 4 gives the side by side comparison regarding the inner surface appearance of the traditional and 3D-printed tubes. All experimental data in this study were collected and analyzed by the National Instrument Data Acquisition System (NI cDAQ-9178). It also controls the timing, synchronization, and data transfer between modules and an external host. The National Instrument Data Acquisition System collected the digital signals of the flow meter, pressure transducer, surface thermocouples, and inlet and outlet thermocouple probes and recorded it on an external host through the LabVIEW program. In this study, a visual LabVIEW program was applied to monitor the experimental parameters in real time and collect average data over a time period. New thermocouples needed to be calibrated by digital temperature controller with an accuracy of ± 0.25°C (PolyScience
+FIG. 3: Schematic diagram of test section for 3D-printed tube
+TABLE 1: Specifications of the test section
+Parameters 3D-printed Traditional
+Di (μm) 2071.2 2026.6
+ε (μm) 15.3 1.6 ε
+Di
+0.007387 0.000789
+
+
+Journal of Enhanced Heat Transfer
+Chen et al.
+74
+9002AA2E) before they could be used. The pressure transducer (Validyne DP15) can measure pressure in different ranges by changing different pressure diaphragms, and the correct replacement of pressure diaphragms in the corresponding range can ensure an accuracy of ± 0.5%. Finally, the data is preliminarily processed using a MATLAB script. The uncertainty analysis of the overall experimental variables was based on the method proposed by Kline and McClintock (1953). The maximum uncertainty in the calculation of heat transfer coefficient and friction factor was ± 9.91% and ± 3.55%, respectively. In addition, the heat balance error was calculated by a method developed by Ghajar and Kim (2006). During the experiment, the heat balance error of each set of data was guaranteed to be less than ± 5%.
+3. RESULTS AND DISCUSSION
+To validate the new experimental setup, experiments were first performed with traditional stainless steel tubes. Figure 5 shows the comparison of fully developed heat transfer data for a traditional tube (at the x/Di = 250) with the data of Ghajar and Tam (1994) for a 15.8 mm (at the
+x/Di = 200) stainless steel tube. The square-edge inlet data was used as a comparison due to
+its similarity to the current inlet type. The current heat transfer data follows the data trend of Ghajar and Tam (1994) in the laminar region, transition region, or turbulent region. In addition, the laminar isothermal friction factors of traditional tube compared well with the Darcy (1858) friction factor for Reynolds numbers varying from 100 and 2200 with a maximum deviation of 6.1% and an average deviation of 2.3%. In the turbulent flow region, the experimental data also compared well with the Blasius (1913) equation between Reynolds numbers of 4000 and 10,000, with a maximum deviation of 1.7% and an average deviation of 1% (see Fig. 6). As a result, the experimental setup and experimental data were confirmed to be valid. After the verification of the experimental setup, the heat transfer and pressure drop experiments for traditional tube and 3D-printed tube were conducted. Figure 7 clearly shows the heat transfer characteristics for different manufacturing techniques under uniform wall heat flux boundary condition. In the figure, it is shown that the heat transfer characteristics and magnitudes are almost the same for the traditional tube and 3D-printed tube in the laminar region. Based on 100 laminar experimental data points, the average deviation between these two tubes were 7.7%. However, for the turbulent region, from 96 experimental data points, the Nusselt number for the 3D-printed tube increased by an average of 45% in comparison to the traditional tube. This dis
+FIG. 4: Cross-section of the traditional tube (A) and 3D-printed tube (B)
+
+
+Volume 30, Issue 4, 2023
+Heat Transfer and Pressure Drop Characteristics 75
+FIG. 5: Verification of heat transfer results
+FIG. 6: Verification of pressure drop results
+
+
+Journal of Enhanced Heat Transfer
+Chen et al.
+76
+FIG. 7: Comparison of heat transfer characteristics for different manufacturing techniques under uniform heat flux boundary condition: (A) comparison of Colburn j-factor for different manufacturing techniques under uniform heat flux boundary condition; (B) comparison of Nusselt number for different manufacturing techniques under uniform heat flux boundary condition
+
+
+Volume 30, Issue 4, 2023
+Heat Transfer and Pressure Drop Characteristics 77
+crepancy may be due to the rough inner surface of the 3D-printed tube resulting in more vortexes generated in the turbulent region, which enhances heat transfer. In addition, the Colburn j-factor (StPr0.67) from the traditional tube was closer to the turbulent correlation obtained from previous research, while the Colburn j-factor for the 3D-printed tube was also on average 44.6% higher than that of the traditional stainless steel tube. Comparing the same measurement station of different test tubes, it is also observed that the transition of the 3D-printed tube occurred earlier. For the transitional flow regime, the point where the Colburn j-factor (StPr0.67) gradient changes from a negative to positive gradient in the laminar flow region corresponds to the critical Reynolds number at the beginning of the transition. The results show that the critical Reynolds number of the traditional tube is approximately 2300, while the critical Reynolds number of the 3D-printed tube is approximately 2000. The friction factors were compared as a function of Reynolds number for different manufacturing techniques and boundary conditions in Fig. 8. What stands out in this figure are the big discrepancies between the 3D-printed tube and the traditional tube. For traditional tubes, the isothermal friction factors compared well with classical correlations, and the friction factors under heating condition was slightly lower than that under isothermal condition. The data trends in the transition region for isothermal and heating conditions were basically the same but with different magnitudes. For the 3D-printed tubes, the isothermal laminar friction factors were on average 24.7% higher than classical correlation when the Reynolds number was lower than the critical Reynolds number at around 1400. In the turbulent region, the experimental data of the 3D-printed tube was on average 127% higher than the corresponding value of the Colebrook (1939) equation for Reynolds numbers varying from 4000 to 10,000. This discrepancy could be attributed to the difference in relative roughness and surface characteristic between 3D-printed
+FIG. 8: Comparison of friction factors for different manufacturing techniques under different heat flux boundary conditions
+
+
+Journal of Enhanced Heat Transfer
+Chen et al.
+78
+tubes and traditional tubes. The trend of the friction factors of the 3D-printed tube under heating condition is similar with that of isothermal condition except for the transition region. The critical Reynolds number for the transition under heating conditions was delayed to around 2000, and the heated friction factors were on average 11% lower than the isothermal friction factors for the same Reynolds number. In the turbulent region, based on 24 experimental data points, the overall friction factors of the 3D-printed tube were on average 209% higher than that of the traditional tube. For both the traditional tube and the 3D-printed tube, the friction factors under heating condition were always slightly lower than the isothermal friction factors since the viscosity of the test fluid decreases when heated, resulting in a lower friction factor.
+4. PROPOSED EQUATIONS FOR THE TURBULENT 3D-PRINTED TUBE
+The previous discussions demonstrated the difference in heat transfer and pressure characteristics between traditional and 3D-printed tubes in the turbulent region. Stimpson et al. (2017) proposed a correlation for a 3D-printed channel. However, the correlation is for air flow inside a rectangular channel. Therefore, a new correlation was developed for the 3D-printed tube using the experimental data, and the equation is in the following form:
+Nu 0 02 1 03 0 2
+0 05 04
+. Re Pr ,
+..
+. .
+x
+Df
+i
+(1)
+where the friction factor correlation for the 3D-printed tube is:
+f = 0 01
+1 4
+. Re . (2)
+The non-dimensional parameters range for Eq. (1) are 4000 ≤ Re ≤ 10,000, 4.39 ≤ Pr ≤ 6.41,
+x Di
+< 100
+< 100. Equation (1) gives a representation of the experimental data to within ± 10%, and it is applicable to the 3D-printed tube using SLM method. In the development of the correlation, a total of 48 experimental data points were used. The absolute average deviation between the results predicted by the correlation and the experimental data is 4%. It should also be noted that Eq. (2) is based on the friction factor experimental data from this study. The Re range for Eq. (2) is 4000 ≤ Re ≤ 10,000. A total of 12 data points were used to develop the friction factor equation. All the data was predicted within ± 7% with an absolute average deviation of 5.2%. Figure 9 compares the existing turbulent heat transfer correlations (see Table 2) with the newly developed correlation for the 3D-printed tube. The maximum and average deviations for those existing correlations were 96.4% and 36.7%, respectively. For the new correlation, as indicated in Fig. 9, all the data was predicted with less than 10% deviation, and the average deviation is around 4%. Therefore, the accuracy improvement is significant.
+5. CONCLUSIONS
+In this study, an experimental setup was designed and verified for the measurements of heat transfer and pressure drop for traditional stainless steel tubes and 3D-printed tubes under isothermal and heating boundary condition. The following conclusions were drawn from the experimental results:
+
+
+Volume 30, Issue 4, 2023
+Heat Transfer and Pressure Drop Characteristics 79
+• The start of the transition region for the traditional tube and the 3D-printed tube were different. The 3D-printed tube has a smaller transition Reynolds number, and it is due to the larger relative roughness. • In the laminar region, the influence of different manufacturing technologies on the heat transfer is not obvious. However, for the transition and turbulent regions, the heat transfer and pressure drop for the 3D-printed tube increased in comparison to the traditional tube. The heat transfer enhancement for the 3D-printed tube is due to the surface characteristics of the SLM manufacturing method that causes rougher inner surface and larger relative roughness. These surface characteristics enhance fluid mixing, and therefore increase heat transfer. The same observation was made for the pressure drop results; these surface characteristics increase the friction factor significantly. • Based on the obtained experimental data, an empirical correlation was developed to predict the heat transfer coefficients and friction factors of 3D-printed tubes using the SLM manufacturing method in turbulent flow regime. In the development of the Nusselt number correlation, a total of 48 experimental data points were used. The absolute average deviation between the results predicted by the correlation and the experimental
+TABLE 2: Correlations for experimental data comparison
+Correlation
+Colburn (1933)
+Nu = 0 023 0 8
+1 3
+. Re Pr
+.
+Re > 10,000, 0.7 < Pr < 160
+Sieder and Tate (1936)
+Nu
+w
+0 027 0 8
+1 3
+0 14
+. Re Pr
+.
+.
+Re > 10,000, 0.7 < Pr < 16700, x
+Di ≥ 10
+Petukhov (1970)
+Nu
+f
+f
+8
+1 07 12 7 8 1
+2 3
+Re Pr
+. . Pr
+104 < Re < 5 × 106, 0.5 < Pr < 2000
+Norris (1971) Nu
+Nus s
+pr
+f
+f
+0 68 0 215
+. ( ).
+1 < Pr < 6, 0.021 < e
+D < 0.049
+Gnielinski (1976)
+Nu
+f
+f
+8 1000
+1 12 7 8 1
+05 2 3
+(Re ) Pr
+. Pr
+.
+3 × 103 < Re < 5 × 106, 0.5 < Pr < 2000
+Hata and Noda (2008)
+Nu x
+Di w
+0 02 0 85 0 4
+0 08 0 14
+. Re Pr
+..
+..
+3 × 103 < Re < 106, 3.6 < x
+Di < 33.3
+
+
+Journal of Enhanced Heat Transfer
+Chen et al.
+80
+FIG. 9: Comparison of new correlation and currently available turbulent heat transfer correlations at the x/Di = 25 and x/Di = 100: (A) comparison of new correlation and currently available turbulent heat transfer correlations at the x/Di = 25; (B) comparison of new correlation and currently available turbulent heat transfer correlations at the x/Di = 100
+
+
+Volume 30, Issue 4, 2023
+Heat Transfer and Pressure Drop Characteristics 81
+data was 4%. Twelve data points were used to develop the friction factor equation, and all the data were predicted with an absolute average deviation of 5.2%. • For the turbulent region, the Nusselt number for the 3D-printed tube increased by an average of 45% in comparison to the traditional tube, but the overall friction factors of the 3D-printed tube in the heating condition were on average 209% higher than that of traditional tube. Therefore, the SLM method still requires refinement such that smoother surface conditions can be obtained in the manufacturing process.
+ACKNOWLEDGMENT
+This research is supported by the Institute for the Development and Quality, Macau, China.
+REFERENCES
+Blasius, H., Das Aehnlichkeitsgesetz bei Reibungsvorgängen in Flüssigkeiten, in Mitteilungen über Forschungsarbeiten auf dem Gebiete des Ingenieurwesens, Berlin, Heidelberg: Springer-Verlag, pp. 1–41, 1913. Celata, G.P., Cumo, M., Guglielmi, M., and Zummo, G., Experimental Investigation of Hydraulic and Single-phase Heat Transfer in 0.130-mm Capillary Tube, Microscale Thermophys. Eng., vol. 6, no. 2, pp. 85–97, 2002. Celata, G.P., Heat Transfer and Fluid Flow in Microchannels, New York: Begell House, pp. 3–29, 2004. Choi, S.B., Barron, R.F., and Warrington, R.O., Fluid Flow and Heat Transfer in Microtubes, in Micromechanical Sensors, Actuators, and Systems, Presented at the Winter Annual Meeting of American Society of Mechanical Engineers (ASME), Atlanta, GA, pp. 123–134, 1991. Colburn, A.P., A Method for Correlating Forced Convection Heat Transfer Data and a Comparison with Fluid Friction, Trans. AIChE, pp. 174–210, 1933. Colebrook, C.F., Blench, T., Chatley, H., Essex, E.H., Finniecome J.R., Lacey G., Williamson J., and Macdonald, G.G., Correspondence. Turbulent Flow in Pipes, with Particular Reference to the Transition Region between the Smooth and Rough Pipe Laws (Includes Plates), J. Inst. Civ. Eng., vol. 11, pp. 393–422, 1939. Darcy, N., Recherches Experimentales Relatives au Mouvement de l’eau dans des Tuyaux, Mem. Savants Etrangers Acad. Sci. Inst. Fr., p. 141, 1858.
+Ghajar, A.J. and Kim, J., Calculation of Local Inside-Wall Convective Heat Transfer Parameters from Measurements of the Local Outside-Wall Temperatures along an Electrically Heated Circular Tube, in Heat Transfer Calculations, M. Kutz, Ed., New York: McGraw-Hill, pp. 23.23–23.27, 2006. Ghajar, A.J. and Tam, L.M., Heat Transfer Measurements and Correlations in the Transition Region for a Circular Tube with Three Different Inlet Configurations, Exp. Therm. Fluid Sci., vol. 8, pp. 79–90, 1994. Gnielinski, V., New Equations for Heat and Mass Transfer in the Turbulent Flow in Pipes and Channels, Int. Chem. Eng., vol. 16, pp. 359–368, 1976. Guo, Z., Heat Transfer Enhancement− A Brief Review of 2018 Literature, J. Enhanc. Heat Transf., vol. 26, no. 5, pp. 429–449, 2019. Hata, K. and Noda, N., Turbulent Heat Transfer for Heating of Water in a Short Vertical Tube, J. Power Energy Syst., vol. 2, no. 1, pp. 318–329, 2008. Kandlikar, S.G., Joshi, S., and Tian, S., Effect of Surface Roughness on Heat Transfer and Fluid Flow Characteristics at Low Reynolds Numbers in Small Diameter Tubes, Heat Transf. Eng., vol. 24, no. 3, pp. 4–16, 2003. Kline, S.J. and McClintock, F.A., Describing Uncertainty in Single Sample Experiments, Mech. Eng., pp. 3–8, 1953. Nikuradse, J., Laws of Flow in Rough Pipes, NACA Technical Memorandum 1292, Tech. Rep., 1933.
+
+
+Journal of Enhanced Heat Transfer
+Chen et al.
+82
+Norris, R.H., Some Simple Approximate Heat Transfer Correlations for Turbulent Flow in Ducts with Surface Roughness, in Augmentation of Convection Heat and Mass Transfer, ASME, 1971.
+Petukhov, B.S., Heat Transfer and Friction in Turbulent Pipe Flow with Variable Physical Properties, Adv. Heat Transf., vol. 6, pp. 503–564, 1970. Shah, R.K. and Sekulic, D.P., Fundamentals of Heat Exchanger Design, John Wiley & Sons, pp. 8–12, 2003.
+Sieder, E.N. and Tate, G.E., Heat Transfer and Pressure Drop of Liquids in Tubes, Ind. Eng. Chem., vol. 28, no. 12, pp. 1429–1435, 1936. Stimpson, C.K., Snyder, J.C., Thole, K.A., and Mongillo, D., Roughness Effects on Flow and Heat Transfer for Additively Manufactured Channels, J. Turbomach., vol. 138, no. 5, p. 051008, 2016. Stimpson, C.K., Snyder, J.C., Thole, K.A., and Mongillo, D., Scaling Roughness Effects on Pressure Loss and Heat Transfer of Additively Manufactured Channels, J. Turbomach., vol. 139, no. 2, p. 021003, 2017. Thompson, S.M., Aspin, Z.S., Shamsaei, N., Elwany, A., and Bian, L., Additive Manufacturing of Heat Exchangers: A Case Study on a Multi-layered Ti–6Al–4V Oscillating Heat Pipe, Addit. Manuf., vol. 8, pp. 163–174, 2015. Yu, D., Warrington, R., Barron., R., and Ameel, T., An Experimental and Theoretical Investigation of Fluid Flow and Heat Transfer in Microtubes, ASME/JSME Thermal Eng. Conf., vol. 1, pp. 523–530, 1995.

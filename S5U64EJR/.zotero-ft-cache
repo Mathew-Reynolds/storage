@@ -1,0 +1,199 @@
+Flow characteristics of water in microtubes
+Gh. Mohiuddin Mala, Dongqing Li *
+Mechanical Engineering Department, University of Alberta, Edmonton, Canada T6G 2G8
+Received 25 November 1997; accepted 12 August 1998
+Abstract
+Water Øow through microtubes with diameters ranging from 50 to 254 lm was investigated experimentally. Microtubes of fused silica (FS) and stainless steel (SS) were used. Pressure drop and Øow rates were measured to analyze the Øow characteristics. The experimental results indicate signiÆcant departure of Øow characteristics from the predictions of the conventional theory for microtubes with smaller diameters. For microtubes with large diameters, the experimental results are in rough agreement with the conventional theory. For lower Re, the required pressure drop is approximately the same as predicted by the Poiseuille Øow theory. But, as Re increases, there is a signiÆcant increase in pressure gradient compared to that predicted by the Poiseuille Øow theory. The friction factor therefore is higher than that given in the conventional theory. The results also indicate material dependence of the Øow behavior. For the same Øow rate and the same diameter, an FS microtube requires a higher pressure gradient than a stainless steel microtube. The measured high pressure gradient may be due to either an early transition from laminar Øow to turbulent Øow or the e ects of surface roughness of the microtubes. These phenomena are discussed in this paper. A roughness-viscosity model is proposed to interpret the experimental data. ” 1999 Elsevier Science Inc. All rights reserved.
+Keywords: Microchannel Øow; Early Øow transition; Surface roughness; Roughness-viscosity
+1. Introduction
+Over the years, signiÆcant attention has been given to liquid Øow in microchannels due to the development in microØuidic devices and systems. Components such as liquid cooled microchannel heat sinks, micro-pumps, micro-valves and actuators have been miniaturized, integrated and assembled forming various microØuidic devices and systems. The fundamental understanding of Øow characteristics such as velocity distribution and pressure loss is essential in design and process control of microØuidic devices. Peiyi and Little (1983) measured the friction factors for the Øow of gases in Æne channels, 130±200 lm wide. Their results showed di erent characteristics from that predicted by conventional theories of Øuid Øow. They attributed these di erences largely to surface roughness of the microchannels. Wu and Little (1983, 1984) measured friction and heat transfer of
+International Journal of Heat and Fluid Flow 20 (1999) 142±148
+Notation
+A coeÅcients in the roughness-viscosity function C friction constant, f Re C friction constant ratio, Eq. (10) D diameter of the tube, m E1; E2; E3 parameters in Eqs. (15) and (16) FS fused silica f friction factor k height of the roughness element, m l length of the tube, m P pressure at any point, N/m2 Q volume Øow rate of water through the tube, m3/s R radius of the microtube, m Re Reynolds number, ÖuavD=mÜ Rek Reynolds number based on the roughness ÖUk k=mÜ
+RVM roughness-viscosity model r radial coordinate, m SS stainless steel Uk velocity at the top of the roughness element, m/s u velocity component in Øow direction, m/s uav the average velocity, m/s x coordinate in the axial/Øow direction, m
+DP pressure gradient across the tube, N/m2 l dynamic viscosity of water, kg/m s x relaxation parameter m kinematic viscosity of water, m2/s q density of water, kg/m3
+Subscripts
+exp experimental value th theoretical value 1 shorter length 2 longer length
+* Corresponding author. E-mail: dingqing.li@ualberta.ca.
+0142-727X/99/$ ± see front matter ” 1999 Elsevier Science Inc. All rights reserved. PII: S 0 1 4 2 - 7 2 7 X ( 9 8 ) 1 0 0 4 3 - 7
+
+
+gases in microchannels. They observed di erent experimental results of convective heat transfer from that obtained in conventional macroscale channels. They found that friction factors were larger than those obtained from the traditional Moody charts and indicated that the transition from laminar to turbulent Øow occurred much earlier at Reynolds number of about 400±900 for various tested conÆgurations. Tuckerman (1984) conducted one of the initial investigations of liquid Øow and heat transfer characteristics in microchannels. He observed that the Øow rates approximately followed Poiseuille Øow predictions. Pfahler et al. (1990) conducted an experimental investigation of Øuid Øow in microchannels. They found that for large Øow channels the experimental observations were in rough agreement with the conventional theory whereas for small channels the deviations increased. Later, Pfahler et al. (1991) presented measurements of friction factor or apparent viscosity of isopropyl alcohol and silicon oil Øowing in microchannels. They observed that for larger channels the experimental results indicated a very good agreement with the predictions of classical theory. However, as the channel size decreased, the apparent viscosity began to decrease from the theoretical value for a given pressure drop, though distinctly di erent behaviors were observed between the polar isopropyl alcohol and non-polar silicon oil. Choi et al. (1991) investigated the friction factor, convective heat transfer coeÅcient and the e ects of inner wall surface roughness for laminar and turbulent Øow in microtubes. Their experimental results were signiÆcantly di erent from the correlations in the conventional theories. Wang and Peng (1994) experimentally studied the forced convention of liquid in microchannels, 0.2±0.8 mm wide and 0.7 mm deep. They found that the transition from laminar to turbulent Øow occurred when Re < 800, and that the fully developed turbulent convection was initiated in the Reynolds number range of 1000±1500. Peng et al. (1994a, b) reported experimental investigation of forced Øow convection of water in rectangular microchannels with hydraulic diameters ranging from 0.1333 to 0.367 mm and aspect ratios from 0.333 to 1. Their results indicated that the upper limits of the laminar Øow and the beginning of the fully developed turbulent heat transfer regimes occurred at Reynolds number ranges of 200± 700 and 400±1500, respectively. The transitional Reynolds number diminishes and the transition range becomes smaller as the microchannel dimensions decrease. They found that the geometrical parameter such as height to width ratio also a ects the Øow characteristics in microchannels. As the Øuid Øow characteristics in microchannels are quite di erent from those predicted by using the relationships established for macro-channels, it is therefore necessary to un
+dertake fundamental investigations to understand the di erence in these characteristics. The objective of this work is to investigate experimentally the characteristics of water Øow in microtubes and attempt to explain the obtained results.
+2. Experimental apparatus, procedure and results
+The experimental apparatus is shown in Fig. 1. The apparatus consists of a precision pump, a microÆlter, a Øow meter, a pressure transducer, tube inlet and outlet assemblies and a PC data acquisition system. The pump used is a high precision pump (Ruska Instruments) having a Øow rate range of 2.5± 560 ã 0.02 cc/h. A 0.1-micron microÆlter is placed between the pump and the microtube inlet to eliminate any particles and bubbles. Deionized water at room temperature is used as the working Øuid. Two types of microtubes were used in this study, stainless steel (SS) (Small Parts) and fused silica (FS) tubes (Chromatographic Specialties). The pressure gauge and the pressure transducer measure the pressure inside the pump cylinder and the pressure across the microtube, respectively. During a run of the measurements, the pump is set to maintain a desired constant Øow rate and the required pressure drop is measured. The Øow rates were measured by three di erent ways: (a) read directly from the pump scale, (b) measured by the Øow sensor, and (c) measured by collecting the liquid from the tube in a speciÆed time interval. The di erence between the three Øow rates was found less than ã1.0%. For every measurement, pressure, time and Øow-rate were measured and the data was acquired automatically by the data acquisition system. For every measurement, the Øow was considered to have reached a steady state when the pressure drop value did not change any further. For smaller Øow rates, it took longer time to reach a steady state compared to higher Øow rates. At a steady state, the Øow measurements were conducted for approximately 30 min. The data reported in this paper are for steady states. Each measurement was repeated at least three times. The internal diameters of the microtubes used in this study range from 50 to 254 lm, and the details are given in Table 1. The experiments were performed with various Øow rates, which yield Re up to 2500. In each test, the Øow rate was kept constant and the pressure di erence required to force the liquid through the microtube was measured. From conventional theory the pressure drop-volume Øow rate correlation is given by the Poiseuille Øow equation,
+Q à pR4
+8ll DP : Ö1Ü
+Fig. 1. Schematic of experimental setup for Øow in microtubes.
+G. Mohiuddin Mala, D. Li / Int. J. Heat and Fluid Flow 20 (1999) 142±148 143
+
+
+Eq. (1) is based on the assumption that the inlet and outlet losses are negligible. Therefore, to make an accurate comparison with the Poiseuille Øow theory, the experimental pressure drop results should also be without any inlet and outlet losses. To achieve this, for every tube diameter experiments were performed with two di erent tube lengths. The inlet and outlet losses are the same for both lengths of the tubes as both have one end open to the atmosphere and the other is placed in the same inlet assembly. For the shorter tube, l à l1; DP à DP1, and for the longer tube, l à l2; DP à DP2. For two microtubes of the same material and diameter, the di erence DP à ÖDP2 ˇ DP1Ü can be obtained for the same Øow rate. This DP should be the pressure drop required to force the liquid through a microtube of length Dl à l2 ˇ l1 with no inlet and outlet losses. In Fig. 2, the experimentally measured value of the pressure gradient for each tube is plotted as a function of the Reynolds number for both SS and FS microtubes. The Reynolds number is related to the volumetric Øow rate by
+Re à 4
+p
+Q
+Dm : Ö2Ü
+For graphical clarity, the error bars are shown only for some data points. The experimental results are also compared to the predictions of Poiseuille Øow, Eq. (1), shown by dotted lines in Fig. 2. An uncertainty analysis of the experimental results was performed. The uncertainties in the microtube diameter, differential pressure and Øow rate measurements were found to be less than 2%. The resulting maximum uncertainties for other parameters are: average velocity, 4:5%, Reynolds number, 3%, and friction factor, 9:2%. The repeatability test showed that the maximum standard deviation was 2:5% for the measured pressure drop. From the conventional theory, the Øow in a circular pipe driven by a pressure gradient is called the Hagen±Poiseuille Øow. Under ``usual'' conditions, the critical Reynolds number based on the tube diameter is Recrit à 2300, above which the Øow is turbulent and below which the Øow is laminar. However, this critical Reynolds number is inØuenced by external disturbances. If the Øow is kept undisturbed, the Øow can remain laminar for very large values of Reynolds number up to 50,000, Hinze (1975). If Ænite amplitude disturbances are introduced, turbulence can occur for Re as low as about 2000, as reported by Schlichting (1968). Below this value, the Øow re
+mains laminar even in the presence of very strong disturbances. Therefore, one would expect that, for laminar Øow, i.e. Re < 2000, the experimental pressure drop-volume Øow rate relationship be in a reasonable agreement with Eq. (1). As shown in Fig. 2, the theoretical curves as predicted by Eq. (1) are linear as expected, and fall below the experimental curves. For small Re (which implies small volumetric Øow rate) the pressure gradient required is approximately equal to that predicted by Eq. (1). As the Re increases, the measured pressure gradient is signiÆcantly higher than that predicted by Eq. (1). The di erence increases as the diameter of the tube decreases. The di erence in pressure gradient is slightly larger for the FS tubes than the SS tubes. In addition, for the same Re, the pressure gradient required for the microtubes with smaller diameters is signiÆcantly higher than that required for microtubes of larger diameters. Clearly, for both the SS and FS microtubes, the DP =Dl Re relationship deviates from the conventional theory, and the deviation depends on the diameter of the microtubes. However, from Fig. 2, the di erence between the measured DP =Dl Re relationships and the predictions of the conventional theory is less signiÆcant when the microtube diameter is above 150 lm. Then the question arises, why, although the Øow seems to be in the laminar range, there is such a di erence in the pressure drops between the experimental results and Eq. (1). As per our understanding, there are at least two possible explanations. Either, the Øow is not laminar i.e., there is an early transition from laminar to turbulent Øow, or the pressure di erence is due to the surface roughness e ects on microtube Øow. In the case that the Øow is not laminar, the Poiseuille Flow Equation can not be used, instead the full Navier±Stokes Equations should be used. If the di erence is due to the surface roughness e ects, then an appropriate correction should be applied to the momentum equation, which would incorporate
+Fig. 2. Experimentally measured pressure gradient DP =Dl vs. Re for (a) SS and (b) FS microtubes, and comparison with the classical theory, Eq. (1).
+Table 1 Dimensions of SS and FS microtubes
+SS Diameter D ã 2 lm
+Length of the tubes (cm) ã0.005
+Shorter l1 Longer l2 Di erence Dl
+63.50 3.0 5.50 2.50 101.6 4.0 6.10 2.10 130.0 4.2 8.15 3.95 152.0 4.8 8.00 3.20 203.0 3.5 6.10 2.60 254.0 5.0 8.80 3.80
+FS 50.0 2.85 5.30 2.45 76.0 3.20 5.90 2.70 80.0 3.7 6.30 2.60 101.0 3.30 6.20 2.90 150.0 3.40 6.45 3.05 205.0 3.20 6.10 2.90 250.0 3.10 6.20 3.10
+Mean surface roughness of both the SS and FS microtubes ã1.75 lm
+144 G. Mohiuddin Mala, D. Li / Int. J. Heat and Fluid Flow 20 (1999) 142±148
+
+
+the surface roughness e ects. These two possible explanations are discussed in detail in the following sections.
+3. Early transition to turbulence
+From conventional theory, we know that when the Reynolds number increases to certain values, the internal Øow undergoes a remarkable transition from laminar to turbulent regime. The origin of turbulence and the accompanying transition from laminar to turbulent Øow is of fundamental importance to the science of Øuid mechanics. In a Øow at low Reynolds number through a straight pipe of uniform crosssection and smooth walls, every Øuid particle moves with a uniform velocity along a straight path. Viscous forces slow the particles near the wall in relation to those in the center core. The Øow is well ordered and particles travel along neighboring layers (laminar Øow). However, this orderly pattern of Øow ceases to exist at higher Reynolds number and strong mixing of the particles from di erent layers takes place. The Øuctuation of streamlines at a Æxed point causes an exchange of momentum in transverse direction. As a consequence, the velocity distribution over the cross section is considerably more uniform than in laminar Øow. The most essential feature of the transition from laminar to turbulent Øow is a noticeable change in the pattern of Øow resistance. In laminar Øow, the longitudinal pressure gradient, which maintains the motion, is proportional to the Ærst power of average velocity, as can be seen from Eq. (1). By contrast, in turbulent Øow this pressure gradient becomes nearly proportional to the square of the average velocity of Øow, Schlichting (1968). This increase in the resistance to Øow results from the turbulent mixing motion. The pressure gradient ÖDP =DlÜ required to force liquid through a straight pipe of uniform cross-section generally has a relationship with the volume Øow rate, ÖDP =DlÜ / Qn, where Q is related to Re by Eq. (2). In laminar region, n à 1; in transitional Øow region 1 < n < 2 and in the turbulent Øow region n P 2, Schlichting (1968). However, the experimental results obtained in this study for Øow in microtubes in the conventional laminar Øow region, i.e., Re < 2300, exhibit a nonlinear relationship between ÖDP =DlÜ and Q. It is observed form Fig. 2, for both the SS and FS microtubes, that ÖDP =DlÜ Re exhibits three distinct regions. For values of Re 6 300±500, depending on the diameter of the microtube, the relation ÖDP =DlÜ Q is approximately linear. For 300± 500 6 Re 6 1000±1500 the experimental results indicate that the value of the exponential n is in the range 1 < n < 2. For higher values of Re P 1000±1500, the measured ÖDP =Dl QÜ relation yields n P 2. As an example, these three distinct regions are shown separately in Fig. 3, for a 130 lm SS microtube. Fig. 3(a) shows that in a small Re region there is a rough agreement between the experimental results and that predicted by the conventional laminar Øow theory. A relation as given below correlates the experimental data for the range of Re < 650,
+DP =Dl à 121:77 Re1:072: Ö3Ü
+Whereas the theoretical prediction given by Eq. (1) can be rewritten as
+DP =Dl à 118:91 Re: Ö4Ü
+owever, with an increase in Re the Øow characteristics in the microtube seems to change from laminar to transitional Øow, as shown in Fig. 3(b). The following relation correlates the experimental data in the range of 650 < Re < 1500,
+DP =Dl à 19:25 Re1:3204: Ö5Ü
+The exponent in the above relation increases to 1.3204 from 1.072. This transitional Øow pattern starts from Re 500 up to Re 1500. Re > 1500, the Øow seems to be a fully developed turbulent Øow as shown in Fig. 3(c), and the experimental data can be correlated by
+DP =Dl à 0:1341 Re2:0167: Ö6Ü
+The exponent changes from less than 2 to greater than 2. For all microtubes similar relations to Eqs. (3)±(6) can be obtained, except that the range of Re values varies somewhat, depending on the diameter and the material of the microtube. Overall, from this analysis, it may be concluded that for microtubes there is an early transition from laminar to turbulent Øow mode at Re > 300±900, and the Øow changes to fully developed turbulent Øow at Re P 1000±1500.
+4. Friction characteristics
+For a constant volume Øow rate Q, the pressure gradient DP =Dl required to force the liquid through the microtube was measured. As discussed earlier the measured value of the DP =Dl is greater than that predicted by Eq. (1). The coeÅcient of Øow resistance f , also known as friction factor, for a pipe of a length l and a diameter D is related to the pressure gradient by the Darcy±Weisbach Equation as
+f à DP
+l
+2D qu2av
+: Ö7Ü
+For fully developed laminar Øow in a macroscale pipe, Eq. (7) can be shown to be
+f à 64
+Re : Ö8Ü
+Fig. 3. Comparison of the experimentally obtained correlations of DP =Dl vs. Re in three regions for a 130 lm. SS microtube with the classical theory, Eq. (1).
+G. Mohiuddin Mala, D. Li / Int. J. Heat and Fluid Flow 20 (1999) 142±148 145
+
+
+Using the measured DP =Dl and Q data, we can determine the friction factor, f exp , in the experiment by using Eq. (7). The variation of friction factor, f exp , with the Re, for some SS and FS microtubes is shown in Fig. 4. The pattern of f exp vs. Re for the other microtubes is similar. As seen from the Fig. 4, these curves exhibit three distinct regions. For small Re the friction factor decreases linearly with Re on the semi-log plots. When the Re becomes large, i.e. Re P 1500, the slope of the curve decreases and approaches to zero. Between these two regions, the friction factor exhibits transitional characteristics. The regions are arbitarily marked as I, II and III. In region, I, there is a rough agreement between classical theory and experimental results, for Re up to about 500. Therefore, the Region I may be considered as the laminar Øow region. As Re increases, the deviation from the theoretical prediction increases as can be seen in region II for the Re range of approximately 500±1500. In region, III, the di erence between the theoretical and the experimental data is very large. However, as can be seen from Fig. 4, in this region the experimental data more or less follows the Blasius Equation, Schlichting (1968), given as
+fBlasius à 0:3164 Reˇ0:25: Ö9Ü
+The Blasius Equation gives the friction factor for turbulent Øow in smooth pipes for Re 6 105. Thus, Blasius Equation can be used to determine the friction factor in microtubes for Re P 1500 with reasonable accuracy. Such friction characteristics have also been observed by Peng et al. (1994b). From the conventional theory we know that the product of the friction factor and the Reynolds number, f Re à C, has a constant value of C à 64, for laminar Øow (Re < 2300) in pipes. However, for Øow in microtubes f Re is not equal to a constant. A friction constant ratio C is introduced as
+C à f exp Re
+fthRe à f exp
+fth
+: Ö10Ü
+As can be seen from Fig. 5, C is always greater than 1. The value of C changes as Re increases. Tuckerman (1984) also observed such a dependence of friction constant on Reynolds number.
+5. E ects of surface roughness
+The presence of surface roughness a ects the laminar velocity proÆle and decreases the transitional Reynolds number. This has been shown by a number of experiments and a comprehensive review can be found elsewhere (Merkle et al., 1974; Tani, 1969). In the present work, based on Merkle's modiÆed viscosity model the e ects of the surface roughness on laminar Øow in microtubes are considered in terms of a roughness-viscosity function. Generally, the roughness increases the momentum transfer in the boundary layer near the wall. This additional momentum transfer can be accounted for by introducing a roughness-viscosity lR in a manner similar to
+the eddy-viscosity concept in the turbulent Øow model. Apparently, the roughness-viscosity lR should have a higher
+value near the wall and gradually diminish towards the center of the channel. The roughness-viscosity lR should also be
+proportional to Re. The ratio of the roughness-viscosity to the Øuid viscosity is proposed to take the following form,
+lR
+l à A Rek
+r
+k 1 ˇ exp ˇ Rek
+Re
+r k
+2
+: Ö11Ü
+According to Merkle et al. (1974), the velocity at the top of the roughness element is given by
+Uk à ou
+or ràR
+k: Ö12Ü
+Then the roughness Reynolds number is deÆned as (Merkle et al., 1974):
+Rek à Ukk
+m à oU
+or ràR
+k2
+m : Ö13Ü
+With Eqs. (12) and (13) all the parameters except for the coeÅcient A in the roughness-viscosity function, Eq. (11), can be determined from the Øow Æeld, dimensions of the channel and the surface roughness. The coeÅcient A has to be determined by using the experimental data. By introducing the roughnessviscosity in the momentum equation in a manner similar to the eddy viscosity in the turbulent Øow, the momentum equation for laminar Øow through a cylindrical channel becomes:
+Fig. 4. Friction factor, f exp vs. Re for some SS and FS microtubes and comparison with the classical theory, Eqs. (8) and (9).
+Fig. 5. Friction constant ratio C (Eq. (10)) vs. Re for some SS and FS microtubes.
+146 G. Mohiuddin Mala, D. Li / Int. J. Heat and Fluid Flow 20 (1999) 142±148
+
+
+dP
+dx à 1
+r
+o
+or l á lR
+Ö Ür ou
+or : Ö14Ü
+Dividing both sides of Eq. (14) by l and using the viscosity ratio Eq. (11), we obtain
+1 l
+dP
+dx à 1
+r
+o
+or 1 á A Rek
+r
+k 1 ˇ exp ˇ Rek
+Re
+r k
+2!
+r ou
+or
+!
+:
+Ö15Ü Eq. (15) can be further written as
+E3ÖrÜ à E1ÖrÜ ou
+or á E2ÖrÜ o2u
+or2 ; Ö16Ü
+where
+E3ÖrÜ à r
+l
+dP
+dx ;
+E1ÖrÜ à 2A Rek
+r
+k 1 ˇ exp ˇ Rek
+Re
+r k
+á 1 ˇ exp ˇ Rek
+Re
+r
+k á Rek
+Re
+r
+k exp ˇ Rek
+Re
+r
+k á 1;
+E2ÖrÜ à r 1 á A Rek
+r
+k 1 ˇ exp ˇ Rek
+Re
+r k
+2! : Ö17Ü
+Eq. (16) is the modiÆed momentum equation that accounts for the e ects of surface roughness in a laminar Øow. The equation is a second-order, one-dimensional nonlinear di erential equation and cannot be solved analytically. Therefore, a Ænite di erence solution is sought with the following boundary conditions:
+At r à 0; ou
+or à 0; and at r à R; u à 0 Ö18Ü
+The derivatives are written in central di erence and are substituted back in Eq. (16). The resulting system of equations is solved by using the successive overrelaxation scheme, which is given as
+ujá1
+i à uj
+i á x uj
+i á ujˇ1
+i ; Ö19Ü
+where i is the computational index and j the iteration index. If the roughness height is zero then the solution of Eq. (16) should reduce to the conventional Poiseuille Øow solution. This conditions is fulÆlled as can be seen from Eq. (17). For k à 0, the roughness Reynolds number is zero, which yields E1ÖrÜ à 1, and E2ÖrÜ à r; thus Eq. (16) reduces to the conventional equation, for which the velocity distribution is given by
+u à DP
+4lL R2 ˇ r2
+ˇ : Ö20Ü
+Assuming an initial value of the coeÅcient A, Eq. (16) can be numerically solved to obtain the velocity distribution in the microtubes by using the measured pressure gradient DP =Dl for dP =dx. Once the velocity proÆle is known, the volume Øow rate can be calculated. Since the experimentally measured volume Øow rate Qexp and the pressure gradient ÖdP =dxÜexp are known,
+the value of A is adjusted until the percentage di erence between the calculated volume Øow rate and the measured volume Øow rate is smaller than ã2%. Physically, the e ects of the surface roughness depend on the shape and the distribution of the roughness elements. For the microtubes used in this work, the mean roughness height of ã1.75 lm for each tube is provided by the manufacturers, but the shape and the distribution of the roughness elements are not known. As expected, the A value varies from tube to tube and ranges from 0.01 to 1 for all
+the microtubes used in this work. However, an empirical relationship was found as follows:
+A à 0:1306 R
+k
+0:3693
+exp Re 6 10ˇ5 R
+k ˇ 0:0029 : Ö21Ü
+With this correlation, the roughness-viscosity function given by Eq. (11) can be computed. As mentioned earlier, the roughness-viscosity is higher near the wall and approaches to zero in the center of the channel. Fig. 6 shows the roughnessviscosity ratio vs. the non-dimensional radius for some microtubes at Re à 950.
+Fig. 6. Variation of roughness-viscosity ratio with non-dimensional radius for some SS and FS microtubes at Re à 950.
+Fig. 7. Comparison of volume Øow rates predicted by the roughness viscosity model (RVM) with the measured Øow rates for some SS and FS microtubes and comparison with Eq. (1).
+G. Mohiuddin Mala, D. Li / Int. J. Heat and Fluid Flow 20 (1999) 142±148 147
+
+
+Fig. 7 shows the comparison of the volume Øow rates predicted by the roughness viscosity model (Eqs. (11), (14) and (21) with the measured volume Øow rates. As can be seen clearly from Fig. 7, the curves predicted by the model and the experimental curves are in an excellent agreement with each other. This implies that the roughness-viscosity model proposed in the present work may be used to interpret the Øow characteristics in microtubes. For the purpose of comparison, Fig. 7 also shows the volume Øow rates predicted by using the Poiseuille Øow equation and the measured pressured gradient. The velocity distribution in the microtubes obtained by using the roughness-viscosity model (RVM) and the experimental pressure gradient is shown in Fig. 8. The velocity is plotted as the ratio of the local velocity to the average velocity with the non-dimensional radius of the microtubes, for different diameters and Reynold numbers. As seen from Fig. 8, the Poiseuille Øow and the RVM velocity proÆles are parabolic. However, the velocity predicted by RVM is smaller than that predicted by the Poiseuille Øow equation. As shown in Fig. 7, the RVM predicts the volumetric Øow rates well. If the higher Øow resistance is due to the surface roughness, one may expect that the velocity distribution resemble the RVM velocity proÆle in Fig. 8.
+6. Summary
+Flow characteristics of water Øowing through cylindrical microtubes of stainless steel and fused silica were studied. The diameter of the microtubes ranges from 50 to 254 lm. It was observed that for a Æxed volume Øow rate, the pressure gradient required to force the liquid through the microtube is higher than that predicted by the conventional theory. For small Øow rates, i.e. small Reynolds numbers, the conventional
+theory and the experimental data are in a rough agreement. However, as the Reynolds number increases a signiÆcant deviation from the conventional theory was observed. The deviation increases as the diameter of the microtubes decreases. The Øow behaviors also depend on the material of the microtubes. The friction factor and the friction constant are higher than that predicted by the conventional theory. The conventional friction constant value was found to depend on Reynolds number. Two possible reasons for this higher Øow resistance are discussed. According to the measured ÖDP =DlÜ Q relationships and the conventional Øuid mechanics theory, it seems that there is an early transition from laminar to turbulent Øow. However, these phenomena may also be explained as the surface roughness e ects by using a surface RVM proposed in this work.
+Acknowledgements
+The authors wish to acknowledge the support of a University of Alberta Dissertation Fellowship (Gh. Mohiuddin Mala) and Research Grant of the Natural Science and Engineering Research Council of Canada (D. Li).
+References
+Choi, S.B., Baron, R.R., Warrington, R.O., 1991. Fluid Øow and heat transfer in microtubes. ASME DSC 40, 89±93. Hinze, J.O., 1975. Turbulence. McGraw-Hill, New York, p. 707. Merkle, C.L., Kubota, T., Ko, D.R.S., 1974. An analytical study of the e ects of surface roughness on boundary-layer transition. AF OÅce of Scien. Res. Space and Missile Sys. Org., AD/A004786. Peiyi, W., Little, W.A., 1983. Measurement of friction factors for the Øow of gases in very Æne channels used for microminiature Joule± Thomson refrigerators. Cryogenics 23, 273±277. Peng, X.F. Peterson, G.P., Wang, B.X., 1994a. Heat transfer characteristics of water Øowing through microchannels. Exp. Heat Transfer 7, 265±283. Peng, X.F. Peterson, G.P., Wang, B.X., 1994b. Frictional Øow characteristics of water Øowing through microchannels. Exp. Heat Transfer 7, 249±264. Pfahler, J., Harley, J., Bau, H.H., Zemel, J., 1990. Liquid and gas transport in small channels. AMSE DSC 19, 149±157. Pfahler, J., Harley, J., Bau, H., Zemel, J., 1991. Gas and liquid Øow in small channels. ASME DSC 32, 49±60. Schlichting, H., 1968. Boundary Layer Theory. McGraw-Hill, New York, p. 433. Tani, I., 1969. Boundary-Layer Transition. Annual Reviews of Fluid Mechanics, vol. I, Annual Reviews. Tioga, Palo Alto, CA. Tuckerman, D.B., 1984. Heat transfer microstructures for integrated circuits. Ph.D. Thesis, Dept. of Electrical Engineering, Stanford University, USA. Wang, B.W., Peng, X.F., 1994. Experimental investigation on forced Øow convection of liquid Øow through microchannels. Int. J. Heat Mass Transfer 37 (Suppl. 1), 73±82. Wu, P.Y., Little, W.A., 1983. Measurement of friction factor for the Øow of gases in very Æne channels used for microminiature Joule± Thompson refrigerators. Cryogenics 23, 273±277. Wu, P.Y., Little, W.A., 1984. Measurement of the heat transfer characteristics of gas Øow in Æne channel heat exchanger used for microminiature refrigerators. Cyrogenics 24, 415±423.
+Fig. 8. Comparison of the velocity proÆles predicted by the roughness viscosity model and the Poiseuille Øow equation for some FS and SS microtubes.
+148 G. Mohiuddin Mala, D. Li / Int. J. Heat and Fluid Flow 20 (1999) 142±148

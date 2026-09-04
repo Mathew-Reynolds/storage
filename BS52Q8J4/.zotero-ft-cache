@@ -1,0 +1,1121 @@
+• REPORT DOCUMENTATION PAGE Form Approved
+OMB No. 0704-0188
+Public repC:l'Jlg burden for this collection of information is estimated to average 1 hour per respons:'f including th e time for reviewi ng instructions, searchi ng exi sting data sources. gathering and maintaining th e data needed, an~ completing and reviewing this collection of information. Send comments regarding this burd en estimate or any other aspect of this collection of information. including suggestions for reducing this burden to Department of Defense. Washington Headquarters Services. Directorate for Information Operations and Reports (0704-0188), 1215 Jefferson Davis Highway, Suite 1204, Arl ington. VA 222024302. Respondents should be aware that notwithstanding any other provision of law, no person shall be subject to any penalty for fa iling to comply with a collection of information if it does not displ ay a curr~ ntl y valid OMB control number. PLEASE DO NOT RETURN YOU R FORM TO THE ABOVE ADDRESS.
+1. REPORT DATE (00-MM-YYYY) I 2. REPORT TYPE 3. DATES COVERED (From- To)
+29 - 02 - 2016 Final Report 01 - 08 - 2013 30 - 09 - 2014 4. TITLE AN D SUBTI TLE Sa. CONTRAC T NUMBER
+Utiliz a ti o n o f Additive Man ufacturi ng f o r Sb. GRANT NUMBER Aer ospace Hea t Exch angers N00014 - 14 - l - 0205
+Sc. PROGRAM ELEMENT NUMBER
+6. AUTHOR(S) Sd . PROJECT NUMBER 21531
+Se. TASK NUMBER
+Z. Gobetz, A. Rowen, C. D ickman, K. Meinert, and R. Martukanitz 01
+Sf. WORK UNIT NUM BER 4400
+7. PERFORMI NG ORGANIZATION NAME(S) AND ADDRESS(ES) 8. PERFORMING ORGANIZATI ON REPORT NUMBER
+Applied Research Laboratory P . 0 . Box 30 State College , PA 16804
+9. SPONSORING I MONITORING AGENCY NAME(S) AND ADDRESS (ES) 10. SPONSOR/MONITOR' S ACRONYM(S) Office of Naval Research ONR 875 North Randolph Street
+Arlington , VA 22203 - 1995 11. SPONSOR/MONITOR' S REPORT NU M BER (S)
+12. DISTRIBUTION I AVAILABILITY STATEMENT
+unlimited
+13. SUPPLEMENTARY NOTES n/a
+14. ABSTRACT
+Additive manufacturing is rapidly being explored as a means to achieve new design paradigms while enabling an effective means for production . A particular field of interest is heat exchangers . Through additive manufacturing , thi s family of components can be produced more directly as opposed to the traditional manufacturing and assembly techniques used to create heat exchangers . Based on this , research was conducted at the Applied Research Laboratory and the Center for Innovative Materials Processing through Direct Digital Deposition at The Pennsylvania State University to determine the viability of additive manufacturing for producin9 aerospace heat exchangers for naval air platforms . This report considers various heat exc::,.anger types and designs , designs that may be applicable to additive manufacturing , conceptualization of a design for a liquid- gas heat exchanger that may be produced using additive manufacturing techniques , a manufactur ing demonstration of such a design , and the evaluation of the heat dissipation characterist i cs of the notional heat exchanger .
+1S. SUBJECli TERMS
+Additive manu facturing , sector survey , process survey , technical demonstration , aerospace heat exchangers
+16. SECURITY CLASSIFICATION OF : 17. LIMITATION OF ABSTRACT
+a. REPORT b. ABSTRACT c. THIS PAGE UNCLASSIFIED UNCLASSIFIED UNCLASSIFIED UNCLASSIFIED
+18. NUMBER OF PAGES
+51
+19a. NAME OF RESPONSIBLE PERSON Richard Martukanitz
+19b. TELEPHONE NUMBER (include ar~a code)
+814 - 863 - 7282
+Standard Form 298 (Rev. 8-98)
+Prescribed by ANSI Std . Z39.18
+
+
+..
+Utilization of Additive Manufacturing for
+Aerospace Heat Exchangers
+Research Conducted for the Office of Naval Research Under the
+Enabling Additive Manufacturing Technologies for
+Industry Insertion Project
+Research Conducted by:
+Z. Gobetz, A. Rowen, C. Dickman, K. Meinert, and R. Martukanitz
+Applied Research Laboratory and the
+Center for Innovative Materials Processing through
+Direct Digital Deposition
+Pennsylvania State University
+P.O. Box 30, State College, PA 16801
+February 29, 2016
+
+
+Table of Contents
+Table of Contents .... .. ...... .... .... ..... ..... .. ........ ... ....... .............. .... .. .............. ... .......... .. ... .. .. .. ........ ... . i
+Abstract ............ .. ........ ... .. .. ... .............................................. ......... ..... ... ..... ... .... .... ..... ... ... ....... .. ... ii
+1.0 Introduction ........................................ .. ................................. .... ......... ... .............. .... ..... .. .. ..... 1
+1.1 Problem Statement. ...................... ............. .. .. .... ....... .... ....... .... .. ....................................... . 1
+1.2 Objective ................... .. ... .. .................... .......... ...................... ..... ............... ... .. ... .... ... .. ....... .2
+2.0 Review .... .. .... .................. .... .. ............ ..... .... ...... ... ... ................ .... .......... ....... ....... ...... ...... .... ... 4
+2.1 Aerospace Heat Exchanger Discussion .... .... ...... .. .. ... ... ... .... ...... ...................... ... ... ... ... ... ... 4
+2.2 Additive Manufacturing Technology .. ..... ....... .. ...... ... .... ....... .... ....... .. ............. ... .. ... ..... .... .... 8
+2.3 Existing Capabilities of Heat Exchangers .. ..... ... ...... .... ......... .. .................... ........ ...... ... .... 10
+2.4 Existing Capabilities of Additive Manufacturing ...... ................ ...... ................................ .. . 13
+2.5 Existing Limitations of Additive Manufacturing and Heat Exchangers ...... .......... .. .. .......... 13
+2.6 Equipment Capability ............................... .................... .. .. ......... .... .. .... .... ....... .. ............... 15
+3.0 Gaps in Technology ..... .. ............... .. ......... .................... .... ........... ............. ............ .. ............. 18
+4.0 Identification of Companies .............................................. .. .... ............ .......... ...... ................ .21
+5.0 Design Concept .................... .. .......... ...... .. ... ..... ... ...................... ......................................... 25
+6.0 Design and Additive Manufacturing of Notional Heat Exchanger........ ...... ...... .. .. ....... .... .. .... 31
+7.0 Testing of Notional Heat Exchanger............................................................. .. ...... ............. ..36
+7.1 Testing Setup ....... .... .... ............................................................... .............. ...... ... ... .... .. ... .36
+7.2 Testing Results .... .. ................................ .................................... .... .. .... ..... ...... .... ... ...... ... 39
+8.0 Conclusion .... ... ... ... .................... ....... ..................................... .... ............ ... ... ..... .. ... .... ........ .46
+9.0 Bibliography ....................... ............................................................ ......................... .. ........ ..48
+
+
+~~ I II
+Utilization of Additive Manufacturing for
+Aerospace Heat Exchangers
+Z. Gobetz, A. Rowen, S. Heilferty, C. Dickman , and R. Martukanitz
+Applied Research Laboratory and the
+Center for Innovative Materials Processing through
+Direct Digital Deposition
+Pennsylvania State University
+P.O. Box 30, State College, PA 16801
+Abstract
+Additive manufacturing is rapidly being explored as a means to achieve new design
+paradigms while enabling an effective means for production. A particular field of
+interest is heat exchangers. Through additive manufacturing, this family of components
+can be produced more directly as opposed to the traditional manufacturing and
+assembly techniques used to create heat exchangers. Based on this, research was
+conducted at the Applied Research Laboratory and the Center for Innovative Materials
+Processing through Direct Digital Deposition at The Pennsylvania State University to
+determine the viability of additive manufacturing for producing aerospace heat
+exchangers for naval air platforms. This report considers various heat exchanger types
+and designs, designs that may be applicable to additive manufacturing ,
+conceptualization of a design for a liquid-gas heat exchanger that may be produced
+using additive manufacturing techniques, a manufacturing demonstration of such a
+design, and the evaluation of the heat dissipation characteristics of the notional heat
+exchanger.
+ii
+
+
+Utilization of Additive Manufacturing for
+Aerospace Heat Exchangers
+Z. Gobetz, A. Rowen, S. Heilferty, C. Dickman , and R. Martukanitz
+Applied Research Laboratory and the
+Center for Innovative Materials Processing through
+Direct Digital Deposition
+Pennsylvania State University
+P.O. Box 30 , State College, PA 16801
+1.0 Introduction
+1.1 Problem Statement
+Given the huge potential for additive manufacturing to improve performance, reduce
+cost, and decrease lead times, the United States Navy has developed a broad initiative
+in additive manufacturing, and an important component to this activity is the
+identification of challenges and solutions for successfully implementing additive
+manufacturing for critical naval applications. An important aspect of addressing these
+challenges is in the correct selection of components being considered for additive
+manufacturing. The potential of additive manufacturing is driven by the ability to reduce
+cost through decreased use of expensive material or reduced additive manufacturing
+cost when compared to traditional manufacturing methods, the potential to improve part
+performance through innovative designs that may be economically accomplished by
+additive manufacturing, and reduced lead times through use of digital product and
+process data. Part selection is an extremely important aspect of meeting these
+requirements. The ability to fully exploit the process is dictated by the nuances found
+within a parts family. Hence, this program was directed at formulating an initial
+assessment for using additive manufacturing for producing complex, aerospace heat
+1
+
+
+'
+exchangers for naval air applications. The various issues regarding the use of additive
+manufacturing for these types of components will be discussed in greater depth in their
+respective sections of the report.
+1.2 Objective
+The objective for this project can be divided into four subcategories. This includes a
+review of aerospace heat exchangers, identification of gaps in the current additive
+manufacturing technology for this application, design of a notional heat exchanger
+based on additive manufacturing technologies, and a manufacturing demonstration and
+evaluation of the notional design.
+The first of these objectives was a review of aerospace heat exchangers and prior
+activities regarding additive manufacturing of these components. This discussion also
+includes the identification of existing capabilities, as well as limitations to produce
+complex, thin walled shapes and fine internal passages, found in premium heat
+exchangers. The review also encompasses the evaluation of current additive
+manufacturing equipment that may be applicable for producing heat exchangers.
+The second objective for this project was the identification of possible gaps in the
+current technology. The purpose of this was to explore methods that may be used for
+increasing quality and improved reliability during the manufacturing of heat exchangers.
+This would ultimately allow for a more consistent product and increased uniformity. The
+identification of gaps in the current technology would also address the apprehension
+that the Navy faces in planning for the insertion and implementation of additive
+manufacturing.
+The third objective was to develop a design for a notional aerospace heat exchanger
+based on additive manufacturing. The design would be based on the knowledge
+acquired during the earlier activities, along with an improved understanding of heat
+exchangers, and elements of design for additive manufacturing. Exploratory designs
+would be developed based on the identification of sub-functions related to
+2
+
+
+manufacturing and potential performance improvements enabled by additive
+manufacturing. As part of this effort, a morphological chart would be developed to aid in
+developing the conceptual design. The final objective of the project was the technical
+demonstration involving the fabrication of the notional heat exchanger using additive
+manufacturing, along with testing of the device to determine its heat dissipation
+characteristics.
+3
+,
+
+
+2.0 Review
+2.1 Aerospace Heat Exchanger Discussion
+Heat exchangers can be found in a wide spectrum of applications, ranging from the food
+to automotive industries. They are used to either cool or heat fluids, and do so by
+transferring heat between two fluids, many times being a liquid to a gas medium. There
+are many different features of heat exchangers that fall into various categories, such as
+flow types and enhancements.
+There are three main fluid flow types: parallel, counter, and cross flow. These flow
+types are illustrated in Figure 1. Due to thermal properties, each of these flows will
+affect the heat transfer rate that may be achieved. This is illustrated in Figure 2, which
+shows how the logarithmic mean temperature gradient changes over time depending on
+the type of flow. The efficiency of the various heat exchanger designs may thus be
+viewed based on the logarithmic mean temperature of the flux, dictated by the
+difference between the two heat exchanger mediums at a given location, over time.
+The starting temperatures between the two mediums for heat exchangers using a cross
+flow or parallel flow arrangement are initially far apart, but since they converge over time
+the fluid that is being cooled, or heated, experiences less of a change and results in
+lower heat dissipation over time. This occurs to a lesser degree with parallel flow heat
+exchangers. In contrast, in heat exchangers utilizing a counter flow arrangement the
+temperature differential is initially large and remains relatively constant over time. This
+allows for a greater thermal differential between the two mediums during operation ,
+making the counter flow heat exchangers very effective. There are a few, special
+circumstances when a counter flow design is the most efficient, but this design is
+usually employed due to ergonomic considerations.
+4
+
+
+Flo"'
+
+.,
+Tube flow
+Parallel Flow
+Figure 1: Schematic of the various flows using for heat exchangers.
+~···· ··· ············ , ·•
+IIICXX ·XIIICIIXXICX
+- - ~- - ----- ------ ,
+•. :::
+·..~'=
+II,It :~:
+' '.--------------------~ ; t,i
+:
+~ .r
+~-------- - ----- -- 1
+· ' ··················· ~ -~
+· ~ ··················· · ·~
+Parallel-tlow
+r ----------- - ---- !
+:I :
+IIT..:::::
+~--- ---- --- - -- -- - 1
+· ~ ·················· , ·•
+..,.....................
+OI UliCt-il \\'
+r-------- - -------1
+: •,, :
+II ,:
+... :
+~-- - -- - - - - -- - --- ~
+Figure 2: Logarithmic mean temperatures as a function of time for different flows.
+5
+
+
+The most logical features to explore for a heat exchanger design that may be produced,
+and potentially enhanced , by additive manufacturing are baffles, fins, and tube inserts.
+Baffles are used to support the tube, maintain the tube spacing and direct the flow of
+fluid in a desired pattern through the shell side. Adding baffles to a tube in an efficient
+manner can drastically change the heat transfer rate. For example, adding baffles to a
+single pass, counter flow design can change the flow to multi-pass, cross flow,
+drastically changing heat transfer. An example of this can be seen in Figure 3. Not only
+does the introduction of baffles provide more structural support, but they also allow for
+greater heat transfer due to an increase in the amount of cross flow paths. Much like
+flow types, baffles can be modified to change the degree of heat transfer to better match
+the intention of the heat exchanger. Figure 3 also shows a few of the most popular
+baffles used in industry. The single segmental transverse baffle can be used to support
+tubes during assembly and operation and to direct the fluid in the tube bundle at right
+angles in order to achieve higher heat transfer coefficients. The double segmental
+transverse baffle is much like the single segmental transverse baffle in that it assists
+heat transfer from the high shell-side, and it doubles the fluid stream line of its single
+counterpart. The doughnut and disk type baffles have small perforations between tube
+holes to allow a combination of cross flow and longitudinal flow and results in a lower
+shell-side pressure drop. The combined flow leads to a slightly higher heat transfer
+coefficient compared to that of pure longitudinal flow. In addition , doughnut and disk
+type baffles minimize tube-to-tube temperature differences. Because of these
+attributes, doughnut and disk baffles are primarily used in nuclear heat exchangers.
+Lastly, the longitudinal baffle's main purpose is to control the overall flow direction of the
+shell fluid, such that a desired overall flow arrangement of the two fluid streams is
+achieved . The degree of transfer of the baffle is controlled by its surface area , support
+strength, tube spacing , and the flow type of the heat exchanger.
+6
+
+
+_tT ~ - -- I \_
+- I X --- - I 
+"~~-------------~~~
+_tT . ~
+I ~ I )_ " I --A.
+51NQU PASS
+.rr I ~ I \_
+I ~ I )_ I \ I 
+- ~~
+I -L I
+IALTIPL£ PASS
+!XlU3LE SEa.EN'TAL TRANSVERSE BAFFLES
+DOU."ii-HJT AHD llSC TYPE BAFFLES LOtGTUOtHU BAFFLE
+Figure 3: Schematics illustration two primary baffle flow conditions and various types of baffles used in heat exchangers.
+Fins are another important feature of heat exchangers using liquid and gas mediums.
+Fins provide increased surface area for tubes carrying the liquid , leading to a greater
+rate of heat transfer by convection of the gas. The fins allow liquid-gas heat exchangers
+to attain a more specific heat transfer rate based on a given flow type design. Fins are
+useful because in many instances it is not economical or feasible to alter the operating
+temperature differential or change materials of construction. Increasing the surface
+7
+
+
+area of fins achieve the same function at a more reasonable price. There are four main
+types of fins which are used in heat exchangers, and these are illustrated in Figure 4.
+Plain fins are simple straight-finned designs that can be rectangular or triangular. The
+Herringbone design is where the fins are placed sideways to each other to provide a
+weaving gas path. Serrated and perforated fins consist of perforations in the fins to
+alter flow distribution and improve the heat transfer rate. Much like tube inserts, fins
+also enhance heat transfer rate but are recognized more for reducing mitigation of the
+systems over time.
+Plai
+Ser ed
+Figure 4: Schematics of the various types of fins used in liquid-gas medium heat exchangers.
+2.2 Additive Manufacturing Technology
+In addition to understanding the characteristics of the heat exchangers, it is also
+important to understand the additive manufacturing process that may be potentially
+used to produce heat exchangers. Because of the complexity of a heat exchanger and
+8
+
+
+the potential to produce fine features, the additive manufacturing process that would
+most likely be used to produce these types of components is the laser based powder
+bed fusion (PBF) process, which is also referred to as selective laser melting (SLM} ,
+direct metal laser sintering (DMLS), selective heat sintering (SHS}, and selective laser
+sintering (SLS). There is also a similar technique that utilizes an electron beam instead
+of a laser to melt a pre-deposited powder and is referred to as electron beam-based
+powder bed fusion. Shown in Figure 5 is a schematic of the laser-based powder bed
+fusion process showing how the laser is used to selectively melt pre-deposited metallic
+powdered in a chamber of inactive gas to form a fused layer. Many layers are
+selectively created to form a three-dimensional shape. The benefits and issues
+associated with producing the various types of heat exchangers using the powder bed
+fusion process is discussed in the following sections.
+Inert Gas Environment
+Laser Beam Scanner
+Scraper and Roller
+.... , r Build Object
+Powder Bed
+Figure 5: Schematic of the laser-based powder bed fusion (PBF) process.
+9
+
+
+2.3 Existing Capabilities of Heat Exchangers
+Currently, the manufacturing of heat exchangers entail a long and expensive
+progression of subtractive (cutting and punching) and conjunctive (brazing) processes.
+In addition, the brazing process usually requires a complex arrangement of fixtures that
+involves significant labor and time. Brazed heat exchangers are typically of plate and
+fin design. These heat exchangers can be made very compact and have a very high
+heat dissipation rate. The base of the exchanger is made up of flat plates that are
+layered on top of each other creating air passages in between the plates where the hot
+liquid and cold liquid flow. Shown in Figure 6 are examples of two heat exchangers
+produced by brazing of plate and fins.
+Figure 6: Two examples of brazed heat exchangers employing plate and fins.
+Due to the way in which brazed heat exchangers are built they either run counter flow,
+as shown in the above figure , or by parallel flow. Brazed heat exchangers do not
+employ cross flow designs. The size of the heat exchanger can also be problematic.
+For example , due to the small passageways created for the compact size, the passages
+may easily clog . The problem is compounded due to the fact that since the passages
+10
+
+
+',
+are so small, they are difficult to maintain, and hence, cleaning is performed manually.
+Lastly, there is no design flexibility with a brazed heat exchanger. Because of the
+complexity of the traditional manufacturing process for brazed heat exchangers, little
+design flexibility is available and the vast majority of current heat exchangers reflect the
+same rectangular shape.
+Another common design is a tube heat exchanger. These heat exchangers are also
+referred to as shell and tube heat exchangers, and examples of this type of design can
+be seen in Figures 7 and 8. Shell and tube heat exchangers are made up of a variety of
+tubes in which liquids or air pass through the tubes. Either the tubes carry two different
+liquids to exchange heat or air can enter the shell to cause exchange of heat within the
+tubes. Baffles may also be used to direct the fluid to create a cross flow exchange in
+shell and tube heat exchangers.
+There are a few advantages to shell and tube heat exchangers over plate and fin heat
+exchangers. One is that tube heat exchangers are more economical to produce. They
+can also be placed in systems that operate at higher temperatures and pressures.
+Unlike brazed heat exchangers, clogs and leaks can be inspected for and fixed when
+they occur. Various flows are also available for this type of heat exchanger and there is
+greater ability to customize the heat exchanger design.
+Figure 7: Schematics showing common flow for shell and tube brazed heat exchangers.
+11
+
+
+Figure 8: Photographs of two examples of tube and shell heat exchangers.
+There are also detractions to a tube heat exchanger, since it are not as efficient in heat
+transfer as the plate and fin design. Shown in Figure 9 is a tube heat exchanger having
+a cross flow arrangement. Because of its design, the tube heat exchanger is also
+significantly larger that a shell and tube arrangement for a given heat dissipation rate .
+Lastly, once the heat exchanger is defined within its design constraints, it is very difficult
+to increase its size in order to attain a higher working capacity.
+COPPER TUBE HEAT EXOiANGERS
+Figure 9: An example of a cross flow tube heat exchanger.
+12
+
+
+•,
+2.4 Existing Capabilities of Additive Manufacturing
+Opposed to brazing, additive manufacturing provides a means of achieving fine, planar
+structures and features, and boundaries, as well as complex internal fluid channels.
+The benefits of being able to build hollow structures with additive manufacturing may
+allow higher design complexity that may increases performance, as well as broaden the
+application range due to higher strength-to-weight ratios. These complex designs can
+be made with a favorable surface area , leading to the manufacturing of smart, efficient
+heat exchangers.
+A review of the literature revealed that aluminum alloys appears to be the most
+commonly used material for heat exchangers due to its high thermal conductivity
+relative to most other metals. Other metallic materials that are used includes stainless
+steel for operations at higher temperatures and corrosive environments, and nickel
+based alloys that are used for operation at very high temperatures. Stainless steel and
+nickel-based alloys exhibits higher density than aluminum alloys, which results
+increased weight, but may operate at temperatures well above 300 °C, the maximum
+operating temperature for aluminum . Copper has also been used for special heat
+exchanger applications but is not considered a viable material for aerospace
+applications.
+2.5 Existing Limitations of Additive Manufacturing and Heat Exchangers
+Although the mechanical and thermal properties of metals makes them the ideal
+material for heat exchangers, powder bed fusion processes, be it laser-based or
+electron beam-based , result in a relatively rough as-built surface which could very likely
+influence fluid flow in internal channels. The surface roughness achievable with laser
+based powder bed fusion is on the order of 12.5 f.!m Ra or 500 micro inch Ra. However,
+honing may be used to significantly increase surface finish of internal channels. When
+internal structures of fluid channels are produced using the powder bed fusion
+13
+
+
+technique, the design of the feature must consider the need of internal support
+structures that are sacrificial but used to support the molten pool during the build.
+Support structures are created by utilizing processing parameters that only partially
+sinter the powder particles, thus allowing them to be easily removed after the process.
+However, unfused powder from the support structures may pose significant problems
+for removal from complex designs. An example of support structures being employed
+additive manufactured parts produce using laser-based powder bed fusion is shown in
+Figure 10. A method that is typically used to eliminate the need of support structures is
+to maintain the horizontal overhang of hollow structures to be greater than 40 degrees.
+This may impose design constraints that must be considered, such as the use of high
+aspect ratio cross-sections versus circular hollow channels. Another important
+characteristic of heat exchangers that sets additive manufacturing apart from other
+processes is its ability to produce thin-walled features. Although the exact wall
+thickness depends on a multitude of parameters, thin walls on the order of 200 urn may
+be created with reliable structural integrity.
+Figure 11: Examples of support structures, shown by arrows, used during the additive manufacturing process to support overhangs (Courtesy of CIMP-30 Penn State).
+14
+
+
+2.6 Equipment Capability
+There are various options for powder bed systems available today, and the more
+common manufacturers include EOS, 3D Systems, Concept Laser, MTT Renishaw and
+Arcam. All of the above systems utilize laser-based powder bed fusion except for the
+Arcam system, which is electron beam-based. In actuality, all of these systems use a
+basic configuration that includes: a powder bed coating system , mirrors and
+galvanometers (laser-based) or an electromagnetic coil arrangement (electron beam
+based) for two-dimensional scanning of the heat source on the powder layer, stages
+that decrease the build plate and increase the powder reservoir to accomplish each
+build layer, a processing chamber that provided an inert gas or vacuum environment
+(the vacuum is used for the electron beam-based system), and a computer controller.
+Lasers used for the laser-based systems provide between 200 and 1,000 W of output
+power, and the electron beam based system utilizes approximately 1,000 W of output
+power.
+One means of characterizing these systems is based on the build volume , which range
+from approximately 200x200x200 mm to 350x350x350 mm. Several manufacturers
+produce systems having build envelopes in the 350X350x350 range and include the
+EOS M350, the 3DSystems ProX320, and the Arcam q20. The Concept Laser X line
+1000R has by far the largest build volume with a build envelope of 630x400x500 mm ,
+serviced by a 1,000 W laser. The chart shown in Table 1 provides a comparison of the
+major dimension and features of various powder bed fusion systems, and Figure 12
+shows photographs of several system.
+15
+
+
+.·
+Table 1. Features of various powder bed fusion systems.
+Company Machine Maximum Build Laser Type Maximum Minimum Production
+Dimensions Power Layer Speed
+(mm) (W) Thickness
+3D ProX320 320x320x350 Fiber 500
+Systems
+Concept X Line 630x400x500 Fiber 1000 30-200 urn 10-100 cm 3/h
+Laser 1000R
+MTT AM250 250x250x300 Fiber 200 or 400 20-100 urn 5-20 cm 3fh
+Renishaw
+ARCAM ARCAM 350x380x500 Fiber 3000 180 urn 4000 cm 3/h
+q20
+EOS M290 280x280x300 Fiber 400 20-40 urn
+EOS M350 350x350x350 Fiber 400 20-40 urn
+16
+
+
+i
+30 System ProX320
+Concept Laser Xline 1OOOR
+ARCAM arcam q20
+••
+30 Systems ProX300
+EOS M290
+MTT Renshaw AM250
+Figure 12. Photcgraphs of several powder bed fusion systems for additive manufacturing.
+17
+
+
+3.0 Gaps in Technology
+Based on a review of the literature, gaps in technology were identified that may hinder
+adoption of additive manufacturing for these applications. These gaps were primarily
+identified through a recent report by the National Institute of Standards and Technology.
+A list of current challenges defined within this document, and cultivated through a broad
+industry survey, is shown in Table 2. Although these deficiencies currently exist, the
+rapid development and socialization of additive manufacturing technology is helping to
+address these challenges to reduce the barriers for implementation of the technology.
+Based on the review, one particular gap in technology was considered especially
+relevant to this application . Since potential heat exchanger designs for additive
+manufacturing would entail complex geometries and fine-scale features requiring
+complete sealing, the reliability of the process for producing high quality parts would be
+paramount. Although there is significant research being directed at sensing of important
+process parameters and conditions during the powder bed fusion process, no
+commercial systems are available today that possess the capability to monitor and
+report on the health of system or consistency of the process to a degree required to
+achieve high reliability.
+One means of addressing process reliability and overall part quality is through the use
+of sensing and control technology. Current research in this area is exploring a wide
+range of sensors and analysis techniques in this regards. This includes: the use of high
+resolution optical imaging of each layer to continually ensure consistency of the
+recoating operation and the fusion operation during the process, the use of IR sensors
+to capture thermal images locally and globally during the build process, employing
+various sensors to continually measure specific response characteristics during the
+process, such as acoustic emission , reflected energy intensity, and emission
+spectroscopy. Advanced research in this area has focused on the use of a suite of
+sensors that enable various response signals to be correlated with various process
+anomalies. The results of this research shows promise in having commercial
+capabilities for measuring process uniformity in the near future; however, the use of this
+18
+
+
+data for controlling the process has not progressed at the same rate. This has primarily
+been due to the lack of detailed process understanding and inability to easily access the
+process control system for much of this equipment
+One method that is being exploited for influencing the results of the additive
+manufacturing process is the use of numerical modeling for simulating and managing
+thermal distortion, which not only may result in loss of dimensional tolerances but also
+may affect part quality through recoater interference and the formation of flaws or
+cracks. Thermal distortion during the process can cause significant deformation, such
+that the intermediary build may deform off of the build plate and result in uneven coating
+of subsequent powder layers or complete failure of the system to recoat. The
+perturbations in recoater consistency has been found to be a major source of variability
+in part quality, which would be exasperated for designs having fine, complex features.
+Another gap in technology with current additive manufacturing systems is the lack of
+interchangeability of powder feed stock. The processing systems and the process
+parameters, which are usually provided by the system supplier, have been formulated to
+work with a specific powder feed stock that represent the atomization process for a
+particular powder supplier. Although it is possible to replicate a powder size distribution
+based on mean particle diameter, diameter at 10%, and diameter at 90%, minor
+changes within a similar distribution may have an effect on processing, and ultimately,
+part quality. The use of "non-standard" powder material on a specific powder bed fusion
+process may require modifying "standard" process parameters for that material, and
+given the complexity of generating the large parameter set for the powder bed fusion
+process, many organizations are content in using standard powder provided by the
+system supplier. This is satisfactory if the manufacturer is willing to pay a premium of
+up to 100% for the powder and the powder alloy that is available by the system supplier
+provides adequate properties.
+19
+
+
+Table 2. Barriers and challenges for broad adoption of additive manufacturing technology (excerpted from a report by the National Institute of Standards and Technology).
+Barriers and Challenges for AM Q"ualification and Certification
+(• =one vole)
+•
+•
+20
+
+
+4.0 Identification of Companies
+The review of the literature had indicated that additive manufacturing was currently
+being explored globally for various application, and also being investigated for heat
+exchangers. One portion of this community is focused on developing new designs for
+heat exchanger that may be produced using additive manufacturing, and these
+conceptual designs dramatically depart from the traditional shell and tube.
+Various companies were identified based on their research focus and history with
+additive manufacturing; however, detailed assessments were conducted on three
+organizations. One company in the U.S. , General Electric Corporation , was considered
+based on its strong emphasis on implementing additive manufacturing for an existing
+aerospace product, the LEAP engine nozzle; while two additional companies are
+discussed as examples of small design firms that have embraced additive
+manufacturing and have interest in heat exchangers. These two companies were
+HiETA Technologies Limited and Plunkett Associates.
+General Electric (GE) is pushing the boundaries of additive manufacturing and is close
+to scaling additive manufacturing to full production. GE's main use for additive
+manufacturing is within its aerospace division. The company has developed a design
+and additive manufacturing process for fuel nozzles for their jet engines that prom ises to
+improve performance and reduce manufacturing cost over the traditional nozzles, and
+have several other potential products identified for additive manufacturing. Shown in
+Figure 13 is a photograph of GE's LEAP nozzle designed to be produced through laser
+based powder bed fusion process.
+GE has been at the forefront in the United States in terms of developing the additive
+manufacturing process for production. The total investment in research and
+development funds within GE exceed 50 million dollars per year, and in the next five
+years, GE plans on tripling the size of their current additive manufacturing laboratory,
+while installing two facilities for producing production parts.
+21
+
+
+Figure 13: Photograph of GE LEAP engine nozzle produced using the powder bed fusion additive manufacturing process.
+HiETA Technologies Limited is a UK company, with expertise in design, additive
+manufacturing, and thermal management, focused on developing designs for products
+that may be prodL:Jced using additive manufacturing, and one area of interest is heat
+exchangers. Because their designs have been formulated specifically to exploit additive
+manufacturing, specifically the laser-based powder bed fusion process, HiETA heat
+exchangers look dramatically different from traditional heat exchangers. Having a
+strong background and understanding of the additive manufacturing process, HiETA
+has developed designs that utilize the inherent capabilities of the powder bed fusion
+process to improve functionality of the product. Their design typically consists of
+intricate curves and complex features, which is an efficient means for creating highly
+efficient, light-weight systems, while also being able to adapt a design to challenging
+three-dimensional spaces where an aerospace heat exchanger may be placed. Shown
+in Figure 14 are three examples of components designed by HiETA for thermal
+management that were produced using additive manufacturing. It is believed , based on
+their capabilities, that HiETA has not made available to the literature their advanced
+designs.
+22
+
+
+Figure 14. Three notional parts designed by HiETA for thermal management and to be produced thr::>ugh additive manufacturing.
+Plunkett Associates is also a UK company focused on design but with a wealth of
+experience in additive manufacturing. Plunkett Associates are involved in several
+projects directed at improving heat dissipation through novel designs. Shown in Figure
+15 is an example of a notional heat exchanger funded by the UK government under the
+SAVING Pro;Jram. The figure shows the complex internal cavity and design of the
+completed part representing an aluminum heat exchanger built as a single components
+using the powder bed fusion process. The liquid to liquid heat exchanger was designed
+to improve tt-e efficiency of the device through unique features available through
+additive manufacturing, while minimizing support structures. The resultant design
+incorporated distinctive flow circuits that enab~ ed flow paths for the liquids that provided
+continuous and consistent heat transfer. Plunkett utilized computational fluid dynamics
+in conjunction with the design freedom available with additive manufacturing to create
+an efficient heat transfer device. The final design is illustrated in the phctograph of the
+final part shewn to the left in Figure 15.
+23
+
+
+.\
+In addition to the examples discussed above, significant interest in producing novel
+designs are being pursued in academic and research institutions. In many instances,
+the designs are being developed to demonstrate the ability of the process to produce
+complex shapes and features with little attention to rigorous analysis. Examples of
+complex components produced using powder bed fusion additive manufacturing based
+on these designs are shown in Figure 16.
+Figure 15. Example of an advanced aluminum liquid-liquid heat exchanger design by Plunkett Associates to be produced through additive manufacturing.
+Figure 16. A few examples of complex components produced using additive manufacturing representing advanced designs for heat dissipation.
+24
+
+
+I'
+5.0 Design Concept
+Three heat exchanger concepts were generated using a design innovation process that
+employed the use of a morphological chart and associated Colburn Coefficient graph ,
+which is shown in Figure 17. The morphological chart provides a method to generate
+ideas and concepts in a systematic manner, and the Colburn Coefficient is a means of
+correlating heat and momentum transfer, provided one factor is known. It is commonly
+used in design of heat exchangers. The morphological chart was used in conjunction
+with the Coburn Coefficient to anticipate efficiency of the notional designs, while also
+anticipating some level of producibility through additive manufacturing. However, it
+must be noted that the primary purpose of this analysis was to evaluate the concepts
+from a heat transfer standpoint that could be taken forward to a full design for additive
+manufacturing . Two of the concepts involved liquid to liquid heat transfer and the
+remaining concept involve liquid to gas heat transfer.
+The first concept, which represented liquid to liquid heat transfer, is referred to as the
+Weave and is shown in Figure 18. It incorporates the cross flow type with incidental
+baffles. Simple fins and circular cross-sections were utilized for this concept; however,
+this would not limit the use of greater complexity in full design. The second concept,
+shown in Figure 19, is referred to as the Baffle Stack. It also involves liquid to liquid
+heat transfer, and like the Weave, it also uses cross flow. Although the baffles are
+incidental, similar to the Weave, the baffle design provides cross flow with the tubes
+being used to cool or heat the fluid . The style of fin may be easily modified with the
+Baffle Stack design; however, based on optimizing the Colburn coefficient for a
+particular Reynold's number, the herringbone fin would be the best selection. The third
+and final concept is referred to as the Radiator and represents a liquid to gas heat
+exchanger. The morphological chart and the concept for the Radiator is shown in
+Figure 20. This concept utilizes a high packing density of thin fins with a liquid channel
+that is elongated in cross-section. The liquid channel is weaved throughout the fins and
+they also have an undulating surface or herringbone patterns along the length of the
+fins. To some degree, the Radiator represents an evolution of the first two concepts,
+25
+
+
+and also reflects the greatest consideration for complex shapes and features that may
+be possible through additive manufacturing.
+Sun funtions FlowType Baffles Fins
+Cross Section
+Solutions Parallel Counter Cross SingleSegmental Transverse DoubleSegmental Transverse Doughnut and Disc l ongitudinal Pla in Circle
+
+L·Lt.cu0c"L0L.i..'.
+
+
+.I!cu-I
+Perforated Serrated
+Rectangular Triangle
+] 0.
+J0:.:c.J.)
+00 0.002 L---__;L---L---L-...1.---'--L-.....L....l.....lo.j
+103 1.5 2 3 •
+Reynold s Number Res= m
+Herringbone Diamond
+Figure 17. Morphological chart and Colburn Coefficient graph
+26
+lncidenta
+Square
+
+
+Sun funtions Solutions
+FilowTp Pa!r3 l1el Counter Baffles Smp SegmentalTransverse DoubleSe ental Transvers ntal ftins Perforated Serrated Herringbone Gress Sediion Gittle Rectangular Triangle Diamond Square
+Figure 18. Morphological chart and design features for Concept 1, the Weave.
+27
+
+
+Sun funtions Solutions
+Flow Type Parallel Counter 'Cro
+Baffles SingleSegmental Transverse DoubleSegmental Transverse ·, ntal
+Fins Plain Perforated
+Cross Section Cir Rectangular Triangle Diamond Square
+Figure 19. Morphological chart and design features for Concept 2, the Baffle Stack.
+28
+
+
+S.r.tians SaklliaiiS
+fllowiype fRW Counter Cross
+Doughnut and Disc Longitudinal cidental
+Cmss Set1tiion G'rde Rectaf11Uiar Triangle Diamond
+Figure 20. Morphological chart and design features for Concept 3, the Radiator.
+29
+
+
+The three concepts were generally screened using a Pugh selection process. The
+criteria for screening was based on the flow type , mediums, potential for effective heat
+dissipation, and the complexity of the preliminary designs. Although there was interest
+in further developing both a liquid-liquid and liquid-gas heat exchanger, available
+resources would only support one manufacturing demonstration. Hence, one concept
+was selected for further evaluation.
+Since subsequent evaluations would involve a full design and manufacturing
+demonstration, complexity was given a greater weighting. This resulted in the Radiator
+being selected for additional trials. Reiterating, the Radiator concept described a liquid
+gas heat exchanger having a serpentine channel for liquid flow that was surrounded by
+a high density of thin fins. The concept also enabled the simple extension of the liquid
+channel to increase heat dissipation. Based on the selection of the Radiator concept, a
+detailed design was conducted for producing the heat exchanger using the laser-based
+powder bed fusion process.
+30
+
+
+6.0 Design and Additive Manufacturing of Notional Heat Exchanger
+The Radiator concept was selected for further refinement with the objective of
+developing a design that could exploit the use of additive manufacturing, specifically the
+laser-based powder bed fusion process, to produce a relatively complex device that
+could capture the basic attributes of a liquid-gas, aerospace heat exchanger. Based on
+Concept 3 above, the Radiator design was utilized as a starting point.
+The basic concept had included a complex array of cooling fins and a serpentine liquid
+channel; however, several modifications and improvements were added to the concept.
+This included: adding several layers of the liquid channel along with added width of the
+cooling fins, design of an highly elongated liquid channel that would not require the use
+of internal support structures during the build, incorporation of small features within the
+cooling channel that would provide turbulent flow for greater heat transfer ability, and
+incorporating an undulating surface along the length of the cooling fins to increase
+surface area and improve heat transfer to the gas. A rendition of the final design is
+shown in Figure 21 , and images of two of the improvements of the design are shown in
+Figures 22 and 23.
+Figure 21 . Final design of the Radiator used as the notional heat exchanger.
+31
+
+
+Figure 22. Design detail showing elongated liquid channel to eliminate internal support structures.
+Figure 23. Design detail showing undulating fin surface for increased surface area.
+32
+
+
+The final design of the heat exchanger (shown in figure 21) was built using the EOS
+MINT 280M laser-based powder bed fusion system. It was built as one solid
+component and , as mentioned , the elongated inner liquid channels were designed to be
+built without the necessity for support structures. The component was built in the
+horizontal position similar to the view of Figure 21 , and a solid support structure was
+projected onto the aluminum build plate to act as a foundation . The heat exchanger
+was produced using the EOS aluminum alloy, which represented an AI-10Si:-0.5Mg
+alloy.
+The basic function of the heat exchanger was to allow the hot liquid to flow into the inlet
+of the heat exchanger, flow throughout the liquid channel causing heat to be dissipated
+by the cooling fins, and then exit the heat exchanger via the outlet. The inlet and outlet
+can be seen in Figure 21. The heat exchanger liquid channel was comprised of 11
+paths connecting the inlet and outlet. The liquid channels were evenly spaced across
+the part. The undulating cooling fins were approximately 300 mm in width and spaced
+at intervals of approximately 400 mm . The exact dimensions of these features were not
+predetermined because support structure parameters were utilized to increase feature
+definition, and these parameters do not produce feature details that have been
+documented within the process specification. Shown in Figures 24 and 25 are
+photographs of the completed heat exchanger after post process solution heat treating
+and aging followed by removal from the build plate using electrical discharge machining
+(EDM). Post process solution heat treating was conducted at 530 °C for 5 hours
+followed by water quenching . The aging practice was 8 hours at 163 °C.
+Lastly, as shown in the figures , the cooling fins run perpendicular to the liquid channel ,
+which is indicative of a cross flow design. The design of the fins utilized a sinusoidal
+function to create the undulating pattern along the length and depth of the fins , which is
+similar to the herringbone style discussed earlier. Small features or "bumps" where also
+added periodically to maintain spacing and alignment of the fins so as to not impede
+gas flow. Shown in Figure 26 is a photograph of the completed aluminum heat
+exchanger with a corner that had been removed to show additional details.
+33
+
+
+Figure 24. Photograph of the aluminum heat exchanger produced using additive manufacturing.
+Figure 25. Another photograph of the aluminum heat exchanger produced using additive manufacturing .
+34
+
+
+F1gure 26. Photograph of aluminum heat exohanger design with corner section removed showing additional details.
+35
+
+
+7.0 Testing of Notional Heat Exchanger
+Testing to ascertain the effectiveness for dissipation of heat by the notional heat
+exchanger built using additive manufacturing was conducted by Dr. Stephen Lynch and
+Shawn Siroka of the Mechanical and Nuclear Engineering Department of The
+Pennsylvania State University.
+7.1 Testing Setup
+The heat exchanger performance was determined by using the rate of heat transfer
+between hot and cold flow streams. This was conducted using the standard heat
+transfer rate of rhcl!.T , where rh the mass flow rate (kg/s) , cis specific heat capacity
+(KJ/Kg-K), and Tis temperature (K) . By controlling the flow rate of both the hot and cold
+stream the performance could be determined in watts. These measurements may be
+used to calculate non dimensional heat exchanger parameters , which would enable a
+comparison with typical values from the literature. A basic schematic of the testing
+configuration and conditions are shown in Figure 27 . Figures 28 through 30 represent
+photographs of the actual setup used in Dr. Lynch 's heat transfer laboratory to evaluate
+the notional heat exchanger.
+Figure 27. Basic schematic and conditions for testing configuration for measuring heat transfer capability of the notional heat exchanger.
+36
+
+
+Blower
+Inlet pressure and temp taps:
+Outlet pressure and temp taps:
+Pho~ .mt t tet and Tlwt .ou. tlet ,inlet and Tlt ot ,intet
+Laminar flow element (LFE):
+Test Section Flow Conditioning
+Figure 28. Arrangement of the heat transfer test chamber used to assess heat dissipation characteristics of the notional heat exchanger.
+Chilled Water
+Flow meter (m.:uld )
+(T cold .out/t'()
+Figure 29. Schematic of the test cell for assessing heat dissipation characteristics of the notional heat exchanger.
+37
+
+
+Test Sect1on
+Outlet pressure and temp taps:
+P,,ot,ourtcr and 'fllot .ou tlet
+Inlet pressure and temp taps;
+Pl• ot.& nlet and T,,ot ,in wt
+Blower
+Laminar low elei'T\.ent (LF.E) :
+<irlltat
+Chiller
+Flow CoQditioming
+Figure 30. Photographs of the test cell used to determine the heat dissipation characteristics of the notional heat exchanger.
+The first stage for testing invo vee arranging flow within the hot air element. The laminar
+flow element (LFE) was place in-1 ne in order to minimize turbulent flow. The heat
+exchanger was placed in the bwer tube which is highlighted in green in Figure 30. This
+section of the tube had been fitted to hold the heat exchanger. It also has inlet and
+outlet pressure and temperature taps in order to track changes in response to the heat
+exchanger during testing. The heat exchanger was fitted inside of the large white pipe
+(shown to the left of Figure 30) using a polycarbonate insert. The polycarbonate insert
+was sealed within the pipe using a silicone sealant and was used to focus the air
+through the heat exchanger. Lastly, a recirculating system (shown in the right of Figure
+30) was used to provide a mixture of chilled water-glycol. A flow meter was used to
+continually measure flow rate. The heat exchanger was instrumented with
+thermocouples and pressure gauges at the inlet and outlets to measure any changes in
+temperature and pressure durng testing.
+38
+
+
+7.2 Testing Results
+The results of changes in temperature and pressure of the water-glycol at the inlet and
+outlets during testing at two speeds of the blower used to circulate the hot air are shown
+in Table 3. These results indicated that heat exchanger was functioning effectively in
+cooling the hot air that was entering the heat exchanger. At the two blower speeds , the
+temperature of the air was decrease 15 °C and 18 °C , respectively.
+Table 3. Results of water temperature and pressure measurements during testing .
+1OHz Blower Speed
+20Hz Blower Speed
+Hot Side
+• ~Temperature inlet
+Temperature outlet
+Pressure
+Dffference
+Mas;sAow
+• Temperature inlet
+Hot Side
+• Temperature outlet
+Pressure
+Difference
+Mass flow
+39
+c
+c
+Pa
+kg/s
+c
+c
+Pa
+kg/s
+22
+7.45
+0.1
+0.001
+22.55
+5.5
+10.1
+0.005
+
+
+Based on these results, important heat transfer parameters were established. The
+convective heat transfer parameters was found by using the area between the internal
+passages multiplied by the number of spaces. The Reynold 's number was found by
+using the perimeter of the passages, which enabled the hydraulic diameter to be
+defined. The dimensions that were obtained are shown in Table 4, and the properties of
+the air and water-glycol mixtu re used for the calculations are shown in Table 5.
+Table 3. Critical dimensions of the heat exchanger required for determining important heat transfer parameters.
+Properties units value Length of internal passgage ways m 0.1854 2 Area of crosssection hot mA2 .000808 Area of Crosssection cold mA2 1.2E-05 Hydrolic Dyameter_hot m .013532 Hydraulic Diameter_Cold m 0.001531 Perimeter hot m .23883 Perimeter cold m 0.03146
+Table 5. Properties of the air and water-glycol mixture used for determining important heat transfer parameters.
+Properties units 10Hz 2Hz
+density of air kg/m"3 1.2294 1.2313
+density of 25-75 water glycol kg/m"3 1044.6 1044.4
+viscity of air (v) m"s/s 1.46E-os 1.46E...OS
+viscousity of 25-75 water glycol m"2/ s 3 .49E-o6 3.4E-06
+themal diffusity of air m"2/ s 2.05E-os 2.04E-Q5
+thermal diffusivity of water glycol m"2/ s 1.16E-07 1.16E...07
+therma l conductivity of air {W/M-K} 0.0253 0.0253
+thermal conductivity of waterglycol W/{M-K) 0.4456 0.4468
+specific heat air J/(Kg-K) 1.01E+03 1.01E+03
+specific heat water glycol J/(Kg-K) 3.68E+03 3.69E+03
+40
+
+
+The properties of the fluids that were used in the experiment were based on the
+average temperatures that were measured at the inlet and the outlet. The exact values
+for these properties were linearly interpolated using a Matlab code for each run. With
+the dimensions and fluid properties known, the Nusselt number, Reynolds number,
+Friction factor, and efficiency were calculated. The relationships used to determine
+these parameters are shown in Figure 31 , and the graphical depiction of these results
+are shown in Figure 32.
+Nusselt number (non-dimensional heat transfer): Nu =.3.l!.L.vh
+AHxllT k
+Reynolds number (non-dimensional flow) : Revh =vvvh
+Friction factor (non-d imensional pressure drop): f = (ll:z) vh
+!!.._ LHx
+2
+Efficiency: £ = _ q _ where q ma:x: = Cmin(Th i - Tc i)
+qmax · '
+AHx : heat transfer area (mA2) LHx : length of heat exchanger (m) Dh: hydraulic diameter(m) V: velocity thru HX (m/s) p: density (kgfmA3) k : thermal conductivity (W/m-K)
+v : kinematicviscosity (mA2fs) q : Heat transfer (W) Cmin : heat capacity rate (J/sec-K) Th ( Inlet Temp of heat side Tc,( inlet temp of cold side
+Figure 31 . Relationships used to calculate various parameters representing the heat exchanger.
+41
+
+
+Efficency Curve w ith coolant rale of .5 GPM
+0 .79 0.78 0 .77 0.76 ~ 0 .75
+c~: 0 .74
+fUi:J 0 .73
+~
+...5::JzzC.::V.::E1:.>>jIJ.l
+0 .72 0.71 0 .7 0 .69 0
+340
+290
+240
+190
+140
+90 l.OOE+03
+S.OOE+Ol 4.50E+Ol 4.00E+Ol 0 3.50E+Ol
+~ 3.00E+Ol
+uc.: 2.50E+Ol
+.i0j 2.00E+Ol ~ l.SOE+01 l.OOE+Ol S.OOE+OO O.OOE+OO
+0 .001 0.002 0.003 0.004 O.Offi air mass flow (kg/s)
+Nusselt Numbervs Reynolds umber
+l.SOE+03 2.00E+03 2.50E+03 3.00E+03 Reynolds umber
+Friction Factor vs Reynolds umber
+0.006
+3.50E+CB
+l.OOE+03 1.50E+03 2.00E+03 2.50E+03 3.00E+<B 3.5(1:+00 Reynolds umber
+Figure 32. Graphical relationships obtained from the testing of the heat exchanger.
+42
+
+
+The first graph of Figure 32 shows effect of the heat transfer efficiency of the heat
+exchanger at the two gas flow rates used during testing . As expected , efficiency of heat
+transfer rate increases as air flow increases. The graph illustrates the effect of the
+Nusselt number based on Reynold's number and provides some indication of the
+effectiveness of the notional heat exchanger, since the Nusselt number is well above
+one for both testing points. The last chart in the figure shows that the friction factor
+representing the heat exchanger was negligible.
+During testing, an infrared camera was also used to determine the uniformity of cooling
+within the heat exchanger. Images obtained by the infrared camera during testing is
+shown in Figure 33. The top image was obtained before water-glycol cooling had been
+initiated. Under this condition, it may be observed that temperatures are very uniform
+throughout the device. The bottom image was obtained after 30 minutes of cooling
+flow, which would be indicative of a steady state condition, and confirms that during
+operation the notional heat exchanger is functioning uniformly.
+Valuable data was obtained during these tests that indicated the effectiveness of the
+notional heat exchanger. However, one problem was also identified during testing.
+After the two tests, a small leak was detected within the heat exchanger. Because the
+leak was internal to the complex fin and tube arrangement, it could not be rectified and
+resulted in termination of testing. Shown in Figure 34 is an infrared image of the heat
+exchanger indicating the location of the internal leak. As the leak developed, it also
+detrimentally effected the ability of the heat exchanger to cool uniformly.
+43
+
+
+Figure 33. Infrared images of the heat exchanger obtained during testing but prior to flow of the water-glycol mixture (top) and after cooling flow for 30 minutes (bottom).
+44
+
+
+Figure 34. Infrared image of the heat exchanger during testing showing development of an internal leak which terminated testing.
+45
+
+
+8.0 Conclusion
+Research was conducted at the Applied Research Laboratory and the Center for
+Innovative Materials Processing through Direct Digital Deposition at The Pennsylvania
+State University to determine the viability of additive manufacturing for producing
+aerospace heat exchangers for naval air platforms. A significant portion of this activity
+was directed at reviewing the basic requirements for heat exchangers and developing
+concepts that could result in an effective heat transfer device that would exploit the
+capabilities of additive manufacturing . During this effort, additive manufacturing
+equipment relevant to this applications was also reviewed and potential gaps were
+identified for impeding successful insertion of additive manufacturing for heat
+exchangers. This culminated in the selection of a concept and development of a full
+design based on producibility using additive manufacturing and the ability of the design
+to exploit the process for obtaining a highly functional heat exchanger. The full design
+was demonstrated in a manufacturing setting and the resultant notional heat exchanger
+was evaluated for performance.
+The conclusions that may be drawn from this research are:
+1. Additive manufacturing is being contemplated as a viable method to produce
+high value heat exchangers.
+2. The interest in additive manufacturing for these devices is being based on the
+ability to produce highly complex shapes and features that are difficult to
+manufacture using traditional methods. Hence, Additive manufacturing for these
+applications may impact both performance and cost.
+3. The additive manufacturing technique most applicable for producing these types
+of devices is the powder bed fusion process.
+4. The maximum build size that is most available with today's powder bed fusion
+system is approximately 350 mm by 350 mm by 350 mm .
+46
+
+
+5. The process may be used to produce heat exchangers using aluminum alloys,
+stainless steels, and nickel-based alloys.
+6. Although additive manufacturing , specifically the powder bed fusion process,
+shows significant promise for producing these products, the need to assure
+process reliability is seen as an impediment. Development and implementation
+of advanced sensing and control techniques are seen and an enabler for
+improving the reliability of the process and consistency of products that would be
+produced using the powder bed fusion process.
+7. A notional part that was designed and built in an aluminum-silicon-magnesium
+alloy using the powder bed fusion process was able to achieve fine features and
+details inherent with this process.
+8. The results of tests conducted to measure the heat dissipation quality of the
+notional heat exchanger indicated that the device provide very effective and
+uniform cooling. However, one defect was found in the notional heat exchanger
+that prevented extended evaluation. The defect was probably caused by
+improper fusion during building of the thin sidewall that represented the liquid
+cooling channel.
+47
+
+
+9.0 Bibliography
+"18 .5 Heat Exchangers." Massachusetts Institute of Technology. MIT. Web. 28 July 2014.
+A 3D printed Heat exchanger by Hieta. Digital image. Bbsp.co.uk. Bristol and Bath Science Park. Web. <http://www.bbsp.co.uk/bristol-and-bath-science-parknews/?id=118>.
+Adams, Larry. Additive Manufacturing Is at Our Core 6.5. The Clean Energy Exchange. Frontier Additive MFG, Sept.-Oct. 2013. Web.
+"Additive Manufacturing A Game Changer for the Manufacturing Industry?" Rolandberger.com. Nov. 2013. Web.
+<http://www.rolandberger.com/media/pdf/Roland_Berger_Additive_Manufacturing_2013 1129.pdf>.
+"Additive Manufacturing: Opportunities and Constraints." Raeng.org.uk. Royal Academy of Engineers, 23 May 2013. Web. <http://www.raeng.org .uk/news/publications/listlreports/Additive_Manufacturing.pdf> .
+"Advantages and Disadvantages of Plate Heat Exchangers." lnstrumentations.blogspot.com. 24 Apr. 2011. Web.
+<http:/linstrumentations.blogspot.com/2011/04/advantages-and-disadvantages-ofplate .html>.
+"Advantages and Disadvantages of Shell and Tube & Plate Type Heat Exchangers." Http:l!jabelufiroz.hubpages.com. 19 June 2013. Web.
+<http ://jabelufiroz.hubpages.com/hub/Advantages-and-Disadvantages-of-Shell-andTube-Piate-type-Heat-Exchangers> .
+"Arithmetic and Logarithmic Mean Temperature Difference." Arithmetic and Logarithmic Mean Temperature Difference. The Engineering Toolbox. Web. 28 July 2014.
+"Benefits Of Using A Flat Plate Heat Exchanger." Braztek Heat Exchangers. Braztek, 2012. Web. <http://www.brazetek.com/applications/63-benefits-of-use-flat-plate-heatexchanger>.
+Bourell , David L. , Ming C. Leu, and David W. Rosen , Identifying the Future of Freeform Processing." University of Texas at Austin, 2009. Web. <http://wohlersassociates.com/road map2009 .pdf> .
+"Brazed Plate Heat Exchanger." Kaori Taiwan . Kaori , 2010. Web. <http://www.kaoritaiwan.com/brazed-plate.html>.
+"Comparison of Heat Exchanger Types." Engineers Edge. 2000. Web. 28 July 2014.
+48
+
+
+Cooke, A. L. , and S. P. Moylan. PROCESS INTERMITTENT MEASUREMENT FOR POWDER-BED BASED ADDITIVE MANUFACTURING. University of Texas Austin. NIST, 17 Aug. 2011. Web.
+"Counter & Parallel Flow Heat Exchanger Tube Length Calculation - Engineers Edge." Engineers Edge . 2000 . Web. 28 July 2014.
+"A Cut Open Shell Tube Heat Exchanger." ECVV. Web. <http://upload.ecvv.com/upload/Product/20118/ChinaShell_and_Tube_Heat_ Exchanger _ UL_Approved2011881640211 .JPG>.
+A diagram of a tube heat exchanger. Digital image. Education .nachi.org. NACHI. Web. <http:/leducation.nachi.org/coursemedia/course-65/images/copper-tube-heatexchanger-online-training-ben-gromicko.jpg>.
+A diagram of how heat flows in a brazed heat exchanger. Digital image. Http:l/classconnection.s3.amazonaws.com. Web.
+<http://classconnection.s3 .amazonaws.com/573/flashcards/36573/png/flow_in_a_plate_ heat_exchanger1328157477842 .png> .
+"Different Types of Corrosion." Webcorrr Corrosion Consulting Services. Web .
+<http://www.corrosionclinic.com/types_of_corrosion/liquid%20metal%20embrittlement_ L ME .htm>.
+Fraas, Arthur P. Heat Exchanger Design. 2nd ed. Wiley-interscience, 1989. Google Books. Web.
+<http://books.google.com/books?id=1A_Y55nz9EUC&pg=PA225&1pg=PA225&dq=maki ng+of+a+heat+exchanger&source=bl&ots=YxEzhfglaB&sig=Wk4sfyR94gelw51 chj5Mb mOavus&hl=en&sa=X&ei=m HSxU4ucLZfMsQTivYCgAg&ved=OCEcQ6AEwCDgK#v=o nepage&q=making%20of%20a%20heat%20exchanger&f=false>.
+GE engine Nozzle. Digital image. GE.com. General Electric. Web. <http://images.bwbx.io/cms/2013-11-27/tech_ge49_02_202.jpg>.
+Gregory, E. J. "Plate Fin Heat Exchangers." Thermopedia. Semantic Globe Thermal Sciences, 2 Feb. 2011. Web.
+Grimm , Todd. "The Real Benefits of Additive Manufacturing." Tct Magazine. 23 Nov. 2012 . Web. <http://www.tctmagazine.com/blogs/grimmblog/the-real-benefits-of-add itive-manufacturing/>.
+Gurk, Rebecca . "EWI Expands Additive Manufacturing Capabilities via Direct Metal Laser-Sintering Technology." EWI Materials Joining Forming Testing Modeling and Engineering Consulting Services. EWI , 24 May 2013 . Web. 2014.
+H&C. "Shell and Tube Heat Exchangers Construction Details." Shell and Tube Heat Exchangers Construction Details. H&C Heat Transfer Solutions, 2008. Web. 28 July 2014.
+49
+
+
+Hansen, Jeff. "Top 5 Benefits of Additive Manufacturing." Redeye AUstralia. Redeye on Demand . Web. <http://redeyeaustralasia.com/additive-manufacturing-.html>.
+"Heat Exchangers, Types and Primary Components." Rotunds. Rotunds, Inc, 3 May 2011. Web.
+HiETA. "Heat Exchangers." HIETA Technologies Ltd. 2014. Web. 28 July 2014.
+"How Selective Laser Melting (SLM) Works." THRE3D. Web. 28 July 2014.
+Huang, Yang, and Ming C. Leu. "Frontiers of Additive Manufacturing Research and Education." Http:llnsfam.mae.ufl.edu. University of Florida, Mar. 2014. Web. <http://nsfam.mae.ufl.edu/2013NSFAMWorkshopReport.pdf>.
+ICTAS. Metal Powder Report. Web.
+Kellens, K., E. Yasa, Renaldi, W. Dewulf, J. P. Kruth, and J. R. Duflou. ENERGY AND RESOURCE EFFICIENCY OF SLS/SLM PROCESSES. 17 Aug. 2011 . Web.
+Krueger, A. , and F. Pouponnot. HEAT EXCHANGER PERFORMANCE
+ENHANCEMENT THROUGH THE USE OF TUBE INSERTS IN REFINERIES AND CHEMICAL PLANTS- SUCCESSFUL APPLICATIONS: SPIRELF®, TURBO TAL® AND FIXOTAL® SYSTEMS. Heat Exchanger Fouling and Cleaning. HTRI , IHS, CLEANEX, PUBLICO, 2009. Web.
+Kuppan, T. "Heat Exchanger Design Handbook." Google Books. Marcel Dekker, Inc, 2000. Web. 28 July 2014.
+Louvis, Eleftherios, Peter Fox, and Christopher J. Sutcliffe. "Selective Laser Melting of Aluminum Components." Science Direct. Journal of Materials Processing Technology, 30 Sept. 2010. Web.
+Lytron. "Heat Exchangers." Lytron Inc. 2012. Web. 28 July 2014.
+"Materials & Manufacturing (MM) I Center for Innovative Metal Processing through
+Direct Digital Deposition (CIMP-3D)." Penn State ARL. The Pennsylvania State University, 2013. Web. 28 July 2014.
+McCarthy, D. L., and C. B. Williams. CREATING COMPLEX HOLLOW METAL
+GEOMETRIES USING ADDITIVE MANUFACTURING AND ELECTROFORMING.
+University of Texas Austin. DREAMS Lab, Department of Mechanical Engineering, 22 Aug. 2012. Web.
+Molitch, Michael. "A Peek into GE's Additive Manufacturing Lab with Prabhjot Singh and Joris Peels." 3Dprintingindustry.com. 30 July 2013. Web. <http://3dprintingindustry.com/2013/07/30/a-peek-into-ges-additive-manufacturing-labwith-pra bhjot-singh-and-joris-peels/>.
+50
+
+
+Napoli, Matthew. THE USE OF ADDITIVE MANUFACTURING TECHNOLOGIES FOR THE DESIGN AND DEVELOPMENT OF A CUBESA T. CHARLES W DAVIDSON COLLEGE OF ENGINEERING. San Jose State University, 29 Apr. 2013. Web.
+Newman , John . "GE Prepares to Test the Potential of Additive Manufacturing." Rapid Ready Technology. GE Aviation, 2 May 2013. Web. 28 July 2014.
+Normani, Franco. "Heat Exchanger." Real World Physics Problems. 2009. 'Neb . 28 July 2014.
+RolandBerger Strategy Consultants. "DOE to Develop Additive Manufacturing." Metal Powder Report 67.4 (2012): 7. Roland Berger. Nov. 2013. Web.
+Rudarakanchana , Nat. "General Electric (GE) Talks 3D-Printing Tech: Q&A On Add itive Manufacturing." International Business Times. 18 Mar. 2014. Web. 28 July 2014.
+Seepersad , Carolyn. "Design for Additive Manufacturing ." NAE Frontiers. 28 Apr. 2013 . Web.
+Shah, R. K., and D. P. Sekulic. Heat Exchangers. Razifar. Web.
+Shah, Ramesh K., and Dusan P. Sekulic. "Fundamentals of Heat Exchanger Design ." Google Books. John Wiley & Sons, Inc, 2003. Web. 28 July 2014.
+A shell and tube heat exchanger. Digital image. Willworldengineering.com . 'Neb. <http://www.willworldengineering.com/images/heat_exchange3.jpg>.
+Sheu, Tony, and S. F. Tsai. "International Journal of Numerical Methods for Heat & Fluid Flow." Emerald Insight. Emerald Group Publishing Ltd , 1999. Web.
+"Transforming Manufacturing, One Layer at a Time." GE. General Electric, 2014. Web.
+Web.
+"Types of Heat Exchangers." China-ogpe.com. 2008-14. Web . <http://www.chinaogpe.com/buyingguide_content/Piate_fin_heat_exchanger_1272 .html>.
+Veeramani , Raj, Dr, Sheku Kamara, and Steve Grundahl. "Additive Manufacturing: Why It Matters to Your Business." Web.
+"Within - Heat Exchanger Challenges Designers." Rapid Prototypes 3D Rapid
+Prototyping Model Selective Laser Sintering UK. 3T RPD Ltd , 2013. Web. 28 July 2014.
+51

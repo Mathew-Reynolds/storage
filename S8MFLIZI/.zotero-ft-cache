@@ -1,0 +1,689 @@
+Flow (2022), 2 E19 doi:10.1017/flo.2022.13
+RESEARCH ARTICLE
+Flow in additively manufactured super-rough channels
+Samuel Altland1, Xiaowei Zhu2,* , Stephen McClain3, Robert Kunz1 and Xiang Yang1,*
+1Mechanical Engineering, Penn State University, State College, PA 16802, USA 2Department of Mechanical and Materials Engineering, Portland State University, Portland, OR 97207, USA 3Department of Mechanical Engineering, Baylor University, Waco, TX 76706, USA *Corresponding authors. E-mails: xzy48@psu.edu; xz3@pdx.edu
+Received: 20 January 2022; Revised: 9 May 2022; Accepted: 7 June 2022
+Keywords: additive manufacturing; direct numerical simulation; roughness; turbulence
+Abstract
+Metal additive manufacturing has enabled geometrically complex internal cooling channels for turbine and heat exchanger applications, but the process gives rise to large-scale roughness whose size is comparable to the channel height (which is 500 μm). These super-rough channels pose previously unseen challenges for experimental measurements, data interpretation and roughness modelling. First, it is not clear if measurements at a particular streamwise and spanwise location still provide accurate representation of the mean (time- and plane-averaged) flow. Second, we do not know if the logarithmic layer survives. Third, it is unknown how well previously developed rough-wall models work for these large-scale roughnesses. To answer the above practical questions, we conduct direct numerical simulations of flow in additively manufactured super-rough channels. Three rough surfaces are considered, all of which are obtained from computed tomography scans of additively manufactured surfaces. The roughness’ trough to peak sizes are 0.1h, 0.3h and 0.8h, respectively, where h is the intended half-channel height. Each rough surface is placed opposite a smooth wall and the other two rough surfaces, leading to six rough-wall channel configurations. Two Reynolds numbers are considered, namely Reτ = 180 and Reτ = 395. We show first that measurements at one streamwise and spanwise location are insufficient due to strong mean flow inhomogeneity across the entire channel, second that the logarithmic law of the wall survives despite the mean flow inhomogeneity and third that the established roughness sheltering model remains accurate.
+Impact Statement
+Surface roughness, whose representative element size is comparable to the hydraulic diameter, incurs a significant drag penalty. This large-scale roughness is usually removed in conventional subtractive manufacturing, making small-scale roughness that occupies a few per cent of the boundary layer the rule in fluid engineering. It is therefore not surprising that most rough-wall boundary-layer theories and models are developed for small-scale roughness. The use of new engineering technologies leads to new flow problems, to which conventional theories do not apply. Here, flow in additively manufactured super-rough channels is such a new problem. This paper is the first direct numerical simulation (DNS) study of flows in additively manufactured super-rough channels. We compare our DNS results with the existing theories/models and show where the existing theories and models fail and succeed. In addition to providing benchmark data for a new engineering problem, this work has real-world impacts: a fluid engineer would know from this study which theories and
+© The Author(s), 2022. Published by Cambridge University Press. This is an Open Access article, distributed under the terms of the Creative Commons Attribution licence (http://creativecommons.org/licenses/by/4.0/), which permits unrestricted re-use, distribution and reproduction, provided the original article is properly cited.
+
+
+E19-2 S. Altland, X. Zhu, S. McClain, R. Kunz and X. Yang
+models they can/cannot trust when dealing with large-scale roughness. This work also impacts fundamental research: our findings, e.g. that the logarithmic law of the wall survives large-scale roughness, motivate revisions of the conventional rough-wall boundary-layer theories.
+1. Introduction
+Surface roughness in conventional fluid engineering is usually small, occupying a few per cent of the boundary layer (Flack & Schultz, 2010). Figure 1(a) shows a sketch of a typical rough-wall boundary layer. The boundary layer consists of the roughness sublayer, the logarithmic layer and the wake layer (Jiménez, 2004; Schlichting & Gersten, 2003). The roughness sublayer extends from the wall to approximately 3k to 5k, where k is the roughness’ peak to trough height and represents the most important length scale in the roughness sublayer. Fluid in the roughness sublayer directly interacts with the surface roughness, leading to non-negligible mean flow inhomogeneity in the streamwise (x) and spanwise (z) directions. Above the roughness sublayer is the logarithmic layer. Here, we define the logarithmic layer to be the layer where the mean velocity follows the logarithmic law of the wall, and when we say the logarithmic layer survives, we are saying the logarithmic law of the wall survives. The logarithmic layer extends to approximately 0.15δ. The roughness affects the logarithmic layer by setting a momentum flux, and the flow is statistically homogeneous in the streamwise and the spanwise directions. The mean flow follows
+U
+uτ
+=1
+κ log
+(y − d
+yo
+)
+≡1
+κ log(( y − d)+) + B − ΔU+≈ 1
+κ log
+(y
+ks
+)
++ 8.5 (1.1)
+in the logarithmic layer, where U is the time-averaged streamwise velocity, κ ≈ 0.4 is the von Kármán constant (Marusic, Monty, Hultmark, & Smits, 2013), d is the zero-plane displacement height (Thom, 1971), yo is the equivalent roughness height, ΔU+ is the roughness function, B ≈ 5.2 is a constant, ks is the equivalent sandgrain roughness height and uτ is the friction velocity. Above the logarithmic layer is the wake layer, within which the boundary-layer height δ is an important length scale. The layered structure in figure 1(a) applies equally to atmospheric boundary layers – although they are not the focus of this work. Equation (1.1) has several convenient features. First, it requires no plane average (since the flow in the logarithmic layer is statistically homogeneous in the streamwise and the spanwise directions), and measurements at any streamwise and spanwise location would give the same yo and d. This is why researchers and engineers can rely on one-dimensional hot-wire measurements in rough-wall boundarylayer experiments (Hultmark, Vallikivi, Bailey, & Smits, 2012; Hutchins, Nickels, Marusic, & Chong, 2009; Örlü et al., 2017; Wang & Zheng, 2016). Furthermore, according to (1.1), the effects of surface roughness can be parameterized by d and ΔU+. It follows that roughness modelling is, practically, the modelling of d and ΔU+, and when d is negligible, roughness modelling is the modelling of ΔU+. This simplifies an otherwise complex problem, and (1.1) is the starting point of practically all existing roughness models (Coceal & Belcher, 2004; Flack & Schultz, 2010; Forooghi, Stroh, Magagnato, Jakirlić, & Frohnapfel, 2017; Jouybari, Yuan, Brereton, & Murillo, 2021; Yang, Sadique, Mittal, & Meneveau, 2016). The above is the conventional view of rough-wall boundary-layer flows. The use of new engineering technologies in fluid engineering applications often gives rise to novel flow problems. In the context of this paper, the new technology is additive manufacturing, the fluid application is internal cooling in turbomachinery and the new flow problem is flow in additively manufactured super-rough cooling channels – channels with surface roughness comparable to their hydrodynamic diameters. In the following, we briefly explain the engineering problem. In more traditional subtractive manufacturing, whatever process is used to machine the channel can be used to finish the surface and remove large-scale roughness. This, however, is often not possible for additively manufactured cooling channels because
+
+
+Flow E19-3
+(b)
+(c)
+(a) y
+y
+Wake layer
+Logarithmic layer
+Roughness sublayer
+Roughness sublayer
+Roughness
+Roughness
+k w
+3 ~ 5k
+~ 0.15δ
+δ
+0246
+0
+1
+y/h
+z/h
+2
+yt
+yt+
+yb+
+yb
+yb
+yt
+Figure 1. (a) The layered structure of a rough-wall boundary layer. Here, k is the roughness height, δ is the boundary-layer height. (We reserve the symbol h for half-channel height.) (b) A spanwise–wallnormal cross-section of an additively manufactured channel (Bons, Taylor, McClain, & Rivir, 2001; McClain et al., 2021). The red and blue lines are the surface roughness; yb and yt are the intended bottom- and top-wall locations (when manufacturing the channel); yb− and yt− are the trough locations of the bottom and top surface roughness; yb+ and yt+ are the peak locations of the bottom and top surface roughness. (c) A sketch of slender roughness. Here, w is the width of the roughness element.
+of the complex geometric designs and the nature of the finishing process. The additive manufacturing process like the one in Stimpson, Snyder, Thole, and Mongillo (2016) gives rise to roughness whose size is approximately 100 μm. Since the size of the cooling channel is only approximately 500 μm, these additively manufactured roughnesses result in a large drag penalty. This drag penalty must be accounted for in engineering design – giving rise to a new flow problem. Figure 1(b) shows a crosssection of an additively manufactured cooling channel with large-scale roughness on both walls. Here, the cooling channel spans from yb = 0 to yt = 2h, the trough to peak height of the top-wall roughness is |yt+ − yt−| = 0.8h (i.e. −0.4h < y − yt < 0.4h) and the trough to peak height of the bottom-wall roughness is |yb+ − yb−| = 0.34h (i.e. −0.17h < y − yb < 0.17h). Here, h is the intended half-channel height (when manufacturing the channel), yb and yt are the y coordinates of the intended bottom and top surfaces of the channel and the subscripts ‘+’ and ‘−’ denote the peak and trough locations of the surface roughness. The top-wall roughness is larger than the bottom-wall roughness due to the orientation of the surfaces during the manufacturing process (McClain et al., 2021). We have employed the intended half-channel height h as the reference length scale. The reader is directed to Stafford, McClain, Hanson, Kunz, and Thole (2021) for the real dimensions (in millimetres) of the cooling channels and the surface roughness. Conventional theories like the ones in figure 1(a) do not necessarily apply to new flow problems like the one in figure 1(b). Below, we explain why not. We know that the height of the roughness sublayer is 3k to 5k. Let us be conservative and assume that the height of the roughness sublayer is 3k. It follows that the top-wall roughness sublayer extends from yt− to yt− − 2.4h (the y coordinate points from the bottom wall to the top wall) and the bottom-wall roughness sublayer from yb− to yb− + 1.02h. These two roughness sublayers overlap, and the flow is nowhere homogeneous in the streamwise and the spanwise directions. If one follows the conventional rough-wall boundary-layer theory to its logical conclusion, one must conclude that the logarithmic layer does not survive, and (1.1) is no longer valid. This poses practical challenges. First, if U ≠ 〈U〉, then measurements at one streamwise and spanwise location are not necessarily a good approximation of the mean (double-averaged) velocity. Here, 〈·〉 denotes plane average. This casts doubts on the conclusions in Stafford et al. (2021) and McClain et al.
+
+
+E19-4 S. Altland, X. Zhu, S. McClain, R. Kunz and X. Yang
+(2021), where the authors invoked the conventional wisdom and assumed U = 〈U〉 when studying flow in an additively manufactured super-rough cooling channel. An objective of this work is to re-evaluate the claims in Stafford et al. (2021) and McClain et al. (2021). We also ask the following practical question: How much averaging is needed in the x and z directions before we can claim U ̃ ≈ 〈U〉? Here,  ̃· denotes spatial filtration in the x or z direction. Second, it is not clear if 〈U〉 still follows a logarithmic scaling. In other words, does the logarithmic layer survive large-scale roughness and the resulting mean flow inhomogeneity? Third, it is unknown how the available roughness models like the ones in Flack and Schultz (2010) and Yang et al. (2016) work for the large-scale roughness. The objective of this work is to answer or shed some light on these questions. We resort to DNS, which, in spite of its high cost (Choi & Moin, 2012; Yang & Griffin, 2021), is the most accurate computational fluid dynamics tool. DNS also gives us access to the flow in the roughness layer, which is usually unavailable in a laboratory experiment. Before we proceed further, we distinguish the roughness in figure 1(b), i.e. the focus of this work, from the tall slender roughness in figure 1(c) and the ‘obstacle’-type roughness mentioned in Jiménez (2004). Although the roughness in figure 1(c) occupies most of the domain, the boundary layer ‘feels’ only the top part of the roughness. Because of that, the roughness sublayer is thin, and the flow becomes statistically homogeneous in the x and z directions just slightly above the roughness (Castro, 2007; MacDonald, Ooi, García-Mayoral, Hutchins, & Chung, 2018; Sharma & García-Mayoral, 2020). The same is true for a wide range of roughness elements. In Chan, MacDonald, Chung, Hutchins, and Ooi (2018), the sinusoidal roughness’ trough to peak height is approximately 0.3R0, and the height of the roughness sublayer is approximately 0.5R0, i.e. less than 2k, where R0 is the pipe radius. In Xu, Altland, Yang, and Kunz (2021), the cubical roughness’ height is 0.25h, and the roughness sublayer is approximately 0.33h, i.e. less than 1.5k, where h is the half-channel height. For these rough surfaces, (1.1) and mean flow universality survive, and the sketch in figure 1(a) is still valid. The roughness considered in this work is also different from obstacle-type roughness. In Jiménez (2004), the term ‘flows over obstacles’ refers to flows with δ/k 50. Jiménez (2004) argued that there would be little left of the original wall-flow dynamics in these flows. The discussion in Jiménez (2004) concerns the roughness function, but ‘the original wall-flow dynamics’ should, to a bare minimum, encompass the logarithmic layer (and the related dynamics) and the outer layer similarity (and the related dynamics). Both the logarithmic layer and the outer layer similarity have received much attention since Jimenez’s seminal annual review paper. These later studies, however, gave a different picture to the one in Jiménez (2004): the original wall-flow dynamics proves to be applicable to flows with much larger roughness (than δ/k 50) (Amir & Castro, 2011; Castro, 2007; Chan, MacDonald, Chung, Hutchins, & Ooi, 2015; Xu et al., 2021), and ‘flows over obstacles’ lack a unanimous definition. In the most recent annual review, Chung, Hutchins, Schultz, and Flack (2021) suggested that the ‘flows over obstacles’ may be defined as flows in which the log-law parameters are not very apparent. We will see in § 3 that log-law parameters are clearly apparent in the additively manufactured super-rough channels, so we prefer not to call these flows ‘flows over obstacles’. The rest of the paper is organized as follows. We show the detailed numerical settings in § 2. The results are presented in § 3, followed by concluding remarks in § 4.
+2. Computational details
+2.1. Flow configuration
+The simulated geometries are rough-wall channels. Three increasingly rough surfaces are considered, i.e. S1, S2 and S3, which are all computed tomography scans of additively manufactured surfaces, where surface S3 is the most rough and surface S1 is the least rough. Figure 2 shows the height distribution of the surface roughness, and table 1 tabulates the statistics of the roughness. The horizontal size of the rough surfaces is Lx × Ly = 14h × 8.5h, where h is the intended half-channel height. Further details of the three rough surfaces can be found in McClain et al. (2021), where the three rough surfaces are
+
+
+Flow E19-5
+0
+4
+z/h
+x/h
+k ′/h 8
+5
+S3
+10
+0
+0.2
+–0.2
+0
+4
+z/h
+x/h
+k ′/h 8
+5
+S1
+10
+0
+0.2
+–0.2
+0
+4
+z/h
+x/h
+k ′/h 8
+5
+S2
+10
+0
+0.2
+–0.2
+(a) (b)
+(c)
+Figure 2. The height distribution of the three rough surfaces. k′ is the deviation of the real surface from the intended channel surface.
+Table 1. Rough-wall statistics. Here, kavg is the average roughness, Ra is the first-order moment, krms is the r.m.s. of the roughness height, Sk is the skewness, Ku is the Kurtosis, Ex is the effective slope. The average roughness height kavg is measured from the intended rough surface. This is why some values are negative. We keep two significant digits after the decimal point. The reader is directed to Chung et al. (2021) for the physical significance (not definition) of these roughness parameters.
+Surface kavg/Ra krms/Ra Sk Ku Ex
+S1 −0.20 1.27 0.20 3.20 0.088 S2 −0.11 1.27 0.10 3.49 0.24 S3 0.12 1.27 −0.25 3.25 0.40
+referred to as up-skin, down-skin and realx102, respectively. The intended channel wall is at k′ ≈ 0. The trough to peak heights are 0.16h, 0.34h and 0.8h for S1, S2 and S3, respectively. Although the trough to peak height is often used as a measure of the roughness size (Jiménez, 2004), the statistic is not very reliable because its value is determined by the roughness height at two individual locations. Here, we also report the first-order moment: Ra/h = 0.017, 0.040, 0.1050 for S1, S2 and S3, and the roughness root-mean-square (r.m.s.): krms/h = 0.021, 0.051, 0.134, which are more reliable statistics. The single-point roughness height statistics are close to Gaussian for all three surfaces, see figure 3, and therefore empirical correlations like the one in Flack and Schultz (2010) and Flack, Schultz, and Barros (2020) should, in principle, apply. Figure 4 shows the streamwise-averaged roughness height. We see some variations in the spanwise direction, but they are much smaller than the roughness’ peak to trough height. If we were to repeat this exercise for roughness that consists of streamwise strips, we would see much large spanwise roughness heterogeneity.
+
+
+E19-6 S. Altland, X. Zhu, S. McClain, R. Kunz and X. Yang
+0 02
+S1 S2 S3
+–4 –2 4
+0.2
+PDF
+0.4
+(k′ – μk′)/σk′
+Figure 3. The probability density function (PDF) of the roughness height distribution. Here, μk′ is the mean roughness height, and σk′ is the standard deviation of the roughness height. The black solid line is the standard Gaussian distribution.
+0
+0
+0.2
+–0.2
+–0.4
+0.4
+24
+z/h
+y/h
+68
+0
+0
+–0.1
+0.1
+24
+S1 S2
+S3
+z/h
+y/h
+68 0
+0
+0.2
+–0.2
+24
+z/h
+68
+(a) (b)
+(c)
+Figure 4. Streamwise-averaged roughness height. The black bold lines are the streamwise-averaged roughness height. The two thin black lines show the roughness’ peak and trough locations.
+We place each rough surface opposite a flat plate and the other two rough surfaces, leading to six configurations. Table 2 shows the further details of the rough-wall channels. The nomenclature is Ch+[bottom surface]+[top surface], where the bottom/top surface is S1, S2, S3 or smooth (S0). In table 2, we also list the trough and the peak locations of the rough surfaces. The flow is not directly blocked by the surface roughness between yb+ and yt+. For conventional small engineering roughness on finished surfaces, yb ≈ yb+ ≈ yb−, yt ≈ yt+ ≈ yt− and yt+ − yb+ ≈ 2h. For the rough-wall channels considered in this work, yt+ − yb+ ranges from 1.92h in Ch10 (the least rough channel) to 1.34h in Ch23 (the most rough channel). We will colour code the results in § 3, as shown in the last column of table 3. In table 3, we also tabulate the aerodynamic properties of the rough surfaces, such as the equivalent roughness height and the location of the virtual wall, which we will discuss in § 3.3.
+2.2. DNS set-up
+We conduct DNSs with two Reynolds numbers, namely Reτ = 180 and 395. Here, Reτ = huτ,b/ν is the
+friction Reynolds number, with ν the kinematic viscosity of the fluid, and uτ,b = √−(dp/dx)h/ρ the bulk friction velocity. Because |yt− − yb−| > 2h, the above friction Reynolds number is an under-estimate of the conventional Reynolds number, whose definition is (h − yb−)uτ/ν.
+
+
+Flow E19-7
+Table 2. Details of rough-wall channel configuration. Again, yb and yt are the intended bottom- and top-wall locations and are at y = 0 and y = 2h, respectively. That is, yb = 0 and yt = 2h. The subscript − indicates the trough location, and the subscript + indicates the peak location. ‘Bot. surf.’ is short for bottom surface, and ‘Top surf.’ is short for top surface. S0 is a smooth surface. For a smooth surface, yb = yb− = yb+ and yt = yt− = yt+. We keep two significant digits for the numbers reported here.
+Bot. surf. Top surf. ( yb− − yb)/h ( yb+ − yb)/h ( yt − yt−)/h ( yt − yt+)/h
+Ch10 S1 S0 −0.076 0.084 0 0 Ch20 S2 S0 −0.18 0.26 0 0 Ch30 S3 S0 −0.40 0.40 0 0 Ch12 S1 S2 −0.076 0.084 −0.18 0.26 Ch13 S1 S3 −0.076 0.084 −0.40 0.40 Ch23 S2 S3 −0.18 0.26 −0.40 0.40
+Table 3. Rough surfaces’ aerodynamic properties. Here, yo is the equivalent roughness height, yd is the y coordinate of the virtual wall.
+yo,b/h |yd,b − yb |/h yo,t/h |yd,t − yt |/h symbol
+Ch10 9.5 × 10−4 6.2 × 10−3 — Ch20 8.0 × 10−3 1.0 × 10−2 — Ch30 3.7 × 10−2 4.5 × 10−2 — Ch12 1.0 × 10−3 7.2 × 10−3 8.0 × 10−3 1.1 × 10−2 Ch13 1.1 × 10−3 5.8 × 10−2 3.7 × 10−2 4.0 × 10−2 Ch23 6.9 × 10−3 6.3 × 10−3 3.6 × 10−2 5.3 × 10−2
+The computational domain size is Lx × Ly × Lz = 14h × ( yt− − yb−) × 8.5h. Here, Ly ≠ 2h because yt/b,− ≠ yt/b. This computational domain is larger than the ones in, for example, Coceal, Thomas, Castro, and Belcher (2006) and Chung, Chan, MacDonald, Hutchins, and Ooi (2015), where the roughness is single scale, and a minimum channel suffices. The roughness on an additively manufactured surface is multi-scale, and a large computational domain is needed to sample all the roughness scales as in, for example, Yang and Meneveau (2017) and Anderson and Meneveau (2011). Also, our computational domain matches the experiment in McClain et al. (2021). Table 4 shows the grid information, where ‘R2’ is for Reτ = 180 and ‘R4’ for Reτ = 395. Uniform grid spacings are used in the streamwise (x) and the spanwise (z) directions, while a hyperbolic-tangent stretched grid is used in the wall-normal (y) direction following Jelly, Jung, and Zaki (2014) and Wang, Wang, and Zaki (2019). The grid must resolve the flow and the roughness. Here, the x and z grids are such that Δx+ × Δz+ 12 × 6 to resolve the flow (Kim, Moin, & Moser, 1987; Lee & Moser, 2015; Leonardi & Castro, 2010) and Δx × Δy 0.033h × 0.033h to resolve the surface roughness (Yuan & Piomelli, 2014). Here, Δx, Δy and Δz are the grid spacings in the streamwise, wall-normal and spanwise directions, respectively. Figure 5 shows the premultiplied energy spectra of the surface roughness and the grid cutoff in the Reτ = 395 DNSs. The surface roughness is very well resolved. The wall-normal
+grid resolution is rather fine, with Δy+ ∼ 0.4 at the wall and Δy+ ∼ 3.5 at the channel centreline. These resolutions are comparable to/finer than those in Moser, Kim, and Mansour (1999), and since we will not study high-order statistics, these resolutions are sufficient (Yang, Hong, Lee, & Huang, 2021). We employ the in-house code LESGO for the DNSs. The code solves the incompressible Navier–Stokes equations. A spectral method (with the 3/2 rule for dealiasing) is used for spatial discretization in the x and z directions, and a second-order finite difference method is used in the y direction.
+
+
+E19-8 S. Altland, X. Zhu, S. McClain, R. Kunz and X. Yang
+Table 4. Grid information. Here, Nx, Ny and Nz are the grid numbers in the streamwise, wall-normal and spanwise directions, respectively; R2 is for Reτ = 180, and R4 is for Reτ = 395. The two numbers for Δy are the minimum (at the wall) and maximum (the channel centerline) wall-normal grid spacings.
+Nx × Ny × Nz Δx+ × Δy+ × Δz+ Δx/h × Δy/h × Δz/h
+R2 420 × 192 × 256 6.0 × (0.4, 3.5) × 6.0 0.033 × (0.0020, 0.018) × 0.033 R4 450 × 420 × 550 12.3 × (0.4, 3.5) × 6.1 0.031 × (0.0010, 0.0089) × 0.015
+0
+S1 S2 S3
+10–1 100 101 102
+0.5
+1.0
+fE
+f
+010–1 100 101 102
+0.5
+1.0
+f
+0
+10–1 100 101 102
+0.5
+1.0
+f
+(a) (b) (c)
+Figure 5. Premultiplied roughness spectra. The spectra are normalized by their maxima. The blue lines are the x direction spectra. The yellow lines are the z direction spectra. The vertical lines denote the grid cutoff in the Reτ = 395 DNSs.
+Time advancement uses the second-order Adam–Bashforth method. The code has been extensively used for rough-wall boundary-layer flows (Wang, Li, & Wang, 2018; Yang, Sadique, Mittal, & Meneveau, 2015; Zhu & Anderson, 2018), but most are large-eddy simulations. A DNS validation of the code can be found in Zhu, Minnick, and Gayme (2021).
+2.3. Statistical convergence
+The x-momentum equation reads
+d dy
+(
+ν d〈U〉
+dy − 〈u′v′〉 − 〈u′′v′′〉
+)
+−1
+ρ
+d〈  ̄p〉
+dx − f = 0, (2.1)
+where f is the drag force (which is 0 outside the roughness occupied region), d/dx and d/dy are total derivatives in the x and y directions, respectively (streamwise- and spanwise-averaged velocity and stresses are only functions of y), ν is the kinematic viscosity, p is the pressure, · ̄ denotes time average, φ′′ = φ ̄ − 〈φ ̄〉 and φ is a generic variable (note that φ′′
+1 φ′′
+2 ≡ φ′′
+1 φ′′
+2 for any φ1 and φ2). The terms on the left-hand side are the viscous diffusion term, the turbulent transport term, the dispersive stress term and the pressure gradient term. Integrating equation (2.1) in the y direction leads to
+ν d〈U〉
+dy − 〈u′v′〉 − 〈u′′v′′〉 = Const. + 1
+ρ
+d〈  ̄p〉
+dx y, (2.2)
+outside the roughness, i.e. a linear function of y – given statistical convergence. Equation (2.2) is often used to check the statistical convergence of a numerical simulation: a simulation is statistically converged if the sum of the viscous, turbulent and dispersive fluxes is a linear function of y (Oliver, Malaya, Ulerich, & Moser, 2014). Figure 6 shows the terms in (2.2), and a linear total flux is indeed found in our DNSs. In addition to the linear total flux, we observe the following. First, the turbulent flux is by far the most dominant term outside the roughness, and the viscous flux is notable only in the roughness occupied layer and the viscous sublayer. This is distinctly different from flows above a spanwise heterogeneous
+
+
+Flow E19-9
+–1.0 0
+y/h
+1.0
+–1.0
+–0.5
+0
+0.5
+1.0
+–1.0 0
+y/h
+1.0
+–1.0
+–0.5
+0
+0.5
+1.0
+–1.0 0
+y/h
+1.0
+–1.0
+–0.5
+0
+0.5
+1.0
+–1.0 0 1.0
+–1.0
+–0.5
+0
+Turb
+Ch10-R4 Ch20-R4 Ch30-R4
+Ch12-R4 Ch13-R4 Ch23-R4
+Disp Visc Total
+0.5
+1.0
+–1.0 0 1.0
+–1.0
+–0.5
+0
+0.5
+1.0
+–1.0 0 1.0
+–1.0
+–0.5
+0
+0.5
+1.0
+(a) (b) (c)
+(d) (e) ( f )
+Figure 6. The momentum budget. The x axis is from yb to yt rather than from yb− to yt−. The dashed lines indicate the peak locations of the roughness. Turb, Disp, Visc and Total stand for turbulent flux, dispersive flux, viscous flux and total flux, respectively. Here, normalization is by the bulk friction
+velocity uτ,b = √−1/ρ d〈 ̄p〉/dx h.
+Table 5. Flow statistics. Here, yτ is the location where the total stress is 0; yt and yb are the intended top and bottom surfaces. The superscript denotes normalization by ν/uτ,b.
+( yτ − yb)/h ( yτ − yt)/h ( yτ − yb)+ ( yτ − yt)+
+Ch10-R4 1.1 0.9 434 356 Ch20-R4 1.35 0.65 533 257 Ch30-R4 1.56 0.44 616 174 Ch12-R4 0.74 1.26 292 498 Ch13-R4 0.5 1.5 197 593 Ch23-R4 0.72 1.28 284 506
+roughness (Anderson, Li, & Bou-Zeid, 2015), where the dispersive flux is comparable to the turbulent flux. Also, the terms in (2.2) are not symmetric with respect to the channel centreline. Table 5 tabulates the locations where the total stress is 0, which we denote as yτ, and the distance between yτ and the virtual wall, which is approximately the intended channel surface, i.e. yb,t (see the discussion in § 3). The distance between yτ and yb,t in plus units measures the effective Reynolds number and is also reported. We see that a rougher surface leads to a larger distance between yτ and the virtual wall, which in turn leads to a larger effective Reynolds number. The effective Reynolds number is between 174 and 616. A more in-depth discussion on the effect of the effective Reynolds number is postponed until § 3.
+3. Results
+We present the DNS results. We focus on the Reτ = 395 cases, i.e. R4 cases, and only show the Reτ = 180 results, i.e. R2 results, for comparison purposes. In the discussion below, we adopt the
+
+
+E19-10 S. Altland, X. Zhu, S. McClain, R. Kunz and X. Yang
+0
+2 468
+x/h
+z/h
+10 12 14
+2
+4
+6
+8
+0
+2 468
+0
+5
+10
+u/uτ,b
+x/h
+10 12 14
+2
+4
+6
+8
+0
+2 468
+z/h
+10 12 14
+2
+4
+6
+8
+0
+2 4 6 8 10 12 14
+2
+4
+6
+8
+(a) (b)
+(c) (d)
+Figure 7. Contours of the instantaneous streamwise velocity in Ch23-R4 (a) at y = yb + kb/2 and (c) at y = yt − kt/2. Contours of the time-averaged streamwise velocity in Ch23-R4 at (b) at y = yb + kb/2 and (d) at y = yt − kt/2.
+following shorthand Ch[a][b]-R[c] when referring to a DNS calculation; a and b are 1, 2 or 3, and c is 2 or 4. Here, Ch[a][b]-R[c] is the Reτ = c × 102 channel whose bottom and top surfaces are S[a] and S[b].
+3.1. Basic flow phenomenology
+Figure 7 shows the contours of the instantaneous and temporally averaged streamwise velocity at distances kb/2 and kt/2 from the intended bottom and top walls in Ch23-R4, where kb = |yb+ − yb−| and kt = |yt− − yt+| and are the bottom- and top-wall roughness heights. We see streaks of momentum deficits and momentum excesses in figure 7(a,c) at the two y locations. While some of these streaks are transient, some are locked in the spanwise direction, leading to low and high momentum pathways in the mean flow, as we can see in figure 7(b,d). Similar low and high momentum pathways are often seen above spanwise heterogeneous surface roughness (Anderson et al., 2015) and large-scale roughness (Nikora et al., 2019). These are secondary flows of the second kind. In the following, we briefly review the recent literature and explain the differences. The recent literature has given much attention to this kind of secondary flow (Forooghi, Yang, & Abkar, 2020; Medjnoun, Vanderwel, & Ganapathisubramani, 2018; Stroh, Schäfer, Frohnapfel, & Forooghi, 2020; Wangsawijaya, Baidya, Chung, Marusic, & Hutchins, 2020; Yang, Xu, Huang, & Ge, 2019). A well-studied model problem is a half-channel with spanwise alternating low and high roughness on the bottom wall. The mean flow is homogeneous in the streamwise direction, and secondary flows show up as counter-rotating vortices in the spanwise–wall-normal plane, and they typically span the entire channel/half-channel. Their sizes and strengths are, by and large, controlled by the spacing of the roughness and not so much by the roughness height k. The secondary flows we see here in Ch23-R4 are somewhat different. First, we do not see apparent spanwise roughness heterogeneity in S1, S2 or S3. Also, we do not see counter-rotating vortices in the spanwise–wall-normal plane. The in-plane motions in figure 8 are weak and rather unorganized. It appears that the flows in figure 7(b,d)
+
+
+Flow E19-11
+1
+0
+02468
+10
+5
+0
+–1
+z/h
+u/uτ,b
+y/h
+Figure 8. Contours of the time-averaged streamwise velocity at a constant x location. The arrows show the in-plane motion. For visualization purposes, we show arrows between y = kb/2 and y = 2−kt/2 only.
+are what one would find in a roughness sublayer. The results from the other channel configurations are similar and are not shown here for brevity.
+3.2. Mean flow inhomogeneity
+It should be clear from figure 8 that measurements at a single spanwise–streamwise location are a poor representation of the double-averaged velocity, i.e. 〈U〉 U. Here, ‘double average’ refers to time and streamwise–spanwise averaging. In this section, we quantify the flow inhomogeneity in the streamwise and spanwise directions and determine what we need to do to get a close approximation of the doubleaveraged velocity. Figure 9(a–c) compares the hot-wire measurements in McClain et al. (2021) and our DNS data for Ch10, Ch20, Ch30. The experimental hot-wire measurements are taken at a single spanwise–streamwise location but at Reynolds numbers from O(104 − 105). The Reynolds numbers are on the high end of what we would see in real-world turbomachinery applications (Han & Chen, 2006; Nourin & Amano, 2020). The DNSs give access to the three-dimensional flow field, and we show the variation of the time-averaged velocity in the domain, which is bounded by maxx,y [U(z)] and minx,y [U(z)]. Figure 9(d) shows the variation of the time-averaged velocity in Ch30-R2 and Ch30-R4, i.e. at Reτ = 180 and Reτ = 395. These Reynolds numbers are on the low end of what we would see in the industry. In all, the Reynolds number does not impact the basic flow phenomenology, and we see large mean flow variations at both Reynolds numbers. It is interesting to note that there are non-negligible variations of the time-averaged velocity near the top smooth surface in figure 9, as the bottom roughness affects the flow near the top surface. This is consistent with the conventional rough-wall boundary-layer theory. The peak to trough height is 0.16h, 0.44h and 0.8h for the S1, S2 and S3 roughness, respectively. The height of the sublayer is usually 3 to 5 times the roughness’ peak to trough height, giving rise to roughness sublayers that are 0.48h − 0.8h, 1.32h − 2.2h and 2.4h − 4h for S1, S2 and S3. The channel height is 2h. We can therefore expect that the roughness sublayer on one side affects the flow on the other side. Moreover, the two roughness sublayers overlap when we put two rough surfaces opposite to each other. This is what we see in figure 10: the two roughness sublayers overlap, and maxx,y [U(z)] − minx,y [U(z)] maintains a large value throughout the channel in Ch12, Ch13 and Ch23. We can more formally quantify the mean flow’s variation by applying the following triple decomposition to the velocity and examining the dispersive stress. The triple decomposition reads (Finnigan, 2000)
+u = 〈U〉 + u′′ + u′, (3.1)
+where u is the instantaneous velocity, 〈U〉 is the double-averaged velocity, u′ is the temporal fluctuation at a given spatial location and u′′ is the spatial variation of the mean flow in the streamwise and spanwise directions. The above triple decomposition may be applied to the other two velocity components, but we are only interested in the streamwise component. The r.m.s. of u′′ gives a formal quantification of the mean flow variation in the wall-parallel directions. Figure 11 shows ur′′m+s in the vicinity of S1,
+
+
+E19-12 S. Altland, X. Zhu, S. McClain, R. Kunz and X. Yang
+1.0
+0.5
+0
+1.0
+0.5
+0
+1.0
+0.5
+0
+1.0
+0.5
+0
+0 1 20 1 2
+0 1 20 1 2
+Ch10-R4 Ch20-R4
+Ch30-R4 Ch30-R2/R4
+y/h y/h
+U/max(U ) U/max(U )
+(a) (b)
+(c) (d )
+Figure 9. Velocity profiles in Ch10-R4, Ch20-R4, Ch30-R4 and Ch30-R2. The symbols in (a–c) are hotwire measurements at one streamwise–spanwise location (McClain et al., 2021). The shaded regions show the variations of the time-averaged streamwise velocity in the domain. The coloured solid lines are the double-averaged velocities in the R4 DNSs. The light and dark shades in (d) show the variation of the time-averaged velocity in Ch30-R4 and Ch30-R2, respectively. Normalization is by the maximum value of the double-averaged velocity. The vertical dashed lines indicate the peak locations of the surface roughness.
+1.0
+0.5
+0
+012
+1.0
+0.5
+0
+012
+1.0
+0.5
+0
+012
+y/h y/h y/h
+Ch12-R4 Ch13-R4 Ch23-R4
+U/max(U )
+(a) (b) (c)
+Figure 10. Same as figure 9(a–c) but for Ch12-R4, Ch13-R4 and Ch23-R4.
+S2 and S3. Each rough surface appears three times in the six channel configurations, leading to the three lines in figure 11(a–c). We make the following observations. First, the lines do not collapse. The dispersive stress ur′′m+s above a rough surface is visibly affected by the roughness on the opposite wall,
+particularly when the other rough surface is rougher. Second, the dispersive stress ur′′m+s is non-negligible
+and is larger above a rougher surface. The value is approximately ur′′m+s ≈ 1 above S3. If we follow the conventional rough-wall boundary-layer theory, we must conclude that there are no logarithmic layers in these super-rough channels, a topic we will discuss more in § 3.3. Here, we discuss how we can get a close approximation of the double-averaged velocity in a laboratory experiment. If only one-dimensional measurements like hot-wire are available, measurements at sufficiently many locations are required to determine the average. If two-dimensional (2-D)
+
+
+Flow E19-13
+3
+2
+1
+0 0.5 1.0
+3
+2
+1
+0 0.5 1.0
+3
+2
+1
+0 0.5 1.0
+Ch10-R4 Ch12-R4 Ch13-R4
+Ch20-R4 Ch12-R4 Ch23-R4
+Ch30-R4 Ch13-R4 Ch23-R4
+y/h y/h y/h
+S1 S2 S3
+u′′ +
+rms
+(a) (b) (c)
+Figure 11. Dispersive stress ur′′m+s near S1, S2 and S3. The plots cutoff at y/h = 1 or 〈U〉 = max[〈U〉]. Here, normalization is by the friction velocity uτ.
+measurements are available, like particle image velocimetry (PIV), which has been used in roughwall boundary-layer experiments (Gul & Ganapathisubramani, 2021; Medjnoun et al., 2021; Talapatra & Katz, 2012), we may be able to take averages directly in a 2-D plane. The 2-D plane may be the streamwise–wall-normal plane or the spanwise–wall-normal plane. Because the measurement window is always limited in a laboratory experiment, a practical question is in which direction is averaging more effective. Figure 12 compares spanwise averaging and streamwise averaging. We average in the x and z direction at the scale lx = 14h(= Lx) and lz = 8.5h(= Lz) and plot the variation of the averaged velocity in the domain. We see that spanwise averaging is generally more effective than streamwise averaging in reducing mean flow variation both within and outside the roughness-occupied layers. This is not surprising as the velocity correlation decays quickly in the spanwise direction than the streamwise direction, and the same filtration length covers more statistically independent samples in the spanwise direction than the streamwise direction. If we regard the streamwise- or the spanwise-averaged velocity at a single spanwise or streamwise location to be an estimate of the double-averaged velocity, the error in that estimate can be quantified as
+Err = 1
+Ly
+∫ yt−
+yb−
+(
+mz,axx[U ̃ +
+lx,z ] − mz,ixn[U ̃ +
+lx,z ]
+)
+dy, (3.2)
+where  ̃· denotes streamwise or spanwise averaging at a scale lx/z. This error represents the average width of the shaded region in figure 12, as a function of the averaging scale. Figure 13 shows the error as a function of the averaging length scale. For both streamwise and spanwise averaging, spatial averaging is, in general, more effective in reducing the error for less rough channels, where there is less variation in the mean flow to begin with. However, there are exceptions. For example, streamwise averaging is more effective for Ch23, the rougher channel, than Ch20, the less rough channel. Additionally, we see diminished returns from both streamwise and spanwise averaging, and the error reduces very slowly as the averaging length increases beyond a 1 to 2 half-channel heights. Last, we see spanwise averaging is more effective in reducing the error, which is consistent with figure 12. Before proceeding to the next section, we make a few additional remarks about the Reynolds number. The Reynolds numbers of many engineering flows are high – too high for DNSs. If DNSs are used to study these flows, making sure that the simulations are in the fully rough regime is important. The logic is that, since the Reynolds number does not play an important role in the fully rough regime, the lower Reynolds number simulation result should still apply to the real-world high Reynolds number flows as long as the simulations are also in the fully rough regime. The above is the conventional wisdom. However, ensuring that our simulations are in the fully rough regime is not crucial here, and the conventional wisdom does not apply. Unlike many engineering flows, the Reynolds numbers of the flows in cooling channels are not that high. The bulk Reynolds number in these flows range from a few thousand to tens of thousands (Chyu & Siw, 2013; Nourin & Amano, 2020). Here, we want to know the role played by the Reynolds number rather than ensuring that the Reynolds number does not play a
+
+
+E19-14 S. Altland, X. Zhu, S. McClain, R. Kunz and X. Yang
+20
+15
+10
+5
+–5
+0
+0 0.5 1.0 1.5 2.0 0 0.5 1.0 1.5 2.0 0 0.5 1.0 1.5 2.0
+20
+15
+10
+5
+–5
+0
+20
+15
+10
+5
+–5
+0
+20
+15
+10
+5
+–5
+0
+0 0.5 1.0 1.5 2.0 0 0.5 1.0 1.5 2.0 0 0.5 1.0 1.5 2.0
+20
+15
+10
+5
+–5
+0
+20
+15
+10
+5
+–5
+0
+y/h y/h y/h
+Ch10-R4 Ch20-R4 Ch30-R4
+Ch12-R4 Ch13-R4 Ch23-R4
+U ̃/uτ,b
+U ̃/uτ,b
+No avg x Avg, lx = 14 z Avg, lz = 8.5
+(a) (b) (c)
+(d ) (e) ( f )
+Figure 12. Mean velocity. The shades show the variation of the mean velocity when the data are not subjected to any spatial filtration, when the data are subjected to streamwise filtration of lx = 14h and when the data are subjected to spanwise filtration of lz = 8.5h.
+6
+4
+2
+0 5 10 15
+6
+4
+2
+0 5 10 15
+x dir avg z dir avg
+Err
+lx/h lz/h
+Ch10-R4 Ch20-R4 Ch30-R4 Ch12-R4 Ch13-R4 Ch23-R4
+(a) (b)
+Figure 13. The error in the mean velocity when one applies (a) streamwise averaging of size lx and (b) spanwise averaging of size lz.
+significant role. Figure 14 compares the double-averaged velocities in the Reτ = 180 and the Reτ = 395 cases. The bulk Reynolds number is approximately 1000 in Ch23-R2, and more than 5000 in Ch10-R4. We see that the Reynolds number affects the mean flow, but its impact is small compared with that of the surface roughness. Hence, we can safely say that conclusions we draw from the Reτ = 395 cases about the mean flow inhomogeneity should apply to flows at other Reynolds numbers.
+3.3. Mean flow scaling
+If we follow the logic of the conventional rough-wall boundary-layer theory, we would have to conclude that there cannot be a logarithmic layer in these super rough channels, nor mean flow universality. The results, however, contradict these expectations. Figure 15 shows the double-averaged streamwise velocities near the three rough surfaces and the flat plate. The flow is asymmetric with respect to the channel centreline because of the disparate roughnesses on the top and bottom walls. As a result, the profiles bend down, i.e. arrive at dU/dy = 0, at different locations even above the same surface. In
+
+
+Flow E19-15
+20
+15
+10
+5
+0 12
+20
+15
+10
+5
+0 12
+20
+15
+10
+5
+0 12
+20
+15
+10
+5
+0 12
+20
+15
+10
+5
+0 12
+20
+15
+10
+5
+0 12
+y/h y/h y/h
+U/uτ,b U/uτ,b
+Ch10 Ch20 Ch30
+Ch12 Ch13 Ch23
+(a) (b) (c)
+(d) (e) ( f )
+Re = 180 Re = 395
+Figure 14. Mean velocity. Dashed lines are R4, i.e. Reτ = 395, results, and solid lines are R2, i.e. Reτ = 180, results.
+figure 15, we see clear logarithmic behaviours as well as mean flow universality. More specifically, the mean flow follows the regular smooth-wall law of the wall above S0 and a logarithmic scaling above the surface roughness on S1, S2 and S3, and the profiles collapse irrespective of the surface on the other side. Also shown in figure 15 are predictions of two roughness models, a result we will discuss in § 3.4. It should be noted that normalization here is by the friction velocity uτ and not uτ,b. Although why the mean flow exhibits a logarithmic behaviour in the roughness sublayer is not clear, this is certainly a convenient fact from an engineering perspective. It means that the logarithmic scaling in (1.1) can be used to describe the flow in a super-rough channel. The scaling in (1.1) contains two unknowns, i.e. the equivalent roughness height yo and the zero-plane displacement height d. We fit the mean velocity profile for these two parameters. The fitting is conducted between y1 = yb/t+ and y2 = yb/t+ ± 0.4|yc − yt/b+|, where dU/dy = 0 at yc. The fitted values of yo and d are reported in table 3. Here, we report the raw values, i.e. yo and d normalized by the half-channel height. The three surfaces yield distinctly different equivalent roughness heights, with S1 yielding yo/h ≈ 1.0 × 10−3, S2 yielding yo/h ≈ 8.0 × 10−3 and S3 yielding yo/h ≈ 3.7 × 10−2. The yo values for the same rough surface do vary depending on the rough surface on the other side, but the variation is within the expected uncertainty. The zero-plane displacement heights in table 3 are measured from the intended channel surface, with a positive value denoting a zero displacement height above the intended channel surface and a negative value denoting a zero-plane displacement height below the intended channel surface. Compared with the roughness peak to trough heights, the zero-plane displacements are small, suggesting that the virtual walls are approximately at the intended channel surfaces. This should be a mere coincidence. We plot U/uτ as a function of ( y − d)+ in figure 16. Four groups of profiles emerge, which correspond to the profiles above S0, S1, S2 and S3, respectively. A rougher surface incurs a larger drag penalty, producing a group of profiles further away from the smooth-wall law of the wall. The profiles in each group collapse reasonably well, and they all exhibit a logarithmic behaviour.
+3.4. Roughness modelling
+If we accept (1.1) as a working approximation of the mean flow in super-rough channels, a practical engineering question is whether the existing models still work. Roughness modelling is a very old topic,
+
+
+E19-16 S. Altland, X. Zhu, S. McClain, R. Kunz and X. Yang
+20
+15
+10
+5
+0
+20
+15
+10
+5
+0
+20
+15
+10
+5
+0
+20
+15
+10
+5
+0
+100 101 10–1 100
+10–1
+10–2 100
+10–1 100
+102
+y/h y/h
+U/uτ
+U/uτ
+S0 S1
+S2 S3
+Ch10-R4 Ch20-R4 Ch30-R4
+Ch10-R4 Ch12-R4 Ch13-R4
+Ch20-R4 Ch12-R4 Ch23-R4
+Ch30-R4 Ch13-R4 Ch23-R4 YSMM16 FS10
+(a) (b)
+(c) (d)
+Figure 15. Mean velocity near (a) surface S0, (b) surface S1, (c) surface S2 and (d) surface S3. The black solid lines in (a) correspond to U+ = y+ and U+ = log( y+)/κ + B. The vertical lines in (b–d) indicate the peak locations of the surface roughness. The solid red lines correspond to the predictions of the sheltering model in Yang et al. (2016). The dashed red lines correspond to the predictions of the roughness correlation in Flack and Schultz (2010). Here, normalization is by the friction velocity
+uτ = √D/ρ, where D is the drag force on the bottom/top wall.
+and many models exist (Chung et al., 2021; Flack & Schultz, 2010). Comparing all the available models for the roughness encountered in additively manufactured cooling channels is lengthy and falls out of the scope of this work. Here, we compare two models, namely the algebraic model in Flack and Schultz (2010) and the flow sheltering model in Yang et al. (2016). The model in Flack and Schultz (2010) reads
+ks = akrms (1 + sk)b, (3.3)
+where ks is the equivalent sandgrain roughness height and is directly related to the equivalent roughness height yo as shown in (1.1), krms is the r.m.s. of the surface roughness, sk is the skewness of the surface roughness and a, b are calibration coefficients. The model is intended for small engineering roughnesses for which the zero-plane displacement height is small compared with the boundary-layer height. This is not true for the roughness considered in this work, but since the virtual wall is approximately at the intended wall, we take yd = yb/t, where yd is the y coordinate of the virtual wall. Also, for the roughness considered here, sk ≈ 0, and (3.3) reduces to
+ks ≈ akrms. (3.4)
+Flack and Schultz (2010) calibrated their model against a range of engineering roughness and arrived at a = 4.43 and b = 1.37.
+
+
+Flow E19-17
+Profiles above S0
+Profiles above S1
+Profiles above S2
+Profiles above S3
+Profiles in Ch23-R4
+Bold lines Profiles above roughness crest
+Thin lines Profiles below roughness crest
+15
+20
+10
+5
+0
+100 101 102 103
+U/uτ
+( y – d)+
+Ch10-R4 Ch20-R4 Ch30-R4 Ch12-R4 Ch13-R4 Ch23-R4
+Figure 16. This figure shows the velocity profiles above all surfaces in all R4 cases. Each profile is cutoff at dU/dy = 0. Each channel has two walls, which lead to two profiles for each channel configuration and 12 profiles in total. We use the same colour for two profiles in the same channel configuration. For example, the two profiles in Ch23-R4 are both in cyan. Each surface appears three times. For example, surface S3 appears in Chan13, Chan23 and Chan30, leading to three profiles above surface S3. Surfaces S0, S1, S2 and S3 are increasingly rough and lead to increasingly large roughness functions (downward shift as compared with the smooth-wall logarithmic law). Hence, we see four groups of profiles with profiles above surface S0 at the top and profiles above surface S3 at the bottom. In addition, we use bold lines for the profiles above the roughness-occupied layer and thin lines for the profiles within the roughness-occupied layer.
+The sheltering model in Yang et al. (2016) is yet another roughness model. It begins by invoking the following ansatz for the velocity profile in the boundary layer:
+U = Uk exp
+(
+ay − k
+k
+)
+, for y < k,
+U = uτ
+κ log
+(y − d
+y0
+)
++ 2Π
+κ W( y/δ), for y > k,
+⎫⎪⎪⎪⎪⎬
+⎪⎪⎪⎪⎭
+(3.5)
+where Uk is the velocity at the roughness crest, W( y/δ) is the wake function and Π is the wake parameter (Coles, 1956). There are five unknowns in the profile, i.e. Uh, a, uτ, d and y0. Four constraints can be easily identified: firstly, the velocity must be continuous at y = h; secondly, the velocity must be equal to the free-stream velocity at y = δ; thirdly, the momentum flux ρu2τ must equal the drag force on the roughness; fourthly, d equals the height at which the effective drag acts (Jackson, 1981). The fifth constraint is given by modelling the wake interactions among the surface roughness. The basic idea is that a roughness element in the wake of another roughness element exerts less drag force on the flow than a roughness element fully exposed to the incoming fluid. Figure 17(a) is a sketch of the sheltering behind a leeward point. The sheltering downstream of all leeward points on a leeward surface gives the sheltering behind a roughness element. For example, figure 17(b) shows the sheltering behind a frustum. The volume of sheltering contracts in the wall-normal direction and expands in the cross-flow direction. The expansion/contraction rate is θ = uτ/Uc, where Uc is a convective velocity and is often taken to be the velocity at the roughness crest. Figure 17(d) shows the sheltering among the roughness in figure 17(c), which is a cut from surface S3. The user must supply the sectional drag
+
+
+E19-18 S. Altland, X. Zhu, S. McClain, R. Kunz and X. Yang
+1 0
+5
+0
+5
+10
+10
+0.4 0
+2
+0
+2
+4
+4
+0.4 0
+2
+0
+2
+4
+4
+zx x
+x
+z
+z
+2θ
+θ
+A leeward point Flow direction
+θ = Uh
+uτ
+(a) (b)
+(c) (d)
+Figure 17. (a) A sketch of the sheltering behind a leeward point. (b) A sketch of the sheltering behind a frustum. (c) A cut from S3. (d) Flow sheltering on the roughness in (c). The flow is from the −x to the +x direction.
+coefficient of an unsheltered roughness element, for which we use Cd = 0.7 (Coceal & Belcher, 2004; Delany & Sorensen, 1953; Santiago, Coceal, Martilli, & Belcher, 2008). Further details of the model can be found in Yang et al. (2016) and are not presented here for brevity. It is worth noting that Yang et al. (2016) neglected the dispersive stress and assumed horizontal homogeneity above the surface roughness, and therefore it is not clear if the sheltering model in Yang et al. (2016) still applies to the roughness in an additively manufactured super-channel. Figure 15 compares the two models with the DNS data. The algebraic model over-predicts the equivalent roughness height for S1, accurately predicts of the equivalent roughness height for S2 and under-predicts for S3. The sheltering model, on the other hand, is quite robust.
+4. Conclusions
+Additively manufactured cooling channels are super-rough with the roughness’ trough to peak height comparable to the half-channel height. Large roughness on the channel’s top and bottom surfaces give rise to thick roughness sublayers that overlap. Flow in such super-rough channels is directly influenced by the roughness on both surfaces and therefore lacks streamwise/spanwise homogeneity anywhere in the channel. A direct consequence is that measurements at one streamwise/spanwise location, e.g. hot-wire measurements at one streamwise/spanwise location, give only poor approximations of the doubleaveraged velocity – a consideration that received little attention in the recent research on additively manufactured cooling channels. Streamwise or spanwise averaging, which is available from PIV, is needed to gain an accurate estimate of the double-averaged velocity, and analysis shows that spanwise averaging is very effective. For the roughness considered here, spanwise filtration at the length scale 5h gives good approximation of the double-averaged profile. Because the roughness sublayers are thick, if one follows the conventional rough-wall boundary-layer theory to its logical conclusion, one must conclude that the logarithmic layer cannot survive and that the velocity on the one side of the channel depends on the rough surface on the other side. This, however, is not what we see in the data. The results show that the logarithmic law of the wall is a good working
+
+
+Flow E19-19
+approximation of the double-averaged velocity almost immediately above the roughness’ crest. Although it is not clear why the double-averaged flow is logarithmic in the roughness sublayer, it is undoubtedly convenient. From a practical engineering perspective, we can parameterize the additively manufactured surface roughness in these super-rough channels in a similar fashion to small engineering roughness. Comparing all existing roughness models for additively manufactured roughness would be very lengthy, so here we compared two models, i.e. the algebraic roughness function in Flack and Schultz (2010) and the sheltering roughness model in Yang et al. (2016). Both models rely on the existence of a logarithmic layer. According to the classic turbulence theory, a logarithmic layer emerges at a wall-normal distance y such that y k and y δ. In a super-rough channel, the roughness height k is comparable to the half-channel height δ, and therefore a logarithmic layer in its conventional sense cannot exist. Hence, there is, in principle, no reason why the conventional models should still work, and this can help to explain why the model in Flack and Schultz (2010) does not do very well. Nonetheless, we show that the sheltering model is robustly accurate – although further investigation is needed to understand if this is just fortuitous. Flow in additively manufactured super-rough channels is a new flow problem. We take a practical perspective on this flow problem and answer a few relevant engineering questions. These include how to get the double-averaged velocity profiles, what the double-averaged velocity looks like and whether the existing roughness models still work. Future work will take a more fundamental perspective, and we will try to answer the question of why the logarithmic layer co-exists with the roughness sublayer.
+Acknowledgements. The DNSs were performed on ACI-ICS at Penn State.
+Declaration of interests. The authors declare no conflict of interest.
+Funding statement. S.A., S.M., R.K., and X.Y. are supported by the Department of Energy under Award Number(s) DEFE0001730. R.K. and X.Y. also acknowledge support from the National Science Foundation under award number 2231037.
+Data availability statement. Raw data are available from the corresponding author.
+References
+Amir, M., & Castro, I.P. (2011). Turbulence in rough-wall boundary layers: Universality issues. Experiments in Fluids, 51(2), 313–326. Anderson, W., Li, Q., & Bou-Zeid, E. (2015). Numerical simulation of flow over urban-like topographies and evaluation of turbulence temporal attributes. Journal of Turbulence, 16(9), 809–831. Anderson, W., & Meneveau, C. (2011). Dynamic roughness model for large-eddy simulation of turbulent flow over multiscale, fractal-like rough surfaces. Journal of Fluid Mechanics, 679, 288–314. Bons, J.P., Taylor, R.P., McClain, S.T., & Rivir, R.B. (2001). The many faces of turbine surface roughness. Journal of Turbomachinery, 123, 739–748.
+Castro, I.P. (2007). Rough-wall boundary layers: Mean flow universality. Journal of Fluid Mechanics, 585, 469–485. Chan, L., MacDonald, M., Chung, D., Hutchins, N., & Ooi, A. (2015). A systematic investigation of roughness height and wavelength in turbulent pipe flow in the transitionally rough regime. Journal of Fluid Mechanics, 771, 743–777. Chan, L., MacDonald, M., Chung, D., Hutchins, N., & Ooi, A. (2018). Secondary motion in turbulent pipe flow with threedimensional roughness. Journal of Fluid Mechanics, 854, 5–33. Choi, H., & Moin, P. (2012). Grid-point requirements for large eddy simulation: Chapman’s estimates revisited. Physics of Fluids, 24(1), 011702. Chung, D., Chan, L., MacDonald, M., Hutchins, N., & Ooi, A. (2015). A fast direct numerical simulation method for characterising hydraulic roughness. Journal of Fluid Mechanics, 773, 418–431. Chung, D., Hutchins, N., Schultz, M.P., & Flack, K.A. (2021). Predicting the drag of rough surfaces. Annual Review of Fluid Mechanics, 53, 439–471.
+Chyu, M.K., & Siw, S.C. (2013). Recent advances of internal cooling techniques for gas turbine airfoils. Journal of Thermal Science and Engineering Applications, 5, 021008.
+Coceal, O., & Belcher, S. (2004). A canopy model of mean winds through urban areas. Quarterly Journal of the Royal Meteorological Society, 130(599), 1349–1372.
+Coceal, O., Thomas, T.G., Castro, I.P., & Belcher, S.E. (2006). Mean flow and turbulence statistics over groups of urban-like cubical obstacles. Boundary-Layer Meteorology, 121(3), 491–519. Coles, D. (1956). The law of the wake in the turbulent boundary layer. Journal of Fluid Mechanics, 1(2), 191–226.
+
+
+E19-20 S. Altland, X. Zhu, S. McClain, R. Kunz and X. Yang
+Delany, N.K., & Sorensen, N.E. (1953). Low speed drag of cylinders of various shapes (Technical Report NACA-TN-3038). National Advisory Committee for Aeronautics. Finnigan, J. (2000). Turbulence in plant canopies. Annual Review of Fluid Mechanics, 32(1), 519–571. Flack, K.A., & Schultz, M.P. (2010). Review of hydraulic roughness scales in the fully rough regime. Journal of Fluids Engineering, 132(4), 041203. Flack, K.A., Schultz, M.P., & Barros, J.M. (2020). Skin friction measurements of systematically-varied roughness: Probing the role of roughness amplitude and skewness. Flow, Turbulence and Combustion, 104(2), 317–329. Forooghi, P., Stroh, A., Magagnato, F., Jakirlić, S., & Frohnapfel, B. (2017). Toward a universal roughness correlation. Journal of Fluids Engineering, 139(12), 121201.
+Forooghi, P., Yang, X.I.A., & Abkar, M. (2020). Roughness-induced secondary flows in stably stratified turbulent boundary layers. Physics of Fluids, 32(10), 105118.
+Gul, M., & Ganapathisubramani, B. (2021). Revisiting rough-wall turbulent boundary layers over sand-grain roughness. Journal of Fluid Mechanics, 911, A26.
+Han, J.-C., & Chen, H.-C. (2006). Turbine blade internal cooling passages with rib turbulators. Journal of Propulsion and Power, 22(2), 226–248. Hultmark, M., Vallikivi, M., Bailey, S.C.C., & Smits, A. (2012). Turbulent pipe flow at extreme Reynolds numbers. Physical Review Letters, 108(9), 094501.
+Hutchins, N., Nickels, T.B., Marusic, I., & Chong, M. (2009). Hot-wire spatial resolution issues in wall-bounded turbulence. Journal of Fluid Mechanics, 635, 103–136.
+Jackson, P. (1981). On the displacement height in the logarithmic velocity profile. Journal of Fluid Mechanics, 111, 15–25. Jelly, T.O., Jung, S.Y., & Zaki, T.A. (2014). Turbulence and skin friction modification in channel flow with streamwise-aligned superhydrophobic surface texture. Physics of Fluids, 26(9), 095102. Jiménez, J. (2004). Turbulent flows over rough walls. Annual Review of Fluid Mechanics, 36, 173–196. Jouybari, M.A., Yuan, J., Brereton, G.J., & Murillo, M.S. (2021). Data-driven prediction of the equivalent sand-grain height in rough-wall turbulent flows. Journal of Fluid Mechanics, 912, A8. Kim, J., Moin, P., & Moser, R. (1987). Turbulence statistics in fully developed channel flow at low Reynolds number. Journal of Fluid Mechanics, 177, 133–166.
+Lee, M., & Moser, R.D. (2015). Direct numerical simulation of turbulent channel flow up to Reτ = 5200. Journal of Fluid Mechanics, 774, 395–415.
+Leonardi, S., & Castro, I.P. (2010). Channel flow over large cube roughness: A direct numerical simulation study. Journal of Fluid Mechanics, 651, 519–539.
+MacDonald, M., Ooi, A., García-Mayoral, R., Hutchins, N., & Chung, D. (2018). Direct numerical simulation of high aspect ratio spanwise-aligned bars. Journal of Fluid Mechanics, 843, 126–155. Marusic, I., Monty, J.P., Hultmark, M., & Smits, A.J. (2013). On the logarithmic region in wall turbulence. Journal of Fluid Mechanics, 716, R3.
+McClain, S.T., Hanson, D.R., Cinnamon, E., Snyder, J.C., Kunz, R.F., & Thole, K.A. (2021). Flow in a simulated turbine blade cooling channel with spatially varying roughness caused by additive manufacturing orientation. Journal of Turbomachinery, 143(7), 071013. Medjnoun, T., Rodriguez-Lopez, E., Ferreira, M., Griffiths, T., Meyers, J., & Ganapathisubramani, B. (2021). Turbulent boundarylayer flow over regular multiscale roughness. Journal of Fluid Mechanics, 917, A1. Medjnoun, T., Vanderwel, C., & Ganapathisubramani, B. (2018). Characteristics of turbulent boundary layers over smooth surfaces with spanwise heterogeneities. Journal of Fluid Mechanics, 838, 516–543. Moser, R.D., Kim, J., & Mansour, N.N. (1999). Direct numerical simulation of turbulent channel flow up to Reτ = 590. Physics of Fluids, 11(4), 943–945. Nikora, V., Stoesser, T., Cameron, S.M., Stewart, M., Papadopoulos, K., Ouro, P., . . . Falconer, R.A. (2019). Friction factor decomposition for rough-wall flows: Theoretical background and application to open-channel flows. Journal of Fluid Mechanics, 872, 626–664. Nourin, F.N., & Amano, R.S. (2020). Review of gas turbine internal cooling improvement technology. Journal of Energy Resources Technology, 143(8), 080801.
+Oliver, T.A., Malaya, N., Ulerich, R., & Moser, R.D. (2014). Estimating uncertainties in statistics computed from direct numerical simulation. Physics of Fluids, 26(3), 035101. Örlü, R., Fiorini, T., Segalini, A., Bellani, G., Talamelli, A., & Alfredsson, P.H. (2017). Reynolds stress scaling in pipe flow turbulence–first results from ciclope. Philosophical Transactions of the Royal Society A, 375(2089), 20160187. Santiago, J., Coceal, O., Martilli, A., & Belcher, S. (2008). Variation of the sectional drag coefficient of a group of buildings with packing density. Boundary-Layer Meteorology, 128(3), 445–457.
+Schlichting, H., & Gersten, K. (2003). Boundary-layer theory. Springer Science & Business Media. Sharma, A., & García-Mayoral, R. (2020). Turbulent flows over dense filament canopies. Journal of Fluid Mechanics, 888, A2. Stafford, G.J., McClain, S.T., Hanson, D.R., Kunz, R.F., & Thole, K.A. (2021). Convection in scaled turbine internal cooling passages with additive manufacturing roughness. Journal of Turbomachinery, 144(4), 041008. Stimpson, C.K., Snyder, J.C., Thole, K.A., & Mongillo, D. (2016). Roughness effects on flow and heat transfer for additively manufactured channels. Journal of Turbomachinery, 138(5), 051008.
+
+
+Flow E19-21
+Stroh, A., Schäfer, K., Frohnapfel, B., & Forooghi, P. (2020). Rearrangement of secondary flow over spanwise heterogeneous roughness. Journal of Fluid Mechanics, 885, R5.
+Talapatra, S., & Katz, J. (2012). Coherent structures in the inner part of a rough-wall channel flow resolved using holographic PIV. Journal of Fluid Mechanics, 711, 161–170.
+Thom, A.S. (1971). Momentum absorption by vegetation. Quarterly Journal of the Royal Meteorological Society, 97, 414–428. Wang, C., Li, Q., & Wang, Z.-H. (2018). Quantifying the impact of urban trees on passive pollutant dispersion using a coupled large-eddy simulation–lagrangian stochastic model. Building and Environment, 145, 33–49. Wang, G., & Zheng, X. (2016). Very large scale motions in the atmospheric surface layer: A field investigation. Journal of Fluid Mechanics, 802, 464–489.
+Wang, M., Wang, Q., & Zaki, T.A. (2019). Discrete adjoint of fractional-step incompressible Navier–Stokes solver in curvilinear coordinates and application to data assimilation. Journal of Computational Physics, 396, 427–450. Wangsawijaya, D.D., Baidya, R., Chung, D., Marusic, I., & Hutchins, N. (2020). The effect of spanwise wavelength of surface heterogeneity on turbulent secondary flows. Journal of Fluid Mechanics, 894, A7. Xu, H.A.H., Altland, S., Yang, X.I.A., & Kunz, R.F. (2021). Flow over closely packed cubical roughness. Journal of Fluid Mechanics, 920, A37.
+Yang, X.I.A., & Griffin, K.P. (2021). Grid-point and time-step requirements for direct numerical simulation and large-eddy simulation. Physics of Fluids, 33(1), 015108. Yang, X.I.A., Hong, J., Lee, M., & Huang, X.L. (2021). Grid resolution requirement for resolving rare and high intensity wall-shear stress events in direct numerical simulations. Physical Review Fluids, 6(5), 054603. Yang, X.I.A., & Meneveau, C. (2017). Modelling turbulent boundary layer flow over fractal-like multiscale terrain using large-eddy simulations and analytical tools. Philosophical Transactions of the Royal Society A, 375(2091), 20160098. Yang, X.I.A., Sadique, J., Mittal, R., & Meneveau, C. (2015). Integral wall model for large eddy simulations of wall-bounded turbulent flows. Physics of Fluids, 27(2), 025112. Yang, X.I.A., Sadique, J., Mittal, R., & Meneveau, C. (2016). Exponential roughness layer and analytical model for turbulent boundary layer flow over rectangular-prism roughness elements. Journal of Fluid Mechanics, 789, 127–165. Yang, X.I.A., Xu, H.H.A., Huang, X.L.D., & Ge, M.-W. (2019). Drag forces on sparsely packed cube arrays. Journal of Fluid Mechanics, 880, 992–1019.
+Yuan, J., & Piomelli, U. (2014). Roughness effects on the Reynolds stress budgets in near-wall turbulence. Journal of Fluid Mechanics, 760, R1.
+Zhu, X., & Anderson, W. (2018). Turbulent flow over urban-like fractals: Prognostic roughness model for unresolved generations. Journal of Turbulence, 19(11–12), 995–1016. Zhu, X., Minnick, B.A., & Gayme, D.F. (2021). A restricted nonlinear model for turbulent flow over riblets. Manuscript in preparation.
+Cite this article: Altland S, Zhu X, McClain S, Kunz R, Yang X (2022). Flow in additively manufactured super-rough channels. Flow, 2, E19. doi:10.1017/flo.2022.13

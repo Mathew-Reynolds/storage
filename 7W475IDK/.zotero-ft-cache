@@ -1,0 +1,52 @@
+Skip to main content
+Skip main navigation
+Conference Proceeding HomeFor Authors AIAA SciTech Forum Home
+Skip to article control options
+No Access
+An Open Tool for the Design of Cooling Channels Within Regeneratively Cooled Liquid Rocket Engines
+AIAA 2025-2127
+Session: Liquid Propulsion Design, Analysis, Testing, and Operation IV
+Published Online:3 Jan 2025https://doi.org/10.2514/6.2025-2127
+ 
+Abstract:
+
+Cooling channels are typically incorporated into the walls of the nozzle, throat and chamber of a liquid rocket engine to ensure the structure remains within thermo-mechanical limits. Regenerative cooling is typically achieved using cooling channels of varying geometry across the engine, however modelling the non-linear heat transfer in this system can be difficult. This paper follows the development of a MATLAB program for the purpose of designing cooling channel geometries within regeneratively cooled engines. Specifically, the program includes an evaluation of steady-state regenerative cooling and convective and radiative heat transfer. The program assesses the temperature-dependent stresses exerted on the chamber wall and finds the safety factor of the chamber wall during both hot-fire and pre-combustion. Results are in the process of being validated using alternative design programs and empirically. This software module is part of the Open Rocket Combustion Analysis (ORCA) application, created by a researchers at the University of Glasgow. ORCA has been developed to be a freely distributed numerical tool designed to generate a contour profile for a rocket nozzle to suit user-defined specifications. This module adds the functionality of designing regeneratively cooled channels to the software.
+
+ Previous Chapter
+Next Chapter
+Back
+Publications
+Journals
+Books
+Meeting Papers
+Standards
+Resources For
+Authors
+Booksellers
+Companies
+Educators
+Librarians
+Researchers
+Standards Contributors
+Students
+Information
+How to Order
+How to Videos
+About Publications
+License Agreement
+FAQs
+Publish with Us
+Rights & Permissions
+Send Us Your Feedback
+Advertise on ARC
+Connect
+Announcements
+Contact Us
+Join AIAA
+© 2025 American Institute of Aeronautics and Astronautics
+American Institute of Aeronautics and Astronautics
+12700 Sunrise Valley Drive, Suite 200
+Reston, VA 20191-5807
+703.264.7500
+    
+Privacy Policy Terms of Use

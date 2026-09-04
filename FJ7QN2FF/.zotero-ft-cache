@@ -1,0 +1,853 @@
+applied sciences
+Article
+On the Adoption of Global/Local Approaches for the Thermomechanical Analysis and Design of Liquid Rocket Engines
+Michele Ferraiuolo 1,* , Michele Leo 2 and Roberto Citarella 2
+1 Italian Aerospace Research Center (CIRA), via Maiorise snc, 81043 Capua, Italy 2 Department of Industrial Engineering, University of Salerno, via Giovanni Paolo II 132, 84084 Fisciano (SA), Italy; m.leo26@studenti.unisa.it (M.L.); rcitarella@unisa.it (R.C.) * Correspondence: m.ferraiuolo@cira.it; Tel.: +39-0823-623-933
+Received: 8 September 2020; Accepted: 26 October 2020; Published: 29 October 2020
+Abstract: Large Liquid Rocket Engines for Aerospace applications usually need to be cooled regeneratively since they are characterized by high pressure levels and heat flux with the presence, in the inner structure, of very high thermal gradients—thus necessitating the adoption of elastic-plastic nonlinear material models to study the thermomechanical behavior of the chamber and its service life. Tackling such nonlinearity makes the finite element analyses computationally intensive, particularly so when dealing with three-dimensional models. In these instances, it is highly recommended to adopt optimized numerical approaches that can save computation time while maintaining high levels of accuracy. The aim of the present paper is to implement an iterative coupling technique between two finite element models, a Global linear model and a Local nonlinear one, in the framework of a Global/Local procedure, to improve the accuracy of the numerical simulations. Both conformal and non-conformal meshes at the interface between the Global and the Local models have been considered. The results show that, even with a very few iterations, significant accuracy improvements are achieved.
+Keywords: Global/Local procedures; plasticity; finite element analyses; thrust chamber
+1. Introduction
+The present work has been developed in the framework of the Hyprob project, funded by the Italian Ministry of University and Research (MIUR) and led by the Italian Aerospace Research Center (CIRA) [1]. The aim of the project was to design, manufacture and test a 3 tons thrust chamber adopting liquid methane as refrigerant and fuel and liquid oxygen as an oxidizer [2–6]. The present study focus on the final Demonstrator, a regeneratively cooled thrust chamber. The Demonstrator comprises an inner structure made of a copper alloy (CuCrZr), and an external cold structure made of electrodeposited nickel (Figure 1). Carrying out a thermomechanical analysis of the cooling channel can be very demanding from a computational point of view, since nonlinear phenomena, such as plasticity, and time-dependent phenomena (e.g., creep) can come into play [7–12]. Consequently, there is a strong need to adopt simplified models or, in turn, numerical procedures that can save computation time.
+Appl. Sci. 2020, 10, 7664; doi:10.3390/app10217664 www.mdpi.com/journal/applsci
+
+
+Appl. Sci. 2020, 10, 7664 2 of 22
+Appl. Sci. 2020, 10, x FOR PEER REVIEW 2 of 22
+Figure 1. Schematic representation of a liquid rocket engine thrust chamber.
+A common approach is based on a Global/Local sub-modelling that makes it possible to restrict the nonlinear analysis only to the areas where plastic strains are envisaged, without affecting the computational burden inherent the global model resolution [13,14]. Generally, two separate finite element analyses on two separate models are conducted: a Global linear model with a coarse mesh and a Local nonlinear model with a fine mesh. A one-way approach is taken, where the displacements at the interface between the Global and Local models, evaluated by a finite element linear analysis of the Global model, are transferred to the Local nonlinear model as boundary conditions. Generally, in such an approach the Global model results affect the Local model analysis and not vice versa [14], but Gendre et al. proposed a two-way approach with the aim to improve the level of accuracy of the numerical results [15]. In the latter approach, the results of the Local model, in terms of nodal forces at the boundaries with the Global model, are subtracted from the nodal forces evaluated by means of the Global analysis and then applied as extra boundary conditions in the subsequent Global analyses. After a few iterations, the forces to apply at the boundary tend to zero; this means that convergence has been reached, as also demonstrated by a comparison with the results of a FEM Reference model. For the latter model, the mesh in the submodelled area exactly reproduces the mesh of the Local model, whereas the remainder of the domain reproduces that of the Global coarse model. Even if in this work FEM is used, such a submodelling procedure can also be based on the Boundary Element Method (BEM) [16–18]. The two-way approach is very useful and efficient when local plasticization is envisaged, whereas one-way approaches could lead to very approximate results, since the nonlinear effects of the Local model on the Global one are not effectively taken into account. Such a procedure was employed only for conformal meshes in [15], namely the nodes of the Global and Local models are coincident at their interface. In this work, such constraints were removed, with the consideration of non-conformal meshes. The iterative technique has already been applied with a good success rate in many engineering fields, such as the study of local plasticity, where geometrical refinements can also be taken into account, such as the analysis of crack propagation [19] and so on. Recently, Gosselet et al. adopted the same algorithm and provided some guidelines to minimize the number of iterations needed to
+Figure 1. Schematic representation of a liquid rocket engine thrust chamber.
+A common approach is based on a Global/Local sub-modelling that makes it possible to restrict the nonlinear analysis only to the areas where plastic strains are envisaged, without affecting the computational burden inherent the global model resolution [13,14]. Generally, two separate finite element analyses on two separate models are conducted: a Global linear model with a coarse mesh and a Local nonlinear model with a fine mesh. A one-way approach is taken, where the displacements at the interface between the Global and Local models, evaluated by a finite element linear analysis of the Global model, are transferred to the Local nonlinear model as boundary conditions. Generally, in such an approach the Global model results affect the Local model analysis and not vice versa [14], but Gendre et al. proposed a two-way approach with the aim to improve the level of accuracy of the numerical results [15]. In the latter approach, the results of the Local model, in terms of nodal forces at the boundaries with the Global model, are subtracted from the nodal forces evaluated by means of the Global analysis and then applied as extra boundary conditions in the subsequent Global analyses. After a few iterations, the forces to apply at the boundary tend to zero; this means that convergence has been reached, as also demonstrated by a comparison with the results of a FEM Reference model. For the latter model, the mesh in the submodelled area exactly reproduces the mesh of the Local model, whereas the remainder of the domain reproduces that of the Global coarse model. Even if in this work FEM is used, such a submodelling procedure can also be based on the Boundary Element Method (BEM) [16–18]. The two-way approach is very useful and efficient when local plasticization is envisaged, whereas one-way approaches could lead to very approximate results, since the nonlinear effects of the Local model on the Global one are not effectively taken into account. Such a procedure was employed only for conformal meshes in [15], namely the nodes of the Global and Local models are coincident at their interface. In this work, such constraints were removed, with the consideration of non-conformal meshes. The iterative technique has already been applied with a good success rate in many engineering fields, such as the study of local plasticity, where geometrical refinements can also be taken into account, such as the analysis of crack propagation [19] and so on. Recently, Gosselet et al. adopted the
+
+
+Appl. Sci. 2020, 10, 7664 3 of 22
+same algorithm and provided some guidelines to minimize the number of iterations needed to reach convergence [20]; furthermore, they developed an overlapping version of the method with the aim to use the algorithm for fully non-conformal meshing. In the present work, the authors have implemented the iterative algorithm for both conformal and non-conformal meshes, adopting a finite element commercial code (ANSYS) to study the thermomechanical behavior of the cooling channel of a regeneratively cooled thrust chamber. The aim of the present study is to demonstrate that the iterative Global/Local procedure can provide considerable advantages when investigating test-cases where the nonlinear phenomena are sufficiently spread throughout the domain and not confined to a very restricted area. The algorithm script is written in Ansys Parametric Design Language (APDL) and is non-invasive, since it does not require any change in the governing equation. The paper content is organized as follows: the thermal and mechanical governing equations are described in the next section, while a detailed illustration of the iterative algorithm is given in the following section; then, the numerical models adopted are described and the results of the numerical analyses are compared with those obtained with the Reference model; finally, the conclusion and the future perspectives are reported in the last section.
+2. Mathematical Model
+2.1. Heat Conduction Model
+The heat conduction problem of the cooling channel is described by the following partial differential equation:
+∇2T = 1
+a
+∂T
+∂θ (1)
+where a represents the thermal diffusivity, T(x, y, z; θ) is the temperature, and θ is the time [21]. Perfect thermal contact is considered between the copper alloy, electroformed copper, and electroformed nickel, with consequent continuity at their interface of heat flux and temperature:
+ki
+∂Ti
+∂n = kj
+∂T j
+∂n (2)
+Ti = Tj (3)
+where i and j are two generic materials in contact [7,8]. The heating coming from the hot gases of the combustion chamber and the cooling by the coolant flow are applied by means of convective boundary conditions:
+− k ∂T
+∂n = h(Tw − T∞) (4)
+where h represents the convective heat transfer coefficient, Tw is the wall temperature, and T∞ is the adiabatic wall temperature [22].
+2.2. Structural Model
+The governing equation for the structural problem is expressed by:
+σij,i + Xi = 0 (5)
+where σij is the Cauchy stress tensor, Xi the body force per unit volume [14]. In order to solve the structural problem, Equation (5) must be coupled with the compatibility equations, the constitutive laws and the relationship between the thermal strain tensor and temperature variation (T − Tre f
+),
+where Tre f represents the reference temperature, which is the temperature at which no thermal strains
+
+
+Appl. Sci. 2020, 10, 7664 4 of 22
+are envisaged. Furthermore, in order to take into account the nonlinear behavior, the total mechanical
+strain ε is decomposed into elastic ε
+el ij
+and plastic ε
+pl ij
+components [23–25]:
+ε
+ij
+=ε
+el ij
++ε
+pl ij
+(6)
+The nonlinear model identified adopts the Von Mises yield criterion, the bilinear kinematic hardening rule, and the Prandtl–Reuss flow rule; a further description of the present model can be found in [26–29]. The yield criterion defines the limit of elasticity, namely, it delimits the surface that separates the elastic stress field, inside the yield surface, from the plastic stress field which lies outside the yield surface [29]. Plastic strains will be detected when the equivalent stress σ
+e
+equals the yield value σ
+y
+. The yield surface can be expressed as follows:
+F
+(
+σ, k, α
+)
+= 0 (7)
+where k is the plastic work, and α the back stress tensor modelling the translation of the yield surface. The plastic work is formulated as:
+k=
+∫
+σ
+T
+[
+M
+]
+dε
+pl
+(8)
+where
+[
+M
+]
+is a diagonal matrix [30]:
+[M] =
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100000 010000 001000 000200 000020 000002
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The back stress tensor α is:
+α=
+∫
+Cdε
+pl
+(9)
+where C is a material parameter [10]. For a one–dimensional plasticity model, the stress–strain relations, when considering a bilinear kinematic hardening model (see also Figure 2), are expressed as:
+σ=
+ 
+
+ 
+
+
+Eε i f γ = 0
+EK
+E+K
+εif γ > 0
+(10)
+where γ is the absolute value of the plastic strain rate and K is the plastic modulus [28].
+Appl. Sci. 2020, 10, x FOR PEER REVIEW 4 of 22
+strains are envisaged. Furthermore, in order to take into account the nonlinear behavior, the total mechanical
+strain ߝ is decomposed into elastic ߝ
+௜௝
+௘௟
+and plastic ߝ
+௜௝
+௣௟
+components [23–25]:
+ࢿ
+௜௝
+=ࢿ
+௜௝
+௘௟
++ࢿ
+௜௝
+௣௟
+(6)
+The nonlinear model identified adopts the Von Mises yield criterion, the bilinear kinematic hardening rule, and the Prandtl–Reuss flow rule; a further description of the present model can be found in [26–29]. The yield criterion defines the limit of elasticity, namely, it delimits the surface that separates the elastic stress field, inside the yield surface, from the plastic stress field which lies outside the yield surface [29]. Plastic strains will be detected when the equivalent stress ߪ
+௘
+equals the yield value ߪ
+௬
+. The yield surface can be expressed as follows:
+ܨ
+(
+࣌, ݇, ࢻ
+)
+=0
+(7)
+where ݇ is the plastic work, and ࢻ the back stress tensor modelling the translation of the yield surface. The plastic work is formulated as:
+න ࣌ = ݇
+்
+ࢿ ࢊ] ܯ [
+࢒࢖
+(8)
+where [ܯ] is a diagonal matrix [30]:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=
+000002
+000020
+000200
+001000
+010000
+100000
+[M ]
+The back stress tensor ࢻ is:
+ࢿ ࢊ ܥ න = ࢻ
+࢒࢖
+(9)
+where ܥ is a material parameter [10]. For a one–dimensional plasticity model, the stress–strain relations, when considering a bilinear kinematic hardening model (see also Figure 2), are expressed as:
+Figure 2. Stress/strain—Kinematic hardening.
+Figure 2. Stress/strain—Kinematic hardening.
+
+
+Appl. Sci. 2020, 10, 7664 5 of 22
+Finally, the flow rule specifies the interdependence occurring between the plastic strain increase and the deviatoric stresses. With regard to the Prandtl–Reuss flow rule, a linear relationship between the plastic strain increment and the deviatoric stresses is considered [31]:
+dε
+ij
+=S
+ij
+dλ (11)
+where dε
+ij
+are the plastic strain increments, S
+ij
+the deviatoric stresses, and λ the plastic multiplier obtained by imposing that the stress state lies on the yield surface during plastic flow. The elastic–plastic model here described is applied only for the copper alloy liner structure which is expected to undergo plastic strains since it is exposed to high thermal loads in the inner surface of the thrust chamber.
+3. Iterative Coupling Algorithm
+In what follows a detailed description of the submodelling “two–way” approach is given (see Figures 3 and 4). Three numerical models must be defined:
+Appl. Sci. 2020, 10, x FOR PEER REVIEW 5 of 22
+ቊ = ߪ
+0 = ߛ ݂݅ ߝܧ
+ா௄ ாା௄
+0 > ߛ ݂݅ ߝ
+(10)
+where ߛ is the absolute value of the plastic strain rate and ܭ is the plastic modulus [28]. Finally, the flow rule specifies the interdependence occurring between the plastic strain increase and the deviatoric stresses. With regard to the Prandtl–Reuss flow rule, a linear relationship between the plastic strain increment and the deviatoric stresses is considered [31]:
+ࢿ݀
+௜௝
+ࡿ =
+௜௝
+ߣ݀
+(11)
+where ߝ݀
+௜௝
+are the plastic strain increments, ܵ
+௜௝
+the deviatoric stresses, and ߣ the plastic multiplier obtained by imposing that the stress state lies on the yield surface during plastic flow. The elasticplastic model here described is applied only for the copper alloy liner structure which is expected to undergo plastic strains since it is exposed to high thermal loads in the inner surface of the thrust chamber.
+3. Iterative Coupling Algorithm
+In what follows a detailed description of the submodelling “two–way” approach is given (see Figures 3 and 4). Three numerical models must be defined:
+Figure 3. Global/Local submodelling approach.
+Figure 3. Global/Local submodelling approach.
+Appl. Sci. 2020, 10, x FOR PEER REVIEW 6 of 22
+Figure 4. Scheme of the coupled solution loop.
+1. Global Model—it is a global elastic model with a coarse mesh; 2. Local Model—it is a submodel with a fine mesh in which elastic–plastic behavior is considered; 3. Reference Model—it is a nonlinear model in which the discretization corresponds to that of the Local Model in the submodelled domain and to that of the Global Model in the remaining part of the domain.
+As shown in Figure 4, the steps to be followed in the coupled solution loop are:
+࢛ ࢛
+Figure 4. Scheme of the coupled solution loop.
+
+
+Appl. Sci. 2020, 10, 7664 6 of 22
+1. Global Model—it is a global elastic model with a coarse mesh; 2. Local Model—it is a submodel with a fine mesh in which elastic–plastic behavior is considered; 3. Reference Model—it is a nonlinear model in which the discretization corresponds to that of the Local Model in the submodelled domain and to that of the Global Model in the remaining part of the domain.
+As shown in Figure 4, the steps to be followed in the coupled solution loop are:
+1. a global elastic analysis is performed on the Global model with a coarse mesh, 2. the interface displacements uΓ and nodal forces Fg
+Γ are collected (Γ is the interface curve),
+3. a local nonlinear analysis is performed on the submodel applying uΓ as boundary conditions at the interface Γ (external boundary for the submodel), 4. nodal forces FlΓ, evaluated by the local analysis, are collected and subtracted from Fg
+Γ obtaining
+∆F = Fg
+Γ − FlΓ,
+5. if ||∆F||2 is greater than a prescribed limit , then the process comes back to step 1 where ∆F is applied to the Global model at the interface Γ, 6. if ||∆F||2 is lower than a prescribed limit , the final solution is identified,
+where ||∆F||2 represents the Euclidean norm of the residual forces. Convergence can also be checked by evaluating the Euclidean norm of the interface displacements ||U||2, evaluated by means of a numerical analysis of the Global Model. When non–conformal meshes are adopted for the Global and Local Models, specific algorithms are adopted to map displacements from the Global to the Local Model and forces in the inverse direction. The mapping algorithm adopted by ANSYS is a triangle-based linear interpolation [32].
+4. Numerical Model
+The partial differential equations governing the thermal and mechanical problems are solved by means of the finite element method. A stepwise approach has been chosen to apply the thermomechanical loads because of the nonlinearity of the structural problem (details on the approach adopted can be found in [7]). The Newton–Raphson method has been employed to solve each load step. The following assumptions have been considered:
+• One-way coupling between the thermal and the structural problem, namely, the temperature field, evaluated by the thermal analysis, is applied as body loads for the structural nonlinear analysis. On the other hand, since for this kind of problem the displacement/strain field does not have a significant impact on the temperature field, as demonstrated in several works [33], the thermal analysis is not repeated. • Small deformations, that is, a geometrical linear model is adopted.
+The iterative “two–way” approach has been considered only for the structural analysis where nonlinear phenomena come into play, while for the thermal analysis, no iteration is needed as already demonstrated in [14].
+4.1. Boundary Conditions
+The test case considered to demonstrate the advantages of adopting iterative submodelling approaches is a cooling channel of a regeneratively cooled thrust chamber of the final demonstrator of the Hyprob Project. The size, heat fluxes, and pressures considered are those encountered during the “hot phase”, which represents the stage where the combustion of the hot gases causes a significant increase in the chamber pressures and temperatures during a typical fire ground test. The thrust chamber section considered is that illustrated in Figure 1 and is located in the cylindrical part of the chamber: here, heat fluxes are not as high as in the throat section, but the coolant is characterized by higher temperatures and the channel section is considerably larger than the
+
+
+Appl. Sci. 2020, 10, 7664 7 of 22
+throat one; consequently, it is worthwhile analyzing, from a thermal and mechanical point of view, the behavior of the cooling channel in that portion of the chamber. A simplified rectangular representation of the cooling channel, instead of trapezoidal geometry, has been chosen for this study, in order to minimize the geometrical and discretization operations. Such approximation is considered acceptable as the aim of the current work is to demonstrate the usefulness and the advantages of the implemented methodology rather than accurately reproducex the real component functioning. Finally, displacements on the top of the channel have been restrained in the vertical direction (y axis) to avoid a structural lability of the system. In order to save computation time, a half cooling channel, for both the thermal and the structural analyses, has been modelled taking advantage of the symmetry conditions (see Figure 5). The geometric parameters of the cooling channel are summarized in Table 1:
+approaches is a cooling channel of a regeneratively cooled thrust chamber of the final demonstrator of the Hyprob Project. The size, heat fluxes, and pressures considered are those encountered during the “hot phase”, which represents the stage where the combustion of the hot gases causes a significant increase in the chamber pressures and temperatures during a typical fire ground test. The thrust chamber section considered is that illustrated in Figure 1 and is located in the cylindrical part of the chamber: here, heat fluxes are not as high as in the throat section, but the coolant is characterized by higher temperatures and the channel section is considerably larger than the throat one; consequently, it is worthwhile analyzing, from a thermal and mechanical point of view, the behavior of the cooling channel in that portion of the chamber. A simplified rectangular representation of the cooling channel, instead of trapezoidal geometry, has been chosen for this study, in order to minimize the geometrical and discretization operations. Such approximation is considered acceptable as the aim of the current work is to demonstrate the usefulness and the advantages of the implemented methodology rather than accurately reproducex the real component functioning. Finally, displacements on the top of the channel have been restrained in the vertical direction (y axis) to avoid a structural lability of the system. In order to save computation time, a half cooling channel, for both the thermal and the structural analyses, has been modelled taking advantage of the symmetry conditions (see Figure 5). The geometric parameters of the cooling channel are summarized in Table 1:
+Figure 5. Cooling channel geometry and thermo–mechanical boundary conditions.
+Table 1. Geometric parameters of the cooling channel.
+a (mm) b (mm) s (mm) t1 (mm) t2 (mm) 2 0.62 0.9 0.5 1.5
+Figure 5. Cooling channel geometry and thermo–mechanical boundary conditions.
+Table 1. Geometric parameters of the cooling channel.
+a (mm) b (mm) s (mm) t1 (mm) t2 (mm)
+2 0.62 0.9 0.5 1.5
+Plane strain conditions have been applied for the two–dimensional analysis. The thermal and structural loads are respectively represented by the body temperature distribution in the hot phase and the maximum pressure in the cooling channels. Further details on pressure and heat flux laws during a fire test can be found in [5]. The results of the Computational Fluid Dynamic (CFD) analyses provide the convective boundary conditions to be applied on the internal surface of the combustion chamber and inside the cooling channel. The convective heat transfer coefficients and the adiabatic wall temperatures considered in the thermal analyses are summarized respectively in Tables 2 and 3: hChot and hCcold are respectively the convective coefficients for the combustion gases and the coolant, while TChot and TCcold are the combustion gases and coolant bulk temperatures (the subscripts “hot” and “cold” refer respectively to the hot gases and cooling channel sides).
+
+
+Appl. Sci. 2020, 10, 7664 8 of 22
+Table 2. Heat Transfer coefficients (W/m
+2
+K).
+h
+C
+hot
+(
+W m
+2
+K
+)
+h
+C
+cold
+(
+W m
+2
+K
+)
+5600 280.000
+Table 3. Combustion gases and coolant bulk temperatures.
+T
+C
+hot
+(K) T
+C
+cold
+(K)
+3600 370
+Steady state thermal analyses and static structural analyses have been performed. The chamber pressure is 5.5 MPa, while the coolant pressure is 7.2 MPa. An iterative submodelling approach has been applied to both two–dimensional and three–dimensional models. The three–dimensional model has been obtained by a 20 mm extrusion of the cooling channel (see Figure 6) in the axial z direction of the thrust chamber. Axial displacements for the nodes of the faces at z = 0 and z = 20 mm have been restrained (u
+z
+= 0).
+The results of the Computational Fluid Dynamic (CFD) analyses provide the convective boundary conditions to be applied on the internal surface of the combustion chamber and inside the cooling channel. The convective heat transfer coefficients and the adiabatic wall temperatures considered in the thermal analyses are summarized respectively in Tables 2 and 3: ࢎ
+࡯
+࢚࢕ࢎ
+ࢎ and
+࡯
+ࢊ࢒࢕ࢉ are respectively the convective coefficients for the combustion gases and the coolant, while ࢀ
+࡯
+࢚࢕ࢎ ࢀ and
+࡯
+ࢊ࢒࢕ࢉ
+are the combustion gases and coolant bulk temperatures (the subscripts “hot” and “cold” refer respectively to the hot gases and cooling channel sides).
+Table 2. Heat Transfer coefficients (W/m
+2
+K).
+ࢎ
+࡯
+࢚࢕ࢎ
+൬
+ࢃ ࢓
+૛
+ࡷ
+ࢎ ൰
+࡯
+ࢊ࢒࢕ࢉ
+൬
+ࢃ ࢓
+૛
+ࡷ
+൰
+5600 280.000
+Table 3. Combustion gases and coolant bulk temperatures.
+ࢀ
+࡯
+࢚࢕ࢎ
+(
+ࡷ
+)
+ࢀ
+࡯
+ࢊ࢒࢕ࢉ
+(
+ࡷ
+) 3600 370
+Steady state thermal analyses and static structural analyses have been performed. The chamber pressure is 5.5 MPa, while the coolant pressure is 7.2 MPa. An iterative submodelling approach has been applied to both two–dimensional and threedimensional models. The three–dimensional model has been obtained by a 20 mm extrusion of the cooling channel (see Figure 6) in the axial z direction of the thrust chamber. Axial displacements for the nodes of the faces at z = 0 and z = 20 mm have been restrained (࢛
+௭
+= 0).
+Figure 6. Three–dimensional model.
+Figure 6. Three–dimensional model.
+Figure 7 shows the cooling channel geometry and the positions of the interface between the global and local models considered.
+
+
+Appl. Sci. 2020, 10, 7664 9 of 22
+Appl. Sci. 2020, 10, x FOR PEER REVIEW 9 of 22
+Figure 7 shows the cooling channel geometry and the positions of the interface between the global and local models considered.
+Figure 7. Highlight of different upper boundaries of local models.
+Five kinds of local models have been chosen: • Local Model 1—extends between y = 0 and y = 0.5, in such a way that the interface with the Global Model occurs in an area where plastic strains are expected; • Local Model 2—with the interface placed in correspondence of what presumably is the limit between linear (elastic behavior) and nonlinear (elastic–plastic behavior) areas; • Local Model 3—such that the interface occurs where no plastic strains are envisaged; • Local Model 4—extends between y = 0 and y = 1.5; • Local Model 5—extends between y = 0 and y = 1.8. The aim is to demonstrate that even considering local models with interfaces with the Global Model that are far away from the nonlinear areas, at least one iteration is needed to meet the chosen convergence criterion; then, it will be shown that the iterative approach has advantages with respect to the “non–iterative approaches” adopted by finite element commercial codes. Some other parameters have also been defined to measure the level of accuracy of the Global/Local solutions:
+η
+ఌ
+=
+ߝห|
+ீ௅
+௣௟
+ߝ −
+ோ
+௣௟
+ห|
+௞
+ߝ||
+ோ
+௣௟
+||
+௞
+(12)
+η
+ఙ
+=
+|
+ห
+ఙ
+ಸಽ
+ೇಾ
+ିఙ
+ೃ
+ೇಾ
+ห
+|
+ೖ ||ఙ
+ೃ
+ೇಾ
+||
+ೖ
+(13)
+ߝ •
+ீ௅
+௣௟
+is the equivalent plastic strain calculated by the Global/Local approach, ߝ •
+ோ
+௣௟
+is the equivalent plastic strain calculated by the Reference Model, ߪ •
+ீ௅
+௏ெ
+is the Von Mises stress evaluated by the Global/Local approach, ߪ •
+ோ
+௏ெ
+is the Von Mises stress evaluated by the Reference Model,
+Figure 7. Highlight of different upper boundaries of local models.
+Five kinds of local models have been chosen:
+• Local Model 1—extends between y = 0 and y = 0.5, in such a way that the interface with the Global Model occurs in an area where plastic strains are expected; • Local Model 2—with the interface placed in correspondence of what presumably is the limit between linear (elastic behavior) and nonlinear (elastic–plastic behavior) areas; • Local Model 3—such that the interface occurs where no plastic strains are envisaged; • Local Model 4—extends between y = 0 and y = 1.5; • Local Model 5—extends between y = 0 and y = 1.8.
+The aim is to demonstrate that even considering local models with interfaces with the Global Model that are far away from the nonlinear areas, at least one iteration is needed to meet the chosen convergence criterion; then, it will be shown that the iterative approach has advantages with respect to the “non–iterative approaches” adopted by finite element commercial codes. Some other parameters have also been defined to measure the level of accuracy of the Global/Local solutions:
+η
+ε
+=
+|
+∣
+∣
+∣
+∣
+ε
+pl GL
+−ε
+pl R
+∣
+∣
+∣
+∣
+|
+k
+∣
+∣
+∣
+∣
+∣
+∣
+∣
+∣
+ε
+pl R
+∣
+∣
+∣
+∣
+∣
+∣
+∣
+∣
+k
+(12)
+η
+σ
+=
+|
+∣
+∣
+∣
+σ
+VM GL
+−σ
+VM R
+∣
+∣
+∣
+|
+k
+∣
+∣
+∣
+∣
+∣
+∣
+σ
+VM R
+∣
+∣
+∣
+∣
+∣
+∣
+k
+(13)
+•ε
+pl GL
+is the equivalent plastic strain calculated by the Global/Local approach,
+•ε
+pl R
+is the equivalent plastic strain calculated by the Reference Model,
+
+
+Appl. Sci. 2020, 10, 7664 10 of 22
+•σ
+VM GL
+is the Von Mises stress evaluated by the Global/Local approach,
+•σ
+VM R
+is the Von Mises stress evaluated by the Reference Model,
+• k can be equal to 2 (Euclidean norm) or ∞ (infinite norm).
+The Euclidean norm provides useful data to understand the level of accuracy of the entire Local Model, whereas the infinite norm describes the maximum deviation (in absolute value) from the Reference Model. For the sake of simplicity, the results will be reported in terms of infinite norms. In the results section, in order to have homogeneous results, stresses and plastic strains on the interface nodes are not taken into account when calculating η
+ε
+and η
+σ
+, since their deviation from the results of the Reference Model are expected to be much higher than the deviation evaluated on the internal nodes. As mentioned above, conformal and non–conformal meshes have been adopted: in the former case, the algorithm is expected to work in a very stable way, since no mapping is needed at the interface where displacements and nodal forces should be transferred from one model to another; in the latter case, interpolation errors could occur and, then, the curve representing the residuals might not be monotonically convergent towards the final solution. For that reason, three different levels of “non–conformity” have been chosen in order to understand which is the lowest ratio, ν
+n
+, between the number of nodes at the interface, on the Global Model side, N
+G
+, and on the Local Model side, N
+L
+, such as to guarantee a monotonic convergence behavior of the algorithm and accurate results:
+ν
+n
+=
+N
+G
+N
+L
+(14)
+The evaluation of the lowest value of ν
+n
+allows minimizing the discretization level and, then, the computation (CPU) time needed to perform the numerical analyses.
+4.2. Numerical Discretization
+Four-node plane elements and eight-node hexahedral elements have been respectively chosen for the two–dimensional and three–dimensional analyses of the local models, with triangular and tetrahedral elements respectively employed in the transition area near the interface, in the Global coarse model and reference model, when conformal meshes have been built. Figure 8 shows the discretization of Global, Local, and Reference models, with the interface for the Local Model 2 placed at y = 0.9.
+Appl. Sci. 2020, 10, x FOR PEER REVIEW 10 of 22
+• ݇ can be equal to 2 (Euclidean norm) or ∞ (infinite norm).
+The Euclidean norm provides useful data to understand the level of accuracy of the entire Local Model, whereas the infinite norm describes the maximum deviation (in absolute value) from the Reference Model. For the sake of simplicity, the results will be reported in terms of infinite norms. In the results section, in order to have homogeneous results, stresses and plastic strains on the interface nodes are not taken into account when calculating η
+ఌ
+and η
+ఙ
+, since their deviation from the results of the Reference Model are expected to be much higher than the deviation evaluated on the internal nodes. As mentioned above, conformal and non–conformal meshes have been adopted: in the former case, the algorithm is expected to work in a very stable way, since no mapping is needed at the interface where displacements and nodal forces should be transferred from one model to another; in the latter case, interpolation errors could occur and, then, the curve representing the residuals might not be monotonically convergent towards the final solution. For that reason, three different levels of “non–conformity” have been chosen in order to understand which is the lowest ratio, ߥ
+௡
+, between the number of nodes at the interface, on the Global Model side, ܰ
+ீ
+, and on the Local Model side, ܰ
+௅
+, such as to guarantee a monotonic convergence behavior of the algorithm and accurate results:
+ߥ
+௡
+=
+ே
+ಸ ே
+ಽ
+(14)
+The evaluation of the lowest value of ߥ
+௡
+allows minimizing the discretization level and, then, the computation (CPU) time needed to perform the numerical analyses.
+4.2. Numerical Discretization
+Four-node plane elements and eight-node hexahedral elements have been respectively chosen for the two–dimensional and three–dimensional analyses of the local models, with triangular and tetrahedral elements respectively employed in the transition area near the interface, in the Global coarse model and reference model, when conformal meshes have been built. Figure 8 shows the discretization of Global, Local, and Reference models, with the interface for the Local Model 2 placed at y = 0.9.
+Figure 8. Three–dimensional Global, Local, and reference numerical models (the local model is “cut” at y = 0.9).
+Figure 8. Three–dimensional Global, Local, and reference numerical models (the local model is “cut” at y = 0.9).
+
+
+Appl. Sci. 2020, 10, 7664 11 of 22
+The numbers of elements considered for the Reference, Global, and Local model illustrated in Figure 8 are:
+• 20000 (Reference Model) • 3700 (Global Model) • 16300 (Local Model)
+The minimum element edge length is 0.06 mm for all the local and reference models considered in the present work and 0.1 mm for the Global models.
+4.3. Material Properties
+Tables 4–9 summarize the physical and mechanical properties of the copper alloy (CuCrZr), the electrodeposited Oxygen-Free High-thermal conductivity Copper (OFHC), and Nickel.
+Table 4. Physical and Thermal properties of the copper alloy (CuCrZr).
+Temperature (K) Density
+(kg/m3)
+Thermal Conductivity (W/mK)
+Specific Heat (J/kgK)
+Thermal Expansion Coefficient (1/K)
+300 8933 320 390 15.7 × 10−6 600 8933 290 390 17.9 × 10−6 900 8933 255 400 18.7 × 10−6
+Table 5. Mechanical properties of the copper alloy (CuCrZr).
+Temperature (K) E (Gpa) Poisson’s
+Ratio
+Yield Stress (MPa)
+Ultimate Stress (MPa)
+300 130 0.3 4339 4779 500 106 0.3 3833 4029 700 87 0.3 313 3294 900 44 0.3 1563 1754
+Table 6. Physical properties of electrodeposited OFHC.
+Temperature (K) Density
+(kg/m3)
+Thermal Conductivity (W/mK)
+Specific Heat (J/kgK)
+Thermal Expansion Coefficient (1/K)
+300 8913 390 385 17.2 × 10−6
+Table 7. Mechanical properties of the electrodeposited OFHC.
+Temperature (K) E (Gpa) Poisson’s
+Ratio
+Yield Stress (MPa)
+Ultimate Stress (MPa)
+28 118 0.34 68 413 294 114 0.34 60 208 533 65 0.34 50 145 755 40 0.34 38 80
+
+
+Appl. Sci. 2020, 10, 7664 12 of 22
+Table 8. Physical properties of the electrodeposited Nickel.
+Temperature (K)
+Density (kg/m3)
+Thermal Conductivity (W/mK)
+Specific Heat (J/kgK)
+Thermal Expansion Coefficient (1/K)
+300 8913 90 444 12.2 × 10−6
+Table 9. Mechanical properties of the electrodeposited Nickel.
+Temperature (K) E (Gpa) Yield Stress (MPa) Ultimate Stress (MPa) Poisson’s Ratio
+28 193 344 551 0.3
+5. Results and Discussion
+The present iterative algorithm has been applied to two–dimensional and three–dimensional finite element models. Such an approach becomes advantageous when the size of the Local Model is very small with respect to the Global Model. Mesh convergence studies have been conducted on all the finite element models adopted. Furthermore, the elastic–plastic model considered in the present work has already been compared to other models that can be found in literature works; in particular, stresses and strains are in good accordance (the percentage difference is about 10%) with those achieved with more sophisticated elastic–plastic models, as already demonstrated in [8]. The iterative algorithm was first implemented and assessed for the two–dimensional model, which is not very demanding from a computational point of view, in order to find an optimum value for parameter νn. Once νn has been identified, iterative Global/Local three–dimensional analyses are conducted. The convergence criterion adopted in the following analyses is based on the Euclidean norm of the displacements, prescribing that the maximum between the Euclidean norms of the displacements in the horizontal, vertical, and axial directions (corresponding respectively to x, y, and z axes) be lower than a threshold value ε:
+φ = max{||ux||2, |∣∣∣uy
+∣∣∣|2, ||uz||2
+} < ε (15)
+where ε has been chosen to be equal to 10–4.
+5.1. Two–Dimensional Global/Local Analyses
+The maximum temperature value (740 K) is detected on the inner wall of the cooling channel, which is exposed to the hot combustion gases (see Figures 9 and 10). Figure 10 shows the Von Mises stresses and the Equivalent Plastic Strains contour plots for the Reference Model: as expected, plastic strains are detected only in the area enclosed by the red rectangle.
+
+
+Appl. Sci. 2020, 10, 7664 13 of 22
+࢛ ࢛ ࢛ ܽ݉
+5.1. Two–Dimensional Global/Local Analyses
+The maximum temperature value (740 K) is detected on the inner wall of the cooling channel, which is exposed to the hot combustion gases (see Figures 9 and 10). Figure 10 shows the Von Mises stresses and the Equivalent Plastic Strains contour plots for the Reference Model: as expected, plastic strains are detected only in the area enclosed by the red rectangle.
+Figure 9. Temperature contour plot—Reference Model.
+Figure 9. Temperature contour plot—Reference Model.
+Appl. Sci. 2020, 10, x FOR PEER REVIEW 13 of 22
+Figure 10. Von Mises stress (left) and Equivalent plastic strain (right) contour plots—Reference Model.
+Trade-Off Analysis with Non-Conformal Meshes
+A trade-off analysis has been conducted varying the parameter ߥ
+݊
+defined in Equation (14). Four
+values have been chosen for the analysis:
+ߥ .1
+݊
+= 0.5
+ߥ .2
+݊
+= 0.70
+ߥ .3
+݊
+= 0.85
+ߥ .4
+݊
+=1
+The configuration with ߥ
+௡
+= 1 is representative of a Local Model with conformal mesh at the
+Figure 10. Von Mises stress (left) and Equivalent plastic strain (right) contour plots—Reference Model.
+Trade-Off Analysis with Non-Conformal Meshes
+A trade-off analysis has been conducted varying the parameter ν
+n
+defined in Equation (14). Four values have been chosen for the analysis:
+1. ν
+n
+= 0.5 2. ν
+n
+= 0.70
+
+
+Appl. Sci. 2020, 10, 7664 14 of 22
+3. νn = 0.85 4. νn = 1
+The configuration with νn = 1 is representative of a Local Model with conformal mesh at the interface with the Global Model. In what follows, the results, in terms of ηε and ησ, for all the values of νn and for all the local models, will be shown with the aim to identify the value of νn that guarantees a monotonic convergence towards the Reference Model corresponding values. Figure 11 shows the convergence history for all the local models considered: the number of iterations needed to reach convergence, under the same Local Model, for conformal and non-conformal meshes is very similar; for instance, for Local Model 1 the number of iterations sufficient to reach convergence is 9 for conformal meshes and 10 for non-conformal meshes.
+Appl. Sci. 2020, 10, x FOR PEER REVIEW 14 of 22
+Figure 11. Convergence history—φ values for: (a) Local Model 1, (b) Local Model 2, (c) Local Model 3.
+Figure 11. Convergence history—φ values for: (a) Local Model 1, (b) Local Model 2, (c) Local Model 3.
+The variations of ηε and ησ vs. the current iteration for all the cases examined are shown in the next figures. In particular, Figure 11 shows that for Local Model 1 the improvement of the results accuracy by the iterative procedure vs. “one-way” approach (no iterations), is very similar for all the configurations examined; however, it is clear that only the configuration with νn = 0.85 is such that ηε values are monotonically convergent towards smaller values, while for the other configurations a minimum value is detected after 4–5 iterations (see Figure 12). Then, the configuration νn = 0.85 is compared with the conformal mesh configuration (νn = 1), showing very similar values (see Figure 13).
+
+
+Appl. Sci. 2020, 10, 7664 15 of 22 Figure 11. Convergence history—φ values for: (a) Local Model 1, (b) Local Model 2, (c) Local Model 3.
+Figure 12. Global/Local performance with respect to the reference Model—comparison between different levels of non–conformal meshes—Local Model 1.
+Appl. Sci. 2020, 10, x FOR PEER REVIEW 15 of 22
+Figure 12. Global/Local performance with respect to the reference Model—comparison between different levels of non–conformal meshes—Local Model 1.
+Figure 13. Global/Local performance with respect to the reference Model—conformal mesh and optimal non–conformal mesh.
+In general, it is evident that the adoption of the present iterative procedure allows for a significant decrease of ߟ
+ఌ
+(from 14.5% to about 8% after only four iterations), while ߟ
+ఙ
+remains almost constant. Similar considerations can be made for the other Local Models. With regard to Local Model 2, it is clear that ߟ
+ఌ
+values for all the configurations decrease to acceptable values after only 2–3 iterations (see Figure 14). On the other hand, the deviations from the Reference Model Von Mises stress values are very small.
+Figure 13. Global/Local performance with respect to the reference Model—conformal mesh and optimal non–conformal mesh.
+In general, it is evident that the adoption of the present iterative procedure allows for a significant decrease of η
+ε
+(from 14.5% to about 8% after only four iterations), while η
+σ
+remains almost constant. Similar considerations can be made for the other Local Models.
+
+
+Appl. Sci. 2020, 10, 7664 16 of 22
+With regard to Local Model 2, it is clear that η
+ε
+values for all the configurations decrease to acceptable values after only 2–3 iterations (see Figure 14). On the other hand, the deviations from the
+Reference Model Von Mises stress values are very small.
+Appl. Sci. 2020, 10, x FOR PEER REVIEW 16 of 22
+Figure 14. Global/Local performance with respect to the reference Model—comparison between different levels of non–conformal meshes—Local Model 2.
+The configurations with ߥ
+௡
+= 0.85 and ߥ
+௡
+= 0.7 have a very similar behavior, monotonically convergent towards the Reference Model values. Considering Local Model 2, the Global/Local analyses provides accurate results after very few iterations (see also Figure 15) when the number of nodes on the Global Model side of the interface is 85% of the number of nodes on the Local Model side of the interface.
+Figure 14. Global/Local performance with respect to the reference Model—comparison between different levels of non–conformal meshes—Local Model 2.
+The configurations with ν
+n
+= 0.85 and ν
+n
+= 0.7 have a very similar behavior, monotonically convergent towards the Reference Model values. Considering Local Model 2, the Global/Local analyses provides accurate results after very few iterations (see also Figure 15) when the number of nodes on the Global Model side of the interface is 85% of the number of nodes on the Local Model side of
+the interface.
+Appl. Sci. 2020, 10, x FOR PEER REVIEW 17 of 22
+Figure 15. Global/Local performance with respect to the Reference Model—conformal mesh and optimal non–conformal mesh—Local Model 2.
+The present iterative procedure for Local Model 3 is very efficient since ߟ
+ఌ
+rapidly decreases after only two iterations; for instance, the configuration with ߥ
+௡
+= 0.85 is such that, after only two iterations, ߟ
+ఙ
+ߟ and
+ఌ
+values become lower than 2 % and 0.3 %, respectively. The configurations with ߥ
+௡
+= 0.5 and ߥ
+௡
+= 0.7 ensure good results even if ߟ
+ఌ
+slightly increases after the first iteration (see Figures 16 and 17).
+Figure 15. Global/Local performance with respect to the Reference Model—conformal mesh and optimal non–conformal mesh—Local Model 2.
+
+
+Appl. Sci. 2020, 10, 7664 17 of 22
+The present iterative procedure for Local Model 3 is very efficient since η
+ε
+rapidly decreases after only two iterations; for instance, the configuration with ν
+n
+= 0.85 is such that, after only two iterations, η
+σ
+and η
+ε
+values become lower than 2 % and 0.3 %, respectively. The configurations with ν
+n
+= 0.5 and ν
+n
+= 0.7 ensure good results even if η
+ε
+slightly increases after the first iteration (see Figures 16 and 17).
+Figure 15. Global/Local performance with respect to the Reference Model—conformal mesh and optimal non–conformal mesh—Local Model 2.
+The present iterative procedure for Local Model 3 is very efficient since ߟ
+ఌ
+rapidly decreases after only two iterations; for instance, the configuration with ߥ
+௡
+= 0.85 is such that, after only two iterations, ߟ
+ఙ
+ߟ and
+ఌ
+values become lower than 2 % and 0.3 %, respectively. The configurations with ߥ
+௡
+= 0.5 and ߥ
+௡
+= 0.7 ensure good results even if ߟ
+ఌ
+slightly increases after the first iteration (see Figures 16 and 17).
+Figure 16. Global/Local performance with respect to the reference Model—comparison between different levels of non–conformal meshes—Local Model 3.
+Appl. Sci. 2020, 10, x FOR PEER REVIEW 18 of 22
+Figure 16. Global/Local performance with respect to the reference Model—comparison between different levels of non–conformal meshes—Local Model 3.
+Figure 17. Global/Local performance with respect to the Reference Model—conformal mesh and optimal non–conformal mesh—Local Model 3.
+With regard to local models 4 and 5, the results, in terms of convergence history, ߟ
+ఙ
+ߟ and
+ఌ
+, are very similar to those obtained with “Local Model 3”. Table 10 summarizes the ߟ
+ఌ
+values obtained when adopting local models 4 and 5.
+Table 10. ߟ
+ఌ
+values for Local Model 4 and Local Model 5.
+߮
+Figure 17. Global/Local performance with respect to the Reference Model—conformal mesh and optimal non–conformal mesh—Local Model 3.
+
+
+Appl. Sci. 2020, 10, 7664 18 of 22
+With regard to local models 4 and 5, the results, in terms of convergence history, ησ and ηε, are very similar to those obtained with “Local Model 3”. Table 10 summarizes the ηε values obtained when adopting local models 4 and 5.
+Table 10. ηε values for Local Model 4 and Local Model 5.
+Local Model 4 Local Model 5
+ηε(%)–iteration 0 10 8
+ηε(%)–iteration 1 5 4.8
+5.2. Three–Dimensional Global/Local Analyses
+Three–dimensional investigations have been also carried out with the aim to have an estimate of how much computation time could be saved employing a Global/Local two–way approach. In fact, in general, Global/Local approaches become useful and advantageous, from a computation time point of view, when large three–dimensional models must be investigated. For the three–dimensional model obtained by means of an extrusion along the chamber z axis direction, thermal and structural loads (convective heat fluxes for the thermal model and temperatures and pressures for the structural model) are considered constant along such a direction; then, the resulting temperatures, displacements, and stresses will vary only in the x and y directions. Table 11 summarizes the number of nodes of the finite element models analyzed and the CPU time needed to perform one iteration of the Global/Local analysis. For Local Model 2, the adoption of the iterative Global/Local approach is very advantageous since only four iterations are necessary to obtain a displacement residual φ lower than 10–4; then, the total computation time is 104 s when adopting conformal meshes at the interface and 88 s for non–conformal meshes. Those CPU times are considerably shorter than those needed for a single thermo–mechanical analysis of the Reference Model. With regard to Local Model 3, there is no CPU time saving when adopting non–conformal meshes with respect to conformal meshes. However, the present iterative method allows for a considerable time saving since convergence is reached after only two iterations, that is, 100 s for the Global/Local analysis and 150 s for the analysis of the Reference Model. Similar considerations can be conducted for Local Models 4 and 5. On the contrary, Local Model 1 needs 10 iterations to reach convergence for conformal meshes and 18 iterations for the non–conformal meshes; then, the CPU time for both conformal and non–conformal mesh configurations becomes much longer than that required for a single analysis of the Reference Model, equal to 500 s and 684 s, respectively. Then, for the Local Models built considering an interface with the Global Model in an area where plastic strains are expected, the adoption of non–conformal meshes does not provide appreciable benefits with respect to the conformal mesh configurations. Moreover, the computational burden for the Reference Model resolution is not relatively high, considering that a relevant number of iterations is needed in the Global/Local analysis to obtain results as accurate as those achieved with the Reference Model. In order to make the iterative approach advantageous, acceleration techniques should be implemented to minimize the number of iterations, e.g., making them, in this case, less than three.
+
+
+Appl. Sci. 2020, 10, 7664 19 of 22
+Table 11. Computation time—Three–dimensional Global/Local analyses.
+Local Models
+Nodes: Global Coarse Model (Conformal Mesh)
+Nodes: Global Coarse Model (NonConformal Mesh)
+Nodes: Local Model
+CPU Time (Conformal Mesh) (s)
+CPU Time (NonConformal Mesh) (s)
+CPU Time (Reference Model) (s)
+y = 0.5 4800 4700 10,000 50 38 150 y = 0.9 4600 3864 15,000 26 22 150 y = 1.2 4600 3864 17,500 50 48 150 y = 1.5 4600 3864 18,200 52 50 150 y = 1.8 4600 3864 18,800 53 50 150
+6. Conclusions and Future Activities
+In the present work, an iterative Global/Local procedure has been implemented in a finite element commercial code, in order to study the thermo-mechanical behavior of the cooling channel of a liquid rocket engine thrust chamber. Typically, iterative and non-iterative Global/Local approaches have been employed in the past to study very narrow portions of the model where stress concentrations and plastic strains were expected; on the contrary, in the present work, the authors have investigated how the iterative approach works when the extent of nonlinear areas/volumes is very large if compared with the entire model considered. Then, for the test case chosen, the results have demonstrated the usefulness of the iterative Global/Local procedure—in fact, even considering very large local models, one iteration is needed to meet the chosen convergence criteria. This means that the elastic-plastic test-case under investigation is such that the effects of non-linearities affect the stress/strain fields of areas that are far away from nonlinear areas. Furthermore, the computational cost of a single numerical solution carried out adopting the Reference model is still higher than the computational cost needed to solve one iteration of the Global/Local analysis. Then, the adoption of the iterative approach is advantageous and allows for a significant computation time saving. That said, when the interface between the global and the local model is inside the nonlinear portion of the model, several iterations are needed to reach convergence; then, the approach is no longer advantageous. The authors have also investigated how the discretization of both Global and Local models at their interface affects the accuracy and the computation time. The results of the test cases examined have shown that, when the local models are significantly larger than the local nonlinear areas, the choice of non-conformal meshes could allow for just a 5% computation time saving if compared with that needed for a configuration with conformal mesh. As a future activity, the authors are planning to implement more sophisticated coupling techniques that can handle very different meshes at the interface between Global and Local models, allowing for additional computation time savings. Furthermore, the present Global/Local procedure could become more convenient if nonlinear models, taking into account creep and viscoplastic phenomena, are considered.
+Author Contributions: Conceptualization, M.F., R.C.; Data curation, M.F., M.L. and R.C.; Investigation, M.F., M.L. and R.C.; Writing—original draft, M.F. and R.C. All authors have read and agreed to the published version of the manuscript.
+Funding: This research received no external funding.
+Acknowledgments: This research has been supported by the Italian Ministry of University and Research (MIUR), in the frame of the Hyprob Program.
+Conflicts of Interest: The authors declare no conflict of interest.
+
+
+Appl. Sci. 2020, 10, 7664 20 of 22
+Nomenclature
+T temperature θ time σij Cauchy Stresses tensor
+Xi body force per unit volume εel
+ij elastic strain tensor εpl
+ij plastic strain tensor
+k plastic work α back stress tensor E Young Modulus K plastic modulus Sij deviatoric stress tensor λ plastic multiplier Γ interface curve/surface FlΓ vector of nodal forces on surface Γ (local model)
+Fg
+Γ vector of nodal forces on surface Γ (global model) uΓ displacement on Γ
+||∆F||2 Euclidean norm of the vector FlΓ–Fg
+Γ
+hChot convective coefficients for the combustion gases hCcold convective coefficients for the coolant TChot combustion gases bulk temperature TCcold coolant bulk temperature ηε non–dimensional parameter to measure strain accuracy ησ non–dimensional parameter to measure stress accuracy
+References
+1. Salvatore, V.; Battista, F.; Votta, R.; Di Clemente, M.; Ferraiuolo, M.; Roncioni, P.; Ricci, D.; Natale, P.; Panelli, M.; Cardillo, D.; et al. Design and Development of a LOX/LCH4 Technology Demonstrator. In Proceedings of the 48th AIAA/ASME/SAE/ASEE Joint Propulsion Conference & Exhibi, Atlanta, GA, USA, 30 July–1 August 2012. 2. Haeseler, D.; Bombelli, V.; Vuillermoz, P.; Lo, R.; Marée, T.; Caramelli, F. Green Propellant Propulsion Concepts for Space Transportation and Technology Development Needs. In Proceedings of the 2nd International Conference on Green propellants for Space, Propulsion, Sardinia, Italy, 7–8 June 2004. 3. Haeseler, D.; Mäding, C.; Götz, A.; Roubinski, V.; Khrissanfov, S.; Berejnoy, V.; Bureau, C.D. Recent Developments for Future Launch Vehicle LOX/HC Rocket Engines. In Proceedings of the 6th International Symposium Propulsion for Space Transportation of the XXIst Century, Versailles, France, 13–17 May 2002. 4. Collins, J.; Hurlbert, E.; Romig, K.; Melcher, J.; Hobson, A.; Eaton, P. Sea-Level Flight Demonstration &Altitude Characterization of a LO2/LCH4 Based Ascent Propulsion Lander. In Proceedings of the 45th AIAA/ASME/SAE/ASEE Joint Propulsion Conference & Exhibit, Denver, CO, USA, 2–5 August 2009; p. 4948. 5. Battista, F.; Di Clemente, M.; Ferraiuolo, M.; Votta, R.; Ricci, D.; Panelli, M.; Roncioni, P.; Cardillo, D.; Natale, P.; Salvatore, V. Development of a LOX/LCH4 Technology Demonstrator Based on Regenerative Cooling throughout Validation of Critical Design Aspects with Breadboards in the Framework of the Hyprob Program. In Proceedings of the 63rd International Astronautical Congress, Naples, Italy, 1–5 October 2012. 6. Brown, C.D. Conceptual Investigations for a Methane-Fueled Expander Rocket Engine. In Proceedings of the 40th AIAA/ASME/SAE/ASEE Joint Propulsion Conference and Exhibit, Fort Lauderdale, FL, USA, 11–14 July 2004; p. 4210. 7. Ferraiuolo, M.; Riccio, A. Study of the Effects of Materials Selection for the Closeout Structure on the Service Life of a Liquid Rocket Engine Thrust Chamber. J. Mater. Eng. Perform. 2019, 28, 3186–3195. [CrossRef] 8. Ferraiuolo, M.; Russo, V.; Vafai, K. A comparative study of refined and simplified thermo-viscoplastic modeling of a thrust chamber with regenerative cooling. Int. Commun. Heat Mass Transf. 2016, 78, 155–162. [CrossRef]
+
+
+Appl. Sci. 2020, 10, 7664 21 of 22
+9. Arya, V.K.; Arnold, S.M. Viscoplastic Analysis of an Experimental Cylindrical Thrust Chamber Liner. AIAA J. 1992, 30, 781–789. [CrossRef] 10. Riccius, J.R.; Hilsenbeck, M.R.; Haidn, O.J. Optimization of geometric parameters of cryogenic liquid rocket combustion chambers. In Proceedings of the 37th AIAA/ASME/SAE/ASEE JPC, Salt Lake City, UT, USA, 8–11 July 2001. 11. Maire, J.F.; Chaboche, J.L. A new formulation of continuum damage mechanics (CDM) for composite materials. Aerosp. Sci. Technol. 1997, 1, 247–257. [CrossRef] 12. Citarella, R.; Cricrì, G.; Lepore, M.; Perrella, M. Thermo-Mechanical Crack Propagation in Aircraft Engine Vane by Coupled FEM-DBEM Approach. Adv. Eng. Softw. 2014, 67, 57–69. [CrossRef] 13. Guinard, S.; Bouclier, R.; Toniolli, M.; Passieux, J.C. Multiscale analysis of complex aeronautical structures using robust non-intrusive coupling. Adv. Model. Simul. Eng. Sci. 2018, 5, 1–27. [CrossRef] 14. Ferraiuolo, M.; Palumbo, C.; Sellitto, A.; Riccio, A. Investigating the Thermo-Mechanical Behavior of a Ceramic Matrix Composite Wing Leading Edge by Sub-Modeling Based Numerical Analyses. Computation 2020, 8, 22. [CrossRef]
+15. Gendre, L.; Allix, O.; Gosselet, P.; Comte, F. Non-Intrusive and Exact Global/Local Techniques for Structural Problems with Local Plasticity; Computational Mechanics; Springer: New York, NY, USA, 2009; Volume 44, pp. 233–245. hal-00437023. [CrossRef] 16. Citarella, R.; Cricrì, G.; Lepore, M.; Perrella, M. Assessment of Crack Growth from a Cold Worked Hole by Coupled FEM-DBEM Approach. In Key Engineering Materials; Trans Tech Publications: Bach, Switzerland, 2014; Volume 577–578, pp. 669–672. 17. Citarella, R.; Cricrì, G.; Armentani, E. Multiple crack propagation with Dual Boundary Element Method in stiffened and reinforced full scale aeronautic panels. In Key Engineering Materials; Trans Tech Publications: Bach, Switzerland, 2013; pp. 129–155. 18. Citarella, R. Non Linear MSD crack growth by DBEM for a riveted aeronautic reinforcement. Adv. Eng. Softw. 2009, 40, 253–259. [CrossRef] 19. Passieux, J.C.; Réthoré, J.; Gravouil, A.; Baietto, M.C. Local/global non-intrusive crack propagation simulation using a multigrid X-FEM solver. Comput. Mech. 2013, 52, 1381–1393. [CrossRef] 20. Gosselet, P.; Blanchard, M.; Allix, O.; Guguin, G. Non-invasive global–local coupling as a Schwarz domain decomposition method: Acceleration and generalization. Adv. Model. Simul. Eng. Sci. 2018, 4, 5. [CrossRef] 21. Ozisik, N. Heat Conduction; Wiley: New York, NY, USA, 1980. 22. Ferraiuolo, M.; Ricci, D.; Battista, F.; Roncioni, P.; Salvatore, V. Thermo-structural and thermo-fluid dynamics analyses supporting the design of the cooling system of a methane liquid rocket engine. In ASME International Mechanical Engineering Congress and Exposition; American Society of Mechanical Engineers: Montreal, QC, Canada, 2014. [CrossRef] 23. Henson, G. Chapter 7: Materials for Launch Vehicle Structures; American Institute of Aeronautics and Astronautics: Westlake, OH, USA, 2017; p. 0001809. 24. Riccius, J.R.; Haidn, O.J.; Zametaev, E.B. Influence of time dependent effects on the estimated life time of liquid rocket combustion chamber walls. In Proceedings of the 40th AIAA/ASME/SAE/ASEE Joint Propulsion Conference, Fort Lauderdale, FL, USA, 11–14 July 2004; p. 3670. 25. Thiede, R.G.; Riccius, J.R.; Reese, S. Life Prediction of Rocket Combustion-Chamber-Type Thermomechanical Fatigue Panels. J. Propuls. Power 2017, 33, 1529–1542. [CrossRef] 26. Quentmeyer, R.J. Experimental fatigue life investigation of cylindrical thrust chambers. In Proceedings of the 13th Propulsion Conference, Orlando, FL, USA, 11–13 July 1977.
+27. Armstrong, W.H. Final Kept. NASA Lewis Research Center, NASA-CR-159552, Contract NASA-21361, Structural Analysis of Cylindrical Thrust Chamber; NASA: Hampton, VI, USA, 1979; Volume I.
+28. Arya, V.K.; Halford, G.R. Finite element analysis of structural engineering problems using a viscoplastic model incorporating two back stresses. In Proceedings of the International Seminar on Inelastic Analysis, Fracture and Life Prediction, Paris, France, 24–25 August 1993. NASA TM-106046.
+29. Freed, A.D. Structure of a viscoplastic theory, Constitutive Equations and Life Prediction Models for High Temperature Applications Symposium; NASA TM-100749, Sponsored by American Society of Mechanical Engineers; NASA Lewis Research Center: Berkeley, CA, USA, 1988. 30. Zhang, Y.; Zhang, Q.; Qin, X.; Sun, Y. A Consistent Relationship between the Stress and Plastic Strain Components and Its Application in Deep Drawing Process. Math. Probl. Eng. 2017, 2017, 4278082. [CrossRef]
+
+
+Appl. Sci. 2020, 10, 7664 22 of 22
+31. Simo, J.C.; Hughes, T.J.R. Computational Inelasticity; Springer: New York, NY, USA, 2006; ISBN 978-0-387-22763-4. 32. Watson, D.F.; Philip, G.M. Triangle based interpolation. Math. Geol. 1984, 16, 779–795. [CrossRef] 33. Hetnarski, R.; Eslami, M. Thermal Stresses—Advanced Theory and Application; Springer: Dordrecht, The Netherlands, 2009; ISBN 978-1-4020-9246-6.
+Publisher’s Note: MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+© 2020 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (http://creativecommons.org/licenses/by/4.0/).

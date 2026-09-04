@@ -1,0 +1,750 @@
+Skip to main content
+Skip to article
+View PDF
+Acta Astronautica
+Volume 182, May 2021, Pages 454-465
+Research paper
+End to end process evaluation for additively manufactured liquid rocket engine thrust chambers
+Author links open overlay panel
+Fabio Kerstens a
+, Angelo Cervone a
+, Paul Gradl b
+Show more
+Share
+Cite
+https://doi.org/10.1016/j.actaastro.2021.02.034
+Get rights and content
+Full text access
+Highlights
+•
+Description of end-to-end additive manufacturing process flow applied to liquid rocket engines.
+•
+State of the art of laser powder bed fusion for monolithic channel-cooled rocket engines.
+•
+State of the art of directed energy deposition for monolithic or multi-metallic channel-cooled rocket engines.
+•
+Considerations of additive manufacturing challenges of channel-cooled liquid rocket engines.
+Abstract
+High performance liquid rocket engines require cooling to maintain structural integrity of the combustion chamber which is exposed to high thermal and environmental loads. For many systems, this is achieved by means of regenerative cooling, where a coolant flows through passages around the chamber wall whilst extracting heat from the wall. A novel production technique that is often considered for this is metal additive manufacturing (AM). The use of additive manufacturing opens up new opportunities for engine design, which can result in more competitive designs, from both a technical and economical perspective.
+This paper provides a detailed literature review on the current state-of-the-art, challenges, and opportunities for designing additively manufactured liquid rocket engines by means of laser powder bed fusion or powder-based and wire-based directed energy deposition (DED) techniques. A detailed, systematic explanation is provided on the steps involving the creation of additively manufactured thrusters including the process considerations, AM techniques and post-processing operations.
+Previous
+Next
+Keywords
+Additive manufacturingPowder bed fusionDirected energy depositionLiquid rocket engineThrust chamberRegenerative cooling
+1. Introduction
+For most liquid rocket engines, active cooling of the combustion chamber is required to properly maintain the wall temperatures and allow for structural margins of the design and material used. This cooling is generally referred to as actively-cooled, channel-cooling, or regenerative-cooling since the propellants from the engine system are later used for injection as part of the combustion process. The regenerative cooling is also required in engine cycles such as expander to allow for proper propellant heat pickup to drive turbomachinery and in some cycles can provide an increase in combustion efficiency. Most combustion chambers use an array of axial channels with a thin (hot) wall separating the hot combustion gases from the coolant in the channels. The design and subsequent hot-walls of the combustion chamber are balanced with structural margins and the ability to properly maintain the wall temperatures. An infinitely thin wall is desired to reduce wall temperatures but needs proper thickness to contain the pressure.
+Historically, thrust chambers of liquid rocket engines have been fabricated using numerous manufacturing methods. The most common methods for chamber fabrication include tube-wall (e.g. RL-10, RS-27) and channel wall (e.g. RS-25, Vulcain). These traditional approaches use a series of wrought forming and assembly methods that include forging, machining, electroplating, welding, brazing, and casting, among several other techniques [1], [2]. Despite being well-established in the industry, these production techniques often prove to be labor-intensive, costly and result in components and subsequent systems with a high part count. In the era where new-space companies have an increasingly prominent position in the launcher market, the cost-effectiveness of new thrust chambers designs is more important than ever before [3]. There are fundamental improvements that are deemed relevant to realize cost-effective combustion chambers including the decrease in manufacturing time, automation of manual operations, ability to use traditional as well as more advanced materials for performance improvements, and the use of integral chamber designs [4]. A novel production method that excels in these improvement points is additive manufacturing (AM).
+Download: Download high-res image (430KB)
+Download: Download full-size image
+
+Fig. 1. Comparison of traditional manufacturing to additive manufacturing evolution (cost in US$, 2020 equivalent, credits NASA).
+
+AM designs provide great opportunities for new materials, weight optimization, as well as to realize complex shapes and geometries that are impossible or too expensive to create with traditional production techniques [5]. Moreover, AM thrust chambers may benefit from a greatly reduced production time compared to traditional methods, which also significantly reduces associate cost [6]. This may especially be relevant for launch vehicle providers that rely on reusable and expendable vehicle architectures and desire a high launch frequency. Other advantages include the ability to use a combination of various alloys or newer alloys that are prohibitive to produce with traditional methods.
+The interest of AM thrust chambers is seeing a large growth in the launcher industry and has been demonstrated for many development and several flight applications [7], [8], [9]. The AM technology is even referred to as a “key technology approach” for the future European Prometheus LOX/LCH
+4
+ engine [10]. Many companies have publicly made known their development efforts and also flight applications of AM chambers [11]. A compelling case has been made using AM technology for fabrication of combustion chambers to reduce lead time and cost [12]. NASA highlighted the lead times and general cost of traditional manufacturing with AM technology using a combination of various AM processes [13]. As the AM technology has evolved and AM machines have increased in scale, additional cost and schedule savings are realized moving from two-piece welded to single piece chambers. An example of this can be seen in Fig. 1. The thruster scale to which additive manufacturing is applied varies greatly, from small propulsion devices for CubeSats or reaction control systems [14], [15] to the main propulsion and upper stage systems of orbital launch vehicles [16]. The purpose of the present work is to provide a comprehensive review of the end-to-end additive manufacturing process applied to regeneratively-cooled liquid rocket thrust chambers. Many different metal additive manufacturing techniques exist that can be used to create integrally-cooled thrust chambers. This review is focused on thrust chamber fabrication through laser powder bed fusion (Section 2) and directed energy deposition (Section 3). For these production techniques, a detailed end-to-end process flow is provided for the application of thrust chambers (Section 4).
+2. Laser powder bed fusion
+Laser powder bed fusion (L-PBF), also known under the trade names “Selective Laser Melting” or “Direct Metal Laser Sintering”, among others, is one of the most commonly used metal AM techniques. The feedstock is provided in powder form which is deposited and melted layer-by-layer on a build plate, as illustrated in Fig. 2. A laser beam provides the necessary energy at micro-scale focus, where the powder absorbs this energy creating local melting. After one layer is finished the build plate is lowered, re-coated with a blade or re-coater arm, and the melting process is continued, until a three-dimensional shape is realized. The deposited layer has a typical height in the range of 20–100 µm [17]. To prevent excessive oxidation of the metal in the melt pool, the L-PBF process occurs in an inert environment.
+Download: Download high-res image (198KB)
+Download: Download full-size image
+
+Fig. 2. Schematic representation of laser powder bed fusion (credits NASA).
+
+2.1. Monolithic superalloy and refractory chambers
+Various L-PBF thrust chambers across the propulsion industry have been demonstrated in a variety of materials. A generally observed trend is that most companies rely on either a superalloy or a highly conductive copper alloy chamber design. Superalloys were common prior to 2015 before the copper alloys were fully developed and characterized using L-PBF. These alloys, typically nickel- or iron-based, are capable of withstanding extreme temperatures and corrosive environments [18]. SpaceX has noted the use of Inconel 718 for the NTO/MMH SuperDraco engine that includes integral cooling channels [19]. The same material is also used in a LOX/LCH
+4
+ thrust chamber developed and hot-fired by Avio [20], [21]. The startup company Dawn Aerospace reports the use of Inconel and stainless steel for some of their regeneratively cooled integral in-space thrusters [15], [22]. The use of superalloys in liquid rocket engines is also successfully demonstrated by Aerojet Rocketdyne in the regeneratively cooled LOX/RP-1 Bantam engines [23]. Many other companies have also shown images of hot-fire testing using a variety of superalloys. Superalloys, particularly Inconel 625 and Inconel 718 are very common materials for AM, although have limitations in certain rocket environments such as hydrogen. While superalloys are in use, they are not the optimal material for high performance combustion chambers without the use of film cooling or other design modifications that may impact performance.
+Developments have also been completed that evaluated the use of L-PBF refractory alloys for thrust chambers. This process was demonstrated using niobium alloy C-103 for in-space thrusters with improved properties over wrought due to the small grain size distribution [24]. The powder supply chain was also advanced at an industrial scale allowing for more widespread use of C-103 [25]. Other alloys such as tungsten, tungsten–rhenium, and tantalum have also been fabricated using L-PBF and could be feasible for use in thrust chambers [26]. While many of the refractory alloys are used in radiatively-cooled applications, they could be used with integral channels for various applications using the L-PBF process.
+2.2. Monolithic copper alloy chambers
+Whereas most superalloys excel over copper alloys in terms of specific strength, the use in high pressure engines is limited due to the low thermal conductivity associated with these alloys, resulting in wall temperature exceeding the material limits. For these applications, highly conductive copper alloys are more suited. Aerojet Rocketdyne released information regarding the development and successful hot-fire testing of a C-18200 chamber as an upgrade for the RL-10 [27]. A startup company, Launcher Inc., has also publicly discussed the use of a copper alloy combustion chamber using C-18150 and successful hot-fire testing at subscale. C-18150 remains a popular aerospace alloy for thrust chambers due to the mature use in traditional manufacturing and potential lower cost feedstock.
+Starting in 2014, NASA’s Marshall Space Flight Center and Glenn Research Center have successfully applied L-PBF additive manufacturing to fabricate GRCop-84 (Cu-8 at.% Cr-4 at.% Nb), GRCop-42 (Cu-4 at.% Cr-2 at.% Nb), and C-18150 copper thrust chambers [28], [29]. GRCop-alloys, originally developed at Glenn Research Center, are high conductivity, high-strength, dispersion strengthened, copper alloys for use in high-temperature, high heat flux applications [30], [31], [32]. The mechanical properties have shown comparable to the extruded (wrought) material [33]. Yet, the low cycle fatigue life of the additive manufactured specimens is shortened due to crack initiation from the increased surface roughness inherent to the AM process. Machining or post-process surface treatments can help resolve the inherent surface roughness, although still requires further characterization for copper alloys and internal channels [34]. The GRCop-42 and GRCop-84 alloys, in addition to bimetallic configurations have been used in a variety of applications with propellants including LOX/LH
+2
+, LOX/LCH
+4
+, and LOX/RP-1.
+The GRCop alloys are dispersion strengthened materials with primary strengthening from the Cr
+2
+Nb phase. The material has an advantage over prior copper-based alloys due to:
+Download: Download high-res image (771KB)
+Download: Download full-size image
+
+Fig. 3. Various AM copper alloy chambers demonstrated by NASA and commercial partners: (a) Bimetallic 156 kN using L-PBF GRCop-84 and Inconel DED, (b) LOX/LH2 Hot-fire testing of 156 kN bimetallic chamber, (c) Large-scale GRCop-42 31 kN chamber, (d) LOX/LCH4 hot-fire testing of 31 kN, e and (f) L-PBF C-18150 and bimetallic 10.7 kN chamber, and (g) Hot-fire testing of 10.7 kN bimetallic chamber (credits NASA).
+
+1.
+Oxidation and blanching resistance during thermal and oxidation–reduction cycling [35],
+2.
+A maximum use temperature around 800 
+°C
+, depending upon strength and creep requirements,
+3.
+Good mechanical properties at high temperatures,
+4.
+Lower thermal expansion to reduce thermally induced stresses and low cycle fatigue,
+5.
+Established powder supply chain,
+6.
+Mature AM process that provides consistent, minimum material properties [36].
+The GRCop-42 and GRCop-84 are capable of operating at temperatures up to 800 
+°C
+, and they have been successfully hot-fire tested in an oxidizing environment to above 750 
+°C
+. In comparison, pure copper is limited to approximately 200 
+°C
+, and most copper alloys cannot exceed 500 
+°C
+ [37]. Substitution of GRCop-42 or GRCop-84 for C-18150, NARloy-Z (Cu-3 wt% Ag-0.5 wt% Zr), or another precipitation strengthened copper alloy, could result in a 200 
+°C
+ or more increase in temperature capability, providing higher performance trades or increased margin. These attributes, in addition to the rapid development of the GRCop alloys using the L-PBF process, make them an attractive option for use in high-performance combustion chambers.
+There are some differences between GRCop-84 and GRCop-42, and they can be traded for various applications. GRCop-42 trades somewhat lower mechanical properties at some temperature ranges, such as strength, for higher thermal conductivity (5%–8%), and thus a lower wall temperature. The ductility of GRCop-42 is generally superior to that of GRCop-84. With only half the Cr
+2
+Nb content of GRCop-84, this was expected. Both alloys have sufficient ductility for most applications and will deform large amounts without failure. The major difference between the alloys is observed in low cycle fatigue in the stresses observed during strain control testing.
+NASA has fabricated and tested over 30 different L-PBF GRCop, channel-cooled, combustion chambers since 2016. Chambers have all been constructed using the previously described AM technology, with some units incorporating a bimetallic AM jacket. The thrust chambers tested at chamber pressures from 14 to over 97 bar in a variety of propellants and mixture ratios, producing 4.4 to 156 kN thrust [2]. NASA has accumulated well over 400 starts and 30,000 s on various AM GRCop alloy and AM bimetallic chambers (Fig. 3). From these experiences, the two main adjustments to the design process for AM L-PBF regenerative cooling chambers reside in accounting for the minimum feature size that can be reliably built using L-PBF and the resultant surface finish.
+In theory, the minimum wall or rib thickness of regeneratively cooled thrust chambers fabricated using L-PBF is associated with the laser focus spot size, which is typically in the order of 70–200 µm [38]. On most commercial L-PBF printers, walls of this thickness are often not repeatable or result in excessive porosity. Patel et al. [39] demonstrated use of a 0.6 mm minimum wall thickness and minimum channel width of 0.63 mm for an Inconel 718 regeneratively cooled chamber. The literature reported several pores in the chamber wall, resulting in the coolant leakage through the chamber wall. Zhang and Miyamoto [40] demonstrated a minimum wall thickness of 3 mm in an application of Co-28Cr-6Mo monolithic thrust chamber, which uses a combination of film cooling and regenerative cooling. Thomas [41] poses a general recommendation for a minimum wall thickness of 0.4 ± 0.02 mm and minimum slot width larger than 0.3 mm for L-PBF fabricated parts. The 0.4 mm wall thickness limit is also mentioned for Inconel 718 and Co-28Cr-6Mo structures in the work of Marchan et al. [42].
+3. Directed energy deposition
+In directed energy deposition (DED) the feedstock is deposited from a deposition head, as illustrated in Fig. 4. Contrary to L-PBF, the feedstock is only deposited locally to create a freeform part, instead of covering the full build plate with powder. Directed energy deposition may use a powder or wire feedstock. Powder feedstock is excellent for creating parts with high dimensional tolerances, at the cost of being time-consuming. A wire-based process on the other hand has a superior deposition rate but fails to create parts with a high dimensional resolution. These DED processes are more suitable for large thrust chambers, channel-cooled nozzles, or radiatively-cooled nozzle extensions. DED fabrication techniques may be used to create a bimetallic thrust chamber (Section 3.1) or monolithic (Section 3.2).
+Various forms of DED are in use with the main differences being the feedstock, wire or power, and the energy source. The most common forms of DED are the laser blown powder DED (LP-DED) which uses a laser energy source (Fig. 4). Wire can also be used as the feedstock, in which case is called laser wire DED (LW-DED). Other energy sources for DED include electron beam and electric arc, both using wire feedstock. The electron beam is integrated inside of a vacuum chamber so has advantages for use with reactive alloys. The arc-wire deposition (AW-DED), commonly known as “Wire Arc Additive Manufacturing”, can be used for very high deposition rates, but with a loss to resolution.
+3.1. Bimetallic structures
+The ideal material for a thrust chamber liner has high specific strength, high ductility, high thermal conductivity, low coefficient of thermal expansion, and small grain size [43]. Generally, most conductive metal alloys have a low strength to weight ratio, whereas metal alloys with a high strength to weight ratio are often troubled with poor thermal conductivity. A unique combination that is possible with DED is the use of bimetallic, or multi-metallic, structures, where multiple alloys are combined in an integral part. Knight et al. [44] perform a numerical investigation and show that a multi-metallic, graded, wall structures can be used to reduce the thermo-structural loading of a regeneratively cooled thruster wall. Onuike et al. [45] experimentally study the bimetallic interface of GRCop-84 and Inconel 718 using direct deposition of the two powders on top of each other and compositional gradation with premixed powder (50 wt% Inconel 718, 50 wt% GRCop-84). A successful metallic bond was reported in the literature between the two materials, with both production techniques. Both techniques create a successful bond between the metals.
+While DED has a lower resolution of features compared to L-PBF (Fig. 8), it can be used in conjunction with L-PBF for multi-metallic structures. At NASA, bimetallic chambers have been developed using L-PBF fabricated GRCop-84 and C-18150 liners enclosed with Inconel 625 structural jacket using both electron beam DED and LP-DED [46]. Despite being successfully hot-fired, geometrical deformations were observed during the DED fabrication. This deformation is continued in a follow-up publication [47], where axial variation of 3%–4% and radial variation at the throat of 7%–10% were observed when using a bimetallic DED interface. The fabrication challenge from residual stresses is however repeatable. This hybrid L-PBF and DED process has been feasible for bimetallic and multi-metallic combustion chambers that are required to operate at high chamber pressures and subsequent heat loads. This design also offers a weight-optimized structure making use of the various alloys locally as required in the design.
+Download: Download high-res image (255KB)
+Download: Download full-size image
+
+Fig. 4. Schematic representation of laser powder directed energy deposition.
+
+Reproduced with permission from [46].
+Different bimetallic thrust chamber designs realized at NASA are built using wire-based DED techniques, specifically using the laser wire direct closeout (LWDC) process. During this process, a prefabricated liner with slotted or formed channels is rotated around its center axis on a tooling plate. Whilst rotating, a laser beam is used to fuse a wire feedstock locally to the previously deposited layer and ribs of the chamber wall, thereby creating a bimetallic bond [48]. Early experiments conducted with this technique for bimetallic structures indicated a weak joint between a C-18150 liner and 347-series steel or Inconel 625 wire. Further research by Anderson et al. [49] managed to achieve a complete bond between Inconel 625 and C-18150 for both powder- and wire-based DED on solid structures. This literature reported that the high kinetic energy involved in powder-based DED promotes recrystallization and enhances diffusion of the bond, at the cost of higher residual stress. For the wire-based process, the publications concluded that the mechanical mixing zone is much narrower. The NASA experiments with bimetallic LWDC used a much lower energy laser system for the development to limit distortion of the ribs. A working solution was later determined by using C-18150 liner with slotted channels and a Monel 400 closeout, which was later hot-fire tested accumulating significant starts and run time.
+Both powder- and wire-based DED techniques are suited for bimetallic combustion chambers including structural closeouts. A primary difference between the two manufacturing approaches is that the powder-based enclosure process requires a pre-fabricated chamber with enclosed channels. Since the wire-based DED fuses the closeout on the ribs between the channels, enclosed cooling passages are not strictly required for this production technique. With the latter production technique, the designer is offered the opportunity to machine the cooling channels before creating the closeout, which provides better control of the coolant channel roughness. Both bimetallic fabrication methods can be seen as a potential alternative to electroplating or brazing, techniques that are often used in heritage engine designs.
+3.2. Monolithic structures
+Like L-PBF, DED techniques may also be employed for producing monolithic thrust chambers. The LP-DED process has matured to allow for integral channel structures to be formed, mostly for the channel-cooled nozzle portion of the chamber. Since the material is deposited locally, the size limitation does not exist like L-PBF, which is required as the nozzle is expanded to large diameters. The limitation of the DED processes is the gantry or robotic system being used. NASA, along with industry partners, have demonstrated the use of the LP-DED process for integral channels in a variety of nickel- and iron-based superalloys including Inconel 625, JBK-75, and NASA HR-1. These demonstrator units have been shown feasible through hot-fire testing, including an integral channel DED nozzle using JBK-75 that completed 114 hot-fire tests at a chamber pressure greater than 83 bar and accumulated 4170 s in LOX/GH2. Other testing has been completed using Inconel 625 and NASA HR-1 material. These nozzles have demonstrated wall temperatures exceeding 732 
+°C
+ during mainstage testing (see Fig. 5).
+As part of the process demonstration, NASA has also demonstrated the LP-DED process for large scale nozzle structures. An integral channel nozzle that was 101.6 cm in diameter by 96.5 cm in height was fabricated in 30 days of deposition time using the NASA HR-1 material (see Fig. 6). Following deposition and post-processing, the nozzle completed 3-D scanning that showed less than 0.5 mm deviations from the nominal geometry. A larger scale integral channel NASA HR-1 alloy nozzle measuring 152 cm in diameter and 178 cm in height was also completed in 90 days deposition time. These nozzles included a variety of internal channel geometries and transitions. This integral channel configuration significantly reduces the number of operations and parts compared to a traditionally manufactured assembly. NASA has also demonstrated the fabrication of a variety of other integral channel nozzles in thrust classes of 178 kN, which will be hot-fired. These nozzles all demonstrated successful fabrication meeting the geometric tolerances, ability to remove any excess powder, minimal distortion, and developed the build and tool-path strategies. Beyond the superalloy developments for integral channels, additional developments are also being shown using the GRCop-42 alloy with LP-DED, which could be used in large-scale chamber applications [51]. As mentioned with prior AM limitations, the surface roughness remains a challenge and needs additional development or post-processing to allow for comparable pressure drops with machined or drawn surface finish.
+Download: Download high-res image (588KB)
+Download: Download full-size image
+
+Fig. 5. Examples of integral-channel DED and subscale hot-fire testing of the process.
+
+Reproduced with permission from [50].
+While an advantage of the LP-DED process is the ability to form with integral channels, a monolithic structure can also be formed using various DED processes and traditionally machined and slotted chambers to form the coolant channels. This allows for an as-machined surface to be maintained in the design. A variety of closeout techniques can then be applied. The use of DED for forming near-net-shape structures on liquid rocket engine thrust chambers has also been demonstrated by Mitsubishi for manifolds and GKN for structural stiffeners on nozzles [52], [53].
+Download: Download high-res image (310KB)
+Download: Download full-size image
+
+Fig. 6. Examples of LP-DED nozzles with integral channels build by NASA. (a) 101.6 cm diameter and 96.5 cm height HR-1 alloy nozzle with integral channels, (b) GRCop-42 channel demonstrator (credits NASA).
+
+Besides PBF and DED, an alternative AM method for chamber fabrication that has been in development since the early 2000’s is cold gas dynamic spraying, or cold spray. This is a solid state AM deposition technique that has been evaluated for near net shape forming of combustion chamber liners and jackets. The process uses a converging–diverging supersonic nozzle that injects high pressure inert gas and metal powder, which is sprayed against a backing surface. When the metal powder particles reach a critical velocity the material plastically deforms and adheres onto the target surface through kinetic energy. This is typically in the range of 500–900 m/s [54]. The process is solid state and does not melt the material minimizing residual thermal stresses observed in other AM processes. The inert gas may be preheated to increase the gas injection velocity. Cold spray has been adapted for superalloys and also copper-based alloys. It has been demonstrated with copper alloys C-18150, GRCop-84 and GRCop-42 with near-wrought properties [55], [56]. Cold spray has been evaluated as a casting or forging replacement to form the copper alloy combustion chamber liner, which is then further processed through machining and slotted with channels. The cold spray process has also been demonstrated for closeout of the copper liner and application of the structural jacket. Many superalloys used for chamber jackets can be applied successfully using cold spray including Inconel 625, Inconel 718, and NASA HR-1 among others [47], [57], [58]. In addition to component manufacturing, cold spray can also be used to apply coatings, repair, joining, and braze alloy application [59], [60].
+Download: Download high-res image (641KB)
+Download: Download full-size image
+
+Fig. 7. N
+2
+ diagram showing the high-level end-to-end design, manufacturing, and qualification logic for AM thrust chambers.
+
+Download: Download high-res image (502KB)
+Download: Download full-size image
+
+Fig. 8. Comparison of L-PBF and DED thrust chambers production techniques. Left: build envelope overview of commercial AM machines, with reference to the Space Shuttle Main Engine (SSME). Right: typical minimum feature sizes and build diameter.
+
+Right figure reproduced with permission from [13].
+4. End-to-end additive manufacturing process
+Additive manufacturing is a process-sensitive production technique, in which variation in material characteristics can be expected without the correct controls in place. The potential presence of (subsurface) defects, increase in surface roughness, anisotropic material properties, and a likeness of witness coupons to the actual part introduce unique requirements on the verification and validation product assurance process [61]. It is believed that when parts or witness coupons have the same thermal history during the build process, they can meet the same requirements [62]. A strict control of the entire process from the powder supply chain through the AM process, training, configuration control, post-processing, and representative material property sampling plan and database is crucial for critical space operations. This qualification approach towards a Qualified Metallurgical Plan (QMP), classification of part criticality, and process controls are provided in NASA documents [63], [64], [65]. Many other international organizations are developing unique standards for the qualification of AM processes [66], [67].
+Several previous publications have proposed a systematic verification/validation logic for additive manufactured parts [68], [69], [70]. Furthermore, at the institutional level, several standards have been developed for the PBF process for space applications [63], [71]. Based on experience and typical procedures provided in the aforementioned standards and publications, a process logic diagram was developed in the present work, as visualized in Fig. 7. This N
+2
+ diagram address the major steps and their dependencies for the design, production, and testing of AM Thrust chambers. In the diagram rows indicate outputs, whereas columns represent inputs to the different design phases.
+4.1. Chamber design and selection of AM process
+The chamber design starts with a set of requirements, that follow from the mission that the engine system has to fulfill. Based on these requirements a certain propellant combination (step 1 in Fig. 7) and set of operating conditions may be defined. This ties in closely with the selection of chamber materials (step 2) and eventually the design and analysis of the chamber (step 3). It is important to note that the AM production process that is used (L-PBF/DED), already imposes requirements and constraints on the feasible design space, as indicated by the dependencies in Fig. 7.
+There are many parameters influencing the decision on the most suitable AM production process (step 4), such as commercial availability, cost, quality, and availability of materials. Additionally, the possible build size and feature resolution of the production process are of particular interest for thrust chambers. The size restrictions of DED and L-PBF are qualitatively addressed in Fig. 8 left. The Figure is constructed by considering the AM machine build volume of all major European and US AM machine vendors. The markers indicate the maximum chamber diameter/height that fits in the build volume. For reference, dimensions of the Space Shuttle Main Engine (SSME), or RS-25, are indicated with dashed lines [72].
+Fig. 8 left clearly indicates the size limitation of most commercial L-PBF machines. Large thrust chambers (e.g. SSME) are often more suited for DED. While size is certainly a limitation as shown, various processes also have limitations of build features. The L-PBF does have advantages since it can offer finer features during the print process as discussed above. Fig. 8 right shows a comparison of the build diameter along with the feature size that can be repeatedly fabricated [13]. It should be noted that although L-PBF is generalized, various commercial machines do use various spot sizes.
+These build limitations have a limit of what can be produced with current technology and many current engines being fabricated are sized to accommodate this limitation. There are some design trades that are being made as a result of the AM process. For the same propellant throughput, the chamber diameter can be greatly reduced by increasing the chamber pressure. However, since the chamber volume is typically constrained based in the propellant residence time, this may result in long cylindrical chamber sections, which exceed the height limit of the L-PBF build envelope. A practical solution around this issue is to fabricate the chamber in multiple pieces, which has been shown in various applications. These multi-piece combustion chambers are split axially and a circumferential joint is welded, bolted, or joined [28], [73]. The production of the thrust chamber in multiple pieces does add complexity to the design and increases the production cost with the added processes. However, there are significantly more commercially available L-PBF machines available than that of large DED additive manufacturing machines. This solution can be more effective from a cost or schedule perspective, but solutions must be traded on a case by case basis.
+4.2. Feedstock quality verification
+The final properties achieved during the AM depend strongly on the quality of the feedstock that is used for the process (step 4 in Fig. 7). Therefore, qualification and control of the feedstock are vital to creating parts that can meet identical requirements (step 5). Common criteria that may be used for feedstock qualification include:
+•
+Chemical composition, which may reveal contaminants in the raw material and, for powder-based processes, can quantify and control any trace elements in the powder. The latter is important during the build operations, heat treatments and for mechanical properties that will be obtained [74]. It is also important to control the method of powder manufacturing, including the proper blending of powder heats and prohibiting post-production additions [64].
+•
+Particle size distribution and morphology. For powder-based processes, the achieved surface finish is reported to be loosely equivalent to the powder diameter used [28]. Additionally, test data shows that the powder size (and shape) can have a significant impact on the achieved strength and elongation [33]. The powder size and morphology are also critical for flowability and spreadability during the process for successful AM builds, which leads to adequate properties.
+•
+Humidity. Several raw materials, such as copper and aluminum, are prone to pick up moisture. This moisture can greatly increase porosity during the build process.
+•
+Handling and packaging. Materials must be handled properly to avoid oxidation with the environment and also avoid contamination from external sources.
+Some additive manufacturing processes, such as L-PBF and LP-DED, allow for recycling of the excess powder but must meet strict controls to track recycled powder [75], [76]. For recycled powder, which has gone through a thermal cycle during the build process, re-qualification is required.
+4.3. Production of the chamber and witness coupons
+After the qualification of the feedstock, the thrust chamber can be built (step 7). There are many parameters that impact the L-PBF or DED build process, including the heat source power [17], travel/scan speed [33], layer height [77], placement of parts on the build plate [62], build chamber environment, laser spot size, hatch spacing/overlap, contour spacing/overlap (if applicable), laser timing, laser scan strategy [78], and the type of recoater arm. It should be noted that this is only a short listing and that there are many other parameters impacting the build.
+An optimal set of parameters and machine configuration exists to achieve minimal porosity and the most favorable mechanical properties for the core material. However, the interaction of these parameters and off-nominal conditions must be understood to ensure they are meeting the nominal processing box. There are also different sets of L-PBF parameters used during build operations, where one set is used for the material core, which can impact the density and mechanical properties, while a different set is used for contouring, which provides the final surface finish on all external and internal features (Fig. 9). It should be noted that these parameters will differ between alloys, part geometry, different AM technologies, and machines. Therefore, despite the feedstock that is being used, the qualification of a thrust chamber fabrication process shall include full configuration control of the process that documents all inputs into the entire process and supply chain. A proper sampling plan within the build area is also necessary to obtain representative mechanical properties, witness samples for surface finish, or other destructive and non-destructive evaluations (NDE).
+Challenges can be created when parts combine sections of high thermal mass and low thermal mass and result in higher residual stresses that can lead to failures, in the form of thick and thin wall sections. Rome et al. [62] pose the example of a low thermal mass regenerative cooling circuit with a high thermal mass flange attached to it. As a result of the poor heat dissipation of the cooling structure, the thrust chamber thermally deformed, resulting in a collision with the powder recoater arm of the L-PBF machine. This particular problem was solved by the addition of more support structures to the flange, to dissipate heat faster and allow for proper attachment to the build plate. The support structures can have negative consequences though through the addition of post-processes and other opportunities for failure in the builds. A well-designed part should eliminate or reduce support structures and only use it when necessary.
+Download: Download high-res image (738KB)
+Download: Download full-size image
+
+Fig. 9. As-built GRCop-84 structure produced using L-PBF: (a) core parameters and structure, (b) contour parameters.
+
+Reproduced with permission from [79].
+4.4. Powder removal
+Powder removal is an essential post-build procedure for all PBF additive manufacturing processes and shall therefore be included in the design requirements of the thrust chambers. When creating parts with internal cavities, such as coolant channels, there must be some accessibility to properly remove powder. Experiments at NASA [28] have shown that powder consolidation within coolant channels can be significant, as illustrated in Fig. 10. Several factors influence the powder consolidation including the design, parameters used during the process, build and post-build atmosphere, residual moisture, and post-processing sequence of operations. Several techniques are employed for powder removal, including pneumatic flushing, vibratory techniques, variable frequency sine sweeps, blunt blows to the build plate, alcohol soaks, and vacuum operations. During the early development of chambers reported by NASA, proper clearing all powder was challenging and often resulted in complete channel blockage. Eventually, as the cooling passages were not well-accessible from the manifold ports, a small groove was cut in the outer chamber wall to physically remove the powder and then sealed with a split ring weld joint. These lessons learned have resulted in design changes to allow for better access for powder removal.
+A possible reason for this channel obstruction is provided by Gibson et al. [80], who report that strong thermal gradients in the excess powder, around the regions that are just melted together, can result in powder agglomeration at the perimeter. If the temperature at the perimeter is high enough, this may result in unintended sintering at the perimeter, as depicted in Fig. 11. Especially in narrow confined areas, such as cooling channels, this can introduce problems when removing the powder. These high thermal gradients are even more apparent in thin wall sections, such as the ribs, or lands, of channels [81]. The slope of the walls is also an important consideration since the roughness will change based on the inclination angles and orientation. High roughness can cause additional powder to adhere to the walls and increase the chances of that powder becoming trapped in narrow passages.
+Excess powder in the channels can generally be removed by pneumatic flushing of the channels, alternating with a vacuum. An alternative approach combines pneumatic flushing with vibrating the chamber [82]. Other methods include ultrasonic and vacuum boiling including those mentioned previously. NDE or flow testing techniques must be introduced into the process during powder removal to ensure that powder removal can be verified [83]. Any residual moisture will cause the low flowability of the trapped powder [84]. Operations such as electrodischarge machining before full powder removal can introduce fluids that could cause powder caking, making removal further complicated. Although not strictly required, it is highly recommended removing the excess powder before applying post-processing heat treatments. Heat treatment operations such as Hot Isostatic Pressing (HIP) can sinter powder in place and other heat treatments can further consolidate powder.
+Download: Download high-res image (260KB)
+Download: Download full-size image
+
+Fig. 10. Examples of fully and partially blocked internal channels shown in Computed Tomography.
+
+Adapted from [28].
+Download: Download high-res image (704KB)
+Download: Download full-size image
+
+Fig. 11. Schematic representation of unwanted sintering of the powder at the wall.
+
+4.5. Post-processing operations
+Both as-built parts produced using PBF or DED show a relevant degree of anisotropy in mechanical material properties. The part is generally weaker in the direction perpendicular to the build plate (z-height). Mechanical tensile tests of L-PBF GRCop-84 and GRCop-42 specimens show a steep decrease in ductility in the as-built condition, which is an indication of high (thermal) residual stresses in the parts [28]. Besides anisotropic material properties, additively manufactured parts are known to have a small degree of porosity, typically less than 1%. In the application of a regeneratively cooled thrust chamber, the effect of porosity is two-fold. First, it could result in a leakage of the coolant to the chamber, resulting in a performance reduction with less mass flow for the injector. This is especially relevant when low molecular weight propellants, such as hydrogen or methane, are used for cooling. Furthermore, porous voids in the chamber wall may act as conduction barriers, thereby lowering the conductive heat transfer through the wall. While some intentionally introduced porosity in AM materials can be used as transpiration cooling, it must be properly designed for in the process and intentional [85].
+The rapid solidification of the metal in additive manufacturing techniques often results in a small grain size in the metal. Onuike et al. [45] report that for smaller grain sizes, there are more grain boundaries, which slows down the heat transfer through the material. From their experiments, they observe that the thermal diffusivity and conductivity of Inconel 718 are in line with wrought alloy data. Early literature suggests a slight drop of the GRCop-alloys from wrought, but very close to the extruded form. A potential solution that is often introduced to enhance the thermal properties of highly conductive alloys like GRCop-84 is HIP. During HIP, the part is placed in a chamber and gradually heated to a specified temperature, whilst being subjected to high pressure which is isostatically applied. Besides acting as a stress relief treatment, it may also aid in the densification of the material in the thrust chamber, bringing to near 100% density and allowing for full conduction paths. The HIP process further aids with homogeneity of the AM material [86], [87].
+Tillmann et al. [88] performed HIP experiments with AM Inconel 718. It was concluded that densification was mainly determined by the temperature, whereas the impact of pressure was generally smaller. The study determined that even with HIP, it is not possible to achieve 100% dense parts, as some of the voids in the part are filled with the inert gas used during the additive manufacturing process and trapped or porosity from the powder atomization process. For Inconel 718, the study managed to achieve a relative density exceeding 99.985% during HIP with temperatures exceeding 1150 
+°C
+ and pressures exceeding 100 MPa.
+Moriya et al. [89] also use HIP for a C-18150 thrust chamber liner and obtain an increase in relative density from 99.3% to 99.5%. They also performed experiments on the thermal conductivity of C-18150, which shows a significant increase from roughly 90 W/(m K) as-built, to approximately 350 W/(m K) after aging and HIP. Results show a modest degree of anisotropic behavior in conductivity after HIP (
+<
+25 W/(m K)). A similar observation of low as-built thermal conductivity for a copper alloy is reported in the work of Onuike et al. [45], who report a GRCop-84 thermal diffusivity which is almost 50% lower than commercially rolled specimens. Ongoing development from NASA on GRCop-alloys has shown conductivity near or equal to the wrought material [90].
+Besides post-processing heat treatments, surface treatments should be considered for additively manufactured parts. Parts produced using additive manufacturing are susceptible to a high surface roughness compared to machined alternatives. This can reduce fatigue life due to crack initiation locations in addition to a negative impact on chamber total pressure drop. The high surface roughness increases turbulence in the cooling channels of a thrust chamber and thereby also increasing the hydraulic losses over the cooling structure. Moreover, the increased turbulence also augments the heat transfer from the coolant, which could also be of advantage for the designer [74]. Suslov et al. [91] demonstrated that there is a strong dependency on the build angle on surface finish. For Inconel 718 specimens, they observe the best surface finish (10–25 µm Rz) parallel and perpendicular to the build plate, whereas over-hang structures result in a significant increase in rough-ness (150–300 µm Rz). The surface roughness from L-PBF is highly material dependent, geometry dependent, post-process dependent, and machine-dependent, so parts need to be characterized and controlled under the same set of conditions [92].
+Dependent on the engine cycle and system upstream and downstream of the cooling channels and the surface roughness that is present from the additive manufacturing process, the designer may want to use a surface enhancement technique to avoid excessive hydraulic losses over the cooling structure. There are several potential surface enhancement techniques that could be used for internal channels, but require further development specific to the design requirements, AM process, and material. Some of these include hydrodynamic cavitation abrasive finishing, abrasive flow machining, fluidized bed machining, magnetic abrasive finishing, and chemical or electrochemical polishing, and chemical mechanical polishing [93], [94], [95], [96], [97]. The surface requirement should be traded on the type of engine cycle as the heat transfer augmentation from the rougher surface may be necessary. A rough approximation of surface roughness for L-PBF processes is equivalent to the powder diameter used, however, the final surface is also dependent on the contour parameters used and will generally be lower [28].
+4.6. Non-destructive and destructive evaluation
+To assure that the additively manufactured thrust chamber meets requirements, non-destructive evaluation (NDE) is performed on the built chamber and witness coupons. Witness coupons are destructively tested to determine tensile properties, low and high cycle fatigue life, creep, thermal conductivity, hardness, and microstructure. Due to the known anisotropic behavior of additively manufactured parts, it is recommended to place witness coupons in different directions within the volume of the build.
+Several non-destructive techniques exist that can be applied to the thrust chambers [19], [98]. One of the most common evaluation techniques of additively manufactured thrust chambers is the Computed Tomography (CT) scanning, which determines changes in density to highlight subsurface defects/pores and can be used to verify that cooling channels are clear of excess powder. This technique has the advantage of revealing defects, even when surfaces are not physically accessible. An alternative technique to reveal subsurface defects for well-accessible surfaces is ultrasonic testing. Other techniques may include traditional or digital X-rays, borescope inspections, in-situ monitoring, and infrared flash thermography.
+To verify dimensional accuracy, the method of structured light or 3D laser scanning may be used [28]. This technique creates a surface contour map of the built thrust chambers, which can be compared to the original 3D CAD model to validate that all features are within tolerances. This method is especially relevant for complexly shaped parts where it is difficult or impossible to measure dimensional accuracy by hand. The structured light method can only be used to verify external surfaces. An example of this can be seen in Fig. 12.
+Other non-destructive evaluation techniques, such as dye penetrant testing or eddy current testing, are reported to be less applicable for as-built additive manufactured parts due to the high surface roughness [19]. After surface-enhancing treatments, these methods may however be considered.
+Download: Download high-res image (362KB)
+Download: Download full-size image
+
+Fig. 12. Example of structured light 3D scanning comparing the as-built surfaces to CAD (credits NASA).
+
+5. Conclusion and outlook
+Additive manufacturing is taking a more prominent position in the fabrication of thrust chambers of liquid rocket engines. The current state-of-the-art shows a technology readiness level of 9 for chambers created using the laser powder bed fusion (L-PBF) and technology readiness level
+≥6
+ for thrust chambers created using laser powder directed energy deposition (LP-DED). AM has made thrust chamber accessible to many companies and organizations that previously did not have the resources to fabricate and can do so within a reasonable budget and schedule. This has brought about new commercial space companies with new mission opportunities that did not exist prior to 2015. AM allows for complexities in designs of thrust chambers including internal channel geometry not previously possible in a variety of copper-alloy, superalloy, and refractory materials. Many of these alloys have been demonstrated in relevant thrust chamber environments. L-PBF is the most popular AM technology for use in thrust chambers due to the high complexity of internal features, but limited in build volume. LP-DED and LW-DED provide options for increased scale.
+While the AM processes have been matured, significant attention should be provided to the post-processing operations, which remain critical to successfully apply and meet engine requirements. Due to the complexity of the thrust chambers, internal features can cause issues in the build process and post-processing such as inspection, powder removal, and surface roughness. The entire process flow must be rigorously controlled through all operations, including the raw powder, AM process and post-processing, to ensure certification is met for critical flight applications. Further advancements in AM techniques and post-processing operations coupled with new material developments can further advance the use of AM for thrust chambers.
+It is expected that additive manufacturing will take an even more prominent role in the near future for the production of thrust chambers, as well as other sub-components of liquid rocket engines. For small chambers with a complex channel design, that fit in the build volume of commercial L-PBF machines, it is hard to realize a more competitive product with traditional manufacturing techniques. For larger thrust chambers which do not fit in the standard build volume of commercial L-PBF machines, the benefits of additive manufacturing over traditional manufacturing techniques are to be determined on a case-by-case base. In particular, when producing chambers at a large volume, e.g. in the case of an expendable launch vehicle with multiple launcher per year, traditional manufacturing techniques may still be more promising as these are more applicable to the economy of scale.
+Declaration of Competing Interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+Acknowledgments and Funding
+The work performed by TU Delft is funded by TU Delft, The Netherlands internal research. NASA work is funded under the Space Technology Mission Directorate (STMD) RAMPT and LCUSP projects.
+References
+[1]
+Gradl P.R., Protz C.S.
+Technology advancements for channel wall nozzle manufacturing in liquid rocket engines
+Acta Astronaut., 174 (2020), pp. 148-158, 10.1016/j.actaastro.2020.04.067
+View PDF
+View articleView in ScopusGoogle Scholar
+[2]
+P. Gradl, C. Protz, D.C. Ellis, S.E. Greene, Progress in additively manufactured copper-alloy GRCop-84, GRCop-42, and bimetallic combustion chambers for liquid rocket engines, in: 70th International Astronautical Congress, 2019.
+Google Scholar
+[3]
+Patureau de Mirand A., Bahu J.-M., Gogdet O.
+Ariane Next, a vision for the next generation of Ariane launchers
+Acta Astronaut., 170 (2020), pp. 735-749, 10.1016/j.actaastro.2020.02.003
+View PDF
+View articleView in ScopusGoogle Scholar
+[4]
+Preclik D., Hagemann G., Kretschmer J.
+Technology efforts towards low-cost thrust chambers
+39th AIAA/ASME/SAE/ASEE Joint Propulsion Conference and Exhibit (2003), 10.2514/6.2003-4616
+View at publisherGoogle Scholar
+[5]
+Shapiro A.A., et al.
+Additive manufacturing for aerospace flight applications
+J. Spacecr. Rockets, 53 (5) (2016), pp. 952-959, 10.2514/1.a33544
+View at publisherView in ScopusGoogle Scholar
+[6]
+Gradl P.R., et al.
+Additive manufacturing of liquid rocket engine combustion devices: a summary of process developments and hot-fire testing results
+2018 Joint Propulsion Conference (2018), 10.2514/6.2018-4625
+View at publisherGoogle Scholar
+[7]
+Battista F., et al.
+The HYPROB demonstrator line: status of the LOX/LCH4 propulsion activities
+8th European Conference for Aeronautics and Space Sciences, EUCASS (2019), 10.13009/EUCASS2019-621
+View at publisherGoogle Scholar
+[8]
+De Rosa M., Schoroth W., Underhill K.
+Overview of FLPP propulsion projects final
+7th European Conference for Aeronautics and Space Sciences, EUCASS (2017), 10.13009/EUCASS2017-248
+View at publisherGoogle Scholar
+[9]
+Kajon D., et al.
+Development of the liquid oxygen and methane M10 rocket engine for the Vega-E upper stage
+8th European Conference for Aeronautics and Space Sciences, EUCASS (2019), 10.13009/EUCASS2019-315
+View at publisherGoogle Scholar
+[10]
+Simontacchi P., et al.
+PROMETHEUS: precursor of new low-cost rocket engine family
+8th European Conference for Aeronautics and Space Sciences, EUCASS (2019), 10.13009/EUCASS2019-743
+View at publisherGoogle Scholar
+[11]
+Lee K.-O., Lim B., Kim D.-J., Hong M., Lee K.
+Technology trends in additively manufactured small rocket engines for launcher applications
+J. Korean Soc. Propul. Eng., 24 (2) (2020), pp. 73-82, 10.6108/KSPE.2020.24.2.073
+View at publisherView in ScopusGoogle Scholar
+[12]
+Andriievskyi M., Mitikov Y., Adzhamskiy S., Shamrovskyi D.
+Using of additive technologies for manufacturing of thrust chambers of rocket engines
+Aerosp. Tech. Technol., 6 (141) (2017), pp. 17-22
+(in Russian)
+Google Scholar
+[13]
+Gradl P.R., Mireles O.R., Andrews N.
+Introduction to additive manufacturing for propulsion and energy systems
+AIAA Propulsion and Energy Forum (2020), 10.13140/RG.2.2.23228.05761
+View at publisherGoogle Scholar
+[14]
+Horton J.F., Yows S.A., Fung M.H.
+Additively manufactured MON-25 reaction control system for in-space & landing applications
+AIAA Propulsion and Energy 2020 Forum (2020), 10.2514/6.2020-3505
+View at publisherGoogle Scholar
+[15]
+J. Wink, T. Knop, S. Powell, R. Werner, S. Engelen, Development and ground testing of the PM200 bi-propellant propulsion module, in: Space Propulsion Conference, 2018.
+Google Scholar
+[16]
+Ballard R.O.
+Next-generation RS-25 engines for the NASA Space Launch System
+7th European Conference for Aeronautics and Space Sciences, EUCASS (2017), 10.13009/EUCASS2017-140
+View at publisherGoogle Scholar
+[17]
+Yap C.Y., et al.
+Review of selective laser melting: materials and applications
+Appl. Phys. Rev., 2 (4) (2015), Article 041101, 10.1063/1.4935926
+View at publisherView in ScopusGoogle Scholar
+[18]
+Callister W.D. Jr., Rethwisch D.G.
+Materials Science and Engineering
+John Wiley & Sons (2014)
+Google Scholar
+[19]
+Waller J.M., Parker B.H., Hodges K.L., Burke E.R., Walker J.L.
+Nondestructive Evaluation of Additive Manufacturing State-of-the-Discipline Report: Tech. Rep. NASA/TM-2014-218560
+National Aeronautics and Space Administration (2014)
+Google Scholar
+[20]
+D. Liuzzi, M. Rudnykh, Design and development of single material single part regenerative combustion chamber, in: 6th European Conference for Aeronautics and Space Sciences, EUCASS, 2015.
+Google Scholar
+[21]
+Liuzzi D., Matteo S., Giacomo B., Mikhail R., Daniele D.
+Firing test and program progress of the SMSP regenerative combustion chamber
+7th European Conference for Aeronautics and Space Sciences, EUCASS (2017), 10.13009/EUCASS2017-483
+View at publisherGoogle Scholar
+[22]
+J. Wink, T. Knop, S. Powell, R. Werner, Development and ground testing of a 200 N vacuum thrust class thruster using a novel nitrous oxide/proppene propellant combination, in: Space Propulsion Conference, 2018.
+Google Scholar
+[23]
+J. Castro, Aerojet Rocketdyne’s ultra-low-cost Bantam liquid rocket engine family for low-cost launch applications, in: Space Propulsion Conference, 2016.
+Google Scholar
+[24]
+Mireles O., Rodriguez O., Gao Y., Philips N.
+Additive manufacture of refractory alloy C103 for propulsion applications
+AIAA Propulsion and Energy 2020 Forum (2020), 10.2514/6.2020-3500
+View at publisherGoogle Scholar
+[25]
+Philips N.R., Carl M., Cunningham N.J.
+New opportunities in refractory alloys
+Metall. Mater. Trans. A, 51 (7) (2020), pp. 3299-3310, 10.1007/s11661-020-05803-3
+View at publisher
+View in ScopusGoogle Scholar
+[26]
+Mireles O., Jones Z., Rodriguez O., Ienina M.
+Development of additive manufactured ultra-fine lattice structures propulsion catalyst
+AIAA Propulsion and Energy 2020 Forum (2020), 10.2514/6.2020-3502
+View at publisherGoogle Scholar
+[27]
+Aerojet Rocketdyne O.
+Successful testing of regeneratively cooled RL10 thrust chamber assembly validates 3-D printing techniques
+(2018)
+Online. (Accessed 2 December 2020)
+Google Scholar
+[28]
+Gradl P.R., Greene S.E., Protz C.S., Ellis D., Lerch B.A., Locci I.E.
+Development and hot-fire testing of additively manufactured copper combustion chambers for liquid rocket engine applications
+53rd AIAA/SAE/ASEE Joint Propulsion Conference (2017), 10.2514/6.2017-4670
+View at publisherGoogle Scholar
+[29]
+Ogbuji L., Humphrey D.L.
+Comparison of the oxidation rates of some new copper alloys
+Oxid. Metals, 60 (3/4) (2003), pp. 271-291, 10.1023/a:1026019202691
+View at publisher
+View in ScopusGoogle Scholar
+[30]
+Ellis D.L., Michal G.M.
+Precipitation Strengthened High Strength, High Conductivity CuCrNb Alloys Produced by Chill Block Melt Spinning: Tech. Rep. NASA CR-185144
+Lewis Research Center (1989)
+Google Scholar
+[31]
+Ellis D.L.
+GRCop-84: A High-Temperature Copper Alloy for High-Heat-Flux Applications: Tech. Rep. NASA/TM-2005-213566
+Glenn Research Center (2005)
+Google Scholar
+[32]
+de Groh H.C., Ellis D.L., Loewenthal W.S.
+Comparison of GRCop-84 to other Cu alloys with high thermal conductivities
+J. Mater. Eng. Perform., 17 (4) (2008), pp. 594-606, 10.1007/s11665-007-9175-3
+View at publisher
+View in ScopusGoogle Scholar
+[33]
+Gradl P.R., Protz C.S., Cooper K., Ellis D., Evans L.J., Garcia C.
+GRCop-42 development and hot-fire testing using additive manufacturing powder bed fusion for channel-cooled combustion chambers
+AIAA Propulsion and Energy 2019 Forum (2019), 10.2514/6.2019-4228
+View at publisherGoogle Scholar
+[34]
+Saltzman D., et al.
+Design and evaluation of an additively manufactured aircraft heat exchanger
+Appl. Therm. Eng., 138 (2018), pp. 254-263, 10.1016/j.applthermaleng.2018.04.032
+View PDF
+View articleView in ScopusGoogle Scholar
+[35]
+Thomas-Ogbuji L., Humphrey D.L., Setlock J.A.
+Oxidation-Reduction Resistance of Advanced Copper Alloys: Tech. Rep. NASA/CR-2003-212549
+QSS Group, Inc. (2003)
+Google Scholar
+[36]
+Ellis D.L., Gray H.R., Nathel M.
+Aerospace Structural Materials Handbook Supplement GRCop-84: Tech. Rep.
+Case Western Reserve University (2001)
+Google Scholar
+[37]
+Donovan P.C., Barton C.J.
+Short-time, high-temperature oxidation of OFHC copper
+Metall. Trans., 4 (7) (1973), pp. 1765-1767, 10.1007/bf02666209
+View at publisherView in ScopusGoogle Scholar
+[38]
+Kamath C., El-dasher B., Gallegos G.F., King W.E., Sisto A.
+Density of additively-manufactured, 316L SS parts using laser powder-bed fusion at powers up to 400 W
+Int. J. Adv. Manuf. Technol., 74 (1–4) (2014), pp. 65-78, 10.1007/s00170-014-5954-9
+View at publisher
+View in ScopusGoogle Scholar
+[39]
+Patel S., Standbridge S., van den Berghe M., Devalara V.
+Design and additive manufacturing considerations for liquid rocket engine development
+AIAA Propulsion and Energy 2019 Forum (2019), 10.2514/6.2019-4392
+View at publisherGoogle Scholar
+[40]
+Zhang T., Miyamoto C.M.
+3D printing: a cost effective and timely approach to manufacturing of low-thrust engines
+50th AIAA/ASME/SAE/ASEE Joint Propulsion Conference (2014), 10.2514/6.2014-3502
+View at publisherGoogle Scholar
+[41]
+Thomas D.T.
+The Development of Design Rules for Selective Laser Melting
+(Ph.D. thesis)
+University of Wales Institute (2009)
+Google Scholar
+[42]
+Marchan R., Oleshchenko A., Vekilov S., Arsenuk M., Bobrov O.
+3D printed acoustic igniter of oxygen-kerosene mixtures for aerospace applications
+8th European Conference for Aeronautics and Space Sciences, EUCASS (2019), 10.13009/EUCASS2019-238
+View at publisherGoogle Scholar
+[43]
+Popp M., Schmidt G.
+Rocket engine combustion chamber design concepts for enhanced life
+32nd Joint Propulsion Conference and Exhibit (1996), 10.2514/6.1996-3303
+View at publisherGoogle Scholar
+[44]
+Knight M.R., Adriany K., Guerin S., Kieatiwong A., Bayat E.
+Thermo-structural enhancement of liquid-propellant rocket engine thrust chambers using functionally graded alloys
+51st AIAA/SAE/ASEE Joint Propulsion Conference (2015), 10.2514/6.2015-4069
+View at publisherGoogle Scholar
+[45]
+Onuike B., Heer B., Bandyopadhyay A.
+Additive manufacturing of Inconel 718-copper alloy bimetallic structure using laser engineered net shaping (LENS™)
+Addit. Manuf., 21 (2018), pp. 133-140, 10.1016/j.addma.2018.02.007
+View PDF
+View articleView in ScopusGoogle Scholar
+[46]
+Gradl P.R., Protz C.S., Zagorski K., Doshi V., McCallum H.
+Additive manufacturing and hot-fire testing of bimetallic GRCop-84 and C-18150 channel-cooled combustion chambers using powder bed fusion and Inconel 625 hybrid directed energy deposition
+AIAA Propulsion and Energy 2019 Forum (2019), 10.2514/6.2019-4390
+View at publisherGoogle Scholar
+[47]
+Gradl P.R., et al.
+Lightweight thrust chamber assemblies using multi-alloy additive manufacturing and composite overwrap
+AIAA Propulsion and Energy 2020 Forum (2020), 10.2514/6.2020-3787
+View at publisherGoogle Scholar
+[48]
+Gradl P.R., Brandsmeier W., Greene S.E.
+Channel wall nozzle manufacturing and hot-fire testing using a laser wire direct closeout technique for liquid rocket engines
+2018 Joint Propulsion Conference (2018), 10.2514/6.2018-4860
+View at publisherGoogle Scholar
+[49]
+Anderson R., Terrell J., Schneider J., Thompson S., Gradl P.
+Characteristics of bi-metallic interfaces formed during direct energy deposition additive manufacturing processing
+Metall. Mater. Trans. B, 50 (4) (2019), pp. 1921-1930, 10.1007/s11663-019-01612-1
+View at publisher
+View in ScopusGoogle Scholar
+[50]
+Gradl P.R., Protz C.S., Wammen T.
+Additive manufacturing and hot-fire testing of liquid rocket channel wall nozzles using blown powder directed energy deposition Inconel 625 and JBK-75 alloys
+AIAA Propulsion and Energy 2019 Forum (2019), 10.2514/6.2019-4362
+View at publisherGoogle Scholar
+[51]
+S. Landes, T. Suresh, A. Prasad, T. Letcher, P. Gradl, D. Ellis, Investigation of additive mmanufactured GRCop-42 alloy developed by directed energydeposition methods, in: Proceedings of the ASME 2020 International Mechanical Engineering Congress and Exposition, IMECE2020, 2020.
+Google Scholar
+[52]
+A. Ogawara, M. Adachi, K. Okita, H. Kawashima, Laser metal deposition technology for the LE-9 engine, in: Proceedings of the 70th International Astronautical Congress, IAC, 2019.
+Google Scholar
+[53]
+L. Brox, M. Wir, M. Almqvist, M. Hallberg, A. Pettersson, A. Lind, Status report SWAN sandwich nozzle program for Ariane 6, in: 70th International Astronautical Congress, 2019.
+Google Scholar
+[54]
+Karthikeyan J.
+Cold spray Technology: International Status and USA efforts: Tech. Rep.
+ASB Industries Inc. (2004)
+Google Scholar
+[55]
+J. Haynes, J. Karthikeyan, Cold spray copper application for upper stage rocket engine design, in: Proceedings of the 2003 International Thermal Spray Conference, Vol. 1, 2003, pp. 79–83.
+Google Scholar
+[56]
+Gradl P.R.
+Rapid fabrication techniques for liquid rocket channel wall nozzles
+52nd AIAA/SAE/ASEE Joint Propulsion Conference (2016), 10.2514/6.2016-4771
+View at publisherGoogle Scholar
+[57]
+Wong W., et al.
+Cold spray forming of Inconel 718
+J. Therm. Spray Technol., 22 (2–3) (2012), pp. 413-421, 10.1007/s11666-012-9827-1
+View at publisher
+View in ScopusGoogle Scholar
+[58]
+Pathak S., Saha G.
+Development of sustainable cold spray coatings and 3D additive manufacturing components for repair/manufacturing applications: a critical review
+Coatings, 7 (8) (2017), p. 122, 10.3390/coatings7080122
+View at publisherView in ScopusGoogle Scholar
+[59]
+Pattison J., Celotto S., Morgan R., Bray M., O’Neill W.
+Cold gas dynamic manufacturing: a non-thermal approach to freeform fabrication
+Int. J. Mach. Tools Manuf., 47 (3–4) (2007), pp. 627-634, 10.1016/j.ijmachtools.2006.05.001
+View PDF
+View articleView in ScopusGoogle Scholar
+[60]
+Champagne V.K.
+The Cold Spray Materials Deposition Process: Fundamentals and Applications
+Woodhead Publishing (2007)
+Google Scholar
+[61]
+Seifi M., et al.
+Progress towards metal additive manufacturing standardization to support qualification and certification
+JOM, 69 (3) (2017), pp. 439-455, 10.1007/s11837-017-2265-2
+View at publisher
+View in ScopusGoogle Scholar
+[62]
+Rome R., Soltz B., Goyal V.K.
+Key elements of the qualification, workmanship, and design verification of additively manufactured parts
+AIAA Scitech 2020 Forum (2020), 10.2514/6.2020-1474
+View at publisherGoogle Scholar
+[63]
+MSFC-STD-3716, Standard for Additively Manufactured Spaceflight Hardware by Laser Powder Bed Fusion in Metals
+National Aeronautics and Space Administration (2017)
+Google Scholar
+[64]
+MSFC-SPEC-3717, Specification for Control and Qualification of Laser Powder Bed Fusion Metallurgical Processes
+National Aeronautics and Space Administration (2017)
+Google Scholar
+[65]
+NASA-STD-6030, Additive Manufacturing Requirements for Crewed Spaceflight Systems
+National Aeronautics and Space Administration (2020)
+Google Scholar
+[66]
+ISO/ASTM 52904-20, Additive Manufacturing – Qualification Principles - Qualifying Machine Operators of Laser Metal Powder Bed Fusion Machines and Equipment Used in Aerospace Applications
+ASTM International, West Conshohocken, PA (2020)
+Google Scholar
+[67]
+Seifi M., Salem A., Beuth J., Harrysson O., Lewandowski J.L.
+Overview of materials qualification needs for metal additive manufacturing
+JOM, 68 (2016), pp. 747-764, 10.1007/s11837-015-1810-0
+View at publisher
+View in ScopusGoogle Scholar
+[68]
+Romero I., et al.
+Additive manufacturing (AM) status in Airbus Defence and Space (Spain)
+8th European Conference for Aeronautics and Space Sciences, EUCASS (2019), 10.13009/EUCASS2019-324
+View at publisherGoogle Scholar
+[69]
+Russell R., et al.
+Qualification and certification of metal additive manufactured hardware for aerospace applications
+Additive Manufacturing for the Aerospace Industry, Elsevier (2019), pp. 33-66, 10.1016/b978-0-12-814062-8.00003-0
+View PDF
+View articleView in ScopusGoogle Scholar
+[70]
+Dordlofva C.
+A design for qualification framework for the development of additive manufacturing components: a case study from the space industry
+Aerospace, 7 (3) (2020), pp. 1-24, 10.3390/aerospace7030025
+View at publisherGoogle Scholar
+[71]
+ISO/ASTM 52904-19, Additive Manufacturing – Process Characteristics and Performance: Practice for Metal Powder Bed Fusion Process to Meet Critical Applications
+ASTM International, West Conshohocken, PA (2019)
+Google Scholar
+[72]
+Cook R.T., Fryk E.E., Newell J.F.
+SSME Main Combustion Chamber Life Prediction: Tech. Rep. NASA-CR-168215
+Rocketdyne (1983)
+Google Scholar
+[73]
+P.J. Beck, L.J. Matchett, P.W.E. Barlow, Rocket engine thrust chamber, injector, and turbopump, US Patent 10,527,003 B1, Jan. 2020.
+Google Scholar
+[74]
+Heaney D.F.
+Qualification of metal injection molding (MIM)
+Handbook of Metal Injection Molding, Elsevier (2019), pp. 271-280, 10.1016/b978-0-08-102152-1.00015-5
+View PDF
+View articleView in ScopusGoogle Scholar
+[75]
+Calignano F., Galati M., Iuliano L.
+A metal powder bed fusion process in industry: qualification considerations
+Machines, 7 (72) (2019), 10.3390/machines7040072
+View at publisherGoogle Scholar
+[76]
+Sutton A.T., Kriewall C.S., Karnati S., Leu M.C., Newkirk J.W.
+Characterization of AISI 304L stainless steel powder recycled in the laser powder-bed fusion process
+Addit. Manuf., 32 (2020), 10.1016/j.addma.2019.100981
+View at publisher
+Google Scholar
+[77]
+Sufiiarov V.S., Popovich A.A., Borisov E.V., Polozov I.A., Masaylo D.V., Orlov A.V.
+The effect of layer thickness at selective laser melting
+Procedia Eng., 174 (2017), pp. 126-134, 10.1016/j.proeng.2017.01.179
+View PDF
+View articleView in ScopusGoogle Scholar
+[78]
+Thijs L., Verhaeghe F., Craeghs T., Van Humbeeck J., Kruth J.-P.
+A study of the microstructural evolution during selective laser melting of Ti-6Al-4V
+Acta Mater., 58 (9) (2010), pp. 3303-3312, 10.1016/j.actamat.2010.02.004
+View PDF
+View articleView in ScopusGoogle Scholar
+[79]
+P. Gradl, O. Mireles, N. Andrews, Intro to additive manufacturing for propulsion systems, in: AIAA Propulsion and Energy Forum, 2018 (presentation).
+Google Scholar
+[80]
+Gibson I., Rosen D., Stucker B.
+Additive Manufacturing Technologies
+(second ed.), Springer, New York (2015), 10.1007/978-1-4939-2113-3
+View at publisherGoogle Scholar
+[81]
+Wu Z., Narra S.P., Rollett A.
+Exploring the fabrication limits of thin-wall structures in a laser powder bed fusion process
+Int. J. Adv. Manuf. Technol., 110 (1–2) (2020), pp. 191-207, 10.1007/s00170-020-05827-4
+View at publisher
+View in ScopusGoogle Scholar
+[82]
+K. Melle, S. Rappillard, V. Demaison, Development and test firing of a one-piece additively manufactured liquid rocket engine, in: PEGASUS Student Conference, 2019.
+Google Scholar
+[83]
+Hunter L.W., Brackett D., Brierley N., Yang J., Attallah M.M.
+Assessment of trapped powder removal and inspection strategies for powder bed fusion techniques
+Int. J. Adv. Manuf. Technol., 106 (9–10) (2020), pp. 4521-4532, 10.1007/s00170-020-04930-w
+View at publisher
+View in ScopusGoogle Scholar
+[84]
+Spierings A.B., Voegtlin M., Bauer T., Wegener K.
+Powder flowability characterisation methodology for powder-bed-based metal additive manufacturing
+Progr. Addit. Manuf., 1 (2016), pp. 9-20, 10.1007/s40964-015-0001-4
+View at publisher
+Google Scholar
+[85]
+Kuhns M.M., et al.
+PermiAM: porous additively manufactured L-PBF flow property characterization for rocket engines
+AIAA Propulsion and Energy 2019 Forum (2019), 10.2514/6.2019-4308
+View at publisherGoogle Scholar
+[86]
+Tepylo N., Huang X., Patnaik P.C.
+Laser-based additive manufacturing technologies for aerospace applications
+Adv. Energy Mater., 21 (11) (2019), 10.1002/adem.201900617
+View at publisher
+Google Scholar
+[87]
+Schneider J.
+Comparison of microstructural response to heat treatment of Inconel 718 prepared by three different metal additive manufacturing processes
+JOM, 72 (2020), pp. 1085-1091, 10.1007/s11837-020-04021-x
+View at publisher
+View in ScopusGoogle Scholar
+[88]
+Tillmann W., Schaak C., Nellesen J., Schaper M., Aydinöz M.E., Hoyer K.-P.
+Hot isostatic pressing of IN718 components manufactured by selective laser melting
+Addit. Manuf., 13 (2017), pp. 93-102, 10.1016/j.addma.2016.11.006
+View PDF
+View articleView in ScopusGoogle Scholar
+[89]
+Moriya S., et al.
+Feasibility study on additive manufacturing of liquid rocket combustion chamber
+Trans. JSASS Aerosp. Tech. Jpn., 16 (3) (2018), pp. 261-266, 10.2322/tastj.16.261
+View at publisherGoogle Scholar
+[90]
+Minneci R.P., Lass E.A., Bunn J.R., Choo H., Rawn C.J.
+Copper-based alloys for structural high-heat-flux applications: a review of development, properties, and performance of Cu-rich CuCrNb alloys
+Int. Mater. Rev. (2020), pp. 1-32, 10.1080/09506608.2020.1821485
+View at publisher
+Google Scholar
+[91]
+D.I. Suslov, J. Hardi, G. Kühlwein, M. Oschwald, Hot fire testing of a subscale combustion chamber demonstrator made with selective laser melting, in: 6th European Conference for Aeronautics and Space Sciences, EUCASS, 2015.
+Google Scholar
+[92]
+Kumar S., Pityana S.
+Laser-based additive manufacturing of metals
+Adv. Mater. Res., 227 (2011), pp. 92-95, 10.4028/www.scientific.net/amr.227.92
+View at publisherView in ScopusGoogle Scholar
+[93]
+Tan K.L., Yeo S.-H., Ong C.H.
+Nontraditional finishing processes for internal surfaces and passages: a review
+Proc. Inst. Mech. Eng. B, 231 (13) (2016), pp. 2302-2316, 10.1177/0954405415626087
+View at publisherGoogle Scholar
+[94]
+Hassanin H., Elshaer A., Benhadj-Djilali R., Modica F., Fassi I.
+Surface finish improvement of additive manufactured metal parts
+Micro and Precision Manufacturing, Springer International Publishing (2017), pp. 145-164, 10.1007/978-3-319-68801-5_7
+View at publisherGoogle Scholar
+[95]
+Tyagi P., Goulet T., Riso C., Garcia-Moreno F.
+Reducing surface roughness by chemical polishing of additively manufactured 3D printed 316 stainless steel components
+Int. J. Adv. Manuf. Technol., 100 (9–12) (2018), pp. 2895-2900, 10.1007/s00170-018-2890-0
+View at publisher
+Google Scholar
+[96]
+Nagalingam A.P., Yeo S.H.
+Surface finishing of additively manufactured Inconel 625 complex internal channels: a case study using a multi-jet hydrodynamic approach
+Addit. Manuf., 36 (2020), Article 101428, 10.1016/j.addma.2020.101428
+View PDF
+View articleView in ScopusGoogle Scholar
+[97]
+Han S., Salvatore F., Rech J., Bajolet J.
+Abrasive flow machining (AFM) finishing of conformal cooling channels created by selective laser melting (SLM)
+Precis. Eng., 64 (2020), pp. 20-33, 10.1016/j.precisioneng.2020.03.006
+View PDF
+View articleView in ScopusGoogle Scholar
+[98]
+C. Dordlofva, S. Brodin, C. Andersson, Using demonstrator hardware to develop a future qualification logic for additive manufacturing parts, in: Proceedings of the 70th International Astronautical Congress, IAC, 2019.
+Google Scholar
+Cited by (95)
+Advancement of extreme environment additively manufactured alloys for next generation space propulsion applications
+2023, Acta Astronautica
+Citation Excerpt :
+
+Each component in a liquid rocket engine system must complete a methodical trade to determine the appropriate alloy requirements based on the environment, system loads, and life requirements. Combustion chambers operate at high heat fluxes from the combustion process and are most often actively cooled using the propellants (generally fuel) to maintain reasonable wall temperatures and avoid melting [12]. Copper-alloys are often used due to the high conductivity and strength at wall temperatures that can exceed 750 °C [13].
+
+Show abstract
+Additive manufacturing in the new space economy: Current achievements and future perspectives
+2023, Progress in Aerospace Sciences
+Show abstract
+The current state of CuCrZr and CuCrNb alloys manufactured by additive manufacturing: A review
+2022, Materials and Design
+Show abstract
+Metal additive manufacturing in aerospace: A review
+2021, Materials and Design
+Show abstract
+Geometric feature reproducibility for laser powder bed fusion (L-PBF) additive manufacturing with Inconel 718
+2021, Additive Manufacturing
+Show abstract
+Robust Metal Additive Manufacturing Process Selection and Development for Aerospace Components
+2022, Journal of Materials Engineering and Performance
+View all citing articles on Scopus
+View Abstract
+Published by Elsevier Ltd on behalf of IAA.
+About ScienceDirect
+Remote access
+Contact and support
+Terms and conditions
+Privacy policy
+
+Cookies are used by this site.Cookie Settings
+
+All content on this site: Copyright © 2025 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply.
+
+PDF
+Help

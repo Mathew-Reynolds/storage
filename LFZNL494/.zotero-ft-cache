@@ -1,0 +1,264 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/348534802
+Impact of Additive Manufacturing on Internal Cooling Channels With Varying
+Diameters and Build Directions
+Conference Paper · September 2020 DOI: 10.1115/GT2020-15049
+CITATIONS
+7
+READS
+739
+4 authors, including:
+Alexander Wildgoose General Electric Aerospace
+14 PUBLICATIONS 188 CITATIONS
+SEE PROFILE
+Karen A. Thole University of Michigan
+343 PUBLICATIONS 8,923 CITATIONS
+SEE PROFILE
+All content following this page was uploaded by Karen A. Thole on 31 March 2022.
+The user has requested enhancement of the downloaded file.
+
+
+1 Copyright © 2020 by ASME
+Proceedings of ASME Turbo Expo 2020 Turbomachinery Technical Conference and Exposition GT2020 June 22-26, 2020, London, England
+GT2020-15049
+IMPACT OF ADDITIVE MANUFACTURING ON INTERNAL COOLING CHANNELS WITH VARYING DIAMETERS AND BUILD DIRECTIONS
+Alexander J. Wildgoose and Karen A. Thole Department of Mechanical Engineering The Pennsylvania State University University Park, PA, USA
+Paul Sanders Lieke Wang
+Siemens Energy, Inc. Siemens Energy, Inc. Charlotte, NC, USA Orlando, FL, USA
+ABSTRACT
+The use of additive manufacturing (AM) processes, such as direct metal laser sintering, provides the design freedom required to incorporate complex cooling schemes in gas turbine components. Additively manufactured turbine components have a range of cooling feature sizes and, because of the inherent threedimensionality, a wide range of build angles. Previous studies have shown that AM build directions influence internal channel surface roughness that, in turn, augment heat transfer and pressure loss. This study investigates the impact of additive manufacturing on channel feature size and build direction relative to tolerance, surface roughness, pressure losses, and convective cooling. Multiple AM coupons were built from Inconel 718 consisting of channels with different diameters and a variety of build directions. An experimental rig was used to measure pressure drop to calculate friction factor and was used to impose a constant surface temperature boundary condition to collect Nusselt number over a range of Reynolds numbers. Significant variations in surface roughness and geometric deviations from the design intent were observed for distinct build directions and channel sizes. These differences led to notable impacts in friction factor and Nusselt number augmentations, which were a strong function of build angle.
+NOMENCLATURE
+A cross-sectional flow area As surface area Dh hydraulic diameter, 4A/p f friction factor, f=∆P Dh
+L
+2 ρu2
+h convective heat transfer coefficient, h= Qin,heater- ∑ Qloss
+As∙∆Tlm
+Ks sandgrain roughness k thermal conductivity
+L Channel Length Nu Nusselt number, hDh/kair p channel perimeter P static pressure Pr Prandtl number Ra arithmetic mean roughness Re Reynolds number, uDh/ν S channel pitch distance T temperature TLM log-mean temperature, ∆TLM= (∆Tin-∆Tout)
+ln( Ts-Tin
+Ts-Tout)
+u mass average velocity zref reference surface height zsurf roughness height
+Greek
+ρ fluid density ν kinematic viscosity
+Subscripts
+actual dimension calculated from CT Scan design CAD specified dimension in inlet condition out exit condition s surface condition w wall condition
+INTRODUCTION
+Of the metal additive manufacturing (AM) processes, direct metal laser sintering (DMLS) has gained popularity among companies specializing in high temperature applications. The recent advancements in superalloy materials for DMLS are targeted towards difficult operating environments like those
+
+
+2 Copyright © 2020 by ASME
+experienced by turbine components. The powerful design opportunities enabled by AM offer turbine designers the ability to incorporate complex cooling features within components. While the design freedom is opened through AM, designers still need to keep in mind the build part that results from the process. The process chosen affects geometric tolerances, part shape, and surface roughness, which are important to internal cooling features. The challenge in removing surface roughness from additive parts with complex internal passages is constrained by the feature size. As-built surfaces exhibit large surface roughness that can be beneficial to convective heat transfer but comes coupled with increases in pressure losses. Additively manufacturing a cooled turbine component results in many feature sizes being built with a range of local build directions. Consequently, it is imperative to understand how the intended design is affected by the build direction. Understanding these impacts allow designers to adjust their additive designs in strategic ways. For example, modifying the shape of a circular cooling channel to a geometry such as a teardrop shape allows the designer to compensate for the effects that gravity has on channel shape due to the build process. The unique goal of this study is to provide the designer with guidelines as to when build angle becomes important on particular features sizes.
+LITERATURE REVIEW
+There are a multitude of process and design parameters that impact surface roughness in additively produced parts. It is wellknown that build direction, the orientation of the external surface or streamwise channel axis relative to the surface of the substrate (i.e. build plate), has a significant contribution to surface roughness [1–8]. Many studies have investigated external surface roughness along multiple build directions. Ventola et al. [1] observed roughness on external surfaces increases from 0° to 30° then decreases from 30° to 90°. Additionally, similar surface roughness characteristics were observed on the external surfaces of samples fabricated by Tian et al. [5]. While these studies are thorough in their respective findings, a considerable amount of the studies have not characterized surface roughness and feature shape for internal channels. Only a few studies have reported surface roughness measurements for internal channels [2,4,9,10]. Several of these studies have presented roughness measurements with a minimum of two different build directions. Mingear et al. [9], studied the effect of process parameters on vertical and horizontal orientations of internal channels with three varying diameters. Findings concluded that roughness decreases with diameter when channel axes are built parallel to the build plate (horizontal build direction, 0°). Similarly, Stimpson et al. [10] observed that internal surface roughness decreases with diameter in rectangular channels fabricated at 45°. Snyder et al. [11] observed internal surface roughness for circular channels remains relatively similar between 0° and 45°. Pakkanen et al. [4] demonstrated that from 60° to 90°, upward and downward facing surfaces have similar roughness values. However, the sample diameters used in the study were between 5 mm and 10 mm, which are relatively large for implementation in turbine heat transfer applications. Quantifying geometric tolerances and deviations from the design intent aids in understanding surface roughness and its impact on the pressure losses and convective cooling of internal AM channels. Previous studies [4,11,12] give novel measurements for the magnitude of deformation of internal channels. Kamat et al. [12], developed an algorithm to predict
+channel shape deformation for diamond, circular, and ellipsoid shapes with diameters ranging from 4 mm to 12 mm built at 0°. Results indicated that the measured diameter for all channel shapes were larger than the design intent. These findings were similar to Snyder et al. [11], who additionally demonstrated that the distribution of deviation from design intent in circular channels built at 0°, 45°, and 90° were larger at 0° and 45° compared to 90°. Additionally, geometric tolerances such as concentricity were smallest at 90°. Many of these studies compare channels with less than three build directions that use diameters that are either held constant or have a range of above 4 mm. Few studies have investigated the geometric tolerances and deviations from design intent of multiple channel diameters below 4 mm built over a range of build directions. Stimpson et al. [10], proposed a correlation for predicting Nusselt number in additive internal channels which was developed using rectangular channels built at 45°. Previous studies such as Parbat et al. [13], have shown reasonable agreement between the correlation and experimental results with channels built at the same 45° direction. Results to verify the correlation for nonrectangular channel shapes have not been thoroughly presented in literature. A limited number of studies have experimentally measured the impact of surface roughness on the convection coefficients and pressure losses of AM internal channels built at a variety of build angles. Snyder et al. [2] provides the impact build direction has on the convective cooling and pressure loss performance of channels with a constant diameter built across three build directions. The study’s results indicate that 45° channels contain larger convection coefficients compared to both horizontal and vertical orientations, which was attributed to roughness. As this study was limited to the 0°, 45°, and 90° build directions with a constant 0.5 mm channel diameter, the effects of build direction between 0° to 45° and 45° to 90° with varying channel diameters are unexplored. The present study is unique because it aims to fill the gaps researchers currently have for additive channels in relating surface roughness, part tolerance, and geometric shape on the channel’s pressure losses and cooling performance.
+DESCRIPTION OF TEST COUPONS
+To effectively understand the impact of build direction and channel size on pressure losses and convective cooling, multiple coupons consisting of a range of angular build directions and diameters were fabricated using DMLS in Penn State’s Center for Innovative Materials Processing through Direct Digital Deposition (CIMP-3D) Lab. The design specifications of the fifteen coupons used in this study are outlined in Table 1. Specifically, coupons were printed containing numerous channels with each having one of three different diameters. Each coupon was printed at a different build direction ranging from 0° to 90°. The build direction is defined as the angle between the streamwise axis of the channel relative to the surface of the substrate (i.e. build plate). The design diameters (1.25 mm, 1 mm, and 0.75 mm) were chosen based upon a range of common diameters seen in additive internal cooling literature [2,10,13,14]. The naming convention of individual coupons, as shown in Table 1, provides information on the design diameter, circular channel shape, and build direction. Each coupon had the same 50.80 mm length, 26.42 mm width, and 3.05 mm height as shown in Figure 1. Indicated in Figure 1, the channel pitch spacing (S) was designed so the fin
+
+
+3 Copyright © 2020 by ASME
+efficiency between channels is greater than 95% to allow for the constant surface temperature boundary condition to be satisfied. The channel pitch spacing was also designed to minimize the effect of channel deformation attributed to placing channels in close proximity of one another. The number of channels in a coupon was varied between design diameters and is specified in Table 1. Support structures varied across build directions as shown in Figure 2. Support structures were required to build the coupons due to overhanging external features such as flanges for use in experimental testing. The support generation of these coupons followed the same guidelines as described by Snyder et al. [2]. Using these guidelines, supports were generated on coupon surfaces angled less than 40° to the substrate. The coupons did not have any supports inside the channels. An EOS-M280 power bed fusion machine was used to manufacture all fifteen Inconel 718 (IN718) coupons with a 40micron layer size. The IN718 powder supplied by EOS was sieved through a filter to a 40-micron nominal powder size. Coupons were grouped together to mitigate the difference in surface roughness between build locations on the substrate as observed by Kleszczynski et al. [6], Chen et al. [7], and Snyder et al. [11]. Furthermore, all coupons were angled 3° between the streamwise channel axis and recoater blade direction as recommended by EOS [15]. Processing parameters have a significant impact on surface roughness and hence pressure loss and cooling performance [7,16-19]. The processing parameters used in this study, shown in Table 2, are recommended by EOS and kept constant between all coupons. Additionally, these recommended EOS parameters include wall contouring. Included in Table 2 is a calibration metric used to account for material shrinkage (material scaling) and a correction value to align the contour with respect to the CAD design (beam offset). These calibration parameters were calculated using the manufacturers procedures [15]. The coupons for this testing, while attached to the substrate, were solution annealed to remove residual stress as per recommended procedures for Inconel 718 [15]. After heat treatment, a wire electrical discharge machine was used to cut the coupons off the substrate and remove supports. Upon visual inspection, the 0.75C0 coupon channels were clogged with
+Table 2. Processing Parameters for AM Coupons
+Parameter Value
+Material Inconel 718
+Layer thickness 0.04 mm
+Material setting IN718 040 210 Performance
+Material scaling X 0.366%
+Material scaling Y 0.366%
+Beam offset 0.106 mm
+Figure 1. CAD schematic of overall coupon dimensions used for experimental testing.
+Figure 2. Coupon support structures generated over the five build directions.
+50.80 mm
+10.16 mm
+3.05 mm
+S
+0 30 45 60 90
+Table 1. Geometric Specifications for Coupons
+Coupon Name
+Dh, design
+[μm]
+Build Direction [degrees]
+Number of Channels
+Sdesign
+Dh, design
+Dh, actual
+[μm]
+p actual
+pdesign
+Aactual
+Adesign
+L actual
+Dh,actual
+0.75C0 750 0 14 Failed to Print 1.00C0 1000 0 12 1.660 794.1 1.051 0.832 62.1 1.25C0 1250 0 10 1.552 1076 1.025 0.880 45.8 0.75C30 750 30 14 1.840 668.4 0.987 0.879 73.8 1.00C30 1000 30 12 1.660 892.2 1.001 0.893 55.3 1.25C30 1250 30 10 1.552 1147 1.019 0.934 43.0 0.75C45 750 45 14 1.840 725.1 1.003 0.970 68.0 1.00C45 1000 45 12 1.660 987.7 1.020 1.007 49.9 1.25C45 1250 45 10 1.552 1230 1.016 1.000 40.1 0.75C60 750 60 14 1.840 774.6 1.044 1.078 63.6 1.00C60 1000 60 12 1.660 1031 1.041 1.073 47.8 1.25C60 1250 60 10 1.552 1310 1.016 1.113 37.6 0.75C90 750 90 14 1.840 808.1 1.083 1.166 61.0 1.00C90 1000 90 12 1.660 1055 1.061 1.120 46.7 1.25C90 1250 90 10 1.552 1327 1.086 1.153 37.1
+
+
+4 Copyright © 2020 by ASME
+residual powder which could not be removed, as indicated in Table 1. The clogged channels demonstrate the challenge in additively manufacturing sub-millimeter channels.
+GEOMETRIC CHANNEL SHAPES
+Assessing the as-built channel surface is essential in explaining differences between pressure loss and heat transfer augmentations when varying channel size and build direction. A non-destructive imaging method, computed x-ray tomography (CT Scan), was used to characterize the surface and geometric tolerances of the coupons. While optical profilometry provides better accuracy on surface roughness, it also requires line of sight access meaning that each coupon would essentially be destroyed. Stimpson et al. [10], noted that surface roughness measurements from CT scan data produce lower values compared to an optical profilometer. The CT scan accuracy of the spatial reconstruction of the coupons is influenced by the scanning resolution (i.e. voxel size). All coupons were CT scanned with a resolution of 35 microns using a GE v|tome|x L300 CT system. The volumetric measurements from the CT scan were examined using a commercial software that performs a surface determination based on gray-scale values from scans. The same software provides interpolation between voxels and is able to reduce the surface determination to 1/10th of the original voxel size [20]. Channel diameters were calculated following methods similar to Stimpson et al. [21]. After channel surfaces were determined, an in-house code was developed that used 1,200 image slices along the axial length of the coupon to calculate hydraulic diameter. Channel perimeters were determined by summing the pixels along the border of a channel slice while the cross-sectional area was calculated by summing the pixels of the free space. The cross-sectional area and perimeter were then averaged between each channel and slice to determine a mean hydraulic diameter. All calculations used in this study are performed with the mean hydraulic diameter measured from CT scan data. From Table 1, channel cross-sectional area varied greater from the design intent compared to channel perimeter. Both channel perimeter and cross-sectional area are closest to design intent at 45°. Results from Table 1 imply that channels fabricated at 90° contain channel perimeters and cross-sectional areas that are larger than design intent while channels fabricated closer to 0° become smaller than the design intent. Shown in Figure 3 is the variation in the calculated hydraulic diameter for the 1 mm coupon at three build directions. There is significant deviation from the design diameter for the 0°
+Figure 3. Distribution of measured diameters from CT scans of a 1 mm coupon at 0°, 45°, and 90°.
+and 90° build directions, while the 45° build direction is closest to the design diameter. For the 1 mm channel at 0°, 45°, and 90° build directions, the range of the diameters along with their 3σ deviation increased from 793.5±207 μm to 987.7±45 μm to 1055±19 μm, respectively. These results indicate the wide variation in hydraulic diameters for a channel at different build directions, particularly for the 0° build direction. The implications of these results are that tight tolerances are better held for vertical builds (90°) as opposed to horizontal builds (0°). Comparing the deviations of diameters between coupons over a range of build directions, shown in Figure 4, show similar tolerances can be achieved between 60° and 90°, regardless of diameter. The distribution of diameters between 0° and 60° show a dramatic decrease in the spread. These results imply that with a horizontal build (0°) holding a particular tolerance is challenging at best. In turbine cooling applications, where tight tolerances are needed for specific coolant flows, it is not desirable to have a wide variety of channel dimensions. Shown in Figure 5 is the variation that occurs for a single build direction of 45° for each of the three channel diameters. The three channel diameters and their 3σ deviations were 725.1±40 μm, 987.7±45 μm, and 1230±52 μm, respectively. Because the spread is nearly the same for each of the channel sizes, these results indicate that build direction has a major influence relative to the feature size. Shown in Figure 6 are the averaged hydraulic diameters normalized by the design intent for all of the coupons. The data
+Figure 4. 3σ deviations of calculated diameter for each of the coupons over a range of build directions.
+Figure 5. Distribution of measured diameters from CT scans of a 0.75 mm, 1mm, and 1.25 mm coupon at a 45° build direction.
+
+
+5 Copyright © 2020 by ASME
+Figure 6. Deviation of channel diameter from design intent across multiple build directions.
+in Figure 6 implies that diameter is larger than the design intent at angles above 60° while being lower than design intent at angles below 45°. Regardless of diameter size, the resulting diameter increases from 0° to 90°. The deviation in diameter from design intent for the 1 mm coupon is 21% at 0° compared to 6% at 90°.
+GEOMETRIC TOLERANCES
+The benefit of deducing the pixel location along the perimeter is that it allows for the channel surface to be represented as a point cloud when calculating three-dimensional tolerances, such as concentricity, circularity, and runout. The concentricity of each coupon channel was calculated by taking the average distance between centroids of the slices. Shown in Figure 7(a), concentricity is a three-dimensional tolerance comparing the variation in centroids along the length of the channel. A concentricity value of zero infers that all centroid slices reside on the axial axis and represent a straight channel. As all coupons were designed with a circular cross-section, circularity, shown in equation (1), provides an indication to the
+Figure 7. Physical definitions of concentricity (a) and total runout (b).
+amount of channel shape deviation from design intent. A circularity value of one, indicates channel shapes that meet the circular design intent.
+Circularity = 4πA
+p2 (1)
+The circularity measurements reported in this study are averaged along the length of the coupon and were calculated using the filled cross-sectional area and perimeter of the slices. Total runout, visually shown in the Figure 7(b), combines both circularity and concentricity into a three-dimensional tolerance describing variation in straightness and circularity. The measurement of total runout requires defining an axis of rotation which was determined by averaging the location of all the centroid slices. The difference between the maximum and minimum distance from the surface to the axis of rotation along the entire length of the coupon was recorded as the total runout tolerance. A total runout value of zero represents perfectly cylindrical channels that are aligned in the streamwise direction. A comparison between channel shapes at three axial slices of the 1 mm coupon over a range of build directions are shown in Figure 8(a-e). The results in Figure 8(a-e) reinforce the significant impact build direction has on channel deformation. Consistent with the results from Snyder et al. [11], channels fabricated at 90° are closest to their intended circular shape. In addition, the channel shape remains the same at each streamwise position. These findings for the 90° channel results from each build layer receiving a circular contour and not containing any preceding overhanging build layers. Channels built at orientations less than 60°, as shown in Figures 8(a-d), show clear deviations from the intended circular design with the downward facing surfaces exhibiting increasing flatness as the build angle decreases. Figures 8(a-c) show more deviations along the channel compared with Figures 8(d-e) as the build angle decreases, which is consistent with the wider spread in the hydraulic diameters for small build angles as shown in Figure 3 and Figure 4. Ealy et al. [22] presented similar results with circular channels displaying less deviation from design intent for channels built at 90°. The findings from Figures 8(a-e) are quantitively shown when comparing circularity across various build directions as illustrated in Figure 9. As build direction decreases, the downward facing surface becomes increasingly exposed to unsintered powder which, in turn, becomes sintered to the top surface. Figure 9 also provides a guideline as to when geometric modifications are needed for a round channel design. For example, at build angles below 45°, slight modifications to the
+Concentricity
+Max
+Min
+Total Runout
+(b)
+(a)
+Dh,actual
+Dh,design
+Figure 8. Axial slices of a 1 mm channel built at 0° (a), 30° (b), 45° (c), 60° (d), and 90° (e) showing the impact of build direction on the geometric deformation of a circular cross-section.
+0° 45° 60° 90°
+30°
+(e)
+(d)
+(c)
+(a) (b)
+
+
+6 Copyright © 2020 by ASME
+Figure 9. Impact of build direction on the circularity of the 0.75 mm, 1 mm, and 1.25 mm coupons.
+channel design can account for the deformation (non-circularity) that occurs during the build; however, as build angle decreases to 0° and 30°, more significant geometric modifications are needed in the design if circular channels are intended. Channel modifications such as teardrop shapes from Snyder et al. [2] and Kamat et al. [12] aim to account for channel deformation attributed to build direction. Circularity between diameters exhibit changes only at build directions lower than 30°. Visually comparing circularity between diameters at 45°, in Figure 10, confirms that the amount of deformation is constant no matter the diameter at 45°. Investigating concentricity between build direction and channel diameter provides a tolerance describing channel straightness. Shown in Figure 11, concentricity decreases as build direction increases. This result is supported when comparing the differences in centroids along the axial length of a channel shown in Figure 8(a-e). The 90° channel centroids are grouped closer together compared to the other build directions such as the 30° centroids. These results are due to the 90° channel being built with no overhanging features. Scaling the total runout by diameter removes the scale associated with varying diameters and provides an indication to the magnitude of total runout at a constant scale. Higher values of total runout/Dh indicate channels that are not uniformly positioned in the coupon. The results in Figure 12 imply that additively producing smaller channels lead to greater magnitudes of axial and surface deformations. Decreasing the build direction below 90° increases the runout due to the unsupported build
+layers on the downward facing surfaces, which is consistent with results in Figure 11. In Figure 12, the 0.75 mm 60° coupon has a larger total runout compared to its 45° counterpart. After further inspection of the 0.75C60 coupon, channels near the entrance of the coupon had a strikingly large difference between the mean centroid and channel surface. The deviation from design intent at the entrance of the 0.75C60 impacted the position of the mean centroid reference line which resulted in an increased total runout value. From CT scan results, the 1.25C90 coupon showed significant deviation and roughness compared to its 60° coupon equivalent. The authors believe that this effect is caused by the
+Figure 11. Impact of build direction on the concentricity of the 0.75 mm, 1 mm, and 1.25 mm coupons.
+Figure 12. Impact of build direction on the normalized total runout, Total runout/Dh, of the 0.75 mm, 1 mm, and 1.25 mm coupons.
+45°
+(c)
+45°
+(b)
+(a)
+45°
+Figure 10. 0.75 mm (a), 1 mm (b), and 1.25 mm (c) circular channel cross-sections at a 45° build direction.
+
+
+7 Copyright © 2020 by ASME
+cooling rate of the sintered powder which was influenced by the design and placements of the support structures on the 0.75C60 and 1.25C90 coupon.
+ROUGHNESS EVALUATION
+As previously discussed, CT scan data was used as a nondestructive determination for internal surface roughness. The arithmetic mean roughness (Ra) was calculated using the axial slices from CT scan data. Ra reflects the average surface deviation from a mean reference and its mathematical definition is given in equation (2).
+Ra = 1
+n ∑ |zsurf − zref|
+in=1 (2)
+An in-house code was developed to measure the surface roughness using a method similar to Klingaa et al. [8]. Arithmetic mean roughness, equation (2), requires defining a mean reference line. The inherent curvature of the circular channel makes defining a reference line challenging. As such, an ellipsoid was fitted to each axial slice using a linear least square regression method to represent the reference line. Each of the axial slices contained its own fitted ellipsoid, resulting in a stack of 1,200 ellipsoids for a single channel. The smallest nominal distance between each pixel along the perimeter and the fitted ellipsoid was recorded as the nominal deviation. All roughness measurements were evaluated by averaging measurements of multiple channels in a coupon. In agreement with previous studies [2,9], internal channel surface roughness decreases from 0° to 90° as demonstrated in Figure 13. Roughness levels found in this study are similar to values found in literature [3,4,7,11]. Uncertainties for these roughness values are the tolerances from the CT scan surface determination, ±3.5 microns. Nearly the same roughness values occurred for all three channel diameters for a particular build direction. The agreement in the roughness values is expected since the same process was used; however, the implications of these results reinforce the importance of build angle on the roughness levels. Results from Figure 13, give novel evidence that surface roughness is indistinguishable between 60° and 90° in small internal channels. This outcome is supported when comparing cross-sections of the 1 mm coupon at 60° and 90° in Figures 8(de). Below 60°, roughness values increase for all the geometries. Despite differences in nondimensional total runout, channels
+Figure 13. Averaged arithmetic mean roughness measured from CT scan data of circular channels.
+between 60° and 90° have similar surface roughness, concentricity, and circularity regardless of diameter.
+CHANNEL PERFORMANCE MEASUREMENTS
+An experimental rig was used to quantify coupon pressure losses and bulk convection coefficients over a range of Reynolds numbers. Both tests were performed on a rig designed similar to Snyder et al. [2] and Stimpson et al. [10] as shown in Figure 14. This particular rig has been described and previously benchmarked by several investigators [2,10]. Friction factors were calculated using a measured pressure drop and flowrate as well as coupon diameters from CT scan data. Since pressure taps were located both up and down stream of the coupon, loss coefficients were included in the pressure drop calculation. The inlet loss coefficients were calculated by evaluating an area ratio between the coupon channels and inlet plenum as described by Munson et al. [23]. The outlet loss coefficients were constant between all coupons with a value of one resulting from the sudden flow expansion. Mass flowrates were measured upstream with a laminar flow element coupled with temperature and pressure measurements. Bulk convective heat transfer coefficients, h, were calculated using measured data from the same rig as that shown in Figure 14. A copper block was placed between a heater and the coupon surface to impose a constant channel surface temperature boundary condition. The method is described in further detail by Stimpson et al. [10]. A state-of-the-art thermal conductivity measurement device was used to determine the thermal properties of the additive IN718 material. The thermal conductivity value for IN718 was 9.77 ±0.49 W/mK at room temperature and was used for the coupon surface temperature analysis. This thermal conductivity value is similar to those reported in literature for Inconel 718 [24]. The heat transfer analysis included performing a onedimensional conduction analysis using thermocouples inside the copper block, shown in Figure 14, to calculate the surface temperature of the coupon channel. Conduction losses in the plenums and foam material were accounted for in the heat transfer measurements. These conduction losses were less than 1% of the total power supplied by the heaters at high and low Reynolds numbers. An energy balance was performed between the amount of heat transferred into the air, Qair, as it passed through the coupon and the amount of heat supplied by the heaters, Qheaters. Theoretically, the amount of heat added to the system from the heaters minus that of the conduction losses should equal the amount of heat transferred to the air. The energy balance is an independent check comparing the difference between the amount
+Figure 14. Schematic of experimental rig used for pressure loss and heat transfer measurements.
+Rigid Foam
+Surface Heater
+Copper Block
+AM Coupon
+PUp Stream
+TUp Stream
+PDown Stream
+TDown Stream
+
+
+8 Copyright © 2020 by ASME
+of heat transferred into the air, Qair, to the amount of heat supplied by the heaters with conduction losses. This energy balance was smaller than 6% across all Reynolds numbers tested for every coupon.
+EXPERIMENTAL UNCERTAINTY
+Pressure drop and diameter were the main contributors to friction factor uncertainty. Uncertainty was calculated using the propagation of uncertainty method described by Figliola et al [25]. The uncertainty in friction factor at high Reynolds numbers was 3% while for low Reynolds numbers it was 4%. The uncertainty in Reynolds number was between 4.5% and 7%. Exit thermocouple measurements and diameter were the main contributors to uncertainty in Nusselt number. The Nusselt number uncertainty was less than 7%.
+FRICTION FACTOR EVALUATION
+Friction factors were quantified for each coupon over a range of Reynolds numbers (Re) as seen in Figure 15. Pressure drop measurements for the friction factors were collected in the incompressible flow regime at Mach numbers less than 0.2. Prior to measuring the pressure drop across the rough coupons, a benchmark test was conducted using a smooth coupon, which is also shown in Figure 15 to agree with a well-accepted correlation. For the AM coupons, Figure 15 shows that there is a large range of friction factors that result from the different build angles and different channel diameters. Similar to previous literature [2,10,14], the transitional Reynolds number decreases with increasing roughness as shown in Figure 15 for the low Reynolds numbers. The transition Reynolds numbers can be seen with the 0.75C90 coupon which enters the transitional flow regime at a Re = 2,000 compared to the 0.75C30 coupon which starts its transition at a Re = 1,000. The data in Figure 15 shows that the highest friction factors occur at the lowest build direction, 0°. This highest friction factor result is consistent with the highest relative roughness levels (Ks/Dh) also occurring for the lower build angles, Figure 13, as well as the most distorted channel shapes, Figures 8(a-e). Figure 15 also shows that for each of the channel diameters of 0.75 mm and 1.00 mm, the 60° and 90° data collapse to the same curve, respectively. However, the 0.75 mm channel size has overall higher friction factors than the 1.00 mm channel size since the roughness magnitudes are nearly the same, but with the subsequent roughness-to-diameter ratio being highest for the smallest channel. The 1.25C45, 1.00C45, and 0.75C45 coupon friction factor values in Figure 15 are also displayed with their relative roughness values, Ks/Dh, which were calculated using the Colebrook correlation, equation (3), for each of the coupons in the fully turbulent regime. Relative roughness is an indication of the effect that a particular roughness morphology has on pressure loss.
+1
+√f = −2 log10 ( Ks
+3.7Dh + 2.51
+Re√f) (3)
+Results of the sandgrain roughness and arithmetic mean roughness are shown in Figure 16, which also shows a decrease in sandgrain roughness as build direction increases. In comparing the data for the 0.75 mm coupons in Figures 13 and 16, the arithmetic mean roughness (Ra) and relative roughness (Ks) lead
+Figure 15. Cylindrical channel friction factor data of coupons with varying diameters and build directions, along with benchmark data from Stimpson et al. [14].
+Figure 16. Sandgrain roughness calculated using equation (3) compared with measured arithmetic mean roughness of coupons.
+C30 C45 C60 C90
+C0 C30 C45 C60 C90
+C30 C45 C60 C90
+C0
+1.25
+Hydraulic Diameter [mm] Ks/Dh Ks/Dh Ks/Dh
+Ks/Dh Ks/Dh Ks/Dh
+Ks/Dh
+1.00
+0.75
+Hydraulic Diameter [mm] 1.25
+CC4650
+C90
+C30 C45
+C60 C90
+C0 C30 CC6405 C90
+C0
+0.75 1.00
+C30
+
+
+9 Copyright © 2020 by ASME
+to different observations. For example, the 0.75 mm coupons have the largest Ks roughness and also have the lowest Ra roughness. For the 0.75 coupon, the high relative roughness is caused by large protrusions in the flow field created from unsupported downward facing surfaces, as shown in Figure 8(a). These protrusions in the flow act as large turbulators leading to high pressure losses. Coupons with the same diameter built between 60° and 90° share similar surface roughness; however, the 0.75 mm channels contain a 33% (on average) larger sandgrain roughness compared to the 1 mm channels. This results in larger pressure losses for the 0.75 mm coupon at 60° and 90° as seen in Figure 15. Larger sandgrain roughness is a result of the deformation of the coupons as indicated by the total runout being larger for the 0.75 mm 60° and 90° coupons compared to the 1 mm coupons.
+HEAT TRANSFER EVALAUATION
+Nusselt number was calculated over a range of Reynolds numbers for each coupon as shown in Figure 17. Benchmark Nusselt numbers for a smooth coupon were also collected as shown in Figure 17. The small temperature difference between the outlet of the 0.75C30 coupon and wall temperature resulted in unacceptable uncertainties due to a saturation of the coolant temperature. As such, the 0.75C30 coupon is omitted from Figure 17. Similar with the results from Snyder et al. [2], Nusselt number is smallest at the vertical (90°) build direction shown in Figure 17. This is supported by the 90° coupons containing the least amount of deformation and surface roughness. Despite the 0° coupons containing the greatest amount of deformation, sandgrain roughness, and Ra roughness, the 0° coupons showed a lower Nusselt number compared to the 30°, 45°, and 60° coupons. This implies the significance of characterizing the surface morphology which the arithmetic mean roughness does not fully capture in relating Nusselt number. Shown in Figure 17, the 0.75 mm diameter channels presented the largest Nusselt numbers which is supported by the coupons also containing the largest sandgrain roughness. These results imply that including smaller diameter channels in cooling designs lead to higher convective cooling compared with larger channels; however, this comes along with significantly larger pressure losses. Results from Figure 17 also indicate that as Reynolds number increases, Nusselt number becomes closer to a smooth channel. As such the heat transfer enhancement decreases with increasing Reynolds number, a similar result is shown by Stimpson et al. [14]. As verified from literature [2,10], using the Gnielinski correlation [26], equation (4), for internal AM rough surfaces fails to provide adequate predictions of Nusselt number. As such, Stimpson et al. [10] modified the well-known Gnielinski correlation for internal channels made through AM. Shown in Figure 18 for the 0.75C45, 1.00C45, and 1.25C45 coupons, Stimpson’s heat transfer correlation reasonably predicts Nusselt numbers with circular AM channels built at 45°. Stimpson’s correlation [10], shown in equation (5), was within a maximum of 23% of this reports 0.75C45, 1.00C45, 1.25C45 heat transfer data when predicted using friction factor calculated from equation (3) with Ks/Dh measured from experimental data. It is important to note that Stimpson’s correlation was developed using rectangular channels built at 45° with a maximum uncertainty of 30%.
+Nu= f/8(Re-100)Pr
+1+12.7√f/8(Pr2/3-1) (4)
+Nu = (Re0.5−29)Pr√f/8
+0.6(1−Pr2/3) (5)
+Figure 17. Cylindrical channel Nusselt number data with benchmark results from Stimpson et al. [14].
+Figure 18. Nusselt number of the 0.75C45, 1.00C45, 1.25C45 coupons with Stimpson et al. [10] correlation calculated using measured friction factor.
+1.25
+Hydraulic Diameter [mm] 1.00
+0.75
+Ks/Dh
+C45
+C60 C90
+C30 C45
+C60 C90
+C0 C30 C45
+C60 C90
+C0
+Ks/Dh
+
+
+10 Copyright © 2020 by ASME
+The augmentations of Nusselt number and friction factor are shown in Figure 19. The smooth channel friction factor, f0, was calculated using equation (3) with relative roughness equaling zero. The smooth channel Nusselt number, Nu0, was calculated using smooth channel friction factor values from equation (3) with Gnielinski’s Nusselt number correlation [26], equation (4). In general, Figure 19 shows that the 0° build direction increases the friction factor augmentation for the two channels indicated without significantly increasing the heat transfer augmentation. Implementing a channel shape correction at 0° may be able to minimize the large increase in friction factor augmentation with benefits in heat transfer augmentation. Also, as will be shown in the next graphs, the 30° to 45° channels have higher heat transfer augmentations. For each of the build angles, the smallest channel sizes produced the highest heat transfer augmentation for a given friction factor augmentation. Augmentations as a function of build angle are shown in Figures 20 and 21. The augmentations for the friction factor and Nusselt number show very different characteristics. While the friction factor decreases as build angle increases, the heat transfer augmentation peaks between 30° and 45°. Snyder et al. [2] observed the highest heat transfer augmentation at 45° compared to 0° and 90°. As would be anticipated from the roughness values shown in Figure 13, which also decrease with build angle, it would be expected that augmentations decrease if it were simply a function of roughness. The results in Figure 21, however, indicate otherwise for the heat transfer coefficient augmentations that peak between 30° and 45°. These results point to the importance of the surface morphology that results from a particular build angle. Despite the 60° coupons having similar surface roughness, friction factor augmentations, and geometric tolerances as the 90° coupons. The 60° coupons observed an 8% larger heat transfer augmentation compared to the 90° coupons. From these results, simply by orienting an additive component so a large quantity of 60° channels occur compared to 90° channels result in sizable increases in heat transfer without additional pressure losses.
+Figure 19. Nusselt number and friction factor augmentations over a range of Reynolds numbers.
+Figure 20. Friction factor augmentation of coupons across multiple build directions at a shared Reynolds number of 20,000.
+Figure 21. Nusselt number augmentation of coupons across multiple build directions at a shared Reynolds number of 20,000.
+CONCLUSION
+The design freedom allotted though additive manufacturing, specifically DMLS, has the potential to reevaluate current cooling designs that are restrained by traditional manufacturing methods. Turbine designers wanting to implement effective cooling schemes require understanding the impacts the additive process has on the geometric tolerances, surface roughness, pressure losses, and convective cooling of additively produced internal channels. The results presented in this paper indicated that the build effects on the resulting geometric tolerances of circular channels were quite large. In most cases, build angles below 60° had a dramatic effect on channel shape and design intent. Build direction contributes greatly to variations in diameter along all of the channel diameters no matter how small. For designers wanting to additively produce circular channels close to their design intent, channel shape modifications are needed at angles below 60°. Surface roughness changes minimally for channels built between 60° and 90°, regardless of diameter. Just as channel deformation, surface roughness increases as build angle decreases from 45° to 0°. At angles below 45° channel diameter contributes to changes in surface roughness. Applications requiring small additive circular channels with low surface roughness should be built between 60° and 90°. Circular channels, sharing the same diameter, built between 60° and 90° have similar friction factor augmentations. Relative roughness and friction factor augmentation increases when
+Hydraulic Diameter [mm] 1.25
+C45
+C60 C90
+C30 C45
+C60 C90
+C0 C30 C45
+C60 C90
+C0
+0.75 1.00
+Nu Nu0
+f⁄f0
+f
+f0
+Nu Nu0
+
+
+11 Copyright © 2020 by ASME
+lowering channel diameter. In contrast, heat transfer augmentation peaks for a build angle between 30° and 45°, regardless of diameter. Decreasing the channel diameter increases both the Nusselt number and friction factor augmentations. These results point to the importance of the surface morphology in which surface roughness does not fully capture. In summary, the designer using additive manufacturing needs to be made aware of the impacts that build direction, in particular, has on the resulting part. Depending upon the application, it may be necessary to change the channel shape and diameter to achieve the intended design.
+ACKNOWLEDGMENT
+The authors would like to recognize the technical guidance and funding provided by Siemens Energy and the U.S. Department of Energy National Energy Technology Laboratory. As well as acknowledge the cooperative efforts in fabricating the coupons with Corey Dickman and members at Penn State’s CIMP-3D lab. The authors thank Timothy Stecko at Penn State’s Center for Quantitative Imaging for performing the CT scans. This paper is based upon work supported by the Department of Energy under Award Number DE-FE0031760. This report was prepared as an account of work sponsored by an agency of the United States Government. Neither the United States Government nor any agency thereof, nor any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof. The views and opinions of authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof.
+REFERENCES
+[1] Ventola, L., Robotti, F., Dialameh, M., Calignano, F., Manfredi, D., Chiavazzo, E., and Asinari, P., 2014, “Rough Surfaces with Enhanced Heat Transfer for Electronics Cooling by Direct Metal Laser Sintering,” Int. J. Heat Mass Transf., 75, pp. 58–74. [2] Snyder, J. C., Stimpson, C. K., Thole, K. A., and Mongillo, D., 2016, “Build Direction Effects on Additively Manufactured Channels,” J. Turbomach., 138(5).
+[3] Morel, C., Cioca, V. V., Lavernhe, S., Jardini, A. L., and Conte, E., 2018, “Part Surface Roughness on Laser Sintering and Milling of Maraging Steel 300,” High Speed Mach. Product. Qual. Digit., (1), pp. 3–6. [4] Pakkanen, J., Calignano, F., Trevisan, F., Lorusso, M., Ambrosio, E. P., Manfredi, D., and Fino, P., 2016, “Study of Internal Channel Surface Roughnesses Manufactured by Selective Laser Melting in Aluminum and Titanium Alloys,” Metall. Mater. Trans. A Phys. Metall. Mater. Sci., 47(8), pp. 3837–3844. [5] Tian, Y., Tomus, D., Rometsch, P., and Wu, X., 2017, “Influences of Processing Parameters on Surface Roughness of Hastelloy X Produced by Selective Laser Melting,” Addit. Manuf., 13, pp. 103–112.
+[6] Kleszczynski, S., Ladewig, A., Friedberger, K., Jacobsmuhlen, J. zur, Merhof, D., and G, W., 2015, “Position Dependency of Surface Roughness in Parts From Laser Beam,” SFF Symp. Proc., pp. 360–370. [7] Chen, Z., Wu, X., Tomus, D., and Davies, C. H. J., 2018, “Surface Roughness of Selective Laser Melted Ti-6Al4V Alloy Components,” Addit. Manuf., 21, pp. 91–103. [8] Klingaa, C. G., Bjerre, M. K., Baier, S., De Chiffre, L., Mohanty, S., and Hattel, J. H., 2019, “Roughness Investigation of SLM Manufactured Conformal Cooling Channels Using X-Ray Computed Tomography,” 9th Conference on Industrial Computer Tomography.
+[9] Mingear, J., Zhang, B., Hartl, D., and Elwany, A., 2019, “Effect of Process Parameters and Electropolishing on the Surface Roughness of Interior Channels in Additively Manufactured Nickel-Titanium Shape Memory Alloy Actuators,” Addit. Manuf., 27, pp. 565–575. [10] Stimpson, C. K., Snyder, J. C., Thole, K. A., and Mongillo, D., 2017, “Scaling Roughness Effects on Pressure Loss and Heat Transfer of Additively Manufactured Channels,” J. Turbomach., 139(2). [11] Snyder, J. C., Stimpson, C. K., Thole, K. A., and Mongillo, D. J., 2015, “Build Direction Effects on Microchannel Tolerance and Surface Roughness,” J. Mech. Des. Trans. ASME, 137(11). [12] Kamat, A. M., and Pei, Y., 2019, “An Analytical Method to Predict and Compensate for Residual Stress-Induced Deformation in Overhanging Regions of Internal Channels Fabricated Using Powder Bed Fusion,” Addit. Manuf., 29, p. 100796. [13] Parbat, S. N., Yang, L., Min, Z., and Chyu, M. K., 2019, “Experimental and Numerical Analysis of Additively Manufactured Coupons with Parallel Channels and Inline Wall Jets,” J. Turbomach., 141(6). [14] Stimpson, C. K., Snyder, J. C., Thole, K. A., and Mongillo, D., 2016, “Roughness Effects on Flow and Heat Transfer for Additively Manufactured Channels,” J. Turbomach., 138(5).
+[15] EOS, 2011, Basic Training EOSINT M280, Electro Optical Systems GmbH, Munich, Germany. [16] Snyder, J. C., 2019, “Improving Turbine Cooling Through Control Of Surface Roughness In The Additive Manufacturing Process,” The Pennsylvania State University. [17] Fox, J. C., Moylan, S. P., and Lane, B. M., 2016, “Effect of Process Parameters on the Surface Roughness of Overhanging Structures in Laser Powder Bed Fusion Additive Manufacturing,” Procedia CIRP, 45, pp. 131134. [18] Calignano, F., Manfredi, D., Ambrosio, E. P., Iuliano, L., and Fino, P., 2013, “Influence of Process Parameters on Surface Roughness of Aluminum Parts Produced by DMLS,” Int. J. Adv. Manuf. Technol., 67(9–12), pp. 2743–2751. [19] Snyder, J. C., and Thole, K. A., 2019, “Effect of Additive Manufacturing Process Parameters on Turbine Cooling,” ASME Turbo Expo 2019: Turbomachinery Technical Conference and Exposition.
+[20] Reinhart, C., 2011, Inudstrial CT & Precision, Volume Graphics GmbH, Heidelberg, Germany. [21] Stimpson, C. K., Snyder, J. C., Thole, K. A., and Mongillo, D., 2018, “Effectiveness Measurements of
+
+
+12 Copyright © 2020 by ASME
+Additively Manufactured Film Cooling Holes,” J. Turbomach., 140(1). [22] Ealy, B., Calderon, L., Wang, W., Valentin, R., Mingareev, I., Richardson, M., and Kapat, J., 2017, “Characterization of Laser Additive ManufacturingFabricated Porous Superalloys for Turbine Components,” J. Eng. Gas Turbines Power, 139(10). [23] Munson, R, B., Young, D. F., and Okiishi, T. H., 1990, Fundamentals of Fluid Mechanics, Wiley & Sons, Hoboken, NJ. [24] Sweet, J. N., Roth, E. P., and Moss, M., 1987, “Thermal Conductivity of Inconel 718 and 304 Stainless Steel,” Int. J. Thermophys., 8(5), pp. 593–606. [25] Figliola, R. S., and Beasley, D. E., 2005, Theory and Design for Mechanical Measurements, Wiley, Hoboken, NJ. [26] Gnielinski, V., 1976, “New Equations for Heat and Mass Transfer in Turbulent Pipe and Channel Flow,” Int. Chem. Eng., 16(2), pp. 359–368.
+View publication stats

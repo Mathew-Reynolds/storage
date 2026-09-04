@@ -1,0 +1,223 @@
+Downloaded from ascelibrarvnrg bV UNIVERSITE LAVAL on 05/28/14. Coovright ASCE. For Dersonal use 0an; all rights reserved.
+—-r.I--a--- 
+The History of the Darcy-Weisbach Equation for Pipe Flow Resistance
+Glenn 0. Brown]
+Abstract
+The historical development of the Darcy—Weisbach equation for pipe flow resistance is examined. A concise examination of the evolution of the equation itself and the Darcy friction factor is presented from their inception to the present day. The contributions of Che'zy, Weisbach, Darcy, Poiseuille, Hagen, Prandtl, Blasius, von Karmén, Nikuradse, Colebrook, White, Rouse and Moody are described.
+Introduction
+What we now call the Darcy-Weisbach equation combined with the supplementary Moody Diagram (Figure 1) is the accepted method to calculate energy losses resulting from fluid motion in pipes and other closed conduits. When used together with the continuity, energy and minor loss equations, piping systems may be analyzed and designed for any fluid under most conditions of engineering interest. Put into more common terms, the Darcy—Weisbach equation will tell us the capacity of an oil pipeline, what diameter water main to install, or the pressure drop that occurs in an air duct. In a word, it is an indispensable formula if we wish to engineer systems that move liquids or gasses from one point to another. The Darcy—Weisbach equation has a long history of development, which started in the 18th century and continues to this day. While it is named after two great engineers of the 19th century, many others have also aided in the effort. This paper will attempt the somewhat thorny task of reviewing the development of the equation and recognizing the engineers and scientists who have contributed the most to the perfection of the relationship. Many of the names and dates are well known, but some have slipped from common recognition. As in any historical work, others may well find this survey lacking in completeness. However, space limitations prevent an exhaustive commentary, and the author begs tolerance for any omissions. As a final note, to minimize confusion, standardized equation forms and variable symbols are used instead of each researcher's specific nomenclature. Likewise, simple replacements, such as diameter for radius, are made without note.
+1 Professor, Biosystems and Agricultural Engineering, Oklahoma State University, Stillwater, OK 74078; phone 405-744-8425; gbrown@okstate.edu
+34
+_______ . _ .____. ._____.___ . ..___.‘, ____
+Copyright ASCE 2004 Environmental and Water Resources History 2002
+Environmental and Water Resources History
+Downloaded from ascelibrary.org by UNIVERSITE LAVAL on 05/28/14. Copyright ASCE. For personal use only; all rights reserved.
+
+
+Downloaded from ascelibrarvnrg bV UNIVERSITE LAVAL on 05/28/14. Copyright ASCE. For personal use 0an; all rights reserved.
+—-r.I--a--- 
+ENVIRONMENTAL AND WATER RESOURCES HISTORY 35
+.0!
+‘03
+.Ol5
+' '9
+u
+863
+.2...
+OON
+RELATIVE ROUGHNEss E
+283
+22
+.0000
+.0002 .000 1 000.05
+9c
+.2 3‘“ B‘to
+REYNOLDS NUMBER n-‘(TD (v N%_ . o w FT, v IN%) ”flea, aqoa,
+Figure 1. Moody diagram. (Moody, 1944; reproduced by permission of ASME.)
+The Equation
+The fluid friction between two points in a straight pipe or duct may be quantified by the empirical extension of the Bernoulli principle, properly called the energy equation,
+22
+h,=[V;+£‘—+z,]—[V~2+&+22]u(fl+zl]—[&+zzj (1)
+2g pg 2g pg pg pg
+where h, is the fluid friction or head loss between positions subscripted 1 and 2, V is the average velocity, g is the acceleration of gravity, 1) is the fluid pressure, p is the fluid density and z is the elevation of the pipe. When analysis is limited to uniform (constant area) flow, the velocity terms cancel, and the RHS is used. Note that Eq. 1 is not predictive unless all variables on the RHS are known. We must measure pressures in a given pipe system at a specific flow rate to compute the losses. That is, we have to build the system to determine how it will work. Engineering design requires a relationship that predicts h; as a function of the fluid, the velocity, the pipe diameter and the type of pipe material. Julius Weisbach (1806-1871) a native of Saxony, proposed in 1845 the equation we now use,
+2
+h, = EV— (2)
+D 2g where L is the pipe length, D is the pipe diameter, and f is a fiiction factor (Weisbach, 1845). Note that Eq. 2 only predicts the losses due to fluid friction on the pipe wall
+_______ . _ .____. ._____.___ . ..___.‘, ____
+Copyright ASCE 2004 Environmental and Water Resources History 2002
+Environmental and Water Resources History
+Downloaded from ascelibrary.org by UNIVERSITE LAVAL on 05/28/14. Copyright ASCE. For personal use only; all rights reserved.
+
+
+Downloaded from ascelibrarvnrg bV UNIVERSITE LAVAL on 05/28/14. Copyright ASCE. For personal use 0an; all rights reserved.
+—-r.I--a--- 
+36 ENVIRONMENTAL AND WATER RESOURCES HISTORY
+and the effect of fluid viscosity and does not include minor losses at inlets, elbows and other fittings. While Weisbach presented Eq. 2 in the form we use today, his relationship for the friction factor was expressed as,
+f=a+% (3)
+where a and fl are friction coefficients that could vary by pipe diameter and wall material. Equation 3 was based on a relatively small data set. Weisbach reported 11 of his own experiments, while 51 measurements were taken from the reports of Claude Couplet (1642-1722), Charles Bossut (1730—1799), Pierre Du Buat (17341809), Gaspard Riche de Prony (1755-1839) and Johann Eytelwein (1764-1848). Weisbach‘s publication covered most of engineering mechanics and arguably set the standard for all later engineering textbooks. By 1848 it was translated and published in America; a rather remarkable pace for the time. However, his text had no apparent impact in France, the contemporary center for hydraulic research. This is a curious situation since it is believed that Weisbach's interest in hydraulics developed after visiting the Paris Industrial Exposition in 1839 and that he also attended the 1855 Paris World Exposition. Perhaps since Weisbach's equation was based mostly on their data, the French may have believed it provided no improvement over the Prony equation in wide use at the time,
+h,=%(aV+bV2) (4)
+where a and b are empirical coefficients. While the exact values of the Prony coefficients were debated, it was believed that they were not a function of the pipe roughness. A noteworthy difference between Eqs. 2 and 4 is that Weisbach developed a dimensionally homogenous equation. Consequently, f is a non-dimensional number and any consistent unit system, such as SI or English Engineering may be used. That is not the case with Prony's. The roughness coefficients, a and b take on different values depending on the unit system. To the modern eye, Prony's dimensionally inhomogeneous equation is unsightly, but in 1840 there were no electronic calculators, and in fact the modern slide rule was yet to be developed. Thus, Prony's relationship that requires six math operations had a practical advantage over Weisbach's that required eight. Additionally, it was standard practice for the French to drop the first order velocity term, (aV) of Prony's equation to yield a roughly equivalent relationship to Weisbach's that required only four math operations (D'Aubuisson, 1834). While Weisbach was ahead of most other engineers, his equation was not without precedent. About 1770, Antoine Chézy (1718-1798) published a proportionally based on fundamental concepts for uniform flow in open channels, VZP oc A S (S) where P is the wetted perimeter, S is the channel slope, and A is the area of flow. Chézy allowed that the proportionality might vary between streams. It is a simple matter to insert a proportionality coefficient, C to yield,
+V = CH (6)
+_______ . _ .____. ._____.___ . ..___.‘, ____
+Copyright ASCE 2004 Environmental and Water Resources History 2002
+Environmental and Water Resources History
+Downloaded from ascelibrary.org by UNIVERSITE LAVAL on 05/28/14. Copyright ASCE. For personal use only; all rights reserved.
+
+
+Downloaded from asoelibrarvorg bV UNIVERSITE LAVAL on 05/28/14. Copvright ASCE. For personal use oan; all rights reserved.
+—-r.I--a--- 
+ENVIRONMENTAL AND WATER RESOURCES HISTORY 37
+where R is the hydraulic radius given by, R = A/P. By introducing the geometry of a circular pipe and noting that under uniform flow conditions S = hl/L, Eq. 6 is
+transformed to,
+4L 2
+———V 7
+Equation 7 may be considered a dimensionally inhomogeneous form of Eq. 2. 1_C
+J? 7%
+lost until 1800 when his former student, Prony published an account describing it. Surprisingly, the French did not continue its development, but it is believed that Weisbach was aware of Chézy’s work from Prony's publication (Rouse and Ince, 1957). The Darcy—Weisbach equation (Eq. 2) is considered a rational formula since basic force balance and dimensional analysis dictate that h, ac L D ‘1 V2 g”. However, the friction factor, f is a complex function of the pipe roughness, pipe diameter, fluid kinematic viscosity, and velocity of flow. That complexity in f, which results from boundary layer mechanics, obscures the valid relationship and led to the development of several irrational, dimensionally inhomogeneous, empirical formulas. Weisbach deduced the influence of roughness, diameter and velocity on f, but the professional community apparently ignored his conclusions. In addition, the effect of fluid properties was habitually neglected since water at normal temperatures was the only major concern. It would take almost a hundred years and the input of several others forfto be defined completely.
+h,=
+Equating one to the other shows tha Unfortunately, Chézy's work was
+Laminar Flow
+By the 1830's the difference between low and high velocity flows was becoming apparent. Independently and nearly simultaneously, Jean Poiseuille (17991869) and Gotthilf Hagen (1797-1884) defined low velocity flow in small tubes (Hagen, 1839; Poiseuille, 1841). In modern terms they found,
+h, = 641/ £21, (8)
+D 2g
+where v is the fluid kinematic viscosity. Note however that neither Poiseuille nor Hagen used an explicit variable for the viscosity, but instead developed algebraic functions with the first and second powers of temperature. The most important aspect of Poiseuille's and Hagen's results was their accuracy. While the restriction to small tubes and low velocity was realized, theirs were the first fluid-friction equations to achieve modem precision. When compared to one another, Hagen's work was more theoretically sophisticated, while Poiseuille had the more precise measurements and looked at fluids other than water. An analytical derivation of laminar flow based on Newton's viscosity law was not accomplished until 1860 [Rouse and Ince, 1957]. Darcy (1857) also noted the similarity of his low velocity pipe experiments with Poiseuille's work. "Before seeking the law for pipes that relates the gradient to the velocity, we will make an observation: it appears that at very—low velocity, in pipes of small diameter that the velocity increases proportionally to the gradient."
+_______ . _ .____. ._____.___ . ..___.‘, ____
+Copyright ASCE 2004 Environmental and Water Resources History 2002
+Environmental and Water Resources History
+Downloaded from ascelibrary.org by UNIVERSITE LAVAL on 05/28/14. Copyright ASCE. For personal use only; all rights reserved.
+
+
+Downloaded from ascelibrarvnrg bV UNIVERSITE LAVAL on 05/28/14. Copvright ASCE. For personal use 0an; all rights reserved.
+—-r.I--a--- 
+38 ENVIRONMENTAL AND WATER RESOURCES HISTORY
+Later he showed explicitly that his newly proposed pipe fiiction formula would reduce to Poiseuille‘s at low flow and small diameters. He noted that this was a ". .. rather remarkable result, since we arrived, Mr. Poiseuille and I, with this expression, by means of experiments made under completely different circumstances." Osborne Reynolds (1842-1912) described the transition from laminar to turbulent flow and showed that it could be characterized by the parameter,
+Re 2 Q (9)
+v
+where Re is now referred to as the Reynolds number (Reynolds, 1883). The most widely accepted nominal range for laminar flow in pipes is Re < 2000, while turbulent flow generally occurs for Re > 4000. An ill-defined, ill—behaved region between those two limits is called the critical zone. Once the mechanics and range on laminar flow was well established, it was a simple matter to equate Eqs. 4 and 9 to provide an expression for the Darcyfin the laminar range, 64
+f Re (10)
+It is unknown who was the first person to explicitly state Eq. 10, but it appeaIed to be commonly recognized by the early 1900's. Equation 10 is plotted on the left side of Figure 1.
+Turbulent Flow
+In 1857 Henry Darcy (1803-1858) published a new form of the Prony equation based on experiments with various types of pipes from 0.012 to 0.50 m diameter over a large velocity range (Darcy, 1857). His equation for new pipes was,
+h, =£[[a+~fl~zjV+[a'+E]Vz] (11)
+DD D
+where a, [3, a’ and ,6 are friction coefficients. Darcy noted that the first term on the RHS could be dropped for old rough pipes to yield,
+h, =£(a"+—fl—) V2 (12)
+DD
+where the coefficients a" and fl" would have different values than for new pipes. Contrary to existing theory, he showed conclusively that the pipe fn'ction factor was a function of both the pipe roughness and pipe diameter. Therefore, it is traditional to callf the "Darcyf factor", even though Darcy never proposed it in that form. J. T. Fanning (1837-1911) was apparently the first to effectively combine Weisbach's equation with Darcy‘s better estimates of the friction factor (Fanning, 1877). Instead of attempting a new algebraic expression for f, he simply published tables of f values taken from French, American, English and German publications, with Darcy being the largest source. A designer could then simply look up an fvalue from the tables as a function of pipe material, diameter and velocity. However, it should be noted that Fanning used the hydraulic radius, R instead of D in the friction equation. Thus "Fanningf" values are only ‘A of "Darcyf" values. The Fanning form of the equation remains in use in some fields, such as heat exchanger design, where non—circular conduits are common.
+_______ . _ .____. ._____.___ . ..___.‘, ____
+Copyright ASCE 2004 Environmental and Water Resources History 2002
+Environmental and Water Resources History
+Downloaded from ascelibrary.org by UNIVERSITE LAVAL on 05/28/14. Copyright ASCE. For personal use only; all rights reserved.
+
+
+Downloaded from ascelibrarvnrg bV UNIVERSITE LAVAL on 05/28/14. Copvright ASCE. For personal use 0an; all rights reserved.
+—-r.I--a--- 
+ENVIRONMENTAL AND WATER RESOURCES HISTORY 39
+During the early 20th century, Ludwig Prandtl (1875—1953) and his students Theodor von Kérmén (1881-1963), Paul Richard Heinrich Blasius (1883-1970) and Johann Nikuradse (1894—1979) attempted to provide an analytical prediction of the fn'ction factor using Prandtl's new boundary layer theory. Apparently, Blasius (1913) was the first person to apply similarity theory to establish that f is a function of the Reynolds number. From experimental data he found for smooth pipes, 0.3164
+f = Re“ (13)
+which is now referred to as the Blasius formula and is valid for the range 4000 < Re < 80,000. Using data from Nikuradse, the entire turbulent flow range is better fit by the relationship,
+% = 210g(ReJ7)— 0.08 (14)
+Equation 14 has been referred to both as von Kénnén's (Rouse, 1943) and Prandtl's (Schlichting, 1968). It is plotted on Figure 1 and labeled "Smooth Pipes". Rough pipes offered additional challenges. At high Reynolds number in rough pipes, f becomes a constant that is only a function of the relative roughness, a/D, where a is the height of the interior pipe roughness. Similar to the smooth pipe formula, von Kérmén (1930) developed an equation confirmed by data collected by Nikuradse (1933),
+1a
+—=1.14—21 — 15
+J7 Ugh?) ( )
+The horizontal lines on the right of Figure 1 plot Eq. 15 for various ratios of JD. The transition region between laminar and fully turbulent rough pipe flow was defined empirically by detailed measurements carried out by Nikuradse (1933) on pipes that had a uniform roughness created by a coating of uniform sand covering the entire pipe interior. His data showed clear trends that could be explained by the interaction of the pipe roughness with the fluid boundary layer. However, measurements by Colebrook and White (1937) showed that pipes with non-uniform roughness did not display the same transition curves. For commercial pipes White (1939) showed the transition region could be described by,
+L : 1 . 1 4 _ 2 1 0 g [ £ +
+9 - 3 5
+j
+( 1 6 )
+J7 D Red?
+Equation 16 is plotted in Figure 1 for various ratios of a/D in the region labeled "Transition Zone".
+Integration
+It would wait for Hunter Rouse (1906-1996) in 1942 to integrate these various formulas into a useful structure. He noted unambiguously, (Rouse, 1943) "These equations are obviously too complex to be of practical use. On the other hand, if the function which they embody is even approximately valid for commercial surfaces in general, such extremely important information could be made readily available in diagrams or tables.’I Using published data he showed Eq. 16 was a reasonable
+_______ . _ .____. ._____.___ . ..___.‘, ____
+Copyright ASCE 2004 Environmental and Water Resources History 2002
+Environmental and Water Resources History
+Downloaded from ascelibrary.org by UNIVERSITE LAVAL on 05/28/14. Copyright ASCE. For personal use only; all rights reserved.
+
+
+Downloaded from ascelibrarvnrg bV UNIVERSITE LAVAL on 05/28/14. Convright ASCE. For Dersonal use 0an; all rights reserved.
+—-r.I--a--- 
+40 ENVIRONMENTAL AND WATER RESOURCES HISTORY
+function for commercial pipe. Rouse then developed a diagram (Figure 2) that presented Eqs. 10, 14, 15, and 16 in a systematic and somewhat intricate fashion. The primary vertical axis plotted 1/ J7 , the primary horizontal axis plotted Refi , and
+secondaxy axes plotted Re andf. Equations 15 and 16 were plotted for various values of relative roughness. In an open corner, he also provided a convenient list of pipe roughness. Rouse's original contribution in addition to the overall synthesis was defining the boundary between the transition and fully turbulent zones as, 1 a Re
+.._ = _.__ 17
+ff D 200 ( )
+Equation 17 is plotted on both Figures 1 and 2.
+: !2 10' w R v 10' 10‘
+- Igg‘fglagfi
+L. C 2 us
+I F9: /._QIT
+I I| k
+BOMMGQLJD era (In ful)
+Wrought iron. siul 0.00015 Aayhnltld coal Iron 0.0004 Galvamud Iron 00005 Caoi iron 0.00055
+Wood mm 640"” 3-10" Concrcu I17" to 10" 12mm Mu! 3-104» 340"
+"IO' 0 |0‘ *
+W!“ = {255%
+Figure 2. Rouse diagram. (Rouse, 1943; reproduced by permission of IIHR.)
+Lewis Moody (1880-1953) was in the audience when Rouse presented his paper. Moody felt that Rouse's diagram was "inconvenient" and decided to redraw Rouse's diagram "in the more conventional form used by Pigott, ..." (Moody, 1944). Moody's paper was primarily an instructional lecture, and as he said, "The author does not claim to offer anything particularly new or original, his aim merely being to embody the now accepted conclusion in convenient form for engineering use." Moody acknowledged previous researchers, and reproduced figures from both Colebrook and Rouse. It should be noted that Moody's diagram is more convenient to use when finding h; with known Q and D. However, Rouse's diagram allows a direct, noniterative solution for Q with known h, and D. Thus, each has its advantages.
+_______ . _ .____. ._____.___ . ..___.‘, ____
+Copyright ASCE 2004 Environmental and Water Resources History 2002
+Environmental and Water Resources History
+Downloaded from ascelibrary.org by UNIVERSITE LAVAL on 05/28/14. Copyright ASCE. For personal use only; all rights reserved.
+
+
+Downloaded from ascelibrarvnrg bV UNIVERSITE LAVAL on 05/28/14. Copvright ASCE. For personal use 0an; all rights reserved.
+—-r.I--a--- 
+ENVIRONMENTAL AND WATER RESOURCES HISTORY 41
+A Rose by Any Other Name
+The naming convention of the Darcy-Weisbach's equation in different countries and through time is somewhat curious and may be tracked in the contemporaneous textbooks. Generally, French authors have identified any relationship in the form of Eqs. 2 or 4 as "La formule de Darcy". The friction factor may be listed as either f or as Darcy's Number, Da. An early English text, (Neville, 1853) identified Eq. 2 as the ”Weisbach Equation”, but later authors have generally adopted the French terminology. Surprisingly up to the 1960's, German authors either gave it a generic name like "Rohrreibungsformel" (pipe formula) or use the French jargon. However, almost all German authors now use "Darcy—Weisbach". The equation's designation has evolved the most in America. Early texts such as Fanning (1877) generally do not name the equation explicitly; it is just presented. In the period around 1900 many authors referred to Eq. 2 as Chézy‘s or a form of Chézy's (Hughes, and Stafford, 1911). However, by the mid-century, most authors had again returned to leaving the equation unspecified or gave it a generic name. Rouse in 1942 appears to be the first to call it "Darcy-Weisbach" (Rouse, 1943). That designation gained an official status in 1962 (ASCE, 1962), but did not become well accepted by American authors until the late 1980's. A check of ten American fluidmechanics textbooks published within the last eight years showed that eight use the Darcy-Weisbach naming convention, while two continue to leave the equation's name unspecified. While variations across oceans and languages are to be expected, it is disappointing that a single nomenclature for Eq. 2 has not been adopted after 157 years, at least in the United States. Rather ironically and contrarily to the practice with the equation name, the f versus Re diagram is universally credited to Moody, and the contributions of others are seldom acknowledged. This was a sore point with Rouse (1976), and he wrote of their 1942 meeting (in third person),
+"After the Conference, Lewis Moody of Princeton suggested using the latter variables (f and Re) as primary rather than supplementary, as in the past, but Rouse resisted the temptation because he felt that to do would be a step backwaxd. So Moody himself published such a plot, and it is known around the world as the Moody diagram!"
+In his writing, Rouse used the exclamation point very sparingly, thus the intensity of his opinion is apparent.
+Closing Comments
+With Moody‘s publication, practitioners accepted the Darcy—Weisbach equation and it is dominant in most engineering fields. Its results are applied without question, which may not be appropriate for all conditions. Rouse (1943) showed that the Eq. 16 is only valid for pipes with interior roughness similar to iron. Spiral or plate fabricated pipes had substantially different functions. Statements of true accuracy are rare, but based on his personal judgment that pipe roughness is difficult
+_______ . _ .____. ._____.___ . ..___.‘, ____
+Copyright ASCE 2004 Environmental and Water Resources History 2002
+Environmental and Water Resources History
+Downloaded from ascelibrary.org by UNIVERSITE LAVAL on 05/28/14. Copyright ASCE. For personal use only; all rights reserved.
+
+
+Downloaded from ascelibrarvnrg bV UNIVERSITE LAVAL on 05/28/14. Copvright ASCE. For personal use 0an; all rights reserved.
+—-r.I--a--- 
+42 ENVIRONMENTAL AND WATER RESOURCES HISTORY
+to define, White (1994) has stated the Moody chaxt is only accurate to :15%. Thus, it is surprising that the diagram has not been modified or replaced over the last 5 8 years. Efforts have been made to streamline the procedure and eliminate the manual use of graphs. This difficultly is responsible for the continued use of less accurate empirical formulas such as the Hazen—Williams equation. While they have a limited Reynolds number range, those irrational formulas are adequate for some design problems. Therefore, the most notable advance in the application of the DarcyWeisbach equation has been the publication by Swamee and Jain (1976) of explicit equations for pipe diameter, head loss and the discharge through a pipe, based on the Colebrook-White equation. Swanee and Jain's formulas eliminate the last advantages of the empirical pipe flow equations. Thus, because of its general accuracy and complete range of application, the Darcy—Weisbach equation should be considered the standard and the others should be left for the historians. Liou (1998) presented an interesting discussion on the topic. By necessity this was a brief survey of the historical development that focused solely on the Darcy-Weisbach equation and the Darcy friction factor, f. Additional theoretical background on f is presented by Schlichting (1968), while an excellent historical overview that includes other pipe friction formulas is provided by Hager (1994).
+References
+ASCE (1962). Nomenclature for hydraulics. ASCE, New York, 501 pages.
+d'Aubuisson, J . F. (1834). Traité de l’hydraulique £1 l’usage des ingénieurs, PitoisLevrault, Paris (in French).
+Blasius, H. (1913). Das A'hnlichkeitsgesetz bei Reibungsvorgiz‘ngen in Fll'issigkeiten, Forschungs—Arbeit des Ingenieur-Wesens 131. (in German).
+Colebrook, C. F. (1939) "Turbulent flow in pipes with particular reference to the transition region between the smooth and rough pipe laws." Proc. Institution Civil Engrs., 12, 393-422.
+Colebrook, C. F. and White, C. M. (1937). "Experiments with fluid-friction in roughened pipes." Proc. Royal Soc. London, 161, 367-381.
+Darcy, H. (1857). Recherches expérimentales relatives au mouvement de l’eau dans les tuyaux, Mallet—Bachelier, Paris. 268 pages and atlas (in French).
+Fanning, J. T. (1877). A practical treatise on water—supply engineering, Van Nostrand, New York, 619 pages.
+Hagen, G. (1839). "Uber die Bewegung des Wassers in engen zylindrischen Réhren." Pogg. Ann., 46, 423—442 (in German).
+Hager, W. H. (1994). "Die historische Entwicklung der Fliessfonnel." Schweizer Ingenieur und Architekt, 112(9), 123-133. (in German)
+_______ . _ .____. ._____.___ . ..___.‘, ____
+Copyright ASCE 2004 Environmental and Water Resources History 2002
+Environmental and Water Resources History
+Downloaded from ascelibrary.org by UNIVERSITE LAVAL on 05/28/14. Copyright ASCE. For personal use only; all rights reserved.
+
+
+Downloaded from ascelibrarvnrg bV UNIVERSITE LAVAL on 05/28/ 14. Copvright ASCE. For personal use 0an; all rights reserved.
+—-r.I--a--- 
+ENVIRONMENTAL AND WATER RESOURCES HISTORY 43
+Hughes, H. J . and Stafford, A. T. (1911). A treatise on hydraulics, Macmillan, New York. 501 pg and 5 plates.
+Kérmén, Th. von (1930). "Mechanische Aehnlichkeit und Turbulenz." Proc. Third International Congress for Applied Mechanics, C. W. Oseen and W. Weibull eds., Stockholm. Vol. 1, 79-93 (in German).
+Liou, C. P. (1998). "Limitations and proper use of the Hazen-Williams equation." J. Hydraulic Engrg., ASCE 124(9), 951-954.
+Moody, L. F. (1944). "Friction factors for pipe flow." Trans. ASME, 66:671-678.
+Neville, John, (1853). Hydraulic tables, coefficients and formulae. John Wale, London, 224 pages.
+Nikuradse, J . (1933). "Strémungsgesetze in rauhen Rohren." Forschungs—Arbeit des lngenieur— Wesens 361 (in German).
+Poiseuille, J . L. (1841). "Recherches expérimentales sur le mouvement des liquides
+dans les tubes de trés-petits diamétres." Comptes Rendus, Académie des Sciences,
+Paris 12, 112 (in French).
+Reynolds, 0. (1883). "An experimental investigation of the circumstances which determine whether the motion of water shall be direct or sinuous and of the law of resistance in parallel channel." Phil. Truns. of the Royal Soc., 174:935-982.
+Rouse, H. (1943). "Evaluation of boundary roughness." Proceedings Second Hydraulics Conference, Univ. of Iowa Studies in Engrg., Bulletin No. 27.
+Rouse, H. (1976). Hydraulics in the United States, 1776—1976, Iowa Institute of Hydraulic Research, Univ. of Iowa, Iowa City, 238 pg.
+Rouse, H. and Ince, S. (1957). History of Hydraulics, Iowa Institute of Hydraulic Research, Univ. of Iowa, Iowa City, 269 pg.
+Schlichting, H. (1968). Boundary—layer theory, Translated by J. Kestin, 6Ih ed, McGraw-Hill, New York, 748 pg.
+Swamee, P. K., and Jain, A. K. (1976). "Explicit equations for pipe-flow problems." J. Hydraulics Division, ASCE, 102(5), 657-664.
+Weisbach, J. (1845). Lehrbuch der Ingenieur— und Maschinen-Mechanik, Vol. 1. Theoretische Mechanik, Vieweg und Sohn, Braunschweig. 535 pages (in German).
+White, F. M. (1994). Fluid mechanics, 3rd ed., Mc-Graw Hill, New York. 736 pg.
+_______ . _ .____. ._____.___ . ..___.‘, ____
+Copyright ASCE 2004 Environmental and Water Resources History 2002
+Environmental and Water Resources History
+Downloaded from ascelibrary.org by UNIVERSITE LAVAL on 05/28/14. Copyright ASCE. For personal use only; all rights reserved.

@@ -1,0 +1,1731 @@
+Rocket Propulsion Elements
+Seventh Edition
+GEORGE P. SUTTON Consultant Formerly Laboratory Associate Lawrence Livermore National Laboratory and formerly Executive Director, Engineering Rocketdyne, now The Boeing Company
+OSCAR BIBLARZ Professor Department of Aeronautics and Astronautics Naval Postgraduate School
+A Wiley-lnterscience Publication JOHN WILEY & SONS, INC.
+New York / Chichester / Weinheim / Brisbane / Singapore / Toronto
+
+
+This book is printed on acid-flee paper.
+Copyright © 2001 by John Wiley & Sons. All rights reserved.
+Published simultaneously in Canada.
+No part of this publication may be reproduced, stored in a retrieval system or transmitted in any form or by any means, electronic, mechanical, photocopying, recording, scanning or otherwise, except as permitted under Sections 107 or 108 of the 1976 United States Copyright Act, without either the prior written permission of the Publisher, or authorization through payment of the appropriate per-copy fee to the Copyright Clearance Center, 222 Rosewood Drive, Danvers, MA 01923, (978) 750-8400, fax (978) 750-4744. Requests to the Publisher for permission should be addressed to the Permissions Department, John Wiley & Sons, Inc., 605 Third Avenue, New York, NY 10158-0012, (212) 850-6011, fax (212) 850-6008, E-Mail: PERMREQ @ WILEY. COM.
+This publication is designed to provide accurate and authoritative information in regard to the subject matter covered. It is sold with the understanding that the publisher is not engaged in rendering professional services. If professional advice or other expert assistance is required, the services of a competent professional person should be sought.
+Library of Congress Cataloging-in-PublicationData: Sutton, George Paul. Rocket propulsion elements : an introduction to the engineering of rockets / by George P. Sutton, Oscar Biblarz.--7th ed. p. cm. "A Wiley-Interscience publication." Includes bibliographical references and index. ISBN 0-471-32642-9 (cloth: alk. paper) 1. Rocket engines. I. Biblarz, Oscar. II. Title TL782.$8 2000 629.47' 5--dc21 00-027334
+Printed in the United States of America. 1098
+
+
+PREFACE
+This new edition concentrates on the subject of rocket propulsion, its basic technology, performance, and design rationale. The intent is the same as in previous editions, namely to provide an introduction to the subject, an understanding of basic principles, a description of their key physical mechanisms or designs, and an appreciation of the application of rocket propulsion to flying vehicles. The first five chapters in the book cover background and fundamentals. They give a classification of the various propulsion systems with their key applications, definitions, basic thermodynamics and nozzle theory, flight performance, and the thermochemistry of chemical propellants. The next nine chapters are devoted to chemical propulsion, namely liquid rocket engines and solid rocket motors. We devote almost half of the book to these two, because almost all past, current, and planned future rocket-propelled vehicles use them. Hybrid rocket propulsion, another form of using chemical combustion energy, has a separate chapter. The new longer chapter on electric propulsion has been extensively revised, enlarged, and updated. Chapters 16-18 and 20 apply to all types of propulsion, namely thrust vector control, selection of a rocket propulsion system for specific applications, testing of propulsion systems, and behavior of chemical rocket exhaust plumes. Only a little space is devoted to advanced new concepts, such as nuclear propulsion or solar thermal propulsion, because they have not yet been fully developed, have not yet flown, and may not have wide application. The book attempts to strike a balance between theory, analysis, and practical design or engineering tasks; between propulsion system and nonpropulsion system subjects, which are related (such as testing, flight performance, or
+xi
+
+
+xii PREFACE
+exhaust plumes); and between rocket systems and their key components and materials. There is an emphasis on up-to-date information on current propulsion systems and the relation between the propulsion system, the flight vehicle, and the needs of the overall mission or flight objectives. The new edition has more pages and extensive changes compared with the sixth edition. We have expanded the scope, reorganized the existing subject matter into a more useful form or logical sequence in some of the chapters, and updated various data. About one-third of the book is new or extensively revised text and figures. This new version has been heavily edited, upgraded, and improved. Altogether we count about 2500 changes, additions, new or rewritten sections or paragraphs, inserts, clarifications, new illustrations, more data, enlarged tables, new equations, more specific terminology, or new references. We have deleted the chapter on heat transfer that was in the sixth edition, because we learned that it was not being used often and is somewhat out of date. Instead we have added revised small specific sections on heat transfer to several chapters. A new chapter on liquid propellant thrust chambers was added, because this component is the heart of liquid propellant rocket engines. Here are some of the topics that are new or completely revised. New sections or subsections include engine structures, two-step nozzles, multiple nozzles, gas properties of gas generator or preburner gases, classification of engine valves, a promising new monopropellant, gaseous rocket propellants, propellant additives, materials and fabrication of solid propellant motors, launch vehicles, elliptical orbits, new sample design calculations, vortex instability in solid rocket motors, design of turbopumps, design of liquid propellant engines, insensitive munitions requirements, aerospike rocket engines, solid rocket motor nozzles, and plume signatures. In addition there are new figures, for example, the payload variation with orbit altitude or inclination angle, some recently developed rocket propulsion systems, the design of shortened bellshaped nozzle contours, and the expander engine cycle, and new tables, such as different flight maneuvers versus the type of rocket propulsion system, list of mission requirements, and the physical and chemical processes in rocket combustion. There are new paragraphs on rocket history, four additional nozzle loss factors, use of venturi in feed systems, extendible nozzles, and water hammer. In the last couple of decades rocket propulsion has become a relatively mature field. The development of the more common propulsion systems is becoming routine and the cost of new ones is going down. For example, much R&D was done on many different chemical propellants, but just a few are used, each for specific applications. Although some investigations on new propellants or new propellant ingredients are still under way, a new propellant has not been introduced for a rocket production application in the last 25 years. Most of the new propulsion systems are uprated, improved, or modified versions of existing proven units in the chemical propulsion and electrical propulsion areas. There are only a few novel engines or motors, and some
+
+
+PREFACE xiii
+are mentioned in this book. We have therefore placed emphasis on describing several of the proven existing modern rocket propulsion systems and their commonly used propellants, because they are the heritage on which new ones will be based. It is not possible in any one book to mention all the varieties, types, and designs of propulsion systems, their propellants, or materials of construction, and we therefore selected some of the most commonly used ones. And we discuss the process of uprating or modifying them, because this is different from the design process for a truly new unit. The number of countries that develop or produce rocket propulsion systems has gone from three in 1945 to at least 35 today, a testimony to proliferation and the rising interest in the subject. There are today more colleges that teach rocket propulsion than before. Prior editions of this book have been translated into three languages, Russian, Chinese, and more recently (1993) Japanese. People outside of the U.S. have made some excellent contributions to the rocket field and the authors regret that we can mention only a few in this book. We have had an ongoing disparity about units. Today in U.S. propulsion companies, most of the engineering and design and almost all the manufacturing is still being done in English engineering (EE) units (foot or inch, pounds, seconds). Many of the technical papers presented by industry authors use EE units. Papers from university authors, government researchers, and from a few companies use the SI (International Standard--metric) units. If a customer demands SI units, some companies will make new drawings or specifications especially for this customer, but they retain copies with EE units for in-house use. The planned transition to use exclusively SI units is complex and proceeding very slowly in U.S. industry. Therefore both sets of units are being used in this revised edition with the aim of making the book comfortable for colleges and professionals in foreign countries (where SI units are standard) and to practicing engineers in the U.S. who are used in the EE system. Some tables have both units, some sections have one or the other. The use of computers has changed the way we do business in many fields. We have developed computer programs for many an engineering analysis, computer-aided design, computer-aided manufacturing, business and engineering transactions, test data collection, data analysis or data presentation, project management, and many others. In fact computers are used extensively in some companies to design new propulsion devices. Therefore we identify in this book the places where computer programs will be helpful and we mention this often. However, we do not discuss specific programs, because they take up too much space, become obsolete in a short time without regular upgrading, some do not have a way to provide help to a user, and some of the better programs are company proprietary and thus not available. The first edition of this book was issued in 1949. With this new revised seventh edition this is probably the longest active aerospace book (51 years) that has been upgraded regularly and is still being actively used in industry and universities. To the best of the authors' knowledge the book has been or is being used as a college text in 45 universities worldwide. It is a real satisfaction
+
+
+XiV PREFACE
+to the authors that a very large number of students and engineers were introduced to this subject through one of the editions of this book. The book has three major markets: it has been used and is still used as a college text. It contains more material and more student problems than can be given in a one-semester course. This then allows the choosing of selected portions of the book to fit the student's interest. A one-term course might consist of a review of the first four or five chapters, followed by a careful study of Chapters 6, 10, 11, 14, and 19, a brief scanning of most of the other chapters, and the detailed study of whatever additional chapter(s) might have appeal. The book also has been used to indoctrinate engineers new to the propulsion business and to serve as a reference to experienced engineers, who want to look up some topic, data, or equation. We have tried to make the book easier to use by providing (1) a much more detailed table of contents, so the reader can find the chapter or section of interest, (2) an expanded index, so specific key words can be located, and (3) five appendices, namely a summary of key equations, a table of the properties of the atmosphere, conversion factors and constants, and two derivations of specific equations. All rocket propellants are hazardous materials. The authors and the publisher recommend that the reader do not work with them or handle them without an exhaustive study of the hazards, the behavior, and the properties of each propellant, and rigorous safety training, including becoming familiar with protective equipment. Safety training is given routinely to employees by organizations in this business. Neither the authors nor the publisher assume any responsibility for actions on rocket propulsion taken by readers, either directly or indirectly. The information presented in this book is insufficient and inadequate for conducting rocket propulsion experiments or operations. Professor Oscar Biblarz of the Naval Postgraduate School joins George P. Sutton as a co-author in this edition. We both shared in the preparation of the manuscript and the proofreading. Terry Boardman of Thiokol Propulsion (a division of Cordant Technologies) join as a contributing author; he prepared Chapter 15 (hybrid rocket propulsion) and the major portion of the section on rocket motor nozzles in Chapter 14. We gratefully acknowledge the help and contributions we have received in preparing this edition. Terrence H. Murphy and Mike Bradley of The Boeing Company, Rocketdyne Propulsion and Power, contributed new data and perspective drawings to the chapters on rocket propulsion with liquid propellants. Warren Frick of Orbital Sciences Corporation provided valuable data on satellite payloads for different orbits. David McGrath, Thomas Kirschner, and W. Lloyd McMillan of Thiokol Propulsion (a division of Cordant Technologies, Inc.) answered questions and furnished data on solid propellant rocket motors. Carl Stechman of Kaiser-Marquardt furnished design information on a small bipropellant thruster. Carl Pignoli and Pat Mills of Pratt & Whitney (a United Technologies Company) gave us engine data and permission to copy data on turbopumps and upper-stage space engines with extendible nozzle skirts.
+
+
+PREFACE xv
+Kathleen F. Hodge and Gary W. Joseph of the Space and Technology Division of TRW, Inc., gave data on a pressurized storable propellant rocket engine and a jet tab attitude control system. Oscar Biblarz acknowledges his colleagues David W. Netzer, Brij N. Agrawal, and Sherif Michael who, together with many students, have been an integal part of the research and educational environment at the Naval Postgraduate School. Craig W. Clauss of Atlantic Research Corporation (a unit of Sequa Corporation) helped with electric propulsion.
+George P. Sutton
+Los Angeles, California
+Oscar Biblarz
+Monterey, California
+COVER ILLUSTRATIONS
+The color illustrations on the cover show several rocket propulsion systems, each at a different scale. Below we briefly describe these illustrations and list the page numbers, where more detail can be found. The front cover shows the rocket nozzles at the aft end of the winged Space Shuttle, shortly after takeoff. The two large strap-on solid rocket motors (see page 545) have brightly glowing white billowy exhaust plumes. The three Space Shuttle main engines (page 199) have essentially transparent plumes, but the hot regions, immediately downstream of strong shock waves, are faintly visible. The two darker-colored nozzles of the thrust chambers of the orbital maneuvering system and the small dark nozzle exit areas (pointing upward) of three of the thrusters of the reaction control system of the Space Shuttle (see page 208) are not firing during the ascent of the Shuttle. The back cover shows (from top to bottom) small illustrations of (1) an image of a stress/strain analysis model (see page 461) of a solid propellant rocket motor grain and case, (2) a small storable bipropellant thruster of about 100 lbf thrust (page 307), (3) a three-quarter section of a solid propellant rocket motor (page 9), and (4) an experimental aerospike rocket engine (page 298) during a static firing test.
+
+
+CONTENTS
+PREFACE
+1 Classification
+1.1. Duct Jet Propulsion / 2 1.2. Rocket Propulsion / 4 1.3. Applications of Rocket Propulsion / 15 References / 25
+2 Definitions and Fundamentals
+2.1. Definition / 27 2.2. Thrust / 32 2.3. Exhaust Velocity / 34 2.4. Energy and Efficiencies / 36 2.5. Typical Performance Values / 39 Problems / 41 Symbols / 43 References / 44
+3 Nozzle Theory and Thermodynamic Relations
+3.1. Ideal Rocket / 46 3.2. Summary of Thermodynamic Relations / 47 3.3. Isentropic Flow through Nozzles / 52
+xi
+27
+45
+
+
+vi CONTENTS
+3.4. Nozzle Configurations / 75 3.5. Real Nozzles / 85 3.6. Four Performance Parameters / 92 3.7. Nozzle Alignment / 94 3.8. Variable Thrust / 96 Problems / 97 Symbols / 99 References / 100
+Flight Performance
+4.1. Gravity-Free Drag-Free Space Flight / 102 4.2. Forces Acting on a Vehicle in the Atmosphere / 106 4.3. Basic Relations of Motion / 108 4.4. Effect of Propulsion System on Vehicle Performance / 115 4.5. Space Flight / 117 4.6. Flight Maneuvers / 132 4.7. Flight Vehicles / 139 4.8. Military Missiles / 149 4.9. Aerodynamic Effect of Exhaust Plumes / 152 4.10. Flight Stability / 153 Problems / 154 Symbols / 157 References / 159
+102
+Chemical Rocket Propellant Performance Analysis
+5.1. Background and Fundamentals / 161 5.2. Analysis of Chamber or Motor Case Conditions / 169 5.3. Analysis of Nozzle Expansion Processes / 172 5.4. Computer Analysis / 179 5.5. Results of Thermochemical Calculations / 180 Problems / 189 Symbols / 193 References / 195
+160
+Liquid Propellant Rocket Engine Fundamentals
+6.1. Propellants / 201 6.2. Propellant Feed Systems / 203 6.3. Gas Pressure Feed Systems / 205
+197
+
+
+CONTENTS vii
+6.4. Propellant Tanks / 211 6.5. Tank Pressurization / 218 6.6. Turbopump Feed Systems and Engine Cycles / 221 6.7. Flow and Pressure Balance / 227
+6.8. Rocket Engines for Maneuvering, Orbit Adjustments, or Attitude Control / 228 6.9. Valves and Pipe Lines / 232 6.10. Engine Support Structure / 235 Problems / 236 Symbols / 238 References / 239
+7 Liquid Propellants 241
+7.1. Propellant Properties / 242 7.2. Liquid Oxidizers / 251 7.3. Liquid Fuels / 255 7.4. Liquid Monopropellants / 259 7.5. Gelled Propellants / 261 7.6. Gaseous Propellants / 263 7.7. Safety and Environmental Concerns / 264 Problems / 265 Symbols / 266 References / 266
+8 Thrust Chambers 268
+8.1. Injectors / 271 8.2. Combustion Chamber and Nozzle / 282 8.3. Heat Transfer Analysis / 308 8.4. Starting and Ignition / 320 8.5. Variable Thrust / 323 8.6. Sample Thrust Chamber Design Analysis / 324 Problems / 335 Symbols / 338 References / 340
+9 Combustion of Liquid Propellants 342
+9.1. Combustion Process / 343 9.2. Analysis and Simulation / 346 9.3. Combustion Instability / 348
+
+
+VIII CONTENTS
+Problems / 360 References / 360
+10 Turbopumps, Engine Design, Engine Controls, Calibration,
+Integration, and Optimization
+10.1. Turbopumps / 362 10.2. Performance of Complete or Multiple Rocket Propulsion Systems / 384 10.3. Propellant Budget / 387 10.4. Engine Design / 389 10.5. Engine Controls / 396 10.6. Engine System Calibration / 405 10.7. System Integration and Engine Optimization / 411 Problems / 413 Symbols / 413 References / 415
+362
+11 Solid
+11.1. 11.2. 11.3. 11.4. 11.5.
+Propellant Rocket Fundamentals
+Propellant Burning Rate / 419 Basic Performance Relations / 437 Propellant Grain and Grain Configuration / 444 Propellant Grain Stress and Strain / 453 Attitude Control and Side Maneuvers with Solid Propellant Rocket Motors / 466 Problems / 467 Symbols / 470 References / 471
+417
+12 Solid
+12.1. 12.2. 12.3. 12.4. 12.5. 12.6. 12.7.
+Propellants
+Classification / 474 Propellant Characteristics / 480 Hazards / 487 Propellant Ingredients / 494 Other Propellant Categories / 505 Liners, Insulators, and Inhibitors / 509 Propellant Processing and Manufacture / 511 Problems / 515 References / 518
+474
+
+
+13 Combustion of Solid Propellants
+13.1. Physical and Chemical Processes / 520 13.2. Ignition Process / 524 13.3. Extinction or Thrust Termination / 526 13.4. Combustion Instability / 528 Problems / 537 References / 537
+CONTENTS ix
+520
+14 Solid Rocket Components and Motor Design
+14.1. Motor Case / 540 14.2. Nozzle / 550 14.3. Igniter Hardware / 563 14.4. Rocket Motor Design Approach / 568 Problems / 575 References / 577
+540
+15 Hybrid Propellant Rockets
+15.1. Applications and Propellants / 580 15.2. Performance Analysis and Grain Configuration / 585 15.3. Design Example / 593 15.4. Combustion Instability / 599 Symbols / 604 References / 606
+16 Thrust Vector Control
+16.1. TVC Mechanisms with a Single Nozzle / 609 16.2. TVC with Multiple Thrust Chambers or Nozzles / 620 16.3. Testing / 621 16.4. Integration with Vehicle / 621 References / 623
+579
+608
+17 Selection of Rocket Propulsion Systems
+17.1. Selection Process / 625 17.2. Criteria for Selection / 630 17.3. Interfaces / 634 References / 638
+624
+
+
+x CONTENTS
+18 Rocket Exhaust Plumes
+18.1. 18.2. 18.3.
+Plume Appearance and Flow Behavior / 641 Plume Effects / 652 Analysis and Mathematical Simulation / 657 Problems / 658 References / 658
+19 Electric Propulsion
+19.1. Ideal Flight Performance / 666 19.2. Electrothermal Thrusters / 670 19.3. Non-Thermal Electric Thrusters / 677 19.4. Optimum Flight Performance / 696 19.5. Mission Applications / 700
+19.6. Electric Space-Power Supplies and Power-Conditioning Systems / 701 Problems / 706 Symbols / 707 References / 709
+20 Rocket Testing
+20.1. Types of Tests / 711 20.2. Test Facilities and Safeguards / 713 20.3. Instrumentation and Data Management / 720 20.4. Flight Testing / 724 20.5. Postaccident Procedures / 725 References / 726
+Appendix 1
+Appendix 2
+Appendix 3
+Appendix 4
+Appendix 5
+Index
+Conversion Factors and Constants
+Properties of the Earth's Standard Atmosphere
+Summary of Key Equations for Ideal Chemical Rockets
+Derivation of Hybrid Fuel Regression Rate Equation in Chapter 15
+Alternative Interpretations of Boundary Layer Blowing Coefficient in Chapter 15
+639
+660
+711
+727
+730
+731
+733
+737
+739
+
+
+CHAPTER 1
+CLASSIFICATION
+Propulsion in a broad sense is the act of changing the motion of a body. Propulsion mechanisms provide a force that moves bodies that are initially at rest, changes a velocity, or overcomes retarding forces when a body is propelled through a medium. Jet propulsion is a means of locomotion whereby a reaction force is imparted to a device by the momentum of ejected matter. Rocket propulsion is a class of jet propulsion that produces thrust by ejecting stored matter, called the propellant. Duct propulsion is a class of jet propulsion and includes turbojets and ramjets; these engines are also commonly called airbreathing engines. Duct propulsion devices utilize mostly the surrounding medium as the "working fluid", together with some stored fuel. Combinations of rockets and duct propulsion devices are attractive for some applications and are described in this chapter. The energy source most useful to rocket propulsion is chemical combustion. Energy can also be supplied by solar radiation and, in the past, also by nuclear reaction. Accordingly, the various propulsion devices can be divided into chemical propulsion, nuclear propulsion, and solar propulsion. Table 1-1 lists many of the important propulsion concepts according to their energy source and type of propellant or working fluid. Radiation energy can originate from sources other than the sun, and theoretically can cover the transmission of energy by microwave and laser beams, electromagnetic waves, and electrons, protons, and other particle beams from a transmitter to a flying receiver. Nuclear energy is associated with the transformations of atomic particles within the nucleus of atoms and can be of several types, namely, fission, fusion, and decay of radioactive species. Other energy sources, both internal (in the vehicle) and external, can be considered. The energy form
+
+
+2 CLASSIFICATION
+TABLE 1-1. Energy Sources and Propellants for Various Propulsion Concepts
+Energy Sourcea Propellant or
+Propulsion Device Chemical Nuclear Solar Working Fluid
+Turbojet D/P TFD Turbo-ramjet TFD Ramjet (hydrocarbon fuel) D/P TFD Ramjet (H2 cooled) TFD Rocket (chemical) D/P TFD Ducted rocket TFD
+Electric rocket Nuclear fission rocket Nuclear fusion rocket Solar heated rocket Photon rocket (big light bulb) Solar sail
+D/P TFD D/P TFD TFND
+TFND
+TFD
+TFD
+Fuel + air Fuel + air Fuel + air Hydrogen + air Stored propellant Stored solid fuel + surrounding air Stored propellant Stored H2 Stored H2 Stored H2 Photon ejection (no stored propellant) Photon reflection (no stored propellant)
+aD/p, developedand/or consideredpractical;TFD, technicalfeasibilityhas beendemonstrated, but development is incomplete;TFND, technical feasibilityhas not yet been demonstrated.
+found in the output of a rocket is largely the kinetic energy of the ejected matter; thus the rocket converts the input from the energy source into this form. The ejected mass can be in a solid, liquid, or gaseous state. Often a combination of two or more of these is ejected. At very high temperatures it can also be a plasma, which is an electrically activated gas.
+1.1. DUCT JET PROPULSION
+This class, also called air-breathing engines, comprises devices which have a duct to confine the flow of air. They use oxygen from the air to burn fuel stored in the flight vehicle. The class includes turbojets, turbofans, ramjets, and pulsejets. This class of propulsion is mentioned primarily to provide a comparison with rocket propulsion and a background for combination rocket-duct engines, which are mentioned later. Several textbooks, such as Refs. 1-1 and 1-2, contain a discussion of duct jet propulsion fundamentals. Table 1-2 compares several performance characteristics of specific chemical rockets with those of typical turbojets and ramjets. A high specific impulse is directly related to a long flight range and thus indicates the superior range capability of air breather engines over chemical rockets at relatively low altitude. The uniqueness of the rocket, for example, high thrust to weight, high thrust to frontal
+
+
+TABLE 1-2. Comparison of Several Characteristics of a Typical Chemical Rocket and Two Duct Propulsion Systems
+Rocket Engine Feature or Rocket Motor Turbojet Engine Ramjet Engine
+Thrust-to-weight ratio, typical Specific fuel consumption (pounds of propellant or fuel per hour per pound of thrust) a Specific thrust (pounds of thrust per square foot frontal area)b Thrust change with altitude Thrust vs. flight speed Thrust vs. air temperature Flight speed vs. exhaust velocity
+Altitude limitation
+Specific impulse typicalc (thrust force per unit propellant or fuel weight flow per second)
+75:1 5:1, turbojet and afterburner 7:1 at Mach 3 at 30,000 ft 8-14 0.5-1.5 2.3-3.5
+5000 to 25,000
+Slight increase Nearly constant Constant Unrelated, flight speed can be greater None; suited to space travel
+270 sec
+2500 (Low Mach at sea level)
+Decreases Increases with speed Decreases with temperature Flight speed always less than exhaust velocity 14,000-17,000 m
+1600 sec
+2700 (Mach 2 at sea level)
+Decreases Increases with speed Decreases with temperature Flight speed always less than exhaust velocity 20,000 m at Mach 3 30,000 m at Mach 5 45,000 m at Mach 12 1400 sec
+aMultiply by 0.102 to convert to kg/hr-N. bMultiply by 47.9 to convert to N/m2. CSpecific impulse is a performance parameter and is defined in Chapter 2.
+
+
+4 CLASSIFICATION
+area, and thrust independence of altitude, enables extremely long flight ranges to be obtained in rarefied air and in space. The turbojet engine is the most common of ducted engines. Figure 1-1 shows the basic elements. At supersonic flight speeds above Mach 2, the ramjet engine (a pure duct engine) becomes attractive for flight within the atmosphere. Thrust is produced by increasing the momentum of the air as it passes through the ramjet, basically as is accomplished in the turbojet and turbofan engines but without compressors or turbines, Figure 1-2 shows the basic components of one type of ramjet. Ramjets with subsonic combustion and hydrocarbon fuel have an upper speed limit of approximately Mach 5; hydrogen fuel, with hydrogen cooling, raises this to at least Mach 16. Ramjets depend on rocket boosters, or some other method (such as being launched from an aircraft) for being accelerated to near their design flight speed to become functional. The primary applications have been in shipboard and ground-launched antiaircraft missiles. Studies of a hydrogen-fueled ramjet for hypersonic aircraft look promising. The supersonic flight vehicle is a combination of a ramjet-driven high-speed airplane and a one- or two-stage rocket booster. It can travel at speeds up to a Mach number of 25 at altitudes of up to 50,000 m.
+1.2. ROCKET PROPULSION
+Rocket propulsion systems can be classified according to the type of energy source (chemical, nuclear, or solar), the basic function (booster stage, sustainer, attitude control, orbit station keeping, etc.), the type of vehicle (aircraft, missile, assisted take-off, space vehicle, etc.), size, type of propellant, type of construction, or number of rocket propulsion units used in a given vehicle. Each is treated in more detail in subsequent chapters. Another way is to Classify by the method of producing thrust. A thermodynamic expansion of a gas is used in the majority of practical rocket propulsion concepts. The internal energy of the gas is converted into the kinetic energy of the exhaust flow and the thrust is produced by the gas pressure on the surfaces exposed to the gas, as will be explained later. This same thermo
+•, °
+FIGURE 1-1. Simplified schematic diagram of a turbojet engine.
+
+
+1.2. ROCKETPROPULSION 5
+Air
+Fuel
+injec!tion
+<
+--~ " ~ Inletdiffuser
+section
+"//z Ill .......
+cou.,oncame5
+section section ]
+FIGURE 1-2. Simplified diagram of a ramjet with a supersonic inlet (converging and diverging flow passage).
+dynamic theory and the same generic equipment (nozzle) is used for jet propulsion, rocket propulsion, nuclear propulsion, laser propulsion, solar-thermal propulsion, and some types of electrical propulsion. Totally different methods of producing thrust are used in other types of electric propulsion or by using a pendulum in a gravity gradient. As described below, these electric systems use magnetic and/or electric fields to accelerate electrically charged molecules or atoms at very low densities. It is also possible to obtain a very small acceleration by taking advantage of the difference in gravitational attraction as a function of altitude, but this method is not explained in this book. The Chinese developed and used solid propellant in rocket missiles over 800 years ago and military bombardment rockets were used frequently in the eighteenth and nineteenth centuries. However, the significant developments of rocket propulsion took place in the twentieth century. Early pioneers included the Russian Konstantin E. Ziolkowsky, who is credited with the fundamental rocket flight equation and his 1903 proposals to build rocket vehicles. The German Hermann Oberth developed a more detailed mathematical theory; he proposed multistage vehicles for space flight and fuel-cooled thrust chambers. The American Robert H. Goddard is credited with the first flight using a liquid propellant rocket engine in 1926. An early book on the subject was written by the Viennese engineer Eugen Stinger. For rocket history see Refs. 1-3 to 1-7.
+Chemical Rocket Propulsion
+The energy from a high-pressure combustion reaction of propellant chemicals, usually a fuel and an oxidizing chemical, permits the heating of reaction product gases to very high temperatures (2500 to 4100°C or 4500 to 7400°F). These gases subsequently are expanded in a nozzle and accelerated to high velocities (1800 to 4300 m/sec or 5900 to 14,100 ft/sec). Since these gas temperatures are about twice the melting point of steel, it is necessary to cool or insulate all the surfaces that are exposed to the hot gases. According to the physical state of the propellant, there are several different classes of chemical rocket propulsion devices.
+
+
+6 CLASSIFICATION
+Liquid propellant rocket engines use liquid propellants that are fed under pressure from tanks into a thrust chamber.* A typical pressure-fed liquid propellant rocket engine system is schematically shown in Fig. 1-3. The liquid bipropellant consists of a liquid oxidizer (e.g., liquid oxygen) and a liquid fuel (e.g., kerosene). A monopropellant is a single liquid that contains both oxidizing and fuel species; it decomposes into hot gas when properly catalyzed. A large turbopump-fed liquid propellant rocket engine is shown in Fig. 1-4. Gas pressure feed systems are used mostly on low thrust, low total energy propulsion systems, such as those used for attitude control of flying vehicles, often with more than one thrust chamber per engine. Pump-fed liquid rocket systems are used typically in applications with larger amounts of propellants and higher thrusts, such as in space launch vehicles. In the thrust chamber the propellants react to form hot gases, which in turn are accelerated and ejected at a high velocity through a supersonic nozzle, thereby imparting momentum to the vehicle. A nozzle has a converging section, a constriction or throat, and a conical or bell-shaped diverging section as further described in the next two chapters. Some liquid rocket engines permit repetitive operation and can be started and shut off at will. If the thrust chamber is provided with adequate cooling capacity, it is possible to run liquid rockets for periods exceeding 1 hour, dependent only on the propellant supply. A liquid rocket propulsion system requires several precision valves and a complex feed mechanism which includes propellant pumps, turbines, or a propellant-pressurizing device, and a relatively intricate combustion or thrust chamber. In solid propellant rocket motors* the propellant to be burned is contained within the combustion chamber or case. The solid propellant charge is called the grain and it contains all the chemical elements for complete burning. Once ignited, it usually burns smoothly at a predetermined rate on all the exposed internal surfaces of the grain. Initial burning takes place at the internal surfaces of the cylinder perforation and the four slots. The internal cavity grows as propellant is burned and consumed. The resulting hot gas flows through the supersonic nozzle to impart thrust. Once ignited, the motor combustion proceeds in an orderly manner until essentially all the propellant has been consumed. There are no feed systems or valves (see Fig. 1-5). Liquid and solid propellants, and the propulsion systems that use them, are discussed in Chapters 6 to 10 and 11 to 14, respectively. Liquid and solid propellant rocket propulsion systems are compared in Chapter 17.
+*The term thrustchamber,used for the assemblyof the injector, nozzle, and chamber, is preferred by severalofficialagenciesand thereforehas beenused in this book. However,other terms, suchas thrust cylinderand combustor,are still used in the literature. For small spacecraft control rockets the term thrusteris commonlyused and this term will be used in some sections of this book. tHistorically the word engineis used for a liquidpropellant rocketpropulsionsystemand the word motor is used for solid propellant rocket propulsion. They were developed originallyby different groups.
+
+
+1.2. ROCKETPROPULSION 7
+q
+Tank
+vent
+valve
+Oxidizer
+tank
+Check
+valve
+Filler
+neck
+//
+Check
+valve
+Filler
+neck
+Pressure
+Tank
+vent
+valve
+High pressure
+gas valve
+(remote control)
+t ~ _ - - _ ~ tFaunekl
+Optional
+additional
+thrust
+chamber(s)
+Drain
+valve
+Gas bleed
+t- . . . . . . . . . . . II r . . . . . . . II It . . . . . . .
+II ~l& I
+_~U_
+iI ~ L__~
+Drain
+valve
+Gas fill
+valve
+Propellant valves
+(remote control)
+I
+cting
+Rocket thrust chamber
+FIGURE 1-3. Schematic flow diagram of a liquid propellant rocket engine with a gas pressure feed system. The dashed lines show a second thrust chamber, but some engines have more than a dozen thrust chambers supplied by the same feed system. Also shown are components needed for start and stop, controlling tank pressure, filling propellants and pressurizing gas, draining or flushing out remaining propellants, tank pressure relief or venting, and several sensors.
+Gaseous propellant rocket engines use a stored high-pressure gas, such as air, nitrogen, or helium, as their working fluid or propellant. The stored gas requires relatively heavy tanks. These cold gas engines have been used on many early space vehicles as attitude control systems and some are still used today. Heating the gas by electrical energy or by combustion of certain monopropellants improves the performance and this has often been called warm gas propellant rocket propulsion.
+
+
+8 CLASSIFICATION
+Pressurized helium
+~"
+" ~ } i ! ~ .........."
+Turbo I ~ ~
+assembly . _ ii~~.~ .
+III
+Fuel ) ~
+pu m p - t~;~iiil
+Valves
+Thrust ,
+chamber
+Tank pressurization
+valve
+tank
+Oxidizer
+pump
+Gear
+~.,"~"case Hot gas turbine
+gGeanserator
+(1.4% of
+-I
+Heat ¢¢;x=
+exchanger o,
+Exhaust duct
+Turbine exhaust j nozzle
+FIGURE 1-4. Simplified schematic diagram of one type of liquid propellant rocket engine with a turbopump feed system and a separate gas generator, which generates warm gas for driving the turbine. Not shown are components necessary for controlling the operation, filling, venting, draining, or flushing out propellants, filters or sensors. The turbopump assembly consists of two propellant pumps, a gear case, and a high speed turbine.
+Hybrid propellant rocket propulsion systems use both a liquid and a solid propellant. For example, if a liquid oxidizing agent is injected into a combustion chamber filled with solid carbonaceous fuel grain, the chemical reaction produces hot combustion gases (see Fig. 1-6). They are described further in Chapter 15. There are also chemical rocket propulsion combination systems that have both solid and liquid propellants. One example is a pressurized liquid propellant system that uses a solid propellant to generate hot gases for tank pressurization; flexible diaphragms are necessary to separate the hot gas and the reactive liquid propellant in the tank.
+
+
+1.2. ROCKET PROPULSION 9
+Forward ski=
+Thr termination opening device
+Insulatio
+Af~ ebh.~
+Nozzle throat
+insert Nozzle exit cone
+ain
+case body
+~y,,,,uer perforation
+FIGURE 1-5. Simplified perspective three-quarter section of a typical solid propellant rocket motor with the propellant grain bonded to the case and the insulation layer and with a conical exhaust nozzle. The cylindrical case with its forward and aft hemispherical domes form a pressure vessel to contain the combustion chamber pressure. Adapted with permission from Reference 11-1.
+Combinations of Ducted Jet Engines and Rocket Engines
+The Tomahawk surface-to-surface missile uses two stages of propulsion in sequence. The solid propellant rocket booster lifts the missile away from its launch platform and is discarded after its operation. A small turbojet engine sustains the low level flight at nearly constant speed toward the target.
+A ducted rocket, sometimes called an air-augmented rocket, combines the principles of rocket and ramjet engines; it gives higher performance (specific impulse) than a chemical rocket engine, while operating within the earth's atmosphere. Usually the term air-augmented rocket denotes mixing of air with the rocket exhaust (fuel-rich for afterburning) in proportions that enable the p~opulsion device to retain the characteristics typifying a rocket engine, for example, high static ,thrust and higla thrust-to-weight ratio. In contrast, the ducted rocket often is :like a ramjet in that it must be boosted to operating speed and uses the rocget componenl~ more as a fuel-riCh gas generator (liquid, solid, or hybrid), igniter, and air ejeeter pump. The principles of the rocket and rmnjet can be comNned so that the two propulsion systems operate in sequen~ and in tandem and yet utilize a common combustion chamber ,,volume as shown in Fig. 1-7. The low-volume configuration, known as an integral rocket-ramjet, can be attractive in airlaunched missiles using ramjet propulsion (see Ref. 1-8). The transition from the rocket to the ramjet requires enlarging the exhaust nozzle throat (usually by ejecting rocket nozzle parts), opening the ramjet air inlet-combustion chamber interface, and following these two events with the normal ramjet starting sequence.
+
+
+10 CLASSIFICATION
+Regulator
+~--i [--J IJ~oxidizer
+~ r - - - ' J injector
+Valve
+FIGURE 1--6. Simplified schematic diagram of a typical hybrid rocket engine. The relative positions of the oxidizer tank, high pressure gas tank, and the fuel chamber with its nozzle depend on the particular vehicle design.
+A solidfuel ramjet uses a grain of solid fuel that gasifies or ablates and reacts with air. Good combustion efficiencies have been achieved with a patented boron-containing solid fuel fabricated into a grain similar to a solid propellant and burning in a manner similar to a hybrid rocket propulsion system.
+Nuclear Rocket Engines
+Three different types of nuclear energy sources have been investigated for delivering heat to a working fluid, usually liquid hydrogen, which subsequently can be expanded in a nozzle and thus accelerated to high ejection velocities (6000 to 10,000 m/sec). However, none can be considered fully developed today and none have flown. They are the fission reactor, the
+Solidrocket
+propellant
+Fuel manifold~ - Multiple ~ "ins~j
+Blow-out \
+air ~ ]
+Ramjetf "nozzle
+inserts
+Ramjet
+nozzle
+FIGURE 1-7. Elements of an air-launched missile with integral rocket-ramjet propulsion. After the solid propellant has been consumed in boosting the vehicle to flight speed, the rocket combustion chamber becomes the ramjet combustion chamber with air burning the ramjet liquid fuel.
+
+
+1.2. ROCKET PROPULSION 11
+radioactive isotope decay source, and the fusion reactor. All three types are basically extensions of liquid propellant rocket engines. The heating of the gas is accomplished by energy derived from transformations within the nuclei of atoms. In chemical rockets the energy is obtained from within the propellants, but in nuclear rockets the power source is usually separate from the propellant. In the nuclear fission reactor rocket, heat can be generated by the fission of uranium in the solid reactor material and subsequently transferred to the working fluid (see Refs. 1-9 to 1-11). The nuclear fission rocket is primarily a high-thrust engine (above 40,000 N) with specific impulse values up to 900 sec. Fission rockets were designed and tested in the 1960s. Ground tests with hydrogen as a working fluid culminated in a thrust of 980,000 N (210,000 lb force) at a graphite core nuclear reactor level of 4100 MW with an equivalent altitude-specific impulse of 848 sec and a hydrogen temperature of about 2500 K. There were concerns with the endurance of the materials at the high temperature (above 2600 K) and intense radiations, power level control, cooling a reactor after operation, moderating the highenergy neutrons, and designing lightweight radiation shields for a manned space vehicle. In recent years there have been renewed interest in nuclear fission rocket propulsion primarily for a potential manned planetary exploration mission. Studies have shown that the high specific impulse (estimated in some studies at 1100 sec) allows shorter interplanetary trip transfer times, smaller vehicles, and more flexibility in the launch time when planets are not in their optimum relative position. In the isotope decay engine a radioactive material gives off radiation, which is readily converted into heat. Isotope decay sources have been used successfully for generating electrical power in space vehicles and some have been flown as a power supply for satellites and deep space probes. The released energy can be used to raise the temperature of a propulsive working fluid such as hydrogen or perhaps drive an electric propulsion system. It provides usually a lower thrust and lower temperature than the other types of nuclear rocket. As yet, isotope decay rocket engines have not been developed or flown. Fusion is the third nuclear method of creating nuclear energy that can heat a working fluid. A number of different concepts have been studied. To date none have been tested and many concepts are not yet feasible or practical. Concerns about an accident with the inadvertent spreading of radioactive materials in the earth environment and the high cost of development programs have to date prevented a renewed experimental development of a large nuclear rocket engine. Unless there are some new findings and a change in world attitude, it is unlikely that a nuclear rocket engine will be developed or flown in the next few decades, therefore no further discussion of it is given in this book.
+
+
+12 CLASSIFICATION
+Electric Rocket Propulsion
+In all electric propulsion the source of the electric power (nuclear, solar radiation receivers, or batteries) is physically separate from the mechanism that produces the thrust. This type of propulsion has been handicapped by heavy and inefficient power sources. The thrust usually is low, typically 0.005 to 1 N. In order to allow a significant increase in the vehicle velocity, it is necessary to apply the low thrust and thus a small acceleration for a long time (weeks or months) (see Chapter 19 and Refs. 1-12 and 1-13). Of the three basic types, electrothermal rocket propulsion most resembles the previously mentioned chemical rocket units; propellant is heated electrically (by heated resistors or electric arcs) and the hot gas is then thermodynamically expanded and accelerated to supersonic velocity through an exhaust nozzle (see Fig. 1-8). These electrothermal units typically have thrust ranges of 0.01 to 0.5 N, with exhaust velocities of 1000 to 5000 m/sec, and ammonium, hydrogen, nitrogen, or hydrazine decomposition product gases have been used as propellants. The two other types--the electrostatic or ion propulsion engine and the electromagnetic or magnetoplasma engine--accomplish propulsion by different principles and the thermodynamic expansion of gas in a nozzle, as such, does not apply. Both will work only in a vacuum. In an ion rocket (see Fig. 1-9) a working fluid (typically, xenon) is ionized (by stripping off electrons) and then the electrically charged heavy ions are accelerated to very high velocities (2000 to 60,000 rn/sec) by means of electrostatic fields. The ions are subsequently electrically neutralized; they are combined with electrons to prevent the buildup of a space charge on the vehicle. In the magnetoplasma rocket an electrical plasma (an energized hot gas containing ions, electrons, and neutral particles) is accelerated by the interaction between electric currents and magnetic fields and ejected at high velocity
+--~1 l--~ ~ Chamber / / ~ i
+• • • ~ ...........l ........ Arc between cathode ) ' " ~ ~ ° tip and annular region of anode Cathode
+Electric power ! l il ozz,e I
+from low voltage I t ~ ~ ] ~ / , / / / / / / / ~ ....... I
+high currentsourceJ ~ " ~ " ~ " / z / ' / / / / / / / / / ~ ]
+- - ; J I anode
+FIGURE 1-8. Simplified schematic diagram of arc-heating electric rocket propulsion system. The arc plasma temperature is very high (perhaps 15,000 K) and the anode, cathode, and chamber will get hot (1000 K) due to heat transfer.
+
+
+1.2. ROCKETPROPULSION 13
+Working fluid
+(xenon)
+Electric
+power
+Ionization
+Feed device
+control
+I ~ Electrostatic
+j' ---~ l ¢ _ . ~ accelerat/or
+emitter
+Ions are
+neutralized
+FIGURE 1-9. Simplified schematic diagram of a typical ion rocket, showing the approximate distribution of the electric pOwer.
+(1000 to 50,000 m/sec). Thereffre many different types and geometries. A simple pulsed (not continuously operating) unit with a solid propellant is shown in Fig. 1-10. This type has had a good flight record as a spacecraft attitude control engine.
+OtherRocketPropulsionConcepts
+Several technologies exist for harnessing solar energy to provide the power for spacecraft and also to propel spacecraft using electrical propulsion. Solar cells generate electric power from the sun's radiation. They are well developed and have been successful for several decades. Most electric propulsion systems have used solar cells for their power supply.
+,,
+r Teflon propellant ~ Igniterplug
+.....................,,~.[,.............e////A
+~ 4 ~ : " ' " "~" ~ : . ~ ' . ' ~ " i ' ~ " < " ~ ~ ":" r
+~ ~ ~ ~ ~ % ) ) _ Plasmaexhaustfrom
+) ) ~ parallelrail nozzle
+r/////////7/~ Anode
+Capacitor
+FIGURE 1-10. Simplified diagram of a rail accelerator for self-induced magnetic acceleration of a current-carrying plasma. When the capacitor is discharged, an arc is struck at the left side of the rails. The high current in the plasma arc induces a magnetic field. The action of the current and the magnetic field causes the plasma to be accelerated at right angles to both the magnetic field and the current, namely in the direction of the rails. Each time the arc is created a small amount of solid propellant (Teflon) is vaporized and converted to a small plasma cloud, which (when ejected) gives a small pulse of thrust. Actual units can operate with many pulses per second.
+
+
+14 CLASSIFICATION
+An attractive concept, the solar thermal rocket, has large diameter optics to concentrate the sun's radiation (e.g., by lightweight precise parabolic mirrors or Fresnel lenses) onto a receiver or optical cavity. Figure 1-11 shows one concept and some data is given in Table 2-1. The receiver is made of high temperature metal (such as tungsten or rhenium) and has a cooling jacket or heat exchanger. It heats a working fluid, usually liquid hydrogen, up to perhaps 2500°C and the hot gas is controlled by hot gas valves and exhausted through one or more nozzles. The large mirror has to be pointed toward the sun and this requires the mirror to be adjustable in its orientation. Performance can be two to three times higher than that of a chemical rocket and thrust levels in most studies are low (1 to 10 N). Since large lightweight optical elements cannot withstand drag forces without deformation, the optical systems are deployed outside the atmosphere. Contamination is negigible, but storage or refueling of liquid hydrogen is a challenge. Problems being investigated include rigid, lightweight mirror or lens structures, operational life, minimizing hydrogen evaporation, and heat losses to other spacecraft components. To date the solar thermal rocket has not yet provided the principal thrust of a flying spacecraft. The solar sail is another concept. It is basically a big photon reflector surface. The power source for the solar sail is the sun and it is external to the vehicle (see Ref. 1-14). Approaches using nuclear explosions and pulsed nuclear fusion have been analyzed (Refs. 1-15 and 1-16), but are not yet feasible. Concepts for transmitting radiation energy (by lasers or microwaves) from earth stations to satellites have been proposed, but are not yet developed.
+Heat receiver A and exchanger
+Parabolic ~
+reflector~..~/~k,\ "'
+/--.<...\\
+II 1
+Regulator
+and valve
+Hydrogen
+propellant/
+tank
+L/// k//
+\
+)l
+Un Valve
+!!,!Ui
+,, ,
+~Exhaust
+nozzle
+Radiation
+from the
+sun
+FIGURE 1-11. Simplified schematic diagram of a solar thermal rocket concept.
+
+
+1.3. APPLICATIONS OF ROCKET PROPULSION 15
+International Rocket Propulsion Effort
+Active development or production of rocket propulsion systems is currently under way in more than 30 different countries. Some of them have made significant and original contributions to the state of the art of the technologies. There is mention in this book of a few foreign rocket units and their accomplishments and references to international rocket literature. Although most of the data in this book are taken from U.S. rocket experience, this is not intended to minimize foreign achievements. At the time of this writing the major international program was the International Space Station (ISS), a multi-year cooperative effort with major contributions from the USA and Russia and active participation by several other nations. This manned orbital space station is used for conducting experiments and observations on a number of research projects.
+1.3. APPLICATIONS OF ROCKET PROPULSION
+Because the rocket can reach a performance unequaled by other prime movers, it has its own fields of application and does not usually compete with other propulsion devices. Examples of important applications are given below and discussed further in Chapter 4.
+Space Launch Vehicles
+Between the first space launch in 1957 and the end of 1998 approximately 4102 space launch attempts have taken place in the world and all but about 129 were successful (see Ref. 1-17). Space launch vehicles or space boosters can be classified broadly as expendable or recoverable/reusable. Other bases of classification are the type of propellant (storable or cryogenic liquid or solid propellants), number of stages (single-stage, two-stage, etc.), size/mass of payloads or vehicles, and manned or unmanned. Figure 1-12 shows the Titan IIIC space launch vehicle, one member of the Titan family of storable propellant space launch vehicles, which is used extensively for boosting satellites into synchronous earth orbit or into escape trajectories for planetary travel. This heavy-duty launch vehicle consists of the basic 2-stage Titan III standard launch vehicle (liquid propellant rockets) supplemented by two solid propellant "strap-on motors." A fourth stage, known as the transtage, permits a wide variety of maneuvers, orbit changes, and trajectory transfers to be accomplished with the payload, which can be one or more satellites or spacecraft. Each space launch vehicle has a specific space flight objective, such as an earth orbit or a moon landing. It uses between two and five stages, each with its own propulsion system, and each is usually fired sequentially after the lower stage is expended. The number of stages depends on the specific space trajectory, the number and types of maneuvers, the energy content of a unit mass of
+
+
+16 CLASSIFICATION
+iii:i~!iiiiiiiiiii!iiiJiii!i~
+~i ~I ~ • ~i~ii~
+.... i
+:: ii:~ili' ii~, j~i;~ ,,
+~i~i~~i.~.i.....i~ i ~i~i/i!i~i~~'i~:ii~iiil iii
+FIGURE 1-12. Titan III launch vehicle shortly after lift-off, with bright radiant exhaust gas. Two solid propellant rocket motors, each providing about 2.4 million pounds of thrust, boost the first stage, which also gets a sustained thrust of 470,000 pounds from two liquid rocket engines. The second stage has 100,000 pounds of thrust from a single liquid rocket engine, and one version of the third stage has two liquid rocket engines, each at 16,000 pounds of thrust.
+
+
+1.3. APPLICATIONS OF ROCKET PROPULSION 17
+the propellant, and other factors. The initial stage, usually called the booster stage, is the largest and it is operated first; this stage is then separated from the ascending vehicle before the second-stage rocket propulsion system is ignited and operated. As will be explained in Chapter 4, adding an extra stage permits a significant increase in the payload (such as more scientific instruments or more communications gear). Each stage of a multistage launch vehicle is essentially a complete vehicle in itself and carries its own propellant, its own rocket propulsion system or systems, and its own control system. Once the propellant of a given stage is expended, the dead mass of that stage (including empty tanks, cases, instruments, etc.) is no longer useful in providing additional kinetic energy to the succeeding stages. By dropping off this useless mass it is possible to accelerate the final stage with its useful payload to a higher terminal velocity than would be attained if multiple staging were not used. Both solid propellant and liquid propellant rocket propulsion systems have been used for low earth orbits. A single stage to orbit vehicle, attractive because it avoids the costs and complexities of staging, is expected to have improved reliability (simple structures, fewer components), and some versions may be recoverable and reusable. However, its payload is relatively very small. A low earth orbit (say 100 miles altitude) can only be achieved with such a vehicle if the propellant performance is very high and the structure is efficient and low in mass. Liquid propellants such as liquid hydrogen with liquid oxygen are usually chosen. The missions and payloads for space launch vehicles are many, such as military (reconnaissance satellites, command and control satellites), non-military government (weather observation satellites, GPS or geopositioning satellites), space exploration (space environment, planetary missions), or commercial (communication satellites). Forecasts indicate that a large number of future commercial communications satellites will be needed. Table 1-3 lists several important U.S. launch vehicles and their capabilities and Table 1-4 gives data on the Space Shuttle, which is really a combination of launch vehicle, spacecraft, and a glider. It can be seen that the thrust levels are highest for booster or first stages and are relatively high for upper stages (thousands of pounds). Only for the attitude control system of the vehicle (also called reaction control in Table 1-4) are the thrust levels low (from a fraction of a pound for small spacecraft to as high as about 1000 pounds thrust in the space shuttle vehicle). Frequent propulsion starts and stops are usually required in these applications.
+Spacecraft
+Depending on their missions, spacecraft can be categorized as earth satellites, lunar, interplanetary, and trans-solar types, and as manned and unmanned spacecraft. Rocket propulsion is used for both primary propulsion (i.e.,
+
+
+__at
+o0 T A B L E 1-3. Selected United States Space Launch Vehicles
+Number of Engines Thrust or Motors Name Stage per Stage kN lbf Propellants
+Launch Mass (metric tons)
+Two-stage Payload Weight 100 n.mi (185 km) Orbit)
+Three-stage Payload Weight Geosynchronous Orbit
+Titan 34D
+Delta II 6925
+Atlas Centaur
+Pegasus (air-launched)
+0 2 10,750 2,400,000 vac 1 2 2370 529,000~
+I
+2 1 452 101,000 3 1 107 23,800
+0 6 + 3 443.5 1 1 927 1037 2 l 43.2
+3 1 67.6
+± 2 Each 829 SL
+2
+1 1 269 2 2 Each 74 vac
+1 1 726 2 1 196 3 1 36
+Solid composite N204/N2H4 + UDMH Solid composite
+Each 97,000 SL Solid composite 207,000 SL LO2/RP- 1 231,700 vac 9645 N204/N2H 4 - UDMH 15,100 vac Solid composite
+Each 185,000 SL LO2/RP-I 60,000 LO2/RP-1 Each 16,500 vac LO2/LH 2
+163,000 Solid 44,200 Solid 8060 Solid
+kg lbf kg lbf
+1091 13,600 30,000 1820 4000
+132 2545 5600 1454 3200
+141 2772 6100 1545 3400
+490 1078 (Three stages)
+"SL" refers to sea level and "vac" refers to altitude or vacuum conditions.
+23.1 NA NA
+
+
+TABLE 1-4. Propulsion Systems for the Space Shuttle
+Vehicle Section
+Propulsion System (No. of Units)
+Number of Starts and Typical Burn Time
+Propellant and Specific Impulse Thrust Mission
+Shuttle orbiter
+Solid rocket boosters (SRBs)
+Space Shuttle main engine (3)
+Orbital maneuver systems (2)
+Reaction control system, 38 primary thrusters, 6 vernier thrusters
+Attached to external tank; multisection, 2 units Separation rocket motors; 16 units
+Start at launch 8.4 min duration
+Life: 55 starts and 7.5 hr
+3 to 10 starts/mission; designed for 1000 starts, 100 flights, 15 hours of cumulative time Multiple operations; thousands of starts; duration from a few milliseconds to seconds
+Single start at launch 2 min
+4 each at forward frustum and aft skirt; 0.66 sec, nominal
+Liquid hydrogen-liquid oxygen 4464 N-sec/kg (455 sec)
+See Note 1; Is = 313 sec
+See Note 1; Is = 280-304 sec, depending on nozzle area ratio
+See Note 2
+Solid propellant; Is -- 250 sec
+1670 kN each (375,000 lb) at sea level 2100 kN each (470,000 lbf) at space vacuum Throttled 109 to 65% of rated power 27 kN each (6000 lbf) in vacuum
+Primary thruster 3870 N each (870 lbf), vernier thruster 106.8 N each (25 lbf)
+14,700 kN each, or 3.3 x 106 lbf each
+97,840 N each or 22,000 lbf
+Lift orbiter off ground and accelerate to orbit velocity. Individual engines can be shut down to reduce thrust level.
+Insert orbiter vehicle into earth orbit, correct orbit, abort, and deorbit maneuver. Small vehicle velocity adjustments and attitude control during orbit insertion, on orbit corrections, rendezvous, and reentry. Boost Shuttle vehicle to about 5500 km/hr
+Move SRB away from vehicle after cut-off
+_..t
+Notes:
+1. MMH, monomethylhydrazine and NTO, nitrogen tetroxide. 2. 70% Ammonium perchlorate; 16% aluminum; 12% polybutadiene acrylic acid binder; 2% epoxy curing agent.
+
+
+20 CLASSIFICATION
+along the flight path, such as for orbit insertion or orbit change maneuvers) and secondary propulsion functions in these vehicles. Some of the secondary propulsion functions are attitude control, spin control, momentum wheel and gyro unloading, stage separation, and the settling of liquids in tanks. A spacecraft usually has a series of different rocket propulsion systems, some often very small. For spacecraft attitude control about three perpendicular axes, each in two rotational directions, the system must allow the application of pure torque for six modes of angular freedom, thus requiring a minimum of 12 thrust chambers. Some missions require as few as four to six rocket units whereas the more complex manned spacecraft have 40 to 80 rocket units in all of its stages. Often the small attitude control rockets must give pulses or short bursts of thrust, necessitating thousands of restarts. Table 1-5 presents a variety of spacecraft along with their weights, missions, and propulsion. Although only U.S. launch vehicles are listed in this table, there are also launch vehicles developed by France, the European Space Agency, Russia, Japan, China, India, and Israel that have successfully launched payloads into satellite orbits. They use rocket propulsion systems that were developed in their own countries. The U.S. Space Shuttle program, using technology and experience from the X-15 rocket-powered research airplane, the Mercury and Gemini orbital flights, the Apollo lunar flight program, and Skylab, provided the first reusable spacecraft that lands on a runway. Figure 1-13 shows the basic configuration of the Space Shuttle, which consists of two stages, the booster and the orbiter. It shows all the 67 rocket propulsion systems of the shuttle. The orbiter is really a reusable combination vehicle, namely a spacecraft combined with a glider. The two solid propellant rocket motors are the largest in existence; they are equipped with parachutes for sea recovery of the burned-out motors. The large liquid oxygen/liquid hydrogen (LO2/LH2) external tank is jettisoned and expended just before orbit insertion (see Ref. 1-18). Details of several of these Space Shuttle rocket propulsion systems are given elsewhere in this book. The Space Shuttle accomplishes both civilian and military missions of placing satellites in orbit, undertaking scientific exploration, and repairing, servicing, and retrieving satellites. A reusable single stage to orbit, experimental vehicle with a novel rocket engine is currently (1997) under development in the USA. It is a combination launch vehicle and spacecraft. The design takes advantage of advances in lightweight structures, a clever lifting aerodynamic body concept, and a tailored novel rocket engine that requires little space and fits well into the flight vehicle. This engine, known as a linear aerospike, has a novel configuration and is described further in Chapter 8. The majority of spacecraft have used liquid propellant engines, with solid propellant boosters. Several spacecraft have operated successfully with electrical propulsion for attitude control. Electrical propulsion systems will probably also be used for some primary and secondary propulsion missions on longduration space flights, as described in Chapter 19.
+
+
+TABLE 1-5. Selected United States Spacecraft
+Space Maneuver Propulsion Weight Name Thrust (lbf) Propellants a (lbf) Remarks
+Mariner 69 50 (primary) Hydrazine monopropellant 1100 1.0 (secondary) Hydrazine monopropellant Pioneer 10, 11 50 (primary) Hydrazine monopropellant 570 Viking 600 (primary) Hydrazine monopropellant 7500 5.0 (secondary) Hydrazine monopropellant Nimbus 5 0.5 (secondary) Stored nitrogen 1700 Apollo command and service 20,500 (primary) N204/50:50 UDMH 64,500 module 100 lbf 16 units -N2H4 93 lbf 6 units (secondary) NzO4/MMH Space Shuttle orbiter Two 6000-1bf units (primary) NzO4/MMH 150,000 38 units @ 900 lbf (secondary) N204/MMH Six 25-1bf units (secondary) NzO4/MMH Fleet Communications Satellite 0.1 (secondary) Hydrazine monopropellant 1854 Photo Recon 4.0 (secondary) Hydrazine monopropellant 25,000 Intelsat V communication satellite 0.10 Hydrazine 4180
+Deep Space I (DS1) 0.02 (primary) Xenon 1070
+Flyby of Venus/Mercury
+Fly to Jupiter and beyond Mars orbiter with soft lander
+Weather satellite Manned lunar landing
+Reusable spacecraft with runway landing
+UHF communications Radio/photo communications Resistojet, electric propulsion for N-S station keeping Ion propulsion engine for asteroid fly-by
+aN204, nitrogen tetroxide (oxidizer); MMH, monomethylhydrazine (fuel); 50:50 UDMH-N2H4 is a 50% mixture of unsymmetrical dimethylhydrazine and hydrazine.
+
+
+Thrust termination port,
+Forward separation rocket / 2 places each
+engines,2 places ~ [ Solid rocket booster
+External ~ ~r
+tank ~ - - ~ 
+Aft separation rocket
+engines,2 places
+Control thrusters, , / ~ ~ 8 required ~ Orbiting maneuver
+per side Tank/orbiter Reaction control engine,2 places ~
+thrusters,
+', /12 each per pod Main propulsion ~ ) - ~ system, 3 engines . Tank/orbiter ~ ~ -~------~
+_ : " --'7-I - _ __ . . . . .,_ . . . . . .,_ . . . . . .,_. . . .
+,~ ~ '/' ~'r"~~* ' v ' ~ ~ N°zzle
+',I
+L02 tank " LH2 tank --Solid rocket booster, -20.25
+2 places
+FIGURE 1-13. Simplified sketch of the Space Shuttle vehicle. The Shuttle Orbiter--the delta-winged vehicle about the size of a mediumrange jet liner--is a reusable, cargo carrying, spacecraft-airplane combination that takes off vertically and lands horizontally like a glider. Each shuttle orbiter was designed for a minimum of 100 missions and can carry as much as 65,000 lb of payload to a low Earth orbit, and a crew of up to four members and 10 passengers. It can return up to 25,000 lb of payload back to Earth.
+
+
+TABLE 1-6. Selected United States Missiles
+Mission Category
+Surface-tosurface (long range) Surface-to-air (or to missile)
+Air-to-surface
+Air-to-air
+Antisubmarine Battlefield Support (surface-tosurface, short range) cruise missile (subsonic)
+Name
+Diameter (ft)
+Length (ft) Propulsion
+Minuteman III 6.2 Poseidon 6.2 Titan II 10 Chaparral 0.42 Improved Hawk 1.2 Standard Missile 1.13 Redeye 0.24
+59.8 34 103 9.5 16.5 15 or 27 4
+3 stages, solid 2 stages, solid 2 stages, liquid 1 stage, solid 1 stage, solid 2 stage, solid 1 stage, solid 1 stage, solid 1 stage, solid 1 stage, solid 2 staged grains 1 stage, solid 1 stage, solid 1 stage, solid 1 stage, solid 1 stage, solid 2 stages, liquid 1 stage, solid 2 stages, solid 1 stage, solid
+Patriot 1.34 Maverick 1.00 Shrike 0.67 SRAM 1.46 Falcon 0.6 Phoenix 1.25 Sidewinder 0.42 Sparrow 0.67 Subroc 1.75 Lance 1.8 Hellfire (antitank) 0.58 Pershing II 3.3 Tow (antitank) 0.58
+Tomahawk 1.74
+1.74 8.2 10 14 6.5 13 9.5 12 22 20 5.67 34.5 3.84
+21 solid booster + turbofan
+Launch Weight (lb)
+78,000 65,000 330,000 185 1398 1350/2996 18 1850 475 400 2230 152 980 191 515 4000 2424 95 10,000 40
+3900
+
+
+TABLE 1-7. Typical Propulsion Characteristics of Some Rocket Applications
+Application Type of Propellant Thrust Profile Typical Duration
+Maximum Accelerationa
+Large space launch vehicle booster Antiaircraft or antimissile-missile
+Spacecraft orbit maneuvers
+Air launched guided missile
+Battlefield support---surface launched Rocket assisted projectile, gun launched Spacecraft attitude control-large vehicles
+Spacecraft attitude control-small vehicle Reusable main engines for space shuttle Single stage to orbit (has not yet flown) Lunar landing Weather sounding rocket
+Antitank
+Solid or cryogenic liquid Solid, some with liquid terminal divert stage
+Storable liquid or cryogenic liquid Solid
+Solid
+Solid
+Storable liquid (monopropellant or bipropellant); electric propulsion; xenon Cold or warm gas or storable liquid, electric propulsion Cryogenic liquid (O2/H2)
+Cryogenic liquid (O2/H2)
+Storable bipropellant Solid
+Solid
+Nearly constant thrust High thrust boost, decreasing thrust sustain phase Restartable
+High thrust boost phase with low thrust or decreasing thrust for sustain phase; sometimes 2 pulses Same as above
+Increase and then decrease in thrust Many restarts (up to 60,000); pulsing
+Same
+Variable thrust, many flights with same engine Throttled to lower thrust
+10:l thrust variation Single burn period--often decreasing thrust Single burn period
+2-8 min 2-75 sec each
+Up to l0 min cumulative duration Boost: 2-5 sec Sustain: 10-30 sec
+Up to 2 rain each stage
+A few sec
+Up to 1 hr cumulative duratiaon
+Up to 40 min cumulative
+8 min, over 7 hr cumulative in several missions 6-10 min
+4 min 5-50 sec
+0.2-3 sec
+2-6 go 5 to 20 go, but can be up to 100 go 0.2-6 go
+Up to 25 go
+Up to 10go
+Up to 20,000 go
+Less than 0.1g0
+Same
+4-7 go
+Several go Up to 15 go
+Up to 20 go
+ago is acceleration of gravity at the Earth's surface = 9.8066 m/sec2 or 32.17 ft/sec2
+
+
+REFERENCES 25
+Missiles and Other Applications
+Military missiles can be classified as shown in Table 1-6. Rocket propulsion for new U.S. missiles uses now almost exclusively solid propellant rocket motors. They can be strategic missiles, such as long-range ballistic missiles (800 to 9000 km range) which are aimed at military targets within an enemy country, or tactical missiles, which are intended to support or defend military ground forces, aircraft, or navy ships. The term surface launch can mean a launch from the ground, the ocean surface (from a ship), or from underneath the sea (submarine launch). Some tactical missiles, such as the air-to-surface SRAM missile, have a two-pulse solid propellant motor, where two separate, insulated grains are in the same motor case; the time interval before starting the second pulse can be timed to control the flight path or speed profile. Most countries now have tactical missiles in their military inventories, and many of these countries have a capability to produce their own rocket propulsion systems that are used to propel them. Other applications of rockets include primary engines for research airplanes, assist-take-off rockets for airplanes, ejection of crew escape capsules and stores, personnel "propulsion belts,"and propulsion for target drones, weather sounding rockets, signal rockets, decoy rockets, spin rockets, vernier rockets, underwater rockets for torpedoes and missiles, the throwing of lifelines to ships, and "Fourth of July" rockets. Tables 1-6 and 1-7 show some parameters of rocket propulsion devices for different applications. The selection of the best rocket propulsion system type and design for any given application is a complex process involving many factors, including system performance, reliability, propulsion system size, and compatibility, as described in Chapter 17. Comparisons and evaluations of many of these criteria are discussed in this book. Many factors, such as development, production or operating costs, available technology, and service life, though beyond the scope of this book, enter strongly into such a selection.
+REFERENCES
+1-1. G. C. Oates, Aerothermodynamics of Gas Turbines and Rocket Propulsion, American Institute of Aeronautics and Astronautics, Washington, DC, Revised 1988, 452 pages.
+1-2. H. Cohen, G. F. C. Rogers, and H. I. H. Saravanamuttoo, Gas Turbine Theory, 3rd ed., Longman Scientific and Technical, New York, 1987, 414 pages.
+1-3. K. E. Ziolkowsky, Space Investigations by Means of Propulsive Spaceships (in Russian), Kaluga, Saint Petersburg, 1914. 1-4. E. C. Goddard and G. E. Pendray. (Eds.), The Papers of Robert H. Goddard, three volumes, McGraw Hill Book Company, 1970. It includes the treatise "A
+
+
+26 CLASSIFICATION
+1-5.
+1-6.
+1-7.
+1-8.
+1-9.
+1-10.
+1-11.
+1-12.
+1-13.
+1-14.
+1-15.
+1-16.
+1-17.
+1-18.
+Method of Reaching Extreme Altitudes," originally published as Smithsonian Miscellaneous Collections, Vol. 71, No. 2, 1919. Hermann Oberth, Die Rakete zu den Planetenrdumen (By Rocket into Planetary Space), R. Oldenburg, Munich, 1923. E. Stinger, Raketenflugtechnik (Rocket Flight Technology), R. Oldenburg, Munich, 1933.
+W. von Braun and F. Ordway, History of Rocketry and Space Travel, 3rd ed., Thomas Y. Crowell, New York, 1974. F. F. Webster, "Integral Rocket/Ramjet Propulsion--Flight Data Correlation and Analysis Technique," Journal of Spacecraft, Vol. 19, No. 4, July-August 1982. R. W. Bussard and R. D. DeLauer, Nuclear Rocket Propulsion, McGraw-Hill Book Company, New York, 1958. "Nuclear Thermal Rockets; Next Step in Space" (collection of three articles), Aerospace America, June 1989, pp. 16-29.
+D. Buden, "Nuclear Rocket Safety," Acta Astronautica, Vol. 18, 30 Years of Progress in Space, 1988, pp. 217-224.
+R. C. Finke (Ed.), Electric Propulsion and its Application to Space Missions, Vol. 79, Progress in Aeronautics and Astronautics, American Institute of Aeronautics and Astronautics, New York, 1981. R. G. Jahn, Physics of Electric Propulsion, McGraw-Hill Book Company, New York, 1968, 339 pages. T. Svitek et al., "Solar Sails as Orbit Transfer Vehicle--Solar Sail Concept Study--Phase II Report," AIAA Paper 83-1347, 1983. V. P. Ageev et al., "Some Characteristics of the Laser Multi-pulse Explosive Type Jet Thruster," Acta Astronautica, Vol. 8, No. 5-6, 1981, pp. 625-641. R. A. Hyde, "A Laser Fusion Rocket for Interplanetary Propulsion," Preprint UCRL 88857, Lawrence Livermore National Laboratory, Livermore, CA, September 1983 T. D. Thompson (Ed.), TRW Space Log, Vol. 32 to 34., TRW Space and Electronics Group, TRW, Inc., Redondo Beach, CA., 1996 and 1997-1998.
+National Aeronautics and Space Administration, National Space Transportation System Reference, Vol. 1, Systems and Facilities, U.S. Government Printng Office, Washington, DC, June 1988.
+
+
+CHAPTER 2
+DEFINITIONS AND FUNDAMENTALS
+Rocket propulsion is an exact but not a fundamental subject, and there are no basic scientific laws of nature peculiar to propulsion. The basic principles are essentially those of mechanics, thermodynamics, and chemistry. Propulsion is achieved by applying a force to a vehicle, that is, accelerating the vehicle or, alternatively, maintaining a given velocity against a resisting force. This propulsive force is obtained by ejecting propellant at high velocity. This chapter deals with the definitions and the basic relations of this propulsive force, the exhaust velocity, and the efficiencies of creating and converting the energy and other basic parameters. The symbols used in the equations are defined at the end of the chapter. Wherever possible the American Standard letter symbols for rocket propulsion (as given in Ref. 2-1) are used.
+2.1. DEFINITIONS
+The total impulse It is the thrust force F (which can vary with time) integrated over the burning time t.
+f0t
+I t - F dt (2-1)
+For constant thrust and negligible start and stop transients this reduces to
+/,=Ft (2-2)
+27
+
+
+28 DEFINITIONSAND FUNDAMENTALS
+It is proportional to the total energy released by all the propellant in a propulsion system. The specific impulse Is is the total impulse per unit weight of propellant. It is an important figure of merit of the performance of a rocket propulsion system, similar in concept to the miles per gallon parameter used with automobiles. A higher number means better performance. Values of Is are given in many chapters of this book and the concept of an optimum specific impulse for a particular mission is introduced later. If the total mass flow rate of propellant is rh and the standard acceleration of gravity at sealevel go is 9.8066 m/sec 2 or 32.174 ft/sec2, then
+Is= f°Fdt
+go f / n dt (2-3)
+This equation will give a time-averaged specific impulse value for any rocket propulsion system, particularly where the thrust varies with time. During transient conditions (during start or the thrust buildup period, the shutdown period, or during a change of flow or thrust levels) values of Is can be obtained by integration or by determining average values for F and rh for short time intervals. For constant thrust and propellant flow this equation can be simplified; below, mp is the total effective propellant mass.
+Is = It/(mpgo) (2-4)
+In Chapter 3 there is further discussion of the specific impulse. For constant propellant mass flow rh, constant thrust F, and negligibly short start or stop transients:
+Is - F / ( r h g o ) - F/w (2-5) I,/(mpgo) = I,/w
+The product mpgo is the total effective propellant weight w and the weight flow rate is w. The concept of weight relates to the gravitational attraction at or near sea level, but in space or outer satellite orbits, "weight" signifies the mass multiplied by an arbitrary constant, namely go. In the Systdme International (SI) or metric system of units It can be expressed simply in "seconds," because of the use of the constant go. In the USA today we still use the English Engineering (EE) system of units (foot, pound, second) in many of the chemical propulsion engineering, manufacturing, and test operations. In many past and current US publications, data and contracts, the specific impulse has units of thrust (lbf) divided by weight flow rate of propellants (lbf/sec), simplified as seconds. The numerical value of Is is the same in the EE and the SI system of units. However, the units of It do not represent a measure of elapsed time, but a thrust force per unit "weight"-flow-rate. In this book the symbol It is used for
+
+
+2.1. DEFINITIONS 29
+the specific impulse, as listed in Ref. 2-1. For solid propellant systems the symbol Isp is sometimes used, as listed in Ref. 2-2. In a rocket nozzle the actual exhaust velocity is not uniform over the entire exit cross-section and does not represent the entire thrust magnitude. The velocity profile is difficult to measure accurately. For convenience a uniform axial velocity c is assumed which allows a one-dimensional description of the problem. This effective exhaust velocity c is the average equivalent velocity at which propellant is ejected from the vehicle. It is defined as
+c - - Isgo = F/rh (2-6)
+It is given either in meters per second or feet per second. Since c and Is differ only by an arbitrary constant, either one can be used as a measure of rocket performance. In the Russian literature c is generally used. In solid propellant rockets it is difficult to measure the propellant flow rate accurately. Therefore, the specific impulse is often calculated from total impulse and the propellant weight (using the difference between initial and final motor weights and Eq. 2-5). In turn the total impulse is obtained from the integral of the measured thrust with time, using Eq. 2-1. In liquid propellant units it is possible to measure thrust and instantaneous propellant flow rate and thus to use Eq. 2-3 for calculation of specific impulse. Eq. 2-4 allows another definition for specific impulse, namely, the amount of impulse imparted to a vehicle per unit sea-level weight of propellant expended. The term specific propellant consumption refers to the reciprocal of the specific impulse and is not commonly used in rocket propulsion. It is used in automotive and duct propulsion systems. Typical values are listed in Table 1-2. The mass ratio 1VIRof a vehicle or a particular vehicle stage is defined to be the final mass mf (after rocket operation has consumed all usable propellant) divided by m0 (before rocket operation). The various terms are depicted in Fig. 4-1.
+1VIR= mf /mo (2-7)
+This applies to a single or a multi-stage vehicle; for the latter, the overall mass ratio is the product of the individual vehicle stage mass ratios. The final mass mf is the mass of the vehicle after the rocket has ceased to operate when all the useful propellant mass mp has been consumed and ejected. The final vehicle mass my includes all those components that are not useful propellant and may include guidance devices, navigation gear, payload (e.g., scientific instruments or a military warhead), flight control systems, communication devices, power supplies, tank structure, residual or unusable propellant, and all the propulsion hardware. In some vehicles it can also include wings, fins, a crew, life support systems, reentry shields, landing gears, etc. Typical values of/VIR can range from 60% for some tactical missiles to less than 10% for some unmanned
+
+
+30 DEFINITIONSAND FUNDAMENTALS
+launch vehicle stages. This mass ratio is an important parameter in analyzing flight performance, as explained in Chapter 4. When MR is applied to a single stage, then its upper stages become the "payload." The propellant mass fraction ~ indicates the fraction of propellant mass mp in an initial mass m0. It can be applied to a vehicle, a stage of a vehicle or to a rocket propulsion system.
+- mp/mo (2-8)
+- (mo - mf)/mo - mp/(mp + mf) (2-9)
+m o - mf + mp (2-10)
+When applied to a rocket propulsion system, the mass ratio ~ and propellant fraction ~"are different from those that apply to a vehicle as described above. Here the initial or loaded mass m0 consists of the inert propulsion mass (the hardware necessary to burn and store the propellant) and the effective propellant mass. It would exclude masses of nonpropulsive components, such as payload or guidance devices. For example, in a liquid propellant rocket engine the final or inert propulsion mass my would include the propellant feed tanks, the pressurization system (with turbopump and/or gas pressure system), one or more thrust chambers, various piping, fittings and valves, an engine mount or engine structure, filters and some sensors. The residual or unusable remaining propellant is usually considered to be part of the final inert mass mf, as it will be in this book. However, some rocket propulsion manufacturers and some literature assign residuals to be part of the propellant mass mp. When applied to a rocket propulsion system, the value of the propellant mass fraction ~"indicates the quality of the design; a value of, say, 0.91 means that only 9% of the mass is inert rocket hardware and this small fraction contains, feeds, and burns a substantially larger mass of propellant. A high value of ~"is desirable. The impulse-to-weight ratio of a complete propulsion system is defined as the total impulse It divided by the initial or propellant-loaded vehicle weight w0. A high value indicates an efficient design. Under our assumptions of constant thrust and negligible start and stop transients, it can be expressed as
+I, i,
+= (2-11)
+Wo (mf + rap)go
+Is (2-12) mf /mp + 1
+The thrust to weight ratio F/wo expresses the acceleration (in multiples of the earth's surface acceleration of gravity) that the engine is capable of giving to its own loaded propulsion system mass. For constant thrust the maximum value of the thrust to weight ratio, or maximum acceleration, occurs just before termination or burnout because the vehicle mass has been diminished by the
+
+
+2.1. DEFINITIONS 31
+mass of useful propellant. Values of F/w are given in Table 2-1. The thrust to weight ratio is useful to compare different types of rocket systems.
+Example 2-1. A rocket projectile has the following characteristics:
+Initial mass Mass after rocket operation Payload, nonpropulsive structure, etc. Rocket operating duration Average specific impulse of propellant
+200 kg 130 kg 110 kg 3.0 sec 240 sec
+Determine the vehicle's mass ratio, propellant mass fraction, propellant flow rate, thrust, thrust-to-weight ratio, acceleration of vehicle, effective exhaust velocity, total impulse, and the impulse-to-weight ratio.
+SOLUTION. Mass ratio of vehicle (Eq. 2-8) MR = mf/mo = 130/200 = 0 . 6 5 ; mass ratio of rocket system MR = mf/mo = ( 1 3 0 - 1 1 0 ) / ( 2 0 0 - 1 1 0 ) = 0.222. Note that the empty and initial masses of the propulsion system are 20 and 90 kg, respectively. The propellant mass fraction (Eq. 2-9) is
+= (mo - mf)/mo = (90 - 20)/90 = 0.778
+The propellant mass is 200 - 130 = 70 kg. The propellant mass flow rate is rh = 70/3 = 23.3 kg/sec, The thrust (Eq. 2-5) is
+F = Isfv = 240 x 23.3 x 9.81 = 54,857 N
+The thrust-to-weight ratio of the vehicle is
+initial value F/wo = 54,857/(200 x 9.81) = 28 final value 54,857/(130 x 9.81) = 43
+The maximum acceleration of the vehicle is 43 x 9.81 = 421 m/sec 2. The effective exhaust velocity (Eq. 2-6) is
+c = Isgo = 240 x 9.81 = 2354 m/sec
+The total impulse (Eqs. 2-2 and 2-5) is
+It = Isw = 240 x 70 x 9.81 = 164,808 N-sec
+This result can also be obtained by multiplying the thrust by the duration. The impulseto-weight ratio of the propulsion system (Eq. 2-11) is
+It/wo = 164,808/[(200- 110)9.81] = 187
+
+
+32 DEFINITIONS AND FUNDAMENTALS
+2.2. THRUST
+The thrust is the force produced by a rocket propulsion system acting upon a vehicle. In a simplified way, it is the reaction experienced by its structure due to the ejection of matter at high velocity. It represents the same phenomenon that pushes a garden hose backwards or makes a gun recoil. In the latter case, the forward momentum of the bullet and the powder charge is equal to the recoil or rearward momentum of the gun barrel. Momentum is a vector quantity and is defined as the product of mass times velocity. All ship propellers and oars generate their forward push at the expense of the momentum of the water or air masses, which are accelerated towards the rear. Rocket propulsion differs from these devices primarily in the relative magnitude of the accelerated masses and velocities. In rocket propulsion relatively small masses are involved which are carried within the vehicle and ejected at high velocities. The thrust, due to a change in momentum, is given below. A derivation can be found in earlier editions of this book. The thrust and the mass flow are constant and the gas exit velocity is uniform and axial.
+dm ~v
+F - -~ V2 -- thV 2 -- ~/22 (2-13)
+go
+This force represents the total propulsion force when the nozzle exit pressure equals the ambient pressure. The pressure of the surrounding fluid (i..e, the local atmosphere) gives rise to the second contribution that influences the thrust. Figure 2-1 shows schematically the external pressure acting uniformly on the outer surface of a rocket chamber and the gas pressures on the inside of a typical thermal rocket engine. The size of the arrows indicates the relative magnitude of the pressure forces. The axial thrust can be determined by integrating all the pressures acting on areas that can be projected on a plane normal to the nozzle axis. The forces acting radially outward are appreciable, but do not contribute to the axial thrust because a rocket is typically an axially symmetric chamber. The conditions prior to entering the nozzle are essentially stagnation conditions. Because of a fixed nozzle geometry and changes in ambient pressure due to variations in altitude, there can be an imbalance of the external environment or atmospheric pressure P3 and the local pressure P2 of the hot gas jet at the exit plane of the nozzle. Thus, for a steadily operating rocket propulsion system moving through a homogeneous atmosphere, the total thrust is equal to
+F = rhv2 + 092 -- p3)A2 (2-14)
+The first term is the momentum thrust represented by the product of t h e propellant mass flow rate and its exhaust velocity relative to the vehicle. The second term represents the pressure thrust consisting of the product of the cross-sectional area at the nozzle exit A2 (where the exhaust jet leaves the
+
+
+2.2. THRUST 33
+Atmosphere Q P3
+ttt
+tll
+.f••t t t
+111
+Pl, A1, T1
+Chamber
+Converging nozzlesection ~ ~ Diverging nozzlesection
+v2
+m m m ~ a D , , . V t I I J -_.... L
+v 1 Pt, At P2, A2, T2
+FIGURE 2-1. Pressure balance on chamber and nozzle interior walls is not uniform. The internal gas pressure (indicated by length of arrows) is highest in the chamber (Pl) and decreases steadily in the nozzle until it reaches the nozzle exit pressure P2. The external or atmospheric pressure P3 is uniform. At the throat the pressure is Pt- The four subscripts (shown inside circles) refer to the quantities A, v, T, and p at specific locations.
+vehicle) and the difference between the exhaust gas pressure at the exit and the ambient fluid pressure. If the exhaust pressure is less than the surrounding fluid pressure, the pressure thrust is negative. Because this condition gives a low thrust and is undesirable, the rocket nozzle is usually so designed that the exhaust pressure is equal or slightly higher than the ambient fluid pressure. When the ambient atmosphere pressure is equal to the exhaust pressure, the pressure term is zero and the thrust is the same as in Eq. 2-13. In the vacuum of space P3 - - 0 and the thrust becomes
+F - 14"Iv2 Jr-p2A2 (2-15)
+The pressure condition in which the exhaust pressure is exactly matched to the surrounding fluid pressure (P2 = P3) is referred to as the rocket nozzle with optimum expansion ratio. This is further elaborated upon in Chapter 3. Equation 2-14 shows that the thrust of a rocket unit is independent of the flight velocity. Because changes in ambient pressure affect the pressure thrust, there is a variation of the rocket thrust with altitude. Because atmospheric pressure decreases with increasing altitude, the thrust and the specific impulse will increase as the vehicle is propelled to higher altitudes. This change in pressure thrust due to altitude changes can amount to between 10 and 30% of the overall thrust, as is shown for a typical rocket engine in Fig. 2-2. Table 8-1 shows the sea level and high altitude thrust for several rocket engines. Appendix 2 gives the properties of the Standard Atmosphere (ambient pressure).
+
+
+34 DEFINITIONS AND FUNDAMENTALS
+S
+Y
+255 sec
+I
+213,700Ibf
+I
+- Thrust 290 sec
+"" 2s=ific
+0 20 40 60 80 100 120 140 160 Altitude, R x 103
+FIGURE 2-2. Altitude performance of RS 27 liquid propellant rocket engine used in early versions of the Delta launch vehicle.
+2.3. EXHAUST VELOCITY
+The effective exhaust velocity as defined by Eq. 2-6 applies to all rockets that thermodynamically expand hot gas in a nozzle and, indeed, to all mass expulsion systems. From Eq. 2-14 and for constant propellant mass flow this can be modified to
+C = •2 _Jr_(P2 - - p 3 ) A 2 / r h (2-16)
+Equation 2-6 shows that c can be determined from thrust and propellant flow measurements. When P2 ---P3, the effective exhaust velocity c is equal to the average actual exhaust velocity of the propellant gases v2. When P2 ¢ P3 then c -¢ v2. The second term of the right-hand side of Eq. 2-16 is usually small in relation to v2; thus the effective exhaust velocity is usually close in value to the actual exhaust velocity. When c - v2 the thrust (from Eq. 2-14) can be rewritten as
+F = (fi~/go)v2 - rhc (2-17)
+The characteristic velocity has been used frequently in the rocket propulsion literature. Its symbol c*, pronounced "cee-star," is defined as
+c* = p l A t / r h (2-18)
+The characteristic velocity c* is used in comparing the relative performance of different chemical rocket propulsion system designs and propellants; it is easily determined from measured data of rh, Pl, and At. It relates to the efficiency of the combustion and is essentially independent of nozzle characteristics.
+
+
+2.3. EXHAUST VELOCITY :35
+However, the specific impulse Is and the effective exhaust velocity c are functions of the nozzle geometry, such as the nozzle area ratio Az/At, as shown in C h a p t e r 3. S o m e v a l u e s o f Is a n d c* a r e g i v e n in T a b l e s 5 - 4 a n d 5 - 5 .
+Example 2-2. The following measurements were made in a sea level test of a solid propellant rocket motor:
+Burn duration Initial mass before test Mass of rocket motor after test Average thrust Chamber pressure Nozzle exit pressure Nozzle throat diameter Nozzle exit diameter
+40 sec 1210 kg 215 kg 62,250 N 7.00 MPa 0.070 MPa 0.0855 m 0.2703 m
+Determine th, /)2, C*, C, and Is at sea level, and c and Is at 1000 and 25,000 m altitude. Assume an invariant thrust and mass flow rate and negligible short start and stop transients.
+S O L U T I O N . The mass flow rate rh is determined from the total propellant used (initial motor mass - final motor mass) and the burn time.
+rh - (1210 - 215)/40 - 24.9 kg/sec
+The nozzle areas at the throat and exit are
+At - yrD2/4 - yr x 0.08552/4 = 0.00574 m 2
+A 2 - reD2~4 - rr x 0.27032/4 = 0.0574 m 2
+Equation 2-14 is to be solved for/)2, the actual average exhaust velocity.
+Z;2 -- F/rh - (192 - p3)A2/th
+= 62,250/24.9 - (0.070 - 0.1013) 106 X 0.0574/24.9
+= 2572 m/sec
+The characteristic velocity and effective exhaust velocity are found from Eqs. 2-6 and 218 for sea level conditions.
+c* = p l A t / r h = 7.00 x 106 x 0.00574/24.9 = 1613 m / s e c
+Is = F/rhgo = 62,250/(24.9 x 9.81) = 255 sec
+c = Isgo = 255 x 9.81 - 2500 m / s e c
+For altitudes of 1000 and 25,000 m the ambient pressure (see Appendix 2) is 0.0898 and 0.00255 MPa. From Eq. 2-16 the altitude values of c can be obtained.
+¢ -- /)2 -}- (132 --p3)A2/th
+
+
+36 DEFINITIONSAND FUNDAMENTALS
+At 1000 m altitude,
+c = 2572 + (0.070- 0.0898) x 106 x 0.0574/24.9 = 2527 m/sec Is = 2527/9.81 = 258 sec
+At 25,000 m altitude,
+c-- 2572 + (0.070- 0.00255) x 106 x 0.0574/24.9 = 2727 m/sec Is = 2727/9.80 = 278 sec
+2.4. ENERGY AND EFFICIENCIES
+Although efficiencies are not commonly used directly in designing rocket units, they permit an understanding of the energy balance of a rocket system. Their definitions are arbitrary, depending on the losses considered, and any consistent set of efficiencies, such as the one presented in this section, is satisfactory in evaluating energy losses. As stated previously, two types of energy conversion processes occur in any propulsion system, namely, the generation of energy, which is really the conversion of stored energy into available energy and, subsequently, the conversion to the form in which a reaction thrust can be obtained. The kinetic energy of ejected matter is the form of energy useful for propulsion. The power of the jet Pjet is the time rate of expenditure of this energy, and for a constant gas ejection velocity v this is a function of Is and F
+P j e t - l rhv2 - l ~vgo# -- 1Fgols -- 1⁄2Fv2 (2-19)
+The term specific power is sometimes used as a measure of the utilization of the mass of the propulsion system including its power source; it is the jet power divided by the loaded propulsion system mass, Pjet/mo. For electrical propulsion systems which carry a heavy, relatively inefficient energy source, the specific power can be much lower than that of chemical rockets. The energy input from the energy source to the rocket propulsion system has different forms in different rocket types. For chemical rockets the energy is created by combustion. The maximum energy available per unit mass of chemical propellants is the heat of the combustion reaction QR; the power input to a chemical engine is
+Pchem = rhQRJ (2-20)
+where J is a conversion constant which depends on the units used. A large portion of the energy of the exhaust gases is unavailable for conversion into kinetic energy and leaves the nozzle as residual enthalpy. This is analogous to the energy lost in the high-temperature exhaust gases of internal combustion engines.
+
+
+2.4.ENERGYANDEFFICIENCIES 37
+The combustion efficiency for chemical rockets is the ratio of the actual and the ideal heat of reaction per unit of propellant and is a measure of the source efficiency for creating energy. Its value is high (approximately 94 to 99%), and it is defined in Chapter 5. When the power input Pchemis multiplied by the combustion efficiency, it becomes the power available to the propulsive device, where it is converted into the kinetic power of the exhaust jet. In electric propulsion the analogous efficiency is the power conversion efficiency. For solar cells it has a low value; it is the efficiency for converting solar radiation energy into electric power (10 to 20%). The power transmitted to the vehicle at any one time is defined in terms of the thrust of the propulsion system F and the vehicle velocity u:
+Pvehicie = Fu (2-2 l)
+The internal efficiency of a rocket propulsion system is an indication of the effectiveness of converting the system's energy input to the propulsion device into the kinetic energy of the ejected matter; for example, for a chemical unit it is the ratio of the kinetic power of the ejected gases expressed by Eq. 2-19 divided by the power input of the chemical reaction as given in Eq. 2-20. Internal efficiencies are used in Example 2-3. The energy balance diagram for a chemical rocket (Fig. 2-3) shows typical losses. The internal efficiency can be expressed as
+1/,h~2
+kinetic power in jet = (2-22)
+flint available chemical power r]combPchem
+Heatlossto wall\s\
+Combustionloss~
+(poormixing, ~ . }
+incompleteburning) ~ I J~ A Unavailablethermal
+._~,.~ _~JJ ~ ¢ ~ o fJ l exhaustjet
+. i ~lResidual kineticenergy
+~," I ofexhaustgases
+1.; ___~, 100% )9% 197%//40t~° 70l% ~ 0 to50%
+LUsefulenergyfor
+vehiclepropulsion --Kineticenergyof exhaustjet
+!L--Totalenergyof exhaustjet --Availableenergyin combustionchamber -Heatingvalueof propellants
+FIGURE 2-3. Typical energy balance diagram for a chemical rocket.
+
+
+38 DEFINITIONS AND FUNDAMENTALS
+Typical values of Flint are listed later in Example 2-3. The propulsive efficiency (Fig. 2-4) determines how much of the kinetic energy of the exhaust jet is useful for propelling a vehicle. It is also used often with duct jet engines and is defined as
+vehicle power Fie vehicle power + residual kinetic jet power
+Fu 2u/c Fu + 1⁄2(;v/go)(C - u)2 - 1 + (u/c) 2
+(2-23)
+where F is the thrust, u the absolute vehicle velocity, c the effective rocket exhaust velocity with respect to the vehicle, w the propellant weight flow rate, and Flp the propulsive efficiency. The propulsive efficiency is a maximum when the forward vehicle velocity is exactly equal to the exhaust velocity. Then the residual kinetic energy and the absolute velocity of the jet are zero and the exhaust gases stand still in space. While it is desirable to use energy economically and thus have high efficiencies, there is also the problem of minimizing the expenditure of ejected mass, which in many cases is more important than minimizing the energy. In nuclear reactor energy and some solar energy sources, for example, there is an almost unlimited amount of heat energy available; yet the vehicle can only carry a limited amount of working fluid. Economy of mass expenditures of working fluid can be obtained if the exhaust velocity is high. Because the specific impulse is proportional to the exhaust velocity, it is a measure of this propellant mass economy.
+lOO
+C
+" 80
+,,.._
+-/
+a.
+,u " 6 0
+._~
+® 40
+._~
+o 20
+o
+o 1.0 2.0 3.0 Velocity ratio, ulc
+FIGURE 2--4. Propulsive efficiency at varying velocities.
+
+
+2.5. TYPICAL PERFORMANCE VALUES 39
+2.5. TYPICAL PERFORMANCE VALUES
+Typical values of representative performance parameters for different types of rocket propulsion are given in Table 2-1 and in Fig. 2-5. Chemical rockets have relatively low values of specific impulse, relatively light machinery (i.e., low engine weight), a very high thrust capability, and therefore high acceleration and high specific power. At the other extreme, the ion propulsion devices have a very high specific impulse, but they must carry a heavy electrical power source with them to deliver the power necessary for high ejection velocities. The very low acceleration potential for the electrical propulsion units and those using solar radiation energy usually requires a long period for accelerating and thus these systems are best used for missions where the flight time is long. The low thrust values of electrical systems imply that they are not useful in fields of strong gravitational gradients (for takeoff or landing) but are best used in a true space flight mission. The chemical systems (solid and liquid propellant rockets) are fully developed and widely used for many different vehicle applications. They are described in Chapters 5 to 15. Electrical propulsion has been in operation in many space flight applications (see Chapter 19). Some of the other types are still in their exploratory or development phase, but may become useful.
+Example 2-3. As a comparison of different propulsion systems, compute the energy input and the propellant flow required for 100 N thrust with several types of propulsion systems.
+SOLUTION. From Equations 2-13 and 2-19,
+rh = F/(Isgo)
+power i n p u t - Pjet/r/int- 1⁄2rhvZ/qint
+From Table 2-1 typical values of Is and from experience typical internal efficiencies were selected. Depending on the propellant and the design, these values may vary somewhat. The equations above were solved for rh and the power input as indicated in the table below.
+/32 ?h P o w e r Input
+Engine Type Tint Is (m/sec) (kg/sec) (kW)
+Chemical rocket 0.50 300 2940 0.0340 294 Nuclear fission 0.50 800 7840 0.0128 787 Arc---electrothermal 0.50 600 5880 0.0170 588 Ion electrostatic 0.90 2000 19,600 0.0051 1959
+More than half a megawatt of power is needed for the last three propulsion systems, but the propellant flows are small. The data for the last two types are illustrative, but hypothetical. To date the largest experimental units have been about 120 kW for arcjets and perhaps 10 kW with ion propulsion. Although thruster designs for megawatt-level units are feasible, it is unlikely that the needed flight-qualified electrical power generator would be available in the next decade.
+
+
+O
+TABLE 2-1. Ranges of Typical Performance Parameters for Various Rocket Propulsion Systems
+Specific Maximum Specific Impulsea Temperature Thrust-to- Propulsion Powerc Engine Type (sec) (°C) Weight Ratio b Duration (kW/kg)
+Typical Working Status of Fluid Technology
+Chemical--solid or 200-410 liquid bipropellant Liquid monopropellant 180-223
+Nuclear fission 500-860
+Resistojet 150-300 Arc heating--electrothermal 280-1200 Electromagnetic including 700-2500 Pulsed Plasma (PP) Hall effect 1000-1700 Ion--electro static 1200- 5000
+2500-4100 10-2-100 Seconds to a few minutes 600-800 10-1-10 .2 Seconds to minutes 2700 10-2-30 Seconds to minutes 2900 10-2-10 -4 Days 20,000 10-4-10 -2 Days 10-6-10 -4 Weeks
+10-4 Weeks 10-6-10 --4 Months
+Solar heating 400-700 1300 10-3-10 -2 Days
+10-1_103
+0.02-200
+Liquid or solid Flight proven propellants N2H 4 Flight proven
+10-1-103 H 2
+10-3-10 -l H2, N2H4 10-3-1 N2H4,H2,NH 3 10-3-1 H 2 Solid for PP 10-1-5 x 10-1 Xe 10-3-1 Xe
+10-2-1 H 2
+Development was stopped Flight proven Flight proven Flight proven
+Flight proven Several have flown In development
+"At Pi = 1000 psia and optimum gas expansion at sea level (Ip2 -- P3 = 14.7 psia). hRatio of thrust force to full propulsion system sea level weight (with propellants, but without payload). 'Kinetic power per unit exhaust mass flow.
+
+
+PROBLEMS 41
+lOO,OOO 1IIII I II 1 I I II I[ I[
+]111i III II ] 1 I
+° ~!,!!t!/t:ti~] I1 I;I 1211IIII I,II III
+20,000 i ii lii Jiiiiililililili il
+~- 10,000 I I.L~~II[~ T ~ l ~ r ~ ~ ~'~lll ' ~
+~= 8°°°1 tfllllll 'A;ci;~' I N heSte~H2 I ~ Nuclear ssion ]~
+"~'° I ~ ~ '''''LiquidandpseI°I~'iadnts I1]"~ '
+• Resistojet chemica ! p,ro
+,,,2000!!1'11 , 1"
+1000 ~ ,C,,o!d gas `
+II
+6001 I II11111 IIII1111 I I IIlllll I I ll]llll I II III 11 11111 IIIIIIII I I Ill
+10-6 10-5 10-4 10-3 10-2 10-1 1 10 100
+Acceleration in multiples of earth gravity go or thrust to
+vehicle weight ratio
+]IIlI
+iIIIlIl
+Jl
+10IIII00
+FIGURE 2-5. Exhaust velocities as a function of typical vehicle accelerations. Regions indicate approximate performance values for different types of propulsion systems. The mass of the vehicle includes the propulsion system, but the payload is assumed to be zero.
+PROBLEMS
+When solving problems, three appendixes (see end of book) may be helpful:
+Appendix 1. Conversion Factors and Constants Appendix 2. Properties of the Earth's Standard Atmosphere Appendix 3. Summary of Key Equations
+1. Prove that the value of the reaction thrust F equals twice the total dynamic pressure across the area A for an incompressible fluid as shown below.
+Flowrate
+For<caF ,~,- ' . _ . ~ ~ ~
+l-- -- ---~! L__AreaA
+"7////////////////////////////,
+
+
+42 DEFINITIONSAND FUNDAMENTALS
+2. The following data are given for a certain rocket unit: thrust, 8896 N; propellant consumption, 3.867 kg/sec; velocity of vehicle, 400 m/sec; energy content of propellant, 6.911 MJ/kg. Assume 100% combustion efficiency. Determine (a) the effective velocity; (b) the kinetic jet energy rate per unit flow of propellant; (c) the internal efficiency; (d) the propulsive efficiency; (e) the overall efficiency; (f) the specific impulse; (g) the specific propellant consumption. Answers: (a) 2300 m/sec; (b) 2.645 MJ-sec/kg; (c) 38.3%; (d) 33.7%; (e) 13.3%; (f) 234.7 sec; (g) 0.00426 sec-1.
+3. A certain rocket has an effective exhaust velocity of 7000 ft/sec; it consumes 280 lbm/sec of propellant mass, each of which liberates 2400 Btu/lbm. The unit operates for 65 sec. Construct a set of curves plotting the propulsive, internal, and overall efficiencies versus the velocity ratio u/c (0 < u/c < 1.0). The rated flight velocity equals 5000 ft/sec. Calculate (a) the specific impulse; (b) the total impulse; (c) the mass of propellants required; (d) the volume that the propellants occupy if their average specific gravity is 0.925. Answers: (a) 217.5 sec; (b) 3,960,000 lbf-sec; (c) 18,200 lbm; (d) 315 ft3.
+4. For the rocket in Problem 2, calculate the specific power, assuming a propulsion system dry mass of 80 kg and a duration of 3 min.
+5. For the values given in Table 2-1 for the various propulsion systems, calculate the total impulse for a fixed propellant mass of 2000 kg.
+6. A jet of fluid hits a stationary flat plate in the manner shown below.
+(a) If there is 50 kg of fluid flowing per minute at an abolute velocity of 200 m/sec, what will be the force on the plate? Answer: 167 N.
+(b) What will this force be when the plate moves in the direction of flow at u - 50 km/h?
+Answer: 144 N.
+Velocityc
+Plate
+//\\"
+7. Plot the variation of the thrust and specific impulse against altitude, using the atmospheric pressure information given in Appendix 2, and the data for the Minuteman first-stage rocket thrust chamber in Table 11-3. Assume that P2 = 8.66 psia.
+8. Derive an equation relating the mass ratio ~ and the propellant mass fraction. Answer: ~ - 1 - IVlR.
+
+
+SYMBOLS 43
+SYMBOLS (English engineering units are given in parentheses)
+A At A2 c c* E F go
+/, /, J
+m rh
+mmsp
+m0 MR P P3 P2
+Pl P /Q'sR
+t b/
+~)2 W
+W0
+area, m 2 (ft 2) nozzle throat area, m 2 (It2) exist area of nozzle, m 2 (It2) effective velocity, m/sec (ft/sec) characteristic velocity, m/sec (ft/sec) energy, J (ft-lbf) thrust force, N (lbf) standard sea level acceleration of gravity, 9.80665 m/sec 2 (32.174 ft/sec 2) specific impulse, sec impulse or total impulse, N-sec (lbf-sec) conversion factor or mechanical equivalent of heat, 4.184 J/cal or 1055 J/Btu or 778 ft-lbf/Btu. mass, kg (slugs) (1 slug - mass of 32.174 lb of weight at sea level) mass flow rate, kg/sec (lbm/sec) final mass (after rocket propellant is ejected), kg (lbm or slugs) propellant mass, kg (lbm or slugs) initial mass (before rocket propellant is ejected), kg (lbm or slugs) mass ratio (mf/mo) pressure, pascal [Pa] or N/m 2 (lbf/ft 2) ambient or atmospheric pressure, Pa (lbf/ft 2) rocket gas pressure at nozzle exit, Pa (lbf/ft 2) chamber pressure, Pa (lbf/ft 2) power, J/sec (ft-lbf/sec) specific power, J/sec-kg (ft-lbf/sec-lbm) heat of reaction per unit propellant, J/kg (Btu/lbm) time, sec vehicle velocity, m/sec (ft/sec) gas velocity leaving the rocket, m/sec (ft/sec) weight, N or kg-m/sec2 (lbf) weight flow rate, N/sec (lbf/sec) initial weight, N or kg-m/sec 2 (lbf)
+Greek Letters
+/7 Ocomb
+r/int Op
+propellant mass fraction efficiency combustion efficiency internal efficiency propulsive efficiency
+
+
+44 DEFINITIONSAND FUNDAMENTALS
+REFERENCES
+2-1. "American National Standard Letter Symbols for Rocket Propulsion," A S M E Publication Y 10.14, 1959.
+2-2. "Solid Propulsion Nomenclature Guide," CPIA Publication 80, Chemical Propulsion Information Agency, Johns Hopkins University, Laurel, MD., May 1965, 18 pages.
+
+
+CHAPTER 3
+NOZZLE THEORY AND
+THERMODYNAMIC RELATIONS
+Thermodynamic relations of the processes inside a rocket nozzle and chamber furnish the mathematical tools needed to calculate the performance and determine several of the key design parameters of rocket propulsion systems. They are useful as a means of evaluating and comparing the performance of various rocket systems; they permit the prediction of the operating performance of any rocket unit that uses the thermodynamic expansion of a gas, and the determination of several necessary design parameters, such as nozzle size and generic shape, for any given performance requirement. This theory applies to chemical rocket propulsion systems (both liquid and solid propellant types), nuclear rockets, solar heated and resistance or arc heated electrical rocket systems, and to any propulsion system that uses the expansion of a gas as the propulsive mechanism for ejecting matter at high velocity. These thermodynamic relations, which are fundamental and important in analysis and design of rocket units, are introduced and explained in this chapter. The utilization of these equations should give the reader a basic understanding of the thermodynamic processes involved in rocket gas behavior and expansion. A knowledge of elementary thermodynamics and fluid mechanics on the part of the reader is assumed (see Refs. 1-1, 3-1, 3-2, and 3-3). This chapter also addresses different nozzle configurations, non-optimum performance, energy losses, nozzle alignment, variable thrust and four different ways for establishing nozzle performance parameters.
+45
+
+
+46 NOZZLE THEORY AND THERMODYNAMIC RELATIONS
+3.1. IDEAL ROCKET
+The concept of ideal rocket propulsion systems is useful because the relevant basic thermodynamic principles can be expressed as simple mathematical relationships, which are given in subsequent sections of this chapter. These equations theoretically describe a quasi-one-dimensional nozzle flow, which corresponds to an idealization and simplification of the full two- or threedimensional equations and the real aerothermochemical behavior. However, with the assumptions and simplifications stated below, they are very adequate for obtaining useful solutions to many rocket propulsion systems. For chemical rocket propulsion the measured actual performance is usually between 1 and 6% below the calculated ideal value. In designing new rockets, it has become accepted practice to use ideal rocket parameters which can then be modified by appropriate corrections, such as those discussed in Section 5 of this chapter. An ideal rocket unit is one for which the following assumptions are valid:
+1. The working substance (or chemical reaction products) is homogeneous. 2. All the species of the working fluid are gaseous. Any condensed phases (liquid or solid) add a negligible amount to the total mass. 3. The working substance obeys the perfect gas law.
+4. There is no heat transfer across the rocket walls; therefore, the flow is adiabatic.
+5. There is no appreciable friction and all boundary layer effects are neglected. 6. There are no shock waves or discontinuities in the nozzle flow.
+7. The propellant flow is steady and constant. The expansion of the working fluid is uniform and steady, without vibration. Transient effects (i.e., start up and shut down) are of very short duration and may be neglected. 8. All exhaust gases leaving the rocket have an axially directed velocity.
+9. The gas velocity, pressure, temperature, and density are all uniform across any section normal to the nozzle axis.
+10. Chemical equilibrium is established within the rocket chamber and the gas composition does not change in the nozzle (frozen flow).
+11. Stored propellants are at room temperature. Cryogenic propellants are at their boiling points.
+These assumptions permit the derivation of a simple, quasi-one-dimensional theory as developed in subsequent sections. Later in this book we present more sophisticated theories or introduce correction factors for several of the items on the list, and they allow a more accurate determination of the simplified analysis. The next paragraph explains why these assumptions cause only small errors.
+
+
+3.2. SUMMARY OF THERMODYNAMIC RELATIONS 47
+For a liquid propellant rocket the idealized theory postulates an injection system in which the fuel and oxidizer are mixed perfectly so that a homogeneous working substance results. A good rocket injector can approach this condition closely. For a solid propellant rocket unit, the propellant must essentially be homogeneous and uniform and the burning rate must be steady. For nuclear, solar-heated or arc-heated rockets, it is assumed that the hot gases are uniform in temperature at any cross-section and steady in flow. Because chamber temperatures are typically high (2500 to 3600 K for common propellants), all gases are well above their respective saturation conditions and actually follow the perfect gas law very closely. Postulates 4, 5, and 6 above allow the use of the isentropic expansion relations in the rocket nozzle, thereby describing the maximum conversion of heat to kinetic energy of the jet. This also implies that the nozzle flow is thermodynamically reversible. Wall friction losses are difficult to determine accurately but they are usually small in nozzles. Except for very small chambers, the energy lost as heat to the walls of the rocket is usually less than 1% (occasionally up to 2%) of the total energy and can therefore be neglected. Short-term fluctuations of the steady propellant flow rate and pressure are usually less than 5% of the rated value, their effect on rocket performance is small and can be neglected. In well-designed supersonic nozzles, the conversion of thermal energy into directed kinetic energy of the exhaust gases proceeds smoothly and without normal shocks or discontinuities; thus the flow expansion losses are generally small. Some companies and some authors do not include all or the same eleven items listed above in their definition of an ideal rocket. For example, instead of assumption 8 (all nozzle exit velocity is axially directed), some use a conical exit nozzle with a 15° half-angle as their base configuration in their ideal nozzle; this discounts the divergence losses, which are described later in this chapter.
+3.2. SUMMARY OF THERMODYNAMIC RELATIONS
+In this section we review briefly some of the basic relationships needed for the development of the nozzle flow equations. Rigorous derivations and discussions of these relations can be found in many thermodynamics or fluid dynamics texts, such as Refs. 3-1 and 3-2. The principle of conservation of energy can be readily applied to the adiabatic, no shaft-work process inside the nozzle. Furthermore, without shocks or friction, the flow entropy change is zero. The concept of enthalpy is useful in flow systems; the enthalpy comprises the internal thermal energy plus the flow work (or work performed by the gas at a velocity v in crossing a boundary). For ideal gases the enthalpy can conveniently be expressed as the product of the specific heat Cp times the absolute temperature T (the specific heat at constant pressure is formally defined as the partial derivative of the enthalpy with respect to temperature at constant pressure). Under the above assumptions, the total or stagnation enthalpy per unit mass h0 is constant, i.e.,
+
+
+48 NOZZLETHEORY AND THERMODYNAMIC RELATIONS
+ho = h + v2/2J = constant (3-1)
+In the above, J is the mechanical equivalent of heat which is inserted only when thermal units (i.e., the Btu and calorie) are mixed with mechanical units (i.e., the ft-lbf and the joule). In SI units (kg, m, sec) the value of J is one. In the English Engineering system of units another constant (see Appendix 1) has to be provided to account for the mass units (i.e., the lbm). The conservation of energy for isentropic flow between any two sections x and y shows that the decrease in enthalpy or thermal content of the flow appears as an increase of kinetic energy since and any changes in potential energy may be neglected.
+l(v~- v2)/J
+hx - hy ---~ = cp(Tx - Ty) (3-2)
+The principle of conservatism of mass in a steady flow with a single inlet and single outlet is expressed by equating the mass flow rate rh at any section x to that at any other section y; this is known in mathematical form as the continuity equation. Written in terms of the cross-sectional area A, the velocity v, and the specific volume V,
+rhx = &>, = rh = A v / V (3-3)
+The perfect gas law is written as
+px vx = RTx (3-4)
+where the gas constant R is found from the universal gas constant R' divided by the molecular mass 93~ of the flowing gas mixture. The molecular volume at standard conditions becomes 22.41 m3/kg-mol or ft3/lb-mol and it relates to a value of R' = 8314.3 J/kg-mole-K or 1544 ft-lbf/lb-mole-R. One often finds Eq. 3-3 written in terms of density p which is the reciprocal of the specific volume V. The specific heat at constant pressure Cp, the specific heat at constant volume cv, and their ratio k are constant for perfect gases over a wide range of temperatures and are related.
+k = Cp/Cv (3-5a)
+Cp - cv = R / J (3-5b)
+Cp = k R / ( k - 1)J (3--6)
+For an isentropicflow process the following relations hold between any points x and y:
+Tx// Ty - (px/Py) (k-1)/k - ( Vy/ Vx) k-1 (3-7)
+
+
+3.2. SUMMARY OF THERMODYNAMIC RELATIONS 4.9
+During an isentropic nozzle expansion the pressure drops substantially, the absolute temperature drops somewhat less, and the specific volume increases. When a flow is stopped isentropically the prevailing conditions are known as stagnation conditions and are designated by the subscript "0". Sometimes the word "total" is used instead of stagnation. As can be seen from Eq. 3-1 the stagnation enthalpy consists of the sum of the static or local enthalpy and the fluid kinetic energy. The stagnation temperature To is found from the energy equation as
+To -- T + v2/(2CpJ) (3-8)
+where T is the absolute fluid static temperature. In adiabatic flows, the stagnation temperature remains constant. The relationship of the stagnation pressure to the local pressure in the flow can be found from the previous two equations:
+Po/P --[1 + v2/(2cpJT)] k/(k-1) -- (V/Vo) k (3-9)
+When the local velocity comes close to zero, the local temperature and pressure will approach the stagnation pressure and stagnation temperature. In a combustion chamber, where the gas velocity is small, the local combustion pressure is essentially equal to the stagnation pressure. The velocity of sound a or the acoustic velocity in ideal gases is independent of pressure. It is defined as
+a = x/kRT (3-10)
+In the English Engineering (EE) system the value of R has to be corrected and the constant go is added. Equation 3-10 becomes v/gokRT. This correction factor must be applied wherever R is used in EE units. The Mach number M is a dimensionless flow parameter and is used to define the ratio of the flow velocity v to the local acoustic velocity a.
+M = v / a - v / ~ / k R T (3-~1)
+A Mach number less than one corresponds to subsonic flow and greater than one to supersonic flow. When the Mach number is equal to one then the flow is moving at precisely the velocity of sound. It is shown later that at the throat of all supersonic nozzles the Mach number must be equal to one. The relation between stagnation temperature and Mach number can now be written from Eqs. 3-2, 3-7, and 3-10 as
+To - T[1 + 1⁄2(k - 1)M 2] (3-12)
+or
+
+
+50 NOZZLETHEORY AND THERMODYNAMIC RELATIONS
+1)
+To and P0 designate the stagnation values of the temperature and pressure. Unlike the temperature, the stagnation pressure during an adiabatic nozzle expansion remains constant only for isentropic flows. It can be computed from
+P0 -- p[1 + l (k - 1)m2] k/(l'-l) (3-13)
+The area ratio for a nozzle with isentropic flow can be expressed in terms of Mach numbers for any points x and y within the nozzle. This relationship, along with those for the ratios T~ To and P/Po, is plotted in Fig. 3-1 for Ax = At and Mx = 1.0. Otherwise,
+Ay Mx ~ { 1 + [ ( k - 1 ) / 2 ] M 2 } (I'+1)/(k-1)
+A---~= Myy 1 + [(k - 1)/2]M 2 (3-14)
+As can be seen from Fig. 3-1, for subsonic flow the chamber contraction ratio A1/At can be small, with values of 3 to 6, and the passage is convergent. There is no noticeable effect from variations of k. In solid rocket motors the chamber area A1 refers to the flow passage or port cavity in the virgin grain. With supersonic flow the nozzle section diverges and the area ratio becomes large very quickly; the area ratio is significantly influenced by the value of k. The area ratio A z / A t ranges between 15 and 30 at M -- 4, depending on the value of k. On the other hand, pressure ratios depend little on k whereas temperature ratios show more variation. The average molecular mass 931 of a mixture of gases is the sum of all the molar fractions ni multiplied by the molecular mass of each chemical species (rtigJ~i) and then divided by the sum of all molar mass fractions. This is further elaborated upon in Chapter 5. The symbol 9J/is used to avoid confusion with M for the Mach number. In many pieces of rocket literature 9X is called molecular weight.
+Example 3-1. An ideal rocket chamber is to operate at sea level using propellants whose combustion products have a specific heat ratio k of 1.30. Determine the required chamber pressure and nozzle area ratio between throat and exit if the nozzle exit Mach number is 2.40. The nozzle inlet Mach number may be considered to be negligibly small.
+SOLUTION. For optimum expansion the nozzle exit pressure should be equal to the atmospheric pressure which has the value 0.1013 MPa. If the chamber velocity is small, the chamber pressure is equal to the total or stagnation pressure, which is, from Eq. 3-13,
+
+
+3.2. SUMMARY OF THERMODYNAMIC RELATIONS 51
+500
+;/
+k = 1.20 I /
+k= 1.30 I]/
+1.0 100
+•.~ - ~ , T / T 0
+~,~ I
+e" •
+I¢\',
+° . :iS
+~ ,\
+o 0.10 ,, ,~ 10
+\'
+0.01 ~ - - I J 1.0
+0.10 1.0 10 Mach number
+G
+!._
+<L(1)
+FIGURE 3--1. Relationship of area ratio, pressure ratio, and temperature ratio as functions of Mach number in a De Laval nozzle for the subsonic and supersonic nozzle regions.
+P0 -- p[1 + 1⁄2(k - 1)M2] k/(k-1)
+= 0.101311 + 1 × 0.30 × 2.402] 1"3/0"3- 1.51 MPa
+The nozzle area is determined from Eq. 3-14 by setting M t - 1.0 at the throat (see also Fig. 3-1):
+A2-1"0~(1+0"15×2"42) -2.64 A----~- 2.40 1 + 0~15
+2.3/0.3
+
+
+52 NOZZLETHEORY AND THERMODYNAMIC RELATIONS
+3.3. ISENTROPIC FLOW THROUGH NOZZLES
+In a converging-diverging nozzle a large fraction of the thermal energy of the gases in the chamber is converted into kinetic energy. As will be explained, the gas pressure and temperature drop dramatically and the gas velocity can reach values in excess of two miles per second. This is a reversible, essentially isentropic flow process and its analysis is described here. If a nozzle inner wall has a flow obstruction or a wall protrusion (a piece of weld splatter or slag), then the kinetic gas enery is locally converted back into thermal energy essentially equal to the stagnation temperature and stagnation pressure in the chamber. Since this would lead quickly to a local overheating and failure of the wall, nozzle inner walls have to be smooth without any protrusion. Stagnation conditions can also occur at the leading edge of a jet vane (described in Chapter 16) or at the tip of a gas sampling tube inserted into the flow.
+Velocity
+From Eq. 3-2 the nozzle exit velocity v2 can be found:
+v2 -- V/2J(hl - h2)+ v2 (3.15a)
+This equation applies to ideal and non-ideal rockets. For constant k this expression can be rewritten with the aid of Eqs. 3-6 and 3-7. The subscripts 1 and 2 apply to the nozzle inlet and exit conditions respectively:
+1)2 -- k - 1 R T 1 1 - -4- v 2 ( 3 . 1 5 b )
+This equation also holds for any two points within the nozzle. When the chamber section is large compared to the nozzle throat section, the chamber velocity or nozzle approach velocity is comparatively small and the term V2l can be neglected. The chamber temperature T1 is at the nozzle inlet and, under isentropic conditions, differs little from the stagnation temperature or (for a chemical rocket) from the combustion temperature. This leads to an important simplified expression of the exhaust velocity v2, which is often used in the analysis.
+v2-- k_IRT1 1
+- k-IN l
+(3-16)
+
+
+3.3. ISENTROPIC FLOW THROUGH NOZZLES 53
+It can be seen that the exhaust velocity of a nozzle is a function of the pressure ratio P]/P2, the ratio of specific heats k, and the absolute temperature at the nozzle inlet T1, as well as the gas constant R. Because the gas constant for any particular gas is inversely proportional to the molecular mass 9J~, the exhaust velocity or the specific impulse are a function of the ratio of the absolute nozzle entrance temperature divided by the molecular mass, as is shown in Fig. 3-2. This ratio plays an important role in optimizing the mixture ratio in chemical rockets. Equations 2-14 and 2-15 give the relations between the velocity v2, the thrust F, and the specific impulse Is; it is plotted in Fig. 3-2 for two pressure ratios and three values of k. Equation 3-16 indicates that any increase in the gas temperature (usually caused by an increase in energy release) or any decrease of the molecular mass of the propellant (usually achieved by using light molecular mass gases rich in hydrogen content) will improve the performanace of the rocket; that is, they will increase the specific impulse Is or the exhaust velocity v2 or ¢ and, thus, the performance of the vehicle. The influences of the pressure ratio across the nozzle Pl/]32 and of the specific heat ratio k are less pronounced. As can be seen from Fig. 3-2, performance increases
+280
+260
+240
+((U/1,})
+® 220
+e~
+E
+o~u 200
+,~ ou~
+,eI~, 180
+(O
+"O
+-- 160
+140
+120
+1
+~2 \ p j I
+go
+80 100 120 140 160
+k I= 1.20125
+I 130
+~ 1.20
+."11..3205
+I
+8OOO ¢,}
+4)
+75o0
+7ooo -m48)~
+6500 •
+• - - 6 0 0 0 J~X~
+• --5500
+• ~~
+4500
+• --4000 180 200 220 240 260 280
+T]/91l, R-Ib-mol/Ibm
+I
+50 I I I I
+75 100 125 150 Tll9~, K-kg-mol/kg
+FIGURE 3-2. Specific impulse and exhaust velocity of an ideal rocket at optimum nozzle expansion as functions of the absolute chamber temperature T1 and the molecular mass 9Jl for several values of k and Pl/P2.
+
+
+54 NOZZLETHEORY AND THERMODYNAMIC RELATIONS
+with an increase of the pressure ratio; this ratio increases when the value of the chamber pressure Pl increases or when the exit pressure P2 decreases, corresponding to high altitude designs. The small influence of k-values is fortuitous because low molecular masses are found in diatomic or monatomic gases, which have the higher values of k. For comparing specific impulse values from one rocket system to another or for evaluating the influence of various design parameters, the value of the pressure ratio must be standardized. A chamber pressure of 1000 psia (6.894 MPa) and an exit pressure of 1 atm (0.1013 MPa) are generally in use today. For optimum expansion P2 = P3 and the effective exhaust velocity c (Eq. 216) and the ideal rocket exhaust velocity are related, namely
+•2 --- (£2)opt (3-17)
+and c can be substituted for v2 in Eqs. 3-15 and 3-16. For a fixed nozzle exit area ratio, and constant chamber pressure, this optimum condition occurs only at a particular altitude where the ambient pressure P3 happens to be equal to the nozzle exhaust pressure P2. At all other altitudes c -¢ v2. The maximum theoretical value of the nozzle outlet velocity is reached with an infinite expansion (exhausting into a vacuum).
+(V2)max = v / 2 k R T o / ( k - 1) (3-18)
+This maximum theoretical exhaust velocity is finite, even though the pressure ratio is infinite, because it represents the finite thermal energy content of the fluid. Such an expansion does not happen, because, among other things, the temperature of many of the working medium species will fall below their liquefaction or the freezing points; thus they cease to be a gas and no longer contribute to the gas expansion.
+Example 3-2. A rocket operates at sea level (p = 0.1013 MPa) with a chamber pressure ofpl -- 2.068 MPa or 300 psia, a chamber temperature of T 1 = 2222 K, and a propellant consumption of rh = 1 kg/sec. (Let k = 1.30, R = 345.7 J/kg-K). Show graphically the variation of A, v, V, and M, with respect to pressure along the nozzle. Calculate the ideal thrust and the ideal specific impulse.
+SOLUTION. Select a series of pressure values and calculate for each pressure the corresponding values of v, V, and A. A sample calculation is given below. The initial specific volume V1 is calculated from the equation of state of a perfect gas, Eq. 3-4:
+V 1 -- RT1/Pl -- 345.7 x 2222/(2.068 x 106) --0.3714 m3/kg
+In an isentropic flow at a point of intermediate pressure, say at Px = 1.379 MPa or 200 psi, the specific volume and the temperature are, from Eq. 3-7,
+
+
+3.3. ISENTROPIC FLOW THROUGH NOZZLES 55
+Vx -- Vl(Pl/Px) 1/k -- 0.3714(2.068/1.379) 1/l3 = 0.5072 m3/kg
+Tx = Tl(px/pl) (k-l)/k = 2222(1.379/2.068) °38/13 = 2023 K
+The calculation of the velocity follows from Eq. 3-16:
+Vx 2kRlI ljkj
+k l '(2)
+/ I
+__ ~ 2 x 1.30 x 345.7 x 2222 |
+1.30- 1 l
+1 379']023071 _ 21068,/ J 771 m/sec
+The cross-sectional area is found from Eq. 3-3:
+Ax = rhx Vx/vx = 1 x 0.5072/771 = 658 cm2
+The Mach number M is, using Eq. 3-11,
+M x = V x / v / k R T x = 771/~/1.30 x 345.7 x 1932 = 0.8085
+Figure 3-3 shows the variations of the velocity, specific volume, area, and Mach number with pressure in this nozzle. At optimum expansion the ideal exhaust velocity v2 is equal to the effective exhaust velocity c and, from Eq. 3-16, it is calculated to be 1827 m/sec. Therefore, the thrust F and the specific impulse can be determined from Eqs. 2-6 and 2-14:
+F = rh v2 .-~ 1 x 1827 = 1827 N Is = c/go = 1827/9.80 = 186 sec
+A number of interesting deductions can be made from this example. Very high gas velocities (over 1 km/sec) can be obtained in rocket nozzles. The temperature drop of the combustion gases flowing through a rocket nozzle is appreciable. In the example given the temperature changed 1117°C in a relatively short distance. This should not be surprising, for the increase in the kinetic energy of the gases is derived from a decrease of the enthalpy, which in turn is proportional to the decrease in temperature. Because the exhaust gases are still very hot (1105 K) when leaving the nozzle, they contain considerable thermal energy not available for conversion into kinetic energy of the jet.
+Nozzle Flow and Throat Condition
+The required nozzle area decreases to a minimum (at 1.130 MPa or 164 psi pressure in the previous example) and then increases again. Nozzles of this type (often called De Laval nozzles after their inventor) consist of a convergent section followed by a divergent section. From the continuity equation, the
+
+
+56 NOZZLE THEORY AND THERMODYNAMIC RELATIONS
+E
+d
+o,,3E3
+I::xO
+r e )E
+E
+o
+.u .m o
+o~
+0 5000
+Pressure, megapascal
+2.068 0
+25 I "-" 2222
+Io
+I 1100
+2.068
+i
+/
+0
+5 1820
+Pressure, megapascal
+0
+III
+I
+3.0 I I
+c
+-~ 1 0
+~ • Z7.1i
+o ',
+I, /
+._m
+/]
+200
+/
+((.D¢)
+E
+o(.)
+00 300 200 1O0 0 300 1O0 0
+Pressure, psia Pressure, psia
+I xtt
+Throat -- Throat
+Nozzle inlet Nozzle inlet
+f
+Exit
+FIGURE 3-3. Typical variation of cross-sectional area, temperature, specific volume, and velocity with pressure in a rocket nozzle.
+area is inversely propportional to the ratio v/V. This quantity has also been plotted in Fig. 3-3. There is a maximum in the curve of v/V because at first the velocity increases at a greater rate than the specific volume; however, in the divergent section, the specific volume increases at a greater rate. The minimum nozzle area is called the throat area. The ratio of the nozzle exit area A 2 to the throat area At is called the nozzle area expansion ratio and is designated by the Greek letter E. It is an important nozzle design parameter.
+
+
+3.3. ISENTROPIC FLOW THROUGH NOZZLES 57
+E.= Az/At (3-19)
+The maximum gas flow per unit area occurs at the throat where there is a unique gas pressure ratio which is only a function of the ratio of specific heats k. This pressure ratio is found by setting M - 1 in Eq. 3-13.
+Pt/Pl - [ 2 / ( k + 1)]k/~k-1) (3-20)
+The throat pressure Pt for which the isentropic mass flow rate is a maximum is called the critical pressure. Typical values of this critical pressure ratio range between 0.53 and 0.57. The flow through a specified rocket nozzle with a given inlet condition is less than the maximum if the pressure ratio is larger than that given by Eq. 3-20. However, note that this ratio is not that across the entire nozzle and that the maximum flow or choking condition (explained below) is always established internally at the throat and not at the exit plane. The nozzle inlet pressure is very close to the chamber stagnation pressure, except in narrow combustion chambers where there is an appreciable drop in pressure from the injector region to the nozzle entrance region. This is discussed in Section 3.5. At the point of critical pressure, namely the throat, the Mach number is one and the values of the specific volume and temperature can be obtained from Eqs. 3-7 and 3-12.
+V t - Vl[(k + 1)/2] 1/(k-l) (3-21)
+Tt = 2T1/(k + 1) (3-22)
+In Eq. 3-22 the nozzle inlet temperature T 1 is very close to the combustion temperature and hence close to the nozzle flow stagnation temperature To. At the critical point there is only a mild change of these properties. Take for example a gas with k = 1.2; the critical pressure ratio is about 0.56 (which means that Pt equals almost half of the chamber pressure Pl); the temperature drops only slightly (Tt = 0.91T1), and the specific volume expands by over 60% (Vt = 1.61V1). From Eqs. 3-15, 3-20, and 3-22, the critical or throat velocity vt is obtained:
+~/k 2k
+~3t - RT1 -- a t - ~/kRT (3-23)
++1
+The first version of this equation permits the throat velocity to be calculated directly from the nozzle inlet conditions without any of the throat conditions being known. At the nozzle throat the critical velocity is clearly also the sonic velocity. The divergent portion of the nozzle permits further decreases in pressure and increases in velocity under supersonic conditions. If the nozzle is cut off at the throat section, the exit gas velocity is sonic and the flow rate remains
+
+
+58 NOZZLETHEORY AND THERMODYNAMIC RELATIONS
+a maximum. The sonic and supersonic flow condition can be attained only if the critical pressure prevails at the throat, that is, if P2/Pl is equal to or less than the quantity defined by Eq. 3-20. There are, therefore, three different types of nozzles: subsonic, sonic, and supersonic, and these are described in Table 3-1. The supersonic nozzle is the one used for rockets. It achieves a high degree of conversion of enthalpy to kinetic energy. The ratio between the inlet and exit pressures in all rockets is sufficiently large to induce supersonic flow. Only if the absolute chamber pressure drops below approximately 1.78 atm will there be subsonic flow in the divergent portion of the nozzle during sea-level operation. This condition occurs for a very short time during the start and stop transients. The velocity of sound is equal to the propagation speed of an elastic pressure wave within the medium, sound being an infinitesimal pressure wave. If, therefore, sonic velocity is reached at any point within a steady flow system, it is impossible for a pressure disturbance to travel past the location of sonic or supersonic flow. Thus, any partial obstruction or disturbance of the flow downstream of the nozzle throat with sonic flow has no influence on the throat or upstream of it, provided that the disturbance does not raise the downstream pressure above its critical value. It is not possible to increase the throat velocity or the flow rate in the nozzle by further lowering the exit pressure or even evacuating the exhaust section. This important condition is often described as choking the flow. It is always established at the throat and not the nozzle exit plane. Chokedflow through the critical section of a supersonic nozzle may be derived from Eqs. 3-3, 3-21, and 3-23. It is equal to the mass flow at any section within the nozzle.
+TABLE 3--1. Nozzle Types
+Subsonic Sonic Supersonic
+Throat velocity
+Exit velocity
+Mach number
+Pressure ratio
+Shape
+V 1 < a t Vt -- a t Vt = a t
+V2 < a 2
+M2<l
+(k21)k/(k-1)
+P_L < _ _
+P2
+V 2 --- V t V2 > V t
+m 2 = M t = 1.0 M 2 > 1
+
+
+3.3. ISENTROPIC FLOW THROUGH NOZZLES 59
+rh - Atv------Zt= A t p l k V/i2/(k + 1)](1'+1)/(k-l) (3--24)
+v, ,/kRr,
+The mass flow through a rocket nozzle is therefore proportional to the throat area A t and the chamber (stagnation) pressure Pl; it is also inversely proportional to the square root of T/~ and a function of the gas properties. For a supersonic nozzle the ratio between the throat and any downstream area at which a pressure Px prevails can be expressed as a function of the pressure ratio and the ratio of specific heats, by using Eqs. 3-4, 3-16, 3-21, and 3-23, as follows:
+A__At= Vtv____zx_ k + 1 1/(k-l) /k k + 1 1 - (3-25) Ax Vxvt 2 k- 1
+When Px = P2, then A x / A t = A 2 / A t = E in Eq. 3-25. For low-altitude operation (sea level to about 10,000 m) the nozzle area ratios are typically between 3 and 25, depending on chamber pressure, propellant combinations, and vehicle envelope constraints. For high altitude (100 km or higher) area ratios are typically between 40 and 200, but there have been some as high as 400. Similarly, an expression for the ratio of the velocity at any point downstream of the throat with the pressure Px, and the throat velocity may be written from Eqs. 3-15 and 3-23:
+k-1 (k-1)/Ik (3-26)
+These equations permit the direct determination of the velocity ratio or the area ratio for any given pressure ratio, and vice versa, in ideal rocket nozzles. They are plotted in Figs. 3-4 and 3-5, and these plots allow the determination of the pressure ratios given the area or velocity ratios. When Px = P2, Eq. 3-26 describes the velocity ratio between the nozzle exit area and the throat section. When the exit pressure coincides with the atmospheric pressure (P2 = P3, see Fig. 2-1), these equations apply for optimum nozzle expansion. For rockets that operate at high altitudes, not too much additional exhaust velocity can be gained by increasing the area ratio above 1000. In addition, design difficulties and a heavy inert nozzle mass make applications above area ratios of about 350 marginal. Appendix 2 is a table of several properties of the Earth's atmosphere with agreed-upon standard values. It gives ambient pressure for different altitudes. These properties can vary somewhat from day to day (primarily because of solar activity) and between hemispheres. For example, the density of the atmosphere at altitudes between 200 and 3000 km can change by more than an order of magnitude, affecting satellite drag.
+
+
+6 0 N O Z Z L ETHEORY AND THERMODYNAMIC RELATIONS
+40
+3O 25
+,~H 20
+15
+10
+8
+6
+
+5
+_ - - . ~ . - - r " " i1-- ~ - - ~ ' ~ - 
+2.5 _ . _ -"
+~ 2 --~':-~.-~ .~-" -
+~.......:~':.~- =------ ~ _
+1.5
+] 1I
+'k = ~.xo..~// /
+//
+10 15 20 25 30 40 50 60 80 100 150 200 pl /p,
+300
+FIGURE 3-4. Area and velocity ratios as function of pressure ratio for the diverging section of a supersonic nozzle.
+Example 3-3. Design a nozzle for an ideal rocket that has to operate at 25 km altitude and give 5000 N thrust at a chamber pressure of 2.068 MPa and a chamber temperature of 2800 K. Assuming that k -- 1.30 and R = 355.4 J/kg-K, determine the throat area, exit area, throat velocity, and exit temperature.
+SOLUTION. At 25 km the atmospheric pressure equals 0.002549 MPa (in Appendix 2 the ratio is 0.025158 which must be multiplied by the pressure at sea level or 0.1013 MPa). The pressure ratio is
+P2/Pl -- P3/Pl = 0.002549/2.068 = 0.001232 = 1/811.3
+The critical pressure, from Eq. 3-20, is
+Pt -- 0.546 x 2.068 -- 1.129 MPa
+The throat velocity, from Eq. 3-23, is
+v t - RT 1 -- 355.4 x 2800 = 1060 m / s e c
++1 .3+1
+
+
+3,3. ISENTROPIC FLOW THROUGH NOZZLES 61
+600 500 
+400 
+300 250
+200
+150
+"" I00
+v
+/
+.b~// //'1.h
+. , . ¢ / I d`
+/ ¢"
+I" /" ~r j. .f
+_ I / j / .f
+80 Jr #
+j" ,, . / / .f
+60 j ~ .
+so / ~ I ./ /
+../.>. /
+40 - / ~ Velocityratio k - - l ~ . . - - - - - - - - - 4
+30 ~I~l I . . . . . . ~ ~ I iI~l" 3 ~r~
+25 1 ~" ' 1 - ---i-- --
+r f 1.40
+20 / 2
+15 300 500 1000 2000 3000 5000 10,000
+p, lp,
+FIGURE 3-5. Continuation of prior figure of area ratios and velocity ratios, but for higher pressure ratios in a supersonic nozzle.
+The ideal exit velocity is found from Eq. 3-16 or Fig. 3-5, using a pressure ratio of 811.3"
+v2= k_IRT1 1
+/2 x 1.30
+= V 1 . 3 0 - 1 355.4 x 2800 x 0.7869 = 2605 m/sec
+An approximate value of this velocity can also be obtained from the throat velocity and Fig. 3-4. The ideal propellant consumption for optimum expansion conditions is
+= F/v 2 -- 5000/2605 = 1.919 kg/sec
+The specific volume at the entrance to the nozzle equals
+V 1 - RT1/Pl = 355.4 x 2800/(2.068 x 106) = 0.481 m3/kg
+
+
+62 NOZZLE THEORY AND THERMODYNAMIC RELATIONS
+At the throat and exit sections the specific volumes are obtained from Eqs. 3-21 and 3-7:
+V t _ V l ( k 2 1 ) l / ( k - 1 ) ( ~ _ 3 ) 1/0.3
+- 0.481 - 0.766 m3/kg
+V2 = V1 -0.481(2.068/0.002549) 0.7692- 83.15 m3/kg
+The areas at the throat and exit sections and the nozzle area ratio A2/At are
+A t = rhVt/v t = 1.919 × 0.766/1060 = 13.87 cm2
+A 2 -- t h V 2 / v 2 -- 1.919 × 83.15/2605 = 612.5 cm2 E = A2/A t = 612.5/13.87 = 44.16
+An approximate value of this area ratio can also be obtained directly from Fig. 3-5 for k = 1.30 and Pl/P2 -- 811.2. The exit temperature is given by
+T 2 =. T l ( P 2 / P l ) (k-1)/k = 2 8 0 0 ( 0 . 0 0 2 5 4 9 / 2 . 0 6 8 ) 0.2307 = 597 K
+Thrust and Thrust Coefficient
+The efflux of the propellant gases or the momentum flux-out causes the thrust or reaction force on the rocket structure. Because the flow is supersonic, the pressure at the exit plane of the nozzle may be different from the ambient pressure and the pressure thrust component adds to the momentum thrust as given by Eq. 2-14:
+F = / ~ v 2 -+- (t92 - p 3 ) A 2 (2-14)
+The maximum thrust for any given nozzle operation is found in a vacuum where P3 = 0. Between sea level and the vacuum of space, Eq. 2-14 gives the variation of thrust with altitude, using the properties of the atmosphere such as those listed in Appendix 2. Figure 2-2 shows a typical variation of thrust with altitude. To modify values calculated for optimum operating conditions (P2 = P3) for given values of Pl, k, and A 2 / A t , the following expressions may be used. For the thrust,
+F - Fopt + p l A t - -~t (3-27)
+For the specific impulse, using Eqs. 2-5, 2-18, and 2-14,
+o*(p2 p3)
+I s - - (Is)op t -3t- ~ - - - (3---28)
+go Pl Pl
+
+
+3.3. ISENTROPIC FLOW THROUGH NOZZLES 63
+If, for example, the specific impulse for a new exit pressure P2 corresponding to a new area ratio A2/At is to be calculated, the above relations may be used. Equation 2-14 can be expanded by modifying it and substituting v2, vt and Vt from Eqs. 3-16, 3-21, and 3-23.
+F z A tz~t~o2 + (192-- p3)A 2
+v,
+=Atpl k - 1 k + l ~p__~21()k-1)/k1
+1 - + (102 -- P3)f12
+(3-29)
+The first version of this equation is general and applies to all rockets, the second form applies to an ideal rocket with k being constant throughout the expansion process. This equation shows that the thrust is proportional to the throat area At and the chamber pressure (or the nozzle inlet pressure) Pl and is a function of the pressure ratio across the nozzle Pl/P2, the specific heat ratio k, and of the pressure thrust. It is called the ideal thrust equation. The thrust coefficient CF is defined as the thrust divided by the chamber pressure Pl and the throat area At. Equations 2-14, 3-21, and 3-16 then give
+v2A2 P2 A2 p3A2
+CF= plAtV2 Pl At plAt
+- k-1 k+l 1
+P2 -- P3 A2
++-
+Pl At
+(3-30)
+The thrust coefficient CF is a function of gas property k, the nozzle area ratio e, and the pressure ratio across the nozzle Pl/P2, but independent of chamber temperature. For any fixed pressure ratio Pl/P3, the thrust coefficient CF and the thrust F have a peak when P2 = P3. This peak value is known as the optimum thrust coefficient and is an important criterion in nozzle design considerations. The use of the thrust coefficient permits a simplification to Eq. 3-29:
+F - CFAtp1 (3-31)
+Equation 3-31 can be solved for CF and provides the relation for determining the thrust coefficient experimentally from measured values of chamber pressure, throat diameter, and thrust. Even though the thrust coefficient is a function of chamber pressure, it is not simply proportional to Pl, as can be seen from Eq. 3-30. However, it is directly proportional to throat area. The thrust coefficient can be thought of as representing the amplification of thrust due to the gas expanding in the supersonic nozzle as compared to the thrust that would be exerted if the chamber pressure acted over the throat area only.
+
+
+64 N O Z Z L ETHEORY AND THERMODYNAMIC RELATIONS
+The thrust coefficient has values ranging from about 0.8 to 1.9. It is a convenient parameter for seeing the effects of chamber pressure or altitude variations in a given nozzle configuration, or to correct sea-level results for flight altitude conditions. Figure 3-6 shows the variation of the optimum expansion (P2--P3) thrust coefficient for different pressure ratios Pl/P2, values of k, and area ratio ~. The complete thrust coefficient is plotted in Figs 3-7 and 3-8 as a function of pressure ratio Pl/P3 and area ratio for k = 1.20 and 1.30. These two sets of curves are useful in solving various nozzle problems for they permit the evaluation of under- and over-expanded nozzle operation, as explained below. The values given in these figures are ideal and do not consider such losses as divergence, friction or internal expansion waves. When Pl/P3 becomes very large (e.g., expansion into near-vacuum), then the thrust coefficient approaches an asymptotic maximum as shown in Figs. 3-7 and 3-8. These figures also give values of CF for any mismatched nozzle (P2 ~ P3), provided the nozzle is flowing full at all times, that is, the working fluid does not separate or break away from the walls. Flow separation is discussed later in this section.
+Characteristic Velocity and Specific Impulse
+The characteristic velocity c* was defined by Eq. 2-18. From Eqs. 3-24 and 3-31 it can be shown that
+, plAt Isgo c v/kRT1
+c - ~ = ~ = ~ = (3-32)
+rn CF CF kv/[2/(k + 1)](k+l)/(k-1)
+It is basically a function of the propellant characteristics and combustion chamber design; it is independent of nozzle characteristics. Thus, it can be used as a figure of merit in comparing propellant combinations and combustion chamber designs. The first version of this equation is general and allows the determination of c* from experimental data of rh, Pl, and At. The last version gives the maximum value of c* as a function of gas properties, namely k, the chamber temperature, and the molecular mass 9J~, as determined from the theory in Chapter 5. Some values of c* are shown in Tables 5-4 and 5-5. The term c*-efficiency is sometimes used to express the degree of completion of the energy release and the creation of high temperature, high pressure gas in the chamber. It is the ratio of the actual value of c*, as determined from measurements, and the theoretical value (last part of Eq. 3-32), and typically has a value between 92 and 99.5 percent. Using Eqs. 3-31 and 3-32, the thrust itself may now be expressed as the mass flow rate times a function of the combustion chamber (c*) times a function of the nozzle expansion CF),
+
+
+.3 . . . . . . . . . . . . . . .
+~2
+2.2
+2.1
+2.0
+1.9
+1.8
+1.7
+1.6
+1.5
+1.4
+1.3
+1.2
+k-.~ ~. ~ ,-'"~
+/._~, •
+I
+_• J
+j \ ~.K ~- ~ "-T-F-,
+II
+~
+~ ' - - . " " - - - - " ' - . - ~ ~ -" e = 6 0 100 20 =3o
+k,
+I0 20 50 I00 200 500 I000 2000 5000 I0,000
+F I G U R E 3--6. Thrust coefficient C F as a function of pressure ratio, nozzle area ratio, and specific heat ratio for o p t i m u m expansion conditions ( P 2 - P3)"
+
+
+o~ 2.0
+O~
+1.8
+1.6
+1.4
+12
+1.0
+0.8
+0.6 2 4 6 8 10 20 40 Area ratio ¢ - Aa/At
+F I G U R E 3-7. Thrust coefficient C F v e r s u s nozzle area ratio for k - 1.20.
+60 80 I00
+
+
+2.0
+1.8
+1.6
+t l.4
+1.2
+1.0
+0.8
+0.6
+k= 1.30
+Line of optimum
+thrust coefficient P2=P3 \
+Region of flow separation.H.J,_~
+for conical and bell
+shaped nozzles
+2 4 6 8 10 20
+Area ratio e = A21A t
+40 60 80 100
+-,~ F I G U R E 3--8. T h r u s t coefficient CF versus nozzle a r e a r a t i o for k = 1.30.
+
+
+68 NOZZLE THEORY AND THERMODYNAMIC RELATIONS
+F = CFrhC* (3-33)
+Some authors use a term called the discharge coefficient CD which is merely the reciprocal of c*. Both Co and the characteristic exhaust velocity c* are used primarily with chemical rocket propulsion systems.
+The influence of variations in the specific heat ratio k on various parameters (such as c, c*Az/A t, Vz/Vt, or Is) is not as large as the changes in chamber temperature, pressure ratio, or molecular mass. Nevertheless, it is a noticeable factor, as can be seen by examining Figs. 3-2 and 3-4 to 3-8. The value of k is 1.67 for monatomic gases such as helium and argon, 1.4 for cold diatomic gases such as hydrogen, oxygen, and nitrogen, and for triatomic and beyond it varies between 1.1 and 1.3 (methane is 1.11 and ammonia and carbon dioxide 1.33). In general, the more complex the molecule the lower the value of k; this is also true for molecules at high temperatures when their vibrational modes have been activated. The average values of k and 9Jl for typical rocket exhaust gases with several constituents depend strongly on the composition of the products of combustion (chemical constituents and concentrations), as explained in Chapter 5. Values of k and 9Jl are given in Tables 5-4, 5-5, and 5-6.
+Example 3-4. What is percentage variation in thrust between sea level and 25 km for a rocket having a chamber pressure of 20 atm and an expansion area ratio of 6? (Use k = ~.30.)
+SOLUTION. At sea level: Pl/P3 = 20/1.0 = 20; at 25 km: Pl/P3 = 20/0.0251 = 754 (see Appendix 2). Use Eq. 3-30 or Fig. 3-8 to determine the thrust coefficient (hint: use a vertical line on Fig. 3-8 corresponding to A2/A t = 6.0). At sea level: CF = 1.33. At 25 km: CF = 1.64. The thrust increase = (1.64- 1.33)/1.33 = 23%.
+Under-and Over-Expanded Nozzles
+An under-expanded nozzle discharges the fluid at an exit pressure greater than the external pressure because the exit area is too small for an optimum area ratio. The expansion of the fluid is therefore incomplete within the nozzle, and must take place outside. The nozzle exit pressure is higher than the local atmospheric pressure. In an over-expanded nozzle the fluid attains a lower exit pressure than the atmosphere as it has an exit area too large for optimum. The phenomenon of over-expansion for a supersonic nozzle is shown in Fig. 3-9, with typical pressure measurements of superheated steam along the nozzle axis and different back pressures or pressure ratios. Curve AB shows the variation of pressure with the optimum back pressure corresponding to the area ratio. Curves A C and AD show the variation of pressure along the axis for increasingly higher external pressures. The expansion within the nozzle proceeds normally for the
+
+
+3.3. ISENTROPICFLOWTHROUGHNOZZLES 69
+Divergence
+~ Subsonic flow
+i
+I ~ / f i Supersonicflow
+M=I / ~, downstreamofthroat;
+jet separationandinternal
+i ~ ~ f i obliqueshocksinside
+divergingsection
+\ I DI~
+c ' . . k ..
+~ Optimumexpansion
+I I ----im
+Distancealongnozzleaxis m._External
+expansionwaves
+at highaltitude
+FIGURE 3-9. Distribution of pressures in a converging-diverging nozzle for different flow conditions. Inlet pressure is the same, but exit pressure changes. Based on experimental data from A. Stodala.
+initial portion of the nozzle. At point I on curve AD, for example, the pressure is lower than the exit pressure and a sudden rise in pressure takes place which is accompanied by the separation of the flow from the walls (separation is described later). The non-ideal behavior of nozzles is strongly influenced by the presence of compression waves or shock waves inside the diverging nozzle section, which are strong compression discontinuities and exist only in supersonic flow. The sudden pressure rise in the curve ID is such a compression wave. Expansion waves, also strictly supersonic phenomena, match the flow from a nozzle exit to lower ambient pressures. Compression and expansion waves are described in Chapter 18. The different possible flow conditions in a supersonic nozzle are as follows:
+1. When the external pressure P3 is below the nozzle exit pressure P2, the nozzle will flow full but will have external expansion waves at its exit (i.e., under-expansion). The expansion of the gas inside the nozzle is incomplete and the value of CF and I~, will be less than at optimum expansion.
+
+
+7'0 NOZZLETHEORY AND THERMODYNAMIC RELATIONS
+2. For external pressures P3 slightly higher than the nozzle exit pressure P2, the nozzle will continue to flow full. This occurs until P2 reaches a value between about 25 and 40% of P3. The expansion is somewhat inefficient and CF and I~ will have lower values than an optimum nozzle would have. Shock waves will exist outside the nozzle exit section.
+3. For higher external pressures, separation of the flow will take place inside the divergent portion of the nozzle. The diameter of the supersonic jet will be smaller than the nozzle exit diameter. With steady flow, separation is typically axially symmetric. Figs. 3-10 and 3-11 show diagrams of separated flows. The axial location of the separation plane depends on the local pressure and the wall contour. The point of separation travels downstream with decreasing external pressure. At the nozzle exit the flow in the center portion remains supersonic, but is surrounded by an annular shaped section of subsonic flow. There is a discontinuity at the separation location and the thrust is reduced, compared to a nozzle that would have been cut off at the separation plane. Shock waves exist outside the nozzle in the external plume.
+4. For nozzles in which the exit pressure is just below the value of the inlet pressure, the pressure ratio is below the critical pressure ratio (as defined by Eq. 3-20) and subsonic flow prevails throughout the entire nozzle. This condition occurs normally in rocket nozzles for a short time during the start and stop transients.
+The method for estimating pressure at the location of the separation plane inside the diverging section of a supersonic nozzle has usually been empirical. Reference 3-4 shows separation regions based on collected data for several dozen actual conical and bell-shaped nozzles during separation. Reference 3-5 describes a variety of nozzles, their behavior, and methods used to estimate the location and the pressure at separation. Actual values of pressure for the over-expanded and under-expanded regimes described above are functions of the specific heat ratio and the area ratio (see Ref. 3-1). The axial thrust direction is not usually altered by separation, because a steady flow usually separates uniformly over a cross-section in a divergent nozzle cone of conventional rocket design. During transients, such as start and stop, the separation may not be axially symmetric and may cause momentary but large side forces on the nozzle. During a normal sea-level transient of a large rocket nozzle (before the chamber pressure reaches its full value) some momentary flow oscillations and non-symmetric separation of the jet can occur during over-expanded flow operation. Reference 3-4 shows that the magnitude and direction of transient side forces can change rapidly and erratically. The resulting side forces can be large and have caused failures of nozzle exit cone structures and thrust vector control gimbal actuators. References 3-5 and 3-6 discuss techniques for estimating these side forces. When the flow separates, as it does in a highly over-expanded nozzle, the thrust coefficient CF can be estimated if the point of separation in the nozzle is
+
+
+3.3. ISENTROPIC FLOW THROUGH NOZZLES 71
+known. Thus, CF can be determined for an equivalent smaller nozzle with an exit area equal to that at the point of separation. The effect of separation is to increase the thrust and the thrust coefficient over the value that they would have if separation had not occurred. Thus, with separated gas flow, a nozzle designed for high altitude (large value of e) would have a larger thrust at sea level than expected, but not as good as an optimum nozzle; in this case separation may actually be desirable. With separated flow a large and usually heavy portion of the nozzle is not utilized and the nozzle is bulkier and longer than necessary. The added engine weight and size decrease flight performance. Designers therefore select an area ratio that will not cause separation. Because of uneven flow separation and potentially destructive side loads, sea-level static tests of an upper stage or a space propulsion system with a high area ratio over-expanded nozzle are usually avoided; instead, a sea-level test nozzle with a much smaller area ratio is substituted. However, actual and simulated altitude testing (in an altitude test facility similar to the one described in Chapter 20) would be done with a nozzle having the correct large area ratio. The ideal solution that avoids separation at low altitudes and has high values of CF at high altitudes is a nozzle that changes area ratio in flight. This is discussed at the end of this section. For most applications, the rocket system has to operate over a range of altitudes; for a fixed chamber pressure this implies a range of nozzle pressure ratios. The condition of optimum expansion (P2 = P3) occurs only at one altitude, and a nozzle with a fixed area ratio is therefore operating much of the time at either over-expanded or under-expanded conditions. The best nozzle for such an application is not necessarily one that gives optimum nozzle gas expansion, but one that gives the largest vehicle flight performance (say, total impulse, or specific impulse, or range, or payload); it can often be related to a time average over the powered flight trajectory.
+Example 3-5. Use the data from Example 3-4 (Pl = 20 atm, E = 6.0, k = 1.30) but instead use an area ratio of 15. Compare the altitude performance of the two nozzles with different e by plotting their CF against altitude. Assume no shocks inside the nozzle.
+SOLUTION. For the e = 15 case, the optimum pressure ratio P l / P 3 -- Pl/192, and from Fig. 3-6 or 3-8 this value is about 180; P3 = 20/180 = 0.111 atm, which occurs at about 1400 m altitude. Below this altitude the nozzle is over-expanded. At sea level, Pl/]33 - " 20 and P3 = 1 atm. As shown in Fig. 3-10, separation would occur. From other similar nozzles it is estimated that separation will occur approximately at a cross-section where the total pressure is about 40% of p3, or 0.4 atm. The nozzle would not flow full below an area ratio of about 6 or 7 and the gas jet would only be in the center of the exit area. Weak shock waves and jet contraction would then raise the exhaust jet's pressure to match the one atmosphere external pressure. If the jet had not separated, it would have reached an exit pressure of 0.11 atm, but this is an unstable condition that could not be maintained at sea level. As the vehicle gains altitude, the separation plane would
+
+
+72 NOZZLETHEORY AND THERMODYNAMIC RELATIONS
+1.8
+1.7
+1.6
+1.5
+/ /J
+Continuously variable nozzle area ratio . . . . . . . .
+._.. -..
+e= 15.0
+c=6.0
+1.4
+1.3
+1.2 -
+I.I-
+1.0-
+/ Exit plane .......
+Separated flow 1
+II
+10,000 20,000
+/ . E x h a u s t plume at sea level
+Contour of
+~ plume at about
+3000m altitude
+"....
+[ - - Separation plane Contourat
+about 7000m
+III1
+30,000 40,000 50,000 60,000 Altitude, m
+FIGURE 3--10. Thrust coefficient C F for two nozzles with different area ratios. One has jet separation below about 7000 m altitude. The fully expanded exhaust plume is not shown in the sketch.
+gradually move downstream until, at an altitude of about 7000 m, the exhaust gases would occupy the full nozzle area. The values of CF can be obtained by following a vertical line for e - 15 and e = 6 in Fig. 3-8 for different pressure ratios, which correspond to different altitudes. Alternatively, Eq. 3-30 can be used for better accuracy. Results are similar to those plotted in Fig. 3-10. The lower area ratio of 6 gives a higher CF at low altitudes, but is inferior at the higher altitudes. The larger nozzle gives a higher CF at higher altitudes.
+Figure 3-11 shows a comparison of altitude and sea-level behavior of three nozzles and their plumes at different area ratios for a typical three-stage satellite launch vehicle. When fired at sea-level conditions, the nozzle of the third stage with the highest area ratio will experience flow separation and suffer a major performance loss; the second stage will flow full but the external plume will contrast; since P2 < P3 there is a loss in Is and F. There is no effect on the first stage nozzle.
+Example 3--6. A rocket engine test gives the following data: thrust F - 53,000 lbf, propellant flow r h - 208 lbm/sec, nozzle exit area ratio Az/A t -10.0, atmospheric
+
+
+Stage
+Booster
+or first
+stage
+Second
+stage
+Third
+stage
+A 2/At
+10
+40
+3.3. ISENTROPIC FLOW THROUGH NOZZLES 7 3
+During flight
+h(km) Is (sec)
+Nozzle flows full,
+slight underexpansion
+During sealevel static tests
+h(km) Is (sec)
+267 ~ - - ~ _ I ~ 0 267
+Nozzle flows full
+Underexpansion~~
+24
+_,,,-"-P
+312 [ _ ~ . ~ ] --------~- 0 254
+Overexpansion,
+slight contraction
+Underexpansion
+,oo 334 o
+Flow separation
+caused by
+overexpansion
+245
+FIGURE 3-11. Simplified sketches of exhaust gas behavior of three typical rocket nozzles for a three-stage launch vehicle. The first vehicle stage has the biggest chamber and the highest thrust but the lowest nozzle area ratio, and the top or third stage usually has the lower thrust but the highest nozzle area ratio.
+pressure at test station (the nozzle flows full) P3 = 13.8 psia, and chamber pressure p~ = 620 psia. The test engineer also knows that the theoretical specific impulse is 289 sec at the standard reference conditions of p~ = 1000 psia and P3 = 14.7 psia, and that k = 1.20. Correct the value of the thrust to sea-level expansion and the specific impulse corresponding. Assume the combustion temperature and k do not vary significantly with chamber pressure; this is realistic for certain propellants.
+SOLUTION. The actual pressure ratio was Pl/P3 = 620/13.8--44.9; the ideal pressure ratio at standard conditions would have been equal to 1000/14.7 = 68.0 and the actual pressure ratio for expansion to sea level would have been 620/14.7 = 42.1. The thrust coefficient for the test conditions is obtained from Fig. 3-7 or from Eq. 3-30 as CF = 1.52 (for Pl/P3 = 44.9, e = 10 and k = 1.20). The thrust coefficient for the corrected sea-level conditions is similarly found to be 1.60. The thrust at sea level would have been F = 53,000 (1.60/1.52) = 55,790 lbf. The specific impulse would have been
+Is = F/;v = 53,000/208(1.60/1.52) = 268 sec
+
+
+74 NOZZLE THEORY AND THERMODYNAMIC RELATIONS
+The specific impulse can be corrected in proportion to the thrust coefficient because k, T, and therefore c* do not vary with Pl; Is is proportional to c if rh remains constant. The theoretical specific impulse is given for optimum expansion, i.e., for a nozzle area ratio other than 10.0. From Fig. 3-6 or 3-7 and for Pl/P2 = 68.0 the thrust coefficient is 1.60 and its optimum area ratio approximately 9.0. The corrected specific impulse is accordingly 255 (1.60/1.51)= 270 sec. In comparison with the theoretical specific impulse of 289 sec, this rocket has achieved 270/289 or 93.5% of its maximum performance.
+Figs. 3-10 and 3-11 suggest that an ideal design for an ascending (e.g., launch) rocket vehicle would have a "rubber-like" diverging section that could be lengthened so that the nozzle exit area could be made larger as the ambient pressure is reduced. The design would then allow the rocket vehicle to attain its maximum performance at all altitudes as it ascends. As yet we have not achieved a simple mechanical hardware design with this full altitude compensation similar to "stretching rubber." However, there are a number of practical nozzle configurations that can be used to alter the flow shape with altitude and obtain maximum performance. They are discussed in the next section.
+Influence of Chamber Geometry
+When the chamber has a cross section that is larger than about four times the throat area (A1/At > 4), the chamber velocity vl, can be neglected, as was mentioned in explaining Eqs. 3-15 and 3-16. However, vehicle space or weight constraints often require smaller thrust chamber areas for liquid propellant engines and grain design considerations lead to small void volumes or small perforations or port areas for solid propellant motors. Then ~31 can no longer be neglected as a contribution to the performance. The gases in the chamber expand as heat is being added. The energy necessary to accelerate these expanding gases within the chamber will also cause a pressure drop and an additional energy loss. This acceleration process in the chamber is adiabatic (no heat transfer) but not isentropic. This loss is a maximum when the chamber diameter is equal to the nozzle diameter, which means that there is no converging nozzle section. This has been called a throatless rocket motor and has been used in a few tactical missile booster applications, where there was a premium on minimum inert mass and length. The flight performance improvement due to inert mass savings supposedly outweighs the nozzle performance loss of a throatless motor. Table 3-2 lists some of the performance penalties for three chamber area ratios. Because of this pressure drop within narrow chambers, the chamber pressure is lower at the nozzle entrance than it would be if A1/At had been larger. This causes a small loss in thrust and specific impulse. The theory of this loss is given in Ref. 3-7.
+
+
+3.4. NOZZLE CONFIGURATIONS 75
+TABLE 3--2. Estimated Losses for Small-Diameter Chambers
+Specific Throat Thrust Impulse Chamber-to-Throat Pressure Reduction Reduction Area Ratio (%) (%) (%)
+cx~ 100 0 0 3.5 99 1.5 0.31 2.0 96 5.0 0.55 1.0 81 19.5 1.34
+k = 1.20; Pl/P2-- 1000.
+3.4. NOZZLE CONFIGURATIONS
+A number of different proven nozzle configurations are available today. This section describes their geometries and performance. Other chapters (6, 8, 11, 14, and 16) discuss their materials, heat transfer, or application, and mention their requirements, design, construction, and thrust vector control. Nozzles and chambers are usually of circular cross section and have a converging section, a throat at the narrowest location (minimum cross section), and a diverging section. Nozzles can be seen in Figs. 1-4, 1-5, 1-8, 2-1, 3-11 to 313, 3-15, 10-2 to 10-5, 10-16, 11-1 to 11-3, and 14-6 to 14-8. Refs. 3-5 and 3-8 describe many nozzle configurations. The converging nozzle section between the chamber and the nozzle throat has never been critical in achieving high performance. The subsonic flow in this section can easily be turned at very low pressure drop and any radius, cone angle, wall contour curve, or nozzle inlet shape is satisfactory. A few small attitude control thrust chambers have had their nozzle at 90 degrees from the combustion chamber axis without any performance loss. The throat contour also is not very critical to performance, and any radius or other curve is usually acceptable. The pressure gradients are high in these two regions and the flow will adhere to the walls. The principal difference in the different nozzle configurations is found in the diverging supersonic-flow section, as described below. The wall surface throughout the nozzle should be smooth and shiny to minimize friction, radiation absorption, and convective heat transfer due to surface roughness. Gaps, holes, sharp edges, or protrusions must be avoided. Six different nozzle configurations are shown in Fig. 3-12 and each will be discussed. The first three sketches show conical and bell-shaped nozzles. The other three have a center body inside the nozzle and have excellent altitude compensation. Although these last three have been ground tested, to date none of them has flown in a space launch vehicle. The lengths of several nozzle types are compared in Fig. 3-13. The objectives of a good nozzle configuration are to obtain the highest practical Is, minimize inert nozzle mass, and conserve length
+
+
+.o.'}4
+Shape
+Flow
+uwintdherexpansion
+at altitude
+Flow
+owvitehrexpansion
+(sea level)
+Mass flow
+distribution
+at exit or tip
+Cone Contoured or Contoured or Plug or
+(15° half angle) bell-full length bell shape, aerospike full
+shortened length
+Plug or
+aerospike.
+truncated or cut off
+Expansion
+-deflection
+Annular
+chamber
+Expansion waves
+,1 ~./ .1 ~. ,5/I/WIll"",
+,'.'4/ i i ~ I~, ,~ i i i ~ ~!~, ",' / I / V ~ / I I ~"
+~'" ~\ Diffused boundaries with air Y Trailing l
+waves -~-!'-.
+R ,r I ,n I I ~ l ~
+reglons
+Je! slelalrati~]~
+3
+boundari
+Jets contract outside nozzle Recirculation regions / ~/ ~ k j /~ / Altitude Sea Sea Altitude "~- -- level
+,jr ..... ~,eve, / ~ [ "~ ~ r - I N ~ .... -l-----r~i
+FIGURE 3-12. Simplified diagrams of several different nozzle configurations and their flow effects.
+
+
+3.4. NOZZLE CONFIGURATIONS 77
+20
+L tM
+E 15
+¢0 "0
+(0L¢-o
+0
+10
+t"
+E
+,e.0NN-- 5i
+0 0
+tY
+,-,0 0 ~ /
+/\0~ 6
+expanSionld' ,~lectlOnnozzle
+Oo ' 10 20 30 40
+E = A2/A t
+FIGURE 3--13. Length comparison of several types of nozzles. (Taken in part from G. V. R. Rao, "Recent Developments in Rocket Nozzle Configurations," American Rocket Society Journal, Vol. 31, No. 11, November 1961.)
+(shorter nozzles can reduce vehicle length, vehicle structure, and vehicle inert mass).
+Cone-and Bell-Shaped Nozzles
+The conical nozzle is the oldest and perhaps the simplest configuration. It is relatively easy to fabricate and is still used today in many small nozzles. A theoretical correction factor 2 can be applied to the nozzle exit momentum of an ideal rocket with a conical nozzle exhaust. This factor is the ratio between the momentum of the gases in a nozzle with a finite nozzle angle 2c~ and the momentum of an ideal nozzle with all gases flowing in an axial direction:
+1
+2 -- ~ (1 + cos c~) (3-34)
+The variation of 2 with different values of a is shown in Table 3-3 for any nozzle that has uniform mass flow per unit exit area. For ideal rockets 2 = 1.0. For a rocket nozzle with a divergence cone angle of 30 ° (half angle oe - 15°), the exit momentum and therefore the exhaust velocity will be 98.3% of the velocity calculated by Eq. 3-15b. Note that the correction factor 2 only applies
+
+
+78 NOZZLETHEORY AND THERMODYNAMIC RELATIONS
+TABLE 3-3. Nozzle Angle Correction Factor for Conical Nozzles
+Nozzle Cone Divergence Half Angle, ot (deg) Correction Factor, 2
+0 1.0000 2 0.9997 4 0.9988 6 0.9972 8 0.9951 10 0.9924 12 0.9890 14 0.9851 15 0.9830 16 0.9806 18 0.9755 20 0.9698 22 0.9636 24 0.9567
+to the first term (the momentum thrust) in Eqs. 2-14, 3-29, and 3-30 and not to the second term (pressure thrust). A small nozzle divergence angle causes most of the momentum to be axial and thus gives a high specific impulse, but the long nozzle has a penalty in rocket propulsion system mass, vehicle mass, and also design complexity. A large divergence angle gives short, lightweight designs, but the performance is low. There is an optimum conical nozzle shape and length (typically between 12 and 18 degrees half angle) and it is usually a compromise which depends on the specific application and flight path. The bell-shaped or contour nozzle (see Figs. 3-12 and 3-13) is probably the most common nozzle shape today. It has a high angle expansion section (20 to 50°) right behind the nozzle throat; this is followed by a gradual reversal of nozzle contour slope so that at the nozzle exit the divergence angle is small, usually less than a 10° half angle. It is possible to go to large divergence angles immediately behind the throat (20 to 50°) because the high relative pressure, the large pressure gradient, and the rapid expansion of the working fluid do not allow separation in this region unless there are discontinuities in the nozzle contour. The expansion in the supersonic bell nozzle is more efficient than in a simple straight cone of similar area ratio and length, because the wall contour is designed to minimize losses, as explained later in this section. For the past several decades most of the nozzles have been bell shaped. A change of flow direction of a supersonic gas in an expanding wall geometry can only be achieved through expansion waves. An expansion wave occurs at a thin surface, where the flow velocity increases and changes its flow direction slightly, and where the pressure and temperature drop. These
+
+
+3.4. NOZZLE CONFIGURATIONS 7'9
+wave surfaces are at an oblique angle to the flow. As the gas passes through the throat, it undergoes a series of these expansion waves with essentially no loss of energy. In the bell-shaped nozzle shown in Fig. 3-14 these expansions occur internally in the flow between the throat and the inflection location I; the area is steadily increasing like a flare on a trumpet. The contour angle Oi is a maximum at the inflection location. Between the inflection point I and the nozzle exit E the flow area is still increasing, but at a diminishing rate, allowing further gas expansion and additional expansion waves. However, the contour of the nozzle wall is different and the change in cross-sectional area per unit length is decreasing. The purpose of this last segment of the contoured nozzle is to have a low divergence loss as the gas leaves the nozzle exit plane. The angle at the exit 0e is small, usually less than 10°. The difference between Oi and 0e is called the turn-back angle. When the gas flow is turned in the opposite direction (between points I and E) oblique compression waves will occur. These compression waves are thin surfaces where the flow undergoes a mild shock, the flow is turned, and the velocity is actually reduced slightly. Each of these multiple compression waves causes a small energy loss. By carefully determining the wall contour (by an analysis that uses a mathematical tool called the method of characteristics), it is possible to balance the oblique expansion waves with the oblique compression waves and minimize the energy loss. The analysis leading to the nozzle contour is presented in Chapter 20.33 of Ref. 3-3 and also in Refs. 3-8 to 3-11; it is based on supersonic aerodynamic flow, the method of characteristics (Ref. 3-1), and the properties of the expanding gas. Most of the rocket organizations have computer codes for this analysis. The radius of curvature or the contour shape at the throat region have an influence on the contour of the diverging bell-shaped nozzle section. The length of a bell nozzle is usually given a fraction of the length of a reference conical nozzle with a 15° half angle. An 80% bell nozzle has a length (distance between throat plane and exit plane) that is 20% shorter than a comparable 15° cone of the same area ratio. Ref. 3-9 shows the original presentation by Rao of the method of characteristics applied to shorter bell nozzles. He also determined that a parabola was a good approximation for the bell-shaped contour curve (Ref. 3-3, Section 20.33), and parabolas have actually been used in some nozzle designs. The top part of Fig. 3-14 shows that the parabola is tangent (Oi) at point I and has an exit angle (0e) at point E and a length L that has to be corrected for the curve TI. These conditions allow the parabola to be determined by simple geometric analysis or geometric drawing. A throat approach radius of 1.5 rt and a throat expansion radius of 0.4 rt were used. If somewhat different radii had been used, the results would have been only slightly different. The middle set of curves gives the relation between length, area ratio, and the two angles of the bell contour. The bottom set of curves gives the correction factors, equivalent to the 2 factor for conical nozzles, which are to be applied to the thrust coefficient or the exhaust velocity, provided the nozzles are at optimum expansions, that is, P2 = P3.
+
+
+80 NOZZLETHEORY AND THERMODYNAMIC RELATIONS
+~e = 11° 8e =8.5 °
+Location of 5u" ~.----"~,,cogtOOl
+inflection ~'¢~2~% ~e~c,~££~ I
+1. b q / O ; 4 r t / \ ei = 30° i
+T~ I I
+I= L = 9.96 (60%) I
+L = 11.94__(80%_~_)_"-I ___ ~1
+N o z z l e -J 'r2 throat '
+Leone = r2 - rt tan 0
+= 5.00
+° 4°I
+"~ ~ 60% length
+~ ~) 70% length
+-o 80% length
+(~)~" 30 ~ ~90% length
+:~ (- 100% length
+.~E--_(~ 20
+" ~ ~ 20 ~ , . . . . . . ~ I,
+(~ (D 60% length
+~ . ~ . . L ~ _ !'.70% length
+" (~ 10 ~ 8 0 % length
+--~)
+(- ~ ~ ~ 9 0 % length
+K ~ a J ~ R ~ ~ J 1"100% length
+0 10 20 30 40 50 Expansion area ratio E
+100
+L
+o 99
+o
+E
+~0 9 8 ID
+~OO 9 7
+ONN
+z 96
+95
+111
+Bell nozzles 10 ~ ~ ~
+301 / . . , ~ . ~ 15 deg I::oint (100%)
+2"//,,/ /
+e//
+// / Conical / i r n,:)zzl .=
+60 70 80 90 100
+Percent of length of a 15 deg half-angle
+conical nozzle with same area as bell shape
+
+
+3.4. NOZZLE CONFIGURATIONS 81
+TABLE 3-4. Data on Several Bell-Shaped Nozzles
+Area Ratio 10 25 50
+Cone (15° Half Angle)
+Length (100%) a 8.07 14.93 22.66 Correction factor 2 0.9829 0.9829 0.9829 80% Bell Contour
+Lengtha 6.45 11.94 18.12 Correction factor 2 0.985 0.987 0.988 Approximate half angle at inflection point and exit 25/10 30/8 32/7.5 (degrees)
+60% Bell Contour
+Lengtha 4.84 9.96 13.59 Correction factor 2 0.961 0.968 0.974 Approximate half angle at inflection point and exit 32.5/17 36/14 39/18 (degrees)
+aThe length is given in dimensionless form as a multiple of the throat radius, which is one.
+Table 3-4 shows data for parabolas developed from this figure, which allow the reader to apply this method and check the results. The table shows two shortened bell nozzles and a conical nozzle, each for three area ratios. It can be seen that as the length has been decreased, the losses are higher for the shorter length and slightly higher for small nozzle area ratios. A 1% improvement in the correction factor gives about 1% more specific impulse (or thrust) and this difference can be significant in many applications. The reduced length is an important benefit, and it is usually reflected in an improvement of the vehicle mass ratio. The table and Fig. 3-14 show that bell nozzles (75 to 85% length) are just as efficient as or slightly more efficient than a longer 15° conical nozzle (100% length) at the same area ratio. For shorter nozzles (below 70% equivalent length) the energy losses due to internal oblique shock waves become substantial and such short nozzles are not commonly used today. For solid propellant rocket motor exhausts with small solid particles in the gas (usually aluminum oxide), and for exhausts of certain gelled liquid propellants, there is an impingement of these solid particles against the nozzle wall in
+FIGURE 3-14. Top sketch shows comparison sketches of nozzle inner wall surfaces for a 15° conical nozzle, an 80% length bell nozzle, a 60% length bell nozzle, all at an area ratio of 25. The lengths are expressed in multiples of the throat radius rt, which is one here. The middle set of curves shows the initial angle Oi and the exit angle 0e as functions of the nozzle area ratio and percent length. The bottom curves show the nozzle losses in terms of a correction factor. Adapted and copied with permission of AIAA from Ref. 6-1.
+
+
+82 NOZZLETHEORY AND THERMODYNAMIC RELATIONS
+the reversing curvature section between I and E in Fig. 3-14. While the gas can be turned by oblique waves to have less divergence, the particles (particularly the larger particles) have a tendency to move in straight lines and hit the walls at high velocity. The resulting abrasion and erosion of the nozzle wall can be severe, especially with the ablative and graphite materials that are commonly used. This abrasion by hot particles increases with turn-back angle. If the turnback angle and thus also the inflection angle Oi are reduced, the erosion can become acceptable. Typical solid rocket motors flying today have values of inflection angles between 20 and 26 ° and turn-back angles of 10 to 15°. In comparison, current liquid rocket engines without entrained particles have inflection angles between 27 and 50° and turn-back angles of between 15 and 30°. Therefore the performance enhancement caused by using a bell-shaped nozzle (high value of correction factor) is somewhat lower in solid rocket motors with solid particles in the exhaust. The ideal bell-shaped nozzle (minimum loss) is long, equivalent to a conical nozzle of perhaps 10 to 12°, as seen in Fig. 3-12. It has about the same length as a full-length aerospike nozzle. This is usually too long for reasonable vehicle mass ratios.
+Two-Step Nozzles. Several modifications of a bell-shaped nozzle have evolved that allow full or almost complete altitude compensation; that is, they achieve maximum performance at more than a single altitude. Figure 3-15 shows three concepts for a two-step nozzle, one that has an initial low area ratio Az/At for operation at or near the earth's surface and a larger second area ratio that improves performance at high altitudes. See Ref. 3-5. The extendible nozzle requires actuators, a power supply, mechanisms for moving the extension into position during flight, fastening and sealing devices. It has successfully flown in several solid rocket motor nozzles and in a few liquid engine applications, where it was deployed prior to ignition. Although only two steps are shown, there have been versions with three steps; one is shown in Fig. 11-3. As yet it has not made the change in area ratio during rocket firing. The principal concerns are a reliable rugged mechanism to move the extension into position, the hot gas seal between the nozzle sections, and the extra weight involved. The droppable insert concept avoids the moving mechanism and gas seal but has a potential stagnation temperature problem at the joint. It requires a reliable release mechanism, and the ejected insert creates flying debris. To date it has little actual test experience. See Ref. 3-12. The dual bell nozzle concept uses two shortened bell nozzles combined into one with a bump or inflection point between them, as shown in Fig. 3-15. During ascent it functions first at the lower area ratio, with separation occurring at the inflection point. As altitude increases and the gas expands further, the flow attaches itself downstream of this point, with the flow filling the full nozzle exit section and operating with the higher area ratio at higher performance. There is a small performance penalty for a compromised bell nozzle
+
+
+Extendible
+nozzle with
+two segments
+Droppable insert
+(mechanisms for holding,
+moving, or releasing the
+inserts are not shown)
+3.4. NOZZLECONFIGURATIONS 83
+Second nozzle exit segment
+• ,.
+I Chamber ~ First =-~ Second _1
+nozzle exit nozzle exit
+segment segment in
+(fixed to deployed position
+chamber) after moving aft
+J. . . .
+Chamber
+Center line
+Dual bell nozzle
+Protrusion or hump in contour ~
+~ ~'-~..Ring shaped
+[
+FIGURE 3--15. Simplified diagrams of three altitude-compensating two-step nozzle concepts.
+contour with a circular bump. To date there has been little experience with this concept.
+Nozzles with Aerodynamic Boundaries
+The group of two-step nozzle concepts described above corresponds to the performance represented by upper portions of the two fixed area ratio nozzle curves shown in Fig. 3-10; the performance of a continuously varying nozzle with full altitude compensation is shown by the dashed curve. When integrated over the flight time, the extra performance is important for high velocity missions such as the single stage to orbit application. The three nozzles shown on the right side of Fig. 3-12 offer full altitude compensation and are discussed next. Refs. 3-5 and 3-8 give more information. The plug nozzle or aerospike nozzle has an annular doughnut-shaped chamber with an annular nozzle slot. An alternate version has a number of individual small chambers (each with low area ratio short nozzles, a round throat, and a rectangular exit) arranged in a circle around a common plug or spike. The outside aerodynamic boundary of the gas flow in the divergent section of
+
+
+84 N O Z Z L ETHEORY AND THERMODYNAMIC RELATIONS
+the nozzle is the interface between the hot gas and the ambient air; there is no outer wall as in a conical or bell-shaped nozzle. As the external or ambient pressure is reduced during the ascending flight, this gas boundary expands outward, causes a change in pressure distribution on the central spike, and allows an automatic and continuous altitude compensation. The aerospike contour with the minimum flow losses turns out to be very long, similar in length to an optimum bell nozzle as shown in Figs. 3-12 and 3-13. The mass flow per unit exit area is relatively uniform over the cross section and the divergence losses are minimal. If the central plug is cut off or truncated and the wall contour is slightly altered, then the nozzle will be very short, as shown in Fig. 3-13; it will have some internal supersonic waves and will show a small but real loss in thrust compared to a nozzle with a full central spike. The pressure distribution and the heat transfer intensity vary on the inner contoured spike wall surface. Figure 8-14 shows a typical pressure distribution over the contoured spike surface at high and low altitudes. The pressure in the recirculating trapped gas of the subsonic region below the bottom plate also exerts a thrust force. The losses caused by the cut-off spike can be largely offset by injecting a small amount of the gas flow (about 1% of total flow) through this base plate into the recirculating region, thus enhancing the back pressure on the base plate. The advantages of the truncated aerospike are short length (which helps to reduce the length and mass of the flight vehicle), full altitude compensation, no flow separation from the wall at lower altitudes, and ease of vehicle/engine integration for certain vehicle configurations. The linear aerospike nozzle is a variation of the round axisymmetric aerospike nozzle. Basically, it is an unrolled version of the circular configuration. It is explained further in Chapter 8.2. In the expansion deflection nozzle (Fig. 3-12) the flow from the chamber is directed radially outward away from the nozzle axis. The flow is turned on a curved contour outer diverging nozzle wall. The nozzle has been shortened and has some internal oblique shock wave losses. The hot gas flow leaving the chamber expands around a central plug. The aerodynamic interface between the ambient air and gas flow forms an inner boundary of the gas flow in the diverging nozzle section. As the ambient pressure is reduced, the hot gas flow fills more and more of the nozzle diverging section. Altitude compensation is achieved by this change in flow boundary and by changes in the pressure distribution on the outer walls.
+Multiple Nozzles. If a single large nozzle is replaced by a cluster of smaller nozzles on a solid motor (all at the same cumulative thrust), then it is possible to reduce the nozzle length. Similarly, if a single large thrust chamber of a liquid engine is replaced by several smaller thrust chambers, the nozzle length will be shorter, reducing the vehicle length and thus the vehicle structure and inert mass. Russia has pioneered a set of four thrust chambers, each with 25%
+
+
+3.5. REAL NOZZLES 85
+of the total thrust, assembled next to each other and fed from the same liquid propellant feed system. This quadruple thrust chamber arrangement has been used effectively on many large Russian space launch vehicles and missiles. As seen in Fig. 3-13, this cluster is about 30% shorter than a single large thrust chamber. The vehicle diameter at the cluster nozzle exit is somewhat larger, the vehicle drag is somewhat higher, and there is additional engine complexity and engine mass.
+3.5. REAL NOZZLES
+In a real nozzle the flow is really two-dimensional, but axisymmetric. For simple single nozzle shapes the temperatures and velocities are not uniform over any one section and are usually higher in the central region and lower near the periphery. For example, the surface where the Mach number is one is a plane at the throat for an ideal nozzle; for two-dimensional flow it is typically a slightly curved surface somewhat downstream of the throat. If the velocity distribution is known, the average value of V2 can be determined for an axisymmetric nozzle as a function of the radius r.
+27r f0r2
+(VZ)average = A2 vzr dr (3-35)
+The 11 assumptions and simplifications listed in Section 1 of this chapter are only approximations that allow relatively simple algorithms and simple mathematical solutions to the analysis of real rocket nozzle phenomena. For most of these assumptions it is possible either (1) to use an empirical correction factor (based on experimental data) or (2) to develop or use a more accurate algorithm, which involves more detailed understanding and simulation of energy losses, the physical or chemical phenomena, and also often a more complex theoretical analysis and mathematical treatment. Some of these approaches are mentioned briefly in this section. Compared to an ideal nozzle, the real nozzle has energy losses and energy that is unavailable for conversion into kinetic energy of the exhaust gas. The principal losses are listed below and several of these are discussed in more detail.
+1. The divergence of the flow in the nozzle exit sections causes a loss, which varies as a function of the cosine of the divergence angle as shown by Eq. 3-34 and Table 3-3 for conical nozzles. The losses can be reduced for bell-shaped nozzle contours.
+2. Small chamber or port area cross sections relative to the throat area or low nozzle contraction ratios A1/At cause pressure losses in the chamber and reduce the thrust and exhaust velocity slightly. See Table 3-2.
+
+
+86 NOZZLE THEORY AND THERMODYNAMIC RELATIONS
+10.
+11.
+3. Lower flow velocity in the boundary layer or wall friction can reduce the effective exhaust velocity by 0.5 to 1.5%.
+4. Solid particles or liquid roplets in the gas can cause losses up to 5%, as described below. 5. Unsteady combustion and oscillating flow can account for a small loss. 6. Chemical reactions in nozzle flow change gas properties and gas temperatures, giving typically a 0.5% loss. See Chapter 5. 7. There is lower performance during transient pressure operation, for example during start, stop, or pulsing.
+8. For uncooled nozzle materials, such as fiber reinforced plastics or carbon, the gradual erosion of the throat region increases the throat diameter by perhaps 1 to 6% during operation. In turn this will reduce the chamber pressure and thrust by about 1 to 6% near the end of the operation and cause a slight reduction in specific impulse of less than 0.7%. 9. Non-uniform gas composition can reduce performance (due to incomplete mixing, turbulence, or incomplete combustion regions).
+Using real gas properties can at times change the gas composition, the value of k and 9J~, and this can cause a small loss in performance, say 0.2 to 0.7%.
+Operation at non-optimum nozzle expansion area ratio can reduce thrust and specific impulse. There is no loss if the vehicle always flies at the altitude for optimum nozzle expansion (P2 - P 3 ) - If it flies with a fixed nozzle area ratio at higher or lower altitudes, then there is a loss (during a portion of the flight) by up to 15% in thrust compared to a nozzle with altitude compensation, as can be seen in Figs. 3-7 and 3-8. It also reduces performance by 1 to 5%.
+Boundary Layer
+Real nozzles have a viscous boundary layer next to the nozzle walls, where the gas velocities are much lower than the free-stream velocities in the inviscid flow regions. An enlarged schematic view of a boundary layer is shown in Fig. 3-16. Immediately next to the wall the flow velocity is zero and then the boundary layer can be considered as being built up of successive annularshaped thin layers of increasing velocity until the free-stream velocity is reached. The low-velocity flow close to the wall is laminar and subsonic, but in the higher-velocity regions of the boundary layer the flow is supersonic and can become turbulent. The local temperature in part of the boundary layer can be substantially higher than the free-stream temperature because of the conversion of kinetic energy into thermal energy as the local velocity is slowed down and as heat is created by viscous friction. The layer right next to the wall will be cooler because of heat transfer to the wall. The gaseous
+
+
+3.5. REAL NOZZLES 8 7
+Nozzle exit li Nozzle wall ,.
+Boundary layer thickness
+Subsonic flow can
+bend up to 180°
+Typical
+steam line
+Subsonic portion of
+boundary layer
+Supersonic portion of boundary layer
+Wall thickness
+I'
+Boundary
+layer
+thickness
+, vw=O
+~ . :..'.::-:~
+51
+Velocity profile
+Nozzlewall
+I
+~~.:.:.J : Tw
+, ,r---..~
+I 21
+1 21
+Temperature profile
+FIGURE 3-16. Flow conditions at a nozzle exit lip at high altitude, showing streamlines, boundary layer, velocity and temperature profiles.
+boundary layer has a profound effect on the overall heat transfer to nozzle and chamber walls. It also has an effect on the rocket performance, particularly in applications with relatively long nozzles with high nozzle area ratios, where a relatively high proportion of the total mass flow (2 to 25%) can be in the lower-velocity region of the boundary layer. The high gradients in pressure, temperature, or density and the changes in local velocity (direction and magnitude) influence the boundary layer. Scaling laws for boundary layer phenomena have not been reliable. Theoretical approaches to boundary layer performance effects can be found in Chapters 26 to 28 of Reference 3-1 and in Reference 1-1. A truly satisfactory theoretical analysis of boundary layers in rocket nozzles has not yet been developed. Fortunately, the overall effect of boundary layers on rocket performance has been small. For most rocket nozzles the loss seldom exceeds 1% of specific impulse.

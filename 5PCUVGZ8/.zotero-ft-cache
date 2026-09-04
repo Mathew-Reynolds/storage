@@ -1,0 +1,375 @@
+Research Paper
+Experiment and simulation of supercritical hydrocarbon fuel in additively manufacture elliptical tubes
+Wen Luo a,c, Xinquan Tang b, Huaizhi Han a,c,*, Bensheng Xie a,c
+a School of Chemical Engineering, Sichuan University, Chengdu 610065, China
+b The No.5719 Factory of PLA, Chengdu 611936, China
+c Engineering Research Center of Combustion and Cooling for Aerospace Power, Ministry of Education, Sichuan University, Chengdu 610065, China
+ARTICLE INFO
+Keywords:
+Elliptical tube Ellipticity Roughness Additive manufacture Performance evaluation creation Empirical correlations
+ABSTRACT
+This study examines the supercritical hydrocarbon fuel flows through additive manufacturing elliptical tubes using experimental and numerical method. The effects of ellipticity, AM roughness and operation conditions on the flow behavior of supercritical fluid and heat transfer are investigated. To evaluate the comprehensive thermal-dynamic performance of AM elliptical tubes, the heat transfer quantity per unit pressure drop is defined and performance evaluation creation is used. Experimental results show the heat transfer quantity per unit pressure drop of AM elliptical tube is more than twice that of the circular one, and the PECHET is 1.3 times higher than that of the elliptical tube with vertical major axis. The numerical results indicate that HET obtains a higher center turbulence intensity than VET. The fHET increases with the decreasing ellipticity and increasing surface roughness. fHET decreases about 0.0125 when the surface roughness is reduced by 5 μm. NuHET increases with the increasing surface roughness, and the heat transfer capacity increases by up to 108 % with an increase in roughness from 5 to 45 μm. Finally, the correlations of friction factor and Nusselt number for elliptical tube are concluded out, considered the AM roughness and ellipticity, based on the experimental and numerical data.
+1. Introduction
+Heat exchangers are unavoidable critical parts in the industrial processes involving heat transfer. They are used widely in chemical industries, oil refining, nuclear power, biochemical and gas turbine. Heat exchangers can be divided into heating and cooling according to the purpose of use. Active cooling is critical technology in new high speed aero engine. Both the cross section of cooling channel and the surface roughness make great effects on the pressure drop and heat exchanging efficiency. The booming metal additive manufacturing technology provides more new thinking for the enhance heat transfer technology[1–3], thermal management of high-flux devices, such as heat pipes[4,5] and compact heat exchanger[6,7] and discrete semiconductor packages [8,9]. In addition, the metal AM technology developing the optimized energy storage device related to multi-tube[10], hybrid PCM-air heat sink[11], lattice structures[12] ang triply periodic minimal surfaces [13]. For the increasing cooling requirements of more advanced aircraft, combining metal additive manufacturing and active cooling will become an effective method[14–18]. However, the inherent rough surface of
+metal additive manufacturing products not only influences the mechanical strength[19–22], but also the flow and heat transfer performance [23,24]. Kaur and Singh [25,26] reviewed heat exchangers made by metal additive manufacturing and found that the inherent surface roughness is a common and key consideration in determining the thermal and hydraulic characteristics. Dai et al. [27] investigated the effects of surface roughness on liquid friction and transition characteristics in micro and mini-channels, revealing that both the friction factor and critical Reynolds number gradually deviate from the predicted values of smooth tubes. Forooghi et al. [28] investigated that the effect of roughness morphology and its scaling on the enhancement of heat transfer relative to skin friction. Peeters and Sandham [29] gained insight into the modification of turbulent heat transfer by an irregular rough surface, which has been shown to act as a surrogate for Nikuradsetype roughness. Huang et al. [30] investigated the effects of surface roughness on laminar flow in an organic glass tube and found that the critical Reynolds number decreases linearly with increasing relative roughness. Min et al. [31] demonstrated the potential of additive manufacturing in design and fabrication of transpiration cooling structures with high cooling efficiencies and the desired tensile strength. Yan et al[32] focused on the post-treatment of a Gyroid-structured heat
+* Corresponding author at: School of Chemical Engineering, Sichuan University, Chengdu 610065, China. E-mail address: hanhz@scu.edu.cn (H. Han).
+Contents lists available at ScienceDirect
+Applied Thermal Engineering
+journal homepage: www.elsevier.com/locate/apthermeng
+https://doi.org/10.1016/j.applthermaleng.2024.124723 Received 11 July 2024; Received in revised form 15 September 2024; Accepted 22 October 2024
+Applied Thermal Engineering 258 (2025) 124723
+Available online 26 October 2024
+1359-4311/© 2024 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+
+
+exchanger, they thought the sub substantial surface roughness intrinsic to AM considerably constrains the deployment of Gyroid structured heat exchangers. Therefore, it is significant to investigate the effects of inherent roughness on the flow characteristics and heat transfer mechanism in AM heat exchange tubes. Compared to the circular tube, the elliptical one has superior aerodynamic properties[33]. Consequently, elliptical tubes find extensive applications in air conditioning[34,35], refrigeration[36], petrochemical[37] and power industries. Moawed and Ibrahim [38] employed an experimental method to investigate the free convection heat transfer from the inside surface of vertical, and inclined elliptical tubes of different axis ratios, orientation angles and inclination angles. In a subsequent study, Elshazly et al. [39] conducted a comparative analysis of convection characteristics between isothermal and constant heat flux elliptical tubes on free convection of air around the outer surface. In the numerical work of Ragueb et al. [40], it was demonstrated that in a fully developed region, the Nusselt number increases with the aspect ratio for non-Newtonian fluid flow inside an elliptical duct. In a study of the potential impact of elliptical tubes in industrial heat exchangers, Schulenberg[41] demonstrated that substantial reductions in total drag forces are feasible. Sheikholeslami et al. [36] performed experiments on boiling heat transfer in flattened tubes and discovered that an increase in the percentage of flattening resulted in enhanced the heat transfer. According to the available literature, Rocha et al.[42] presented the most comprehensive information. Their finding showed that the elliptical tube configuration is more effective than the circular one. And they observed a 18 % relative reduction in pressure drop for elliptical tubes in comparison to circular ones. Jang and Yang[43] conducted threedimensional numerical simulations to investigate the
+thermal–hydraulic characteristics of elliptical tubes. Their findings revealed that the heat transfer coefficient per unit pressure drop in an elliptical tube is 1.5 times higher than that in a circular tube. Guo and Wang[44] elucidated the mechanism of laminar convective heat transfer thorough the twisting of an elliptical tube with uniform wall temperature and heat flux in a numerical report. Tran and Wang [37] also conducted a numerical investigation into the performance of elliptical tubes, their results demonstrated that the outside temperature increases more rapidly in elliptical tubes with a higher elliptical tube ratio than a smaller ratio, given the same outside perimeters. A study conducted by Yogesh et al. [45] revealed that the friction factor increases as the ellipticity ratio increases. This phenomenon is attributed to the flow is more obstructed due to a lack of streamlining, which results in higher pressure drops across the elliptical tubes. Ota et al. [46] found that the minimum mean heat transfer rate for an elliptical tube is higher than that of a circular tube. Horvat et al. [47] conducted a numerical study on the transient heat transfer and fluid flow characteristics of circular, elliptical, and wing-shaped tubes with identical cross-sectional areas. Hasan and Sire ́n [48] demonstrated that a bundle of oval-shaped tubes exhibits superior combined thermal–hydraulic performance compared to equivalent circular tubes. Bouris et al. [49] introduced a novel tube cross-section featuring a parabolic shape at the upstream end and a semi-circular shape at the downstream end. Based on the literature review mentioned above, the major of studies have concentrated on the external flow resistance of elliptical tubes. Numerical calculations have been the primary method employed for investigating these tubes. Unfortunately, there is a paucity of systematic experimental data on the elliptical tubes with varying ellipticities. The elliptic tube is ubiquitous unit of heat exchangers. Nevertheless,
+Nomenclature
+A Heat transfer area, mm2 C Cross-section perimeter, mm D Equivalent diameter, mm I Electric current, A N Number R Semi-major-radius, mm r Semi-minor radius, mm
+S Cross-section area, mm2 U Voltage, V
+V Total fluid volume, mm3 Δp Pressure drop, KPa
+Subscripts
+AM additive manufacture CT Circular tube
+ET Elliptical tube HET ET with horizontal major axis VET ET with vertical major axis e ellipticity h hydraulic m mesh in Inlet p System pressure q Heat flux
+Greece symbols
+ρ Density, kg/m3 μ Viscosity, Kg/(m-s) cp constant pressure specific heat λ The thermal conductivity, W/(m-k) ξ Q/Δ p ε The relative roughness
+Fig. 1. The circular and elliptical tube uses in present research.
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+2
+
+
+conventional machining techniques encounter challenges in the fabrication of the standard elliptic cross-section of the mini tube. As shown in Fig. 1(a), the actual elliptical tube reported in literature[34] is more closely aligned with a flattened tube. Fortunately, the developing metal AM technology can fabricate the more standard elliptic heat exchange tubes in comparison to the rolling manufacture process, as illustrated in Fig. 1(b). However, the intrinsic surface roughness of additive manufacturing is bigger than that of conventional machining, which significantly affects the performance of flow and heat transfer. Therefore, the effects of AM roughness on the flow and heat transfer process are a primary concern for designers and scholars alike. The analysis of previous research indicates a lack of information on the heat transfer and flow resistance of supercritical hydrocarbon fluids in AM elliptical cooling channels. Additionally, the effects of various ellipticities and the inherent AM surface roughness from AM on heat transfer and flow behavior have not been considered systematically addressed. Therefore, in present investigation, an experimental investigation on the heat transfer and flow resistance of supercritical hydrocarbon fuel in AM elliptical tubes with five various ellipticities, as well as in circular tubes is conducted. Moreover, the effects of various surface roughness are investigated by numerical method based on the validates of experimental results.
+2. Experimental system
+The experimental apparatus used in this study is depicted in Fig. 2 (a). Due to the limited space and small diameter, as well as the symmetry of the elliptical tube, two rows of seven thermocouple wires are carefully soldered onto both the top and side walls. These wires are evenly distributed to measure the wall temperature, as depicted in Fig. 2 (b). The bulk temperature of the working fluid is measured using two Ktype armored thermocouples at the entrance and exit of the experimental AM elliptical channels.
+3. Research objects
+The experimental objects are circular and elliptical tubes produced using metal additive manufacturing, with horizontal and vertical major axes, as shown in Fig. 3(a)-(c), respectively. All tubes were designed with an equivalent hydraulic diameter of 2 mm and a wall thickness of 0.5 mm. All tubes are investigated in this research fabricated following the same AM process, the inherent morphology and profile are shown in Fig. 4(a)-(c). Additional geometric parameters are shown in Table1. The ellipticity (e) of elliptical tube is defined as the ratio between the length of the minor axis and that of the major axis of the elliptical tube. The elliptical tubes with various ellipticities are shown in Table2. The designed cross-sectional views of circular and elliptical tubes (e = 0.515) are presented in Fig. 3(d)-(f), respectively. The two ends of the elliptical tube are rounded to facilitate with standard sleeve. The operational
+Fig. 2. Schematics of (a) Experimental system; (b) Test section.
+Fig. 3. The geometric models are designed to fabricate (a) circle tube, (b) and (c) elliptical tube by metal additive manufacture technology; Cross sectional dimensions of different tubes are showed in (d)Circle tube; (e)Elliptical tube with horizontal major axis (HET); and (f)Elliptical tube with vertical major axis (VET).
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+3
+
+
+parameters considered for AM elliptical and circular tubes are presented in Table 3. In this study, the working fluid is fuel (n-decane, C10H22), a supercritical hydrocarbon that serves as the primary component of aviation. Its supercritical temperature is 617.7 K under a pressure of 4 MPa. The thermo-physical properties are obtained from the NIST database within the temperature range of 300–900 K and pressure range of 3–5 MPa, as illustrated in Fig. 5.
+3.1. Data reduction
+The fuel flow through the AM elliptical and circular tubes is heated by a direct current applied to both ends. The power is divided into two parts, most of them increases the temperature of fluid, the other is dissipated through the exterior wall. Thus, the heat absorbed by the fuel
+is the difference between the resistance heat I2R and the heat loss qloss. The qloss is related to the temperature difference between wall and environment. Thus, the thermal loss experiments are carried out with various heat power. The fitting correlation of temperature difference between wall and environment and heat loss is concluded out. As shown
+Fig. 4. The morphology and profile of AM tube tested by the white light interferometers. (a) The original morphology of AM tube; (b) The post morphology after flat processing; (c) One of contour line on the morphology after flat processing.
+Table 1
+The geometrical parameters of AM circular and elliptical tubes.
+AM tubes
+Semi-major radius R (mm)
+Semi-minor radius r (mm)
+hydraulic diameter Dh (mm)
+Cross-section perimeter C (mm)
+Circular 1.0 1.0 2.0 6.28 Elliptical 1.60 0.82 2.0 8.28 AM tubes
+Cross-section
+area S (mm2)
+Heat transfer
+area A (mm2)
+Total fluid volume V
+(mm3)
+Ratio of A/V
+Circular 3.14 1885 942.0 2.00 Elliptical 4.14 2282 1203.8 1.89
+Table 2
+The ellipticity of AM HETs.
+AM tubes HET1 HET2 HET3 HET4 HET5
+Ellipticity(e) 0.761 0.614 0.515 0.443 0.389
+Table 3
+The considered operational parameters of AM elliptical and circular tubes.
+Experiments p (MPa) mc| me (g/s) q(KW/m2) Experiments p (MPa) mc| me (g/s) q(KW/m2)
+Case 1 3.0 1.0|1.32 210 Case 9 4.0 1.2|1.58 210 Case 2 3.5 1.0|1.32 210 Case 10 4.0 1.4|1.84 210 Case 3 4.0 1.0|1.32 210 Case 11 4.0 1.0|1.32 150 Case 4 4.5 1.0|1.32 210 Case 12 4.0 1.0|1.32 180 Case 5 5.0 1.0|1.32 210 Case 13(3) 4.0 1.0|1.32 210 Case 6 4.0 0.6|0.79 210 Case 14 4.0 1.0|1.32 240 Case 7 4.0 0.8|1.05 210 Case 15 4.0 1.0|1.32 270 Case 8 4.0 1.0|1.32 210
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+4
+
+
+in Fig. 6(a), a satisfactory prediction accuracy was achieved for esti
+mating the heat loss that can satisfy the criterion (R2 = 0.9941), Thus, the difference between the heating power and the heat loss can be used to calculate the pure heat flux. And the reliability testing of the experimental system are shown in Fig. 6(b). The friction factor is the dimensionless number which reflects the performance of the flow resistance, its calculation as follows:
+f = 2 diΔp
+ρLu2 (1)
+di and L are the equivalent hydraulic diameter and length of the tube, respectively. Δp is the pressure drop in the test section (Pa), u represents the mean velocity of the fluid (m/s). In the current study, the axial heat transfer is not taken into account. The inner wall temperature (Tw, i) can be determined by applying a onedimensional internal heat source equation.
+Tw,i = Tw,o
+((
+φ ̇ ro2
+2 qlossro
+)
+ln ro
+ri
+φ ̇
+4 (ro2 ri2)
+)
+/λ (2)
+φ ̇ denoted as the heat generated per unit volume, λ is the thermal conductivity of the tube (1Cr18Ni9Ti). The power input on the tube can
+be computed as follows:
+q= Q
+Aw
+=U•I
+πdiL qloss (3)
+The parameter denoted as Aw signifies the internal surface area of the
+tube, m2. qloss denotes the heat dissipation from the experimental segment. The corresponding relationship is delineated in Fig. 6(a). The convective heat transfer coefficient can be determined through the following calculation method:
+h= q
+Tw,i Tb (4)
+Tw,i represents the average temperature of the inner wall, and Tb is the bulk temperatures of the fluid. The Nusselt number is expressed as:
+Nu = h • di
+λ (5)
+3.2. Analysis of uncertainty
+The precision of the experimental findings is contingent upon the
+Fig. 5. The related thermo-physical properties of n-decane[24].
+Fig. 6. Heat loss and experimental system verification. (a) Heat loss correlation of AM miniature channel; (b) Outside wall temperature at axial direction for same experiments at different time.[24].
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+5
+
+
+precision of the individual instruments and methodologies employed. In the present study, both sheathed thermocouples (K-type) and wall thermocouples are utilized, each exhibiting an accuracy of 0.5 % of the full scale. The pressure transducer and pressure difference gauge are found to have accuracies of 0.075 % and 0.065 %, respectively. Conversely, the Coriolis mass flow meter displays an uncertainty level of under 0.11 %. Geometric parameters (L and di) are determined to have uncertainties of 2 % and 0.2 %, respectively. The relative error of the pertinent experimental data are calculated using the equation derived from Moffat’s theoretical framework[50].
+δR =
+{ N ∑
+i=1
+( ∂R ∂Xi
+δXi
+)2 }12
+(6)
+The equation provided serves as the fundamental formula for conducting relative error analysis. Each component within the equation signifies the level of relative error y associated with an individual independent variable. This equation is applied to quantify all relative errors within the present research, as detailed in Table 4.
+4. Numerical setup
+The numerical work is divided into two parts. The initial phase entails a comparison of the circular and elliptical cross-sections on the flow and heat transfer of supercritical hydrocarbon fuels. The related work is designed to elucidate the mechanism of circular and elliptical tubes on the flow behavior and enhance heat transfer in HET. The second part investigates the effects of surface roughness (Rz) on the flow and heat transfer of supercritical hydrocarbon fuel in AM elliptical tubes. The commercial soft fluent 2020R2 was used, the SIMPLEC scheme was
+adopted and all absolute convergence criteria was set 10-5.
+4.1. Computational grid
+For ensuring grid reliability, accurate capture of both the velocity and thermal boundary layers is essential. An investigation into mesh independence is carried out for the HET(e = 0.515). A structured grid is generated for both elliptical and circular tubes, as depicted in Fig. 7, this grid is extended along the entire tube length. Fig. 8 shows the calculation and comparison of the friction factor and Nusselt number with those obtained from different grid systems. The friction factor and Nusselt number exhibits significant oscillations until Nm reaches 2.3 million, after which they only minor changes as Nm increases from 3 to 5.2 million. Therefore, the computational grids for HET consist of 2,974,140 hexahedral cells, which provide sufficient accuracy in simulating the flow and heat transfer characteristics. In this mesh, the distance between
+the nearest node and the tube wall is 0.0002 mm with y+<1. The growth ratio was set at 1.05, and the number of rows in the boundary layer was set at 15.
+4.2. Boundary conditions
+The inlet and outlet boundary conditions of the tube are set as mass flow inlet and pressure outlet, respectively. Since the heat flux of the wall is constant and it is a stationary wall, the boundary condition at the
+Table 4
+Relative error value of different parameters[24].
+Parameter Unit Comment
+Pressure drop % 1.95 Friction factor % 2.10 Temperature difference % 5.20 Convective heat transfer coefficient % 6.37 Nusselt number % 6.39
+Fig. 7. Generated grid in (a) Elliptical tube with horizontal major axis; (b) Circular tube; (c) Elliptical tube with vertical major axis.
+Nu f
+N
+Nu
+f
+Fig. 8. Numerical Nu and f vary with the increasing grid mesh.
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+6
+
+
+wall is defined as, uwall=0, vwall=0, andwwall = 0. The thermal boundary at wall is set as constant heat flux. The numerical research parameters are identical to the experimental operational parameters of AM elliptical tubes, with the system pressure being 4.0 MPa. Additionally, the numerical simulation includes five AM roughness parameters (5, 15, 25, 35, 45 μm) are applied to the wall for in present work.
+4.3. Model validation
+The numerically predict results of the elliptical tube are compared with experimental results for Reynolds number in the range of 6000–15000, an ellipticity of 0.515, and a surface roughness (Rz) of 45 μm. The numerical simulation of the flow and heat transfer of the AM elliptical tube is performed using shear stress transport (SST) k-w, Standard k-w and Standard k-ε turbulence models to assess their suitability for calculating flow and heat transfer in elliptical tubes. The Rz represents the sum of the average of the five largest contour peak heights and five largest contour valley depths within the sampling length (0.8 mm). Due to the sampling length is so short that Rz is the height of pins, and these peak and valley can decide the flow condition near the wall. The roughness height of internal wall is consistent under the specific processing conditions. Therefore, the equivalent sand-grain roughness model was used, and the roughness height is Rz. To simulate the flow and heat transfer correctly, the roughness constant was tried and choose roughness constant of 0.6 is more appropriate. The performance parameters of the present study, including the friction factor and Nusselt number, are compared with the corresponding experimental data, as shown in Fig. 9(a) and (b). The numerical results obtained using the k-w SST turbulent model exhibit the highest level of agreement with the experimental data. Therefore, the k-w SST turbulent model was selected to simulate the flow and heat transfer characteristics in AM elliptical tubes.
+5. Results and discussion
+5.1. Comparison of flow and heat transfer between AM elliptical and circular tube
+The pressure drop and friction factor for elliptical and circular tubes under various operational experimental conditions are shown in Fig. 10. The pressure drops of circular tube are higher than those of elliptical tubes, as the result of the higher velocity in the circular tube with the same hydraulic diameter, leading to stronger turbulence intensity of the supercritical hydrocarbon fuel compared to elliptical tubes. The difference in pressure drops between AM elliptical tubes with horizontal major axis (HET) and vertical major axis (VET) is small, indicating the direction of the major axis for elliptical tubes has little significant impact on the flow resistance. As shown in Fig. 10(a) and (b), the pressure drop and friction factor
+of elliptical and circular tube both increase with increasing Re. Further investigation finds that the fluid velocity in elliptical tubes is lower than that in circular one. This is due to the larger cross-sectional area of elliptical tubes at the same hydraulic diameter. In contrast to the rate of pressure drop increase, the rate of friction factor increase for AM circular tubes is greater than that for elliptical tubes. Furthermore, the friction factor of the elliptical tubes initially increases to maximum values and then undergoes minimal changes as the Re increases. The pressure drops in elliptical and circular tubes increase with increasing heat flux, as shown in Fig. 10(c). This increase can primarily be attributed to the change in the thermophysical properties of the supercritical hydrocarbon fuel under high pressure[51]. The increase in heat flux raises the fuel temperature, leading to a decrease in fuel viscosity. Concurrently, the increased fuel temperature reduces the fuel density. Moreover, as the heat flux increases, the decreasing rate of friction factor for AM circular tubes surpasses that of elliptical tubes. As can be observed in Fig. 10(e), the pressure drop decreases with increasing system pressure. This can be attributed to the density increase, which consequently leads to reduced velocity. Additionally, the viscosity increases leads to higher shear stress on the wall, resulting in reduced velocity. Both of these factors contribute to the decrease in the pressure drop and friction factor with the increasing system pressure. Upon comparing the heat transfer coefficient(h) and Nusselt number (Nu) of AM tubes from Fig. 11, it is evident that the HET is more effective for heat transfer. As illustrated in Fig. 11(a) and (b), the results indicate that the heat transfer coefficient(h) of the three AM tubes increases with an increasing Re. This can be attributed to the reduction of the thermal boundary layer and the escalation of turbulent intensity with increasing Re. When Re blow 10000, the hVET is almost equivalent to hCT. However, when Re exceeds 10000, the hVET surpasses hCT, and the difference between them increases significantly. This is due to 10,000 being the critical Reynolds number for full turbulence, and the effect of Reynolds number on heat transfer efficiency in the AM elliptical tube becomes more significant above this threshold. Observations indicate that both the heat transfer coefficient (h) and the Nusselt number (Nu) increase with the escalating heat flux lightly, as delineated in Fig. 11 (c) and (d). This trend can be ascribed to the accelerated fuel velocity, leading to a thinner thermal boundary layer and improves the heat transfer efficiency overall. The h and Nu of three AM tubes exhibit a downward trend as the system pressure escalates, as depicted in Fig. 11 (e) and (f). This trend can be explained by the fact that an increase in system pressure leads to higher fuel density, resulting in decreased the fuel velocity. Concurrently, the amplified system pressure augments the thermal conductivity of fuel, thereby enhancing the heat transfer process. However, it is important to note that the impact of the decreasing flow velocity on heat transfer is more significant than the influence of the increasing thermal conductivity.
+f
+Re
+Nu
+Re
+Fig. 9. The comparation between the numerical results and the experimental data of HET(e = 0.515); (a) Comparation of friction factor between experimental data and numerical results at various Re; (b) Comparation of Nusselt number between experimental data and numerical results with various Re.
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+7
+
+
+5.2. The mechanism of heat transfer enhancement in AM HET
+As illustrated in Fig. 12(a) and (c), owing to the influence of secondary flows within the cross section, the temperature adjacent to the side wall of HET is the highest. As depicted in Fig. 12 (d), the top temperature of HET is the lowest. This is because the thermal and velocity boundary layers exhibit considerably thicker along the sides of HET as shown in Fig. 12(a) and (b). While they are significantly thinner at the top and bottom. The interplay between wall curvature and secondary flow creates a more advantageous heat transfer boundary condition at
+the top of HET. Conversely, the thermal and velocity boundary layers within VET exhibit a markedly contrasting thickness. The distributions of velocity and turbulent kinetic energy along the central axis of three AM tubes are depicted in Fig. 13. It is discernible that the turbulent kinetic energy is higher in circular tube than in elliptical tubes. The increased speed observed in circular tubes can be attributed to their reduced cross-sectional area in comparison to elliptical tubes. As evident from Fig. 13(c) and (d), both the axial center velocity and turbulent intensity of HET surpass those of VET. This difference is the principal factor contributing to the superior heat transfer
+q
+q
+Re
+pp
+p
+Re
+TT
+f
+Re Re
+q
+pp
+p
+q
+TT
+f
+Re Re
+p
+qq
+p
+p
+TT
+f
+Fig. 10. Comparison of pressure drops and friction factor of AM elliptical and tubes. (a), (c) and (e) Pressure drops of tube varies with the various Re, heat flux(q) and system pressure(p), respectively. (b), (d) and (f) Shows the friction factor of tubes varies with the different Re, heat flux(q) and system pressure(p), respectively.
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+8
+
+
+capacities of AM HET compared to VET. Compared to circular tube, the heat transfer coefficient(h) of HET increases. This enhancement can be attributed to two primary mechanisms. Firstly, the elliptical tube design introduces high curvature at the corners of the cross-section, leading to significant capillary forces. This induces a secondary flow along the vertical axis of the duct, reducing heat resistance and increasing h. Simplified calculations, based on the Young-Laplace equation and assumption of perfectly circular corners in the elliptical tube, reveal that the capillary pressure at the corners of the
+HET (with a smaller internal height, △p ~ 146.6 Pa) exceeds that in the circular tube (△p ~ 54.7 Pa) by more than 2.68 times. The second mechanism involves achieving a larger cross-section aera within the confines of a constant hydraulic diameter of the tube. In addition, it is worth to note that the centerline velocity of HET is higher than that of VET, which can be explained that the HET has the bigger capacity of heat transfer. With the increasing temperature, the density and viscosity of fluid decrease, but the velocity increases.
+q
+q
+Re
+p
+h
+Re
+T p
+T
+Nu
+q
+Re
+Re p
+h
+q
+T
+pT
+Nu
+q
+q
+Re
+p
+Re
+h
+p
+TT
+Nu
+Fig. 11. Comparison of h and Nu of AM elliptical and circular tubes. (a), (c) and (e) Heat transfer coefficient of tube varies with the different Re, heat flux(q) and system pressure(p), respectively. (b), (d) and (f) Shows the Nu of tube vary with the different Re, heat flux(q) and system pressure(p), respectively.
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+9
+
+
+Vertical major axis Circular tube Horizontal major axis
+Vertical major axis Circular tube Horizontal major axis
+Fig. 12. Comparison of the temperature and velocity contours for three AM tubes. (a) The temperature contours of cross section; (b) The velocity contours of cross section; (c) Side wall temperature along the axis, and the temperature contours of B plane for three AM tubes; (d) Top wall temperature along the axis, and the temperature contours of A plane for three AM tubes.
+Horizontal major axis Vertical major axis Circular tube
+Horizontal major axis Vertical major axis Circular tube
+Fig. 13. Comparison of the velocity and turbulent kinetic energy contours for three AM tubes along the axis. (a) The center velocity and the velocity contour parallel to the direction of gravity; (b) The center turbulent intensity and turbulent kinetic energy contour parallel to the direction of gravity; (c) The velocity contour perpendicular to the direction of gravity; (d) The turbulent kinetic energy contour perpendicular to the direction of gravity.
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+10
+
+
+5.3. Performance evaluation criterion for AM elliptical tube
+Superior heat transfer performance is typically accompanied by a significant increase in pressure drop. To investigate how cross-sectional shapes impact the pressure drop and heat transfer of AM elliptical tubes with identical hydraulic diameters, the parameter ξ is introduced to represent heat transfer quantity per unit pressure drop.
+ξ= Q
+Δp (7)
+Here, Q and Δ p represents the quantity of heat transfer and pressure drop, respectively. Additionally, to evaluate the comprehensive thermal–hydraulic performance of the AM HET and VET, the f and Nu values of an AM circular tube are used as reference condition. The performance evaluation criterion (PEC) for different structures at a constant flow rate can be calculated as follows:
+PEC = (NuET/NuCT)
+(fET/fCT) (8)
+The comparison of the ξ values for three AM tubes within the experimental range is shown in Fig. 14(a). It is evident that the circular tube has the smallest ξ value, while the HET has the largest ξ value, and the VET falls in between. The ξ value of the HET is twice that of the circular tube and 1.5 times that of VET. These results indicate that the
+HET possesses the highest heat transfer capacity within the given range of operating parameters. Fig. 14(b) illustrates that all PEC values for the elliptical tube are greater than 1, and the PEC value for the HET is 1.3 times that of the VET. Additionally, the PEC of the elliptical tube decreases with an increase in q. Furthermore, it considered that a system pressure of 3.5 MPa is optimal, while a Re value of 8000 is the least effective heat transfer in AM elliptical tubes. Which can be explained by Re of 8000–12000 is the critical point of turbulent flow, however, the great surface roughness and the secondary flow in the elliptical tube advance the critical point of complete turbulent flow to 8000. With the increasing Re, the heat transfer performance enhanced. When 2300 < Re < 8000, the flow is in the transition region between laminar flow and turbulent flow, and the flow heat transfer is unstable, the PEC decreases with the increasing Re. Therefore, the PEC of both HET and VET achieved a minimum value at the Re of 8000.
+5.4. Effects of ellipticity on flow and heat transfer in tubes
+To investigate the effects of ellipticities (e) on heat transfer and flow characteristics of AM elliptical tubes, five elliptical tubes with ellipticities from 0.389 to 0.761 are designed, each with inner hydraulic diameter of 2 mm. Additionally, these tubes have the same surface roughness, as shown in Fig. 4. Fig. 15(a) illustrates that under experimental operational conditions, the circular tube has the biggest pressure drop, while elliptical tubes with different ellipticity show marginal
+q
+Q/ p
+Re
+p Re q
+pq
+PEC
+Re
+p Re q
+p
+Fig. 14. (a) Heat flow quantity per unit pressure drop of CT, HET and VET at various system pressure, Re and heat flux. (b) PEC of HET and VET at various p, Re and q.
+q
+q
+Re
+pp
+p
+Re
+TT
+f
+Fig. 15. Comparison of pressure drops (a) and friction factor (b) of AM circular and elliptical tubes with various ellipticities and Re.
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+11
+
+
+difference at the same Re. This can be attributed to the circular tube having the smallest flow area, whereas the variance in flow area among elliptical tubes with different ellipticities is minimal. Importantly, the friction factor of elliptical tubes increases with the increasing ellipticity. But friction factor of circular tube is not the smallest, hovering around that of an elliptical tube with e = 0.5. The effect of ellipticities and Renolds number on the heat transfer capacity for the circular and elliptical tubes with an internal hydraulic diameter of 2 mm is present in Fig. 16(a) and (b). The results suggest
+that the heat transfer coefficient significantly increases for elliptical tubes under all the test conditions, and similar behavior was observed at other velocities. Wilson et al.[52] related this behavior with the earlier transition to an annular flow regime for flattened tubes in comparison to the circular tube, which enables greater capacity of heat transfer capacities in annular flow regimes relative to stratified flow regimes. Therefore, elliptical tube has the better heat transfer performance than circular tube with same hydraulic diameter. However, the phenomenon of heat transfer increasing as the internal height of tube decreases was
+q
+q
+Re
+p
+h
+Re
+T p
+T
+Nu
+Fig. 16. (a)Comparison of heat transfer coefficient and (b)Nusselt number of AM circular and elliptical tubes with various ellipticities and Re.
+p/v
+Re
+q
+q
+e
+pp
+p
+e
+TT
+Re
+PEC
+PEC
+Fig. 17. (a) Comparison of pressure drop and Δp/v2; (b) PEC of AM elliptical tubes with various ellipticities.
+e
+e
+q
+q
+Re
+pp
+p
+Re
+TT
+f
+Fig. 18. Comparison of pressure drops (a) and friction factor (b) of AM HET(e = 0.515) with various roughness and Re.
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+12
+
+
+not observed, due to the impact of supercritical fluid on various elliptical tubes. As shown in Fig. 17(a), while the ellipticity smaller than 0.515, the ratio of pressure drop to velocity square of elliptic tube is greater than that of circular tube. Thus, the elliptical tube with ellipticity of 0.443 and 0.389 are bigger than that of circular tube. In addition, the PEC of elliptical tube with different ellipticities are compared of Fig. 17(b).
+5.5. Effects of surface roughness on flow and heat transfer in tubes
+To investigate the effects of roughness on the flow and heat transfer in elliptical tube, the Rz was chosen as the roughness height and adjust the roughness constant was adjusted to 0.6, enabling the k-w SST turbulent model to accurately simulate flow and heat transfer in elliptical tubes. The flow characteristics and heat transfer of an elliptical tube with an ellipticity of 0.515 and the surface roughness of 5 μm, 15 μm, 25 μm, 35 μm and 45 μm are illustrated in Figs. 18-19, respectively, for Reynolds number ranging from 6500 to 15000. As shown in Fig. 18(a), the pressure drop across the tubes increases with both surface roughness and Reynolds number. This is attributed to the increased obstruction of fluid flow and subsequent rise in pressure drop as the surface roughness increases. Consequently, the friction factor also increases with the rising surface roughness, as shown in Fig. 18(b). It can be observed that reducing the surface roughness by 5 μm leads to a decrease in the friction factor of approximately 0.0125. However, as the Reynolds number increases, the disparity in pressure drop between HETs with a surface roughness difference of 5 μm also increases, reaching up to 0.5 KPa at a Reynolds number of 15000. Fig. 19(a) and (b) illustrate the coefficient of heat transfer and Nusselt number, respectively, for HETs with varying surface roughness. The coefficient of heat transfer is directly proportional to the surface roughness area. At the Reynold number of 15000, the HET with surface roughness of 45 μm exhibits the highest coefficient of heat transfer, with an enhancement of 108 % compared to the HET with 5 μm roughness. As depicted in Fig. 18(b), the Nusselt number increases with both increasing surface roughness and Reynolds number. When Reynolds number increases from 6500 to 15000, the difference in Nusselt number for HETs with the surface roughness values differing by 5 μm range from 25 to 50.
+5.6. Friction factor and Nusselt number correlations
+Due to the lack of correlations of flow and heat transfer in the elliptical tube, a well-known correlation for predicting Nusselt number of circular tubes proposed by Dittus-Boelter, is adopted in the verification. Unfortunately, this classic correlation has been determined that
+cannot predict flow and heat transfer in AM HETs well, as shown in Fig. 20. Owing to the crucial of elliptical tubes in industry, and the empirical correlation is of great significance for the design of relevant equipment, new correlations of friction factor and Nusselt number need be developed. To predict the flow resistance of fuel in AM HET accurately, the correlation takes into account the effects of both ellipticities and surface roughness. The surface roughness needs dimensionless treatment, and the dimensionless roughness being the relative roughness(ε), which is defined as the ratio surface roughness to hydraulic diameter. Therefore, the dependent variable of the correlation is friction factor(f), and the independent variables are Re, e and ε. The general form of correlation is as follows:
+f = aRebecεd (9)
+To acquire the regression analysis coefficients, the classical least squares method was used to analyze the experimental data. The correlation of the friction factor for the elliptical tubes is Eq.10. As shown in Fig. 21(a), the error between the predicted value and experimental results is less than 20 %. Therefore, the fitting correlation can be used to predict the flow resistance when the supercritical hydrocarbon fuel flows through the elliptical tubes.
+f = 0.0391Re0.21e 0.86ε0.37 (10)
+e
+e
+q
+q
+Re
+p
+h
+Re
+T p
+T
+Nu
+Fig. 19. Comparison of heat transfer coefficient (a) and Nusselt number (b) of AM HET(e = 0.515) with various roughness and Re.
+Nu
+Nu
+Nu
+Fig. 20. Comparison on the experimental Nusselt number of AM elliptical tubes and the predicted Nusselt number from the correlation of Dittus-Boelter.
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+13
+
+
+In general, the correlation of Nu as a function of Re, Pr, e and ε of the experimental results is expressed as follows:
+Nu = aRebPrcef εg (11)
+where a, b, c, fand g are constants. The experimental data were fitted to obtain the constants by the least square method, and the following correlation can be obtained:
+Nu = 0.0075Re1.35Pr 0.63e0.3ε0.43 (12)
+where 6000 ≤ Re ≤ 15000, 1.3 ≤ Pr ≤ 2.5, 0.389 ≤ e ≤ 0.761, and 0.27% ≤ ε ≤ 2.5% The Nu calculated from Eq.12 is plotted versus the Nu calculated from the experimental data in Fig. 21(b). As shown in the figure, the maximum deviation between the correlation and experimental data was 20 %.
+6. Conclusions
+Experimental investigation was conducted to determine the supercritical thermodynamic of AM elliptical and circular tubes. The experimental results are analyzed to determine the effects of Re, heat flux, system pressure, ellipticity and direction of major axis of elliptical tube on the flow behavior and thermal performance. The heat transfer quantity per unit pressure drop is defined and PEC was used to evaluate the comprehensive heat transfer capacity. Numerical simulations are implemented to reveal the enhancement mechanisms of HET on the flow and heat transfer process. Moreover, the flow and heat transfer capacity of HETs with various AM surface roughness values was investigated through simulation and experimental validate. The conclusions of this study are presented below:
+(1) The pressure drops and friction factor of the AM circular tube are 1.2 times greater than those of the AM elliptical tube. The ξHET twice as great as ξCT. The pressure drop of HET and VET with same ellipticity is nearly the same. However, the h and Nu values of AM HET are about 1.2 times greater than those of VET. The ξHET is 1.5 times greater than ξVET. The PECHET is 1.3 times greater than PECVET. (2) The ξ of AM elliptical tube increases with system pressure and heat flux, but decreases with increasing Re. Initially, the PEC increases with system pressure, but then decreases, with 3.5 MPa identified as the optimal system pressure. The PEC decreases initially with increasing Re, but then increases, with Re = 10000 identified as the optimal Re.
+(3) Comparing with a circular tube, the low curvature wall of the HET is more conducive to the secondary flow from both sides of the wall. This results in a higher level of turbulence among the fluid particles within the section, which in turn enhances heat transfer. (4) The fHET increases as the ellipticity decreases. The annular flow regime in HET results in a greater heat transfer performance for HETs than for circular tubes with the same hydraulic diameter. Owing to the greater surface roughness with the bigger rough microstructure, which can destroy the flow and thermal boundary layer, the fHET and NuHET increase with the increasing roughness. (5) Base on numerical and experimental data, an empirical correlation between the friction factor and the Nusselt number for the HET have been proposed. Two correlations considered the effects of ellipticity, surface roughness and operating conditions on the flow and heat transfer comprehensively.
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+Acknowledgments
+This work was supported by the Scientific Research Start-up Funds for introducing Talent in the Sichuan University (No.20822041C4014), and National Science and Technology Major Project of China (2017-I0004-0004).
+Data availability
+Data will be made available on request.
+References
+[1] C.R. Isenhart, A.C. Hayes, G.L. Whiting, Additive manufacturing of scalable jet impingement and radial taper enhancements for improved flow boiling performance, Appl. Therm. Eng. 249 (2024). [2] A. Lorenzon, E. Vaglio, L. Casarsa, M. Sortino, G. Totis, G. Sarag`o, et al., Heat transfer and pressure loss performances for additively manufactured pin fin arrays in annular channels, Appl. Therm. Eng. 202 (2022) 117851. [3] K. Yan, H. Deng, Y. Xiao, J. Wang, Y. Luo, Thermo-hydraulic performance evaluation through experiment and simulation of additive manufactured Gyroidstructured heat exchanger, Appl. Therm. Eng. 241 (2024) 122402.
+f
+f
+Nu
+Nu
+Fig. 21. Comparison predicted values and experiment data of friction factor (a) and Nusselt number (b) of AM elliptical tubes.
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+14
+
+
+[4] M. Yun, W.-T. Hsu, D.I. Shim, J. Nam, J.H. Heo, J.-Y. Song, et al., Design and fabrication of heat pipes using additive manufacturing for thermal management, Appl. Therm. Eng. 236 (2024) 121561. [5] D. Jafari, W.W. Wits, B.J. Geurts, Phase change heat transfer characteristics of an additively manufactured wick for heat pipe applications, Appl. Therm. Eng. 168 (2020) 114890. [6] S. Das, E. Rasouli, T. Ziev, N. Lamprinakos, J. Seo, A. Rollett, et al., Design and techno economic optimization of an additively manufactured compact heat exchanger for high temperature and high pressure applications, Appl. Therm. Eng. 245 (2024) 122778. [7] R.P.P. da Silva, M.V.V. Mortean, K.V. de Paiva, L.E. Beckedorff, J.L.G. Oliveira, F. G. Brand ̃ao, et al., Thermal and hydrodynamic analysis of a compact heat exchanger produced by additive manufacturing, Appl. Therm. Eng. 193 (2021) 116973. [8] A.A. Lad, M.J. Hoque, S. Christian, Y. Zhao, J.C. Balda, W.P. King, et al., High power density thermal management of discrete semiconductor packages enabled by additively manufactured hybrid polymer-metal coolers, Appl. Therm. Eng. 220 (2023) 119726. [9] S.Y. Lee, K.W. Kim, D.H. Kim, M.S. Yang, J.W. Kim, G. Choi, et al., Optimization study on the uniform temperature of an additively manufactured cooler for a semiconductor heating device, Appl. Therm. Eng. 225 (2023) 120178. [10] R. Ge, G. Humbert, R. Martinez, M.M. Attallah, A. Sciacovelli, Additive manufacturing of a topology-optimised multi-tube energy storage device: Experimental tests and numerical analysis, Appl. Therm. Eng. 180 (2020) 115878. [11] D. Kong, Y. Zhang, S. Liu, Design of additively manufactured hybrid PCM-air heat sink with a two-stage channel for enhancing thermal performance, Appl. Therm. Eng. 218 (2023) 119325. [12] S. Piacquadio, M. Schirp-Schoenen, M. Mameli, S. Filippeschi, K.-U. Schr ̈oder, Experimental analysis of the thermal energy storage potential of a phase change material embedded in additively manufactured lattice structures, Appl. Therm. Eng. 216 (2022) 119091. [13] Z. Yang, T. Zhang, W. Li, Y. Zhou, X. Li, F. Liu, Experimental and numerical assessments of thermal transport in phase change material embedding additively manufactured triply periodic minimal surfaces: A comparative evaluation, Appl. Therm. Eng. 245 (2024) 122850. [14] R. Liu, Z. Wang, T. Sparks, F. Liou, J. Newkirk, Aerospace applications of laser additive manufacturing, Laser Addit. Manuf. (2017) 351–371.
+[15] O ̈ ZSOY K, DUMAN B, GÜLTEK ̇IN D ̇I. Metal part production with additive manufacturing for aerospace and defense industry. Uluslararası Teknolojik Bilimler Dergisi. 2019;11:9. [16] Singamneni S, LV Y, Hewitt A, Chalk R, Thomas W, Jordison D. Additive manufacturing for the aircraft industry: a review. Aeronaut Aerosp Eng. 2019;8:20. [17] G. Shi, C. Guan, D. Quan, D. Wu, L. Tang, T. Gao, An aerospace bracket designed by thermo-elastic topology optimization and manufactured by additive manufacturing, Chin. J. Aeronaut. 33 (2020) 1252–1259. [18] F. Careri, R.H.U. Khan, C. Todd, M.M. Attallah, Additive manufacturing of heat exchangers in aerospace applications: A review, Appl. Therm. Eng. 235 (2023) 121387. [19] J. Günther, S. Leuders, P. Koppa, T. Tro ̈ster, S. Henkel, H. Biermann, et al., On the effect of internal channels and surface roughness on the high-cycle fatigue performance of Ti-6Al-4V processed by SLM, Mater. Des. 143 (2018) 1–11. [20] S. Lee, S. Shao, D.N. Wells, M. Zetek, M. Kepka, N. Shamsaei, Fatigue behavior and modeling of additively manufactured IN718: The effect of surface treatments and surface measurement techniques, J. Mater. Process. Technol. 302 (2022). [21] W. Schneller, M. Leitner, S. Pomberger, F. Grün, S. Leuders, T. Pfeifer, et al., Fatigue strength assessment of additively manufactured metallic structures considering bulk and surface layer characteristics, Addit. Manuf. 40 (2021). [22] A.H. Chern, P. Nandwana, R. McDaniels, R.R. Dehoff, P.K. Liaw, R. Tryon, et al., Build orientation, surface roughness, and scan path influence on the microstructure, mechanical properties, and flexural fatigue behavior of Ti–6Al–4V fabricated by electron beam melting, Mater. Sci. Eng. A 772 (2020). [23] T. Krille, R. Poser, J. von Wolfersdorf, M. Henze, An experimental approach to determine local heat transfer characteristics in additively manufactured cooling configurations, Int. J. Heat Mass Transf. 185 (2022). [24] W. Luo, H. Han, B. Xie, L. Cai, R. Gao, Flow and heat transfer of supercritical hydrocarbon fuel in additively manufactured cooling channels, Int. J. Heat Mass Transf. 209 (2023). [25] I. Kaur, P. Singh, State-of-the-art in heat exchanger additive manufacturing, Int. J. Heat Mass Transf. 178 (2021). [26] I. Kaur, P. Singh, Critical evaluation of additively manufactured metal lattices for viability in advanced heat exchangers, Int. J. Heat Mass Transf. 168 (2021).
+[27] B. Dai, M. Li, Y. Ma, Effect of surface roughness on liquid friction and transition characteristics in micro- and mini-channels, Appl. Therm. Eng. 67 (2014) 283–293. [28] P. Forooghi, M. Stripf, B. Frohnapfel, A systematic study of turbulent heat transfer over rough walls, Int. J. Heat Mass Transf. 127 (2018) 1157–1168. [29] J.W.R. Peeters, N.D. Sandham, Turbulent heat transfer in channels with irregular roughness, Int. J. Heat Mass Transf. 138 (2019) 454–467. [30] K. Huang, J.W. Wan, C.X. Chen, D.F. Mao, Y.Q. Li, Experiments investigation of the effects of surface roughness on laminar flow in macro tubes, Exp. Therm. Fluid Sci. 45 (2013) 243–248. [31] Min Z, Parbat SN, Yang L, Chyu MK. Thermal-fluid and mechanical investigations of additively manufactured geometries for transpiration cooling. In: 2019 PoATE, editor. Turbomachinery Technical Conference and Exposition. Phoenix, Arizona, USA2019. [32] K. Yan, H. Deng, Y. Xiao, J. Wang, Y. Luo, J. Yan, Influence of polishing process on surface morphology and thermo-hydraulic performance of additively manufactured Gyroid-structured heat exchanger, Appl. Therm. Eng. 253 (2024) 123828. [33] B. Lotfi, B. Sund ́en, Q. Wang, An investigation of the thermo-hydraulic performance of the smooth wavy fin-and-elliptical tube heat exchangers utilizing new type vortex generators, Appl. Energy 162 (2016) 1282–1302. [34] X. Li, D. Zhu, J. Sun, X. Mo, S. Liu, Heat transfer and pressure drop for twisted oval tube bundles with staggered layout in crossflow of air, Appl. Therm. Eng. 148 (2019) 1092–1098. [35] G. Huminic, A. Huminic, The influence of hybrid nanofluids on the performances of elliptical tube: Recent research and numerical study, Int. J. Heat Mass Transf. 129 (2019) 132–143. [36] M. Sheikholeslami, B. Rezaeianjouybari, M. Darzi, A. Shafee, Z. Li, T.K. Nguyen, Application of nano-refrigerant for boiling heat transfer enhancement employing an experimental study, Int. J. Heat Mass Transf. 141 (2019) 974–980. [37] N. Tran, C.-C. Wang, Effects of tube shapes on the performance of recuperative and regenerative heat exchangers, Energy 169 (2019) 1–17. [38] M. Moawed, E. Ibrahim, Free convection heat transfer inside vertical and inclined elliptic tubes with different axis ratio and different inclination and orientation angles, Energ. Conver. Manage. 49 (2008) 587–595. [39] K. Elshazly, M. Moawed, E. Ibrahim, M. Emara, Heat transfer by free convection from the inside surface of the vertical and inclined elliptic tube, Energ. Conver. Manage. 46 (2005) 1443–1463. [40] H. Ragueb, K. Mansouri, A numerical study of viscous dissipation effect on nonNewtonian fluid flow inside elliptical duct, Energ. Conver. Manage. 68 (2013) 124–132. [41] S. Fr, Finned elliptical tubes and their application in air-cooled heat exchangers, ASME J. Eng. Ind. 88 (1966) 179. [42] L.A.O. Rocha, F.E.M. Saboya, J.V.C. Vargas, A comparative study of elliptical and circular sections in one-and two-row tubes and plate fin heat exchangers, Int. J. Heat Fluid Flow 18 (1997) 247–252. [43] J.-Y. Jang, J.-Y. Yang, Experimental and 3-D numerical analysis of the thermalhydraulic characteristics of elliptic finned-tube heat exchangers, Heat Transf. Eng. 19 (1998) 55–67. [44] A.-N. Guo, L.-B. Wang, The mechanism of laminar convective heat transfer enhancement enforced by twisting of elliptical tube, Int. J. Heat Mass Transf. 157 (2020). [45] S.S. Yogesh, A.S. Selvaraj, D.K. Ravi, T.K.R. Rajagopal, Heat transfer and pressure drop characteristics of inclined elliptical fin tube heat exchanger of varying ellipticity ratio using CFD code, Int. J. Heat Mass Transf. 119 (2018) 26–39. [46] Terukazu Ota HNy, Yukiyasu Taoka. Heat transfer and flow around an elliptic cylinder International Journal of Heat and Mass Transfer. 1984;27:8. [47] A. Horvat, M. Leskovar, B. Mavko, Comparison of heat transfer conditions in tube bundle cross-flow for different tube shapes, Int. J. Heat Mass Transf. 49 (2006) 1027–1038. [48] A. Hasan, K. Sir ́en, Performance investigation of plain circular and oval tube evaporatively cooled heat exchangers, Appl. Therm. Eng. 24 (2004) 777–790. [49] D. Bouris, E. Konstantinidis, S. Balabani, D. Castiglia, G. Bergeles, Design of a novel, intensified heat exchanger for reduced fouling rates, Int. J. Heat Mass Transf. 48 (2005) 3817–3832. [50] R.J. Moffat, Describing the uncertainties in experimental results, Exp. Therm. Fluid Sci. 1 (1988) 14. [51] J. Yan, S. Liu, P. Guo, C. Bai, Experimental investigation on convection heat transfer of supercritical hydrocarbon fuel in a long mini tube, Exp. Therm. Fluid Sci. 115 (2020). [52] M.J. Wilson, T.A. Newell, J.C. Chato, C.A. Infante Ferreira, Refrigerant charge, pressure drop, and condensation heat transfer in flattened tubes, Int. J. Refrig. 26 (2003) 442–451.
+W. Luo et al. Applied Thermal Engineering 258 (2025) 124723
+15

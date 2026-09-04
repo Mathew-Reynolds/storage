@@ -1,0 +1,813 @@
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+Available online 11 November 2023
+1364-0321/© 2023 Elsevier Ltd. All rights reserved.
+Thermal management strategies and power ratings of electric vehicle motors
+Jaya Antony Perinba Selvin Raj a, Lazarus Godson Asirvatham a,b,*, Appadurai Anitha Angeline c,
+Stephen Manova d, Bairi Levi Rakshith a, Jefferson Raja Bose a, Omid Mahian e,
+Somchai Wongwises d,f
+a Department of Mechanical Engineering, Karunya Institute of Technology and Sciences, Coimbatore 641 114, Tamil Nadu, India
+b Centre for Research in Material Science and Thermal Management (CRMS &TM), Karunya Institute of Technology and Sciences, Coimbatore 641 114, Tamil Nadu, India
+c Department of Robotics Engineering, Karunya Institute of Technology and Sciences, Coimbatore 641 114, Tamil Nadu, India
+d Department of Mechanical Engineering, Faculty of Engineering, King Mongkut’s University of Technology Thonburi (KMUTT), Bangmod, Bangkok 10140, Thailand
+e Zhejiang Provincial Engineering Research Center for the Safety of Pressure Vessel and Pipeline, Faculty of Mechanical Engineering and Mechanics, Ningbo University, Ningbo 315211, China
+f National Science and Technology Development Agency (NSTDA), Pathum Thani 12120, Thailand
+ARTICLE INFO
+Keywords:
+Electric vehicles Permanent magnet synchronous motor Motor thermal management PCM cooling Heat pipes Real-time monitoring
+ABSTRACT
+This study offers a comprehensive exploration of the cooling strategies and power ratings of electric vehicle motors. Electric vehicles depend on robust electric motors for propulsion. High power and sustained high-speed usage create excessive heat, risking motor failure without effective thermal management. Implementation of effective cooling strategies thus becomes imperative to ensure both the longevity and optimal performance of electric vehicle motors. This article seeks to review range of cooling approaches, encompassing air cooling, liquid cooling, and hybrid cooling, scrutinizing their respective capabilities in efficiently dissipating the heat generated during motor operation. Furthermore, the study investigates the impact of power ratings on the performance of electric vehicle motors in determining its maximum power output with higher ratings. In summary, this article underscores the critical importance of carefully selecting the appropriate cooling strategy and power rating for electric vehicle motors to maximize their efficiency and durability. This insight proves to be invaluable to electric vehicle manufacturers and designers, providing them with essential guidance in the design and selection of electric vehicle motors that meet the demands of modern transportation while contributing to a sustainable future.
+1. Introduction
+The increase in the use of fossil fuels has significantly contributed to the growing concerns about anthropogenic climate change. Transportation is a significant cause for this climate change as it accounts for approximately 24 % of the global energy-related CO2 emission [1–4]. Therefore, implementing an active measure for reducing this CO2 emission in the transportation sector is the need of the hour. In response to this challenge, governments and major transportation sectors have turned towards electric vehicles (EVs) as one of the long-term solutions to reduce CO2 emissions [5,6]. Adding value to this point, Fig. 1 shows the year-wise growth of EVs in the global market from 2010 to 2022 and
+the EVs usage is expected to reach 230 million by 2030 [7–9]. Hence, the production of EVs has been accelerating rapidly over the recent years and has now become a promising step towards achieving a sustainable and eco-friendly environment. However, the performance reliability of EVs is also an important factor in evaluating their suitability for widespread adoption [10]. The reliability and lifespan of an EV depend on several critical factors including the motor, battery pack, controllers, and thermal management systems. Fig. 2 schematises the typical sectional view of EV [11]. Due to the technological advancement in EVs, the size of the battery pack and the motor has been reduced, resulting in an increased power density and local hotspot formation. These hotspots can cause heat transportation problems, such as reducing the efficiency of the motor and battery,
+* Corresponding author. Department of Mechanical Engineering, Karunya Institute of Technology and Sciences, Coimbatore 641 114, Tamil Nadu, India. E-mail address: godson@karunya.edu (L.G. Asirvatham).
+Contents lists available at ScienceDirect
+Renewable and Sustainable Energy Reviews
+journal homepage: www.elsevier.com/locate/rser
+https://doi.org/10.1016/j.rser.2023.113874 Received 21 March 2023; Received in revised form 22 September 2023; Accepted 9 October 2023
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+2
+ultimately leading to vehicle failure. Hence, extensive research addresses the importance of reducing the hotspot formation in EVs, particularly for battery packs [12–18]. However, very little attention has been paid to the issue of hotspot formation and thermal management in EV motors. Hotspots can also occur in motors caused by copper, iron, and mechanical losses, reducing the generation of electromagnetic torque and increasing the failure rate. The literature also highlights motor power rating, technology, design and temperature as significant parameters in optimising EV motor’s performance and thermal management. The motor’s power rating determines the maximum power output and heat generated during operation. Inadequate cooling capacity relative to the motor’s power rating can lead to insufficient heat dissipation and increases the motor operating temperature and thermal stress. The high temperature inside a motor can also cause fatigue stress along the rotor
+bars, which can lead to thermo-mechanical failure. Existing findings [19,20] indicate that, about 75 % of motor performance issues are localised to the stator coil winding and rotor bars, which are affected by temperature change and mechanical stress. Therefore, in addition to EV battery packs, reducing the motor’s hotspot formation is essential to improve the EV’s performance reliability. An effective thermal management strategy for both components can ensure reliable, efficient and durable EVs, making them a suitable alternative to traditional gasoline-powered vehicles. Further, the studies on the motor power rating and the technologies used, helps determining the prospect and the direction of research in the thermal management of EV motors. The comprehensive review of the performance of electric vehicle (EV) motors underscores the necessity for thermal management strategies. These are crucial in ensuring the reliable performance and extended lifespan of EV motors. This research comprehensively analyses different motor technologies and their thermal management strategies used in EVs. The study highlights the novelty of analysing the significance of the design parameters (cooling channel’s position/design, radial fins, cooling fan design), thermophysical properties of coolants and heat transfer enhancers (phase-change materials, thermal fillers and heat pipes (HPs)) in the effective cooling of the motor. The research also emphasises the significance of computation-based modelling in predicting motor heat loss and temperature for reliable motor performance. Thus, the study sets the base for the research community in selecting the appropriate cooling systems for the optimised motor performance. Adopting the advanced cooling strategy helps manufacturers to reduce energy consumption, emission and develop advanced industrial standards to make EVs a reliable and sustainable transportation solution. The advanced industrial standards thus developed can contribute to the clean energy and climate action of the environmental, social, and governance framework and UN sustainable development goals (SDGs). The research on motors cooling strategies and power rating is organised in the following structure. It begins with an introduction that sets the context and highlights the importance of efficient cooling systems in EV motors. The second section explores EV motor technologies and discusses heat loss. Section 3 discusses various cooling and heat transfer enhancement techniques adopted in EV motors. The content also addresses computation-based numerical modelling of the motor for heat transfer and predicting the thermal values. The contents follow the discussion over the possible advancement in motor cooling in the future in section 5 and present the concluding remarks on the key findings under section 6.
+2. Electric vehicle motor technologies at different power rating levels
+The EV’s performance and reliability depend on the performance of the motor used in the power train. The most commonly used motor technologies in EVs include permanent magnet synchronous motor (PMSM), AC induction motor (AC-IM), switched reluctance motor (SRM) and Wound-Field synchronous motors (WFSM)/AC synchronous motor (AC-SM). The summary of the percentage share of EV motor technologies among commercial EV car models available in the market (excluding the variants of the same models) during the period 2013 to 2023 is shown in Fig. 3 [21–24]. From Fig. 3, PMSM, the most dominating motor technology used in EVs, accounts for nearly 59 % of the total EV models available in the market, launching 123 new models with different motor power ratings (neglecting the variants of the same model). Similarly, the AC-IM and the combined drives of PMSM and AC-IM occupy 22 % and 10 % of the total, with 47 and 20 EV models, respectively. It is also observed that 15 and 4 models of EV launched in the market, using the external exited AC synchronous drives and SRM drives. It is also essential to know the growth of motor technologies among the EV models launched year-wise to understand the technological prospects of EV motors. Fig. 4 shows the number of EV models using a combination of PMSM and AC-IM drives
+Abbreviations
+AFPM Axial flux Permanent Magnet motor CFD Computational Fluid Dynamics DWHX Direct Winding Heat Exchanger EV Electric Vehicle FEA Finite Element Analysis HP Heat pipe IM Induction Motor LPM Litre per minute Nu Nusselt number PCM Phase Change Material PM Permanent Magnet PMSM Permanent Magnet Synchronous Motor RAVH Rotor Axial Vent Holes Re Reynolds number rpm Revolution per minute SAVH Stator Axial Vent Holes SM Synchronous Motor SRM Switched Reluctance Motor
+Fig. 1. Global electric car stock by region, 2010–2022 [7–9]. [International Energy Agency (IEA). Global EV Outlook 2023 - Catching up with climate ambitions. 2023. https://www.iea.org/data-and-statistics/charts/global-electri c-car-stock-2010-2022, IEA. Licence: CC BY 4.0].
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+3
+and has rapidly risen since 2018 as more automobile manufacturers came into the market and contributed to EVs. Further, it is observed that the number of EV models available in the market, uses the AC-IM technology with the PMSM and SRM drive to improve traction control and reliability. Fig. 4 also shows a few models of EV operated through AC-SM drives and SRM drives launched into the market. Table 1 presents the motor technologies used in EVs over the past decade. The data are collected from the reports published by the U.S. Department of Energy (https://www.fueleconomy.gov/) and the EV Database (https://ev-database.org/). The total rated torque and gross
+vehicle weight are sourced from the vehicles’ detail page of the EV Database, and all the corresponding active links are given in the reference section [28–30,32–40,42–44,47–49,56–60]. The table data reveals a linear rise in the motor’s rated power and torque output of motors over the years. Especially in PMSM drives, the range of total power output of motor over the years increased up to 829 kW from 80 kW. Further, the interest in combined motor technology, such as the combination of AC-IM & PMSM and AC-IM & SRM motors, has been increasing over recent years. These combined drives offer relatively higher torque output. Additionally, the table demonstrates that certain EV motors with low nominal power ratings and motor types may have higher torque values. The difference in toque generated is observed due to the change in the cooling system design and stator design across the EV manufacturers [61,62].
+Fig. 2. The sectional view of all-electric vehicle [11]. [Source: U.S. Department of Energy (https://afdc.energy.gov/vehicles/how-do-all-electric-cars-work)].
+Fig. 3. Distribution of motor technologies among major EV manufacturers in the global market from 2013 to the present (Data from Refs. [25,26]).
+Fig. 4. Number of EV models launched in the market using different motor technologies from 2013 to present (Data from Refs. [25,26]).
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+4
+Table 1
+Total rated power for commercially available EV motors launched from the year 2013–2023 (Data from EV Database and U.S. Department of Energy).
+Type of Motor
+Total rated power (kW)
+Total rated torque (N-m)
+Gross vehicle weight (kg)
+Manufactured year
+Brand & Model
+PMSM 350 – – 2023 Volvo C40 Recharge twin, Polestar Dual motor perf pack [27] 239 605 2520–2560 2023 Hyundai IONIQ 6 AWD, Hyundai IONIQ 5 Limited AWD [27–29] 111 350 2280 2023 Hyundai IONIQ 6 Long Range (53 kW h) 2WD [27,30] 255 – – 2023 Cadillac LYRIQ [27] 375 – – 2023 Cadillac LYRIQ AWD [27] 320 – – 2023 Genesis GV 60 PERFORMANCE [27] 234 – – 2023 Genesis GV 60 ADVANCE [27] 510 – – 2023 Porsche Taycan Turbo, Porsche Taycan GTS, Porsche Taycan GTS sport turismo [27] 716 – – 2022 Ford F-150 Lightning 4WD [31] 554 – – 2022 Porsche Taycan GTS, Porsche Taycan GTS ST [27] 829 – – 2022 Lucid Air Dream P AWD, Lucid Air G Touring XR AWD [31] 696 – – 2022 Lucid Air Dream R AWD, Lucid Air G Touring AWD [31] 611 – – 2022 Lucid Air G Touring AWD [31] 650 – – 2022 Rivian R1T, Rivian R1S [31] 385 855 3060 2022 Mercedes-Benz EQS 580 4matic [31,32] 300 670 2640–2650 2022 Volvo XC40 Recharge Twin Motor, Volvo C40 Recharge Twin Motor, Polestar 2BST edition, Polestar 2 Dual Motor [31,33,34] 245 568 2945 2022 Mercedes-Benz EQS 450+ [31,35] 170 – – 2022 Polestar 2 Single Motor [31] 168 350 2410–2425 2022 KIA EV6 Long Range 2WD, Hyundai IONIQ 6 Long Range 2WD, Hyundai IONIQ 5 Long Range 2WD [31,36–38] 125 350 2340–2370 2022 KIA EV6 Standard Range 2WD, Hyundai IONIQ 5 Standard Range [31,39,40] 516 – – 2022 Ford Mustang Mach-E AWD Extended [31] 81 – – 2022 Mazda MX-30 [31] 396 – – 2021 Ford Mustang Mac-E AWD [41] 358 860 2717 2021 Ford Mustang Mach-E GT [41,42] 150 310 2540 2021 Volkswagen ID.4 1st, Volkswagen ID.4 Pro, Volkswagen ID.4 Pro Performance [41,43] 460 – – 2021 Porsche Taycan 4 S perf battery [41] 240 – – 2021 Porsche Taycan perf battery [41] 280 – – 2021 Porsche Taycan perf battery plus [41] 294 696 2670 2019 Jaguar I-Pace EV400 [41,44] 150 – – 2019 KIA Niro Electric, Hyundai Kona Electric 64 kW h [45] 100 – – 2019 Volkswagen e-Golf [46] 160 340 2140 2019 Nissan Leaf, Nissan Leaf SV/SL, Nissan Leaf e + [31,47] 110 320 1995 2018 Nissan Leaf [31,48] 120 – – 2017 Honda Clarity EV [46] 150 – – 2017 Chevrolet Bolt EV, Chevrolet Bolt EUV [46] 135 270 1775 2017 MINI Cooper SE [49,50] 81 – – 2015 KIA Soul Electric [51] 85 – – 2015 Volkswagen e-Golf [51] 104 – – 2014 Chevrolet Spark EV [52] 82 – – 2013 FIAT 500e [53] 80 – – 2013 Nissan Leaf [53] AC-IM 750 – – 2022 Tesla Model S Plaid AWD [31] 690 – – 2022 Tesla Model X Plaid [31] 491 – – 2022 Tesla Model X [31] 335 – – 2021 Audi RS e-Tron GT [31] 291 – – 2021 Tesla Model Y AWD [31] 398 – – 2019 Tesla Model S 100D [45] 211 – – 2019 Tesla Model 3, Tesla Model Y RWD [45] 313 – – 2019 Audi e-tron quattro, Audi e-tron, Audi e-tron Sportback [50] 568 – – 2016 Tesla Model X AWD, Tesla Model S P100D, Tesla Model S P90D AWD [54] 82 – – 2015 FIAT 500e [51] 530 – – 2014 Tesla Model S P85D [52] 125 – – 2014 BMW i3 BEV [52] 270 – – 2014 Tesla Model S (85 kW-hr battery pack), Tesla Model S 75D [52,55] 225 – – 2013 Tesla Model S 60D RWD [53] 115 – – 2012 Toyota RAV4 EV [53] AC-SM 150 266 2465 2023 Toyota BZ4X Vision FWD [27,56] 450 – – 2023 BMW iX M60 [27] 250 – – 2022 BMW i4 eDrive 40 Gran Coupe, BMW i4 eDrive 35 Gran Coupe [31] 420 – – 2022 BMW i4 M50 Gran Coupe, BMW iX xDrive 50 [31] AC-IM, PMSM
+220 460 2715–2720 2022 Audi Q4 e-tron quattro, Audi Q4 Sportback e-tron quattro [31,57,58] 168 390 2580 2022 Mercedes-Benz EQB 300 4MATIC [31,59] 215 520 2580 2022 Mercedes-Benz EQB 350 4MATIC [31,60] 312 – – 2021 Tesla Model Y Performance AWD [41] 270 – – 2021 Tesla Model Y Long Range AWD [41] 580 1140 – 2020 Tesla Model X Performance [50] 358 – – 2020 Tesla Model Y AWD Long Range AWD Performance, Tesla Model Y Performance AWD [45] 568 – – 2016 Tesla Model S AWD, Tesla Model X AWD [54]
+(continued on next page)
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+5
+In addition to power generation, electric motor drives generate heat that needs to be dissipated efficiently for a reliable operation. These heat-generating losses are generally classified as copper/winding and core/iron losses and contribute to nearly 95 % of the total heat load. The literature analysis on the characteristics of the various motor technologies [63–67] and their applications in EVs by various manufacturers reveal motor efficiency and heat generation as a function of the motor power rating, operating temperature, material properties and motor design configurations, as given in equations (1)–(4) [68–73]. Adding value to this point, AC-IM drive-based technology in the EVs is minimal for their high heat-generating copper and iron losses that can be calculated using equations (1)–(4) [24,73,74].
+PCu = PCu1 + PCu2 = (PCuDC + PCuAC)1 + (PCuDC + PCuAC)2 (1)
+PCuDc = nRΩI2 (2)
+PCuAC (Tw) = PCu,DCTw=T0 (1 + α(Tw T0)) + PCu,DCTw=T0 × Kac(T0) 1
+(1 + α(Tw T0))β (3)
+Pcore = kh(f, Bm, Tc)fB2
+m + ke(f, Bm, Tc)(Bm f)2 (4)
+where, PCuDC and PCuAC represents the DC and AC components of motor copper/winding losses (PCu) induced in the motor at the winding temperature (Tw). Also, DC and AC components are the functions of the AC loss factor Kac, current supplied and temperature coefficient of resistance. Similarly, equation (4) correlates the equation for the motor core iron loss as a function of supply voltage frequency(f), flux density (Bm) and the motor core temperature (Tc). The rare earth metal-based permanent magnets (PMs) in rotors of the PMSM drives eliminates the copper losses in the rotor and increase the efficiency and power density. Thus the copper loss calculation equation (1) is modified to equation (5) in PMSM motors [68–70].
+PCu = PCu1 = (PCuDC + PCuAC)1 (5)
+In AC-SM or Wound-Field synchronous motors (WFSM), the direct current excited field winding along with the squirrel cage winding in their rotor creates different copper losses during the startup and running. At synchronous operation, squirrel cage windings are not excited due to the absence of induction current, modifying the copper loss as given in equations (6) and (7) [71,72].
+PCu = PCu1,sync + PCu2,Sync = (PCuDC + PCuAC)1,sync + (PCuDC)2,sync (6)
+PCu2 sync = RΩ2If 2
+2 (7)
+The subscripts ‘1’ and ‘2’ in equations (1)–(7) represent the stator and rotor, respectively and ‘If’ represents the field current of the rotor at synchronous speed. The observations of the EV motor technologies used in commercial EVs through the market and literature survey over the past decade reveal PMSM drives attract manufacturers for their compactness, high power density and high efficiency in regenerative braking. Next to the PMSM motors, IM drives are more significant and combined motor drives and AC SM drives usage are increasing in recent years. Further, the heat-generating losses of the EV drives, being a function of motor
+temperature and power rating, create heat transport problems and hotspots in EV motors. Thus, the motor’s thermal management system is mandated for the reliable performance life of the EV motor.
+3. Thermal management techniques in electric vehicle motor
+The performance and reliability of the EV motor depend on the cooling system’s performance [75]. This section reviews the air and liquid cooling techniques and the influential parameters available in the literature for the thermal management of EV motors.
+3.1. Air cooling techniques
+Air cooling is the most common method of cooling motors with low power density using natural or forced convection. In an air-cooling system, parameters like airflow path, velocity, fin design and pressure drop across the flow length play a significant role in the efficient cooling of the motor. Hence, this section is devoted to a brief overview of the cooling performance of motors based on the factors mentioned above.
+3.1.1. Effect of airflow pattern
+Farsane et al. [76] modified the casing design of closed-type induction motors considering the thermal and flow aspects. The modified casing design maintained a uniform airflow with an average temperature drop of 10 ◦C. Jang et al. [77] observed that introducing a forced air circulation along the internal and external motor surfaces enhances the heat transfer rate of end windings up to 17.5 and 8 %. Li et al. [78] sought to optimise the cooling of an air-cooled 4 kW AC-IM by introducing an axial airflow pattern along the rotor. The optimised airflow pattern reduced the rotor bar temperature by 57 ◦C, increasing the motor power to 8 kW. Zhu et al. [79] introduced axial-radial cooling ducts along the rotor and stator core of the motor for internal air circulation. The model proposed by the reseachers reduces the PM and stator end winding temperature by 23.7 and 7.4 ◦C, respectively. Fawzal et al. [80] analysed three different airflow arrangements in an axial flux permanent magnet (AFPM) motor, as shown in Fig. 5, using Computation Fluid Dynamics (CFD). It is observed that design 3 has the minimum pressure drop as the rotor’s embedded PM acts like the centrifugal impeller, maintaining a steady state temperature of 86 ◦C, while designs 1 and 2 maintain 91 and 98 ◦C, respectively. Jaeger et al. [81] studied the thermal management of a motor with an air-cooled rotor along the motor’s cooling system and reported a temperature drop of 40 ◦C and a 50 % enhancement in rated torque. Chen et al. [82] observed a 13.5 ◦C drop in rotor magnets temperature with dual cycled cooling in a 20 kW fully enclosed PM motor. An internal axial fan was attached to the motor shaft inducing the airflow through the rotor axial vent holes (RAVH) and stator axial vent holes (SAVH), as shown in Fig. 6(a). Asef et al. [83] introduced radial and circumferential airflow duct design along the stator core to enhance the cooling of PMSM, as in Fig. 6(b). The design was analysed with the Lumped circuit and Finite Element Modelling (FEM), and it was reported that the four-duct model has a superior cooling effect than the two-duct model. Kang et al. [84] attached flow deflecting wafters to the rotor, as shown in Fig. 6(c) and improved the design using Taguchi’s optimisation method. The experimental and numerical analysis of the wafter design revealed a significant drop in the rotor PM temperature and wind
+Table 1 (continued )
+Type of Motor
+Total rated power (kW)
+Total rated torque (N-m)
+Gross vehicle weight (kg)
+Manufactured year
+Brand & Model
+AC IM, PMSRM
+358 – – 2019 Tesla Model 3 Long Range AWD [45] 568 – – 2019 Tesla Model X Performance, Tesla Model X P100, Tesla Model X Long range, Tesla Model S P100 [55] 349 – – 2018 Tesla Model 3 Long Range AWD Performance [55] 335 – – 2018 Tesla Model 3 Long Range AWD [55]
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+6
+resistance losses of up to 20 and 52 % under various operating conditions. Ai et al. [85] installed and optimised the number and thickness of the flow deflectors to the radial ventilating ducts of the 2500 kW high-voltage motor. The optimised design reduces the maximum temperature of stator windings by 6.3 ◦C and improves the cooling efficiency to 97.4 % from 97.3 %, saving 5105.7 kW h annually.
+3.1.2. Effect of fin design
+Attaching radial fins to the motor surface exists in conventional motor thermal management. Chiu et al. [86] studied the effect of fin number on the cooling performance of a 30 KW SRM motor by attaching radial fins of different numbers (18, 36, 54 and 72) to the motor casing, as shown in Fig. 7(a). The study reported an increase in motor temperature drops with an increase in fin numbers. Ulbrich et al. [87] studied the parameters of the fin design, such as the fin thickness, width, height and number of fins in a segment for the maximum heat transfer, using
+the 2D Conjugate heat transfer model. The study on fin parameters reveals that fins should be analysed and optimally selected based on the cooling requirement of the motor. Xu et al. [88] designed and optimised a continuous parallel plate fin array for an aircraft taxiing motor. The analyses on fin count, thickness and the back pressure generated in the constrained volume suggested that, reducing the fin thickness to 0.5 mm resulted in a maximum heat dissipation of 2500 W. Wrobel et al. [89] designed a special involute profiled fin-type heat
+exchanger with a surface area/volume ratio of 2696 m2/m3 for aircraft motor cooling, as shown in Fig. 7(b). The result demonstrated that, increasing the fin’s pitch reduces the pressure drop across the heat exchanger. Further, the optimised design reduced the pressure drop by 70 % with a minimum deviation in heat transfer rate (5 to 8 %) at higher air velocities. Melka et al. [90], in the study on the heat dissipation enhancement in PM Brushless DC motor, analysed two different fin
+configurations with an active heat transfer area of 0.085 and 0.1125 m2
+Fig. 5. Flow streamlines of each design and its ISO surface of the low-velocity region (<10 m/s) at 4000 rpm in blue translucent patches [Fawsal et al. [80], with permission from Elsevier].
+Fig. 6. Airflow pattern. a) 2-D model of the cooling structure with SAVH and RAVH. [Chen et al. [82], with permission from Elsevier]. b) 3-D Sketch of innovative coolant models with two ducts and four ducts. [Asef et al. [83], with permission from Elsevier]. c) Flow deflectors. [Kang et al. [84], with permission from Elsevier].
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+7
+as shown in Fig. 7(c) and (d). The experimental results revealed a temperature drop of 9 and 16 ◦C along the motor windings with the fin design.
+3.1.3. Effect of cooling fan design
+In the air-cooling approach, the most convenient way of creating forced air circulation is by attaching the fans to the motor spindle. The study of Nikitina [91] on air-cooled motors revealed that, the temperature drop is directly proportional to the volumetric airflow. In another work, Li [92] studied the air cooling of PM motors with a centrifugal impeller attached to the rotor core and observed a linear correlation between airflow rate and motor rpm. The studies on armature heat transfer analysis revealed a gradual temperature rise along the axial direction, highlighting the need for design changes in impeller and diffuser, to reduce the motor load and flow losses. Kim et al. [93] attached combinations of air gap fans along the rotor and numerically studied its cooling performance on a 100 kW AC-IM. The results revealed that, the air gap fan increased the air circulation and reduced the maximum temperature of the rotor and stator windings from 324 and 143 ◦C to 245 and 121 ◦C, respectively. Further, the winding cooling performance index increases by 35, 36 and 55 %, for the air gap fan attached along the front, rear and two sides of the rotor windings, respectively. Fawzal et al. [94] attached fans to the backside of the rotor in 100 kW AFPM. The research focused on the winding losses and rotor cooling performance index for backwards-inclined, radial and teardrop pillar blade designs using CFD software. The results showed that, the backwards-inclined airfoil blade design had relatively higher rotor cooling performance due to the lower winding losses when compared to radial and pillar blade designs. Roffi et al. [95] studied the possibility of replacing the centrifugal impeller with the axial flow impeller to reduce the noise and improve overall motor efficiency. The study involves analysing four designs of
+axial flow impellers for energy consumption, power loss and volumetric flow. The results highlighted design C of the axial impeller generated lower winding losses and high pumping pressure. Using the CFD software, Galloni et al. [96] numerically modelled and analysed the radial fan design for various blade aspect ratios for maximum airflow along the motor. The results demonstrated that at a constant blade number, the maximum air flow rate (V ̇ max) is a linear function of the impellers aspect ratio as given in equations (8) and (9).
+V ̇ max = nD3
+(
+aH
+Db
+)
+(8)
+With
+⎧ ⎪⎪⎨
+⎪⎪⎩
+a = +1.4250, b = 0.0830; 0.08 ≤ H
+D ≤ 0.24
+a = -0.0921, b = 0.4949; 0.36 ≤ H
+D ≤ 0.73
+(9)
+where H, D and n are the impeller’s height, diameter and rpm, respectively.
+3.1.4. Inferences from air cooling techniques
+The research shows that several parameters, such as backpressure, airflow section, air velocity and active heat transfer surface area, influence the effectiveness of the air-cooling technique. Typically, air cooling methods are used in low-power rated motors, say below 10 kW, while they are also used for improving the cooling system efficiency of high-power rated motors [78,79,81,85,94]. Table 2 summarises the results of studies that have investigated the possible methods of improving motor cooling performance using air-cooling techniques. The results highlight that, the arrangements such as SAVH, RAVH, attached rotor impellers, and fins along the motor’s surface have also been reported as suitable solutions to enhance the heat transfer rate and offer superior
+Fig. 7. Fins design. a) Radial Fins. [Chiu et al. [86], with permission from Elsevier]. b) Involute profile fins. [Wrobel et al. [89], with permission from Elsevier]. c) Motor with small fins. [Melka et al. [90], with permission from Elsevier]. d) Motor with large fins. [Melka et al. [90], with permission from Elsevier].
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+8
+Table 2
+Effect of air-cooling techniques in thermal management of motor.
+No. Authors Motor power rating (kW)
+Motor temperature (◦C) Heat transfer coefficient W
+m2 K)
+Motor speed (rpm)
+Back pressure (Pa)
+Airflow rate/ Velocity
+Design modification
+Original Modified Temperature drop
+1 Farsane et al. [76]
+55 44.2 34.2 10 – 1500 – – External forced convection; Height – 55 mm; Length – 450 mm. 2 Jang et al. [77]
+3 32.5 24 8.5 10 2400 – – Natural convection; Stator temperature drop; Time – 10min 46.3 44.2 2.1 40 2400 – – External forced convection; End winding temperature drop; Time – 10min 44.2 37.2 7 40 2400 – – Internal forced convection; End winding temperature drop; Time – 10min 3 Li et al. [78]
+4 122.8 65.7 57.1 – – – – Internal forced convection; RAVH
+4 Fawzal et al. [80]
+– 91 – 58 4000 1639 – Internal forced convection; Air inlet at top; Outlet at bottom (Design 1) – 98 – 39.7 4000 781 – Internal forced convection; Tangential air inlet & outlet (Design 2) – 86 – 69.5 4000 288 – Internal forced convection; Central inlet; Tangential outlet (Design 3) 5 Asef et al. [83]
+6 53.4 50.5 2.9 – – – – Internal forced convection; Tangential flow; Number of ducts in stator core - 2 6 Zhu et al. [79]
+10 119.6 107.2 12.4 – – – – Internal forced convection; Axial and radial mixed airflow 7 Chen et al. [82]
+20 112 98.5 13.5 – – – – Internal forced convection; SAVH & RAVH flow 8 Kang et al. [84]
+40 110 95 15 – – – 2 m/s Internal forced convection; Existing wafters; Axial deflecting angle – 40◦. 110 90 20 – – – Internal forced convection; Optimised wafters; Axial deflecting angle – 20◦. 9 Chiu et al. [86]
+30 471 365.8 105.2 10 4000 – – Natural convection; Number of fins – 36 310.2 161.8 10 4000 – – Natural convection; Number of fins – 54 274.6 196.4 10 4000 – – Natural convection; Number of fins – 72 10 Ulbrich et al. [87]
+32 113 108 5 – – – – External forced convection; Number of fins – 7 106.5 6.5 – – – – External forced convection; Number of fins – 8 101 12 – – – – External forced convection; Number of fins – 9 102.9 10.1 – – – – External forced convection; Number of fins – 10 11 Wrobel et al. [89]
+– – – 1470 – – 7 m/s Internal forced convection; Involute profile fin; Conditioned flow; Number of fins – 72. – – – 700 – – Internal forced convection; Involute profile fin; Unconditioned flow; Number of fins – 72. – – – 1300 .- 742 Internal forced convection; Involute profiled fin; Modified fin pitch; Conditioned flow – – – 900 – – Internal forced convection; Involute profiled fin; Modified fin pitch; Unconditioned flow 12 Melka et al. [90]
+0.430 95 86 9 – – – Natural convection; Short radial
+fins; Heat transfer area – 0.085 m2 95 79. 16 – – – Natural convection; Large radial fins; Heat transfer area – 0.1125
+m2 13 Kim et al. [93]
+100 324 245 79 – 27,000 – – Internal forced convection; Number of airfoil shaped fins 18; Height of fin 5.7 mm 14 Fawzal et al. [94]
+160 – – – 246 3500 – 0.012 kg/s Internal forced convection; Impeller design – Radial
+(continued on next page)
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+9
+cooling. Studies on volumetric air flow rate and pressure head indicate that airflow is a function of impeller diameter, height, rpm, blade count and design. The results also highlight that the fin count exceeding the optimum value, increases the pressure loss and negatively impacts the cooling performance.
+3.2. Liquid cooling techniques
+Liquid cooling is one of the most promising cooling techniques wellsuited for motors with high power ratings. It involves liquid coolant circulation through a specifically designed duct or directly within the motor casing. To ensure effective cooling in electric vehicles, it is crucial to utilise coolants with high specific heat capacity and dielectric properties. As a result, water and oil are commonly employed as primary coolants in most EVs. Water exhibits excellent heat absorption and dissipation capabilities, making it an efficient coolant for managing motor temperatures. Additionally, the oil possesses high specific heat capacity and excellent dielectric properties, ensuring both effective cooling and electrical insulation in EV applications. By utilising these coolant options, EV manufacturers can enhance the thermal management of motors, ultimately improving overall performance and reliability. The efficient cooling of the motor through liquid cooling depends on various factors, such as the coolant’s quantitative flow rate, pressure, thermal conductivity, viscosity, and dielectric strength. In addition, the design of the cooling system, such as ducts, channels, and heat exchangers, also significantly affect the cooling performance. Therefore, the following section briefly outlines the existing literature on cooling performance of coolant’s based on flow rate, temperature and channel design. Optimisation of these factors can enhance the performance, reliability, and longevity of EV motors.
+3.2.1. Effect of coolant flow rate and temperature
+The amount of heat absorbed by the circulating coolant in a cooling system, depend on its flow rate and the temperature difference between the source and the coolant. Generally, a higher coolant flow rate and lower coolant temperature tend to increase the heat transfer rate and reduce the temperature rise of the motor. Lim and Kim’s [97] study on the effect of cooling oil flow rate and temperature highlighted that, the motor winding temperature dropped by 17.17 and 13.5 ◦C when the flow rate was increased from 1.5 to 2.5LPM and coolant temperature reduced from 65 to 45 ◦C, respectively. Chiu et al. [86] observed a temperature drop of 30 K with the increase in coolant flow Reynolds number (Re) from 1000 to 4000. Lu et al. [98] observed an exponential drop-in temperature of PM linear motors with water cooling and suggested 2LPM as the optimum flow rate. Davin et al. [99] studied the effect of oil flow rate on different oil spray patterns on the motor windings and observed that the oil flow rate affects the cooling effect depending on the spray pattern used. The results further demonstrated
+that at higher rpm, the dense oil mist formed with the spray distribution gets distributed along the rotor, increasing the cooling effect. Ye et al. [100] experimentally studied the cooling performance by introducing internal oil flow along the water-cooled motor. A maximum temperature drop of 60 and 68 ◦C along the end windings were reported for the oil flow rates of 6 and 8LPM, respectively. Maulidi and Purwadi [101] modelled and analysed the temperature rise of the 30 kW brushless DC motor using the motor losses at different coolant flow rates. The results showed that the motor temperature decreases with an increased cooling water flow rate. Consequently, when the coolant temperature rises from 30 to 40 ◦C, the coolant requirement quantity increases by five times. Rehman and Seong [102] studied the maximum temperature of the motor at various coolant flow rates in analysing the cooling jacket design of a 90 kW AC-IM. The results showed that the maximum temperature of the motor reduces from 387.2 to 358.5 K, when the coolant flow increases from 5 to 30LPM. Deriszadeh et al. [103,104] analysed various flow rates of the volumetric mixtures of ethylene glycol and aluminium oxide nanofluid with water to improve the cooling performance of motors. The studies on different flow Re showed an increase in heat transfer rate to the cooling system with the rise in flow Re of the coolant. Park and Lee [105] sought to improve motor cooling using modified spiral channel design, observed 29.7 ◦C drop in motor coil temperature with the increased coolant flow rate from 0.053 to 0.212 kg/s. Assaad et al. [106] studied the effect of cooling oil temperature in the spray cooling of the motor using the rotor distribution system. The results revealed that the rise in coolant temperature from 60 to 110 ◦C increases the steady-state temperature of the stator winding from 350 to 361 ◦C for hollow shaft cooling and 110 to 153 ◦C for the hollow rotor shaft with an internal projection system. Fujita et al. [107] attempted to cool the electric motor by employing the refrigerant HFC-134a as the working fluid, as shown in Fig. 8. The results revealed that, refrigerant supplied at 0 ◦C reduced the motor’s maximum winding temperature to 53 ◦C with 60 % higher torque output compared to cooling water at 60 ◦C. In direct cooling studies, Lindh et al. [108] analysed the coolant temperature effect in a 100 kW AFPM traction motor at various motor rpm. The results demonstrated that the motor temperature was raised from 40 to 71 ◦C when the coolant temperature was increased from 15 to 51 ◦C. Sun et al. [109,110] analysed the effect of the cooling water inlet temperature and flow rate on the steady-state temperature of the motor. The results revealed that an increase in the water inlet temperature consequently increases the steady-state temperature of the motor. The studies further revealed, that almost a uniform motor temperature in analysing the effect of coolant flow rate, highlighting the negligible contribution of coolant flow rate above a critical value. Table 3 summarises the studies on the effect of coolant flow rate and temperature on electric motor cooling.
+Table 2 (continued )
+No. Authors Motor power rating (kW)
+Motor temperature (◦C) Heat transfer coefficient W
+m2 K)
+Motor speed (rpm)
+Back pressure (Pa)
+Airflow rate/ Velocity
+Design modification
+Original Modified Temperature drop
+– – – 242 3500 – 0.009 kg/s Internal forced convection; Impeller design – Backward curved – – – 192 3500 – 0.010 kg/s Internal forced convection; Impeller design – Pillar type 15 Roffi et al. [95]
+7.5 – – 19 – 1483 – 4.4 m/s External forced convection; Small centrifugal impeller; 58.08 % of the maximum load – – 18 – 1483 – 7 m/s External forced convection; Large centrifugal impeller; 58.08 % of maximum load – – 18 – 1483 – 5.1 m/s External forced convection; Axial impeller design C; 58.08 % of maximum load
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+10
+Fig. 8. Schematic layout of experimentation setup [Fujita et al. [107]].
+Table 3
+Effect of coolant temperature and flow rate on the motor’s temperature.
+No. Authors Motor power rating (kW)
+Coolant Coolant temperature (◦ C)
+Flow Rate Reynolds number
+Motor temperature (◦ C)
+1 Lim and Kim [97] 35 Oil 65 1.5 LPM – 131.2 2 LPM – 116.9 2.5 LPM – 114.0 45 1.5 LPM – 118.1 2 Lu et al. [98] 1.76 Water 23 1 LPM – 95.4 2 LPM – 84.9 3 LPM – 81.1 4 LPM – 78.8 5 LPM – 77.4 6 LPM – 76.6 3 Chiu et al. [86] 30 Water – – 1000 160.7 – 2000 145.2 – 3000 134.9 – 4000 130.6 4 Rehman and Seong [102] 90 Water 40 5 LPM – 114.2 10 LPM – 98 20 LPM – 89 30 LPM – 85.5 5 Maulidi and Purwadi [101] 30 Water 30 0.048 LPM – 109.6 0.24 LPM – 100.0 40 0.24 LPM – 109.0 0.048 LPM – 118.4 6 Deriszadeh et al. [104] 60 Aluminium-oxide nano fluid
+70 – 500 114 – 1000 107.4 – 1500 105.1 – 2000 104.1 7 Park and Lee [105]. – Ethylene glycol – 0.053 kg/s – 147.2 0.0795 kg/ s
+– 139.3
+0.106 kg/s – 129.4 0.1325 kg/ s
+– 125.4
+0.159 kg/s – 121.4 0.1855 kg/ s
+– 119.3
+0.212 kg/s – 117.9 8 Assaad et al. [106] 40 Oil 60 12 LPM – 128 110 – 179 9 Sun et al. [109] – OM (5000 rpm)
+53 Water 55 9 LPM – 105.8 12 LPM – 104.8 15 LPM – 104.2 10 Sun et al. [110] - HP-PM (4000 rpm).
+53 Water 45 12 LPM – 92.8 55 – 104 65 – 118.7 11 Lindh et al. [108] 205 Water 15.5 10 LPM – 45.3 51 – 70.8 12 Fujita et al. [107] 47 HFC-134a 0 0.0024 kg/ s
+– 39 10 – 46.1 20 – 54
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+11
+3.2.2. Effect of cooling channel design
+In addition to the coolant flow rate and temperature, the design of the cooling channel is also a critical factor in achieving efficient coolant distribution and effective motor cooling. The cooling channel is responsible for transporting liquid coolant into and out of the motor to absorb the heat generated by direct or indirect cooling. As a result, several studies have focussed on enhancing the motor’s cooling performance by modifying the cooling channel design. The study investigates various aspects of the channel’s geometry, such as its cross-sectional shape, size, and orientation, to determine their impact on coolant flow and heat transfer characteristics. The studies seek to identify the most effective cooling channel design parameters for a given motor configuration and operating conditions, ultimately improving the motor’s cooling efficiency. Indirect cooling is preferred in the liquid cooling system using water as the coolant, as it is a universal solvent that dissolves the impurities and becomes electrically conductive. Fig. 9 outlines the schematics of the most common indirect cooling channel designs. Sikora et al. [111] embedded the cooling water pipes along the stator SAVH of the stator core and reduced the motor’s rotor temperature from 112 to 84 ◦C. Pecha ́nek and Bouzek [112] analysed the axial and tangential cooling channel duct design and, observed a higher heat transfer rate and reduced motor temperature for the axial duct design than the tangential flow duct design. Chiu et al. [86] attached the radial fins to the outer side of axial flow cooling duct casing and observed a 1.8 ◦C temperature drop highlighting convective heat transfer rate of water is more significant than the heat transfer by conductive fins. Rhebergen et al. [113] developed a unique polymer duct from the Elan-Cast mixture containing 10 % aluminium nitride and 10 % boron nitride and axially mounted it inside the stator core. The axial cooling duct reduced the motor’s
+average temperature by 65 and 90 ◦C on the stator and rotor surface, respectively. Li et al. [114] numerically studied and optimised the cooling channel design parameters, such as the cooling channel’s width, height and adjacent width. The study reported an optimum cooling channel width of 10–16 mm and a 5 mm channel height for maximum cooling performance. Rehman and Seong [102] analysed the cooling performance of the radial cooling jacket by varying the number of passes and ports. It was reported that the cooling jacket design with two ports and six passes or above could maintain the motor temperature below the critical temperature limit. Bedkowshi et al. [115] numerically modelled and analysed an in-wheel motor cooling system’s stator support structures and coolant flow pattern design to enhance the heat transfer rate. The work involves introducing L-shaped aluminium radiators in the place of thermally conductive resin, observing a maximum temperature drop of 17.2 ◦C. Deriszadeh et al. [103,104] analysed the spiral cooling channel design, as shown in Fig. 9(c) with a different number of turns (2 to 8) to remove the heat from the motor. The results reported that the eight-turn spiral cooling jacket has maximum cooling performance regardless of the coolant (aluminium oxide nanofluid and water ethylene glycol mixtures). McCluskey et al. [116] designed a microchannel-based heat exchanger for cooling a 200 kW motor’s stator. The results indicate that the microchannel integrated cooling methods can fit aircraft propulsion motors of 1 MW capacity. Tikadar et al. [117] introduced rectangular, circular and direct winding heat exchanger (DWHX) cooling channel designs along the stator core to reduce thermal resistance, as shown in Fig. 10. The studies on the design’s cooling effect and magnetic flux interference revealed that the DWHX design has minimum magnetic flux interference and offers superior cooling of 88 to 120 ◦C compared to 14
+Fig. 9. Schematic of the cooling channel system design (a) Axial flow cooling channel designs. [Chiu et al. [86], with permission from Elsevier], (b) Tangential flow cooling channel designs with ten passes [Rehman and Seong [102]]. and (c) Spiral cooling channel design [Deriszadeh and Monte [104]].
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+12
+to 20 ◦C and 19 to 29 ◦C drop on circular and rectangular ducts. Park and Lee [105]. introduced heat sink fins inside the cooling channel and observed enhanced heat transfer rate and reduced average stator coil temperature by 7.2 ◦C. Wu and EL-Refaie [118] developed an additively manufactured direct drive concentrated winding capable of circulating coolant into the hollow conductor and the manifold. The study revealed that the proposed model maintained the motor temperature below 110 ◦C, achieving the specific power of 20.1 kW/kg with 95.8 % efficiency. Li [119] introduced spoilers inside the motor cooling water channel, reducing the maximum motor temperature from 325.1 to 320.1 K. Chang and Wang [120] proposed and optimised finned cooling casing with an internal cooling channel design for a 30 kW AFPM motor and observed the reduction in maximum temperature from 111 to 106 ◦C for a fin height of 33.6 mm. Sixel et al. [121] developed a 3D-printed DWHX-based cooling system for motors and reduced the average motor winding temperature by 90 ◦C, achieving a motor-specific power of 11.8 kW/kg with 94.7 % efficiency. Fasquelle and Laloy [122] attached water-cooled plates to the magnetic core of the PMSM motor and optimised its design parameters on ambience, coolant flow rate, pressure stack and the distance between the cold plates and attained a temperature drop of 45 ◦C. In a liquid cooling system using oil as the coolant, the design of cooling channels favours the direct cooling of the windings for their diamagnetic property. Lim and Kim [97] analysed the oil spray cooling system and observed 89 and 14 ◦C temperature drop along the stator core compared to stagnant, simple oil flow cooling. Lindh et al. [94] compared and evaluated the performance of the direct and indirect cooling methods on AFPM motors. The results revealed a temperature drop of 51.2 ◦C for the directly cooled motor and maintained the operating temperature below the safe operating limit. Lee et al. [70] designed and optimised a special integrated duct arrangement for the
+coolant (oil) circulation along the PM motor’s cooling jacket and rotor, as shown in Fig. 11. The analysis of the cooling performance of the integrated rotor duct design for 80 min of operation observed 50 and 38 % temperature drops compared to air and water-cooled motor, respectively. Xu et al. [124] compared the oil circulation along the stator core windings using the air gap and the different diameter circulating ducts mounted inside the windings of diameter 5, 4 and 3 mm. The flow through the ducts along the windings reduces the maximum temperature by 83.4, 87.4 and 107.6 ◦C, respectively, for the mentioned circulating ducts compared to oil flow at the intermittent spaces. Park and Kim [125] designed a three-dimensional rotor cooling channel system to distribute oil in an in-wheel motor. The studies on the effectiveness of the proposed distributed system showed 24.9, 11.63 and 15.76 % reduction in the motor temperature relative to the stagnant, circulated and simple channel oil cooling system, respectively. Saleem et al. [126] optimised the oil flow in the rotor duct design of an in-wheel motor using a multi-objective genetic algorithm to reduce the temperature of the direct and indirect spray areas. The optimised design reduced the bearing and resolvers temperature by 8 and 6.4 %, respectively. Marcolini et al. [127] modelled a 25 kW AFPM motor’s thermal network and studied the effectiveness of direct oil cooling over the water cooling technique. An improvement of 3.3 and 2 times in heat transfer rate and torque are respectively noted when compared to the water-cooled motor. Besides the liquid cooling technique using a single coolant, the cooling system using two or more coolants and hybrid cooling techniques require special cooling ducts to facilitate direct and indirect motor cooling. Xueli et al. [128] observed a better cooling effect on a PM motor for the stator cavity filled with an evaporative coolant and the water-cooled casing than the simple water-cooled PM motor. Chuan
+Fig. 10. Cooling channel arrangement - front view of (a) rectangular channel, (b) circular channel, (c) DWHX cooled motor, and (d) copper wires distribution in a slot of DWHX cooled motor [Tikadar et al. [117], with permission from Elsevier].
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+13
+et al. [129] studied the hybrid cooling of EV motors using water and air to cool the AFPM rotor and stator. The comparative study on temperature rise with the conventional air- and water-cooling technique revealed more uniform torque for the proposed system at all speeds. Silwal et al. [130] studied the temperature distribution in the motor windings for two cooling water jacket designs (WJ1, WJ2), direct coil cooling design (DCC1, DCC2) and two of their combinations (WJ1+DCC1, WJ2+DCC2). The study revealed a maximum motor temperature of 115, 114, 108, 80, 64 and 61 ◦C for WJ1, WJ2, DCC1, DCC2, WJ1+DCC1 and WJ2+DCC2 configurations. Sugimoto and Kori [131] studied the enhancement in the cooling performance by adding stagnant oil to the PM motor cooling system and observed a 24 % reduction in coil temperature compared to the simple water jacket cooling method. Madonna et al. [132,133] modelled and analysed the enhancement in implementing direct cooling pipes along end windings. The numerical and experimental study of the proposed design showed a 25 % reduction in hotspot formation with a rise in motor torque and current density by 18 and 20 %, respectively. Table 4 summarises the studies on the effect of cooling channel design on electric motor cooling.
+3.2.3. Inferences on liquid cooling techniques
+Extensive investigations on liquid cooling thermal management have clarified that liquid cooling techniques offer more reliable temperature control of electric motors than air cooling techniques. It has been observed in the literature that, a decrease in the coolant inlet temperature results in a corresponding drop in the maximum motor temperature. However, it also observed that increasing the coolant flow rate at a constant inlet temperature becomes less significant above the optimum limit. The design of the cooling channel is another critical factor in supporting both direct and indirect cooling of the motor windings. The studies further reveal that the efficiency of the liquid cooling system can be improved by using coolants with higher thermo-physical properties and optimising the cooling channel. Moreover, cooling jackets can also serve as a foundational system that supports the enhancement of auxiliary heat transfer systems. The further review has showed that, by using coolants such as nanofluids and refrigerants, the thermal resistance can be reduced in the cooling channel, leading to enhanced cooling performance for EV motors.
+3.3. Passive heat transfer enhancement techniques in EV motors
+It is well known that EV motors generate heat during operation, and the excess heat has to be dissipated effectively. However, in some cases, this efficiency gets reduced or limited due to the high thermal resistance in the heat transfer path. Researchers have investigated various passive heat transfer methods to address this limitation, such as implementing phase change materials, potting thermal fillers, embedded conducting rods and HPs to dissipate the excess heat. The following section deals
+with the existing studies focused on enhancing the heat transfer rate of the cooling system by implementing passive heat transfer devices.
+3.3.1. Phase change materials cooling
+Phase Change Materials (PCM) thermal management technique in electric motors involves the absorption and dissipation of the heat from the motor parts during motor operation and rest period. Bellettre et al. [134] numerically modelled and analysed the influence of the PCM’s filling factor, specific heat capacity and thermal conductivity over the temperature rise of the motor. The studies on using organic P116 and metallic gallium PCM for motor cooling revealed a temperature drop of 14 and 69 ◦C, respectively, for their difference in thermal conductivity. Wang et al. [135] proposed the PCM-based packing system, as shown in Fig. 12, for a PMSM aircraft actuator with net thermal conductivity of 27.7 W/mK. The study on the proposed design resulted in a 50 % extended operation time with a 12.8 % reduction in peak temperature compared to a conventional fin-based packing system. Wang et al. [136] proposed a paraffin-based PCM-packed casing for the PMSM motor and observed an extended operation time of 212 s in continuous operation using paraffin RT90. Wang et al. [137] modified the PCM cavity design by placing aluminium alloy sheets of different counts (0, 2, 5) and thicknesses (0.5 and 1 mm) inside the PCM blocks. The comparative study of the configurations showed that the PCM package with the five-metal insert of 0.5 mm each is relatively more efficient and increases the operation time by up to 32.7 %. Ayat et al. [138] used RT70HC paraffin PCM-filled hollow conductors for the stator winding and observed an 8 % reduction in the maximum temperature of the winding and an 18 % reduction in winding weight. Liu et al. [139] numerically analysed the temperature reduction in the stator by embedding PCM inside the stator tooth. The test results revealed that under continuous operation, an average temperature drop of 7.5 and 1.2 ◦C in the stator core and coil, respectively. The prior works on the thermal management of electric motors utilising PCM indicate that the high specific heat of the material results in increased thermal inertia, thereby enabling the motor temperature to be maintained within a safe operating range. When provided with sufficient downtime, PCM can function as a standalone cooling system for intermittent and short-duty motors. This study further emphasises the importance of considering PCM’s latent heat, thermal conductivity, transition temperature, encapsulation and packaging in designing thermal management systems for EV motors. Higher thermal conductivity of PCM increases heat transfer and temperature drop. The proposed paraffin-based PCM-packed casing for PMSM motors has resulted in extended operation times and reduced peak temperatures. Table 5 shows the results of the studies in improving the motor’s cooling performance using PCM.
+Fig. 11. PM motor with cooling method: (a) upper case; (b) lower case; (c) six coolant paths for housing. [Lee et al. [70], with permission from Elsevier].
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+14
+Table 4
+Effect of channel design on the thermal hydraulic performance of the motor.
+No. Authors Motor power rating (kW)
+Motor temperature (◦C)
+Heat transfer
+coefficient
+(W
+m2 K
+) Channel design
+1 Pech ́anek and Bouzek [112]
+50 52.3 1886.4 Axial flow channel; Cross-sectional area – 0.00045 m2.
+58.6 1018.7 Tangential flow channel; Cross-sectional area – 0.00045 m2. 2 Rhebergen et al. [113]
+– 227 – Tangential flow channel; Externally arranged. 133.8 – Axial flow channel; Internally packed. 3 Sikora et al. [111] 7.5 112 – Axial flow channel; Position – SAVH; Duct ID – 2 mm; OD – 3 mm; Coolant - Air 84 7692 Axial flow channel; Position –SAVH; Duct ID – 2 mm; OD – 3 mm; Coolant – Water. 4 Chiu et al. [86] 30 130.6 – Axial flow channel; Re – 4000. 128.8 – Axial flow channel; Number of fins – 72; Re – 4000. 5 Li et al. [114] 35 104.3 – Tangential flow channel; Height – 5 mm; Width – 10 mm. 105.1 – Tangential flow channel; Height – 5 mm; Width – 16 mm. 107.8 – Tangential flow channel; Height – 5 mm; Width – 36 mm. 101.1 – Tangential flow channel; Height – 3 mm; Width – 10 mm. 101.3 – Tangential flow channel; Height – 6 mm; Width – 10 mm. 101.4 – Tangential flow channel; Height – 8 mm; Width – 10 mm. 101.5 – Tangential flow channel; Height – 10 mm; Width – 10 mm. 6 Bedkowshi et al. [115]
+40 110.9 – Tangential flow channel; Number of channels – 6; Connection – parallel. 114.4 – Tangential flow channel; Number of channels – 1. 108.9 – Tangential flow channel; Number of channels – 6; Connection – series. 100.8 – Tangential flow channel; Number of channels – 6; Connection – parallel; L-shaped aluminium strips attached; Number of aluminium strips – 2. 93.7 – Tangential flow channel; Number of channels – 6; Connection – parallel; L-shaped aluminium strips & heat sinks are attached; Number of aluminium strips – 2; Thickness of heat sink – 2 mm. 98.9 – Tangential flow channel; Number of channels – 8; Connection – parallel; L-shaped aluminium strips attached; Number of aluminium strips – 2. 7 Rehman and Seong [102]
+90 104.4 – Tangential flow channel; Number of passes – 4; Number of ports – 2; Flow rate – 10 LPM. 98.0 – Tangential flow channel; Number of passes – 6; Number of ports – 2; Flow rate – 10 LPM. 97.1 – Tangential flow channel; Number of passes – 8; Number of ports – 2; Flow rate – 10 LPM. 95.6 – Tangential flow channel; Number of passes – 10; Number of ports – 2; Flow rate – 10 LPM. 119.3 – Tangential flow channel; Number of passes – 6; Number of ports – 3; Flow rate – 10 LPM; Number of outlet port – 2; Outlet port position – extremes of cooling channel; Number of inlet port – 1; Inlet port position – center of cooling channel. 116.7 – Tangential flow channel; Number of passes – 6; Number of ports – 3; Flow rate – 10 LPM; Number of inlet port – 2; Inlet port position – extremes of cooling channel; Number of outlet port – 1; Outlet port position – center of cooling channel. 8 Deriszadeh et al. [103]
+– – 8001.7 Spiral flow channel; Number of turns – 2; Re – 10,000; Coolant – ethylene glycol/water
+(60:40); Heat flux – 3500 W/m2. – 14601.4 Spiral flow channel; Number of turns – 4; Re – 10,000; Coolant – ethylene glycol/water
+(60:40); Heat flux – 3500 W/m2. – 20,580 Spiral flow channel; Number of turns – 6; Re – 10,000; Coolant – ethylene glycol/water
+(60:40); Heat flux – 3500 W/m2. – 26201.8 Spiral flow channel; Number of turns – 8; Re – 10,000; Coolant –ethylene glycol/water
+(60:40); Heat flux – 3500 W/m2. 9 Deriszadeh et al. [104]
+60 113 78.5 Spiral flow channel; Number of turns – 4; Coolant – water; Re – 2000; Heat flux – 3500
+W/m2. 107 107.5 Spiral flow channel; Number of turns – 6; Coolant – water; Re – 2000; Heat flux – 3500
+W/m2. 104 140 Spiral flow channel; Number of turns – 8; Coolant – water; Re – 2000; Heat flux – 3500
+W/m2. 10 Tikadar et al. [117]
+125 199.8 5000 Spiral flow channel; Position – motor casing; Number of turns – 7 turns. 176.8 Axial flow channel; Position – stator core; Channel design – circular; Channel diameter – 2.93 mm. 182.8 Axial flow channel; Position – stator core; Channel design – Rectangular; Length – 4.4 mm, Width – 2.2 mm, hydraulic diameter – 2.93 mm. 105.8 Axial flow channel; Position – stator winding slot; Channel design – DWHX; Channel width – 0.5 mm. 11 Lim and Kim [97] 35 220.9 – Direct coil cooling; Stagnant oil cooling. 146.4 – Direct coil cooling; Circulating oil cooling; Flow rate – 1.5 LPM 131.8 – Direct coil cooling; Oil spray cooling; Flow rate – 1.5 LPM 12 Park and Lee [105].
+– 130.1 – Spiral flow channel; Number of turns – 10; Coolant flow rate – 0.106 kg/s; Number of internal fin per channel – 0. 125.7 – Spiral flow channel; Number of turns – 10; Coolant flow rate – 0.106 kg/s; Number of internal fin per channel – 1. 122.9 – Spiral flow channel; Number of turns – 10; Coolant flow rate – 0.106 kg/s; Number of internal fin per channel – 2. 13 Wu and El-Refaie [118]
+250 111.2 – Spiral flow channel; Position – stator casing; Coolant temperature – 85 ◦C; Flow rate 25 LPM.
+(continued on next page)
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+15
+Table 4 (continued )
+No. Authors Motor power rating (kW)
+Motor temperature (◦C)
+Heat transfer
+coefficient
+(W
+m2 K
+) Channel design
+109.3 – Axial flow channel; Position – hollow conductor; Coolant temperature – 85 ◦C; Flow rate – 25 LPM. 14 Li [119] – 52.0 – Tangential flow channel; Number of passes – 4; Connection – series; Channel width 20 mm. 47.0 – Tangential flow channel; Number of passes – 4; Connection – series; Channel width 20 mm; Spoiler dimension (length – 12 mm, height – 3 mm, width – 3 mm) 45.2 – Tangential flow channel; Number of passes – 4; Optimised channel design. 15 Chang and Wang [120]
+30 111 – Radial flow channel; Channel shape – U-shaped; Position – stator segmented armature; Fin height – 43.6 mm. 106.3 – Radial flow channel; Channel shape – U-shaped; Position – stator segmented armature; Fin height – 35.6 mm. 16 Lindh et al. [123] – 137 – Indirect cooling; Coolant – water; Coolant temperature – 15 ◦C; Flow rate – 6 LPM. 85.8 – Direct coil cooling; Coolant – PAO oil; Coolant temperature – 15 ◦C; Flow rate – 4.6 LPM. 17 Lee et al. [70] 16.7 108 – Axial flow channel; Position – Stator casing; 2300 rpm; Coolant – air. 82 – Axial flow channel; Position – stator casing & hollow shaft; 2300 rpm; Coolant – oil. 18 Xu et al. [124] – 278.4 – Direct coil cooling; Flow regime – air gap; Air gap – 1.1 mm; 20,000 rpm 195 – Direct coil cooling; Flow regime – air gap & axial channel; Axial channel count – 1; Axial channel position – stator winding slot; Axial channel diameter – 5 mm; 20,000 rpm. 191 – Direct coil cooling; Flow regime – air gap & axial channel; Axial channel count – 2; Axial channel position – stator winding slot; Axial channel diameter – 4 mm; 20,000 rpm. 170.8 – Direct coil cooling; Flow regime – air gap &axial channel; Axial channel count – 3; Axial channel position – stator winding slot; Axial channel diameter – 3 mm; 20,000 rpm. 19 Assaad et al. [106] 40 350 – Direct coil cooling; Coolant – oil & air; Flow regime – Oil (hollow shaft), air (stator casing); 10,000 rpm. 110 – Direct coil cooling; Coolant – oil & air; Flow regime – Oil (hollow shaft & internal projections), air (stator casing); 10,000 rpm. 20 Park and Kim [125]
+35 221.1 – Direct coil cooling; Stagnant oil; 4400 rpm. 146.6 – Direct coil cooling; Circulating oil; 4400 rpm. 167.6 251 Direct coil cooling; Simple oil channel cooling; 4400 rpm. 97.8 5270 Direct coil cooling; Oil spray cooling; 4400 rpm. 21 Saleem et al. [126] 35 134.7 10,923 Direct coil cooling; Optimised oil spray cooling; 4400 rpm. 22 Ye et al. [100] – 122.7 – Indirect cooling; Coolant – water; Water flow position – stator casing; Flow rate – 10 LPM. 97.7 – Direct coil cooling; Coolant – water & oil; Water flow position – stator casing; Water flow rate – 10 LPM; Oil flow position – right side end-winding; Oil flow rate –stagnant. 79.1 – Direct coil cooling; Coolant – water & oil; Water flow position – stator casing; Water flow rate – 10 LPM; Oil flow position – both side end-winding; Oil flow rate –stagnant. 62.7 – Direct coil cooling; Coolant – water & oil; Water flow position – stator casing; Water flow rate – 10 LPM; Oil flow position – right side end-winding; Oil flow rate – 6 LPM. 54.7 – Direct coil cooling; Coolant – water & oil; Water flow position – stator casing; Water flow rate – 10 LPM; Oil flow position – right side end-winding; Oil flow rate – 8 LPM. 23 Chuan et al. [129] – 153 3500 Axial flow channel; Coolant – water; Coolant flow position – rotor shaft. 136.6 Axial flow channel; Coolant – air; Air velocity – 20 m/s. 121.2 Axial flow channel; Coolant – water & air; Water flow position – rotor shaft; Air velocity – 20 m/s. 96.8 Tangential flow channel; Coolant – water; Coolant flow position – stator casing. 24 Silwal et al. [130] – 115 – Axial flow channel; Coolant – water; Number of channels – 36; Coolant flow position stator casing; 5 LPM; Design name – WJ1. 114 – Tangential flow channel; Coolant – water; Number of channels – 4; Coolant flow position – stator casing 5 LPM; Design name – WJ2. 108 – Direct coil cooling; Coolant – automatic transmission fluid; Coolant flow position intermittent space between winding; 5 LPM; Design name – DCC1. 84 – Direct coil cooling; Coolant – water; Coolant flow position –triangular duct placed between windings; 5 LPM; Design name – DCC2. 63 – Design name – WJ1 + DCC 1. 61 – Design name – WJ2 + DCC 2. 25 Sugimoto and Kori [131]
+5 124 – Axial flow channel; Coolant – air; Coolant inlet temperature – 40 ◦C; 1500 rpm. 65 – Axial flow channel; Coolant – water; Coolant inlet temperature – 40 ◦C; 1500 rpm. 59 – Axial flow channel & Direct coil cooling; Coolant – water and oil; Coolant inlet temperature – 40 ◦C; 1500 rpm. 26 Madonna et al. [132]
+30 172 – Axial flow channel; Coolant – water; 2800 rpm; Flow rate – 10 LPM. 130 – Axial flow channel & Direct coil cooling; Coolant – water; 2800 rpm; Flow rate at axial channels – 6 LPM; Flow rate at direct coil channels – 4 LPM.
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+16
+3.3.2. Thermal filler materials
+Thermal fillers or potting materials are substances used to fill the air gap between end windings and the casing. These materials facilitate an efficient thermal transfer path, enhancing heat dissipation in the system. Yao et al. [140] analysed the effect of using the Aluminium nitride potting material in 7 kW PMSM and observed a 20.3 ◦C drop in motor temperature. Polikarpova et al. [141] studied heat transfer enhancement in a 100 kV A AFPM motor using ceramacast 675-N as potting material. The results revealed a 17 ◦C temperature drop along stator end windings. Polikarpova et al. [142], in a comparative study of ceramacast 675-N and epoxy 2315 as potting material in the stator, reported a maximum temperature deviation of 2 ◦C due to their difference in thermal conductivity. Melka et al. [90] covered the stator core with the potting thermal fillers, as shown in Fig. 13(a). The studies on the motor temperature rise with plain and finned casing revealed a temperature drop of 18.5 and 29.8 ◦C, respectively. Sun et al. [109] experimented with potting
+silicone gelatine material in a PMSM motor, as shown in Fig. 13(b). The analysis revealed a 27.3 ◦C temperature drop and doubled peak load operation time. Chai et al. [143] introduced an inner bulge along the stator core of the AFPM motor and impregnated the stator windings with epoxy resins. The results revealed that the motor temperature drop is a linear function of epoxy resin’s thermal conductivity and showed a temperature drop of 8.3 ◦C when using resin with a thermal conductivity of 0.8 W/mK. McCluskey et al. [116] study on the potting material’s thermal conductivity revealed that a rise in thermal conductivity considerably reduces the maximum winding temperature. Li et al. [144] analysis on potting the external rotor PM motor end-windings air gap with thermal grease reduced the end-windings temperature by 74 ◦C and increased the maximum torque from 92 to 115.2Nm. Table 6 summarises the winding temperature data observed by researchers while using the thermal fillers of different thermal conductivity in the motor.
+3.3.3. Embedded conductive materials
+The incorporation of conductive material along the motor core and stator teeth serves to reduce heat transfer resistance. This optimization enhances the efficiency of the cooling system by facilitating a more effective heat transfer path. Galea et al. [145] inserted T-shaped copper as a heat path in the stator winding and reduced the maximum temperature from 180 to 112 ◦C. Polikarpova et al. [146] introduced copper bars along the stator of 75 kW AFPM and achieved a 25 ◦C temperature drop. Pyrh ̈onen et al. [147] inserted a series of copper rods into the stator core of 75 kW AFPM on both potted and unpotted stators. The studies showed a temperature drop of 16 and 26 ◦C along the unpotted stator and 14 and 26 ◦C for the potted stator with single and three copper rods, respectively. Huynh and Hsieh [148] modified the copper windings insulation with materials of higher thermal conductivity and observed that the heat transfer rate increases with the thermal conductance of the insulator. Table 7 summarises the temperature data observed by researchers by adding embedded conductive materials in motors.
+3.3.4. Heat transfer enhancement using heat pipes
+Heat pipes (HPs) are passive heat transfer devices exhibiting exceptionally high thermal conductivity. They can be strategically positioned along the motor windings and core to facilitate enhanced cooling. By utilising HPs, heat generated within the motor can be efficiently transferred from the evaporative end to the condensing end. This enables effective heat dissipation and temperature regulation, contributing to improved motor performance and reliability. The high thermal conductivity of HPs allows for efficient heat transfer even over long
+Fig. 12. Schematic view of the PCM-based packaging strategy for motor thermal management system. [Wang et al. [135], with permission from Elsevier].
+Table 5
+Temperature reduction in motors using PCM materials.
+No. Authors Motor power rating (kW)
+PCM material
+PCM thermal Conductivity (W/ mK)
+Latent heat (kJ/ kg)
+Motor temperature (◦ C)
+Type of cooling
+PCM Position
+Inference
+Without PCM
+With PCM
+1 Bellettre et al. [134]
+– Gallium 34 – 143 74 Air cooling
+Over the end winding
+The winding temperature reduces by 69 K. P116 – 129 The winding temperature reduces by 14 K. 2 Wang et al. [135]
+2.5 Paraffin 0.52 201.6 150 127.6 Air cooling
+Inside stator packing
+The operation time increases by 50 % 3 Wang et al. [136]
+2.5 Para 80 0.2 250 100 100 Air cooling
+Inside stator casing slot
+Motor operation time increased from 438 to 650 s. 4 Wang et al. [137]
+2.5 RT 90 0.2 290 100 94.2 Air cooling
+Inside stator casing slot
+Motor operation time extends by 32.7 %. 5 Ayat et al. [138]
+– RT 70 H C 0.2 260 116 89 Air cooling
+Inside hollow winding
+Winding temperature rise is reduced by 8 %.
+6 Liu et al. [139]
+315 SP 58 0.6 45.75 76.2 68.7 Air cooling
+Inside stator slot
+Average temperatures of the stator core decreased by 7.5 K
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+17
+distances, making them valuable components in motor thermal management strategies. Groll et al. [149] placed HPs along the rotor and stator windings of a 103 kW air-cooled AC-IM and observed a 60 ◦C temperature drop. Hassett and Hodowanec [150] registered a patent, embedding the straight HP evaporator inside the stator core, winding slots, and external water-cooled condenser, as shown in Fig. 14(a). Owng et al. [151] patented a motor cooling technique with the HP positioned along the RAVH with the condenser attached near the rotor impeller. Ruby et al. [152] patented an integrated single-fluid cooling system EV motor using HP to transfer heat from the motor to the cooling system. Fedoseyev et al. [153] patented a rotor cooling system in a motor with the introduced air-cooled axial rotating HP inside the hollow shaft, as in Fig. 14(b). Putra and Ariantara [154] used an L-shaped flat HP along motor fins, as shown in Fig. 14(c) and achieved a temperature drop of 33.8 ◦C. Aprianingsih et al. [155] implemented air cooled pulsating HP along the stator core and observed a maximum temperature drop of 84.5 ◦C along the motor surface. Lian et al. [156] embedded an HP along the electric aircraft’s electromechanical actuator dissipating heat into the fuel tank, as in Fig. 14(d), reducing the motor’s temperature by 17.8–58.6 % during the flight cycle. Wan et al. [157] introduced the HP along stator end windings dissipating heat to the motor end caps and achieved a 16.4 ◦C drop in the maximum motor temperature. Wang et al. [158] studied three designs of HPs embedded along the stator end
+windings and endcaps of PMSM and observed a temperature drop of 9.8, 16.4 and 10.3 ◦C. Fang et al. [159] attached a straight embedded module and three-dimensional rounding module HP in an air-cooled PMSM motor as in Fig. 15(a) and (b). The analysis revealed a 22.3 % drop in motor temperature and 28.6 and 21.4 % extended operation time at maximum speed and torque conditions, respectively. Sun et al. [110] introduced a three-dimensional rounding module HP along the stator core and casing with and without potting material, as shown in Fig. 15(c) and (d). The results reported a 22.9 ◦C temperature drop and a 60 % extended operation time for HP with potting material. Yu et al. [160] introduced an HP radiator for an outer rotor surface-mounted PMSM motor and observed a 60 ◦C temperature drop. Wu et al. [161] developed a cooling system for a motor using a liquid-cooled HP integrated along the motor’s hollow conductor windings. The HP was tested at 25◦ inclination and achieved a maximum temperature drop of 37.9 ◦C. Zhang et al. [162] introduced an air-cooled U-shaped HP with a 2 mm outer diameter along the stator winding center. The embedded HPs reduce the stator core and end winding temperature from 224 and 189 ◦C to 95 and 72 ◦C, respectively. Le et al. [163] radially integrated a flat HP along the water-cooled Yokeless and segmented armature AFPM motor’s stator. The attached HPs have a maximum thermal conductance of 70,000 W/mK at the temperature ranging from 80 to 100 ◦C.
+Fig. 13. a) Thermal filler applied to the motor [Melka et al. [90], with permission from Elsevier]. b) Potting material arrangement in motor [Sun et al. [109], with permission from Elsevier].
+Table 6
+Temperature reduction in motors using potting materials.
+No. Authors Motor power rating (kW) Potting materials Thermal conductivity (W/mK) Motor winding temperature (◦C)
+Original Modified
+1 Yao et al. [140] 7 Aluminium nitride 40 114.9 94.67 2 Polikarpova et al. [141] 100 Ceramacast 675 N 100 145 128 3 Polikarpova et al. [142] 100 Ceramacast 675 N 100 125 118 Epoxy 2315 58 125 120 4 Melka et al. [90] 0.43 High-density polyethylene 0.45 95 76.5 5 Chai et al. [143] 33 Epoxy resin 0.4 140 133.4 0.6 140 132.5 0.8 140 131.7 1 140 131.1 1.2 140 130.8 1.4 140 130.2 6 McCluskey et al. [116] 200 Epoxy resin 0.2 – 469 1 – 242 5 – 197 7 Sun et al. [109] 53 Potting silicon gelatin 2 135 90.6 8 Li et al. [144] 6 Potting resin – 126 52
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+18
+Zhang et al. [164] attached 24 U-shaped HPs, each with a 4 mm diameter, to the stator core of the PMSM motor and reduced the maximum winding and slot temperature from 112.7 to 92.8 ◦C to 81 and 66.3 ◦C, respectively. Further, the proposed model reduced the copper loss by 72 W, increasing the motor efficiency by 1.5 %. Chang et al.
+[165] analysed the possibility of using a loop heat pipe with four evaporators for an electric aircraft motor and observed that the proposed system could maintain the evaporator temperature below 80 ◦C at a 13.2 kW heat load. Huang et al. [166] hybridised the cooling system with an air-cooled HP and reduced the cooling system’s energy
+Table 7
+Temperature reduction in motors with embedded conductive materials.
+No. Authors Motor power rating (kW)
+Thermal conductivity (W/ mK)
+Motor winding temperature (◦C)
+Description
+Original Modified
+1 Galea et al. [145] – 4.332 180 107.5 Water cooling; Embedded material – copper; Shape – T-shaped; No of embedded material – one per stator tooth. 2 Polikarpova et al. [146]
+100 400 139 133 Water cooling; Embedded material – copper; Shape – cylindrical; No. Of embedded material – one per stator tooth; Flow rate – 6.2 LPM. 125 Water cooling; Embedded material – copper; Shape – cylindrical; No. Of embedded material – three per stator tooth; Flow rate – 6.2 LPM. 3 Pyrh ̈onen et al. [147]
+75 400 147 132 Water cooling; Embedded material – copper; Shape - cylindrical; No. Of embedded material – one per stator tooth. 119 Water cooling; Embedded material – copper; Shape – cylindrical; No. Of embedded material – three per stator tooth; Copper rod diameter - 8, 6, 6 mm. 138 123 Water cooling; Embedded material – copper; Shape – cylindrical; No. Of embedded material – one per stator tooth; Potting material – ceramacast. 113 Water cooling; Embedded material – copper; Shape – cylindrical; No. Of embedded material – one per stator tooth; Copper rod diameter - 8, 6, 6 mm; Potting material ceramacast. 4 Huynh and Hsieh [148].
+10 0.1 180.2 – Water cooling; Embedded material – Insulation; Motor type – Internal PM motor; 0.17 177.2 time – 60 min; Flow rate – 0.35 LPM. 3 170 7.6 169.8 1.5 0.1 122 – Air cooling; Embedded material – Insulation; Motor type – induction motor; 1750 3 104 rpm; Time – 20 min.
+Fig. 14. HP arrangement. a) HP placed on stator core [Putra et al. [154], with permission from Elsevier] b) HP placed on rotor shaft [Putra et al. [154], with permission from Elsevier] c) L-shaped HP placed along with fins [Putra et al. [154], with permission from Elsevier]. d)HP embedded on EMA [Lian et al. [156], with permission from Elsevier].
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+19
+consumption by 370 kJ. Li et al. [167] developed a single-loop thermosyphon for a motorised spindle to transfer heat generated from the rotor and bearing to the shaft ends. The analysis of the startup characteristics of the HP and the motor spindle’s temperature distribution observed a 28 % reduction in maximum motor temperature. Li et al. [168] also analysed two-phase loop thermosyphons using R600a as working fluid for cooling the shaft of the motorised spindle and observed 13 to32 % and 10 to35 % drop in rotor temperature and thermal resistance at filling ratios ranging from 15 to 60 %. Liu et al. [169] hybridised the cooling system of the electric motor by using an air-cooled L-shaped cylindrical HP mounted over the stator core. The results revealed a reduction in the energy spent and observed 5–7◦ drop in motor temperature. Dong et al. [170] analysed the temperature drop and distribution of a 10 kW surface-mounted PMSM motor using flat HPs mounted along the stator slots using the lumped parameters thermal network (LPTN) model. The study revealed that the surface temperature of PMs attached to the rotor reduced from 124.9 to 95.9 ◦C, with a slight variation along
+the axial length. Dong et al. [171] further analysed the influence of vapor chamber thickness and the capillary wick for maximum heat dissipation. The results reported that the attached flat HP’s thickness is crucial to the heat transfer rate. Yang et al. [172] embedded four HPs along the stator core, having its condenser section outside the end cover and bent at 90◦ inclination. The results highlighted the HP orientation as a significant factor in motor cooling and showed 6 to10 ◦C reduction in the motor temperature. Wu et al. [173] mounted loop thermosyphons along single and double ends of the rotor lamination to increase the motor-specific power and observed a drop in maximum rotor temperature by 8 to14 and 10 to22 ◦C, respectively. Li et al. [174] studied the enhancement in the motor’s cooling by introducing the HP and potting material to the plane water-cooled motor. The analysis showed that the addition of an HP reduced the motor temperature by 22.4 and 6.8 ◦C over plane liquid-cooled and potting material-covered motors, respectively. Table 8 summarises the effect of the HP on motor temperature as observed by the researchers in electric motor cooling.
+Fig. 15. HP arrangements a) straight embedded module model [Fang et al. [159], with permission from Elsevier]. b) three-dimensional rounding module model [Fang et al. [159], with permission from Elsevier]. c) HP-M model [Sun et al. [110], with permission from Elsevier]. d) HP + P-M model [Sun et al. [110], with permission from Elsevier].
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+20
+3.3.5. Inferences on heat transfer enhancement techniques
+Studies on heat transfer enhancement techniques in electric vehicle motors have revealed a significant improvement in the performance of the motor’s cooling system. This leads to more stable and reliable motor operation.The increased temperature drop and reduced heat transfer resistance, highlight the improved cooling system efficiency. Further, the studies on thermal enhancers show the possibility of overloaded operation within the operating temperature, which can be unfavourable to the motor’s performance as mechanical wear increases rapidly. Therefore, it is crucial to ensure that the thermal enhancing systems should be designed and implemented to balance the need for improved cooling and the risk of overloading. The studies also signify that hybridising the cooling system reduces the energy spent on the coolant circulation, especially with air-cooled HPs. However, the use of high heat flux HPs in electric vehicle motor thermal management is still limited, suggesting that there is room for further research to improve the performance and efficiency of electric vehicle motors.
+4. Computational models for temperature control of EV motors
+Computational modelling and temperature control involve predicting the thermal behaviour of electric motors using numerical models such as LPTN, FEA, and CFD and optimising the motor’s temperature values for improved performance and reliability. Numerical models simulate diverse operating conditions, offering a comprehensive view of a motor’s thermal behavior.This prediction method allows for
+identifying hot spots, thereby optimising the cooling system to prevent overheat. The following content summarises the existing studies on developing EV motor numerical models and real-time predictive temperature control systems. Huai et al. [175] modelled the heat transfer and thermal losses of the enclosed air-cooled AC-IM with an error of less than 10 %. Howey et al. [176,177] simulated the fluid domain in the AFPM motor to calculate the convective heat transfer coefficient value. The results highlight rotor surface roughness and rotational Re are the major influential parameters. Wrobel et al. [178] developed an FEA-based thermal model incorporating the motor losses and calculated the thermal value of segmented stator winding with an error of less than 9 %. Wrobel et al. [179] also studied the loss component of the AFPM motor’s rotor using CFD and 3D LPTN models. The predicted CFD and 3D LPTN model losses are close to the experimental value. Ponomarev et al. [180] studied the effectiveness and reliability of direct oil-cooled PMSM obtained using the LPTN, FEM and CFD methods and stated that the CFD method produces more reliable thermal values due to its ability to simulate complex fluid flow and heat transfer phenomena. The study highlights motor core loss is a function of magnetic flux and frequency. Grabowski et al. [181] numerically simulated the temperature distribution of the AC-IM fins using COMSOL software with an error of less than 10 %. The temperature distribution along the motor cooling fins is the function of the material’s thermophysical properties, such as specific heat and thermal conductivity. Nikitina [91] numerically modelled the heat generation and studied the thermal values in the motor spindle.
+Table 8
+Temperature reduction in motors with embedded heat pipes.
+No. Authors Motor power rating (kW)
+Evaporator position
+Cooling medium
+Motor winding temperature (◦C)
+Heat pipe summary
+Original Modified Geometry Fill ratio
+Wick Dimension
+1 Groll et al. [149]
+150 Stator winding Air 150 100 Cylindrical – – 
+2 Putra and Ariantara [154]
+– Motor casing fins
+Air 102.2 68.4 L-shaped flat 50 % Sintered copper wick
+Evaporator length – 154 mm; Condenser length 34 mm. 3 Aprianingsih et al. [155]
+– Stator core Air 162.1 78.2 Pulsating 50 % – Vapor core diameter – 1.3 mm. 4 Lian et al. [156] 4.4 Stator core Water – – Flat – – Dimension – 14 × 5.4 × 520 mm; Evaporator length – 116 mm. 5 Wan et al. [157] 64 Stator end–winding
+Water 151.1 141.2 L-shaped cylindrical
+– Grooved wick Outer diameter – 6 mm; Evaporator length – 60 mm; Condenser length 62 mm. 6 Le et al. [163] 60 Stator end–winding
+Water – 70.1 Flat 30 % Copper capillary wick
+Dimension – 2 × 8 × 85 mm. 7 Fang et al. [159]
+15 Stator end–winding
+Air 112 87 Cylindrical – Grooved wick sintered with copper powder
+Outer diameter – 4 mm; Length – 180 mm.
+102 Rounded cylindrical
+– Grooved wick sintered with copper powder
+Outer diameter – 4 mm; Length – 270 mm
+8 Sun et al. [110] 53 Stator end–winding
+Water 108 104.5 Rounded cylindrical
+70 % Grooved wick sintered with copper powder
+Outer diameter – 6 mm.
+9 Zhang et al. [162]
+– Stator slot and end–winding
+Air 224 95 U-shaped cylindrical
+– – Outer diameter – 2 mm; Condenser length – 24 mm. 10 Zhang et al. [164]
+4.3 Stator slot and end–winding
+Air 122.5 76.8 U-shaped cylindrical
+– – Outer diameter – 4 mm.
+11 Li et al. [167] – Motor spindle Water 78.4 56.2 Loop thermosyphon
+50–60 %
+– Outer diameter – 8 mm; Evaporator length – 100 mm; Condenser length 100 mm. 12 Dong et al. [170]
+10 Stator slot Air 124.9 94.9 Flat – – 
+13 Li et al. [174] – Stator slot and end–winding
+Water 114 91.6 Flat – – 
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+21
+Rasekh et al. [182] computationally simulated and correlated the heat transfer coefficient for an AFPM synchronous machine with an error of less than 5 % using magnet parameters like rotational Re, magnet thickness ratio and magnet angle ratio. Sheela and Mohan [183] modelled a 3 kW PMSM using the FEA-based magnetic software, which produced accurate results when verified with 3 kW PMSM. Grunditz et al. [184] modelled the thermal values and heat transfer resistance of PMSM motors of different stator core slot thicknesses using the LPTN model. The studies revealed that the slot thickness affects the motor’s copper and iron losses, and a larger slot thickness doubles the peak load operation time of the original motor. Zhu et al. [79] proposed a double-loop circulatory calculation technique to reduce the thermal model complexity and achieved an error percentage of less than 5 %. Wei et al. [185] developed a one-dimensional model of PMSM and optimised the motor parameters using the MIGA-NLPQL combination optimisation algorithm. The studies reduced motor loss by 18.35 %, increasing driving range by 3.4 %. Yang et al. [186] proposed a loss minimisation method based on the variable voltage control strategy to improve the motor and inverter efficiency, as shown in Fig. 16. The study enhanced the motor and inverter efficiency by 0.77 and 12.8 %, respectively, for stable drive system operation. Braut et al. [187] analysis of the fatigue life of the PMSM rotor using transient thermo-mechanical 3D FEM predicted that the rotor magnet pocket upper filet is the critical stress region prone to failure. Ganji et al. [188] modelled and simulated the performance of an 8/6 SRM generator (SRG) using the 2D FEM and proposed the necessity of a control system based on the numerical model. The research further analysed the motor iron losses for each time step and observed magnetic flux density and frequency as influential parameters. In monitoring the heat generation and dissipation of the motors, the condition monitoring system collects motor data like temperature, speed, vibration, dielectric spectroscopy, and line leakage current and predicts the failure based on the data [189]. Shu et al. [190] analysed the failure of the motor control components using the fault tree diagnostic techniques to predict the reliability of the EV motor controller.
+The study reports that surface-mounted components of the controller are prone to failure due to the motor temperature and require periodic replacements for reliable operation. Demetriades et al. [191] developed a real-time thermal model of PM motors and implemented it in a DSP to predict the thermal values of the motor in real-time. The study generates the motor loss values numerically and uses them as model input for the control system. The model-generated thermal values are closer to the experimental result observed. Dong et al. [68,192] further examined the motor’s thermal values using the motor loss models and attempted to correct the temperature values based on the real-time thermocouple data input. The real-time data reduced the model’s error percentage up to 85 %. Huang et al. [166] used a real-time motor temperature prediction-based cooling system controller for a hybrid HP-enhanced water-cooled PM motor. The proposed model assesses the heat generated and the energy consumption for the motor cooling system, such as pump, fan and operates coolant pump for optimum coolant flow, thus reducing the cooling system energy consumption by 57 %. Table 9 summarises the numerical model and the correlations for the prediction of motor heat loss and heat transfer parameters developed by the researchers. The observations from the prior works on the computational modelling of electric motors reveal the potential for reliable prediction of the motor’s thermal values. These models can help optimise the design of the motor for better performance and longer lifespan, as well as improve the overall efficiency of the cooling system. Integrating these numerical models with real-time condition monitoring systems makes it possible to accurately predict the motor’s temperature and adjust the cooling system’s energy consumption. Continued research and development could lead to more accurate models predicting the motor’s thermal behaviour with relatively lesser uncertainty under a wider range of operating conditions. In addition, the predictive thermal management techniques integrated with artificial intelligence can be even more efficient and will be worth initiative to provide real-time predictions and recommendations based on the motor’s operating conditions.
+Fig. 16. Schematic layout of the variable voltage control strategy [Yang et al. [186], with permission from Elsevier].
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+22
+Table 9
+Numerical models developed for motor thermal management system.
+No. Authors Heat generation/loss calculation Correlation for heat transfer Correlation for predicting other parameters
+1 Huai et al. [175]
+PCu1 = ∅R1I11 Pm = ∅RmI2m PCu2 = ∅R2I22
+Laminar H′ = 0.7Re0.5[1 0.12(Fh/Fw)1/3]K
+Fl
+ha =
+H′[1 .02(Fh /Fw)]
+hl = 0.7Re0.5
+[
+1 0.35(Fh/Fw)
+1 3
+] K
+Fl
+Turbulent H′ = 0.035Re0.6[1 0.09(Fh/Fw)0.5]K
+Fl
+hl =
+0.03Re0.8[1 0.23(Fh/Fw)0.5]K
+Fl
+Free convection hfree = 6.5 + 0.05(T
+Text )
+
+2 Howey et al. [176,177]
+Q = TqΩ Tq = 0.5CmρΩ2R5
+Nulam = 0.35Reθ0.5 (for Re < 2.8e5) Nuturb = 0.0151Reθ0.8 (for Re > 2.8e5) Nu = 0.00067Reθ + 118 for G = 0.0212 Nu = 0.00062Reθ + 110 for G = 0.0106
+Reθ = ωR2
+θ
+G = g/R h = IV Qrad
+A(Ts Tref ) = qnet
+Ts Tref
+T=
+V
+I (b1 + b2V)
+b3 + b4V
+3 Wrobel et al. [178]
+Pcore,1 = ah
+λ Vm + aJ
+λ2Vm2 + ae
+λ3/2 V3m/2
+Pcore,2 = bh
+λ V∗
+d + bJ
+λ2Vd∗2 + be
+λ3/2 V∗3/2
+d
+λ = Eprms/f Iq = T/kT V∗
+d = λf(Id /ISC)
+Vm = λf
+̅̅ (1 (Id/ISC))2 + (Iq/ISC)2
+√
+PCu = 3Ip2h(1 + kf)(1 + 0.00393(TCu
+25))R(ph|25C)
+-
+4 Ponomarev et al. [180]
+PCu = 3RphI21
+Pcore = khP15
+(B
+1.5
+)2 m
+(f
+50
+)1.5 Rcond = 1
+Acs K
+Rconv = 1
+As K
+Roil = 1
+cpoil
+V ̇ oil
+[ΔT] = ([R][C]) 1[P]
+5 Grabowski
+et al. [181] Q = ρCp
+∂T
+∂t ∇.(K∇T) h = ρCpDv
+4L (1 e n)
+n = 0.1448 L0.946
+D1.16
+( ka ρCp v
+)0.214 T Tamb = (Tinf Tamb )
+cosh m(l x) + h
+Km sinh m(l x)
+coshml + h
+Km sinhml
+)
+m=
+̅ hp ̅
+KAcs
+√
+6 Nikitina [91] PCu = 3I21R1
+Pcore = kh
+(P
+M
+)
+10 50
+B2
+(fH 50
+)1.3 M
+PMe = 0.410 2Rdnf
+–
+7 Grunditz et al. [184]
+Pcore = KhfBn
+pk + Kef2Bp2k Nu = (f/8)(ReD 1000)Pr
+1 + 12.7(f/8)
+1 2
+( Pr
+2
+31
+)
+f=
+(0.790 ln(ReD) 1.64) 2 Rth,cool = kConv,corr
+hcool Acool
+
+8 Zhu et al. [79]
+– hk+1 = hk (μk+1/μk)m n(Kk/Kk+1)m 1 KN+1 = K(1 + βTN)/(1 + βTN 1)
+Br = [1 + (TPM 20)kBr](1 IL)Br20 Hc = [1 + (TPM 20)kHc](1 IL)Hc20 Γa b : GT
+a MsaGa φTab + GT
+b Msb GbφTbb = qab + qbb
+Tk+1 = Tk + (qout qin)/(∑ αkiSi)
+Γn m : φTab
+λab
+= φTbb
+λbb
+9 Yang et al. [186]
+Motor heat loss
+PCu = 3
+2Ra(id2 + iq2) = 3
+2Ra
+((
+iod
+ωLq ioq Rc
+)2 +
+(
+ioq + ωLdiod + ωψf
+Rc
+)2 2
+q
+)
+Pcore = 3
+2Rc(id2 + iq2) = 3
+2Rc
+(( ωLqioq Rc
+)2 +
+(ωLdiod + ωψf Rc
+)2 2
+q
+)
+Pmotor loss = PCu + PFe
+–
+(continued on next page)
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+23
+Table 9 (continued )
+No. Authors Heat generation/loss calculation Correlation for heat transfer Correlation for predicting other parameters
+Inverter heat loss (a) On-state heat loss
+PIGBT loss = 1
+2Ipeak VIo
+(1
+π +m
+4 cos φ
+) +
+Ip2eak RIo
+(1
+8+ m
+3π cos φ
+)
+PDiode loss = 1
+2Ipeak VDo
+(1
+π +m
+4 cos φ
+) +
+Ip2eak RDo
+(1
+8+ m
+3π cos φ
+)
+(b) Switching heat loss
+PSW loss = fsw
+π (EIGBTon + EIGBToff +
+EDioderec ) Ipeak
+Itest
+VDC
+VDCtest
+10 Ganji et al.
+[188] Pc = kcf ChfBa+bBmax
+max + 1
+2π2 Ce
+(dB dt
+)2
+avg kcf =
+1+ k
+Bmax
+∑n
+i+1 ΔBi
+–
+11 Demetriades et al. [191]
+Pcu = ∑ Riii2
+Pcore = kh B2maxf + keB2max f2
+NuL =
+(
+0.825 + 0.387Ra
+1 l6
+[
+1 + (0.492/Pr)
+9 16
+]8 27
+⎞
+⎠
+2
+Real-time prediction x ̇ (t) = Ax(t) + Bu(t) y(t) = Cx(t) + Du(t)
+And x[k + 1] = Adx[k] + Bdu[k] y[k] = Cdx[k] + Ddu[k]
+Ad = eATsampling
+Bd = ∫ Tsampling
+0 eAσBdσ Cd = C ; Dd = D
+12 Dong et al.
+[192] Pac,slot winding = 2NIs2laρ0
+πd2
+∑
+n
+kac,slot kac,slot = 1 +
+1 4
+(∑
+l 1 Ni Nl
+)2 (
+ωμ0 d2 εl 2ρ0
+)2
+εl = Nl
+(
+πd2 4
+)
+/wl d
+Pac,end winding = kac,endf22NnIs2lE ρ0
+πd2 Kac = Pac/PDC PcuTw = PCu,DCT0 (1 + α(Tw T0 )) + PCu,DC T0 ×
+KacT0 1
+(1 + α(Tw T0))β
+Pcore = kh(f, Bm, Tc)fB2m + ke(f, Bm, Tc)(Bm f)2
+–
+13 Dong et al.
+[68] PCu = NIs2ρ0
+S
+⎧ ⎨
+⎩n[1 + α(0.5Twl + 0.5Twu
+T0](la + le) + ∑l4=1
+(Kac,l T0 1)la [1 + α(Twl T0)]βl
++
+∑l8=5
+(Kac,l T0 1)la [1 + α(Twl T0)]βl
+⎫ ⎬
+⎭
+Kac = Pac/PDC
+Pcore = kh(f, Bm, Tc)fB2m + ke(f, Bm, Tc)(Bm f)2
+–
+14 Huang et al. [166]
+Power usage of centrifugal fan
+Efan = Cfan
+(Nfan
+60
+)3
+Pump fluid mass flow m ̇ pump = NpDisρw
+60 Power usage of pump
+Epump = Dis3ρw
+(Cp,rad Aflow
++ρw Cp,pipe
+)(Np
+60
+)3
+m ̇ a = Dr3fanCflow Nrfanρa
+60
+Erfan = Dr5fan CflowCpresρa
+(Nrfan
+60
+)3
+hair = NuKair
+S
+Nun = 1
+24 Ra
+(S
+L
+)
+(
+1e
+35
+Ra
+(S
+L
+) )0.75
+Nuf = 1
+(0.5RePr)3 +
+1
+(0.664√̅Re̅ Pr0.33
+̅̅
+1 + 3.65/√̅Re̅
+√
+)3
+Coolant mass flow rate control  ̇mmot = ∫
+⎛
+⎜⎝
+d(Qideal Qhp
+dt + keeliq
+hliq Acra
+dΔTm dt
+⎞
+⎟⎠
+( ∂hliq ∂m ̇ per
+Acra ΔTm
+) dt
+Where, Acs - Cross-sectional area (m2), As- Surface area (m2), Cp - Specific heat (J/kg K), D - Hydraulic diameter (m), h - Heat transfer coefficient (W/m2K), I - Current
+(amp), Pr - Prandtl number, Q - Heat loss (kW), RΩ - Electrical resistance (ohm), V - Voltage (Volt), α, b - Temperature coefficient of resistance (◦C 1), ∅ - Number of phases, Ω - Angular velocity (rad/s).
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+24
+5. Recommendations for future work
+The studies on optimising EV motor technologies and the evolving power rating highlight the need for continuous research and development in motor thermal management systems. The heat transfer and the cooling efficiency of the cooling system depend on the parameters such as coolant flow position, cooling surface design, coolant supply parameters, and thermophysical properties of coolant. Optimisation of these parameters reduces the cooling system energy requirements and increases the heat transfer rate. Studies on advanced cooling techniques, such as phase-change materials, micro-channel cooling, and refrigerantbased cooling, were limited and must be explored well for enhanced cooling and improved heat dissipation and efficiency. Further studies should focus on exploring advanced materials with superior thermal conductivity and heat dissipation properties for enhanced cooling of EV motors. Computational modelling of the motor helps to predict and optimise the motor’s thermal values and performance. Integrating the computational model with the real-time condition monitoring system enables more precise temperature control and enhances motor reliability. Future research should focus on refining and expansion of the computational models to adapt to variable operating and environmental conditions. Further, the expansion of integrated systems towards vehicle systems, such as battery thermal management and cabin cooling, should be explored to develop efficient thermal management solutions for the entire electric vehicle. The study also suggests assessing the environmental impact of the cooling strategy and evaluating the energy efficiency and sustainability of the cooling system and its materials used for motor thermal management to align with the broader goal of sustainable transportation. The studies also highlight hybridising the motor cooling system with air cooling, HP cooling and potting thermal fillers along the primary cooling system improves the overall heat transfer rate and reliability of the motors used in EVs. Hybridising the motor cooling system with HPs is an increasing area of research interest. However, developing high heat flux dissipating HPs is still underway, as it must fit into the compact space of the tightly packed motor casing. The possible areas of development in the HPs domain can be towards optimising the HP designs to improve the overall thermal efficiency, thereby satisfying the increasing thermal load of EV motors. By pursuing these research areas, it is possible to enhance electric vehicle motors’ performance, lifespan, and efficiency and enable more widespread adoption of electric vehicles.
+6. Conclusions
+The article analyses various motor technologies and strategies for electric vehicles, highlighting the significance of thermal management in ensuring optimal performance and reliability of motors. The effect of various working fluids used for cooling, including air, liquid, refrigerants and passive cooling technologies such as HPs and potting materials, are discussed with their significance on the motor’s cooling performance. This review also emphasises the need for ongoing research to develop more effective cooling solutions for the rapidly evolving field of EV technology. The main points that should be considered in the thermal management of EVs motor is summarised as follows.
+1. The thermal management system for an EV motor should be selected considering the motor’s power rating and structural constraints. For the motors used for short and intermittent duty cycles, PCM-based thermal management can be a suitable option to maintain stable operating temperatures with sufficient downtime. 2. In the motor cooling system, the active heat transfer area should be optimised for minimum pressure drop and maximum flow rate within its size constraint. The coolant duct/channel design, flow rate and thermo-physical properties of the coolant play a vital role in determining the cooling system efficiency. Higher pressure drop
+induced in the coolant flow path by cooling channel design creates uneven coolant distribution, resulting in non-uniform cooling. 3. Hybridising the cooling system with passive heat transfer enhancers such as potting thermal fillers and conductive rods created a direct conductive heat transfer path to the cooling system, enhancing the heat transfer rate and reducing the motor winding temperature significantly. 4. Employing HPs in motor cooling systems can dissipate much heat and rapidly enhance the heat transfer rate. HPs used in the EV motor’s hybrid cooling system reduce the net energy spent on the cooling system, ultimately enhancing the performance reliability of EV motors. 5. The thermal modelling of motors assists in predicting the motor’s temperature distribution and heat dissipation characteristics. In addition, when integrated with the real-time condition monitoring system, it enhances motor reliability and stabilises motor temperature under the safe operating limit.
+Credit author contribution statement
+Jaya Antony Perinba Selvin Raj: Conceptualization, Formal Analysis, Data curation, Writing - Original draft. Lazarus Godson Asirvatham: Conceptualization, Project administration, Supervision, Writing – Review and Editing. Appadurai Anitha Angeline: Formal Analysis, Investigation. Stephen Manova: Formal Analysis, Writing - Original draft. Bairi Levi Rakshith: Formal analysis, Data curation. Jefferson Raja Bose: Conceptualization, Supervision. Omid Mahian: Supervision, Investigation. Somchai Wongwises: Conceptualization, Supervision, Writing Review and Editing.
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+Data availability
+Data will be made available on request.
+Acknowledgement
+The authors gratefully acknowledge the financial support provided by the funding agency, the Department of Science and Technology (DST), Science and Engineering Research Board (SERB), (SB/FTP/ETA362/2012), New Delhi, India. This work was carried out in collaboration between Department of Mechanical Engineering, Karunya Institute of Technology and Sciences, Coimbatore, India and Department of Mechanical Engineering, KMUTT, Thailand. The fourth author acknowledges King Mongkut’s University of Technology Thonburi (KMUTT) for providing the post-doctoral fellowship. The eighth author acknowledges NSTDA Research Chair Grant, TSRI under Fundamental Fund 2024 and the NSRF via the Program Management Unit for Human Resources & Institutional Development, Research and Innovation [Grant number B40G660039]. The authors acknowledge the Office of Energy Efficiency & Renewable Energy, U.S. Department of Energy, for providing valuable reports in the fuel economy guide (https://www.fueleconomy.gov/). Also, the authors would like to thank the EV Database (https://ev-data base.org/) for granting us permission to access all the available vehicle details with corresponding up-to-date links.
+Appendix A. Supplementary data
+Supplementary data to this article can be found online at https://doi. org/10.1016/j.rser.2023.113874.
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+25
+References
+[1] United Nations - Framework Convention on Climate Change. Nationally determined contributions under the Paris Agreement - synthesis report by the secretariat, vol. 4. United Nations; 2021. [2] World Meteorological Organization. United in Science 2021 - a multiorganization high-level compilation of the latest climate science information. 2021. p. 2–10. https://ArcgIs/0M0Qz8. [3] IPCC. Summary for Policymakers. Climate Change 2021: The Physical Science Basis 2021:41. [4] Liu Z. Carbon Monitor : data release n.d. https://carbonmonitor.org/(accessed October 20, 2021). [5] Wrobel R, Scholes B, Hussein A, Law R, Mustaffar A, Reay D. A metal additively manufactured (MAM) heat exchanger for electric motor thermal control on a high-altitude solar aircraft – experimental characterisation. Therm Sci Eng Prog 2020;19:100629. https://doi.org/10.1016/j.tsep.2020.100629. [6] Buberger J, Kersten A, Kuder M, Eckerle R, Weyh T, Thiringer T. Total CO2equivalent life-cycle emissions from commercially available passenger cars. Renew Sustain Energy Rev 2022;159. https://doi.org/10.1016/j. rser.2022.112158. [7] International Energy Agency (IEA). Global EV Outlook 2022 - securing supplies for an electric future. 2022. https://www.iea.org/data-and-statistics/charts/gl obal-electric-car-stock-2010-2021. IEA. Licence: CC BY 4.0. [8] International Energy Agency (IEA). Global EV Outlook 2021 - accelerating ambitions despite the pandemic. 2021. https://doi.org/10.1787/d394399e-en. https://www.iea.org/data-and-statistics/charts/global-electric-passenger-car-st ock-2010-2020. IEA. Licence: CC BY 4.0. [9] International Energy Agency (IEA). Global EV Outlook 2023 - catching up with climate ambitions. 2023. https://www.iea.org/data-and-statistics/charts/globalelectric-car-stock-2010-2022. IEA. Licence: CC BY 4.0. [10] Thomas VJ, Maine E. Market entry strategies for electric vehicle start-ups in the automotive industry – lessons from Tesla Motors. J Clean Prod 2019;235:653–63. https://doi.org/10.1016/j.jclepro.2019.06.284. [11] U.S. Department of Energy EE& RE. Alternative Fuels Data Center n.d. https:// afdc.energy.gov/vehicles/how-do-all-electric-cars-work (accessed November 16, 2021). [12] Akinlabi AAH, Solyali D. Configuration, design, and optimization of air-cooled battery thermal management system for electric vehicles: a review. Renew Sustain Energy Rev 2020;125:109815. https://doi.org/10.1016/j. rser.2020.109815. [13] Behi H, Karimi D, Behi M, Jaguemont J, Ghanbarpour M, Behnia M, et al. Thermal management analysis using heat pipe in the high current discharging of lithium-ion battery in electric vehicles. J Energy Storage 2020;32:101893. https://doi.org/10.1016/j.est.2020.101893. [14] Jaguemont J, Van Mierlo J. A comprehensive review of future thermal management systems for battery-electrified vehicles. J Energy Storage 2020;31: 101551. https://doi.org/10.1016/j.est.2020.101551. [15] Kim J, Oh J, Lee H. Review on battery thermal management system for electric vehicles. Appl Therm Eng 2019;149:192–212. https://doi.org/10.1016/j. applthermaleng.2018.12.020. [16] Tian Z, Gu B, Gao W, Zhang Y. Performance evaluation of an electric vehicle thermal management system with waste heat recovery. Appl Therm Eng 2020; 169. https://doi.org/10.1016/j.applthermaleng.2020.114976. [17] Xia G, Cao L, Bi G. A review on battery thermal management in electric vehicle application. J Power Sources 2017;367:90–105. https://doi.org/10.1016/j. jpowsour.2017.09.046. [18] Yue QL, He CX, Wu MC, Zhao TS. Advances in thermal management systems for next-generation power batteries. Int J Heat Mass Tran 2021:181. https://doi.org/ 10.1016/j.ijheatmasstransfer.2021.121853. [19] Holbert KE, Lin K, Karady GG. Enhancement of electric motor reliability through condition monitoring. IFAC Proc 2006;5:255–60. https://doi.org/10.3182/ 20060625-4-ca-2906.00049. IFAC. [20] Climente-Alarcon V, Arkkio A, Antonino-Daviu J. Study of thermal stresses developed during a fatigue test on an electrical motor rotor cage. Int J Fatig 2019; 120:56–64. https://doi.org/10.1016/j.ijfatigue.2018.11.003. [21] Bazzi AM. Electric machines and energy storage technologies in EVs and HEVs for over a century. In: Proc 2013 IEEE int electr mach drives conf IEMDC 2013; 2013. https://doi.org/10.1109/IEMDC.2013.6556255. 212–9. [22] Bradley TH, Frank AA. Design, demonstrations and sustainability impact assessments for plug-in hybrid electric vehicles. Renew Sustain Energy Rev 2009; 13:115–28. https://doi.org/10.1016/j.rser.2007.05.003. [23] Global EV Outlook. Entering the decade of electric drive? 2020. 2020. https:// doi.org/10.1787/d394399e-en. [24] De Santiago J, Bernhoff H, Ekergård B, Eriksson S, Ferhatovic S, Waters R. Electrical motor drivelines in commercial all-Electric Vehicles: a Review. IEEE Trans Veh Technol 2012;61:12. [25] Alternative Fuel and Advanced Vehicle Search. Altern Fuels Data Center, US Dep Energy n.d. https://afdc.energy.gov/vehicles/search/(accessed July 17, 2023). [26] Office of Energy Efficiency and Renewable Energy D of E. Find Electric Vehicle Models. 2023. https://www.energy.gov/eere/electricvehicles/find-electric-vehic le-models. [Accessed 15 March 2023]. [27] Office of Energy Efficiency & Renewable Energy Usepa. Fuel Economy Guide 2023. 2023. https://www.fueleconomy.gov/feg/pdfs/guides/feg2023.pdf. [28] Hyundai IONIQ 6 AWD. Ev-DatabaseOrg. 2023. https://ev-database.org/car/ 1719/Hyundai-IONIQ-6-Long-Range-AWD. [Accessed 17 July 2023].
+[29] Hyundai IONIQ 5 Limited AWD. Ev-DatabaseOrg. 2023. https://ev-database.org/ car/1663/Hyundai-IONIQ-5-Long-Range-AWD. [Accessed 17 July 2023]. [30] Hyundai IONIQ 6 53kWh 2WD. Ev-DatabaseOrg. 2023. https://ev-database.org/ car/1717/Hyundai-IONIQ-6-Standard-Range-2WD. [Accessed 17 July 2023]. [31] Office of Energy Efficiency & Renewable Energy Usepa. Fuel Economy guide Model Year 2022. 2022. https://www.fueleconomy.gov/feg/pdfs/guides/FE G2022.pdf. [32] Mercedes-Benz EQS 580 4Matic. Ev-DatabaseOrg. 2023. https://ev-database.or g/car/1484/Mercedes-EQS-580-4MATIC. [Accessed 17 July 2023]. [33] Volvo C40 recharge twin. 2023. Ev-DatabaseOrg, https://ev-database.org/car/ 1801/Volvo-C40-Recharge-Twin-Motor. [Accessed 17 July 2023]. [34] Volvo XC40 recharge twin. 2023. Ev-DatabaseOrg, https://ev-database.org/car/ 1798/Volvo-XC40-Recharge-Twin-Motor. [Accessed 17 July 2023]. [35] Mercedes-Benz EQS 450 +. 2023. Ev-DatabaseOrg, https://ev-database.org/car/ 1483/Mercedes-EQS-450plus. [Accessed 17 July 2023]. [36] KIA EV6 long Range 2WD. Ev-DatabaseOrg. 2023. https://ev-database.org/ca r/1481/Kia-EV6-Long-Range-2WD. [Accessed 17 July 2023]. [37] Hyundai IONIQ 6 long range 2WD. Ev-DatabaseOrg. 2023. https://ev-database. org/car/1718/Hyundai-IONIQ-6-Long-Range-2WD. [Accessed 17 July 2023]. [38] Hyundai IONIQ 5 long range 2WD. Ev-DatabaseOrg. 2023. https://ev-database. org/car/1662/Hyundai-IONIQ-5-Long-Range-2WD. [Accessed 17 July 2023]. [39] KIA EV6 Standard Range 2WD. Ev-DatabaseOrg. 2023. https://ev-database. org/car/1480/Kia-EV6-Standard-Range-2WD. [Accessed 17 July 2023]. [40] Hyundai IONIQ 5 Standard Range 2WD. Ev-DatabaseOrg. 2023. https://ev-d atabase.org/car/1476/Hyundai-IONIQ-5-Standard-Range-2WD. [Accessed 17 July 2023]. [41] Office of Energy Efficiency & Renewable Energy Usepa. Fuel economy guide model year 2021. 2021. https://www.fueleconomy.gov/feg/pdfs/guides/FE G2021.pdf. [42] Ford Mustang Mach-E Gt. Ev-DatabaseOrg. 2023. https://ev-database.org/car /1757/Ford-Mustang-Mach-E-GT. [Accessed 17 July 2023]. [43] Volkswagen ID. 4 pro performance. Ev-DatabaseOrg. 2023. https://ev-database. org/car/1314/Volkswagen-ID4-Pro-Performance. [Accessed 17 July 2023]. [44] Jaguar I-Pace S. EV400 AWD automatic. Ev-DatabaseOrg. 2023. https://ev-data base.org/car/1812/Jaguar-I-Pace-EV400. [Accessed 17 July 2023]. [45] Office of Energy Efficiency & Renewable Energy Usepa. Fuel Economy Guide model year 2019 2019;3. https://www.fueleconomy.gov/feg/pdfs/guides/fe g2019.pdf. [46] Office of Energy Efficiency & Renewable Energy Usepa. Fuel economy guide model year 2017, vol. 3; 2017. https://www.fueleconomy.gov/feg/pdfs/guides /feg2017.pdf. [47] Nissan Leaf e+. Ev-DatabaseOrg. 2023. https://ev-database.org/car/165 7/Nissan-Leaf-eplus. [Accessed 17 July 2023]. [48] Leaf Nissan. Ev-DatabaseOrg. 2023. https://ev-database.org/car/1656/Nissa n-Leaf. [Accessed 17 July 2023]. [49] Mini Cooper SE. Ev-DatabaseOrg n.d. https://ev-database.org/car/1409/MiniCooper-SE (accessed July 13, 2023). [50] U.S. Environmental Protection Agency. Fuel Economy Guide: Model Year 2020. US Dep Energy, DOE/EE-1477 2020:1–47. www.fueleconomy.gov. [51] Office of Energy Efficiency & Renewable Energy Usepa. Fuel ecobomy guide model year 2015, vol. 3; 2015. https://www.fueleconomy.gov/feg/pdfs/guides /feg2015.pdf. [52] Office of Energy Efficiency & Renewable Energy Usepa. Fuel economy guide model year 2014. 2014. https://www.fueleconomy.gov/feg/pdfs/guides/fe g2014.pdf. [53] U.S. Environmental Protection Agency. Fuel Economy Guide: Model Year 2013. US Dep Energy, DOE/EE-1477 2016:1–47. www.fueleconomy.gov. [54] Office of Energy Efficiency & Renewable Energy Usepa. Fuel economy guide model year 2016, vol. 3; 2016. https://www.fueleconomy.gov/feg/pdfs/guides /feg2016.pdf. [55] Office of Energy Efficiency & Renewable Energy Usepa. Fuel Economy Fuide Model year 2018 2018;3. https://www.fueleconomy.gov/feg/pdfs/guides/fe g2018.Pdf. [56] Toyota Bz4X Vision Fwd. Ev-DatabaseOrg. 2023. https://ev-database.org/car/1 564/Toyota-bZ4X-FWD. [Accessed 17 July 2023]. [57] Audi Q4 e-Tron quattro. Ev-DatabaseOrg. 2023. https://ev-database.org/car/1 491/Audi-Q4-e-tron-50-quattro. [Accessed 17 July 2023]. [58] Audi Q4 Sportback e-Tron quattro. Ev-DatabaseOrg. 2023. https://ev-database. org/car/1492/Audi-Q4-Sportback-e-tron-50-quattro. [Accessed 17 July 2023]. [59] Mercedes Benz Eqb 300 4Matic. Ev-DatabaseOrg. 2023. https://ev-database.or g/car/1559/Mercedes-EQB-300-4MATIC. [Accessed 17 July 2023]. [60] Mercedes-Benz EQB 350 4MATIC. Ev-DatabaseOrg. 2023. https://ev-database.or g/car/1493/Mercedes-EQB-350-4MATIC. [Accessed 17 July 2023]. [61] Gai Y, Kimiabeigi M, Chuan Chong Y, Widmer JD, Deng X, Popescu M, et al. Cooling of automotive traction motors: schemes, examples, and computation methods. IEEE Trans Ind Electron 2019;66:1681–92. https://doi.org/10.1109/ TIE.2018.2835397. [62] Fatemi A, Ionel DM, Popescu M, Chong YC, Demerdash NAO. Design Optimization of a High Torque Density Spoke-Type PM Motor for a Formula e Race Drive Cycle. IEEE Trans Ind Appl 2018;54:4343–54. https://doi.org/ 10.1109/TIA.2018.2844804. [63] Eldho Aliasand A, Josh FT. Selection of motor foran electric vehicle: a review. Mater Today Proc 2019;24:1804–15. https://doi.org/10.1016/j. matpr.2020.03.605.
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+26
+[64] Adly AA, Huzayyin A. The impact of demagnetization on the feasibility of permanent magnet synchronous motors in industry applications. J Adv Res 2019; 17:103–8. https://doi.org/10.1016/j.jare.2019.02.002. [65] Trianni A, Cagno E, Accordini D. A review of energy efficiency measures within electric motors systems. Energy Proc 2019;158:3346–51. https://doi.org/ 10.1016/j.egypro.2019.01.964. [66] Zeng L, Yu H. Research on a novel rotor structure switched reluctance motor. Phys Procedia 2012;24:320–7. https://doi.org/10.1016/j.phpro.2012.02.048. [67] Yilmaz M. Limitations/capabilities of electric machine technologies and modeling approaches for electric motor design and analysis in plug-in electric vehicle applications. Renew Sustain Energy Rev 2015;52:80–99. https://doi.org/ 10.1016/j.rser.2015.07.033. [68] Dong T, Zhu C, Zhou F, Zhang H, Lu F, Zhang X. Innovated approach of predictive thermal management for high-speed propulsion electric machines in more electric aircraft. IEEE Trans Transp Electrif 2020;6:1551–61. https://doi.org/10.1109/ TTE.2020.3017764. [69] Guo F, Zhang C. Oil-cooling method of the permanent magnet synchronous motor for electric vehicle. Energies 2019;14:1–11. https://doi.org/10.3390/ en12152984. [70] Lee KH, Cha HR, Kim YB. Development of an interior permanent magnet motor through rotor cooling for electric vehicles. Appl Therm Eng 2016;95:348–56. https://doi.org/10.1016/j.applthermaleng.2015.11.022. [71] Chai W, Lipo TA, Kwon BI. Design and optimization of a novel wound field synchronous machine for torque performance enhancement. Energies 2018;11. https://doi.org/10.3390/en11082111. [72] Cha KS, Kim DM, Jung YH, Lim MS. Wound field synchronous motor with hybrid circuit for neighborhood electric vehicle traction improving fuel economy. Appl Energy 2020;263:114618. https://doi.org/10.1016/j.apenergy.2020.114618. [73] Cheng S, Li C, feng Chai, Gong H. Research on induction motor for mini electric vehicles. Energy Proc 2012;17:249–57. https://doi.org/10.1016/j. egypro.2012.02.091. [74] de Souza DF, Salotti FAM, Sauer IL, Tatizawa H, de Almeida AT, Kanashiro AG. A performance evaluation of three-phase induction electric motors between 1945 and 2020. Energies 2022;15:1–31. https://doi.org/10.3390/en15062002. [75] Gundabattini E, Kuppan R, Solomon DG, Kalam A, Kothari DP, Abu Bakar R. A review on methods of finding losses and cooling methods to increase efficiency of electric machines. Ain Shams Eng J 2020;12:497–505. https://doi.org/ 10.1016/j.asej.2020.08.014. [76] Farsane K, Desevaux P, Panday PK. Experimental study of the cooling of a closed type electric motor. Appl Therm Eng 2000;20:1321–34. https://doi.org/10.1016/ S1359-4311(99)00094-0. [77] Jang JH, Chiu HC, Yan WM, Tsai MC, Wang PY. Numerical study on electromagnetics and thermal cooling of a switched reluctance motor. Case Stud Therm Eng 2015;6:16–27. https://doi.org/10.1016/j.csite.2015.05.001. [78] Li C, Cheng S, Li J, Li H. Heat dissipation evaluation and optimization of air cooling induction motor used for mini electric vehicle. In: 2017 20th int conf electr mach syst ICEMS 2017; 2017. https://doi.org/10.1109/ ICEMS.2017.8056437. [79] Zhu G, Zhu Y, Tong W. Double-circulatory thermal analyses of a water-cooled permanent magnet motor based on a modified model. IEEE Trans Magn 2018;54. https://doi.org/10.1109/TMAG.2017.2759805. 2018–21. [80] Fawzal AS, Cirstea RM, Woolmer TJ, Dickison M, Blundell M, Gyftakis KN. Air inlet/outlet arrangement for rotor cooling application of axial flux PM machines. Appl Therm Eng 2018;130:1520–9. https://doi.org/10.1016/j. applthermaleng.2017.11.121. [81] Jaeger M, Ruf A, Hameyer K, Tongeln TG Von. Thermal analysis of an electrical traction motor with an air cooled rotor. In: 2018 IEEE transp electrif conf expo. ITEC; 2018. p. 194–200. https://doi.org/10.1109/ITEC.2018.8450239. 2018. [82] Chen W, Ju Y, Yan D, Guo L, Geng Q, Shi T. Design and optimization of dualcycled cooling structure for fully-enclosed permanent magnet motor. Appl Therm Eng 2019;152:338–49. https://doi.org/10.1016/j.applthermaleng.2019.02.070. [83] Asef P, Perpina RB, Barzegaran MR. An innovative natural air-cooling system technique for temperature-rise suppression on the permanent magnet synchronous machines. Elec Power Syst Res 2018;154:174–81. https://doi.org/ 10.1016/j.epsr.2017.07.031. [84] Kang M, Wang H, Guo L, Shi T, Xia C. Self-circulation cooling structure design of permanent magnet machines for electric vehicle. Appl Therm Eng 2020;165: 114593. https://doi.org/10.1016/j.applthermaleng.2019.114593. [85] Ai M, Liu W, Xu Z. Research on energy saving and thermal management of highefficiency and high-voltage motor based on fluid network decoupling. Energy Rep 2021;7:8332–45. https://doi.org/10.1016/j.egyr.2021.09.106. [86] Chiu HC, Jang JH, Yan WM, Shiao R Bin. Thermal performance analysis of a 30 kW switched reluctance motor. Int J Heat Mass Tran 2017;114:145–54. https:// doi.org/10.1016/j.ijheatmasstransfer.2017.06.057. [87] Ulbrich S, Kopte J, Proske J. Cooling fin optimization on a TEFC electrical machine housing using a 2-D conjugate heat transfer model. IEEE Trans Ind Electron 2018;65:1711–8. https://doi.org/10.1109/TIE.2017.2748051. [88] Xu Z, Galea M, Tighe C, Hamiti T, Gerada C, Pickering SJ. Mechanical and thermal management design of a motor for an aircraft wheel actuator. In: 2014 17th int conf electr mach syst ICEMS 2014; 2014. https://doi.org/10.1109/ ICEMS.2014.7014056. 3268–73. [89] Wrobel R, Scholes B, Hussein A, Law R, Mustaffar A, Reay D. A metal additively manufactured (MAM) heat exchanger for electric motor thermal control on a high-altitude solar aircraft – experimental characterisation. Therm Sci Eng Prog 2020;19:100629. https://doi.org/10.1016/j.tsep.2020.100629.
+[90] Melka B, Smolka J, Hetmanczyk J, Lasek P. Numerical and experimental analysis of heat dissipation intensification from electric motor. Energy 2019;182:269–79. https://doi.org/10.1016/j.energy.2019.06.023. [91] Nikitina L. Modeling of motor-spindel thermal values. Procedia Eng 2017;206: 1316–20. https://doi.org/10.1016/j.proeng.2017.10.637. [92] Li H. Cooling of a permanent magnet electric motor with a centrifugal impeller. Int J Heat Mass Tran 2010;53:797–810. https://doi.org/10.1016/j. ijheatmasstransfer.2009.09.022. [93] Kim C, Lee KS, Yook SJ. Effect of air-gap fans on cooling of windings in a largecapacity, high-speed induction motor. Appl Therm Eng 2016;100:658–67. https://doi.org/10.1016/j.applthermaleng.2016.02.077. [94] Fawzal AS, Cirstea RM, Gyftakis KN, Woolmer TJ, Dickison M, Blundell M. Fan performance analysis for rotor cooling of axial flux permanent magnet machines. IEEE Trans Ind Appl 2017;53:3295–304. https://doi.org/10.1109/ TIA.2017.2675986. [95] Roffi M, Ferreira FJTE, De Almeida AT. Comparison of different cooling fan designs for electric motors. In: 2017 IEEE int electr mach drives conf IEMDC 2017; 2017. https://doi.org/10.1109/IEMDC.2017.8002270. [96] Galloni E, Parisi P, Marignetti F, Volpe G. CFD analyses of a radial fan for electric motor cooling. Therm Sci Eng Prog 2018;8:470–6. https://doi.org/10.1016/j. tsep.2018.10.003. [97] Lim DH, Kim SC. Thermal performance of oil spray cooling system for in-wheel motor in electric vehicles. Appl Therm Eng 2014;63:577–87. https://doi.org/ 10.1016/j.applthermaleng.2013.11.057. [98] Lu Q, Zhang X, Chen Y, Huang X, Ye Y, Zhu ZQ. Modeling and investigation of thermal characteristics of a water-cooled permanent-magnet linear motor. IEEE Trans Ind Appl 2015;51:2086–96. https://doi.org/10.1109/TIA.2014.2365198. [99] Davin T, Pell ́e J, Harmand S, Yu R. Experimental study of oil cooling systems for electric motors. Appl Therm Eng 2015;75:1–13. https://doi.org/10.1016/j. applthermaleng.2014.10.060. [100] Ye L, Tao F, Wei S, Qi L, Xuhui W. Experimental research on the oil cooling of the end winding of the motor. ECCE 2016 - IEEE Energy Convers Congr Expo Proc 2016;31–4. https://doi.org/10.1109/ECCE.2016.7855097. [101] Maulidi ARi, Purwadi A. Modeling and analysis of cooling system permanent magnet synchronous motor 30 kW for city EV with FEM. In: Proceeding - 4th int conf electr veh technol ICEVT 2017 2018; 2018. https://doi.org/10.1109/ ICEVT.2017.8323530. Janua:36–41. [102] Rehman Z, Seong K. Three-D numerical thermal analysis of electric motor with cooling jacket. Energies 2018;11. https://doi.org/10.3390/en11010092. [103] Deriszadeh A, De Monte F, Villani M, Di Leonardo L. Hydrothermal performance of ethylene glycol and water mixture in a spiral channel for electric motor cooling. In: 2019 21st eur conf power electron appl EPE 2019 ECCE eur; 2019. p. 1–10. https://doi.org/10.23919/EPE.2019.8914967. [104] Deriszadeh A, de Monte F. On heat transfer performance of cooling systems using nanofluid for electric motor applications. Entropy 2020;22:99. https://doi.org/ 10.3390/e22010099. [105] Park SM, Lee DR. Smart cooling system design for augmentation of cooling performance of electric vehicle driving motor utilizing cooling channel fin. J Korean Soc Precis Eng 2021;38:427–39. https://doi.org/10.7736/ JKSPE.021.020. [106] Assaad B, Mikati K, Tran TV, Negre E. Experimental study of oil cooled induction motor for hybrid and electric vehicles. In: Proc - 2018 23rd int conf electr mach ICEM 2018; 2018. https://doi.org/10.1109/ICELMACH.2018.8507058. 1195–200. [107] Fujita H, Itoh A, Urano T. Newly developed motor cooling method using refrigerant. World Electr Veh J 2019;10. https://doi.org/10.3390/ wevj10020038. [108] Lindh P, Petrov I, Pyrhonen J, Scherman E, Niemela M, Immonen P. Direct liquid cooling method verified with a permanent-magnet traction motor in a bus. IEEE Trans Ind Appl 2019;55:4183–91. https://doi.org/10.1109/TIA.2019.2908801. [109] Sun Y, Zhang S, Yuan W, Tang Y, Li J, Tang K. Applicability study of the potting material based thermal management strategy for permanent magnet synchronous motors. Appl Therm Eng 2019;149:1370–8. https://doi.org/10.1016/j. applthermaleng.2018.12.141. [110] Sun Y, Zhang S, Chen G, Tang Y, Liang F. Experimental and numerical investigation on a novel heat pipe based cooling strategy for permanent magnet synchronous motors. Appl Therm Eng 2020;170:114970. https://doi.org/ 10.1016/j.applthermaleng.2020.114970. [111] Sikora M, Vlach R, Navra ́til P. The unusual water cooling applied on small asynchronous motor. Eng Mech 2011;18:143–53. [112] Pechanek R, Bouzek L. Analyzing of two types water cooling electric motors using computational fluid dynamics. In: 15th int power electron motion control conf expo EPE-PEMC 2012 ECCE eur; 2012. p. 2–6. https://doi.org/10.1109/ EPEPEMC.2012.6397424. [113] Rhebergen C, Bilgin B, Emadi A, Rowan E, Lo J. Enhancement of electric motor thermal management through axial cooling methods: a materials approach. In: 2015 IEEE energy convers congr expo ECCE 2015; 2015. https://doi.org/ 10.1109/ECCE.2015.7310458. 5682–8. [114] Li C, Guan Z, Li J, Zhao B, Ding X. Optimal design of cooling system for water cooling motor used for mini electric vehicle. In: 2017 20th int conf electr mach syst ICEMS 2017; 2017. https://doi.org/10.1109/ICEMS.2017.8056319. 0–3. [115] Bedkowski B, Dukalski P, Jarek T, Wolnik T. The efficiency analysis of various structural solutions of the wheel motor cooling systems. In: Proc - 2018 23rd int conf electr mach ICEM 2018; 2018. p. 995–1000. https://doi.org/10.1109/ ICELMACH.2018.8506886.
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+27
+[116] Patrick McCluskey F, Saadon Y, Yao Z, Camacho A. Cooling for electric aircraft motors. In: Intersoc conf therm thermomechanical phenom electron syst ITHERM 2019; 2019. https://doi.org/10.1109/ITHERM.2019.8757435. May:1134–8. [117] Tikadar A, Johnston D, Kumar N, Joshi Y, Kumar S. Comparison of electrothermal performance of advanced cooling techniques for electric vehicle motors. Appl Therm Eng 2021;183:116182. https://doi.org/10.1016/j. applthermaleng.2020.116182. [118] Wu F, El-Refaie AM. Additively manufactured hollow conductors with integrated cooling for high specific power electrical machines. In: Proc - 2020 int conf electr mach ICEM 2020; 2020. https://doi.org/10.1109/ICEM49940.2020.9270871. 1497–503. [119] Li Y, Li C, Garg A, Gao L, Li W. Heat dissipation analysis and multi-objective optimization of a permanent magnet synchronous motor using surrogate assisted method. Case Stud Therm Eng 2021;27:101203. https://doi.org/10.1016/j. csite.2021.101203. [120] Chang J, Wang C. Electromagnetic thermal coupling analysis for a novel cooling system of an axial flux hub motor. IET Electr Power Appl 2022;16:421–33. https://doi.org/10.1049/elp2.12164. [121] Sixel W, Liu M, Nellis G, Sarlioglu B. Cooling of windings in electric machines via 3-D printed heat exchanger. IEEE Trans Ind Appl 2020;56:4718–26. https://doi. org/10.1109/TIA.2020.2997902. [122] Fasquelle A, Laloy D. Water cold plates cooling in a permanent magnet synchronous motor. IEEE Trans Ind Appl 2017;53:4406–13. https://doi.org/ 10.1109/TIA.2017.2710130. [123] Lindh PM, Petrov I, Semken RS, Niemela M, Pyrhonen JJ, Aarniovuori L, et al. Direct liquid cooling in low-power electrical machines: proof-of-concept. IEEE Trans Energy Convers 2016;31:1257–66. https://doi.org/10.1109/ TEC.2016.2597059. [124] Xu Z, Al-Timimy A, Degano M, Giangrande P, Lo Calzo G, Zhang H, et al. Thermal management of a permanent magnet motor for an directly coupled pump. In: Proc - 2016 22nd int conf electr mach ICEM 2016; 2016. https://doi.org/10.1109/ ICELMACH.2016.7732909. 2738–44. [125] Park MH, Kim SC. Thermal characteristics and effects of oil spray cooling on inwheel motors in electric vehicles. Appl Therm Eng 2019;152:582–93. https://doi. org/10.1016/j.applthermaleng.2019.02.119. [126] Saleem A, Hyeon Park M, Ambreen T, Chul Kim S. Optimization of oil flow distribution inside the in-wheel motor assembly of electric vehicles for improved thermal performance. Appl Therm Eng 2022;201:117753. https://doi.org/ 10.1016/j.applthermaleng.2021.117753. [127] Marcolini F, De Donato G, Capponi FG, Caricchi F. Direct oil cooling of endwindings in torus-type axial-flux permanent-magnet machines. IEEE Trans Ind Appl 2021;57:2378–86. https://doi.org/10.1109/TIA.2021.3059811. [128] Zhang X, Wang H, Zhang G, Gu G. Temperature characteristics in the stator model of a permanent magnet motor by water-cooling and evaporative cooling. ICEMS 2005 Proc Eighth Int Conf Electr Mach Syst 2005;3:2408–10. https://doi.org/ 10.1109/icems.2005.203003. [129] Chuan H, Burke R, Wu Z. (Power train and V research C (PVRC)/University of B. A Comparative study on different cooling topologies for axial flux permanent Magnet Machine 2019. https://doi.org/10.1109/VPPC46532.2019.8952185. [130] Silwal B, Mohamed AH, Nonneman J, De Paepe M, Sergeant P. Assessment of different cooling techniques for reduced mechanical stress in the windings of electrical machines. Energies 2019;12. https://doi.org/10.3390/en12101967. [131] Sugimoto S, Kori D. Cooling performance and loss evaluation for water- and oilcooled without pump for oil. In: Proc. - 2018 23rd int. Conf. Electr. Mach. ICEM 2018, IEEE; 2018. p. 1136–41. https://doi.org/10.1109/ ICELMACH.2018.8507169. [132] Madonna V, Walker A, Giangrande P, Serra G, Gerada C, Galea M. Improved thermal management and analysis for stator end-windings of electrical machines. IEEE Trans Ind Electron 2019;66:5057–69. https://doi.org/10.1109/ TIE.2018.2868288. [133] Madonna V, Giangrande P, Walker A, Galea M. On the effects of advanced endwinding cooling on the design and performance of electrical machines. In: Proc 2018 23rd int conf electr mach ICEM 2018; 2018. https://doi.org/10.1109/ ICELMACH.2018.8507170. 311–7. [134] Bellettre J, Sartre V, Biais F, Lallemand A. Transient state study of electric motor heating and phase change solid-liquid cooling. Appl Therm Eng 1997;17:17–31. https://doi.org/10.1016/1359-4311(96)00026-9. [135] Wang JX, Li YZ, Wang SN, Zhang HS, Ning X, Guo W. Experimental investigation of the thermal control effects of phase change material based packaging strategy for on-board permanent magnet synchronous motors. Energy Convers Manag 2016;123:232–42. https://doi.org/10.1016/j.enconman.2016.06.045. [136] Wang S, Li YZ, Liu Y, Zhou H, Li Y, Guo W, et al. Temperature control of permanent-magnet synchronous motor using phase change material. In: IEEE/ ASME int conf adv intell mechatronics, AIM 2015; 2015. https://doi.org/ 10.1109/AIM.2015.7222778. Augus:1635–40. [137] Wang S, Li Y, Li YZ, Wang J, Xiao X, Guo W. Transient cooling effect analyses for a permanent-magnet synchronous motor with phase-change-material packaging. Appl Therm Eng 2016;109:251–60. https://doi.org/10.1016/j. applthermaleng.2016.08.036. [138] Ayat S, Serghine C, Klonowski T, Yon S, Mutabazi A, McDaniel S. The use of phase change material for the cooling of electric machine windings formed with hollow conductors. In: 2019 IEEE int electr mach drives conf IEMDC 2019; 2019. https:// doi.org/10.1109/IEMDC.2019.8785181. 1195–201. [139] Liu X, Shi Y, Chu J, Xue S, Zhao Q, Wu X, et al. A new phase-change cooling method for the frequent start-stop electric motor. Appl Therm Eng 2021;198: 117504. https://doi.org/10.1016/j.applthermaleng.2021.117504.
+[140] Yao Y, Gu L, Fan T, Sun W, Luo J. Evaluation of heat transfer characteristic of Aluminum Nitride (AlN) potting compound for the end windings of permanent magnet synchronous machines. In: 2011 int conf electr control eng ICECE 2011 proc; 2011. https://doi.org/10.1109/ICECENG.2011.6057645. 4498–501. [141] Polikarpova M, Lindh P, Gerada C, Rilla M, Naumanen V, Pyrh ̈onen J. Thermal effects of stator potting in an axial-flux permanent magnet synchronous generator. Appl Therm Eng 2015;75:421–9. https://doi.org/10.1016/j. applthermaleng.2014.09.044. [142] Polikarpova M, Lindh PM, Tapia JA, Pyrho ̈nen JJ. Application of potting material for a 100 kW radial flux PMSM. In: Proc - 2014 int conf electr mach ICEM 2014; 2014. https://doi.org/10.1109/ICELMACH.2014.6960481. 2146–51. [143] Chai F, Bi Y, Chen L. Thermal investigation and cooling enhancement of axial flux permanent magnet motors for vehicle applications. In: 2019 22nd int conf electr mach syst ICEMS 2019; 2019. p. 1–5. https://doi.org/10.1109/ ICEMS.2019.8921651. [144] Li Y, Li Q, Fan T, Wen X, Zhao Y. Development of an external rotor surface permanent magnet machine with high continuous torque density. Energy Rep 2022;8:1357–64. https://doi.org/10.1016/j.egyr.2021.11.238. [145] Galea M, Gerada C, Raminosoa T, Wheeler P. A thermal improvement technique for the phase windings of electrical machines. IEEE Trans Ind Appl 2012;48: 79–87. https://doi.org/10.1109/TIA.2011.2175470. [146] Polikarpova M, Ponomarev P, Lindh P, Petrov I, Jara W, Naumanen V, et al. Hybrid cooling method of axial-flux permanent-magnet machines for vehicle applications. IEEE Trans Ind Electron 2015;62:7382–90. https://doi.org/ 10.1109/TIE.2015.2465354. [147] Pyrh ̈onen J, Lindh P, Polikarpova M, Kurvinen E, Naumanen V. Heat-transfer improvements in an axial-flux permanent-magnet synchronous machine. Appl Therm Eng 2015;76:245–51. https://doi.org/10.1016/j. applthermaleng.2014.11.003. [148] Huynh TA, Hsieh MF. Improvement of traction motor performance for electric vehicles using conductors with insulation of high thermal conductivity considering cooling methods. IEEE Trans Magn 2021;57. https://doi.org/ 10.1109/TMAG.2020.3021127. [149] Groll M, Kraehling H, Muenzel WD. Heat Pipes for Cooling of an Electric Motor 1978;2:354–9. https://doi.org/10.2514/3.62387. [150] Timothy H, Hodowanec M. Electric motor with heat pipe. United States Patent; 2009. Patent N0 .:US 7569955 B2. [151] Owng R, County N, Ruan C, County N, Wei Y, County N, et al. ELECTRIC MOTOR HAVING HEAT PIPES; patent No.: us 8368265 B2. United States Patent; 2013. [152] Ruby S, Lagadec J Le, Rueil-Malmaison, Puteaux. COOLING of an electric motor via heat pipes; patent No.: us 2014/0338857 A1. 2014. United States. [153] Fedoseyev L, Alto P, Jose S. ROTOR ASSEMBLY WITH HEAT PIPE COOLING SYSTEM; patent No.: us 2014/0368064 A1. 2014. [154] Putra N, Ariantara B. Electric motor thermal management system using L-shaped flat heat pipes. Appl Therm Eng 2017;126:1156–63. https://doi.org/10.1016/j. applthermaleng.2017.01.090. [155] Aprianingsih N, Winarta A, Ariantara B, Putra N. Thermal performance of pulsating heat pipe on electric motor as cooling application. E3S Web Conf 2018; 67:1–6. https://doi.org/10.1051/e3sconf/20186703035. [156] Lian W, Niu W, Lin L. A passive cooling design for an aircraft electromechanical actuator by using heat pipes. Appl Therm Eng 2021;184:116248. https://doi.org/ 10.1016/j.applthermaleng.2020.116248. [157] Wan Z, Sun B, Wang X, Wen W, Tang Y. Improvement on the heat dissipation of permanent magnet synchronous motor using heat pipe. Proc Inst Mech Eng - Part D J Automob Eng 2020;234:1249–59. https://doi.org/10.1177/ 0954407019880444. [158] Wang X, Wan Z, Wen W. Heat dissipation of three permanent magnet synchronous motors integrated with heat pipes. Int J Thermophys 2021;42:1–20. https://doi.org/10.1007/s10765-021-02819-8. [159] Fang G, Yuan W, Yan Z, Sun Y, Tang Y. Thermal management integrated with three-dimensional heat pipes for air-cooled permanent magnet synchronous motor. Appl Therm Eng 2019;152:594–604. https://doi.org/10.1016/j. applthermaleng.2019.02.120. [160] Yu Z, Li Y, Jing Y, Wang J. Cooling system of outer rotor SPMSM for a two-seater all-electric aircraft based on heat pipe technology. IEEE Trans Transp Electrif 2021:3127555. https://doi.org/10.1109/TTE.2021.3127555. [161] Wu F, El-Refaie A, Al-Qarni A. Additively manufactured hollow conductors integrated with heat pipes: design tradeoffs and hardware demonstration. IEEE Trans Ind Appl 2021;57:3632–42. https://doi.org/10.1109/TIA.2021.3076423. [162] Zhang X, Zhang C, Fu P, Zhang C, Li L. A novel cooling technique for the windings of high-torque-density permanent magnet machines. ICEMS 2018 - 2018 21st Int Conf Electr Mach Syst 2018. https://doi.org/10.23919/ICEMS.2018.8548984. 332–7. [163] Le W, Lin M, Lin K, Liu K, Jia L, Yang A, et al. A novel stator cooling structure for yokeless and segmented armature axial flux machine with heat pipe. Energies 2021;14. https://doi.org/10.3390/en14185717. [164] Zhang C, Zhang X, Zhao F, Gerada D, Li L. Improvements on permanent magnet synchronous motor by integrating heat pipes into windings for solar unmanned aerial vehicle. Green Energy Intell Transp 2022:100011. https://doi.org/ 10.1016/j.geits.2022.100011. [165] Chang X, Fujita K, Nagai H. Numerical analysis of wick-type two-phase mechanically pumped fluid loop for thermal control of electric aircraft motors. Energies 2022;15. https://doi.org/10.3390/en15051800. [166] Huang J, Shoai Naini S, Miller R, Rizzo D, Sebeck K, Shurin S, et al. A hybrid electric vehicle motor cooling system-design, model, and control. IEEE Trans Veh Technol 2019;68:4467–78. https://doi.org/10.1109/TVT.2019.2902135.
+J.A.P. Selvin Raj et al.
+
+
+Renewable and Sustainable Energy Reviews 189 (2024) 113874
+28
+[167] Li F, Gao J, Shi X, Liang F, Zhu K. Experimental investigation of single loop thermosyphons utilized in motorized spindle shaft cooling. Appl Therm Eng 2018; 134:229–37. https://doi.org/10.1016/j.applthermaleng.2017.11.141. [168] Li F, Gao J, Shi X, Liang F, Wang D. Thermal performance of a R600a two-phase loop thermosiphon in rotational shaft. Heat Mass Transf Und Stoffuebertragung 2021;57:1763–72. https://doi.org/10.1007/s00231-021-03066-1. [169] Liu L, Zhou F, Sun M, Liu Z, Yang C. A study on heat dissipation of electric vehicle motor based on heat-pipe heat transfer analysis. SAE Tech Pap 2021;1:1–5. https://doi.org/10.4271/2021-01-0208. [170] Dong C, Hu X, Qian Y, Wang C, Zhuge W, Zhang Y. Thermal field analysis of electric propulsion drive motors with flat heat pipe cooling. ICEMS 2021 - 2021 24th Int. Conf. Electr. Mach. Syst. 2021:495–500. https://doi.org/10.23919/ ICEMS52562.2021.9634437. [171] Dong C, Hu X, Qian Y, Zhuge W, Zhang Y. Thermal management integrated with flat heat pipes for in-slot stator windings of electric motors. IEEE Trans Ind Appl 2022:1–12. https://doi.org/10.1109/TIA.2022.3204239. [172] Yang C, Ou C, Agyeman P, Tan G. Research on heat dissipation performance of automobile motor based on heat pipe optimization design. SAE Tech Pap 2022;2: 1–5. https://doi.org/10.4271/2022-01-0729. [173] Wu PS, Hsieh MF, Lu YE, Cai WL, Chang SW. Thermal performance improvement by rotating thermosyphon loop in rotor of an interior permanent magnet synchronous electric motor. Inventions 2022;7. https://doi.org/10.3390/ inventions7020037. [174] Li Y, Li Q, Fan T, Wen X. Heat dissipation design of end winding of permanent magnet synchronous motor for electric vehicle. Energy Rep 2023;9:282–8. https://doi.org/10.1016/j.egyr.2022.10.416. [175] Huai Y, Melnik RVN, Thogersen PB. Computational analysis of temperature rise phenomena in electric induction motors. Appl Therm Eng 2003;23:779–95. https://doi.org/10.1016/S1359-4311(03)00013-9. [176] Howey DA, Holmes AS, Pullen KR. Measurement and CFD prediction of heat transfer in air-cooled disc-type electrical machines. IEEE Trans Ind Appl 2011;47: 1716–23. https://doi.org/10.1109/TIA.2011.2156371. [177] Howey DA, Holmes AS, Pullen KR. Radially resolved measurement of stator heat transfer in a rotor-stator disc system. Int J Heat Mass Tran 2010;53:491–501. https://doi.org/10.1016/j.ijheatmasstransfer.2009.09.006. [178] Wrobel R, Mellor PH, Holliday D. Thermal modeling of a segmented stator winding design. IEEE Trans Ind Appl 2011;47:2023–30. https://doi.org/10.1109/ TIA.2011.2161741. [179] Wrobel R, Vainel G, Copeland C, Duda T, Staton D, Mellor P. Investigation of mechanical loss and heat transfer in an axial-flux PM machine. In: 2013 IEEE energy convers. Congr. Expo. ECCE 2013; 2013. p. 4372–9. https://doi.org/ 10.1109/ECCE.2013.6647285.
+[180] Ponomarev P, Polikarpova M, Pyrh ̈onen J. Thermal modeling of directly-oilcooled permanent magnet synchronous machine. Marseille, France: IEEE; 2012. p. 1882–7. https://doi.org/10.1109/ICElMach.2012.6350138. [181] Grabowski M, Urbaniec K, Wernik J, Wołosz KJ. Numerical simulation and experimental verification of heat transfer from a finned housing of an electric motor. Energy Convers Manag 2016;125:91–6. https://doi.org/10.1016/j. enconman.2016.05.038. [182] Rasekh A, Sergeant P, Vierendeels J. Fully predictive heat transfer coefficient modeling of an axial flux permanent magnet synchronous machine with geometrical parameters of the magnets. Appl Therm Eng 2017;110:1343–57. https://doi.org/10.1016/j.applthermaleng.2016.09.019. [183] Sheela A, Mohan MA. Design of permanent magnet synchronous motor for electric vehicle application using finite element analysis. Int J Sci Technol Res 2020;9:523–7. [184] Grunditz EA, Thiringer T, Tidblad Lundmark S, Alatalo M, Lindstr ̈om J. Thermal capability of electric vehicle PMSM with different slot areas via thermal network analysis. ETransportation 2021:100107. https://doi.org/10.1016/j. etran.2021.100107. [185] Wei D, He H, Cao J. Hybrid electric vehicle electric motors for optimum energy efficiency: a computationally efficient design. Energy 2020;203:117779. https:// doi.org/10.1016/j.energy.2020.117779. [186] Yang Y, He Q, Fu C, Liao S, Tan P. Efficiency improvement of permanent magnet synchronous motor for electric vehicles. Energy 2020;213:118859. https://doi. org/10.1016/j.energy.2020.118859.
+[187] Braut S, Sikanen E, Nerg J, Sopanen J, ˇZ Bozˇi ́c. Fatigue life prediction of Electric RaceAbout (ERA) traction motor rotor. Procedia Struct Integr 2021;31:45–50. https://doi.org/10.1016/j.prostr.2021.03.024. [188] Ganji B, Heidarian M, Faiz J. Modeling and analysis of switched reluctance generator using finite element method. Ain Shams Eng J 2015;6:85–93. https:// doi.org/10.1016/j.asej.2014.08.007. [189] Stone GC. Condition monitoring and diagnostics of motor and stator windings - a review. IEEE Trans Dielectr Electr Insul 2013;20:2073–80. https://doi.org/ 10.1109/TDEI.2013.6678855. [190] Shu X, Guo Y, Yang H, Zou H, Wei K. Reliability study of motor controller in electric vehicle by the approach of fault tree analysis. Eng Fail Anal 2021;121: 105165. https://doi.org/10.1016/j.engfailanal.2020.105165. [191] Demetriades GD, De La Parra HZ, Andersson E, Olsson H. A real-time thermal model of a permanent-magnet synchronous motor. IEEE Trans Power Electron 2010;25:463–74. https://doi.org/10.1109/TPEL.2009.2027905. [192] Dong T, Zhang X, Zhu C, Lu Y, Li M. Improved hotspot monitoring method for thermal management system of automotive traction motor. IET Electr Power Appl 2020;14:2171–8. https://doi.org/10.1049/iet-epa.2020.0182.
+J.A.P. Selvin Raj et al.

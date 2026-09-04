@@ -1,0 +1,1020 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/314096729
+Characterization of Surface Roughness Effects on Pressure Drop in Single-phase
+Flow in Mini/Micro Channels (Keynote).
+Conference Paper · October 2004
+CITATIONS
+0
+READS
+1,830
+4 authors, including:
+Satish G. Kandlikar Rochester Institute of Technology
+475 PUBLICATIONS 24,634 CITATIONS
+SEE PROFILE
+Andres Leonardo Carrano Fairfield University
+74 PUBLICATIONS 1,788 CITATIONS
+SEE PROFILE
+All content following this page was uploaded by Andres Leonardo Carrano on 28 February 2017.
+The user has requested enhancement of the downloaded file.
+
+
+1
+Characterization of Surface Roughness Effects on Pressure Drop in Single-phase
+Flow in Mini/Micro Channels
+By
+Satish G. Kandlikar, ME Department, sgkeme@rit.edu; 585-475-6728
+Derek Schmitt, ME Department; schmittdj@aol.com
+Andres L. Carrano, Industrial and Systems Engineering; alceie@rit.edu; (585)475-6062
+James B. Taylor, Industrial and Systems Engineering; jbteie@rit.edu; (585)485-6185
+Rochester Institute of Technology
+Rochester, NY
+ABSTRACT
+The roughness features on the wall affect the pressure drop in the fluid. Their effect on
+the flow is manifested by (i) flow area constriction, and (ii) increase in the wall shear
+stress due to flow over the roughness features. Applying the area constriction to the
+Moody’s chart results in a simplified plot that yields an asymptotic value of friction
+factor for higher relative roughness values in the turbulent region. Specific experiments
+were conducted to study the effect of surface roughness characteristics on pressure drop
+using parallel saw-tooth elements in aligned and offset configurations in rectangular
+channels with different channel heights. The experimental results indicate that the use of
+constricted flow cross-sectional area, based on Dcf = Dt-2ε, in the modified Moody plot is
+able to extend the applicability of the laminar flow friction factor equation to the relative
+roughness values (defined as the saw-tooth height) of up to 14%. In the turbulent region,
+there is a need to further characterize the surface features beyond the average roughness,
+
+
+2
+Ra, which is used extensively in the fluid mechanics and convective heat transfer
+applications. A number of available roughness characteristics are reviewed for surface
+characterization in minichannels and microchannels, where large relative roughness
+values may be encountered.
+
+
+3
+INTRODUCTION
+The effects of surface roughness on pressure drop in circular and rectangular tubes
+have been studied extensively in literature. As early as in the nineteenth century, Darcy
+[1] conducted careful pressure drop experiments on pipes of different materials and
+roughness, and introduced the concept of relative roughness. He also established that the
+flow depended on the pipe roughness, pipe diameter, and slope. Fanning [2] later
+proposed a correlation for the pressure drop as a function of surface roughness. The
+pioneering work of quantifying the effect of surface roughness on pressure drop was led
+by Nikuradse [3], who established the sand grain roughness, equivalent to the diameter of
+the sand particles, as a major parameter in defining the friction factor during laminar and
+turbulent flow studies. To create the roughness on the pipes, he first sifted sand grains so
+that the grains were of uniform size. He then used Japanese lacquer to stick the sand
+grains to the walls of the pipe. Through exhaustive experimentation, Nikuradse studied
+the effect of roughness on flow characteristics in circular pipes. Experimental data was
+obtained for water flowing in pipes of six different relative roughness surfaces with Re
+ranging from 600 to 106. The dimensions of the inner diameters of the test pipes were 25,
+50, and 100 mm. His work helped establish the effect of relative roughness (ε/Dt), on the
+flow characteristics. It should be noted that the pipe diameter used in his work was the
+base diameter of the pipe before applying the sand grains.
+Colebrook [4] later published his findings on the variation in surface roughness and
+its effects on pressure drop. Colebrook’s experiments included sixteen spun concrete
+lined pipes and six spun bitumastic-lined pipes ranging in diameter from 4 inches to 60
+inches. Average relative roughness values ranged from 0.04318 mm to 0.254 mm. Also
+
+
+4
+tested was the 216-inch diameter Ontario tunnel. The Ontario tunnel was a concrete
+tunnel made from steel oil forms. When the concrete set and the forms were removed,
+the walls of the tunnel were rubbed down with carborundum brick to remove any
+deformities. These pipes were tested in the transition and fully turbulent regions. It was
+determined that the friction factor decreases as the velocity increases. Once the velocity
+profile reaches the fully developed profile described by the square law, the friction factor
+remains constant for all higher velocities.
+Moody [5] later characterized the friction factor (f) as a function of the Reynolds
+number and relative roughness (ε/Dt). Through Colebrook’s work, the Moody diagram
+was established which provided engineers with a convenient method of determining the
+pressure drop associated with the relative roughness of the pipe. The outlined method of
+determining pressure drop loses its integrity when the surface roughness is on the same
+order of magnitude as the characteristic diameter of the pipe. Although the current
+relative roughness values used in the plots go only as high as 5 percent, higher values are
+expected while dealing with flows in small diameter channels. The sand grain diameters
+in Nikuradse’s experiments were used for roughness ε. The average roughness value, Ra,
+obtained from surface profile measurements were later employed by researchers and
+designers while using the Moody diagram.
+Webb, et al. [6] studied the separation of flow from the wall of a pipe when passed
+over repeating roughness elements. Flow was determined to separate from the wall
+following roughness elements and reattach at a distance of 6-8 times the height of the
+element. When the roughness elements are the result of a manufacturing process such as
+a cutting blade or surface treatment, the elements are similar in nature and closely spaced.
+
+
+5
+The flow encounters the leading element and skims over a pocket of circulating liquid
+before passing over the following element.
+In the present paper, the constriction effect on the Moody diagram is plotted by
+considering the constricted flow area in the turbulent region. Further, to ascertain the
+effect of surface roughness features on the friction factor, systematic experiments are
+conducted using air and water as working fluids. The need for a new set of surface
+roughness descriptors for fluid flow characterization is then discussed.
+FLOW CONSTRICTION EFFECT ON FRICTION FACTOR
+The Moody diagram, shown in Figure 1, is simply the Colebrook-White equation
+plotted over a wide range of Reynolds numbers and relative roughness values. It serves
+as an easy way for engineers to estimate the friction factor without having to perform a
+calculation for the friction factor. By calculating the Reynolds numbers and relative
+roughness value, an engineer can quickly find a pipes friction factor. By finding where
+the calculated Reynolds number intersects the relative roughness line for a particular
+roughness and tracing the intersection back to the friction factor on the y axis, the friction
+factor of a given flow may be determined with minimal effort.
+As seen from Fig. 1, the laminar friction factor is independent of the relative
+roughness in the range ε/Dt ≤ 0.05. In the turbulent region, the friction factor for smooth
+tubes continuously decreases with increasing Reynolds numbers. For rough tubes, the
+friction factor follows the smooth tube plot up to a certain point, and then approaches an
+asymptotic value depending on the relative roughness. The asymptotic value increases
+with relative roughness as shown in Fig. 1 in the range 0 ≤ ε/Dt ≤ 0.05.
+
+
+6
+The above trend in friction factor in the turbulent region can be explained as follows:
+For a given relative roughness, the roughness features do not affect the flow up to a
+certain value of Reynolds number. For higher Reynolds number values, the surface
+effects are felt in the flow, eventually reaching an asymptotic friction factor value.
+The calculations of Moody assumed that the flow boundary occurred at the wall of
+the tube and utilized the full diameter for flow area. Following the discussion presented
+by Webb et al. [6], Fig. 2 is drawn to show the effects of roughness elements on the
+reattachment of flow to the pipe walls for different roughness heights. It can be seen
+from Fig. 2 that for low roughness values, the flow reattaches to the tube wall. At higher
+roughness values, the flow does not re-attach to the pipe wall, thus decreasing the
+available pipe area for fluid flow. The new flow boundary is suspended above the
+surface wall at a distance y. The diameter of the flow, then, is not the diameter of the
+pipe, but is reduced by the size of the roughness elements. While the exact value of this
+height in comparison to the height of the roughness elements is not known, it is bounded
+by y=0 and the height of the elements. In closely spaced roughnesses, such as the sand
+grains used in Nikuradse’s experiments, the value of y closely resembles ε. The new
+flow diameter can then be approximated by:
+Dcf = Dt − 2ε (1)
+where Dcf is the constricted flow diameter, Dt is the tube (root) diameter, and εis the
+average roughness height. Drawing similarity to the compact heat exchanger geometries,
+it may be noted that the resulting area based on Dcf corresponds to the free flow area.
+The decrease in flow diameter can have a strong influence on the friction factor used.
+Expressing friction factor in terms of mass flow, pipe diameter and pressure gradient for
+
+
+7
+fully developed flow in a circular pipe, the friction factor used in the Moody plot is given
+by:
+5 2
+2
+Moody 8 Dt
+m
+dX
+dP
+f
+
+
+
+
+
+
+=&
+ρπ
+(2)
+The Moody diagram is plotted using the following equation by Colebrook [4].
+
+
+
+
+
+
+=− +
+f f Moody
+t
+Moody
+D
+0.5 Re 0.5
+2.51
+3.7
+2.0 log
+1
+ε
+(3)
+The relation between fMoody and fcf is given by:
+5
+( 2 ) 
+
+
+−
+=
+t
+t cf moody D
+D
+f f ε (4)
+The Reynolds number is also modified using the constricted flow diameter and is given
+by:
+μ
+π cf cf
+4m& D
+Re = (5)
+Substituting eqs. (1) and (4) in eq. (3), we get,
+
+
+
+
+
+
+
+
+
+
+
+ −
+=− +
+
+
+
+
+
+ −
+0.5
+3.5 0.5
+2.5
+2
+Re
+2.51
+3.7
+2.0 log
+2
+1
+cf t
+t cf
+t
+cf t
+tf
+D
+D
+D
+f
+D
+D ε
+ε
+ε
+(6)
+The modified equation for pressure gradient for a circular pipe is thus given by:
+
+
+8
+25
+2
+8
+cf
+cf
+D
+mf
+dx
+dP
+πρ
+&
+= (7)
+Figure 2 shows the Modified Moody diagram plotted using eqs. (5) and (6) in the
+turbulent region with friction factor fcf and Reynolds number Recf based on Dcf . It can be
+seen from Fig. 2 that the essential features of the Moody diagram are retained, in terms of
+the transition region leading to an asymptotic value of f at higher Reynolds number.
+However, a major change is seen in that the asymptotic value of fcf, obtained for ε/Dt
+>0.03 at higher Recf values, plateaus to approximately fcf=0.042. In other words, for
+relative roughness values higher than 0.03, the friction factor fcf based on the constricted
+diameter Dcf is constant in the fully rough region. This means that the roughness effects
+on the friction factor are completely accounted for through the area constriction effects
+incorporated in fcf. Intuitively, this makes sense as a higher roughness feature would
+result in a higher flow constriction. This corresponds to the region described by Webb et
+al. [6] where the flow does not reattach to the walls as shown in Fig. 2.
+It is strongly advised that the above plots are valid only in the range 0 ≤ ε/Dt ≤ 0.05
+as in the original Moody diagram. There is a need for reliable experimental data in the
+region ε/Dt > 0.05 for circular pipes before the Moody diagram can be extended to pipes
+with higher relative roughnesses. The effect of the constriction in the laminar region is
+not as pronounced, especially for ε/Dt ≤ 0.05. For higher values of relative roughness,
+experimental confirmation is needed in both laminar and turbulent ranges.
+In using the Moody diagram, one would measure the tube inner diameter, which in
+reality represents Dcf and use it as Dt in pressure drop calculations. In Nikuradse’s
+experiments, the base diameter Dt was employed in the pressure drop calculations.
+
+
+9
+Although this error is quite small for the range of roughness employed in the Moody
+diagram, it could become significant if the diameter correction is not incorporated while
+extending the Moody diagram for pipes with higher roughness values. The fact that fcf
+remains constant at 0.042 in the high Reynolds number region also simplifies the
+calculations to some extent. It should be noted that in calculating the pressure drop, the
+actual constricted flow area should be used as given by eq. (5).
+ROUGHNESS EFFECT ON FRICTION FACTOR
+The roughness imparted on the internal walls of a flow channel are dependent on the
+manufacturing processes. The sand grain roughness feature is used extensively in fluid
+mechanics application. With smaller channel sizes, the relative roughness could be
+significantly greater than the threshold of 0.05 used in the Moody diagram. A survey of
+the manufacturing processes is presented first, followed by the relevant roughness
+parameters that hold promise. Finally, the effect of high relative roughness and one
+specific roughness feature on the friction factor in the laminar and transition region is
+investigated.
+SURVEY OF MANUFACTURING PROCESSES
+Process develops surface geometry and roughness
+All manufactured products are created with specific materials and geometry to
+accomplish the function for which they were intended. The specific geometry of parts
+can be created via any of the major subsets of processes; phase change processes,
+
+
+10
+deformation processes, material addition processes, or material removal processes. All
+processes have a direct effect on material properties and vice versa. The most typical
+scenario in manufacturing is a type of balancing act in selecting materials and processes
+that come together with a proper design to generate the desired resulting product.
+Phase-change processes
+Casting and molding processes generate part geometry via a phase-change from liquid to
+solid. The process is extremely efficient and is typically adapted to high volume
+production processes. The most typical drawback to casting and molding processes is a
+lack of dimensional control and poor material properties. The thermal contraction of
+materials and the volume contraction associated with the liquid to solid phase change
+causes severe difficulties when working at a mini or micro scale. The difficulty of
+holding any dimensional tolerances with complex geometries is usually prohibitive at a
+very small scale. If dimensional properties can be maintained, the poor material strength
+associated with casting and molding due to the properties and the direction of grain
+growth is typically prohibitive.
+At the small scale there are also some deposition and plating processes that make use of
+vapor or liquid to solid transformations, typically for coating applications. These
+processes are typically included in material addition processes and will be discussed
+further in that section below. Complex geometry and minute features are not possible for
+mechanical structures in vapor deposition processes, but masking and etching
+
+
+11
+technologies do make such processes candidates for simple structures and geometry
+generation.
+Deformation processes
+Macro scale processes such as forging, punching, and rolling are typically not utilized at
+the mini or micro scales, though some examples do exist. This class of processes makes
+use of plastic deformation to change the size and shape of materials until they meet
+design requirements. The materials experience severe strains and typically undergo strain
+hardening that can drastically change material properties. At the small scale these are
+often prohibitive characteristics, but some examples of successful processes do exist.
+Micro wire drawing processes are routinely used to make very fine metal wire for
+external connectivity and other applications.
+Material addition processes
+Electronics processing and rapid prototyping technologies have made use of
+manufacturing processes that actually add material to the part rather than removing it to
+generate the desired geometry. This style of process has the advantage that material is
+only deposited where it is needed and is therefore very efficient from a time and energy
+usage perspective. The main drawback of such processes is the poor material properties
+of the material that is deposited due to interfacial bonding issues. Control of bonding to
+the initial substrate and crystal structure growth are typically very poor in material
+addition processes and the result is very poor mechanical performance of the parts and
+somewhat compromised electrical properties. Such processes are often necessary
+
+
+12
+because there is no other way to accomplish the required design, but are typically avoided
+in most situations.
+Material removal processes
+Machining is the most developed of all processes and very controlled dimensions and
+material properties can be achieved with most materials in use today. Many different
+methods for material removal have been developed including rotating, abrasive, laser,
+water jet, acid etch, electrical discharge, and other removal processes. All material
+removal processes work as a type of sculpting process, methodically removing material
+until the desired part geometry is obtained from a larger block of material. All material
+removal processes generate the gross geometry of the part with relative success, but the
+fine features of the surface that is generated vary a great deal depending on the material
+removal method used. As the feature sizes of the parts are reduced the relative
+importance of the surface features is amplified, creating not only a texture, but actual
+features of a size that is relevant on the part surface.
+Traditional machining
+Traditional material removal processes make use of the rotation of a spindle to generate
+relative motion between the work part and the tool. In the case of a cylindrical
+component, the part is rotated in the spindle and the tool is pseudo stationary as it
+generates the desired part profile. In the case of prismatic components, the part is held
+stationary while the tool is rotated in the spindle and forced to interfere with the part in
+such as way as to generate the desired part geometry. The nature of the material removal
+
+
+13
+process is such that the tools will remove material by following paths that overlap to
+some degree (but not completely) to generate the gross geometry of the part and as a
+byproduct the fine features of the surface. For the purposes of this paper, it is assumed
+that the gross geometry of the parts is attainable without difficulty, but it is the relative
+size of the fine surface features (tool marks) with respect to the devices being fabricated
+that are of most concern because they will in fact have drastic impacts upon the
+performance of the devices. With traditional spindle-based machining processes fine tool
+marks occur at regular intervals (typically related to the feed rate of the tool) and have a
+geometry that is the inverse of the tool tip. A typical surface generated in a turning
+process is shown in Figure 3. In the mini / micro range the relative size and impact of
+these surface features is increased dramatically.
+Nontraditional material removal processes
+The past few decades have seen the development of a host of material removal processes
+that do not make use of a rotating spindle and tool in the traditional manner. Processes
+that fall under this category include laser machining, water jet cutting, plasma arc cutting,
+ultrasonic machining, etc. One of the most common of these processes is electrical
+discharge machining (EDM) in which a surface is eroded via electrical arcing from a tool
+to the part. As the process progresses the gross geometry of the part takes on the inverse
+shape of the tool that is used to generate it. The process is commonly used for complex
+die cavity generation because the process can use relatively soft and easily machinable
+graphite or copper electrodes to machine extremely tough tool steel parts with very
+complex geometry. The fine surface features of this process, as well as most
+
+
+14
+nontraditional processes are more random in frequency, size, and shape. Figure 4 shows
+the surface features of a part that was created using EDM.
+Etching processes
+Another set of material removal processes relies on chemical means to remove material
+and have become of critical importance in electronic manufacturing. Acid/chemical
+etching and electrically assisted etching techniques are effective in removing material,
+but great care must be taken to generate the desired geometry by masking or other means.
+Etching processes are particularly sensitive to crystal structures and grain boundaries that
+cause variations in the etching rates at different places on the same part. In general
+etched surfaces take on the features and character of the underlying material structure.
+These features are typically magnitude limited only by the time and extent of the etching
+process.
+Micro fabrication processes
+The advent of electronics and their ever-decreasing feature sizes has had a strong impact
+on the development of processes to support such fabrication. This set of processes has
+become known as micro fabrication technology, but is actually made up of a series of
+different processes. Layered integrated circuits have caused the development of both
+material removal and material addition processes in addition to doping processes which
+change the electrical properties of the parts. The gross and fine geometry produced by
+the removal and addition processes is typically layered in nature, but does consist of full
+3-D features. Figure 5 shows the gross geometry of a silicon substrate after processing,
+
+
+15
+and the chips on the surface. The fine features of the micro-fabricated parts are generated
+by a series of masking, etching, and deposition processes that perform according to the
+descriptions above. The general character of the features can often be exaggerated due to
+the large number of sequential steps involved in the production of layered IC chips and
+other micro fabricated parts. Figure 6 shows the typical dimensional range of micro
+fabrication processes as compared to conventional machining processes.
+Surfaces
+The assessment of surfaces is a difficult and confusing proposition for most situations in
+manufacturing and production environments. The link between design intent and the
+performance of a given surface is usually tenuous at best and is most often based on
+experience and feedback from field experience, which is clearly post-manufacturing. In
+general manufacturing and production strive to provide what the designer has called out
+whether the designer had a good reason to call it out or not. A big part of this process is
+the measurement and characterization of surfaces. Most typically a surface is
+characterized by gross, medium, and fine features separately. Gross features are typically
+characterized by dimensions and tolerances. Medium features typically are characterized
+as large wavelength surface variations known as waviness or flatness. Fine surface
+features are typically described as high frequency variations in the surface, better known
+as roughness. Figure 7 shows the difference between medium and fine surface features.
+Characterization of surfaces is typically done on a worst case scenario basis, measuring
+variations across the lay of the part, the lay typically being tool marks.
+
+
+16
+EFFECT OF ROUGHNESS FEATURES ON FRICTION FACTOR
+The Moody diagram is applicable to pipes that have relatively low values of relative
+surface roughness. The underlying data in this diagram is based on sand grain roughness.
+This diagram is used extensively in predicting friction factors for commercial tubes
+whose roughness features are not too different from the sand grain roughness. As the
+relative roughness becomes large, it becomes important to consider the roughness
+features as well.
+Need for roughness characterization
+The pioneering work on characterizing the effect of surface roughness on pressure drop
+by Nikuradse [1] was achieved by using sand to induce known roughnesses on flow
+pipes. This work provided the foundations for establishing the effects of relative
+roughness (e/D) on flow characteristics. However, this characterization of surface
+roughness was limited to the diameter of the sand grain (equivalent to the modern
+descriptor Average Maximum Height of the Profile, Rz) and did not consider other
+parameters that would describe the spacing, waviness, and shape in a three-dimensional
+area profiling. Additionally, using the definitions by Kandlikar and Grande [7], when
+considering minichannels (3 mm ≥ Dh ≥ 200 μm) and microchannels (200 μm ≥ Dh ≥ 10
+μm), the ratio between the hydraulic diameter and the geometry of the roughness profile
+becomes significantly different from those in conventional channels. At this scale, the
+shape, spacing and size of the roughness irregularities have different influence upon the
+pressure drop and the overall fluid regime. In particular, a more complete characterization
+may prove useful in attempting to describe the flow separation behavior exhibited in flow
+
+
+17
+patterns when encountering features from the surface topography. Hence, there is a need
+for developing a set of roughness descriptors suitable for micro and mini channels that
+would allow for a complete understanding the effect of different aspects of surface
+topography upon pressure drop and fluid behavior.
+Surface characterization parameters and possibilities
+In any given channel cross section there are two surfaces with roughness features of
+interest (see Figure 8). The proposed approach formalizes a set of descriptors to be
+collected from each of the two surfaces, as well as statistics on the hydraulic diameter
+from the cross section of interest describing the interaction between the two surfaces.
+i) Characterizing the individual surfaces
+A set of six parameters is proposed to provide information on the roughness features:
+average height (Rz), spacing (RSm and Pc), shape (Rsk and tp), as well as average
+deviations from mean line (Ra). These parameters are defined in the ASME B46.1-2002
+[8] as follows
+• Average Roughness (Ra): the arithmetic average of the absolute values of the
+profile height deviations (Zi). See Figure 9.
+∫
+=
+L
+Z x dx
+L
+Ra
+0
+()
+1 (8)
+• Mean Spacing of Profile Irregularities (RSm): consists of the mean value of the
+spacing between profile irregularities within the evaluation length. See Figure 10.
+∑
+=
+=
+n
+i
+i
+Sm
+n
+RSm
+1
+1 (9)
+
+
+18
+• Peak Density (Pc): the number of SAE peaks per unit length measured at a
+specific peak count level over the evaluation length. See Figure 11.
+• Skewness of Profile (Rsk): a measure of the asymmetry of the profile about the
+mean line calculated over the evaluation length. See Figure 12.
+∫
+=
+L
+Z x dx
+L
+Rq
+Rsk
+0
+3
+3 ()
+1 1 (10)
+where Rq is the root mean square average of the profile deviations from the mean
+line.
+• Profile Bearing Length Ratio (tp): the ratio of the profile bearing length to the
+evaluation length at a specified level p. See Figure 13.
+100%
+....
+123 ×
++++ +
+=L
+bb b b
+tp n (11)
+• Average Maximum Height of the Profile (Rz): the average of successive values of
+Rti calculated over the evaluation length, where Rti = Rpi + Rvi. See Figure 14.
+ii) Characterizing the interaction between the surfaces
+Additionally, after the two surfaces from a cross-section of a channel have been
+individually characterized, the combined effect of the surface features in the effective
+hydraulic diameter must be captured. The proposed approach suggests collecting the
+individual profiles and, via digital sampling, calculating the instantaneous hydraulic
+diameter along the evaluation length of interest for the channel. See Figure 15.
+Afterwards, three statistics are to be collected: Maximum Hydraulic Diameter (Max
+|Dhi|), Minimum Hydraulic Diameter (Min |Dhi|), and the Average Hydraulic Diameter
+measured from the filtered mean lines for each surface.
+
+
+19
+∑
+=
+=
+n
+i
+hi
+hD
+n
+D
+1
+,
+1 (12)
+In summary, the aforementioned approach incorporates measurement and assessment of
+six surface descriptors for each of the two individual surfaces that represent a two
+dimensional cross-section, as well as three statistics that represent the impact of the
+roughness features in the interacting surfaces upon the localized reduction or expansion
+of the effective hydraulic diameter.
+EXPERIMENTAL VERIFICATION OF THE ROUGHNESS AND FEATURE
+EFFECTS
+The effect of roughness beyond ε /Dt > 0.05 is not studied in literature. The higher
+roughness is usually incorporated by incorporating surface features. The effect of feature
+size, shape and distribution on friction factor then becomes important. To verify this
+effect, Schmitt [9] performed an experimental study to evaluate the friction factor for a
+grooved surface in a rectangular minichannel. Two cases were investigated with the
+grooves in the top and bottom channel surfaces either aligned or offset in relation to each
+other. The details of the experimental setup and the test sections are given by Schmitt [9],
+and some essential features are described below.
+Both air and water have been used as test fluids in the present work. Figures 16 and
+17 show the respective experimental loops.
+For the experiments with air, zero air is supplied in pressurized cylinders. The air
+is then passed through a bank of flow meters before entering the test section as shown in
+Fig. 16. The test section is 80 mm long and has thirteen pressure taps located along its
+length. For experiments with water, deionized (DI), degassed water is used as the test
+
+
+20
+fluid. The water is degassed using the procedure described in Kandlikar et al [10]. The
+DI, degassed water is drained into a Fisher Scientific Isotemp 3013 water bath. A
+positive displacement 1/4 HP bronze gear pump capable of pumping up to 0.9 GPM feeds
+the test section. A by-pass loop is used to control the flow rate through the test section.
+The water is then filtered using a Shelco FOS housing with a 1μm wound fiber filter.
+Three Omega FL-5500-NV rotameter flow meters control the flow rate to the test section.
+The pressure taps from the test section are connected to a manifold through valves
+to facilitate differential pressure measurement, measured from the manifold inlet. Four
+pressure transducers with ±1psi, ±5psi, ±15psi, or ±30psi differential pressure ranges
+respectively are used to cover the entire operating range with air and water. K-type
+thermocouples measure the fluid temperature before and after the test section. Once the
+water passes through the test section, it is recirculated into the constant temperature water
+bath, while air is discharged into the atmosphere.
+TEST SECTION DETAILS
+Test section is made of two individual inserts, each 10 mm wide and 100 mm long,
+forming the top and bottom sides of the flow channel. They are mounted in a fixture that
+allows the gap between them to be controlled using two micrometers. A photograph of
+the assembly is shown in Fig. 18. The fluid inlet is through smooth entrances machined
+on the inserts. The surfaces of the inserts are machined to provide smooth or rough
+surfaces.
+Three surfaces are tested in the current study. These surfaces are (i) smooth, (ii)
+aligned saw-tooth roughness, and (iii) offset saw-tooth roughness. The smooth channel is
+
+
+21
+shown in Figure 19. The channel is relatively smooth with a maximum average
+roughness height, Rz of 1.22μm. The smooth minichannel is used to validate the test
+section since a smooth channel will not deviate from the conventional flow theory.
+The aligned saw-tooth roughness arrangement is shown in Figure 20. It consists of a
+rectangular minichannel having parallel surfaces with machined ribs running
+perpendicular to the flow direction. The surface roughness peaks on one side of the
+channel are lined up to match the surface roughness peaks on the opposite side of the
+channel.
+The offset saw-tooth roughness arrangement also consists of parallel surfaces with
+machined ribs running perpendicular to the flow direction, but the surface roughness
+peaks are lined up such that the point of one surface roughness peak on one side lies
+centered between the two surface roughness peaks directly across from it. This is shown
+in Figure 21.
+The surface roughness parameters were measured using a Mitotoyo SJ-400
+profilometer. The results are shown below.
+ERROR ANALYSIS
+The experimental uncertainty is given as:
+22
+U = B + Pe (13)
+where U is the uncertainty, B is the bias error, and Pe is the precision error. Systematic,
+or bias error is generally induced by the error in the measuring instrumentation. Bias can
+
+
+22
+be determined from the least count of the measuring instrumentation. Bias error is
+calculated by dividing the accuracy by the target value:
+Measured Value
+Instrumentation Accuracy
+B = (14)
+Precision error is error induced by a number of measurements. Precision is calculated as:
+n
+P ts
+e
+= ± × σ (15)
+where t is determined from standard T-tables, σs is the sample standard deviation, and n is
+the number of samples. Temperature readings are accurate to ±0.1°C, air and water flow
+rates are accurate to ±3% full scale, minichannel dimensions are accurate to ±5 μm,
+pressure readings are accurate to ±0.25% full scale, pressure tap distances are accurate to
+±5 μm, and pressure tap locations are accurate to ± 5 μm. The friction factors were found
+to have an uncertainty of 8.81%.
+RESULTS
+Tests were conducted for both air and water in minichannels with hydraulic diameters
+ranging from 325μm to 1819μm over a range of Reynolds numbers ranging from 200 to
+7200 for air and 200 to 5700 for water. Static pressure was measured along the length of
+the minichannel in 13 locations placed uniformly along the length of the channel. The
+results for the different test fluids are discussed in the following sections.
+Test Section Validation
+
+
+23
+The test section was fitted with smooth inserts and was run with air and water. The
+experimental results were compared with the theoretical results obtained using the
+following equations:
+Laminar flow:
+Re
+C
+f = (16)
+Where the constant C depends on the aspect ratio b / w
+α* = . It is given by the following
+equation, Kakac et al. [11]:
+C = 24(1−1.3553α* +1.9467α*2 −1.7012α*3 +0.9564α*4 −0.2537α*5 ) (17)
+In the turbulent region, the friction factor is given by the following equation, Miller [12]:
+4
+Re
+5.74
+3.7
+/
+0.25 log
+2
+0.9 
+
+
+
+
+ 
+
+
++
+=
+−
+e Dh
+f (18)
+The applicability of the above equation with hydraulic diameter for rectangular channels
+was confirmed by Kakac et al. [11].
+Figures 22 and 23 show a comparison of the experimental results obtained for the
+smooth channels with the theoretical results obtained from eqs. (16) - (18) for air and
+water respectively. The solid line represents the laminar flow and the dotted line
+represents the turbulent flow. It can be seen that the agreement is quite good, with a
+mean error of less than 3 percent. Transition from laminar to turbulent flow was
+observed around Re=1950. Similar agreement was noted with the water data.
+
+
+24
+EFFECT OF ROUGHNESS STRUCTURE
+The experiments were conducted with two configurations with grooved inserts as
+shown in Figs. 20 and 21. The gap between the inserts was systematically varied to yield
+different ε/Dcf ratios. The hydraulic diameter was calculated using the constricted flow
+area, with width as w and the constricted gap bcf = b-2ε (see Figs. 20 and 21).
+Figures 24 - 27 show the friction factor variation with Recf for the two configurations
+– saw-tooth aligned and saw-tooth offset. For comparison, the theoretical friction factor
+values are also plotted. We are interested in seeing the effect of roughness as well as the
+roughness orientation on fcf.
+Figures 24 and 25 show the variation of friction factor for the two cases with air and
+water flow. It is seen that the data does not agree with the theoretical laminar and
+turbulent cases and lie significantly above the predicted friction factors. It should be
+noted that the theoretical friction factors are based on the maximum flow area based on
+the root height, b.
+Figures 26 and 27 show the same data presented in Figs. 24 and 25 for air and water,
+but the theoretical friction factors are calculated with the constricted flow area based on
+bcf. It is seen that the agreement between the experimental data and the respective
+laminar flow equation is significantly improved, (to within less than 5 percent before
+transition appears to set in). The modified Moody diagram is thus seen to be applicable
+with the constricted flow area for both saw-tooth and aligned roughness features.
+In the turbulent region, the agreement is quite poor. The nature of the roughness
+elements also makes a difference. The flow does interact with the walls even at the high
+relative roughness values. Using the average roughness Ra = 17 μm, the relative
+
+
+25
+roughness value is calculated as 17/953 = 0.018. Although this is less than 0.05, the
+conventional Moody plot is not applicable. It clearly points out the need to introduce
+new parameters. One of the parameters is the peak height of the element, b. Setting ε=b
+is another simple way to represent the roughness elements and is used in Figs. 24 and 25.
+However, the aligned and offset geometries are not represented by this parameter.
+Additional parameters need to be looked at as presented in Figs 9-15. A surface profile
+for the channel is shown in Figs. 2 and 21 along with some of the parameters listed at the
+top of the chart. A large set of data with different surface features is needed to develop
+more specific set of parameters suitable for characterization of roughness effects. Similar
+results are obtained for different channel heights.
+CONCLUSIONS
+1. The constricted flow area has been introduced as an important parameter in
+representing the effect of roughness on friction factor. The Moody diagram re
+plotted with this parameter results in a constant friction factor in the fully
+developed turbulent flow region.
+2. The effect of surface roughness features is studied with aligned and offset saw
+tooth surfaces in a rectangular geometry. The height of the saw-tooth was used to
+represent the roughness ε. The height of the channel was systematically varied to
+obtain friction data for air and water for ε/Dh of up to 14%.
+3. In the laminar region, the use of the constricted flow area resulted in a
+significantly improved agreement (within 5 percent, prior to somewhat early
+
+
+26
+transition to turbulent flow) with the laminar flow data for air as well as water in
+both aligned and offset configurations.
+4. The laminar-to-turbulent transition is not affected appreciably as the channel
+hydraulic diameter decreases for channels with relative roughnesses below 0.05.
+However, the transition occurs at lower Reynolds numbers as the relative
+roughness increases, especially above 0.05.
+5. In the turbulent region, the experimental data was considerably above the values
+obtained using the constricted flow area. The effect of surface features is thus
+seen to influence the friction factor. Additional data is needed to further quantify
+this effect.
+6. Six parameters are introduced as possible candidates in representing the
+roughness effect on friction factor in the rough region with ε/D >0. Further
+experimental data and analysis is needed before recommending any specific set to
+represent the flow effects of surface features.
+
+
+27
+REFERENCES
+[1] Darcy, H., 1858, “Recherches Experimentales Relatives au Mouvement de L'Eau dans les Tuyaux.” 2 volumes, Mallet-Bachelier, Paris. 268 pages and atlas. (“Experimental Research Relating to the Movement of Water in Pipes”), Mem. Pres. Acad. Des Sci. Inst. Frances, Vol. 15, pp. 141, 1958.
+[2] Fanning, 1877. “Treatise on Water Supply,” New York, rev. ed. 1886. [3] Nikuradse, J., 1933, “Stromungsgesetze in Rauen Rohren.” VDI-Forschungsheft 361, 1933. Beilage zu “Forschung auf dem Gebiete des Ingenieurwesens.” Ausgabe B Band 4, English Translation NACA Tech. Mem. 1292. [4] Colebrook, F. C., 1939, “Turbulent Flow in Pipes, With Particular Reference to the Transition Region Between the Smooth and Rough Pipe Laws.” J. Inst. Civ. Eng., Lond., Vol. 11, pp. 133-156 [5] Moody, L. F., 1944, “Friction Factors for Pipe Flow.” ASME Trans., Vol. 66, pp. 671-683. [6] Webb, R. L., Eckert, E. R. G., and Goldstein, R. J., 1971, “Heat Transfer and Friction in Tubes with Repeated-Rib Roughness,” Int. J. Heat and Mass Transfer, Vol. 14, pp. 601-617. [7] Kandlikar, S.G., and Grande, W.J., 2003, “Microchannels And MinichannelsHistory, Terminology, Classification and Current Research Needs,” First International Conference on Microchannels and Minichannels, Rochester, New York, April 24-25, 2003. [8] ASME Standard B46.1-2002, “Surface Texture (Surface Roughness, Waviness, and Lay),” The American Society of Mechanical Engineers, An American National Standard, ASME B46.1-2002. pp. 1-98. [9] Schmitt, D. J., 2004, “Experimental Investigation of Surface Roughness Microstructures and Their Effects on Pressure Drop Characteristics in Rectangular Minichannels” Master of Science Thesis, Mechanical Engineering Department, Rochester Institute of Technology. [10] Kandlikar, S. G., Steinke, M. E., Balasubramanian, P., 2002, “Single-phase Flow Characteristics and Effect of Dissolved Gases on Heat Transfer Near Saturation Conditions in Microchannels,” Proceedings of IMECE02, November, New Orleans, LA. [11] Kakac, S., Shah, R. K., Aung, W., 1987, Handbook of Single-Phase Convective Heat Transfer, John Wiley and Sons, pg. 3-122. [12] Miller, R. W., 1996, Flow Measurement Engineering Handbook, 3rd ed. New York: McGraw-Hill.
+
+
+28
+Table 1. Minichannel Roughness Parameters
+Ra
+(μm)
+Rq
+(μm) Rsk Rku
+Rz
+(μm) p/e
+Smooth 0.21 0.25 0.19 3.07 1.22 
+Aligned 17.0 20.8 1.19 3.45 72.9 6.86
+Offset 17.0 20.8 1.19 3.45 72.9 6.86
+
+
+29
+LIST OF FIGURES
+Figure 1: Moody Diagram based on Constricted Flow
+Figure 2: Degrees of separation of flow from the tube wall over different size elements (sand grain roughness was used by Nikuradse), A- Roughness Dominant Region, B and C – Constriction dominated region
+Figure 3: Fine surface features generated in a turning process by cutting tool
+Figure 4: Random surface features generated by electrical discharge machining
+Figure 5: Silicon substrate showing exaggerated surface variations after processing and chips
+Figure 6: Dimensional range of micro machining methods
+Figure 7: Medium and fine surface features [8]
+Figure 8: Cross section of a microchannel
+Figure 9: Average roughness (Ra), [8]
+Figure 10: The mean spacing of profile irregularities (RSm), [8]
+Figure 11: The peak count level used for calculating peak density [8]
+Figure 12: Three surface profiles with different skewness [8]
+Figure 13: The profile bearing length [8]
+Figure 14: Parameters Rt, Rv, and Rp used for calculating Rz [8]
+Figure 15: Varying hydraulic diameter along the evaluation length [8]
+Figure 16: Schematic of Experimental Test Setup, Air
+Figure 17: Schematic of Test Setup, Degassed DI Water
+Figure 18 Photograph of the test section assembly
+Figure 19: Smooth Channel
+
+
+30
+Figure 20: Aligned Saw-tooth Roughness
+Figure 21: Offset Saw-tooth Roughness
+Figure 22: Fully Developed Friction Factor Vs. Reynolds Number, Smooth Channel, Air, Dh=953μm, b=500μm, w=10.03mm
+Figure 23: Fully Developed Friction Factor Vs. Reynolds Number, Smooth Channel, Water, Dh=953μm, b=500μm, w=10.03mm
+Figure 24: Fully Developed Friction Factor Vs. Reynolds Number, Air, Dh=953μm, b=500μm, bcf=354μm, w=10.03mm, e/Dh=0.0735
+Figure 25: Fully Developed Friction Factor Vs. Reynolds Number, Water, Dh=953μm, b=500μm, bcf=354μm, w=10.03mm, e/Dh=0.0735
+Figure 26: Fully Developed Friction Factor Vs. Reynolds Number, Constricted Flow, Air, Dh,cf=684μm, b=500μm, bcf=354μm, w=10.03mm, e/ Dh,cf=0.1108
+Figure 27: Fully Developed Friction Factor Vs. Reynolds Number, Constricted Flow, Water, Dh,cf=684μm, b=500μm, bcf=354μm, w=10.03mm, e/ Dh,cf=0.1108
+
+
+31
+Figure 1: Moody Diagram based on Constricted Flow
+
+
+32
+Figure 2: Degrees of separation of flow from the tube wall over different size elements (sand grain roughness was used by Nikuradse), A- Roughness Dominant Region, B and C – Constriction dominated region
+
+
+33
+Figure 3: Fine surface features generated in a turning process by cutting tool
+Tool Tip
+Fine surface features
+Gross part geometry
+Feed rate
+
+
+34
+Figure 4: Random surface features generated by electrical discharge machining
+
+
+35
+Figure 5: Silicon substrate showing exaggerated surface variations after processing and chips
+
+
+36
+Figure 6: Dimensional range of micro machining methods
+10-3 m
+10-4 m
+10-5 m
+μm
+10-7 m
+10-8 m
+nm
+Å
+Conventional Machining
+Microdrilling / MicroEDM
+Optical Lithography
+X-Ray Lithography
+Diamond Machining
+Deposition Processes
+
+
+37
+Figure 7: Medium and fine surface features [8]
+
+
+38
+Figure 8: Cross section of a microchannel
+Top Surface
+Bottom Surface
+Flow
+Dhi
+
+
+39
+Figure 9: Average roughness (Ra), [8]
+
+
+40
+Figure 10: The mean spacing of profile irregularities (RSm), [8]
+
+
+41
+Figure 11: The peak count level used for calculating peak density [8]
+
+
+42
+Figure 12: Three surface profiles with different skewness [8]
+
+
+43
+Figure 13: The profile bearing length [8]
+
+
+44
+Figure 14: Parameters Rt, Rv, and Rp used for calculating Rz [8]
+
+
+45
+Figure 15: Varying hydraulic diameter along the evaluation length [8]
+Top Surface
+Bottom Surface
+Dh1 Dh2 Dhn
+Filtered Mean Line
+Average Hydraulic
+Diameter Dh
+
+
+46
+Figure 16: Schematic of Experimental Test Setup, Air
+
+
+47
+Figure 17: Schematic of Test Setup, Degassed DI Water
+
+
+48
+Figure 18 Photograph of the test section assembly
+
+
+49
+Figure 19: Smooth Channel
+
+
+50
+Figure 20: Aligned Saw-tooth Roughness
+
+
+51
+Figure 21: Offset Saw-tooth Roughness
+
+
+52
+0.00
+0.01
+0.10
+1.00
+100 1000 10000
+Reynolds Number
+ffd
+Experimental Laminar Theoretical Turbulent Theoretical
+Figure 22: Fully Developed Friction Factor Vs. Reynolds Number, Smooth Channel, Air, Dh=953μm, b=500μm, w=10.03mm
+
+
+53
+0.00
+0.01
+0.10
+1.00
+100 1000 10000
+Reynolds Number
+ffd
+Experimental Laminar Theoretical Turbulent Theoretical
+Figure 23: Fully Developed Friction Factor Vs. Reynolds Number, Smooth Channel, Water, Dh=953μm, b=500μm, w=10.03mm
+
+
+54
+0.00
+0.01
+0.10
+1.00
+100 1000 10000
+Reynolds Number
+ffd
+Laminar Theoretical Turbulent Theoretical Aligned Sawtooth Profile Offset Sawtooth Profile
+Figure 24: Fully Developed Friction Factor Vs. Reynolds Number, Air, Dh=953μm, b=500μm, bcf=354μm, w=10.03mm, e/Dh=0.0735
+
+
+55
+0.01
+0.10
+1.00
+100 1000 10000
+Reynolds Number
+ffd
+Laminar Theoretical Turbulent Theoretical Aligned Sawtooth Profile Offset Sawtooth Profile
+Figure 25: Fully Developed Friction Factor Vs. Reynolds Number, Water, Dh=953μm, b=500μm, bcf=354μm, w=10.03mm, e/Dh=0.0735
+
+
+56
+0.00
+0.01
+0.10
+1.00
+100 1000 10000
+Reynolds Number
+ffd
+Laminar Theoretical Turbulent Theoretical Constricted Aligned Sawtooth Profile Constricted Offset Sawtooth Profile
+Figure 26: Fully Developed Friction Factor Vs. Reynolds Number, Constricted Flow, Air, Dh,cf=684μm, b=500μm, bcf=354μm, w=10.03mm, e/ Dh,cf=0.1108
+
+
+57
+0.01
+0.10
+1.00
+100 1000 10000
+Reynolds Number
+ffd
+Laminar Theoretical Turbulent Theoretical Constricted Aligned Sawtooth Profile Constricted Offset Sawtooth Profile
+Figure 27: Fully Developed Friction Factor Vs. Reynolds Number, Constricted Flow, Water, Dh,cf=684μm, b=500μm, bcf=354μm, w=10.03mm, e/ Dh,cf=0.1108
+View publication stats

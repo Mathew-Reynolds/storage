@@ -1,0 +1,1816 @@
+Hermann Schlichting (Deceased) Klaus Gersten
+BoundaryLayer Theory
+Ninth Edition
+
+
+Boundary-Layer Theory
+
+
+Hermann Schlichting (Deceased) Klaus Gersten
+Boundary-Layer Theory
+Ninth Edition
+123
+With contributions from Egon Krause and Herbert Oertel Jr.
+Translated by Katherine Mayes
+
+
+Hermann Schlichting (Deceased) Institute of Fluid Mechanics Technical University of Braunschweig Braunschweig Germany
+Klaus Gersten Institute of Thermodynamics and Fluid Mechanics Ruhr-University Bochum Bochum, Nordrhein-Westfalen Germany
+ISBN 978-3-662-52917-1 ISBN 978-3-662-52919-5 (eBook) DOI 10.1007/978-3-662-52919-5
+Library of Congress Control Number: 2016944848
+1st edition: © McGraw-Hill New York 1955 2nd edition: © Pergamon London 1955 4th edition: © McGraw-Hill New York 1960 6th edition: © McGraw-Hill New York 1968 7th edition: © McGraw-Hill New York 1975 8th edition: © Springer-Verlag Berlin Heidelberg 2000 9th edition: © Springer-Verlag Berlin Heidelberg 2017 This work is subject to copyright. All rights are reserved by the Publisher, whether the whole or part of the material is concerned, specifically the rights of translation, reprinting, reuse of illustrations, recitation, broadcasting, reproduction on microfilms or in any other physical way, and transmission or information storage and retrieval, electronic adaptation, computer software, or by similar or dissimilar methodology now known or hereafter developed. The use of general descriptive names, registered names, trademarks, service marks, etc. in this publication does not imply, even in the absence of a specific statement, that such names are exempt from the relevant protective laws and regulations and therefore free for general use. The publisher, the authors and the editors are safe to assume that the advice and information in this book are believed to be true and accurate at the date of publication. Neither the publisher nor the authors or the editors give a warranty, express or implied, with respect to the material contained herein or for any errors or omissions that may have been made.
+Typesetting: Katherine Mayes, Darmstadt and LE-TEX, Leipzig Cover design: de’blik, Berlin
+Printed on acid-free paper
+This Springer imprint is published by Springer Nature The registered company is Springer-Verlag GmbH Berlin Heidelberg
+
+
+Bochum, March 2016 Klaus Gersten
+Preface to the Ninth English Edition
+For this edition corrections have been carried out and additional important literature published in recent years have been included (66 additional references). Section 22.8 on plane turbulent wall jets has been completely rewritten. I am very thankful for valuable assistance to Prof. Dr. E. Krause, Prof. Dr. H. Oertel, Prof. Dr. W. Schneider, Prof. Dr. M. Breuer, Prof. Dr. H.-D. Papenfuß and last but not least Gertraude Odemar.
+
+
+Preface to the Eighth English Edition
+According to the tradition of this book, a German edition has always been soon followed by the English translation. I am very grateful to SpringerVerlag for undertaking this version and for securing a translator. My particular thanks go to Katherine Mayes for this excellent translation. In the course of the translation, some errors in the German edition were corrected and a number of additions carried out. In this connection I am very thankful to Prof. Dr. W. Schneider, Vienna, for several suggestions and improvements. I would like to thank Ursula Beitz again for her careful checking of the bibliography. I hope that the English edition will attain the same positive resonance as the ninth German edition.
+Bochum, May 1999 Klaus Gersten
+
+
+Preface to the Ninth German Edition
+There is no doubt that Boundary–Layer Theory by Hermann Schlichting is one of most important books within the sphere of fluid mechanics to appear in the last decade. Shortly before his death, Hermann Schlichting brought out the eighth edition which he revised together with his friend and former colleague Wilhelm Riegels. When this edition went out of print and a new edition was desired by the publishers, I was very glad to take on the task. During the fifteen years I spent at the institute of my highly respected teacher Hermann Schlichting, I had already been involved with earlier editions of the book and had revised some chapters. The burden was also eased by the fact that boundary–layer theory in its widest sense has been my preferred direction of research for many years. It quickly became clear that a complete revision was necessary; indeed this was also known to Hermann Schlichting. In the preface to the eighth edition he wrote: “Noting the systematic of our knowledge of today, it would have been desirable to fully revise this work; however such a process would have pushed back the appearance of this book by years.” Compared to the eighth edition, the literature of the last 15 years had to be taken into account and recent developments, in turbulence models for example, had to be incorporated. In order to keep the size of the book tractable, some results – those which no longer seem so important with today’s computing potential – had to be curtailed, or in some cases, left out altogether. Thus the necessity to completely rewrite the text emerged. The fundamental divisions within the book were retained; as before it consists of the four major sections: basic laws of the flows of viscous fluids, laminar boundary layers, the onset of turbulence, turbulent boundary layers. However a new fifth section on numerical methods in boundary–layer theory has been added. The partition into chapters had to be somewhat modified in order to improve the style of presentation of the material. Because of the necessary restrictions on the material, the aim was to concentrate on boundary–layer theory as the theory of high Reynolds number flows. Accordingly the chapter on “creeping flows”, that is flows at very small Reynolds numbers, was omitted.
+
+
+It seemed natural to steer towards the style and level of presentation with the same target audience as with Hermann Schlichting. The research area of boundary–layer theory is continuously growing, and it has become so extensive that no single person can possess a complete overview. Consequently I am extremely grateful to two colleagues who supported me actively. Professor E. Krause wrote the new additional chapter on numerical methods in boundary–layer theory, and Professor H. Oertel provided the revision of the section on the onset of turbulence (stability theory). Further assistance was furnished from different sources. I am indebted to Dr.-Ing. Peter Sch ̈afer and Dr.-Ing. Detlev Vieth for a great many new sample calculations. Dr. Vieth also read the entire text discerningly. I am grateful to him for numerous improving suggestions. Renate Go ̈lzenleuchtner deserves particular thanks for generating the figures which almost all had to be newly drawn up. I would like to thank Ursula Beitz particularly for her careful and exhaustive checking of the bibliography, while Marianne Ferdinand and Eckhard Schmidt were of first class assistance. It was by far impossible to adopt all citations, so that it may be necessary to revert to the eighth edition for specific references to earlier pieces of work. The printing firm of Jo ̈rg Steffenhagen is due particular praise for an extremely fruitful collaboration. My thanks also go to Springer–Verlag for our most agreeable work together. I hope we have been able to carry on the work of Hermann Schlichting as he would have wished.
+Bochum, October 1996 Klaus Gersten
+X Preface
+
+
+Contents
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . XX I
+Part I. Fundamentals of Viscous Flows
+1. Some Features of Viscous Flows . . . . . . . . . . . . . . . . . . . . . . . . . . 3 1.1 Real and Ideal Fluids . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3 1.2 Viscosity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4 1.3 Reynolds Number . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6 1.4 Laminar and Turbulent Flows . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12 1.5 Asymptotic Behaviour at Large Reynolds Numbers . . . . . . . . . 14 1.6 Comparison of Measurements Using the Inviscid Limiting Solution . . . . . . . . . . . . . . . . . . . . . . 14 1.7 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+2. Fundamentals of Boundary–Layer Theory . . . . . . . . . . . . . . . . . 29 2.1 Boundary–Layer Concept . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 29 2.2 Laminar Boundary Layer on a Flat Plate at Zero Incidence . . 30 2.3 Turbulent Boundary Layer on a Flat Plate at Zero Incidence . 33 2.4 Fully Developed Turbulent Flow in a Pipe . . . . . . . . . . . . . . . . . 36 2.5 Boundary Layer on an Airfoil . . . . . . . . . . . . . . . . . . . . . . . . . . . . 38 2.6 Separation of the Boundary Layer . . . . . . . . . . . . . . . . . . . . . . . . 39 2.7 Overview of the Following Material . . . . . . . . . . . . . . . . . . . . . . . 48
+3. Field Equations for Flows of Newtonian Fluids . . . . . . . . . . . 51 3.1 Description of Flow Fields . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51 3.2 Continuity Equation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52 3.3 Momentum Equation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 52 3.4 General Stress State of Deformable Bodies . . . . . . . . . . . . . . . . . 53 3.5 General State of Deformation of Flowing Fluids . . . . . . . . . . . . 57 3.6 Relation Between Stresses and Rate of Deformation . . . . . . . . . 62 3.7 Stokes Hypothesis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 65 3.8 Bulk Viscosity and Thermodynamic Pressure . . . . . . . . . . . . . . 66 3.9 Navier–Stokes Equations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68
+
+
+XII Contents
+3.10 Energy Equation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 69 3.11 Equations of Motion for Arbitrary Coordinate Systems (Summary) . . . . . . . . . . . . . . 73 3.12 Equations of Motion for Cartesian Coordinates in Index Notation . . . . . . . . . . . . . . . 76 3.13 Equations of Motion in Different Coordinate Systems . . . . . . . 79
+4. General Properties of the Equations of Motion . . . . . . . . . . . 83 4.1 Similarity Laws . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 83 4.2 Similarity Laws for Flow with Buoyancy Forces (Mixed Forced and Natural Convection) . . . . . . . . . . . . . . . . . . . 86 4.3 Similarity Laws for Natural Convection . . . . . . . . . . . . . . . . . . . 90 4.4 Vorticity Transport Equation . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91 4.5 Limit of Very Small Reynolds Numbers . . . . . . . . . . . . . . . . . . . 93 4.6 Limit of Very Large Reynolds Numbers . . . . . . . . . . . . . . . . . . . 94 4.7 Mathematical Example of the Limit Re → ∞ . . . . . . . . . . . . . . 96 4.8 Non–Uniqueness of Solutions of the Navier–Stokes Equations . 99
+5. Exact Solutions of the Navier–Stokes Equations . . . . . . . . . . 101 5.1 Steady Plane Flows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101 5.1.1 Couette–Poiseuille Flows . . . . . . . . . . . . . . . . . . . . . . . . . . 101 5.1.2 Jeffery–Hamel Flows (Fully Developed Nozzle and Diffuser Flows) . . . . . . . . . 104 5.1.3 Plane Stagnation–Point Flow . . . . . . . . . . . . . . . . . . . . . . 110 5.1.4 Flow Past a Parabolic Body . . . . . . . . . . . . . . . . . . . . . . . 115 5.1.5 Flow Past a Circular Cylinder . . . . . . . . . . . . . . . . . . . . . 115 5.2 Steady Axisymmetric Flows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 116 5.2.1 Circular Pipe Flow (Hagen–Poiseuille Flow) . . . . . . . . . 116 5.2.2 Flow Between Two Concentric Rotating Cylinders . . . . 117 5.2.3 Axisymmetric Stagnation–Point Flow . . . . . . . . . . . . . . . 118 5.2.4 Flow at a Rotating Disk . . . . . . . . . . . . . . . . . . . . . . . . . . . 119 5.2.5 Axisymmetric Free Jet . . . . . . . . . . . . . . . . . . . . . . . . . . . . 124 5.3 Unsteady Plane Flows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126 5.3.1 Flow at a Wall Suddenly Set into Motion
+(First Stokes Problem) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 126 5.3.2 Flow at an Oscillating Wall
+(Second Stokes Problem) . . . . . . . . . . . . . . . . . . . . . . . . . . 129 5.3.3 Start–up of Couette Flow . . . . . . . . . . . . . . . . . . . . . . . . . 130 5.3.4 Unsteady Asymptotic Suction . . . . . . . . . . . . . . . . . . . . . . 131 5.3.5 Unsteady Plane Stagnation–Point Flow . . . . . . . . . . . . . 131 5.3.6 Oscillating Channel Flow . . . . . . . . . . . . . . . . . . . . . . . . . . 137 5.4 Unsteady Axisymmetric Flows . . . . . . . . . . . . . . . . . . . . . . . . . . . 139 5.4.1 Vortex Decay . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139 5.4.2 Unsteady Pipe Flow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 139 5.5 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 141
+
+
+Contents XIII
+Part II. Laminar Boundary Layers
+6. Boundary–Layer Equations in Plane Flow;
+Plate Boundary Layer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 145 6.1 Setting up the Boundary–Layer Equations . . . . . . . . . . . . . . . . . 145 6.2 Wall Friction, Separation and Displacement . . . . . . . . . . . . . . . . 150 6.3 Dimensional Representation of the Boundary–Layer Equations . . . . . . . . . . . . . . . . . . . . . . . . 152 6.4 Friction Drag . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 155 6.5 Plate Boundary Layer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 156
+7. General Properties and Exact Solutions of the Boundary–Layer Equations
+for Plane Flows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 165 7.1 Compatibility Condition at the Wall . . . . . . . . . . . . . . . . . . . . . . 166 7.2 Similar Solutions of the Boundary–Layer Equations . . . . . . . . . 167 7.2.1 Derivation of the Ordinary Differential Equation . . . . . 167 A Boundary Layers with Outer Flow . . . . . . . . . . . . . . . 169 B Boundary Layers Without Outer Flow . . . . . . . . . . . . 172 7.2.2 Wedge Flows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 172 7.2.3 Flow in a Convergent Channel . . . . . . . . . . . . . . . . . . . . . 174 7.2.4 Mixing Layer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 175 7.2.5 Moving Plate . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 177 7.2.6 Free Jet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 177 7.2.7 Wall Jet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 180 7.3 Coordinate Transformation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 182 7.3.1 Go ̈rtler Transformation . . . . . . . . . . . . . . . . . . . . . . . . . . . 182 7.3.2 v. Mises Transformation . . . . . . . . . . . . . . . . . . . . . . . . . . . 183 7.3.3 Crocco Transformation . . . . . . . . . . . . . . . . . . . . . . . . . . . . 184 7.4 Series Expansion of the Solutions . . . . . . . . . . . . . . . . . . . . . . . . . 184 7.4.1 Blasius Series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 184 7.4.2 Go ̈rtler Series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 186 7.5 Asymptotic Behaviour of Solutions Downstream . . . . . . . . . . . . 187 7.5.1 Wake Behind Bodies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 187 7.5.2 Boundary Layer at a Moving Wall . . . . . . . . . . . . . . . . . . 190 7.6 Integral Relations of the Boundary Layer . . . . . . . . . . . . . . . . . . 191 7.6.1 Momentum–Integral Equation . . . . . . . . . . . . . . . . . . . . . 191 7.6.2 Energy–Integral Equation . . . . . . . . . . . . . . . . . . . . . . . . . 192 7.6.3 Moment–of–Momentum Integral Equations . . . . . . . . . . 194
+8. Approximate Methods for Solving the Boundary–Layer Equations for Steady Plane Flows . . . . . . . . . . . . . . . . . . . . . . . . 195 8.1 Integral Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 196
+
+
+XIV Contents
+8.2 Stratford’s Separation Criterion . . . . . . . . . . . . . . . . . . . . . . . . . . 202 8.3 Comparison of the Approximate Solutions
+with Exact Solutions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 202 8.3.1 Retarded Stagnation–Point Flow . . . . . . . . . . . . . . . . . . . 202 8.3.2 Divergent Channel (Diffuser) . . . . . . . . . . . . . . . . . . . . . . 204 8.3.3 Circular Cylinder Flow . . . . . . . . . . . . . . . . . . . . . . . . . . . . 205 8.3.4 Symmetric Flow past a Joukowsky Airfoil . . . . . . . . . . . 207
+9. Thermal Boundary Layers
+to the Temperature Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 209 9.1 Boundary–Layer Equations for the Temperature Field . . . . . . . 209 9.2 Forced Convection for Constant Properties . . . . . . . . . . . . . . . . 211 9.3 Effect of the Prandtl Number . . . . . . . . . . . . . . . . . . . . . . . . . . . . 215 9.4 Similar Solutions of the Thermal Boundary Layer . . . . . . . . . . 218 9.5 Integral Methods for Computing the Heat Transfer . . . . . . . . . 223 9.6 Effect of Dissipation; Distribution of the Adiabatic Wall Temperature . . . . . . . . . . . . 226
+10. Thermal Boundary Layers with Coupling of the Velocity Field
+to the Temperature Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 231 10.1 Remark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 231 10.2 Boundary–Layer Equations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 231 10.3 Boundary Layers with Moderate Wall Heat Transfer (Without Gravitational Effects) . . . . . . . . . . . . . . . . . . . . . . . . . . 233 10.3.1 Perturbation Calculation . . . . . . . . . . . . . . . . . . . . . . . . . . 233 10.3.2 Property Ratio Method (Temperature Ratio Method) . 237 10.3.3 Reference Temperature Method . . . . . . . . . . . . . . . . . . . . 240 10.4 Compressible Boundary Layers (Without Gravitational Effects) . . . . . . . . . . . . . . . . . . . . . . . . . . 241 10.4.1 Physical Property Relations . . . . . . . . . . . . . . . . . . . . . . . 241 10.4.2 Simple Solutions of the Energy Equation . . . . . . . . . . . . 244 10.4.3 Transformations of the Boundary–Layer Equations . . . 246 10.4.4 Similar Solutions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 249 10.4.5 Integral Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 258 10.4.6 Boundary Layers in Hypersonic Flows . . . . . . . . . . . . . . . 263 10.5 Natural Convection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 265 10.5.1 Boundary–Layer Equations . . . . . . . . . . . . . . . . . . . . . . . . 265 10.5.2 Transformation of the Boundary–Layer Equations . . . . 270 10.5.3 Limit of Large Prandtl Numbers (Tw = const) . . . . . . . 271 10.5.4 Similar Solutions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 273 10.5.5 General Solutions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 277 10.5.6 Variable Physical Properties . . . . . . . . . . . . . . . . . . . . . . . 278 10.5.7 Effect of Dissipation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 280
+without Coupling of the Velocity Field
+
+
+Contents XV
+10.6 Indirect Natural Convection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 281 10.7 Mixed Convection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 284
+11. Boundary–Layer Control (Suction/Blowing) . . . . . . . . . . . . . . 291 11.1 Different Kinds of Boundary–Layer Control . . . . . . . . . . . . . . . . 291 11.2 Continuous Suction and Blowing . . . . . . . . . . . . . . . . . . . . . . . . . 295 11.2.1 Fundamentals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 295 11.2.2 Massive Suction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 297 11.2.3 Massive Blowing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 299 11.2.4 Similar Solutions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 302 11.2.5 General Solutions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 307 1. Plate Flow with Uniform Suction or Blowing . . . . . . 307 2. Airfoil . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 309 11.2.6 Natural Convection with Blowing and Suction . . . . . . . 310 11.3 Binary Boundary Layers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 311 11.3.1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 311 11.3.2 Basic Equations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 312 11.3.3 Analogy Between Heat and Mass Transfer . . . . . . . . . . . 316 11.3.4 Similar Solutions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 317
+12. Axisymmetric and Three–Dimensional Boundary Layers . . 321 12.1 Axisymmetric Boundary Layers . . . . . . . . . . . . . . . . . . . . . . . . . . 321 12.1.1 Boundary–Layer Equations . . . . . . . . . . . . . . . . . . . . . . . . 321 12.1.2 Mangler Transformation . . . . . . . . . . . . . . . . . . . . . . . . . . . 323 12.1.3 Boundary Layers on Non–Rotating Bodies of Revolution . . . . . . . . . . . . . . 324 12.1.4 Boundary Layers on Rotating Bodies of Revolution . . . 327 12.1.5 Free Jets and Wakes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 331 12.2 Three–Dimensional Boundary Layers . . . . . . . . . . . . . . . . . . . . . . 335 12.2.1 Boundary–Layer Equations . . . . . . . . . . . . . . . . . . . . . . . . 335 12.2.2 Boundary Layer at a Cylinder . . . . . . . . . . . . . . . . . . . . . 341 12.2.3 Boundary Layer at a Yawing Cylinder . . . . . . . . . . . . . . 342 12.2.4 Three–Dimensional Stagnation Point . . . . . . . . . . . . . . . . 344 12.2.5 Boundary Layers in Symmetry Planes . . . . . . . . . . . . . . . 345 12.2.6 General Configurations . . . . . . . . . . . . . . . . . . . . . . . . . . . . 345
+13. Unsteady Boundary Layers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 349 13.1 Fundamentals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 349 13.1.1 Remark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 349 13.1.2 Boundary–Layer Equations . . . . . . . . . . . . . . . . . . . . . . . . 350 13.1.3 Similar and Semi–Similar Solutions . . . . . . . . . . . . . . . . . 351 13.1.4 Solutions for Small Times (High Frequencies) . . . . . . . . 352 13.1.5 Separation of Unsteady Boundary Layers . . . . . . . . . . . . 353 13.1.6 Integral Relations and Integral Methods . . . . . . . . . . . . . 354 13.2 Unsteady Motion of Bodies in a Fluid at Rest . . . . . . . . . . . . . . 355
+
+
+XVI Contents
+13.2.1 Start–Up Processes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 355 13.2.2 Oscillation of Bodies in a Fluid at Rest . . . . . . . . . . . . . 362 13.3 Unsteady Boundary Layers in a Steady Basic Flow . . . . . . . . . 365 13.3.1 Periodic Outer Flow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 365 13.3.2 Steady Flow with a Weak Periodic Perturbation . . . . . . 367 13.3.3 Transition Between Two Slightly Different Steady
+Boundary Layers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 369 13.4 Compressible Unsteady Boundary Layers . . . . . . . . . . . . . . . . . . 370 13.4.1 Remark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 370 13.4.2 Boundary Layer Behind a Moving
+Normal Shock Wave . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 371 13.4.3 Flat Plate at Zero Incidence with Variable Free Stream Velocity and Wall Temperature . . . . . . . . . . . . . . . . . . . . 373
+14. Extensions to the Prandtl Boundary–Layer Theory . . . . . . . 377 14.1 Remark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 377 14.2 Higher Order Boundary–Layer Theory . . . . . . . . . . . . . . . . . . . . 379 14.3 Hypersonic Interaction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 389 14.4 Triple–Deck Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 392 14.5 Marginal Separation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 403 14.6 Massive Separation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 408
+Part III. Laminar–Turbulent Transition
+15. Onset of Turbulence (Stability Theory) . . . . . . . . . . . . . . . . . . . 415 15.1 Some Experimental Results on the Laminar–Turbulent Transition . . . . . . . . . . . . . . . . . . . . . 415 15.1.1 Transition in the Pipe Flow . . . . . . . . . . . . . . . . . . . . . . . . 415 15.1.2 Transition in the Boundary Layer . . . . . . . . . . . . . . . . . . 419 15.2 Fundamentals of Stability Theory . . . . . . . . . . . . . . . . . . . . . . . . 424 15.2.1 Remark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 424 15.2.2 Fundamentals of Primary Stability Theory . . . . . . . . . . 425 15.2.3 Orr–Sommerfeld Equation . . . . . . . . . . . . . . . . . . . . . . . . . 427 15.2.4 Curve of Neutral Stability and the Indifference Reynolds Number . . . . . . . . . . . . . . 434 a Plate Boundary Layer . . . . . . . . . . . . . . . . . . . . . . . . . . . 436 b Effect of Pressure Gradient . . . . . . . . . . . . . . . . . . . . . . 445 c Effect of Suction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 457 d Effect of Wall Heat Transfer . . . . . . . . . . . . . . . . . . . . . 460 e Effect of Compressibility . . . . . . . . . . . . . . . . . . . . . . . . 463 f Effect of Wall Roughness . . . . . . . . . . . . . . . . . . . . . . . . 467 g Further Effects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 472 15.3 Instability of the Boundary Layer for Three–Dimensional Perturbations . . . . . . . . . . . . . . . . . . . . . 473
+
+
+Contents XVII
+15.3.1 Remark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 473 15.3.2 Fundamentals of Secondary Stability Theory . . . . . . . . . 476 15.3.3 Boundary Layers at Curved Walls . . . . . . . . . . . . . . . . . . 481 15.3.4 Boundary Layer at a Rotating Disk . . . . . . . . . . . . . . . . . 485 15.3.5 Three–Dimensional Boundary Layers . . . . . . . . . . . . . . . 487 15.4 Local Perturbations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 493
+Part IV. Turbulent Boundary Layers
+16. Fundamentals of Turbulent Flows . . . . . . . . . . . . . . . . . . . . . . . . . 499 16.1 Remark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 499 16.2 Mean Motion and Fluctuations . . . . . . . . . . . . . . . . . . . . . . . . . . . 16.3 Basic Equations for the Mean Motion of Turbulent Flows . . . . 504 16.3.1 Continuity Equation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 504 16.3.2 Momentum Equations (Reynolds Equations) . . . . . . . . . 505 16.3.3 Equation for the Kinetic Energy of the Turbulent Fluctuations (k-Equation) . . . . . . . . . . 507 16.3.4 Thermal Energy Equation . . . . . . . . . . . . . . . . . . . . . . . . . 510 16.4 Closure Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+16.5 Description of the Turbulent Fluctuations . . . . . . . . . . . . . . . . . 512 16.5.1 Correlations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 512 16.5.2 Spectra and Eddies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 513 16.5.3 Turbulence of the Outer Flow . . . . . . . . . . . . . . . . . . . . . . 515 16.5.4 Edges of Turbulent Regions and Intermittence . . . . . . . 515 16.6 Boundary–Layer Equations for Plane Flows . . . . . . . . . . . . . . . . 516
+17. Internal Flows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 519 17.1 Couette Flow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 519 17.1.1 Two–Layer Structure of the Velocity Field and the Logarithmic Overlap Law . . . . . . . . . . . . . . . . . . 519 17.1.2 Universal Laws of the Wall . . . . . . . . . . . . . . . . . . . . . . . . 524 17.1.3 Friction Law . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 536 17.1.4 Turbulence Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 538 17.1.5 Heat Transfer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 541 17.2 Fully Developed Internal Flows (A = const) . . . . . . . . . . . . . . . . 543 17.2.1 Channel Flow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 543 17.2.2 Couette–Poiseuille Flows . . . . . . . . . . . . . . . . . . . . . . . . . . 544 17.2.3 Pipe Flow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 549 17.3 Slender–Channel Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 554
+18. Turbulent Boundary Layers
+to the Temperature Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 557 18.1 Turbulence Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 557
+without Coupling of the Velocity Field
+501
+511
+
+
+XVIII Contents
+18.1.1 Remark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 557 18.1.2 Algebraic Turbulence Models . . . . . . . . . . . . . . . . . . . . . . 559 18.1.3 Turbulent Energy Equation . . . . . . . . . . . . . . . . . . . . . . . . 560 18.1.4 Two–Equation Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . 562 18.1.5 Reynolds Stress Models . . . . . . . . . . . . . . . . . . . . . . . . . . . 565 18.1.6 Heat Transfer Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 568 18.1.7 Low–Reynolds–Number Models . . . . . . . . . . . . . . . . . . . . 570 18.1.8 Large–Eddy Simulation and Direct Numerical Simulation . . . . . . . . . . . . . . . . . . . 571 18.2 Attached Boundary Layers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 572 18.2.1 Layered Structure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 572 18.2.2 Boundary–Layer Equations Using
+the Defect Formulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . 574 18.2.3 Friction Law and Characterisitic Quantities
+of the Boundary Layer . . . . . . . . . . . . . . . . . . . . . . . . . . . . 577 18.2.4 Equilibrium Boundary Layers . . . . . . . . . . . . . . . . . . . . . . 580 18.2.5 Boundary Layer on a Plate at Zero Incidence . . . . . . . . 582 18.3 Boundary Layers with Separation . . . . . . . . . . . . . . . . . . . . . . . . . 589 18.3.1 Stratford Flow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 589 18.3.2 Quasi–Equilibrium Boundary Layers . . . . . . . . . . . . . . . . 591 18.4 Computation of Boundary Layers Using Integral Methods . . . 594 18.4.1 Direct Method . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 594 18.4.2 Inverse Method . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 597 18.5 Computation of Boundary Layers Using Field Methods . . . . . . 598 18.5.1 Attached Boundary Layers . . . . . . . . . . . . . . . . . . . . . . . . 598 18.5.2 Boundary Layers with Separation . . . . . . . . . . . . . . . . . . 601 18.5.3 Low–Reynolds–Number Turbulence Models . . . . . . . . . . 603 18.5.4 Additional Effects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 604 18.6 Computation of Thermal Boundary Layers . . . . . . . . . . . . . . . . 607 18.6.1 Fundamentals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 607 18.6.2 Computation of Thermal Boundary Layers
+Using Field Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 609
+19. Turbulent Boundary Layers with Coupling of the Velocity Field
+to the Temperature Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 611 19.1 Fundamental Equations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 611 19.1.1 Time Averaging for Variable Density . . . . . . . . . . . . . . . . 611 19.1.2 Boundary–Layer Equations . . . . . . . . . . . . . . . . . . . . . . . . 613 19.2 Compressible Turbulent Boundary Layers . . . . . . . . . . . . . . . . . 617 19.2.1 Temperature Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 617 19.2.2 Overlap Law . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 619 19.2.3 Skin–Friction Coefficient and Nusselt Number . . . . . . . . 621 19.2.4 Integral Methods for Adiabatic Walls . . . . . . . . . . . . . . . 623
+
+
+Contents XIX
+19.2.5 Field Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 625 19.2.6 Shock–Boundary–Layer Interaction . . . . . . . . . . . . . . . . . 625 19.3 Natural Convection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 627
+20. Axisymmetric and Three–Dimensional
+Turbulent Boundary Layers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 631 20.1 Axisymmetric Boundary Layers . . . . . . . . . . . . . . . . . . . . . . . . . . 631 20.1.1 Boundary–Layer Equations . . . . . . . . . . . . . . . . . . . . . . . . 631 20.1.2 Boundary Layers without Body Rotation . . . . . . . . . . . 632 20.1.3 Boundary Layers with Body Rotation . . . . . . . . . . . . . . . 635 20.2 Three–Dimensional Boundary Layers . . . . . . . . . . . . . . . . . . . . . . 637 20.2.1 Boundary–Layer Equations . . . . . . . . . . . . . . . . . . . . . . . . 637 20.2.2 Computation Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . 641 20.2.3 Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 643
+21. Unsteady Turbulent Boundary Layers . . . . . . . . . . . . . . . . . . . . 645 21.1 Averaging and Boundary–Layer Equations . . . . . . . . . . . . . . . . . 645 21.2 Computation Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 648 21.3 Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 649
+22. Turbulent Free Shear Flows . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 653 22.1 Remark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 653 22.2 Equations for Plane Free Shear Layers . . . . . . . . . . . . . . . . . . . . 655 22.3 Plane Free Jet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 659 22.3.1 Global Balances . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 659 22.3.2 Far Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 660 22.3.3 Near Field . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 665 22.3.4 Wall Effects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 665 22.4 Mixing Layer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 667 22.5 Plane Wake . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 669 22.6 Axisymmetric Free Shear Flows . . . . . . . . . . . . . . . . . . . . . . . . . . 671 22.6.1 Basic Equations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 671 22.6.2 Free Jet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 672 22.6.3 Wake . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 673 22.7 Buoyant Jets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 675 22.7.1 Plane Buoyant Jet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 675 22.7.2 Axisymmetric Buoyant Jet . . . . . . . . . . . . . . . . . . . . . . . . 676 22.8 Plane Wall Jet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 677
+.
+
+
+XX Contents
+Part V. Numerical Methods in Boundary–Layer Theory
+23. Numerical Integration of the Boundary–Layer Equations . 683 23.1 Laminar Boundary Layers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 683 23.1.1 Remark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 683 23.1.2 Note on Boundary–Layer Transformations . . . . . . . . . . . 684 23.1.3 Explicit and Implicit Discretisation . . . . . . . . . . . . . . . . . 685 23.1.4 Solution of the Implicit Difference Equations . . . . . . . . . 689 23.1.5 Integration of the Continuity Equation . . . . . . . . . . . . . . 691 23.1.6 Boundary–Layer Edge and Wall Shear Stress . . . . . . . . 691 23.1.7 Integration of the Transformed Boundary–Layer Equations Using the Box Scheme . . . . . . . . . . . . . . . . . . . 692 23.2 Turbulent Boundary Layers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 695 23.2.1 Method of Wall Functions . . . . . . . . . . . . . . . . . . . . . . . . . 695 23.2.2 Low–Reynolds–Number Turbulence Models . . . . . . . . . . 700 23.3 Unsteady Boundary Layers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 701 23.4 Steady Three–Dimensional Boundary Layers . . . . . . . . . . . . . . . 703
+List of Frequently Used Symbols . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 709
+Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 799
+References and Index of Authors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 717
+
+
+Introduction
+Short historical review
+At the end of the 19th century, fluid mechanics had split into two different directions which hardly had anything more in common. On one side was the science of theoretical hydrodynamics, emanating from Euler’s equations of motion and which had been developed to great perfection. However this had very little practical importance, since the results of this so–called classical hydrodynamics were in glaring contradiction to everyday experience. This was particularly true in the very important case of pressure loss in tubes and channels, as well as that of the drag experienced by a body moved through a fluid. For this reason, engineers, on the other side, confronted by the practical problems of fluid mechanics, developed their own strongly empirical science, hydraulics. This relied upon a large amount of experimental data and differed greatly from theoretical hydrodynamics in both methods and goals. It is the great achievement of Ludwig Prandtl which, at the beginning of this century, set forth the way in which these two diverging directions of fluid mechanics could be unified. He achieved a high degree of correlation between theory and experiment, which, in the first half of this century, has led to unimagined successes in modern fluid mechanics. It was already known then that the great discrepancy between the results in classical hydrodynamics and reality was, in many cases, due to neglecting the viscosity effects in the theory. Now the complete equations of motion of viscous flows (the Navier Stokes equations) had been known for some time. However, due to the great mathematical difficulty of these equations, no approach had been found to the mathematical treatment of viscous flows (except in a few special cases). For technically important fluids such as water and air, the viscosity is very small, and thus the resulting viscous forces are small compared to the remaining forces (gravitational force, pressure force). For this reason it took a long time to see why the viscous forces ignored in the classical theory should have an important effect on the motion of the flow. In his lecture on “U ̈ ber Fl ̈ussigkeitbewegung bei sehr kleiner Reibung” (On Fluid Motion with Very Small Friction) at the Heidelberg mathematical congress in 1904, L. Prandtl (1904) showed how a theoretical treatment could be used on viscous flows in cases of great practical importance. Using theoretical considerations together with some simple experiments, Prandtl
+
+
+XXII Introduction
+showed that the flow past a body can be divided into two regions: a very thin layer close to the body (boundary layer) where the viscosity is important, and the remaining region outside this layer where the viscosity can be neglected. With the help of this concept, not only was a physically convincing explanation of the importance of the viscosity in the drag problem given, but simultaneously, by hugely reducing the mathematical difficulty, a path was set for the theoretical treatment of viscous flows. Prandtl supported his theoretical work by some very simple experiments in a small, self–built water channel, and in doing this reinitiated the lost connection between theory and practice. The theory of the Prandtl boundary layer or the frictional layer has proved to be exceptionally useful and has given considerable stimulation to research into fluid mechanics since the beginning of this century. Under the influence of a thriving flight technology, the new theory developed quickly and soon became, along with other important advances – airfoil theory and gas dynamics – a keystone of modern fluid mechanics. One of the most important applications of boundary–layer theory is the calculation of the friction drag of bodies in a flow, e.g. the drag of a flat plate at zero incidence, the friction drag of a ship, an airfoil, the body of an airplane, or a turbine blade. One particular property of the boundary layer is that, under certain conditions, a reverse flow can occur directly at the wall. A separation of the boundary layer from the body and the formation of large or small eddies at the back of the body can then occur. This results in a great change in the pressure distribution at the back of the body, leading to the form or pressure drag of the body. This can also be calculated using boundary–layer theory. Boundary–layer theory answers the important question of what shape a body must have in order to avoid this detrimental separation. It is not only in flow past a body where separation can occur, but also in flow through a duct. In this way boundary–layer theory can be used to describe the flow through blade cascades in compressors and turbines, as well as through diffusers and nozzles. The processes involved in maximum lift of an airfoil, where separation is also important, can only be understood using boundary–layer theory. The boundary layer is also important for heat transfer between a body and the fluid around it. Initially boundary–layer theory was developed mainly for the laminar flow of an incompressible fluid, where Stokes law of friction could be used as an ansatz for the viscous forces. This area was later researched in very many pieces of work, so that today it can be considered to be fully understood. Later the theory was extended to the practically important turbulent incompressible boundary–layer flows. Around 1890, O. Reynolds (1894) had already introduced the fundamentally important concept of apparent turbulent stresses, but this did not yet permit the theoretical treatment of turbulent flows. The introduction of the concept of the Prandtl mixing length, cf. L. Prandtl (1925), contributed considerable advances and, together with systematic experiments, allowed turbulent flows to be treated theoretically
+
+
+Introduction XXIII
+with the help of boundary–layer theory. Even today a rational theory of fully developed turbulent flows remains to be found. Thanks to the great increase of velocities in flight technology, boundary layers in compressible flows were subsequently also thoroughly examined. As well as the boundary layer in the velocity field, a thermal boundary layer also forms; this is of great importance for the heat transfer between the flow and the body. Because of internal friction (dissipation) at high Mach numbers, the body surface heats up greatly. This causes many problems, particularly in flight technology and satellite flights (“thermal barrier”). The transition from laminar to turbulent flow, important for all of fluid mechanics, was first examined in pipe flow at the end of the last century by O. Reynolds (1883). Using the flow about a sphere, in 1914 Prandtl was able to show experimentally that the boundary layer also can be both laminar or turbulent and that the process of separation and thus the drag problem are controlled by this laminar–turbulent transition, cf. L. Prandtl (1914) The theoretical investigations into this transition assume Reynolds’ idea of the instability of the laminar flow. This was treated by Prandtl in 1921. After some futile attempts, W. Tollmien (1929) and H. Schlichting (1933) were able to theoretically calculate the indifference Reynolds number for the flat plate at zero incidence. However it took more than ten years before the theory could be confirmed by careful experiments by H.L. Dryden (19461948) and his coworkers. The effect of other parameters on the transition (pressure gradient, suction, Mach number, heat transfer) were clarified using the stability theory of the boundary layer. This theory has found important application with, among other things, airfoils with very low drag (laminar airfoils). An important characteristic of modern research into fluid mechanics in general and more specifically into the branch of boundary–layer theory is the close connection between theory and experiment. The most crucial advances have been achieved through a few fundamental experiments together with theoretical considerations. Many years ago, A. Betz (1949) produced a review of the development of boundary–layer theory, with particular emphasis on the mutual fructification of theory and experiment. Research into boundary layers, inspired by Prandtl from 1904, were, in the first 20 years up until Prandtl’s Wilbur Wright memorial lecture at the Royal Aeronautical Society in London, (L. Prandtl (1927)) almost exclusively confined to Prandtl’s institute in Go ̈ttingen. It is only since 1930 that other researchers have been involved in the further expansion of boundary–layer theory, initially in England and the USA. Today boundary–layer theory has spread over the whole world; together with other branches it forms one of the most important pillars of fluid mechanics. In the mid–fifties, mathematical methods into singular perturbation theory were being systematically developed, cf. S. Kaplun (1954), S. Kaplun; P.A. Lagerstrom (1957), M. Van Dyke (1964b), also W. Schneider (1978).
+
+
+XXIV Introduction
+It became clear that the boundary–layer theory heuristically developed by Prandtl was a classic example of the solution of a singular perturbation problem. Thus boundary–layer theory is a rational asymptotic theory of the solution of the Navier–Stokes equations for high Reynolds numbers, cf. K. Gersten (2000). This opened the possibility of a systematic development to higher order boundary–layer theory, cf. M. Van Dyke (1969), K. Gersten (1972), K. Stewartson (1974), K. Gersten; J.F. Gross (1976), V.V. Sychev et al. (1998), I.J. Sobey (2000). The asymptotic methods which were first developed for laminar flows were then, at the start of the seventies, carried over to turbulent flows, cf. K.S. Yajnik (1970), G.L. Mellor (1972). Reviews of asymptotic theory of turbulent flows are to be found in K. Gersten (1987), K. Gersten (1989c), A. Kluwick (1989a), as well as W. Schneider (1991). K. Gersten; H. Herwig (1992) have presented a systematic application of asymptotic methods (regular and singular perturbation methods) to the theory of viscous flows. The book by P.A. Libby (1998) also gives preferential treatment to asymptotic methods. Most of the characteristics of the asymptotic theory for high Reynolds-number flows can already be found in Prandtl’s work, cf. K. Gersten (2000). In turbulence modelling, the mixing length hypothesis developed by L. Prandtl (1925) led to an algebraic turbulence model. Twenty years later, L. Prandtl (1945) showed how transport equations for turbulent quantities such as the kinetic energy of the random motion, the dissipation and the Reynolds shear stress could be applied to improve to turbulence models. Calculation methods for turbulent boundary layers with highly refined turbulence models have been developed by, for example, P. Bradshaw et al. (1967), W.P. Jones; B.E. Launder (1973), K. Hanjalic ́; B.E. Launder (1976), as well as J.C. Rotta (1973). Overviews on turbulence modelling are presented by W.C. Reynolds (1976) and V.C. Patel et al. (1985). In two extremely noteworthy events at Stanford University in the years 1968 and 1980/81, the existing methods for calculating boundary layers were compared and examined in specially chosen experiments; see the reports by S.J. Kline et al. (1968) and S.J. Kline et al. (1981). A review on Reynolds number effects in wall-bounded turbulent flows by M. Gad-el-Hak; P.R. Bandyopadhyay (1994) is also worth mentioning. The following tendency is emerging from the rapid developments in the area of supercomputing: the future will consist more of direct numerical solutions of the Navier–Stokes equations without any simplifications, and also of the computation of turbulent flows using direct numerical simulation (DNS), i.e. without using a turbulence model or by modelling only high frequency turbulent fluctuations (“large–eddy simulations”), cf. D.R. Chapman (1979). However numerical methods in computing flows at high Reynolds numbers only become efficient if the particular layered structure of the flow, as given by the asymptotic theory, is taken into account, as occurs if a suitable grid
+
+
+Introduction XXV
+is used for computation. Boundary–layer theory will therefore retain its fundamental place in the calculation of high Reynolds number flows. The first summary of boundary–layer theory is to be found in two short articles by W. Tollmien (1931) in the Handbuch der Experimentalphysik. Some years later Prandtl’s comprehensive contribution appeared in Aerodynamic Theory, edited by W.F. Durand, L. Prandtl (1935). In the six decades since then, the extent of this research area has become extraordinarily large. cf. H. Schlichting (1960) and also I. Tani (1977), A.D. Young (1989), K. Gersten (1989a), A. Kluwick (1998) and T. Cebeci; J. Cousteix (2005). According to a review by H.L. Dryden (1955), about 100 articles appeared in the year 1955, and 45 years later this number has grown to about 800 per year.
+In spite of these developments concerning the numerical solutions of the full Navier-Stokes equations it can also be noticed that in recent years the extensions of boundary layer theory received increasing attention. Several textbooks have been published recently. The Interactive Boundary Layer Theory by I.J. Sobey (2000) and the Asymptotic Theory of Separated Flows by V.V. Sychev et al. (1998) refer to laminar flows. The books by E.H. Hirschel et al. (2014), T. Cebeci (1999, 2004), M. Hallbäck et al. (Eds.) (1996) and T.K. Sengupta (2012) are
+totic methods for high Reynolds number flows will be discussed in the appropriate Chapters 14 and 18.
+About the year 2000 the numerical methods in fluid mechanics had reached a standard that made it possible to solve the full Navier-Stokes equations. So-called Navier-Stokes/RANS methods (Reynolds Averaged Navier-Stokes) were in wide use at universities, research establishments and industry. Reynolds-stress models came into use, which in principle take into account non-isotropy of turbulence. Turbulence flow separation still remains to be a major issue. Maybe hybrid RANS-LES methods (LargeEddy Simulation, LES) are the ultimate industrial methods for the simulation of flow fields past realistic vehicle configurations, see E.H. Hirschel et al. (2014).
+concentrated on turbulent and transitional flows. The state of research can also be found in H. Steinrück (Ed.) (2010), A. Kluwick (Ed.) (1998) and G.E.A. Meier et al. (Eds.) (2006). These new developments of the asymp
+
+
+Abstract
+The nonlinear partial differential equations describing all general flow fields are called Navier-Stokes equations. In non-dimensional form these equations depend on the Reynolds number, which determines the effect of the viscosity in the flow. The higher the Reynolds number, the lower are the viscosity effects on the flow. The boundary-layer theory is the asymptotic theory of the Navier-Stokes equations for high Reynolds numbers. This theory has been developed by Ludwig Prandtl (1904). Although this theory is now more than 110 years old, it is nowadays still being applied in industry and research, because many important fields of fluid mechanics (i.e. aeronautics, ship hydrodynamics, automobile aerodynamics) refer to flows at high Reynolds numbers. The book has 23 Chapters and is divided into 5 Parts:
+I Fundamentals of Viscous Flows II Laminar Boundary Layers III Laminar-Turbulent Transition IV Turbulent Boundary Layers V Numerical Methods in Boundary Layer Theory
+The boundary-layer theory is a perturbation method, because it starts from the limiting solution for infinitely large Reynolds number (solution for inviscid fluid) and is then perturbed by viscosity effects. Since the inviscid flow solution does not satisfy the no-slip condition at the wall, boundary-layer theory is called a singular perturbation method. For high Reynolds numbers the entire flow field consists of two different regions. In the larger of these two regions the flow is inviscid. The second region is a very narrow layer close to the wall called the boundary layer. The complete solution can be found by the method of matched asymptotic expansions as long as the boundary layer keeps attached to the wall. When the boundary layer leads to separation, the limiting invisced solution (as starting solution) is generally not known a priori. In this case a dimensionless length parameter (for instance: a step height compared to a flat plate) must be taken into the analysis. The two dimensionless parameters (geometrical parameter and Reynolds number) lead to a three-layer structure of the resulting flow field called
+
+
+triple deck theory or asymptotic interaction theory. Within this theory boundary layers with separation and reattachment can be calculated without any singularities (Chapter 14.4). Where separation occurs in a flow, the limiting solution can often be chosen to be that flow where the geometry is changed just so that there is no separation (marginal separation: laminar: Chapter 14.5; turbulent: Chapter 18.5.2).
+XXVIII Abstract
+
+
+Part I
+Fundamentals of Viscous Flows
+
+
+1. Some Features of Viscous Flows
+1.1 Real and Ideal Fluids
+Theoretical investigations into fluid mechanics in the last century were mainly based on the ideal fluid, i.e. a fluid which is inviscid and incompressible. It is only since this century that the effects of viscosity and compressibility have been taken into account in any great way. In the flow of inviscid fluids, no tangential forces (shear stresses) exist between adjacent layers; only normal forces (pressures) do. This is equivalent to saying that an ideal fluid does not oppose a change in its shape with any internal resistance. The theory of flows of ideal fluids is mathematically very highly developed and indeed in many cases gives a satisfactory description of real flows, as for example, in the cases of wave motion and the formation of liquid jets. On the other hand, the theory of ideal fluids is useless when faced with the problem of calculating the drag of a body. It predicts that a body moving subsonically and uniformly through an infinitely extended fluid will experience no drag (D’Alembert’s paradox). This unacceptable result of the theory of ideal fluids is due to the fact that in a real fluid, in addition to the normal forces, tangential forces also occur both between layers in the fluid and between the fluid and the walls. These tangential or friction forces of real fluids are connected to a physical property called the viscosity of the fluid.
+In the ideal fluid, there is a difference in the tangential velocities on the boundary between a solid body and the fluid, that is, the fluid slips along the side of the body. This is due to the absence of tangential forces. In a real fluid, on the other hand, because the fluid adheres to a solid wall, tangential forces do act. The presence of tangential stress (shear stress) and the no–slip condition produces the essential difference between ideal and real fluids. Some particularly important fluids in practice, such as water and air, have a very low viscosity. In many cases the flows of such very low friction fluids are like the flows of ideal fluids, because in general the tangential forces are very small. In the theory of ideal fluids, the viscosity is ignored because by doing this such considerable simplifications of the equations of motion are reached that an extended mathematical theory is possible. However it is important to note that the no–slip condition does hold good even for very low viscosity fluids.
+© Springer-Verlag Berlin Heidelberg 2017 H. Schlichting (Deceased) and K. Gersten, Boundary-Layer Theory, DOI 10.1007/978-3-662-52919-5_1
+3
+
+
+4 1. Some Features of Viscous Flows
+In some cases this no–slip condition leads to great discrepancies between the laws of motion for real and ideal fluids. In particular, the great difference in the drag laws between real and ideal fluids mentioned above originates from the no–slip condition. This book is concerned with the laws of motion of low viscosity fluids because these are of great importance in practice. It will become clear how the behaviour of real fluids, sometimes consistent with the behaviour of ideal fluids and sometimes utterly different, can be explained.
+1.2 Viscosity
+Fig. 1.1. Velocity distribution of a viscous fluid between two parallel flat walls (Couette flow)
+The nature of viscosity of a fluid can be understood most easily by the following experiment. Consider the flow between two long parallel plane plates, one of which is at rest while the other moves with constant velocity U in its own plane. The distance between the plates is h (Fig. 1.1). We assume that the pressure in the entire fluid is constant. From experiment it is seen that the fluid adheres to both plates so that the velocity at the lower plate is zero, while at the upper plate the fluid moves with velocity U . In addition, we assume the simplest case (Newtonian fluid, constant temperature), i.e. there is a linear velocity distribution between the plates. Therefore the velocity is proportional to the distance y from the lower plate, and we have
+u(y) = y
+h U . (1.1)
+In order to maintain the state of the motion, a tangential force in the direction of motion must act on the upper plate. This keeps the friction forces of the fluid in equilibrium. According to experimental results, this force (force per unit surface area of the plate = shear stress τ ) is proportional to U/h. In the general case, this can be replaced by du/dy. The constant of proportionality between τ and du/dy, which we will denote by μ1, depends on the nature of the fluid, i.e. it is a physical property of the fluid. It is very small for socalled mildly viscous fluids like water, alcohol and air, and is very large for very viscous fluids like oil or glycerine.
+1 According to DIN norm 1342 (viscosity of Newtonian fluids), the viscosity is denoted η. Since η is used here to denote a dimensionless coordinate, this book will differ from the DIN norm and denote the viscosity as μ.
+
+
+1.2 Viscosity 5
+Therefore, we have the elementary law of fluid friction in the form
+τ = μ du
+dy . (1.2)
+The value μ is a physical property of the fluid which is strongly dependent on the temperature and is called the viscosity of the fluid. The friction law given by Eq. (1.2) is called Newton’s law of friction. Equation (1.2) can be interpreted as the defining equation for the viscosity. However it must be noted that the motion discussed here is a very simple special case. The flow in Fig. 1.1 is also called simple shear flow or Couette flow. The generalisation of this simple friction law yields Stokes law of friction (cf. Chap. 3). The physical unit of viscosity can be read straight off Eq. (1.2)1. The shear stress has the units kg/m s2 or N/m2 and the velocity gradient du/dy the units s−1. Therefore μ has the units
+[μ] = kg
+ms = Ns
+m2 = Pa s .
+In all flows where friction forces act together with inertial forces, there is considerable importance attached to the ratio formed by the viscosity μ and the density , denoted the kinematic viscosity2 ν:
+ν = μ [ν] = m2
+s . (1.3)
+Fluids where there is a nonlinear relation between the shear stress τ and the velocity gradient du/dy are called non–Newtonian fluids. Since all gases and many technically important liquids, e.g. water, demonstrate Newtonian behaviour (i.e. Eq. (1.2) holds), we will consider only Newtonian fluids in this book. As already stated, the viscosity is a physical property. Since it establishes the momentum transport perpendicular to the main flow direction, viscosity is also called a transport property of the fluid. There are also corresponding physical properties of the fluid for heat and mass transport, and these will be discussed in Sects. 3.10 and 3.11. The viscosity is in general a function of the temperature and pressure, although the temperature dependence is dominant. As the temperature increases, the viscosity of gases generally increases whereas that of liquids decreases. Numerical values for the viscosity of various materials are given in Sect. 3.11.
+1 The SI international system of units is used, i.e. the meter (m), the second (s), the kilogram (kg) for mass, the Newton (N) for force and the Pascal (Pa) for pressure. We have 1Pa = 1N/m2 = 1kg/m s2. A legal unit of pressure is still 1bar = 105Pa. The common system of measurement in the past was 1kp = 9.80665 N and 1at = 0.980665 bar 2 Another unit for the viscosity is the Poise P = 0.1N s/m2. The kinematic viscosity is also measured in Stokes S = 10−4m2/s.
+
+
+6 1. Some Features of Viscous Flows
+1.3 Reynolds Number
+We now have to deal with the fundamentally important question of when flows with the same flow direction past two geometrically similar bodies are geometrically similar to one another, i.e. when there is a geometrically similar development of the streamlines. Such flows with geometrically similar boundaries and streamline portraits are called mechanically similar flows. In order that the flows past two geometrically similar bodies (e.g. past two spheres) are mechanically similar for different fluids, different velocities and different body sizes, we clearly need to satisfy the condition that the forces acting on volume elements situated in similar positions are in the same ratio to each other. The following forces generally act on a volume element: friction forces (proportional to the viscosity μ), inertial forces (proportional to the density ), pressure forces and volume forces (e.g. gravitational force). In what follows we shall consider only the ratio of the inertial forces to the friction forces. For mechanically similar flows this must be equal for similarly positioned volume elements. For motion which is mainly in the x direction, the inertial force per unit volume is du/dt, where u is the velocity component in the x direction, and d/dt is the substantial derivative. For steady flow this can also be written as ∂u/∂x · dx/dt = u ∂u/∂x, where ∂u/∂x is the change in velocity with position. The inertial force per unit volume is therefore u ∂u/∂x. An expression for the friction force can easily be derived from Newton’s law of friction Eq. (1.2). For a volume element whose x direction is in the direction
+of motion, Fig. 1.2 gives rise to the following expression for the shear forces:
+(
+τ + ∂τ
+∂y dy
+)
+dx dz − τ dx dz = ∂τ
+∂y dx dy dz .
+The friction force per unit volume is thus ∂τ /∂y, which, according to Eq. (1.2), is equal to μ ∂2u/∂y2.
+Fig. 1.2. Friction forces on a volume element
+In this way we reach the condition of mechanical similarity, that the ratio of inertial to friction forces must be the same at similarly situated points:
+inertial force
+friction force = u ∂u/∂x
+μ ∂2u/∂y2 = const.
+We shall now consider how these forces change as the characteristic quantities of the flow change. These are the density , the viscosity μ, a characteristic
+
+
+1.3 Reynolds Number 7
+velocity such as the free stream velocity V and a characteristic length dimension of the body such as the sphere’s diameter d. The velocity at any point in the flow field u is proportional to the free stream velocity V , the velocity gradient ∂u/∂x to V /d and similarly ∂2u/∂y2 to V /d2. Thus the ratio of inertial force to friction force becomes
+inertial force
+friction force = u ∂u/∂x
+μ ∂2u/∂y2 ∼ V 2/d
+μV /d2 = V d
+μ.
+Since the constant of proportionality must be equal at similarly positioned points, the mechanical similarity of the flows is satisfied when the quantity V d/μ has the same value for both flows. Using μ/ = ν this dimensionless number can be written in the form V d/ν. It is called the Reynolds number Re. Therefore mechanical similarity of the flows exists if the Reynolds number
+Re = V d
+μ = Vd
+ν (1.4)
+is equal for both flows. This relation was discovered by O. Reynolds (1883) while investigating flows in pipes and is named after him as the similarity principle with respect to the Reynolds number.
+When the different quantities are replaced by their units, the dimensions of the Reynolds number can be seen immediately:
+[ ] = kg
+m3 , [V ] = m
+s , [d] = m, [μ] = kg
+ms . We have
+[ Vd μ
+]
+= kg
+m3 · m s · m · ms
+kg = 1 ,
+and thus the Reynolds number is dimensionless.
+Dimensional considerations. Instead of starting off from the mechanical similarity of flows, the similarity principle with respect to the Reynolds number can be derived from dimensional considerations. We begin with the principle that all physical quantities can be expressed in a form which is not dependent on the chosen system of units. In the case at hand, the relevant quantities are the free stream velocity V , a characteristic length of the body d, the density and the viscosity μ. Using dimensional considerations we can pose the question: is there a combination of these four quantities in the form
+V αdβ γ μδ
+which is dimensionless? If K is the symbol for force, L the symbol for length and T that for time, we obtain a dimensionless combination of the above quantities when
+V αdβ γ μδ = K0L0T0 .
+
+
+8 1. Some Features of Viscous Flows
+Without loss of generality, we can choose one of the four numbers α, β, γ, δ to be equal to 1, since any power of a dimensionless quantity is also dimensionless. If we choose α = 1 we get
+V αdβ γ μδ = L
+T Lβ
+( KT2
+L4
+)γ ( KT
+L2
+)δ
+= K0L0T0 .
+By setting the exponents of L, T, K equal left and right we get the three equations:
+K: γ+δ=0
+L : 1 + β − 4γ − 2δ = 0
+T : −1 + 2γ + δ = 0 .
+The solution is
+β = 1, γ = 1, δ = −1 .
+Therefore the only possible dimensionless combination of V, d, , μ is the ratio
+Vd
+μ = Re .
+Dimensionless coefficients. These dimensional considerations can be extended even further when we look at the velocity field and the forces (normal forces and tangential forces) of flows with geometrically similar boundaries but different Reynolds numbers. The position of a point close to the geometrically similar body is given by the spatial coordinates x, y, z; the dimensionless spatial coordinates are then x/d, y/d, z/d. The velocity components u, v, w are made dimensionless with the free stream velocity V and therefore the dimensionless velocities are u/V, . . . In addition the normal and tangential stresses p and τ can usefully be made dimensionless with twice the stagnation pressure V 2, leading to the dimensionless stresses p/ V 2 and τ / V 2. The law of mechanical similarity discussed above can therefore be stated as follows: for two geometrically similar systems with the same Reynolds number, the dimensionless quantities u/V, . . . , p/ V 2 and τ / V 2 are only dependent on the dimensionless spatial coordinates x/d, y/d, z/d. If the two systems are not mechanically similar but only geometrically similar, the above dimensionless quantities also depend on the quantities V, d, , μ of both systems. From the principle that physical laws are independent of systems of units, it follows that the dimensionless quantities u/V, . . . , p/ V 2, τ / V 2 can only be dependent on a dimensionless combination of V, d, , μ. However the only dimensionless combination of these four quantities is the Reynolds number Re = V d /μ. This leads us to the result that, for two geometrically similar systems whose Reynolds number is different, the dimensionless quantities of the flow field are only dependent on the dimensionless spatial coordinates x/d, y/d, z/d and the Reynolds number Re. These dimensional considerations are important in discussing the total force which acts on the body by the fluid flowing past it. This total force
+
+
+1.3 Reynolds Number 9
+consists of the normal pressures and the shear stresses acting on the surface of the body. If F is a component of the total force in any given direction, we can form a dimensionless force coefficient of the form F/d2 V 2. Instead of choosing the area d2 it is usual to choose another characteristic surface S of the body, e.g. the face of the body in the free stream direction, which in the case of the sphere is π d2/4. The dimensionless force coefficient is therefore F/S V 2. Using the above considerations, we see that this dimensionless force coefficient, which represents the integral of p/ V 2 and τ / V 2 over the surface of the body, can, in the case of geometrically similar systems, only depend on the combination V, d, , μ, and thus on the Reynolds number. The component of the resulting force parallel to the unperturbed free stream direction is denoted the drag D and the component perpendicular to the free stream direction is called the lift L. If, instead of choosing V 2 as the reference value, we choose the stagnation pressure V 2/2, we find the dimensionless coefficients for the lift and the drag to be
+cL = L
+2 V 2S and cD = D
+2 V 2S . (1.5)
+We are led to this result: in the case of geometrically similar systems, i.e. geometrically similar bodies which have the same orientation to the free stream direction, the dimensionless lift and drag coefficients are only dependent on the Reynolds number Re:
+cL = f1(Re); cD = f2(Re) . (1.6)
+At this point we emphasise that these important conclusions which have been drawn from the similarity principle with respect to the Reynolds number in this simple form are only valid as long as gravitational forces and elastic forces (in the case of compressible fluids) are not taken into account. Otherwise additional dimensionless coefficients have to be included in the relations. For example, in flows of liquids with a free surface, where the gravitational force is important, the dimensionless Froude number appears:
+Fr = √Vgd . (1.7)
+Correspondingly, in the case of high velocity flows, where additional elastic forces occur because of the compressibility of the fluid, the Mach number
+Ma = V
+c , (1.8)
+where c is the speed of sound, is an important additional dimensionless coefficient. There is great importance for all of theoretical and experimental fluid mechanics attached to the similarity law given by Eq. (1.6). First of all, the dimensionless coefficients cL, cD and Re are independent of the system of units used. Calculating the functions f1(Re) and f2(Re) is, in many cases, impossible theoretically, and we have to turn to experiments to determine
+
+
+10 1. Some Features of Viscous Flows
+them. If we wished, for example, to experimentally determine the drag coefficient cD of a body, such as a sphere, without knowing the similarity principle with respect to the Reynolds number, we would have four independent parameters V, d, , μ, leading to an extraordinarily large number of measurements required. But by taking note of the similarity principle with respect to the Reynolds number we find that the dimensionless coefficients of spheres of different diameters d, in flows of different velocities V , in different flowing media with values and μ are ultimately only dependent on the one variable Re. The way in which Reynolds’ similarity law has been confirmed by experiment is shown in Fig. 1.3, where the dependence of the drag coefficient of a flat plate at zero incidence on the Reynolds number is depicted. The
+Fig. 1.3. Dependence of drag coefficients of flat smooth plates at zero incidence on the Reynolds number (friction drag of one plate side). cD given in Eq. (1.5), S = l · b, l: plate length, b: plate width measurements: ◦ different authors, cf. H. Schlichting (1982), p. 653 Z. Janour (1951) K.E. Schoenherr (1932) theory: - - - - - laminar asymptote, from Eq. ( 2.10) (Blasius) turbulent asymptote, from Eq. ( 2.14) - · - · - · asymptotic development for laminar flow, from Eq. ( 14.62) numerical: solution of Navier–Stokes equations by S.C.R. Dennis, cf. A.E.P. Veldman (1976)
+
+
+1.3 Reynolds Number 11
+drag coefficients measured for plates of quite different lengths all fit very well along one curve. The dimensionless coefficients cL and cD introduced in Eq. (1.5) are related to flows past bodies (e.g. airfoils). But internal flows (flows through pipes, diffusers, etc.) are also characterised by dimensionless coefficients. For example, in the case of flows through circular pipes, where x is the coordinate in the flow direction, the pressure gradient dp/dx is characterised by the dimensionless pipe friction factor
+λ=− d
+2 u2m
+dp
+dx . (1.9)
+Here d is the diameter of the pipe, is the density and um is velocity averaged over the cross–section. When the inner surface of the pipe is smooth, λ is again only a function of the Reynolds number Re, where this is now formed as
+Re = umd
+μ = umd
+ν (1.10)
+with the pipe diameter d and the average velocity um. The function λ(Re) has been noted from numerous measurements and is shown in Fig. 1.4. As in the case of the flat plate, again here the points are all ordered onto one curve.
+Fig. 1.4. Pipe friction factor for smooth pipes, dependent on the Reynolds number. Definition of λ from Eq. (1.9). Measurements by different authors, cf. H. Schlichting (1982), p. 611. Curve 1 from Eq. (1.14), laminar, after G. Hagen (1839) and J.L.M. Poiseuille (1940). Curve 2 from Eq. (2.18), turbulent
+
+
+12 1. Some Features of Viscous Flows
+Figure 1.5 shows the results of measurements of the drag coefficients of spheres as a function of the Reynolds number and the Mach number by A. Naumann (1953). Here it is interesting to note that the effect of the Reynolds number vanishes for spheres in supersonic flows. This is because the pressures on the back of the sphere, which are more strongly affected by the Reynolds number, lose their influence on the drag compared to the pressures on the front.
+Fig. 1.5. Dependence of the drag coefficient of spheres on the Reynolds number and the Mach number, from measurements by A. Naumann (1953)
+1.4 Laminar and Turbulent Flows
+In Fig. 1.4, which shows the dependence of the pipe friction factor λ on the Reynolds number, there are clearly two different regions to be seen. Note that both the vertical and horizontal scales are logarithmic. At small Reynolds numbers, λ decreases in a straight line with increasing Re. At the “critical Reynolds number”
+Recrit = 2 300 (1.11)
+this decrease stops abruptly, and a sharp increase in λ occurs. As Re increases further, λ then again decreases, but not with as large a slope as before, and no longer in a straight line. The different behaviour of the curves λ(Re) for Re < Recrit and Re > Recrit is due to the fact that there are two different kinds of flows. This
+
+
+1.4 Laminar and Turbulent Flows 13
+knowledge goes back to O. Reynolds (1883), where, in his famous coloured filament experiment, he showed the two different flow forms in pipe flow, see Fig. 1.6.
+Fig. 1.6. Coloured filament experiment by O. Reynolds (1883). Flow in water made visible by a coloured filament, by W. Dubs (1939) (a) laminar flow, Re=1150 (b) turbulent flow, Re = 2520
+A narrow tube is used to add coloured liquid to flowing water. This forms a thin filament of colour which can be viewed through the transparent walls of the pipe and gives an indication of the behaviour of the flow. At low flow velocities, or more precisely, at Reynolds numbers below the critical Reynolds number, straight coloured filaments form and move with the flow parallel to the axis of the pipe. This is a layered flow, where layers of fluid move with different velocities without great exchange of fluid particles perpendicular to the flow direction. It is also called laminar flow. If the velocity in the pipe flow is increased so that the critical Reynolds number is exceeded, the flow portrait changes dramatically. As in Fig. 1.6b, the coloured filaments carry out highly irregular transverse motions, which quickly lead to a complete scattering and squalling of the colour. This is now turbulent flow, characterised by a high irregular, random, fluctuating motion. It is superimposed on the regular basic flow and leads to large amounts of mixing perpendicular to the flow direction in the pipe. There is also a critical Reynolds number visible in the drag coefficient cD(Re) of a flat plate at zero incidence, see Fig. 1.3. It is
+Recrit = 5 · 105 . (1.12)
+For Reynolds numbers which are smaller than Recrit, the flow past the plate is laminar; above Recrit the importance of the turbulence becomes ever greater. The dramatic decrease in the cD value of spheres at small Mach numbers (e.g. Ma=0.3), seen in Fig. 1.5, is also due to a transition from laminar to
+
+
+14 1. Some Features of Viscous Flows
+turbulent flow. The treatment of laminar and turbulent flows is very different, and they are therefore dealt with in separate parts of this book. The transition from laminar to turbulent flow is also discussed in a chapter of its own. The book is thus subdivided into Parts I to V as follows: introductory chapters on fundamentals (Chaps. 1 to 5), laminar flows (Chaps. 6 to 14), the laminar–turbulent transition (Chap. 15), turbulent flows (Chaps. 16 to 22) and numerical methods (Chap. 23).
+1.5 Asymptotic Behaviour at Large Reynolds Numbers
+Since many technically important fluids have very low viscosity (e.g. air or water, see Table 3.1 in Chap. 3), the majority of flows in practice are flows with high Reynolds number. Therefore the asymptotic behaviour of dimensionless coefficients at high Reynolds numbers, as seen in Figs. 1.3 and 1.5, is very important. Boundary–layer theory, the topic of this book, deals with precisely this asymptotic behaviour. In other words, boundary–layer theory is a theory to determine the asymptotic behaviour of flows at large Reynolds numbers (i.e. Re → ∞). The limiting case Re = ∞ corresponds to the flow of an ideal fluid, i.e. a fluid with vanishing viscosity. Real flows which have finite but very large Reynolds numbers will then be only slightly different from this limiting case, and they can be considered to be small perturbations from the limiting case. Within the framework of boundary–layer theory, the flow equations are calculated using perturbation theory, where the starting point used is the solution for inviscid flow. Because of the no–slip condition, which in general cannot be satisfied by inviscid flows, we have to deal with singular perturbation theory. Boundary–layer theory is the original and classic example of the use of singular perturbation methods. L. Prandtl was the first person to apply a singular perturbation calculation to a partial differential equation. Since then, singular perturbation methods have been applied in many other areas of physics and technology, see e.g. J. Kevorkian;, J.D. Cole (1981). The main difficulty in boundary–layer theory today is that the solution for inviscid flows is not unique. Therefore the starting point for the perturbation theory, the limiting solution, can frequently a priori not be chosen.
+1.6 Comparison of Measurements Using the Inviscid Limiting Solution
+It can be expected of high Reynolds number flows that they will differ only slightly from the limiting case of inviscid flow. The following examples will be used to demonstrate this.
+
+
+1.6 Comparison of Measurements 15
+Pipe flow. The graph of λ(Re) in Fig. 1.4 shows quite clearly that λ tends to zero as the Reynolds numbers increases. It emerges from Fig. 1.7 that the velocity profiles become ever more flat, until, at the limit Re = ∞, a homogeneous velocity distribution is reached.
+Fig. 1.7. Velocity distribution in a smooth pipe at different Reynolds numbers, from J. Nikuradse (1932)
+In principle, one might like to know the asymptotic behaviour for the hypothetical case of what would happen if the pipe flow were to remain laminar for arbitrarily large Reynolds numbers above Recrit. However there is no inviscid limiting solution for laminar pipe flows. When the pipe flow is fully laminar, only the pressure forces and the friction forces are in equilibrium, and inertial forces (proportional to ) do not contribute. Therefore there is no dependence at all on the Reynolds number, which also contains . The Reynolds number dependence in Fig. 1.4 has been artificially generated. As will be shown in Sect. 5.2.1, the relation
+− d2
+μum
+dp
+dx = 32 (1.13)
+holds for fully developed laminar pipe flow. From dimensional analysis it follows that the dimensionless combination of dp/dx, d, μ and um must be a constant. By multiplying the numerator and the denominator in Eq. (1.13) by the density , we obtain the Hagen–Poiseuille pipe drag law for laminar pipe flows
+λ = 64
+Re . (1.14)
+In Fig. 1.4, where both scales are logarithmic, this law is depicted as a straight line with a negative slope of one.
+
+
+16 1. Some Features of Viscous Flows
+In contrast to laminar pipe flows, in the case of turbulent pipe flows there is also a contribution from the inertial forces. This is due to the turbulent fluctuating motion. Here a real Reynolds number dependence occurs, cf. Sect. 2.4.
+Plate. According to Fig. 1.3, the cD value for a flat plate at zero incidence tends to zero for large Reynolds numbers, both for the turbulent case and for the hypothetical purely laminar case. In both cases the inviscid boundary solution is therefore a simple translation flow (homogeneous velocity distribution).
+Airfoil. Figure 1.8 shows the pressure distribution measured for a symmetric airfoil at zero angle of incidence and compares it to the inviscid solution. Setting aside what happens at the trailing edge, the differences are small. Because of the finite angle at the trailing edge, the inviscid solution gives rise to a stagnation point there, and, compared to viscous flows, to a sharply increased pressure.
+Fig. 1.8. Pressure distribution on airfoil NACA 0012. Measured at Re = 1.85 · 106, Ma = 0.30, cf. J. Barche (1979) inviscid flow (Re = ∞, Ma = 0.30), after H. Schlichting; E. Truckenbrodt (1979)
+In Fig. 1.9 we find similarly good agreement for a cambered NACA airfoil with angle of attack α = 8◦. In this example there are actually infinitely many inviscid limiting solutions. The solution where there is no flow around the trailing edge is the one which was chosen. This requirement of smooth flow past the trailing edge, known as the Kutta condition, follows from a physical property of viscous flows, where flow around a cusp at infinitely large velocities is impossible. The dependence of the lift coefficient cL on the the angle of attack α is shown for the same NACA airfoil at the same Reynolds number in Fig. 1.10. Whereas the limiting solution Re = ∞ leads to vanishing drag (D’Alembert’s paradox), the lift
+curve shows good approximation to the flow at Re = 3 · 106. The pressure distribution on an airfoil in a transonic flow is shown in Fig. 1.11. Both the measurements and the limiting solution show a sudden increase in the pressure on the upper side. This is due to a shock wave which occurs there. How
+ever, because of the effects of viscosity (displacement effect), the shock wave lies somewhat upstream compared to its position in the limiting case Re = ∞. Otherwise the limiting solution is a very good approximation. In contrast to the case of incompressible inviscid flows, the limiting solution Re = ∞ gives rise
+
+
+1.6 Comparison of Measurements 17
+Fig. 1.9. Pressure distribution on airfoil NACA 4412 at angle of attack α = 8◦, after R.M. Pinkerton (1936) ◦ measurement, Re = 3 · 106 theory, Re = ∞
+Fig. 1.10. Lift on the NACA 4412 airfoil, after R.M. Pinkerton (1936) Airfoil as in Fig. 1.9
+
+
+18 1. Some Features of Viscous Flows
+Fig. 1.11. Pressure distribution on airfoil RAE 2822 in transonic flow, after M.A. Schmatz (1986) Ma = 0.73, α = 2.8◦ ◦ measurements, Re = 6.5 · 106, after J. Barche (1979), cD = 0.013; cL = 0.72 - - - limiting solution for Re = ∞ theory for Re = 6.5 · 106, see Sect. 19.2.6
+Circular cylinder. Figure 1.12 shows the drag coefficient cD = 2D/( V 2bd) as a function of the Reynolds number for a circular cylinder placed transversely in a flow. As in the similar case of the sphere at Ma = 0.3 shown in Fig. 1.5, there is a dramatic drop in the cD value to be seen at the critical Reynolds number
+Recrit = 4 · 105 . (1.15)
+For subcritical Reynolds numbers Re < Recrit, the flow past the cylinder is laminar. For large subcritical Reynolds numbers a constant drag coefficient of cD = 1.2 is seen. This could possibly hint at an asymptotic state for the hypothetical case if the flow were to remain laminar at arbitrarily high Reynolds numbers. A typical pressure distribution from this Reynolds number regime (Re = 105) is shown in Fig. 1.13. From the pressure distribution of inviscid flow past a circular cylinder, seen in Fig. 1.14a to be symmetric (the front and back are the same), we find that this flow is clearly unsuitable as a limiting solution. However there are other inviscid flows past a circular cylinder, and the well–known Kirchhoff–Helmholtz solution in Fig. 1.14b seems more reasonable. A particular characteristic of this flow is that it has two lines of discontinuity. These so–called free streamlines leave the contour of the cylinder tangentially with an angle of ΘS = 55◦ (the Brillouin–Villat condition) and separate the outer area with the total pressure of the free stream from the so–called “dead water” region, where the fluid is at rest and the pressure is that of the free stream. At the free streamlines, the total pressure, i.e. the difference of the total pressure inside and outside the free streamlines, is equal to the stagnation pressure of the free stream. The pressure distribution here is shown in Fig. 1.13. By integration, a non–zero form drag with a coefficient cD = 0.5 is obtained for this inviscid flow. This value deviates considerably from the measured value of cD = 1.2. To understand this deviation, we can look at an investigation by A. Roshko (1967). The essential result is recorded in Fig. 1.15. By introducing a splitter plate behind the cylinder the negative pressure at the back could be reduced considerably, i.e. the
+to a finite drag in the case of transonic and supersonic flows. The shock waves which occur in these flows are connected with dissipation and the resulting loss in energy leads to a finite form drag, although small close to the speed of sound.
+
+
+1.6 Comparison of Measurements 19
+Fig. 1.12. Circular cylinder: drag coefficient vs. Reynolds number ◦ measurements by C. Wieselsberger, see H. Schlichting (1982), p. 17 - - - - - asymptotic formula for Re → 0: cD = 8π
+Re [ − 0.87 3 + · · ·],
+with = [ln(7.406/Re)]−1, Re = V d/ν, cD = 2D/( V 2bd) - · - · - · numerical results by A.E. Hamielec; J.D. Raal (1969) and B. Fornberg (1985) for steady flow Re = 300: steady: cD = 0.729, after B. Fornberg (1985) unsteady: cD = 1.32, after R. Franke; B. Scho ̈nung (1988)
+Fig. 1.13. Subcritical flow at a circular cylinder,
+Θ: peripheral angle, ΘS: separation angle (a) distribution of wall shear stress, (b) distribution of wall pressure cp = 2(p − p∞)/( V 2)
+◦ measurements at Re = 105, after E. Achenbach (1968) - - - - symmetric limiting solution, from Fig. 1.14a limiting solution by KirchhoffHelmholtz, see Fig. 1.14b
+
+
+20 1. Some Features of Viscous Flows
+Fig. 1.14. Limiting solution (Re = ∞) for incompressible flow at a circular cylinder (a) symmetric flow (b) Kirchhoff–Helmholtz solution for subcritical flow (c) “fictitious body” solution for supercritical flow
+Fig. 1.15. Effect of a splitter plate in the wake of a circular cylinder, after A. Roshko (1967). Re = 14 500, the laminar–turbulent transition takes place immediately after laminar separation
+
+
+1.6 Comparison of Measurements 21
+pressure coefficient at the back of the cylinder was changed from cp = −1.1 to cp = −0.5. This effect comes from the fact that, in spite of steady free stream, the flow at these high subcritical Reynolds numbers is not steady at all. Rather, there is a strongly oscillating flow due the alternating formation of vortices on the upper and lower halves of the back of the cylinder. Figure 1.16 shows an instantaneous picture of this flow.
+Fig. 1.16. Snapshot of the completely separated flow behind a circular cylinder, after L. Prandtl; O. Tietjens (1929, 1931)
+Table 1.1 by M.V. Morkovin (1964) summarises the different regions in cylinder flow. In the subcritical Reynolds number region we find periodic flow whose frequency is independent of the Reynolds number. The dimensionless frequency is called the Strouhal number
+Sr = f d
+V . (1.16)
+In the subcritical region it has the value Sr = 0.21. The measurement points for this region in Figs. 1.12 and 1.13 are therefore mean values of periodically oscillating values. The vortices which can clearly be seen in Fig. 1.16 obviously produce an increased negative pressure at the back of the cylinder. By introducing the splitter plate, the periodic production of vortices is halted, or at least drastically reduced, and the dead water pressure which governs the form drag is considerably lowered. In this manner, the drag coefficient of a flow, hypothetically assumed to be steady and laminar, at high Reynolds number past a cylinder would be cD = 0.5. Thus the Kirchhoff–Helmholtz solution with the free streamlines depicted in Fig. 1.14b comes into play as a limiting solution. This idea is also supported by numerical results, cf. K. Gersten (1982b) and A.P. Rothmayer (1987). However, according to more recent investigations by B. Fornberg (1987), D.H. Peregrine (1985) and F.T. Smith (1985), the flow seems to be more complicated than this.
+
+
+22 1. Some Features of Viscous Flows
+Table 1.1. Flow regimes at a circular cylinder (incompressible flow)
+Reynolds number Re = V d/ν
+Strouhal number Sr = f d/V
+Reynolds number regime Flow regime Flow form Flow characteristic Strouhal number
+Sr
+Drag coefficient cD Separation angle ΘS
+Re → 0 Creeping flow Steady, no wake – see Fig. 1.12 
+3 − 4 < Re < 30 − 40 Vortex pairs in
+wake
+Steady, symmetric
+separation
+– 1.59 < cD < 4.52
+(Re = 30) (Re = 40)
+130◦ < ΘS < 180◦
+(Re = 35) (Re = 5)
+30
+40 < Re < 80
+90
+Onset of
+Karman
+vortex street
+Laminar, unstable
+wake
+– 1.17 < cD < 1.59
+(Re = 100) (Re = 30)
+115◦ < ΘS < 130◦
+(Re = 90) (Re = 35)
+80
+90 < Re < 150
+300
+Pure Karman
+vortex street
+Karman vortex street 0.14 < Sr < 0.21
+150
+300 < Re < 105
+1.3·105
+Subcritical
+regime
+Laminar, with vortex
+street instabilities
+Sr = 0.21 cD ≈ 1.2 ΘS ≈ 80◦
+105
+1.3·105 < Re < 3.5 · 106 Critical regime
+Laminar separation
+Turbulent reattachment
+Turbulent separation
+Turbulent wake
+No preferred
+frequency
+0.2 < cD < 1.2 80◦ < ΘS < 140◦
+3.5 · 106 < Re Supercritical
+regime
+(transcritical)
+Turbulent separation 0.25 < Sr < 0.30 cD ≈ 0.6 ΘS ≈ 115◦
+
+
+1.6 Comparison of Measurements 23
+Fig. 1.17. Supercritical flow at a circular cylinder Θ: peripheral angle, ΘS: separation angle (a) distribution of wall shear stress, (b) distribution of wall pressure cp = 2(p − p∞)/( V 2)
+◦ measurements, Re = 3.6 · 106 after E. Achenbach (1968) - - - - symmetric limiting solution from Fig. 1.14a Limiting solution by L.C. Woods (1955), cf. Fig. 1.14c
+Fig. 1.18. Pressure at a circular cylinder at Ma = 4.02 ◦ measurements at Re = 1030, cool model, after O.K. Tewfik; W.H. Giedt (1959) Theory by K. Oberl ̈ander (1974): - - - - limiting solution (Re = ∞) solution for Re = 1030
+For supercritical Reynolds numbers Re > Recrit there are also indications of an asymptotic limiting value of cD = 0.6 (see Fig. 1.12 and Table 1.1). Here also the limiting solution is an inviscid flow with free streamlines corresponding to Fig. 1.14c, cf. L.C. Woods (1955) and R.V. Southwell; G. Vaisey (1948). A comparison of the pressure distribution of a possible limiting solution by L.C. Woods (1955) with measurements at Re = 3.6 · 106 is shown in Fig. 1.17. Although the agreement is very good, it must be explicitly pointed out that the supercritical flows past
+
+
+24 1. Some Features of Viscous Flows
+a circular cylinder are periodic flows and therefore the measured values oscillate periodically about an average pressure coefficient. On the other hand a steady solution was assumed for the limiting solution. For further investigations on flows past circular cylinders see H. Schlichting (1982), R. Franke; B. Scho ̈nung (1988), E. Achenbach (1968), E. Achenbach (1971) as well as E. Achenbach; E. Heinecke (1981). As in the case of the sphere in Fig. 1.15, the effect of the Reynolds number becomes less the higher the Mach number, i.e. the form drag predominates, cf. A. Naumann; H. Pfeiffer (1962). Figure 1.18 shows a comparison of the pressure distributions at a circular cylinder at Mach number Ma = 4 by K. Oberla ̈nder (1974). Here too there are only small deviations between measurements at Re = 1030 and the limiting solution. The perturbed limiting solution also shown will be treated in Sect. 14.2. As seen in Fig. 1.5, the critical Reynolds number in flow past a sphere increases with increasing Mach number, so that for subsonic flows, subcritical conditions exist up to Re = 106. The form drag is then independent of the Reynolds number and agrees well with the limiting solution Re = ∞, as shown by, for example, W.D. Hayes; R.F. Probstein (1959).
+Fig. 1.19. Dependence of the drag coefficient of spheres on the Reynolds number Curve 1: theory, after G.G. Stokes (1856), cD = 24/Re Curve 2: theory, after C.W. Oseen (1911), cD = 24/Re[1 + 3Re/16] For the extension of this theory for higher Reynolds numbers, cf. M. Van Dyke (1964b) Curve 3: numerical results, after B. Fornberg (1988) Onset of unsteady flow at Re = 200, cf. U. Dallmann et al. (1993)
+
+
+1.6 Comparison of Measurements 25
+Sphere. The flow past a sphere is very similar to the flow past a cylinder. The drag diagram for the sphere in Fig. 1.19 corresponds to Fig. 1.12 for the cylinder. Again the subcritical and the supercritical states can be distinguished at high Reynolds numbers. Figure 1.20 shows two typical experimentally determined pressure distributions for these two states, cf. E. Achenbach (1972). At high Reynolds numbers there are deviations from the axial symmetry and unsteady processes occur, as shown by U. Dallmann et al. (1993) and B. Schulte-Werning; U. Dallmann (1991), and also E. Achenbach (1974a). The effect of the Mach number on the sphere’s drag has already been shown in Fig. 1.5. E. Achenbach (1974b) has shown how the flow past a sphere depends on the roughness of the surface.
+Fig. 1.20. Pressure distribution at a sphere, after measurements by O. Flachsbart (1927) -·-·-·-· subcritical Re = 1.62 · 105 supercritical Re = 4.35 · 105 - - - - symmetric limiting solution
+Fig. 1.21. Wall pressure in a plane diffuser AR = 1.6; l/hE = 6, after K. Gersten; H.G. Pagendarm (1983) ◦ measurements at Re = 105, B = 0.061 limiting solution (Re = ∞, B = 0)
+
+
+26 1. Some Features of Viscous Flows
+Diffuser. Apart from the pipe flow, all the flows above were external flows. Another example of an internal flow is the case of the technically extremely important diffuser. Figure 1.21 compares the pressure distribution at the wall of a plane diffuser with the limiting solution. For a given geometry, the diffuser flow is characterised by two dimensionless fluid mechanical coefficients. As well as the Reynolds number Re = umEhE/ν, the blockage
+B=
+(
+1− u
+umax
+)
+E
+(1.17)
+also appears as a measure of the lack of uniformity of the velocity distribution of the free stream. The index E implies the entrance conditions. In the limiting case, both coefficients reach their limiting values Re = ∞ and B = 0. The pressure
+distributions at the wall for the measurements at Re = 105 and for the limiting solution are very similar, and the differences are due to the viscosity and the blockage. The desired pressure rise in the diffuser is decreased by these effects, and optimum diffusers have a relative reduction in the pressure rise of about 10%.
+1.7 Summary
+In internal and external flows, the action of the flow can be divided into pressure forces (normal forces) and shear forces (tangential forces). As the examples have shown, the pressure distributions at bodies in flows at high Reynolds numbers and in the limiting case of inviscid flows are quite similar. Therefore, it seems obvious to begin with these limiting solutions and to deal with the differences from real (viscous) flows through corrections to the limiting solution. This is the basic idea of boundary–layer theory. Naturally the inviscid limiting solution cannot provide the shear forces, i.e. friction forces, which are important in determining the friction drag and friction losses (dissipation). The object of boundary–layer theory is to determine this force in particular. One of the main difficulties in the theory is that the limiting solution is sometimes a priori unknown for a given flow. This is because the inviscid solutions are not unique. Frequently the limiting solution is obvious, for example, for symmetry reasons (fully turbulent pipe flows, symmetric flow past thin airfoils, diffusers with moderate pressure increase). In many cases however the uniqueness of the limiting solution must be produced through additional conditions, for example, the Kutta condition (smooth flow–off at trailing edge of thin airfoils with small angle of attack). Difficulties then arise when no definite statement is possible about the limiting solution (circular cylinder, sphere, airfoil with large angle of attack, diffuser with strong pressure increase). Frequently the concept of a hypothetical limiting solution must be used. Then, for example, purely laminar or purely steady flows are assumed for high Reynolds numbers, even though the real flow has different behaviour. The drag of bodies in flows consists of the pressure or form drag (integral of the pressure or normal forces over the body’s surface) and the friction drag (integral of the shear or tangential forces). In the case of blunt bodies,
+
+
+1.7 Summary 27
+like cylinders and spheres, the form drag dominates. This is given to good approximation by the inviscid limiting case. Boundary–layer theory can be used to determine the friction drag and corrections to the form drag due to the viscosity. A further possibility to determine the limiting solutions a priori consists of coupling the limiting process Re → ∞ with a variation in the geometry considered. This can be used in the case of, for example, the flow at a rounded backward–facing step, where separation occurs for finite Reynolds numbers. This can be developed from the limiting solution of a plate at zero incidence, providing the step height goes to zero as Re → ∞. Both limiting processes must, however, be suitably coupled to each other. Where separation occurs in a flow, the limiting solution can often be chosen to be that flow where the geometry is changed just so that there is no separation (marginal separation). These more recent further developments in boundary–layer theory will be discussed in Chap. 14.
+
+
+2. Fundamentals of Boundary–Layer Theory
+2.1 Boundary–Layer Concept
+Flows of fluids with low viscosity values and thus very high Reynolds numbers occur in many technical applications. As was shown in the examples from the last chapter, the limiting solution Re = ∞ is often a good approximation. A notable shortcoming of this limiting solution is that the no–slip condition is not satisfied, i.e. the velocities at the wall are not zero but are finite. The viscosity must be taken into account in order to satisfy the no–slip condition. This takes care of the velocity transition from the limiting solution’s finite value close to the wall to the value of zero directly at the wall. At large Reynolds numbers this transition takes place in a thin layer close to the wall, called by L. Prandtl (1904) the boundary layer or frictional layer. As will be shown, the boundary layer is thinner the higher the Reynolds number, i.e. the smaller the viscosity. The concept of the boundary layer, therefore, implies that flows at high Reynolds numbers can be divided up into two unequally large regions. In the bulk of the flow region, the viscosity can be neglected, and the flow corresponds to the inviscid limiting solution. This is called the inviscid outer flow. The second region is the very thin boundary layer at the wall where the viscosity must be taken into account. Within the boundary layer the two different flow forms mentioned in the previous chapter can both occur, that is, the flow can be laminar or turbulent. One then speaks of laminar boundary–layer flows, or laminar boundary layers for short, and equivalently of turbulent boundary layers. It will be seen later that the division of the flow field into the inviscid outer flow and the boundary layer leads to considerable simplifications in the theoretical treatment of high Reynolds number flows. In fact it is only due to this idea of Prandtl that any theoretical headway could be made on these flows at all. Before coming to the focus of this book, the mathematical theory, this chapter will be used to explain the main concepts of boundary layers purely physically, without using any mathematical methods.
+© Springer-Verlag Berlin Heidelberg 2017 H. Schlichting (Deceased) and K. Gersten, Boundary-Layer Theory, DOI 10.1007/978-3-662-52919-5_
+29
+2
+
+
+30 2. Fundamentals of Boundary–Layer Theory
+2.2 Laminar Boundary Layer on a Flat Plate at Zero Incidence
+Figure 2.1 is a snapshot of the flow along a thin flat plate which is being dragged through water. Aluminium particles have been sprinkled on the surface of the water to make the streamlines visible. The length of each particle streak is proportional to the flow velocity. It can be seen that directly at the wall is a thin layer where the velocity is considerably lower than it is at some distance from the wall. The thickness of this layer increases along the plate from front to back. In Fig. 2.2 the velocity distribution in this boundary layer on the plate is shown schematically, where the dimension in the transverse direction is enlarged greatly. At the leading edge there is a constant velocity distribution perpendicular to the plate. As the distance from the leading edge gets larger, the layer of particles slowed down by the friction becomes ever larger, since more and more fluid particles are caught up by the retardation. The thickness of the boundary layer δ(x) is therefore a monotonically increasing function of x. Here, however, it must be made absolutely clear that the concept of boundary–layer thickness δ has been artificially introduced. The transition from boundary–layer flow to outer flow, at least in the case of laminar flows, takes place continuously, so that a precise boundary cannot, in principle, be given. Since the concept of boundary–layer thickness is so vivid, it is very often used in practice. Frequently the boundary is arbitrarily given as being at the point where the velocity reaches a certain percentage of the outer velocity, e.g. 99%. For clarity, an index is often used, e.g δ99.
+Fig. 2.1. Flow along a thin flat plate, after L. Prandtl; O. Tietjens (1931)
+Fig. 2.2. Boundary layer at a flat plate at zero incidence (schematic)
+
+
+2.2 Laminar Boundary Layer on a Flat Plate 31
+Estimation of the boundary–layer thickness. For laminar plate boundary layers the boundary–layer thickness can easily be estimated as follows: in the boundary layer the inertial forces and the friction forces are in equilibrium. As was explained in Sect. 1.3, the inertial force per unit volume is equal to u ∂u/∂x. For a plate of length x, ∂u/∂x is proportional to U∞/x, where U∞ is the velocity of the outer flow. Thus the inertial force is of the order of magnitude U 2∞/x. On the other hand, the friction force per unit
+volume is equal to ∂τ /∂y, and in laminar flows this is equal to μ ∂2u/∂y2, by assumption. The velocity gradient perpendicular to the wall ∂u/∂y is of order U∞/δ, so that for the friction force per unit volume ∂τ /∂y ∼ μU∞/δ2. Setting the inertial and friction forces equal we reach the relation
+μ U∞
+δ2 ∼ U 2∞
+x
+or, solved for the boundary–layer thickness δ:
+δ∼
+√ μx
+U∞
+=
+√ νx
+U∞
+. (2.1)
+The unknown numerical factor remaining in this equation can be determined from the exact solution of H. Blasius (1908) which is fully treated in Chap. 6. For the laminar boundary layer at a plate at zero incidence we have:
+δ99(x) = 5
+√ νx
+U∞
+. (2.2)
+The dimensionless boundary–layer thickness related to the plate length l is then
+δ99(x)
+l = √5Re
+√x
+l , (2.3)
+where Re = U∞l/ν is the Reynolds number formed with the plate length l. We see from Eq. (2.3) that the boundary–layer thickness decreases with increasing Reynolds number, so that in the limiting case Re = ∞ the boundary layer does indeed vanish. In addition we see from Eq. (2.3) that the
+boundary–layer thickness grows in proportion to √x.
+Displacement thickness. As already stated, the boundary–layer thickness has been introduced arbitrarily. A correct and fluid mechanically interpretable measure for the thickness of the boundary layer is the displacement thickness δ1. It is defined by
+U δ1(x) =
+∫∞
+y=0
+(U − u) dy . (2.4)
+U is the velocity on the outer edge of the boundary layer at the position x. From this, the two shaded areas in Fig. 2.3 must be equal. The displacement
+
+
+32 2. Fundamentals of Boundary–Layer Theory
+thickness tells us how far the streamlines of the outer flow are displaced by the boundary layer. For a plate at zero incidence we have
+δ1(x)
+l = 1.721
+√Re
+√x
+l , (2.5)
+i.e. the displacement thickness δ1 is about 1/3 of the boundary–layer thickness
+δ99.
+Fig. 2.3. Displacement thickness δ1 of the boundary layer
+Estimation of the friction forces. As with the boundary–layer thickness, the wall shear stress τw and thus the entire friction drag of the plate can also be estimated. According to Newton’s law of friction, Eq. (1.2), we have:
+τw(x) = μ
+(∂u ∂y
+)
+w
+, (2.6)
+where the index w denotes the value at the wall. Using ∂u/∂y ∼ U∞/δ we find τw ∼ μU∞/δ, and inserting the value of δ from Eq. (2.1),
+τw(x) ∼ μU∞
+√
+U∞
+μx =
+√ μ U 3∞
+x . (2.7)
+Therefore the wall shear stress is proportional to U 3∞/2, and, particularly
+worth emphasising, to 1/√x. The wall shear stress of a flat plate is therefore not a constant, but a function which decreases monotonically with x. The shear stresses are particularly large close to the leading edge of the plate. Using τw ∼ μU∞/δ it follows that the wall shear stress is inversely proportional to the boundary–layer thickness, i.e. the thinner the boundary layer the higher the wall shear stress. The constant of proportionality in Eq. (2.7) can again be determined from the exact solution, see Chap. 6. Therefore the skin–friction coefficient is
+cf = τw(x)
+2 U 2∞
+= 0.664
+√Re
+√l
+x . (2.8)
+
+
+2.3 Turbulent Boundary Layer on a Flat Plate at Zero Incidence 33
+Knowing the relation of the wall shear stress to position τw(x), integration can be used to determine the entire friction drag. A plate wetted on one side with breadth b and length l has a friction drag of
+D=b
+∫l
+0
+τw(x)dx . (2.9)
+With Eq. (2.8), the drag coefficient related to the wetted surface S = b · l follows as
+cD = D
+2 U 2∞ · b · l = 1.328
+√Re . (2.10)
+This drag law is depicted in Fig. 1.3. The asymptotic character of this law can be seen, and for Reynolds numbers Re > 104 the measurements are very close to the theory.
+2.3 Turbulent Boundary Layer on a Flat Plate at Zero Incidence
+As was already mentioned in connection with Fig. 1.3, in reality the boundary layer on a plate does not always remain laminar. After a certain distance x = xcrit (from the leading edge of the plate), the boundary layer becomes turbulent. In analogy to Eq. (1.12), the critical Reynolds number formed with the distance to the transition point is
+Rex crit =
+(Ux ν
+)
+crit
+= 5 · 105 (plate) . (2.11)
+The boundary layer on a plate is laminar close to the leading edge and becomes turbulent further downstream, whereby the position of the transition point xcrit can be determined by the critical Reynolds number Rex crit given. Although the transition from laminar to turbulent is a region of finite length, a transition point is used for simplicity and it is frequently assumed that the transition is sudden (see the footnote on p. 437). The numerical value of Recrit is strongly dependent on how free from perturbation the outer flow is. In strongly perturbed flow Recrit = 3 · 105 is typical, whereas for particularly smooth flow values of Recrit = 3 · 106 have been reached, cf. Chap. 15. The first investigations into the laminar–turbulent transition in the boundary layer were carried out by B.G. Van der Hegge Zijnen (1924), J.M. Burgers (1924) and M. Hansen (1928). The transition from laminar to turbulent flow forms is most noticeable by a great increase in the boundarylayer thickness and in the wall shear stress. Figure 2.4 shows the dimensionless
+combination δ99/√νx/U∞ depicted as a function of the dimensionless distance Rex = U∞x/ν according to measurements by M. Hansen (1928). From Eq. (2.2), in laminar boundary layers this combination has approximately the constant value 5. For Rex = Rex crit = 3 · 105, the measurements demonstrate
+
+
+34 2. Fundamentals of Boundary–Layer Theory
+a strong sudden increase. As will be shown later in Sect. 18.2.5, the thickness of the turbulent boundary layer on the plate is:
+δU∞
+ν = 0.14 Rex
+ln Rex
+G(ln Rex) . (2.12)
+The function G(ln Rex) is only weakly dependent on ln Rex. It has a limiting value of 1 for ln Rex → ∞; this will be discussed more fully in Sect. 17.1.3. In the region of interest here 105 < Rex < 106, G ≈ 1.5. The dependence on ln Rex which appears in Eq. (2.12) is typical for turbulent boundary layers, and has to do with an asymptotic formula for large Reynolds numbers. According to this formula, the boundary–layer thickness grows as δ ∼ x/ln x for large x. At a given x, the boundary–layer thickness decreases with increasing Reynolds number, but only very slowly with δ/x ∼ 1/ ln Re. The combination corresponding to Eq. (2.12) shown in Fig. 2.4 shows good agreement with the measurements of M. Hansen. Since Eq. (2.12) holds for the case where a turbulent boundary layer is already present at the leading edge of the plate, a virtual origin of the boundary layer was assumed at Rex = 1.5·105 in drawing the curve of Eq. (2.12). This means that precisely at the transition point Rex = 3 · 105, the value of the combination is approximately 5.0, and therefore a continuous transition of the boundary layer from laminar to turbulent follows. The boundary–layer thicknesses for typical cases of water and air flows have been calculated from Eq. (2.12) and are given in Table 2.1.
+Fig. 2.4. Dependence of the boundary–layer thickness on the distance along a plate at zero incidence, after M. Hansen (1928) laminar: Eq. (2.2) turbulent: Eq. (2.12) with fictitious origin at Rex = 1.5 · 105
+
+
+2.3 Turbulent Boundary Layer on a Flat Plate at Zero Incidence 35
+Friction forces. As will also be shown in Sect. 18.2.5, the formula analogous to Eq. (2.8) for the skin–friction coefficient of a turbulent boundary layer reads
+cf = 2
+[κ
+ln Rex
+G(ln Rex)
+]2
+, (2.13)
+where G(ln Rex) is again the function mentioned in connection with Eq. (2.12). The quantity κ = 0.41, called the Karman constant, is of fundamental importance for all turbulent wall boundary layers. It is a universal constant. From Eq. (2.13), the skin–friction coefficient for turbulent plate boundary layers decreases with increasing Reynolds number, but it does this extremely slowly, even more slowly than any small negative power of the Reynolds number. Assuming a turbulent boundary layer from the leading edge of the plate on, integration of the skin–friction coefficient over the length of the plate l gives the drag coefficient for a plate wetted on one side:
+cD = 2
+[κ
+ln Re G(ln Re)
+]2
+, (2.14)
+where the Reynolds number Re is now formed with the plate length l. This function is shown in Fig. 1.3. The drag coefficient also decreases extremely slowly with increasing Reynolds number. Note that the functions G in Eqs. (2.13) and (2.14) are different, cf. Sect. 18.2.5.
+Viscous sublayer. A peculiarity of turbulent boundary layers will be indicated at this point. In laminar boundary layers, the boundary layer is the region in the flow field affected by the viscosity, but this is not the case in turbulent boundary layers. The entire flow field is now divided into the outer flow, free from turbulence (or at least lacking in turbulence), and the turbulent flow, characterised by random fluctuating motion, inside the boundary layer. Since “apparent” friction forces occur in the turbulent boundary layer, as will be shown in Chap. 18, a turbulent boundary layer is also called a frictional layer. Within this turbulent frictional layer, the effect of the viscosity is restricted to a layer directly at the wall which is much thinner than the boundary layer. This is called the viscous sublayer or viscous wall layer. Therefore the turbulent boundary layer has a double layered structure. The larger part is a frictional layer only because of the “apparent friction” due to the turbulent fluctuating motion, and is unaffected by the viscosity. In the very thin viscous sublayer, the effects of the viscosity are in the form of “true” friction forces. Although the transition between the two layers is continuous here too, in practice the concept of the thickness of the viscous sublayer δv is used. As will be shown in Sect. 17.1.2
+δv
+x = 50
+Rex
+√ cf 2
+, (2.15)
+
+
+36 2. Fundamentals of Boundary–Layer Theory
+where the skin–friction coefficient cf is given by Eq. (2.13). From this, δv ∼ ln x grows very slowly with distance from the leading edge. It also decreases with increasing Reynolds number at a fixed x as δv ∼ ln Rex/Rex. The ratio of the sublayer thickness δv to the total thickness δ follows from Eqs. (2.12) and (2.15)
+δv
+δ = 680 ln2 Rex
+Rex
+. (2.16)
+As Rex increases, the part of the total frictional layer that makes up the viscous sublayer gets ever smaller. Numerical examples of the absolute thickness of the sublayer are given in Table 2.1.
+Table 2.1. Boundary–layer thickness δ and thickness of the viscous sublayer δv at the end of a flat plate at zero incidence in turbulent flow according to Eqs. (2.12) and (2.15). l: plate length, U∞: free stream velocity, ν: kinematic viscosity
+U∞ m/s
+l
+m Re = U∞l
+ν
+δ mm
+δv mm
+50 1 3.3 · 106 8 0.4
+air 100 1 6.6 · 106 8 0.2
+ν = 15 · 10−6 m2
+s 100 5 3.3 · 107 36 0.2
+200 10 1.3 · 108 69 0.1
+1 2 2 · 106 17 1
+water 2 5 1 · 107 39 0.6
+ν = 10−6 m2
+s 5 50 2.5 · 108 321 0.4
+10 200 2 · 109 1122 0.1
+2.4 Fully Developed Turbulent Flow in a Pipe
+In Chap. 1, in connection with Fig. 1.4., mention has already been made of fully developed turbulent flow in a pipe. This case of an internal flow is initially not a flow with typical boundary–layer character. However it has, just like the turbulent frictional layer described in the previous section, a double layer structure with a turbulent core and a viscous sublayer. As the Reynolds number increases, the thickness of the sublayer decreases, so that the final limiting solution is of a flow with homogeneous velocity. In this manner this flow can also be treated using the methods of boundary–layer theory.
+
+
+2.4 Fully Developed Turbulent Flow in a Pipe 37
+Pipe friction factor. The pipe friction factor λ depicted in Fig. 1.4 is defined as follows:
+λ=− d
+2 u2m
+dp
+dx = 4τ ̄w
+2 u2m
+. (2.17)
+As will be shown in Sect. 17.2.3, in the case of a smooth surface, the dependence on the Reynolds number Re = umd/ν is given by:
+λ=8
+[κ
+ln Re G(ln Re)
+]2
+. (2.18)
+Here G(ln Re) is again a function which monotonically decreases with increasing ln Re, and which has a limit of 1 for Re → ∞. In the region of interest in practice, 2300 < Re < 107, its value is about G = 1.35. The law of friction in Eq. (2.18) is shown in Fig. 1.4, and agrees well with experimental results.
+Thickness of the viscous sublayer. The thickness of the viscous sublayer can also be determined approximately (see Chap. 17):
+δv
+d = 122 ln Re
+Re G(ln Re) . (2.19)
+As already mentioned, the thickness of the viscous sublayer decreases to zero with increasing Reynolds number. Numerical values of δv are given for practical examples of turbulent pipe flows of air and water in Table 2.2.
+Table 2.2. Thickness of the viscous sublayer δv in fully developed turbulent pipe flow (smooth surface), according to Eq. (2.19)
+um m/s
+d
+m Re G δv
+mm
+3 0.01 2 · 103 1.47 3.2
+3 0.1 2 · 104 1.38 4.4
+air 3 1.0 2 · 105 1.33 5.6
+ν = 15 · 10−6 m2
+s 30 0.01 2 · 104 1.38 0.4
+30 0.1 2 · 105 1.33 0.6
+30 1.0 2 · 106 1.39 0.7
+0.2 0.01 2 · 103 1.47 3.2
+0.2 0.1 2 · 104 1.38 4.4
+water 0.2 1.0 2 · 105 1.33 5.6
+ν = 10−6 m2
+s 20 0.01 2 · 105 1.33 0.06
+20 0.1 2 · 106 1.29 0.07
+20 1.0 2 · 107 1.26 0.08
+
+
+38 2. Fundamentals of Boundary–Layer Theory
+2.5 Boundary Layer on an Airfoil
+The boundary layers on flat plates at zero incidence treated in Sects. 2.2 and 2.3 were particularly simple, since the inviscid outer flow and thus the limiting solution were translation flows with constant pressure in the entire field. However, in the case of flow past an arbitrarily shaped body, additional pressure forces occur. Figure 2.5 shows the boundary layer on an airfoil, where, for reasons of clarity, the dimension in the transverse direction is enlarged greatly. As with the plate, a laminar boundary layer begins to develop at the nose of the airfoil. After a certain distance xcrit along the contour of the body, the laminar–turbulent transition occurs, so that the boundary layer is turbulent for x > xcrit. Because of the geometry of the body, the invis
+Fig. 2.5. Development of the boundary layer at an airfoil
+cid outer flow gives rise to a pressure distribution on the outer edge of the boundary layer. This pressure distribution is “imposed” onto the boundary layer, i.e. at every point x, the pressure in the boundary layer perpendicular to the wall is constant. Therefore the pressure distribution on the outer edge of the boundary layer is identical to the pressure distribution at the wall. Any differences between these two pressure distributions could only arise from streamline curvature and the resulting pressure gradients perpendicular to the main flow direction as a compensation for centrifugal forces. Since boundary layers are very thin compared to the radius of curvature of the body’s contour at high Reynolds numbers, to first order, pressure gradients perpendicular to the wall do not occur. The pressure is imposed on the boundary layer by the outer flow and is only a function of x. Additionally, the dependencies mentioned in the case of the plate boundary layer are also valid: as the boundary layer develops along the contour of the body, in general the boundary–layer thickness δ(x) increases and the wall shear stress τw decreases. The increase in boundary–layer thickness downstream is greater in the case of turbulent boundary layers than laminar. As the Reynolds number formed with the free stream velocity V and a characteristic length of the body l increases, the thickness of the boundary layer decreases to zero in the limiting case Re → ∞. The pressure distribution imposed by the outer flow is of considerable importance in the formation of the boundary layer. For
+
+
+2.6 Separation of the Boundary Layer 39
+example, the position of the laminar–turbulent transition depends strongly on it. If the pressure greatly increases in the flow direction, as can occur in the region towards the back of the airfoil, or on the back of blunt bodies, it is possible that the boundary layer can separate from the wall. This extremely important phenomenon of boundary–layer separation will be treated in more detail in the next section.
+2.6 Separation of the Boundary Layer
+In order to explain the important phenomenon of boundary–layer separation, let us consider the flow past a blunt body, e.g. past a circular cylinder as in Fig. 2.6. In inviscid symmetric flow (Fig. 1.14a), an accelerated flow with pressure drop is present on the front half from D to E; from E to F on the back there is a decelerated flow with pressure increase. After setting the flow in motion, as long as the boundary layer remains very thin, an almost inviscid flow first forms. For a particle in the outer flow moving from D to E, pressure is transformed into kinetic energy, and moving from E to F, kinetic energy is transformed into pressure. A fluid particle directly at the wall in the
+Fig. 2.6. Separation of the boundary layer and vortex formation at a circular cylinder (schematic). S = separation point
+boundary layer is also acted on by the same pressure distribution as in the outer flow, since this is imposed on the boundary layer. Because of the strong friction forces in the thin frictional layer, a boundary–layer particle loses so much of its kinetic energy that it cannot manage to get over the “pressure mountain” from E to F. Such a particle cannot make much headway into the region of increasing pressure from E to F. It comes to a standstill, and is pushed backwards into motion by the pressure distribution of the outer flow. The flow portraits in Fig. 2.7 are a time sequence of this process on the back of a blunt body. The pressure increases along the contour of the body from left to right. The flow has been made visible by little particles of aluminium which have been sprinkled onto the surface of the water. The
+
+
+40 2. Fundamentals of Boundary–Layer Theory
+boundary layer is easily seen in the figures by the short streaklines of the particles. In Fig. 2.7a (shortly after starting) the reversed motion has just begun at the trailing edge. In Fig. 2.7b, the boundary layer has thickened, and the start of the reversed motion has moved forward considerably. It can be seen from Fig. 2.7c that a large vortex has formed from the backflow, and this is even larger in Fig. 2.7d. This vortex then soon separates from the body and moves on downstream. This process changes the flow portrait at the back of the body fully and the pressure distribution is drastically changed compared to that of inviscid flow. The final flow state for the cylinder can be seen in Fig. 1.16. As the pressure distribution in Fig. 1.13 shows, there is quite a strong negative pressure in the region filled with vortices. This negative pressure is the origin of the large form drag of the body.
+Fig. 2.7 a-d. Development in time of the separation at the back of a blunt body, after L. Prandtl; O. Tietjens (1931)
+Separation condition. As well as the friction drag, boundary–layer theory is also able, via the separation process, to explain the form drag (pressure drag). There is always danger of separation in regions where the pressure increases, and it is even greater the larger the increase, particularly for bodies with blunt rear sides. We can now understand why the pressure distribution
+
+
+2.6 Separation of the Boundary Layer 41
+observed in Fig. 1.8 for the slender airfoil agrees so well with the theoretical inviscid flow. The pressure increase at the back is so weak that the boundary layer does not separate. As a result, not much form drag occurs and the total drag consists mainly of the friction drag and remains therefore small. The flow portrait of boundary–layer flow close to separation is of the kind depicted in Fig. 2.8. As a result of the backflow close to the wall, a strong thickening of the boundary layer takes place and with this, boundary–layer mass is transported away into the outer flow. At the point of separation, the streamlines leave the wall at a certain angle. The position of separation is given by the condition that the velocity gradient perpendicular to the wall vanishes at the wall, i.e. the wall shear stress τw vanishes:
+τw = μ
+(∂u ∂y
+)
+w
+= 0 (separation) . (2.20)
+The position of separation can only be determined by exact calculation (integration of the boundary–layer differential equations).
+Fig. 2.8. Boundary–layer flow close to the separation point (schematic). S = separation point
+The same process of separation discussed for flow past a circular cylinder also occurs in a channel which widens in the direction of flow (diffuser) (Fig. 2.9a). Up until the narrowest cross–section the pressure drops in the direction of flow. Here the flow is right along the walls, just as in inviscid flow. After the narrowest point, the expansion is so great and therefore the pressure increase so large that the boundary layer separates from both walls. The flow now only fills a small part of the cross–section of the channel. However, if the boundary layer is sucked away at the walls (Figs. 2.9b and 2.9c), the separation comes to a stop. The flow portraits in Fig. 2.10 show that the pressure gradient along the wall acts together with the friction along the wall to govern the separation process. The picture on the left shows the flow against a wall placed perpendicular to it (plane stagnation–point flow). On the streamline of symmetry which leads to the stagnation point, there is a strong pressure increase in the direction of flow. However, there is no separation here because there is
+
+
+42 2. Fundamentals of Boundary–Layer Theory
+Fig. 2.9. Flow in a widening channel (diffuser) (a) separation at both diffuser walls, (b) suction of the boundary layer at the upper diffuser wall, (c) suction at both diffuser walls (after L. Prandtl; O. Tietjens (1931))
+
+
+2.6 Separation of the Boundary Layer 43
+no wall friction present. There is even no separation at the wall itself, because here the boundary layer in both directions flows in the direction of falling pressure. If a very thin wall is now placed at right angles to the first wall at the stagnation point (Fig. 2.10b), it now has on it a boundary layer with increasing pressure in the flow direction. Because of this, the boundary layer here separates from the flat wall.
+Fig. 2.10. Stagnation point flow, after H. Fo ̈ttinger (1939), (a) free stagnationpoint flow without separation, (b) retarded stagnation–point flow, with separation
+The flow separation is frequently quite sensitive to small changes in the shape of the body, particularly if the pressure distribution is strongly affected by the change of shape of the body.
+Other examples of separation. An instructive example is to be found in the flow portraits of the model of a motor vehicle (a VW–van) shown in Fig. 2.11 (E. Mo ̈ller (1951), H. Schlichting (1954)). If the front of the van is square (a), the flow past the sharp front edge produces strong negative pressures and therefore a strong increase in pressure along the side walls. This leads to a complete separation of the boundary layer along the whole side wall and therefore to a large “dead water” area behind the body. The drag coefficient for this van with a square front is cD = 0.76. For a rounded front (b), on the other hand, the strong negative pressures at the front edge are avoided and a flow attached to the entire side wall is achieved. There is a considerable reduction in the drag coefficient to cD = 0.42. Further detailed investigations on such vehicles, also for asymmetric free streams, have been carried out by W.H. Hucho (1972, 1981). Separation is also important in the production of lift on an airfoil. At small angles of attack (up to about 10◦), the flow moves along both sides without separation, so that, to good approximation, an inviscid lift–producing flow is found. This pressure distribution was given in Fig. 1.9 (attached flow, Fig. 2.12a). As the angle of attack is increased, there is danger of separation
+
+
+44 2. Fundamentals of Boundary–Layer Theory
+on the suction side. This is because the pressure increase is greater here. At a certain angle of attack, about 15◦, separation occurs. The position of separation is quite close to the nose of the airfoil. The separated flow (Fig. 2.12b) has a large area of “dead water”. The inviscid lift–producing flow has been destroyed and the drag is now very high. The start of separation coincides approximately with the maximum lift of the airfoil.
+Fig. 2.11. Flow past a model of a vehicle (Volkswagen van), after E. Mo ̈ller (1951). (a) Square front with fully separated flow along the entire side walls and large drag coefficient cD = 0.76. (b) Rounded front with attached flow along the entire side wall and small drag coefficient cD = 0.42.
+Boundary–layer separation can even play a role when the angle of attack on an airfoil is moderate, if flow close to the speed of sound is considered. As already explained in Fig. 1.11, a shock generally forms on the suction side of the airfoil. If the shock is strong enough, the pressure distribution it causes can lead the boundary layer to separate. Because of the additional form drag occurring, a drastic increase of the drag can take place close to the speed of sound; this is frequently called the “sound barrier”. Finally we present a particularly instructive example of how the drag of a body can be dramatically decreased if the separation of the boundary layer is completely avoided and additionally if the shape is suitably chosen. Figure 2.13 shows the effect of a suitable shaping (streamline form) on the drag: the
+
+
+2.6 Separation of the Boundary Layer 45
+Fig. 2.12. Flow past an airfoil, (a) attached flow, (b) separated flow, after L. Prandtl; O. Tietjens (1931)
+Fig. 2.13. Relative sizes of an airfoil and a circular cylinder at equal free stream velocities (parallel to the symmetry axis of the airfoil) which have the same drag. Airfoil: laminar airfoil NACA 634 − 021 with laminar boundary layer. Drag coefficient cD = 0.006 at Rel = 106 to 107 Circular cylinder: drag coefficient cD = 1.0 at Rel = 104 to 105 (Fig. 1.12) The ratio of the chord of the airfoil l to the diameter of the cylinder d has the value l/d = 1.0/0.006 = 167
+relative sizes of a symmetric airfoil and a circular cylinder (a thin wire) are sketched such that they have the same drag at the same free stream velocity. The cylinder has a drag coefficient of about cD ≈ 1, related to its frontal area, cf. Fig. 1.12. The airfoil has a very small drag coefficient of cD ≈ 0.006, related to its outline area. This extremely small drag coefficient was achieved by the fact that, because of suitable shaping, the boundary layer remains laminar almost along the entire length (laminar airfoil); see alse Chap. 15, in particular Fig. 15.27.
+
+
+46 2. Fundamentals of Boundary–Layer Theory
+Difference between laminar and turbulent boundary–layer separation. A particularly remarkable phenomenon connected with the laminarturbulent transition in boundary layers occurs at blunt bodies, such as cylinders and spheres. It can be seen from Figs. 1.12 and 1.19 that, for Reynolds numbers V d/ν of about 5 · 105 and 3 · 105 respectively, a sudden large drop in the drag coefficient takes place. This was first noted for spheres by G. Eiffel (1912), and has to do with the fact that the boundary layer becomes turbulent. The point of separation thus is moved further backwards, since, because of the turbulent mixing motion, the energizing action of the outer flow on the turbulent boundary layer is much greater than in the laminar case. The separation point for laminar flow lies approximately at the equator, but when the boundary layer becomes turbulent, the point is moved some distance downstream. Thus the “dead water” area behind the body becomes considerably narrower, and the pressure distribution becomes closer to that of inviscid flow (Fig. 1.17). As the dead water area shrinks, a considerable lessening of the form drag takes place, seen as a jump in the curve cD = f (Re). L. Prandtl (1914) was able to show that this is the correct explanation by placing a thin wire ring around the sphere just in front of the equator (a “trip wire”). This artificially makes the laminar flow turbulent at a lower Reynolds number, and the same drop in drag which normally only happens at higher Reynolds numbers occurs. Figure 2.14 shows flow portraits where the flows have been made visible with smoke. On the left is a sphere in subcritical flow state, with a large dead water area and drag, and on the right, the supercritical state with small dead water area and drag. The second state has been produced using Prandtl’s trip wire. This experiment shows clearly that the jump in the resistance curve of the sphere and cylinder can only be understood as a boundary–layer effect.
+Fig. 2.14. Flow past a sphere, according to C. Wieselsberger (1914). (a) subcritical flow in subcritical Reynolds number regime, (b) supercritical flow in subcritical Reynolds number regime. Applying a thin trip wire enforces the subcritical flow
+Other bodies which have a blunt rounded back side (e.g. elliptic cylinders) show in principle a similar drag coefficient dependence on the Reynolds number. For ever narrower bodies, the jump in the drag curve moves back further and further. In the case of a slender airfoil (Fig. 1.8), where basically
+
+
+2.6 Separation of the Boundary Layer 47
+no boundary–layer separation takes place, there is also no jump in the cD curve. The smooth increase in pressure on the back of this body is overcome by the boundary layer without separation. As we will see more clearly later, the pressure in the outer flow has an important effect on the position of the laminar–turbulent transition. In the area from the nose to the pressure minimum where the pressure decreases, the boundary layer is laminar, whereas from then on, in the region of rising pressure, it is mostly turbulent. It is important to note that separation can in general only be prevented if the flow in the boundary layer is turbulent. As will be seen later, a laminar boundary layer can tolerate only an extremely small pressure rise, so that separation occurs even if the body is very slender. This is particularly true even for airfoil flow with a pressure distribution as in Fig. 1.9. The danger of separation is largest here on the suction side. Here too, smooth, separation–free, liftproducing flow is only possible if the boundary–layer flow is turbulent. This can be summarised by saying that both the small drag of slender bodies as well as the lift of airfoils are generally due to the turbulence in the boundary layer. One particular difference between laminar and turbulent boundary–layer separation should also be mentioned here. After the boundary layer has separated and left the body, it develops into so–called free shear layers further downstream, and forms the wake. In the limiting case Re = ∞, the laminar free shear layers reduce to lines and surfaces of discontinuity, cf. Fig. 1.14b. In contrast, the turbulent free shear layers have a finite thickness at Re = ∞. If turbulent free shear layers form from separation, the limiting solution at Re = ∞ has no viscosity, but does have friction: an apparent friction, due to the turbulent fluctuating motion, exists.
+Unsteady wakes. As already discussed in Chap. 1 in connection with the flow past a cylinder (Figs. 1.15 and 1.16 and Table 1.1), in spite of steady free stream conditions, the flow after separation is in no way steady. By this we mean varying processes in the mean motion, which move slowly compared to any turbulent fluctuating processes. This phenomenon does not only occur in the case of a circular cylinder, but also in the cases of blunt bodies of arbitrary shape and airfoils at large angles of attack. Sometimes a regular arrangement of vortices rotating clockwise and anticlockwise appears behind the body; this is known as the Karman vortex street. The unsteady character of the wake clearly has a great effect on the drag of the body, cf. Fig. 1.15. Understandably, in particular cases it is extremely difficult to establish whether unsteady flow takes place, and how it is to be determined. Research into this is still very much underway: see the summaries by L. Rosenhead (1931/32), M.V. Morkovin (1964), R. Wille (1966), E. Berger; R. Wille (1972), T. Sarpkaya (1975), W.J. McCroskey (1977), H.W. Fo ̈rsching (1978) and D.P. Telionis (1981), as well as H. Schlichting (1982).
+
+
+48 2. Fundamentals of Boundary–Layer Theory
+Measures to prevent separation. The separation of the boundary layer is generally undesirable, since it leads to great losses in energy. Certain measures have been devised to artificially prevent separation of the boundary layer. It is physically easiest to move the wall in the flow direction too and thus to remove the velocity difference between wall and outer flow, the origin of boundary–layer formation. Of course, technically this is very difficult to realise. However L. Prandtl; O. Tietjens (1931) used a rotating cylinder to show that this method does work: on the side where the motion of the wall and the outer flow are the same there is no boundary–layer separation at all. Another useful method to prevent boundary–layer separation is suction. The slowed boundary–layer material is sucked into the inside of the body through narrow slits on the wall. If the suction is strong enough, boundarylayer separation can be prevented. Boundary–layer suction was applied by L. Prandtl in 1904 in his first fundamental work on boundary layers on a circular cylinder. Separation can almost be completely prevented by suction through a slit on the back of the cylinder. Figure 2.9 shows an example of boundary–layer suction on the flow in a greatly diverging channel. Without suction there is strong separation (Fig. 2.9a). When suction is applied only on one side, the flow moves along this wall (Fig. 2.9b) and when suction is set in motion on both sides, the flow fills up the entire channel (Fig. 2.9c). We then obtain the flow portrait for inviscid flow. Suction has been used effectively to increase the lift on airfoils too. Applied to the back of the upper side, suction can be used to keep the flow along side the airfoil at much larger angles of attack than otherwise. This leads to a considerable increase in the maximum lift, O. Schrenk (1935). Separation of the boundary layer can also be prevented by blowing tangentially into the boundary layer. Using a “wall jet” blown through a slit on the contour of the boundary layer parallel to the main flow direction, the boundary layer can be given enough kinetic energy to prevent separation. The maximum lift can be considerably increased using this principle. In principle, a slat can be used on airfoils to prevent separation. In this case the pressure distribution on the airfoil is suitably influenced by the presence of the slat. Positive pressure gradients are avoided and thus separation prevented. A summary of flow separation and its control may be found in P.K. Chang (1970), P.K. Chang (1976).
+2.7 Overview of the Following Material
+Now that we have briefly presented the essential physical fundamentals of flows with very low viscosity, the rational theory of these phenomena will be developed from the fluid–dynamic equations of motion of viscous fluid flows. This will be organised as follows: in Part I the general Navier–Stokes equations are derived. From these, in Part II Prandtl’s boundary–layer equations
+
+
+2.7 Overview of the Following Material 49
+will be derived, based on the simplifications which follow from the smallness of the viscosity. The theory of integrating the boundary–layer equations for laminar flows will follow this. The problem of the onset of turbulence (laminar–turbulent transition) will be treated in Part III. Part IV will consist of the boundary–layer theory of fully developed turbulent flows. While the theory of laminar boundary layers can be treated purely by deduction from the Navier–Stokes differential equations, this has not been possible in the case of turbulent flows. Because they are so complicated, a purely theoretical approach is not possible. The theoretical treatment of turbulent flows therefore must depend on experimental results, and it is therefore a semi–empirical theory. The numerical methods of boundary–layer theory are treated in Part V.
+
+
+3. Field Equations for Flows
+of Newtonian Fluids
+3.1 Description of Flow Fields
+The equations of motion for a general (Newtonian) fluid will now be established. In doing so the fluid will be considered to be a continuum. In a continuum the smallest volume element considered dV is still homogeneous, i.e. the dimensions of dV are still very large compared to the average distance between the molecules in the fluid. In gases the assumption of a continuum is valid if the Knudsen number Kn = l0/l is very small, where l0 is the mean free path and l a characteristic length of the flow field, see S.A. Schaaf (1958). In three–dimensional motion the flow field is given by the velocity vector
+v = exu + eyv + ezw (3.1)
+with the three components u, v, w in a Cartesian coordinate system with unit vectors ex, ey, ez, and also by the pressure p and the temperature T . To determine these five quantities, there are five equations available:
+continuity equation (conservation of mass)
+three momentum equations (conservation of momentum)
+energy equation (conservation of energy, i.e. first law of thermodynamics)
+It will become clear later that the angular momentum equation also must be taken into account, cf. Eq. (3.14). These generally valid balance laws are joined by the transport equations. For the isotropic Newtonian fluids considered here, there is a linear relation between the stress tensor and the rate of deformation, and the Fourier heat conduction law holds too. The completed five balance laws therefore contain physical properties for which the dependencies on temperature and pressure must be given: the density (T, p), the isobaric specific heat capacity cp(T, p), as well as the transport properties viscosity μ(T, p) and thermal conductivity λ(T, p). In what follows the conservation laws for mass, momentum and energy will be set up.
+© Springer-Verlag Berlin Heidelberg 2017 H. Schlichting (Deceased) and K. Gersten, Boundary-Layer Theory, DOI 10.1007/978-3-662-52919-5_3
+51
+
+
+52 3. Field Equations for Flows of Newtonian Fluids
+3.2 Continuity Equation
+The continuity equation is a statement about the conservation of mass. It expresses the fact that, per unit volume, the sum of all mass flowing in and out per unit time must be equal to the change in mass due to change in density per unit time. For unsteady flows of a general fluid, this yields
+D
+Dt + div v = 0 (3.2)
+or using alternative notation
+∂
+∂t + div( v) = 0 . (3.3)
+Here D /Dt is the total or substantial derivative of the density with respect to time, which as
+D
+Dt = ∂
+∂t + v · grad (3.4)
+is composed of the local part ∂ /∂t (in unsteady flow) and the convective part (as a consequence of the change in position) v · grad . The continuity equation can now be used to formulate the concept of the incompressible fluid more precisely, using the following definition:
+For incompressible fluids the substantial derivative of the density with respect to time vanishes (D /Dt = 0).
+It then immediately follows from the continuity equation Eq. (3.2) that incompressible flows, i.e. flows of incompressible fluids, are source free. We have: D
+Dt = 0, div v = 0 (incompressible fluid) . (3.5)
+Constant density in the whole flow field is a sufficient but not a necessary condition for incompressible flow. In the case of flows in density stratification, for example in oceans, the density in the flow field is variable, but each fluid particle retains its density. See the following summaries: C.S. Yih (1965), O.M. Phillips (1966). Internal gravity waves are examples of incompressible flows with locally variable density, see J. Lighthill (1978), R.R. Long (1972).
+3.3 Momentum Equation
+The momentum equation is the basic law of mechanics which states that mass times acceleration is equal to the sum of the forces. Both body forces and surface forces (pressure and friction forces) act. If f is the body force per
+
+
+3.4 General Stress State of Deformable Bodies 53
+unit volume (e.g. f = g where g is the vector of gravitational acceleration) and P the surface force per unit volume, the momentum equation reads as follows in vector notation: Dv
+Dt = f + P . (3.6)
+Here Dv
+Dt = ∂v
+∂t + dv
+dt (3.7)
+is the substantial acceleration made up of the local acceleration ∂v/∂t (in unsteady flows) and the convective acceleration dv/dt (as a consequence of change in position). In general for convective acceleration we have
+dv
+dt = grad
+(1
+2v2
+)
+− v × curl v . (3.8)
+The (pseudo–vectorial) abbreviation
+dv
+dt = (v · grad)v (3.9)
+is frequently chosen. The body forces are considered to be prescribed external forces. On the other hand the surface forces depend on the state of deformation (state of motion) of the fluid. All the surface forces on a volume element determine the state of stress1. We now have to determine the relation between the state of stress and the state of deformation (transport equation). This relation can ultimately only be empirical. Statements which are generally valid come from the thermodynamics of irreversible processes, see the summaries by J. Meixner; H.G. Reik (1959), S.R. De Groot; P. Mazur (1962), J. Kestin (1966b) and I. Prigogine (1947). Further considerations will be restricted to isotropic Newtonian fluids. All gases and many liquids, in particular water, are members of this category. A fluid is called isotropic if the relation between the stress tensor and the rate of deformation tensor is the same in all directions. If this relation is linear, we are dealing with a Newtonian fluid. We then speak of Newton’s or Stokes’s law of friction, an equation for the transport of momentum. As will be shown in Sect. 3.8, these transport equations contain only one transport quantity (the viscosity) as long as no relaxation processes occur in the fluid.
+3.4 General Stress State of Deformable Bodies
+In order to determine the surface forces, consider a volume element dV = dx · dy · dz as in Fig. 3.1, whose front lower left corner has the coordinates x,
+1 The concept of surface stress will not be explicitly used since it serves to describe free surfaces of liquids which are not treated here.
+
+
+54 3. Field Equations for Flows of Newtonian Fluids
+y, z. The following stresses (stress vectors = surface forces per unit surface area) act on the two surfaces normal to the x axis of size dy · dz:
+px and px + ∂px
+∂x dx . (3.10)
+The index x implies that the stress vector acts on a surface element whose normal is in the x direction. Similar terms are obtained for the surface elements dx · dz and dx · dy perpendicular to the y and z axes respectively. Thus we have the resulting surface forces in the three coordinate directions:
+plane ⊥ x-direction : ∂px
+∂x · dx · dy · dz
+plane ⊥ y-direction : ∂py
+∂y · dx · dy · dz
+plane ⊥ z-direction : ∂pz
+∂z · dx · dy · dz .
+The total surface force P per unit volume dV resulting from the stress state is therefore
+P = ∂px
+∂x + ∂py
+∂y + ∂pz
+∂z . (3.11)
+Here px, py and pz are vectors which can be decomposed into components. This decomposition will be carried out by denoting the components perpendicular to each surface element, that is the normal stresses, by σ, and by giving the direction of the normal stresses as an index.
+Fig. 3.1. Stresses on a volume element
+The components in the plane of the surface elements are called tangential stresses τ . They acquire a double index: the first position indicates to which axis the surface element is perpendicular, and the second position states in which direction the stress τ is pointing.
+
+
+3.4 General Stress State of Deformable Bodies 55
+Using this notation we have
+px = exσx + eyτxy + ezτxz
+py = exτyx + eyσy + ezτyz (3.12)
+pz = exτzx + eyτzy + ezσz .
+The state of stress is therefore determined by nine scalar quantities and these form the stress tensor. The nine components together of the stress tensor are also called the stress matrix:
+σ=
+⎛
+⎝
+σx τxy τxz
+τyx σy τyz
+τzx τzy σz
+⎞
+⎠ . (3.13)
+The stress tensor and its matrix are symmetric: thus two tangential forces whose indices only differ in their order are equal. This will be shown by considering the equation of motion of a fluid element. In general this motion can be decomposed into a translation and a rotation. For our aims we only need to consider the latter. Denoting the instantaneous angular acceleration of the fluid element by ω ̇ (ω ̇ x, ω ̇ y, ω ̇ z), we can write down the following for the rotation about the y axis:
+ω ̇ ydIy = (τxz dy dz) dx − (τxz dx dy) dz = (τxz − τzx) dV .
+Here dIy is the moment of inertia of the element about the y axis. Now the moment of inertia dI is proportional to the fifth power of the linear dimension of the parallelepiped, while the volume element is proportional to the third power. Making the transition to a very small volume element, the left hand side of the above equation vanishes faster than the right hand side. Therefore we have
+τxz − τzx = 0 ,
+if ω ̇ y is not to become infinitely large. Analogous equations are obtained for the other two axes, thus proving the symmetry of the stress tensor. It is seen from above that the stress tensor would no longer be symmetric if the fluid had a local torque proportional to the volume dV . This can arise in, for example, an electrostatic field, cf. I. M ̈uller (1973), p. 32. Because of the relations
+τxy = τyx
+τxz = τzx (3.14)
+τyz = τzy
+the stress matrix Eq. (3.13) has only six different stress components and is symmetric about the main diagonal:
+σ=
+⎛
+⎝
+σx τxy τxz
+τxy σy τyz
+τxz τyz σz
+⎞
+⎠ . (3.15)
+
+
+56 3. Field Equations for Flows of Newtonian Fluids
+Using Eqs. (3.11), (3.12) and (3.14) we find the surface force per unit volume
+P = ex
+( ∂σx
+∂x + ∂τxy
+∂y + ∂τxz
+∂z
+)
+x-comp.
++ ey
+( ∂τxy
+∂x + ∂σy
+∂y + ∂τyz
+∂z
+)
+y-comp. (3.16)
++ ez
+( ∂τxz ∂x
+} {{ }
+s’face yz
++ ∂τyz
+∂y
+} {{ }
+s’face zx
++ ∂σz
+}∂{{z}
+s’face xy
+)
+z-comp.
+If we introduce this expression into the equation of motion (3.6), it reads, in component form
+Du
+Dt = fx +
+( ∂σx
+∂x + ∂τxy
+∂y + ∂τxz
+∂z
+)
+Dv
+Dt = fy +
+( ∂τxy
+∂x + ∂σy
+∂y + ∂τyz
+∂z
+)
+(3.17)
+Dw
+Dt = fz +
+( ∂τxz
+∂x + ∂τyz
+∂y + ∂σz
+∂z
+) .
+The first invariant of the stress tensor will “initially” be denoted as the pressure p:
+p = −1
+3 (σx + σy + σz) . (3.18)
+We will go into why we have used the reservation “initially” in Sect. 3.8. In the hydrostatic stress state (v = 0), all tangential forces vanish. Only the normal stresses remain, and these are all equal to each other and to the negative pressure from Eq. (3.18). Since measurements to determine the thermodynamic quantities can (in principle) be carried out in a fluid at rest, the pressure introduced via Eq. (3.18) is, in the hydrostatic case, identical to the thermodynamic pressure. This also holds for the case of a flowing fluid if, as will be shown in Sect. 3.8, there are no relaxation processes in the flow. It is useful to separate the pressure from the normal stresses:
+τxx = σx + p, τyy = σy + p, τzz = σz + p . (3.19)
+Here the stresses have been decomposed additively into a part with the normal stress −p that is the same in all directions, and a part which deviates from this (deviator stresses).
+The momentum equations (3.17) then read
+Du
+Dt = fx − ∂p
+∂x +
+( ∂τxx
+∂x + ∂τxy
+∂y + ∂τxz
+∂z
+)
+Dv
+Dt = fy − ∂p
+∂y +
+( ∂τyx
+∂x + ∂τyy
+∂y + ∂τyz
+∂z
+)
+(3.20)
+Dw
+Dt = fz − ∂p
+∂z +
+( ∂τzx
+∂x + ∂τzy
+∂y + ∂τzz
+∂z
+)
+
+
+3.5 General State of Deformation of Flowing Fluids 57
+or in vector notation
+Dv
+Dt = f − grad p + Div τ . (3.21)
+Here τ is the viscous stress tensor. It contains only the deviator stresses and is likewise symmetric. Its matrix reads:
+τ=
+⎛
+⎝
+τxx τxy τxz
+τxy τyy τyz
+τxz τyz τzz
+⎞
+⎠ . (3.22)
+The system of three equations (3.20) contains the six components of the viscous stress tensor. The next exercise is to determine the relation between these six stress quantities and the rate of deformation, and in this way to introduce the three velocity components u, v, w or their derivatives into the right hand side of Eq. (3.20). Before deriving this relation in Sect. 3.6, we shall first examine these deformations more closely.
+3.5 General State of Deformation of Flowing Fluids
+If a flow takes place in a fluid, as time goes by each fluid element will be found at a new position. Throughout this motion the fluid element undergoes a deformation. Since the fluid motion is completely determined if the velocity vector is known as a function of place and time, v = v(x, y, z, t), there exist kinematic relations between the rate of deformation and this function. The rate of deformation for a fluid element depends on the relative motion of two of its points. Therefore we consider two neighbouring points A and B as in Fig. 3.2. As a consequence of the velocity field, point A is moved to the position A′ in the time dt, where s = v dt.
+Fig. 3.2. Moving AB to A′B′
+Since the velocity at point B, a distance dr from A, is different from that at A, B is moved to point B′, which is a distance s + ds = (v + dv)dt from B. To be precise: if the velocity components are u, v, w at point A, the velocity
+
+
+58 3. Field Equations for Flows of Newtonian Fluids
+components at point B can be found by expansion in a Taylor series to first order to get
+u + du = u + ∂u
+∂x dx + ∂u
+∂y dy + ∂u
+∂z dz
+v + dv = v + ∂v
+∂x dx + ∂v
+∂y dy + ∂v
+∂z dz (3.23)
+w + dw = w + ∂w
+∂x dx + ∂w
+∂y dy + ∂w
+∂z dz .
+The motion of the point B relative to that of point A is therefore described
+by the following matrix of the nine partial derivatives of the local velocity: ⎛
+⎜⎜⎜⎜⎜⎝
+∂u ∂x
+∂u ∂y
+∂u
+∂z ∂v ∂x
+∂v ∂y
+∂v
+∂z ∂w ∂x
+∂w ∂y
+∂w ∂z
+⎞
+⎟⎟⎟⎟⎟⎠
+. (3.24)
+It is useful to arrange the expressions for the relative velocity components du, dv, dw in Eq. (3.23) in the following manner:
+du = (ε ̇xdx + ε ̇xydy + ε ̇xzdz) + (ωydz − ωzdy)
+dv = (ε ̇xydx + ε ̇ydy + ε ̇yzdz) + (ωzdx − ωxdz) (3.25)
+dw = (ε ̇zxdx + ε ̇zydy + ε ̇zdz) + (ωxdy − ωydx) .
+It can easily be shown that the newly introduced quantities have the following meaning:
+ε ̇ =
+⎛
+⎝
+ε ̇x ε ̇xy ε ̇xz ε ̇yx ε ̇y ε ̇yz ε ̇zx ε ̇zy ε ̇z
+⎞
+⎠
+=
+⎛
+⎜⎜⎜⎜⎜⎜⎝
+∂u ∂x
+1 2
+( ∂v
+∂x + ∂u
+∂y
+)1
+2
+(∂w
+∂x + ∂u
+∂z
+)
+1 2
+(∂u
+∂y + ∂v
+∂x
+) ∂v ∂y
+1 2
+(∂w
+∂y + ∂v
+∂z
+)
+1 2
+(∂u
+∂z + ∂w
+∂x
+)1
+2
+(∂v
+∂z + ∂w
+∂y
+) ∂w ∂z
+⎞
+⎟⎟⎟⎟⎟⎟⎠
+(3.26)
+and
+ωx = 1
+2
+(∂w
+∂y − ∂v
+∂z
+)
+; ωy = 1
+2
+(∂u
+∂z − ∂w
+∂x
+)
+; ωz = 1
+2
+( ∂v
+∂x − ∂u
+∂y
+)
+. (3.27)
+The matrix ε ̇ is symmetric, so that
+ε ̇yz = ε ̇xy; ε ̇xz = ε ̇zx; ε ̇zy = ε ̇yz (3.28)
+
+
+3.5 General State of Deformation of Flowing Fluids 59
+and ωx, ωy, ωz are the components of the angular velocity vector ω, which is connected to the vorticity vector curl v by1
+ω= 1
+2 curl v . (3.29)
+The tensor belonging to the matrix (3.26) is called the rate of deformation tensor or strain–rate tensor.
+Let us now discuss the kinematic interpretation of each of the quantities in Eq. (3.26). Since our attention is on the direct neighbourhood of point A, and since the motion of point B relative to point A is of interest, we set the origin to A and interpret dx, dy, dz as the coordinates of point B in a Cartesian coordinate system. In this manner, the expressions in Eq. (3.25) can be read as the components du, dv, dw of the relative velocity, which are linear functions of the spatial coordinates. In order to understand the meaning of the different terms in the matrices (3.26) and the equations (3.27), we will consider them individually.
+Volume dilatation. The diagram in Fig. 3.3a portrays the field of the relative velocities for the case where all the terms in Eq. (3.26) vanish, except for ∂u/∂x which we assume is positive. The velocity of each point B relative to A is
+du =
+( ∂u ∂x
+)
+dx .
+The field consists of planes x = const which move smoothly with a velocity which is proportional to the distance dx from the plane x = 0. An elementary parallelepiped with A and B on the vertical edges in such a velocity field is deformed in the longitudinal direction by shifting the side BC with increasing velocity. Thus ε ̇x is the extension velocity for the volume element in the x direction. Similarly, the terms ε ̇y = ∂v/∂y and ε ̇z = ∂w/∂z are extension velocities in the y and z directions respectively. Now it is easy to write down the deformation experienced by a fluid element by simultaneous action of all three diagonal elements of the matrices (3.24) or (3.26). The element is stretched in all three directions, and there is a relative change in volume due to the change in length of the three sides:
+e ̇ =
+{dx + ∂u
+∂x dx dt} {dy + ∂v
+∂y dy dt} {dz + ∂w
+∂z dz dt} − dx dy dz
+dx dy dz dt = ∂u
+∂x + ∂v
+∂y + ∂w
+∂z
+= div v . (3.30)
+Throughout this deformation the shape of the element, described by the angles at the sides, remains unchanged since all right angles are conserved. Thus e ̇ describes the local instantaneous volume dilatation of the fluid element. If the fluid is incompressible we have e ̇ = 0, as would be expected. For a compressible fluid, Eq. (3.2) yields
+e ̇ = div v = − 1 D
+Dt . (3.31)
+1 Note that in the English–speaking world the symbol ω frequently stands for curl v, that is, for twice the angular velocity.
+
+
+60 3. Field Equations for Flows of Newtonian Fluids
+Fig. 3.3. Different kinds of motion of a fluid element
+Fig. 3.3a. Uniform extension in the x direction, if ∂u/∂x > 0 and the remaining components of ε ̇ vanish
+Fig. 3.3b. Uniform shear deformation, if ∂u/∂y > 0 and the remaining components of ε ̇ vanish
+Fig. 3.3c. Uniform deformation, if ε ̇xy = ε ̇yx = [(∂u/∂y) + (∂v/∂x)]/2 > 0 and the remaining components of ε ̇ vanish (here ∂u/∂y = ∂v/∂x)
+Fig. 3.3d. Rigid body rotation, if ωz = [(∂v/∂x) − (∂u/∂y)]/2 = 0 and the remaining components of ε ̇ vanish (here ∂v/∂x = −∂u/∂y)
+
+
+3.5 General State of Deformation of Flowing Fluids 61
+This implies that the volume dilatation, i.e. the relative change in volume, is equal to the negative relative change of the local density.
+Shear deformation. The relative velocity field has a completely different form if one of the off–diagonal terms of the matrix (3.24), e.g. ∂u/∂y, does not vanish but is, for example, positive. The field corresponding to this case is sketched in Fig. 3.3b; it is a pure shear deformation. The original right angle at point A changes by dγxy = [(∂u/∂y)dy dt]/dy; therefore the shear angular velocity is dγxy/dt = γ ̇xy = ∂u/∂y. If both derivatives ∂u/∂y and ∂v/∂x are positive, the right angle at point A is changed by a superposition of these two motions, as is shown in Fig. 3.3c. It is obvious that the right angle at point A is changed by twice the absolute value of
+ε ̇yx = ε ̇xy = 1
+2
+( ∂u
+∂y + ∂v
+∂x
+) .
+This is given by the two off–diagonal terms in matrix (3.26). In general the three off–diagonal terms ε ̇xy = ε ̇yx, ε ̇xz = ε ̇zx and ε ̇zy = ε ̇yz describe the deformation of a right angle lying in a plane normal to the axis whose index does not appear. In these deformations, the volume of the element is retained and only its shape is changed.
+Rigid body rotation. The motion is again different if ∂u/∂y = −∂v/∂x as is shown in Fig. 3.3d. From the considerations above, and from the fact that now ε ̇xy = 0, we can conclude that in this case the right angle at point A is not altered. This is also obvious from the diagram which shows that the fluid element rotates about the point A. This rotation takes place without deformation and can be described as the rotation of a rigid body. The instantaneous angular velocity is
+(∂v/∂x)dx dt
+dx dt = ∂v
+∂x = −∂u
+∂y .
+We can now easily see that the component ωz of 1
+2 curl v in Eq. (3.27), known as the
+angular velocity of the velocity field, represents the instantaneous angular velocity of the rigid body rotation and that ωz = 0. In the general case when ∂u/∂y = −∂v/∂x, the fluid element rotates and is simultaneously deformed. We can interpret the term
+ε ̇xy = ε ̇yx = 1
+2
+( ∂u
+∂y + ∂v
+∂x
+)
+as a deformation and
+ωz = 1
+2
+( ∂v
+∂x − ∂u
+∂y
+)
+as a rigid body rotation. Because Eqs. (3.23) and (3.25) are linear, it can be concluded that the general case can be obtained by superposition of the two simple cases mentioned. Therefore, for two neighbouring points A and B in a fluid with velocity field v (x, y, z), we can decompose their motion uniquely into four components as follows:
+(a) a pure translation, described by the velocity components u, v, w of v; (b) a rigid body rotation, described by the components ωx, ωy, ωz of 1
+2 curl v;
+(c) a volume dilatation, described by e ̇ = div v, with linear dilatations ε ̇x, ε ̇y, ε ̇z in the directions of the three axes; (d) a deformation, given by the three components ε ̇xy, ε ̇xz, ε ̇yz with mixed indices.
+
+
+62 3. Field Equations for Flows of Newtonian Fluids
+Only the final two motions lead to a deformation of the fluid element about the reference point A; the first two merely lead to a change in position. The elements of the matrix (3.26) represent the components of a symmetric tensor called the rate of deformation tensor; its mathematical properties are analogous to the similarly symmetric stress tensor. It is known from the theory of elasticity, cf. L. Hopf (1927), A.E.H. Love (1952), and from general tensor algebra that three orthogonal axes which determine three perpendicular planes and thus a preferred Cartesian coordinate system can be assigned to every symmetric tensor. In this coordinate system, the stress vector (or the rate of deformation vector) is perpendicular to one plane, i.e. parallel to one axis. When such a coordinate system is chosen, the matrices (3.15) or (3.26) retain only their diagonal elements. Using a bar ( ̄) to denote the values of the components affected, we obtain the matrices
+( σ ̄x 0 0 0 σ ̄y 0 0 0 σ ̄z
+)
+and
+(  ̄ε ̇ 0 0
+0 ε ̄ ̇y 0
+0 0  ̄ε ̇z
+)
+. (3.32)
+Recall that such a coordinate transformation does not change the trace of the matrix, so that
+σx + σy + σz = σ ̄x + σ ̄y + σ ̄z (= −3p) (3.33)
+and
+ε ̇x + ε ̇y + ε ̇z = ε ̄ ̇x + ε ̄ ̇y + ε ̄ ̇z (= e ̇ = div v) . (3.34)
+As has already been mentioned, these quantities are invariants of the tensors. In two such coordinate systems (both denoted with a bar), stresses occur in the fluid in two perpendicular directions and the surface elements are displaced in two perpendicular directions, as shown in Figs. 3.4a and 3.4b. This of course does not imply that there are no shear stresses in some other plane, or that the element remains undeformed.
+Fig. 3.4. Main axes for the stresses (a) and for the rate of deformation (b)
+3.6 Relation Between Stresses and Rate of Deformation
+We emphasise again here that the equations which couple the surface forces to the flow field can only be obtained from the interpretation of experimental results and that here we treat only isotropic Newtonian fluids. The ideas of the previous section have given us the necessary mathematical tools to allow these relations to be stated precisely. If a fluid is at rest, there are no tangential stresses and the normal stresses are equal to the negative pressure, which is identical to the thermodynamic
+
+
+3.6 Relation Between Stresses and Rate of Deformation 63
+pressure. If the fluid is in motion, the equation of state still determines the pressure at every point (“principle of local state”, cf. J. Kestin (1966a)). It was therefore useful to introduce the viscous stress tensor corresponding to Eq. (3.19), cf. Eq. (3.22), since its components are due only to the motion and vanish at rest. From the explanations in the previous section, we can assume that the components of the viscous stress tensor only depend on the components of the rate of deformation tensor and not explicitly on the velocity components u, v, w, or on the components of the angular velocity vector ωx, ωy, ωz. This is the same as saying that the instantaneous translation (components of motion (a)) as well as the instantaneous rigid body rotation (components of motion (b)) of a fluid element do not generate any surface stresses apart from the pressure components already stated. This statement is a precise formulation of the local conditions observed when a finite fluid volume carries out a general motion which is the same as that of an equivalent rigid body. Therefore, we conclude from this that the components of the viscous stress tensor τij can only depend on the velocity gradients ∂u/∂x . . . ∂w/∂z in suitable combinations. These relations must be linear. They must remain unchanged when the coordinate system is rotated, and, because of the isotropy, when the axes are exchanged. The isotropy also requires that the main axes of the stress tensor coincide with the axes of the rate of deformation tensor at all points in the field. In order to achieve this, an arbitrary point in the field is chosen and the local coordinate system x ̄, y ̄, z ̄ so chosen that its axes lie along the main axes of the stress tensor. Let the velocity components in this system be u ̄, v ̄, w ̄.
+From this we see that the isotropy can only be conserved if each of the three normal stresses τ ̄xx, τ ̄yy, τ ̄zz depend only on those components of the rate of deformation tensor in the same directions, and on the sum of these three components. Therefore we obtain the following ansatz, with expressions which only contain the spatial derivatives of the velocity components:
+τ ̄xx = λ
+( ∂u ̄
+∂x ̄ + ∂v ̄
+∂y ̄ + ∂w ̄
+∂z ̄
+)
++ 2μ ∂u ̄
+∂x ̄
+τ ̄yy = λ
+( ∂u ̄
+∂x ̄ + ∂v ̄
+∂y ̄ + ∂w ̄
+∂z ̄
+)
++ 2μ ∂v ̄
+∂y ̄ (3.35)
+τ ̄zz = λ
+( ∂u ̄
+∂x ̄ + ∂v ̄
+∂y ̄ + ∂w ̄
+∂z ̄
+)
++ 2μ ∂w ̄
+∂z ̄ .
+The quantities u ̄, v ̄, w ̄ and ωx, ωy, ωz do not appear in these equations, for reasons explained earlier. The final term in each expression is the linear dilatation, i.e. a change in shape, and the first term is the volume dilatation, i.e. a change in volume; this is equivalent to a change in density. The factor 2 in the final term has been introduced in order to identify μ with the viscosity introduced in Chap. 1 (cf. Fig. 1.1). The proportionality factors μ and λ
+
+
+64 3. Field Equations for Flows of Newtonian Fluids
+must, because of the isotropy, have the same values in each of the equations (3.35). It can easily be seen that swapping any of the three pairs of axes of the quantities (u ̄, x ̄), (v ̄, y ̄), (w ̄, z ̄) leaves these equations unchanged. Indeed this has to be the case for an isotropic medium. In addition, Eq. (3.35) is the only combination of the spatial derivatives which has the required properties. If the reader cannot see this immediately, the proof can be found using tensor calculus, or from W. Prager (1961), p. 88. The relations in Eq. (3.35) can be written down for any system of coordinates by applying a general rotation using a suitable linear transformation. The explicit calculation will not be given here. It is tedious to carry out directly, but it becomes simple if tensor calculus is used. Useful formulae for the direct calculation are to be found in L. Hopf (1927), H. Lamb (1932), A.E.H. Love (1952), while the calculation using tensor calculus is given by W. Prager (1961). This calculation transforms the system (3.35) to
+τxx = λ div v + 2μ ∂u
+∂x
+τyy = λ div v + 2μ ∂v
+∂y (3.36)
+τzz = λ div v + 2μ ∂w
+∂z ,
+τxy = τyx = μ
+( ∂v
+∂x + ∂u
+∂y
+)
+τyz = τzy = μ
+(∂w
+∂y + ∂v
+∂z
+)
+(3.37)
+τzx = τxz = μ
+(∂u
+∂z + ∂w
+∂x
+) .
+The abbreviation div v has been used here. Note that the indices x, y, z, the velocity components u, v, w and the coordinates x, y, z undergo cyclic exchange. If we apply these equations to the simple flow in Fig. 1.1, we obtain Eq. (1.2), thus confirming that the general equations above reduce to Newton’s law of friction and are indeed a suitable generalisation. Here we note that the factor μ is identical to the viscosity of the fluid discussed in Sect. 1.2; in fact this also justifies the factor 2 introduced into Eq. (3.35). The physical justification of the second factor λ requires further discussion. We note, however, that it can only be meaningful for compressible fluids, since, for incompressible fluids, div v = 0 means that the terms proportional to λ vanish identically.
+
+
+3.7 Stokes Hypothesis 65
+3.7 Stokes Hypothesis
+Even though the problem we are discussing now arose more than one and a half centuries ago, the physical interpretation of the factor λ in Eq. (3.35) and (3.36) for flows where div v is non–zero is still being discussed today. In the equations of motion its value is determined using a hypothesis by G.G. Stokes (1849). We shall first of all not concern ourselves with the physical laws on which the Stokes hypothesis is based, but merely state the result. We assume that the following relation exists between the two physical properties:
+3λ + 2μ = 0 or λ = − 2
+3 μ . (3.38)
+This sets the value of λ in relation to the viscosity μ. Thus the number of physical properties which characterise the stress field in a compressible fluid is reduced from two to one, hence to the same number as for an incompressible fluid. If we introduce this value of λ into Eq. (3.19) and Eq. (3.36), we obtain the normal components of the stress tensor to be
+σx = −p − 2
+3 μ div v + 2μ ∂u
+∂x
+σy = −p − 2
+3 μ div v + 2μ ∂v
+∂y (3.38a)
+σz = −p − 2
+3 μ div v + 2μ ∂w
+∂z .
+The components τxy, τxz and τyz of the stress tensor are unaffected by the Stokes hypothesis, cf. Eq. (3.37). Although Eq. (3.38) must be viewed as a pure hypothesis, or even as an educated guess, the equations of motion arising from inserting Eq. (3.38) can be accepted because they have been confirmed by an exceedingly large number of experiments, sometimes in extreme conditions, as will be realised by the reader on completing this book. These equations of motion are a very good description of actual physical processes. The components of the viscous stress tensor represent those stresses which lead to dissipation in an isothermal flow, whereas other aspects of dissipation in the temperature field are due to heat conduction, cf. Sect. 3.10. Further, since the factor λ only appears in the normal stresses τxx, τyy, τzz which also contain the thermodynamic pressure Eq. (3.19), it is clear that the physical meaning of the factor λ is connected with the mechanism of dissipation if the fluid volume is changed by a finite amount, and with the relation between the stress tensor and the thermodynamic pressure. At this point it should be noted that if λ and μ are proportional, all terms containing λ as a factor can be neglected in boundary–layer theory. As M. Van Dyke (1962c) showed, these terms do not even play any role in second order boundary–layer theory, cf. Chap. 14.
+
+
+66 3. Field Equations for Flows of Newtonian Fluids
+3.8 Bulk Viscosity and Thermodynamic Pressure
+We shall now return to the earlier general discussion without assuming that the Stokes hypothesis Eq. (3.38) is valid. We shall restrict ourselves to the case without shear stresses, since their physical interpretation and origin are clear. Consider a fluid system where a normal stress σ ̄ acts equally on all its boundaries, e.g. a sphere as in Fig. 3.5a.
+Fig. 3.5. (a) Quasistatic compression; (b) oscillatory motion of a spherically shaped fluid mass
+If there is no motion, the normal stress is equal to but in the opposite direction to the thermodynamic pressure p. In the case of motion, adding the three equations (3.35), and using Eq. (3.19) yields
+σ ̄ = −p +
+(
+λ+ 2
+3μ
+)
+div v , (3.39)
+reiterating the fact explained earlier. Now we have assumed a quasi–static motion whose velocity is small compared to the spreading velocity of pressure perturbations, so that there is uniform pressure in the spherical fluid element. The question now arises of what this relation implies in a general flow field. If the system is compressed quasi–statically and reversibly the previous case again holds, since asymptotically div v = 0. In such a case, the work per unit time and unit volume in a thermodynamic reversible process, cf. Sect. 3.10, Eq. (3.54), becomes
+W ̇
+dV = −p div v . (3.40)
+For finite values of div v and in the case of compression, expansion or oscillation at finite amplitudes, the average stress σ ̄ and the pressure −p are equal only if the coefficient
+μ′ = λ + 2
+3 μ (3.41)
+vanishes identically (the Stokes hypothesis). If this is not the case, σ ̄ and −p are
+not equal. If μ′ = 0, the oscillatory motion of the spherically symmetric system in Fig. 3.5b leads to dissipation, even if the temperature in the volume of gas remains constant. The same is true of finite expansion and compression too. For this reason, the coefficient μ′ is called the bulk viscosity: it is the property which (in analogy to the normal viscosity μ in the case of deformation) is responsible for the energy dissipation in a fluid of smooth temperature distribution due to a finite change in volume. The bulk viscosity is therefore a second physical property of a compressible,
+
+
+3.8 Bulk Viscosity and Thermodynamic Pressure 67
+isotropic Newtonian fluid. It appears in the constitutive relations (3.36) and must be measured in addition to the coefficient μ. It is clear that
+μ′ = 0 requires that p = −σ ̄ , μ′ = 0 requires that p = −σ ̄ .
+The assumption of the Stokes hypothesis is equivalent to the assumption that the thermodynamic pressure is equal to the value of the invariant “one third of the sum of the normal stresses”, even if finite compression and expansion take place. In addition it is equivalent to the assumption that the oscillatory motion of a large spherical system is reversible as long as it is isothermal. More about the thermodynamics of irreversible processes in a continuous system can be found in work by J. Meixner; H.G. Reik (1959), I. Prigogine (1947) and S.R. De Groot; P. Mazur (1962).
+In order to determine under what conditions the bulk viscosity of a compressible fluid vanishes, experimental investigations must be carried out, or else the methods of statistical thermodynamics which allow the transport coefficients to be worked out from fundamentals must be used. Direct measurement of the bulk viscosity is difficult to carry out, and to this end there are as yet no reliable results. Statistical methods for high density gases are not yet so well developed that they yield useful insights into these problems. It is probable that the bulk viscosity vanishes for low density gases, i.e. under conditions where only binary collisions occur. In dense gases, the numerical value of the bulk viscosity seems to be very small. This means that Eq. (3.40) describes the work done in a continuous system without shear stresses exceedingly well even here, and that dissipation at constant temperature, even in the general case, only arises via the deviator stresses. Thus we are again led to the Stokes hypothesis, and to Eq. (3.39). This does not hold for fluids where the relaxation processes are due to local deviations from chemical equilibrium, cf. S.R. De Groot; P. Mazur (1962), J. Meixner, H.G. Reik (1959) and L.D. Landau; E.M. Lifschitz (1966). Such relaxation processes occur when, for example, chemical reactions take place, or, in gases with complex structures, when a relatively slow energy transition takes place between the translation and rotation degrees of freedom on the one hand and the oscillation degrees of freedom on the other. If relaxation processes occur, the thermodynamic pressure is no longer equal to one third of the sum of the main diagonal elements of the stress tensor.
+It is occasionally objected that the assumption of the Stokes hypothesis, i.e. the assumption that the bulk viscosity of the Newtonian fluid vanishes, does not agree with the intuitive idea that a fluid sphere whose boundary oscillates as a result of compression and expansion (Fig. 3.5b) dissipates energy. This would indeed be true because, as is easily seen from above, the dissipative part of the stress field vanishes under such conditions. However we must not forget that such a conclusion is only valid if the temperature of the gas sphere is kept constant throughout the oscillation. Normally this is impossible. Because of this, an oscillating gas sphere will soon develop a temperature field and energy will be dissipated in the direction of the temperature gradient, cf. J. Kestin (1966b).
+Sound absorption is one of those processes where the bulk viscosity plays a role (cf. L.D. Landau; E.M. Lifshitz (1966), J. Meixner, H.G. Reik (1959)), as is the shock wave (cf. F.M. White (1974)). The question of whether the bulk viscosity vanishes for monatomic gases has been dealt with in the work of C. Truesdell (1954).
+
+
+68 3. Field Equations for Flows of Newtonian Fluids
+3.9 Navier–Stokes Equations
+If the transport equations (constitutive relations) corresponding to Eqs. (3.36) and (3.37) are inserted into the momentum equation Eq. (3.20), and the Stokes hypothesis Eq. (3.38) taken into account, we find the following equations of motion in Cartesian coordinates:
+Du
+Dt = fx − ∂p
+∂x + ∂
+∂x
+[ μ
+(
+2∂u
+∂x − 2
+3 div v
+)]
++∂
+∂y
+[ μ
+(∂u
+∂y + ∂v
+∂x
+)]
++∂
+∂z
+[ μ
+(∂w
+∂x + ∂u
+∂z
+)]
+Dv
+Dt = fy − ∂p
+∂y + ∂
+∂y
+[ μ
+(
+2∂v
+∂y − 2
+3 div v
+)]
+(3.42)
++∂
+∂z
+[ μ
+(∂v
+∂z + ∂w
+∂y
+)]
++∂
+∂x
+[ μ
+(∂u
+∂y + ∂v
+∂x
+)]
+Dw
+Dt = fz − ∂p
+∂z + ∂
+∂z
+[ μ
+(
+2∂w
+∂z − 2
+3 div v
+)]
++∂
+∂x
+[ μ
+(∂w
+∂x + ∂u
+∂z
+)]
++∂
+∂y
+[ μ
+(∂v
+∂z + ∂w
+∂y
+)] .
+These differential equations are known as the Navier–Stokes equations. Using symbolic notation, they can be given in a form which is valid in all coordinate systems:
+Dv
+Dt = f − grad p + Div τ (3.43)
+with
+τ =μ
+(
+2ε ̇ − 2
+3 δ div v
+)
+, (3.44)
+where δ is the Kronecker unit tensor (δij = 1 for i = j, δij = 0 for i = j). The above equations were first set up by M. Navier (1827) and S.D. Poisson (1831) on the basis of considerations on the action of the intermolecular forces. Later the same equations were derived without such hypotheses by B. De St.Venant (1843) and G.G. Stokes (1849), using, as a basis, the same assumptions made here, that the normal and shear stresses are linear functions of the rate of deformation, as had already been introduced via Newton’s law of friction. Since the Stokes assumption for the friction forces is purely empirical, one cannot be a priori sure that the Navier–Stokes equations correctly describe the motion of a fluid. Therefore they must be checked, something that can only be done experimentally. It must, however, be taken into account that the great mathematical difficulty of these equations means that only very few
+
+
+3.10 Energy Equation 69
+solutions are known where the convective terms interact quite generally with the friction terms. However, known particular solutions, such as laminar pipe flow and the boundary–layer solutions which will be discussed later, agree so well with the experimental results that there is hardly any doubt about the general validity of the Navier–Stokes equations. As a consequence of the Navier–Stokes equations, an equation for the mechanical energy can be derived. If the Navier–Stokes equation in the x direction is multiplied by u, that in the y direction by v and that in the z direction by w, and the sum of these equations formed, the energy equation for the mechanical energy is found. This reads, in vector notation:
+D (1
+2 v2)
+Dt = vf − v grad p + v Div τ . (3.45)
+If we assume that a steady potential ψ (i.e. independent of t) exists for the volume force f , with
+f = − grad ψ , (3.46)
+then it follows from Eq. (3.45) that
+D (1
+2v2 + ψ)
+Dt = −v grad p + v Div τ . (3.47)
+As stated at the start of Chap. 3, in addition to the continuity equation and the Navier–Stokes equations, the (thermal) energy equation containing the first law of thermodynamics is also required for a complete description of flow fields. This will be derived in the following section.
+3.10 Energy Equation
+In order to set up the equation for the energy balance in a flow, we consider a fluid particle of mass dM = dV and volume dV = dx dy dz in a Cartesian coordinate system and follow it on its path in the flow. According to the first law of thermodynamics, the gain in total energy DEt (the index t stands for total energy) in unit time Dt is equal to the heat supplied to the mass element Q ̇ Dt and the work done on the element W ̇ Dt. Therefore we have:
+DEt
+Dt = Q ̇ + W ̇
+[J
+s
+] .
+energy change heat flux power
+(3.48)
+DEt/Dt is the substantial change in Et, and this generally has both a local part and a convective part, cf. Eq. (3.4). Heat can be supplied both by heat conduction and by heat radiation. For small temperature differences, however, the radiation is generally not considerable, and will thus not be taken into account in this book. See summaries of gas radiation dynamics by S.I. Pai (1965), E.M. Sparrow; R.D. Cess (1966), W. Schneider (1968), W.G. Vincenti;
+
+
+70 3. Field Equations for Flows of Newtonian Fluids
+S.C. Traugott (1971). In principle, heat could also be supplied via heat sources in the mass element. Such heat sources could occur in the form of chemical reactions (combustion) or of Joule’s heat in electromagnetic gas dynamics, cf. the following literature: J.A. Shercliff (1965), P.A. Libby; F.A. Williams (1980), F. Bartlma ̈ (1975). These heat sources will also not be taken into account in this book. The heat transferred per unit surface area and per unit time is denoted by the heat flux vector q (qx, qy, qz), ([q] = J/m2 s). Therefore the heat entering the volume element (Fig. 3.1) through the surface element perpendicular to the x direction per unit time is qx dy dz, while that exiting per unit time is [qx + (∂qx/∂x) dx] dy dz. Therefore the supply of heat in the x direction in time Dt is
+Q ̇ x = − ∂qx
+∂x dx dy dz = − ∂qx
+∂x dV .
+Thus the total supply of heat is
+Q ̇ = −dV
+( ∂qx
+∂x + ∂qy
+∂y + ∂qz
+∂z
+)
+(3.49)
+or
+Q ̇ = −dV div q . (3.50)
+Hence the supply of heat is proportional to the divergence of the heat flux vector q. Since the divergence is a measure for the source strength of the vector field in question, the term Q ̇ is strictly speaking also a source term. The total energy Et generally consists of three parts: the internal energy dM · e, the kinetic energy 1
+2 dM · v2 and the potential energy dM · ψ. The following statement holds:
+dEt = dM et = dV et = dV
+(
+e+ 1
+2v2 + ψ
+)
+. (3.51)
+Here e ([e] = m2/s2) is the specific internal energy. Thus the substantial change of the total energy follows as
+DEt
+Dt = dV Det
+Dt = dV D (e + 1
+2v2 + ψ)
+Dt . (3.52)
+To determine the power W ̇ we first consider, for example, the work done on the mass element within the time Dt by σx. From Fig. 3.1 we have
+W ̇ σx = dy dz
+[
+−uσx +
+(
+u + ∂u
+∂x dx
+)(
+σx + ∂σx
+∂x dx
+)]
+= dV ∂
+∂x (uσx) .
+
+
+3.10 Energy Equation 71
+Thus the total rate of work done by all normal and tangential stresses on the mass element of volume dV is:
+W ̇ = dV
+[∂
+∂x (uσx + vτxy + wτxz) + ∂
+∂y (uτyx + vσy + wτyz)
++∂
+∂z (uτzx + vτzy + wσz)
+]
+. (3.53)
+Here σx, σy . . . , τxy are the total stresses in Eqs. (3.13) and (3.15). In symbolic form (vector notation) this can also be written as
+W ̇ = dV div(σv) . (3.54)
+If we insert Eqs. (3.50), (3.52) and (3.54) into Eq. (3.48), we find the energy equation
+D (e + 1
+2v2 + ψ)
+Dt = −divq + div(σv) . (3.55)
+The change in total energy, i.e. the sum of the internal, kinetic and potential energies, is equal to the energy supplied by heat conduction and the work done by the surface forces. If we take the relation between the stress tensor σ and the viscous stress tensor τ into account, cf. Eq. (3.19),
+σ = −δp + τ , (3.56)
+then Eq. (3.55) can also be written as follows:
+∂( et)
+∂t = −div[(p + et)v − τ v + q ] . (3.57)
+Therefore the local change in the total energy can be identified as the divergence of a vector field. A balance law formulated in this way has, it is said, a divergence form or a strictly conservative form.
+The energy equation Eq. (3.55) can also be formulated as a balance equation for the specific total enthalpy
+ht = et + p (3.58)
+as follows Dht
+Dt = −div q + ∂p
+∂t + div(τ v) . (3.59)
+By subtracting the energy equation (3.47) for the mechanical energy derived in the previous section from Eq. (3.55) for the specific total energy et, the balance law for the internal energy can be found:
+De
+Dt = −div q − p div v + Φ . (3.60)
+
+
+72 3. Field Equations for Flows of Newtonian Fluids
+Here the dissipation function is:
+Φ = div(τ v) − v Div τ (3.61)
+Taking the transport equations Eq. (3.36) and Eq. (3.37) and the Stokes hypothesis Eq. (3.38) into account, we find in Cartesian coordinates
+Φ
+μ =2
+[( ∂u
+∂x
+)2
++
+(∂v ∂y
+)2
++
+(∂w ∂z
+)2]
++
+( ∂v
+∂x + ∂u
+∂y
+)2
++
+(∂w
+∂y + ∂v
+∂z
+)2
++
+(∂u
+∂z + ∂w
+∂x
+)2
+−2
+3
+(∂u
+∂x + ∂v
+∂y + ∂w
+∂z
+)2
+(3.62)
+or
+Φ
+μ=2
+3
+[( ∂u
+∂x − ∂v
+∂y
+)2
++
+( ∂v
+∂y − ∂w
+∂z
+)2
++
+(∂w
+∂z − ∂u
+∂x
+)2]
++
+( ∂v
+∂x + ∂u
+∂y
+)2
++
+(∂w
+∂y + ∂v
+∂z
+)2
++
+(∂u
+∂z + ∂w
+∂x
+)2
+. (3.63)
+Other forms of the energy equation are also possible. As a balance of the specific enthalpy
+h = e + p (3.64)
+it reads Dh
+Dt = −div q + Dp
+Dt + Φ . (3.65)
+If we use the generally valid relation, cf. J. Kestin (1966a),
+Dh
+Dt = cp
+DT
+Dt + 1 − βT Dp
+Dt (3.66)
+with the isobaric specific heat capacity cp, ([cp] = J/kg K) and the coefficient of thermal expansion
+β = −1 (∂
+∂T
+)
+p
+, (3.67)
+the energy equation can be formulated as a balance for the temperature field:
+cp
+DT
+Dt = −div q + βT Dp
+Dt + Φ . (3.68)
+This form of the energy equation will be used in preference in what follows. Finally, because
+T Ds
+Dt = Dh
+Dt − 1 Dp
+Dt
+
+
+3.11 Equations of Motion for Arbitrary Coordinate Systems 73
+a balance equation for the specific entropy s can also be derived from the energy equation Eq. (3.65):
+Ds
+Dt = −div
+(q
+T
+)
+−q
+T 2 grad T + 1
+T Φ . (3.69)
+Apart from the divergence term, there are also two source terms on the right hand side of this equation which imply entropy production. According to the second law of thermodynamics, the entropy of an adiabatic system (q = 0 at the boundary of the system) cannot decrease. Therefore the terms Φ/T and −(q/T 2) grad T are not negative. Because of Eq. (3.63) it therefore follows that the viscosity μ must be positive. It follows from the second condition that the thermal conductivity λ, which is still to be introduced, must also be positive. One more transport equation which connects the heat flux vector q with the temperature field must now by added to the balance equation for the energy. From J.B. Fourier (1822) we have for the heat conduction
+q = −λ grad T , (3.70)
+where the thermal conductivity λ ([λ] = J/m s K) is a positive physical property. Therefore the energy equation finally reads
+cp
+DT
+Dt = div(λ grad T ) + βT Dp
+Dt + Φ . (3.71)
+For plane flows this is written in Cartesian coordinates as:
+cp
+(∂T
+∂t + u∂T
+∂x + v ∂T
+∂y
+)
+=∂
+∂x
+(
+λ∂T
+∂x
+)
++∂
+∂y
+(
+λ∂T
+∂y
+)
++βT
+(∂p
+∂t + u∂p
+∂x + v ∂p
+∂y
+)
++ Φ (3.72)
+with the dissipation function Φ as in Eq. (3.62) or Eq. (3.63).
+3.11 Equations of Motion for Arbitrary Coordinate Systems (Summary)
+The derivation of the equations of motion will first be carried out for Cartesian coordinate systems. By using symbolic notation (vector notation), the equations of motion can be written in general terms as follows:
+D
+Dt = − div v , (3.73)
+Dv
+Dt = f − grad p + Div
+[ μ
+(
+2ε ̇ − 2
+3 δ div v
+)]
+, (3.74)
+cp
+DT
+Dt = div(λ grad T ) + βT Dp
+Dt + Φ . (3.75)
+
+
+74 3. Field Equations for Flows of Newtonian Fluids
+We have Da
+Dt = ∂a
+∂t + v · grad a (3.76)
+with a = , T or p and
+Dv
+Dt = ∂v
+∂t + grad
+(1
+2v2
+)
+− v × curl v . (3.77)
+Frequently the operators div and grad are written using the Nabla operator ∇, as, e.g. ∇v ≡ div v, ∇p ≡ grad p. There are therefore five equations for the five unknowns: p, T and the three components of v. They are valid providing the following conditions hold:
+a) The fluid is a continuum.
+b) The stress tensor is symmetric. (The fluid has no local torque proportional to the volume, as would be possible in an electric field.)
+c) The fluid is isotropic. (There is no locally preferred direction, i.e. the main axes of the stress and rate of deformation tensors are the same.)
+d) The fluid is Newtonian. (There is a linear relation between the stress tensor and the rate of deformation tensor.)
+e) The Stokes hypothesis is valid, i.e. the bulk viscosity vanishes. (No relaxation processes may occur, i.e. the relaxation times for internal transfer processes must be very small compared to the deformation times.)
+f) The “principle of the local state” is valid. (At each point in the flow field the same equations of state hold as in a system at rest, i.e. there are no local or time gradients of the state variables present in the equations of state, cf. J. Kestin (1968).
+g) The local thermodynamic state can be described using two state variables. If we choose p and T as these state variables, multi–phase flows are then not possible. Further, diffusion processes are not taken into account, since more than two state variables are required for their description. Diffusion processes will be discussed briefly in Sect. 11.3.
+h) The Fourier law for the heat flux vector holds.
+i) Heat sources (e.g. radiation, chemical reactions, Joule’s heat) are neglected.
+
+
+3.11 Equations of Motion for Arbitrary Coordinate Systems 75
+The following boundary conditions at the walls are used with the equations of motion:
+a) No–slip condition: The velocity component vt tangential to the wall vanishes at the wall. This is a condition which was discovered empirically, and which is satisfied very well within the framework of continuum mechanics. S. Goldstein (1965) has presented details of the no–slip condition, also from a historical point of view. At extremely low gas densities the no–slip condition is no longer satisfied: these are then slip flows, cf. S.A. Schaaf; P.L. Chambre ́ (1958). The equations of motion are still valid for these flows, but the boundary conditions have to be changed appropriately.
+b) Normal component of the velocity The velocity component vn normal to the wall generally vanishes where the walls are impermeable. However they are non–zero if the wall is permeable and fluid is either sucked or blown through it, cf. Chap. 11. The normal components of the velocity can also be non–zero in the case of non–porous walls if mass transfer processes are taken into account, as in the case of binary or multi–fluid flows. For example, condensation corresponds to suction and evaporation to blowing, cf. Chap. 11.
+c) Temperature field The number of different possible boundary conditions for the temperature field is much greater than the number for the velocity field. The principal different types of boundary conditions follow:
+Boundary conditions of the first kind: The wall temperature is prescribed. In the continuum regime, the fluid takes on the wall temperature at the wall. In flows of very low density gases (slip flows), however, there is a jump in temperature, cf. S.A. Schaaf; P.L. Chambre ́ (1958).
+Boundary conditions of the second kind: The heat flux at the wall qw = (q · n)w, where n is the normal unit vector at the wall, is prescribed.
+Boundary conditions of the third kind: These can be a coupling of the wall temperature and the heat flux at the wall. However, such boundary conditions could also be coupling conditions with the temperature field inside the wall.
+The equations of motion make up a system of five partial differential equations for p, T and the three components of the velocity vector v. In order to complete the system, the equations of state for the density (p, T ) and the
+
+
+76 3. Field Equations for Flows of Newtonian Fluids
+isobaric specific heat capacity cp(p, T ), as well as relations for the viscosity μ(p, T ) and the thermal conductivity λ(p, T ) must all be at hand. The coefficient of thermal expansion β which is also in the energy equation is found by partial differentiation of the equation of state for (p, T ). The physical properties mentioned are summarised for some technically important fluids in Table 3.1. More data for water can be found in W. Wagner; A. Kruse (1998). The table (for pR = 1 bar) also gives an overview of the changes in the physical properties with respect to temperature and pressure. The dependencies of the quantities μ, λ and cp on the pressure are generally very small and can mostly be neglected. This table also shows that, in the case of liquids, the temperature dependence of the viscosity is important. Note that the changes in the physical properties close to the critical point can take on considerable values.
+3.12 Equations of Motion for Cartesian Coordinates in Index Notation
+In order to simplify the equations of motion, index notation is frequently used for vectors and tensors in Cartesian coordinates. Here Einstein’s summation convention must be taken into account: if a given index appears twice, then it must be summed from one to three. The position vector has the components xi and the velocity vector the components ui.
+The equations of motion read:
+continuity equation:
+∂
+∂t + ∂
+∂xi
+( ui) = 0 . (3.78)
+momentum equation:
+∂
+∂t ( ui) + ∂
+∂xj
+( uiuj ) = fi − ∂p
+∂xi
++ ∂τij
+∂xj
+(3.79)
+with
+τij = μ
+( ∂ui ∂xj
++ ∂uj
+∂xi
+−2
+3 δij
+∂u ∂x
+)
+. (3.80)
+energy equation:
+∂
+∂t ( cpT ) + ∂
+∂xj
+( cpuj T )
+= βT
+(∂p
+∂t + uj
+∂p ∂xj
+)
++ τij
+∂ui ∂xj
++∂
+∂xj
+(
+λ ∂T
+∂xj
+)
+. (3.81)
+The most concise way of writing the equations of motion is the strictly conservative form. With fi = − ∂ψ/∂xi they read:
+∂U
+∂t + ∂Fj
+∂xj
+= Qj (3.82)
+The historical development of the Navier-Stokes equations has been described by E. Krause (2014).
+
+
+3.12 Equations of Motion for Cartesian Coordinates in Index Notation 77
+Table 3.1. Physical properties, temperature dependence Eq. (4.30), pressure dependence Eq. (10.26), of air, water, oil, sodium at
+pR = 1bar
+Fluid Air Water Oil (Shell Voluta 919) Sodium (liquid)
+T /K 293 473 773 273 293 343 273 293 343 473 673 873
+T /◦C 20 200 500 0 20 70 0 20 70 200 400 600
+/ kg
+m3 1.188 0.736 0.450 999.8 998.2 977.8 889 875 840 903.6 856.2 808.2
+μ/ 10−6kg
+ms 18.185 25.850 35.800 1791.5 1001.6 403.9 94489 28372 4886 452.2 284.6 207.6
+ν/ 10−6m2
+s 15.307 35.122 79.556 1.792 1.004 0.413 106.29 32.43 5.817 0.500 0.332 0.257
+λ/ 10−3W
+mK 25.721 38.660 56.346 561.1 598.5 663.1 131.7 130.2 126.6 82000 72200 62400
+cp/ kJ
+kgK 1.014 1.048 1.096 4.219 4.185 4.188 1.817 1.892 2.081 1.339 1.279 1.255
+Pr 0.717 0.702 0.696 13.47 7.00 2.55 1303.6 412.28 80.35 0.0074 0.0050 0.0042
+temperature dependence
+−βT = K −1.000 −1.000 −1.000 0.018 −0.061 −0.200 −0.215 −0.234 −0.286 −0.123 −0.187 −0.261
+Kμ 0.775 0.696 0.633 −9.264 −7.239 −4.758 −19.970 −14.690 −8.403 −1.536 −1.116 −1.301
+Kλ 0.891 0.809 0.726 0.924 0.872 0.404 −0.513 −0.166 −0.199 −0.308 −0.454 −0.616
+Kc 0.068 0.076 0.108 −0.226 −0.050 0.052 0.567 0.584 0.622 −0.104 −0.111 −0.018
+pressure dependence
+ ̃
+K 1 1 1 5 · 10−5 5 · 10−5 5 · 10−5
+ ̃
+Kμ 6 · 10−4 3 · 10−4 1 · 10−4 −1 · 10−4 −5 · 10−5 6 · 10−5
+ ̃
+Kλ 2 · 10−3 9 · 10−4 4 · 10−4 1 · 10−4 8 · 10−5 8 · 10−5
+ ̃
+Kc 2 · 10−3 5 · 10−4 2 · 10−4 −1 · 10−4 −7 · 10−5 −5 · 10−5
+
+
+78 3. Field Equations for Flows of Newtonian Fluids
+with the matrices
+U=
+(
+ui et
+)
+, Fj =
+( uj
+uiuj + δij p − τij uj ( et + p) − u τ j − λ ∂T
+∂xj
+)
+, Qj =
+(0
+fi 0
+)
+, (3.83)
+where the viscous stress tensor τij is given by Eq. (3.22) and the specific total energy et by Eq. (3.51). With a general coordinate transformation from xj to ξj(xj) of the form
+ξ1 = ξ1(x1, x2, x3)
+ξ2 = ξ2(x1, x2, x3) (3.84) ξ3 = ξ3(x1, x2, x3)
+the equations of motion can again be brought to strictly conservative form. H. Viviand (1974) and M. Vinokur (1974) have shown that, for Qj = 0, Eq. (3.82) becomes
+∂U∗
+∂t + ∂Fj∗
+∂ξj
+= 0 (3.85)
+with
+U∗ = 1
+J U , (3.86)
+F∗
+j =1
+J Fi
+∂ξj ∂xi
+, (3.87)
+where J is the Jacobi determinant:
+J = ∂(ξ1, ξ2, ξ3)
+∂(x1, x2, x3) =
+∣∣∣∣∣∣∣∣∣∣
+∂ξ1 ∂x1
+∂ξ1 ∂x2
+∂ξ1
+∂x3
+∂ξ2 ∂x1
+∂ξ2 ∂x2
+∂ξ2
+∂x3
+∂ξ3 ∂x1
+∂ξ3 ∂x2
+∂ξ3 ∂x3
+∣∣∣∣∣∣∣∣∣∣
+. (3.88)

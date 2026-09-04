@@ -1,0 +1,442 @@
+Skip to main content
+Skip to article
+View PDF
+Download full issue
+Journal of Materials Processing Technology
+Volume 123, Issue 1, 10 April 2002, Pages 133-145
+Roughness parameters
+Author links open overlay panel
+E.S. Gadelmawla a
+,
+M.M. Koura b
+,
+T.M.A. Maksoud c
+,
+I.M. Elewa a
+,
+H.H. Soliman d
+Show more
+Share
+Cite
+https://doi.org/10.1016/S0924-0136(02)00060-2
+Get rights and content
+Full text access
+Abstract
+Surface roughness evaluation is very important for many fundamental problems such as friction, contact deformation, heat and electric current conduction, tightness of contact joints and positional accuracy. For this reason surface roughness has been the subject of experimental and theoretical investigations for many decades. The real surface geometry is so complicated that a finite number of parameters cannot provide a full description. If the number of parameters used is increased, a more accurate description can be obtained. This is one of the reasons for introducing new parameters for surface evaluation. Surface roughness parameters are normally categorised into three groups according to its functionality. These groups are defined as amplitude parameters, spacing parameters, and hybrid parameters. This paper illustrates the definitions and the mathematical formulae for about 59 of the roughness parameters. This collection of surface roughness parameter was used in a new software computer vision package called SurfVision developed by the authors. In the package, these definitions were extended to calculate the 3D surface topography of different specimens.
+Previous
+Next
+Keywords
+Surface roughnessSurface topographyComputer vision
+Abbreviations
+2D, two-dimensional3D, three-dimensionalADC, amplitude density curveBAC, bearing area curveBMP, type of graphics format stands for windows bitmapCCS, Cartesian coordinate systemCLA, centre line averageCPP, contact probe profilometryEVC, Elf VGA capture boardFFT, fast Fourier transformationGIF, type of graphics format stands for graphics interchange formath/v, horizontal/vertical resolutionHSL, hue, saturation, lightness
+Nomenclature
+ACF
+auto correlation function (μm)
+ADF
+amplitude density function (–)
+g
+number of inflection points (Inflections)
+Hs
+roughness height skewness (–)
+Hu
+roughness height uniformity (–)
+HSC
+high spot count (count(s))
+k
+profile solidity factor (–)
+lo
+relative length of the profile (–)
+m
+number of peaks in profile (peaks)
+n(0)
+number of intersections of the profile at the mean line (intersections)
+Pc
+peak count (count/cm)
+Ps
+roughness pitch skewness (–)
+Pu
+roughness pitch uniformity (–)
+PSD
+power spectral density (–)
+rp
+mean peak radius of curvature (μm)
+Ra
+arithmetic average height (μm)
+Rku
+Kurtosis (–)
+Rp
+maximum height of peaks (μm)
+Rpm
+mean height of peaks (μm)
+Rq
+root mean square roughness (μm)
+Rsk
+skewness (–)
+Rt, Rmax
+maximum height of the profile (μm)
+Rti
+maximum peak to valley height (μm)
+Rtm
+mean of maximum peak to valley height (μm)
+Rv
+maximum depth of valleys (μm)
+Rvm
+mean depth of valleys (μm)
+Ry
+largest peak to valley height (μm)
+Rz
+ten-point height (μm)
+R3y
+third point height (μm)
+R3z
+mean of the third point height (μm)
+RMS
+root mean square (μm)
+S
+mean spacing of adjacent peaks (μm)
+Sf
+stepness factor of the profile (–)
+Sm
+mean spacing at mean line (μm)
+S.D.
+standard deviation (–)
+tp
+bearing line length and bearing area curve (%)
+Wf
+waviness factor of the profile (–)
+Greek symbols
+β
+correlation length (μm)
+γ
+profile slope at mean line (°)
+Δa
+mean slope of the profile (°)
+Δq
+RMS slope of the profile (°)
+λa
+average wavelength (μm)
+λq
+RMS wave length (μm)
+1. Introduction
+Roughness parameters can be calculated in either two-dimensional (2D) or three-dimensional (3D) forms. 2D profile analysis has been widely used in science and engineering for more than half a century. In recent years, there was an increased need for 3D surface analysis. Recent publications [1], [2], [3], [4] emphasised the importance of 3D surface topography in science and engineering applications.
+3D roughness parameters are calculated for an area of the surface instead of a single line. Hence, in order to calculate the 3D roughness parameters, the SurfVision software considers an area from the surface to be tested and divides it into a number of sections. These sections represent a number of consequent profiles from the surface. The 2D roughness parameters then calculated for each section separately, and the average of each parameter is taken for all sections. This research presents all roughness parameters and their calculation methods.
+2. The amplitude parameters
+Amplitude parameters are the most important parameters to characterise surface topography. They are used to measure the vertical characteristics of the surface deviations. The following sections give a brief description for each parameter.
+2.1. Arithmetic average height (Ra)
+The arithmetic average height parameter, also known as the centre line average (CLA), is the most universally used roughness parameter for general quality control. It is defined as the average absolute deviation of the roughness irregularities from the mean line over one sampling length as shown in Fig. 1. This parameter is easy to define, easy to measure, and gives a good general description of height variations. It does not give any information about the wavelength and it is not sensitive to small changes in profile. The mathematical definition and the digital implementation of the arithmetic average height parameter are, respectively, as follows:
+Ra=1l∫0l|y(x)|dx
+Ra=1n∑i=1n|yi|
+Download: Download full-size image
+
+Fig. 1. Definition of the arithmetic average height (Ra).
+
+2.2. Root mean square roughness (Rq)
+This parameter is also known as RMS. It represents the standard deviation of the distribution of surface heights, so it is an important parameter to describe the surface roughness by statistical methods. This parameter is more sensitive than the arithmetic average height (Ra) to large deviation from the mean line.
+The mathematical definition and the digital implementation of this parameter are as follows:
+Rq=1l∫0l{y(x)}2dx
+Rq=1n∑i=1nyi2
+The RMS mean line is the line that divides the profile so that the sum of the squares of the deviations of the profile height from it is equal to zero.
+2.3. Ten-point height (Rz)
+This parameter is more sensitive to occasional high peaks or deep valleys than Ra. It is defined by two methods according to the definition system. The International ISO system defines this parameter as the difference in height between the average of the five highest peaks and the five lowest valleys along the assessment length of the profile.
+The German DIN system defines Rz as the average of the summation of the five highest peaks and the five lowest valleys along the assessment length of the profile. Fig. 2 shows the definition of the ten-point height parameter. The mathematical definitions of the two types of Rz are as follows:
+Rz(ISO)=1n∑i=1npi−∑i=1nvi
+Rz(DIN)=12n∑i=1npi+∑i=1nvi
+where n is the number of samples along the assessment length.
+Download: Download full-size image
+
+Fig. 2. Definition of the ten-point height parameter (Rz(ISO), Rz(DIN)).
+
+2.4. Maximum height of peaks (Rp)
+Rp is defined as the maximum height of the profile above the mean line within the assessment length as in Fig. 3. In the figure, Rp3 represents the Rp parameter.
+Download: Download full-size image
+
+Fig. 3. Definitions of the parameters Rp, Rv, Rpm, Rvm, Rt (Rmax).
+
+2.5. Maximum depth of valleys (Rv)
+Rv is defined as the maximum depth of the profile below the mean line within the assessment length as shown in Fig. 3. In the figure Rv4 represents the Rv parameter.
+2.6. Mean height of peaks (Rpm)
+Rpm is defined as the mean of the maximum height of peaks (Rp) obtained for each sampling length of the assessment length as shown in Fig. 3. This parameter can be calculated from the following equation:
+Rpm=1n∑i=1nRpi
+where n is the number of samples along the assessment length of the profile. From Fig. 3, Rpm=(Rp1+Rp2+Rp3+Rp4+Rp5)/5.
+2.7. Mean depth of valleys (Rvm)
+Rvm is defined as the mean of the maximum depth of valleys (Rv) obtained for each sampling length of the assessment length as shown in Fig. 3. This parameter can be calculated from the following equation:
+Rvm=1n∑i=1nvi
+where n is the number of samples along the assessment length of the profile. From Fig. 3, Rvm=(Rv1+Rv2+Rv3+Rv4+Rv5)/5.
+2.8. Maximum height of the profile (Rt or Rmax)
+This parameter is very sensitive to the high peaks or deep scratches. Rmax or Rt is defined as the vertical distance between the highest peak and the lowest valley along the assessment length of the profile. From Fig. 3, Rmax=Rp+Rv=Rp3+Rv4.
+2.9. Maximum peak to valley height (Rti)
+Rti is the vertical distance between the highest peak and the lowest valley for each sampling length of the profile. As the assessment length is divided into five sampling lengths, the maximum peak to valley height (Rti) can be defined, as shown in Fig. 4, as follows:
+Rti=Rpi+Rvi
+where i ranges from 1 to 5. From the figure, Rt1=Rp1+Rv1, Rt2=Rp2+Rv2+⋯, etc.
+Download: Download full-size image
+
+Fig. 4. Definition of the maximum peak to valley height parameters (Rti).
+
+2.10. Mean of maximum peak to valley height (Rtm)
+Rtm is defined as the mean of all maximum peak to valley heights obtained within the assessment length of the profile. From Fig. 4, the mathematical definition of this parameter is as follows:
+Rtm=1n∑i=1nRti
+where n is the number of samples along the assessment length of the profile. From the figure Rtm=(Rt1+Rt2+Rt3+Rt4+Rt5)/5.
+2.11. Largest peak to valley height (Ry)
+This parameter is defined as the largest value of the maximum peak to valley height parameters (Rti) along the assessment length. From Fig. 4, Ry=Rt3.
+2.12. Third point height (R3y)
+To calculate this parameter, the distance between the third highest peak and the third lowest valley is calculated for each sampling length, then the largest distance is considered as the third point height (R3y). From Fig. 5 the third point height parameter (R3y) is the maximum value of the five values of R3y1, R3y2, R3y3, R3y4, R3y5, that is R3y5.
+Download: Download full-size image
+
+Fig. 5. Definitions of the third point height parameters (R3y, R3z).
+
+2.13. Mean of the third point height (R3z)
+This parameter is the mean of the five third point height parameters (R3y1, R3y2, R3y3, R3y4, and R3y5). As shown in Fig. 5 R3z is equal to (R3y1+R3y2+R3y3+R3y4+R3y5)/5. The mathematical definition of this parameter is as follows:
+R3z=15∑i=15R3yi
+2.14. Profile solidity factor (k)
+The profile solidity factor (k) is defined as the ratio between the maximum depth of valleys and the maximum height of the profile. The mathematical definition of this parameter is as follows:
+k=RvRmax
+2.15. Skewness (Rsk)
+The skewness of a profile is the third central moment of profile amplitude probability density function, measured over the assessment length. It is used to measure the symmetry of the profile about the mean line. This parameter is sensitive to occasional deep valleys or high peaks. A symmetrical height distribution, i.e. with as many peaks as valleys, has zero skewness. Profiles with peaks removed or deep scratches have negative skewness. Profiles with valleys filled in or high peaks have positive skewness. This is shown in Fig. 6. The skewness parameter can be used to distinguish between two profiles having the same Ra or Rq values but with different shapes.
+Download: Download full-size image
+
+Fig. 6. Definition of skewness (Rsk) and the amplitude distribution curve.
+
+The value of skewness depends on whether the bulk of the material of the sample is above (negative skewed) or below (positive skewed) the mean line as shown in Fig. 6. The mathematical and the numerical formulas used to calculate the skewness of a profile, which has number of points N, are as follows:
+Rsk=1Rq3∫−∞∞y3p(y)dy
+Rsk=1NRq3∑i=1NYi3
+where Rq is the RMS roughness parameter and Yi the height of the profile at point number i.
+The skewness parameter can be used to differentiate between surfaces, which have different shapes and have the same value of Ra. In Fig. 6, although the two profiles may have the same value of Ra, they have different shapes.
+2.16. Kurtosis (Rku)
+Kurtosis coefficient is the fourth central moment of profile amplitude probability density function, measured over the assessment length. It describes the sharpness of the probability density of the profile. If Rku<3 the distribution curve is said to be platykurtoic and has relatively few high peaks and low valleys. If Rku>3 the distribution curve is said to be leptokurtoic and has relatively many high peaks and low valleys. Fig. 7 shows these two types of kurtosis.
+Download: Download full-size image
+
+Fig. 7. Definition of kurtosis (Rku) parameter.
+
+The mathematical and the numerical formula used to calculate the kurtosis of a profile with a number of points N are as follows:
+Rku=1Rq4∫−∞∞y4p(y)dy
+Rku=1NRq4∑i=1NYi4
+where Rq is the RMS roughness parameter and Yi the height of the profile at point number i.
+The skewness parameter can also be used to differentiate between surfaces, which have different shapes and have the same value of Ra. In Fig. 7, although the two profiles may have the same value of Ra, they have different shapes.
+2.17. Amplitude density function (ADF)
+The term amplitude density corresponds exactly to the term probability density in statistics. The ADF represents the distribution histogram of the profile heights. It can be found by plotting the density of the profile heights on the horizontal axis and the profile heights itself on the vertical axis as shown in Fig. 8.
+Download: Download full-size image
+
+Fig. 8. The ADF.
+
+To calculate the density of the profile heights, the amplitude scale is divided into small parts δy. The measure of the amplitude values found within δy, can be made by calculating all amplitude values between y and δy relative to the assessment length of the profile. The Amplitude density is hence defined by the following equation:
+p(y)=limδy→0P(y,y+δy)δy
+For surfaces produced by a truly random process, the ADF would be a Gaussian distribution of surface heights given by the following equation:
+ADF(y)=2πRq2exp−y22Rq2
+2.18. Auto correlation function (ACF)
+The ACF describes the general dependence of the values of the data at one position to their values at another position. It is considered a very useful tool for processing signals because it provides basic information about the relation between the wavelength and the amplitude properties of the surface. The ACF can be considered as a quantitative measure of the similarity between a laterally shifted and an unshifted version of the profile. The mathematical and numerical representations of this function are as follows:
+ACF(δx)=1L∫0Ly(x)y(x+δx)dx
+ACF(δx)=1N−1∑i=1Nyiyi+1
+where δx is the shift distance and yi the height of the profile at point number i.
+The ACF can be normalised to have a value of unity at a shift distance of zero. This suppresses any amplitude information in the ACF but allows a better comparison of the wavelength information in various profiles.
+2.19. Correlation length (β)
+This parameter is used to describe the correlation characteristics of the ACF. It is defined as the shortest distance in which the value of the ACF drops to a certain fraction, usually 10% of the zero shift value. Points on the surface profile that are separated by more than a correlation length may be considered as uncorrelated, i.e. portions of the surface represented by these points were produced by separate surface forming events. Correlation lengths may range from the infinite correlation length for a perfectly periodic wavelength to zero for a completely random waveform.
+2.20. Power spectral density (PSD)
+The PSD function is an important function for characterising both the asperity amplitudes and spacing. It is calculated by Fourier decomposition of the surface profile into its sinusoidal component spatial frequency (f). For a 2D surface profile it can be calculated from the following equation:
+PSD(f)=1L∫0Ly(x)exp(−i2πfx)dx2
+PSD=1N−1∑i=0N−1yie−j2πβi/N2
+where β is the correlation length.
+3. The spacing parameters
+The spacing parameters are those which measure the horizontal characteristics of the surface deviations. The spacing parameters are very important in some manufacturing operations, such as pressing sheet steel. In such case, evaluating the spacing parameters is necessary to obtain consistent lubrication when pressing the sheets, to avoid scoring and to prevent the appearance of the surface texture on the final product. One of the spacing parameter is the peak spacing, which can be an important factor in the performance of friction surfaces such as brake drums. By controlling the spacing parameters it is possible to obtain better bounding of finishes, more uniform finish of plating and painting. The SurfVision software calculates the most known spacing parameters. The following sections give more information about the spacing parameters.
+3.1. High spot count (HSC)
+The HSC parameter is defined as the number of high regions of the profile above the mean line, or above a line parallel to the mean line, per unit length along the assessment length. Fig. 9 shows how to calculate the HSC parameter above a selected level. The profile shown in the figure has eight HSC.
+Download: Download full-size image
+
+Fig. 9. Calculating HSC above a selected level.
+
+3.2. Peak count (Pc)
+The importance of the peak count parameter appears in some manufacturing processes such as forming, painting, or coating surfaces. It is defined as the number of local peaks, which is projected through a selectable band located above and below the mean line by the same distance. The number of peak count is determined along the assessment length and the result is given in peaks per centimetre (or inch). If the assessment length is less than 1 cm, the results should be multiplied by a factor to get the peak count per centimetre.
+As shown in Fig. 10 the peak count is determined only for the closed areas of the profile, in which the profile intersects each the upper and the lower bands in two points at least. The profile shown in the figure has four peak counts.
+Download: Download full-size image
+
+Fig. 10. Calculating the peak count (Pc) parameter within a selected band.
+
+3.3. Mean spacing of adjacent local peaks (S)
+This parameter is defined as the average spacing of adjacent local peaks of the profile measured along the assessment length. The local peak is defined as the highest part of the profile measured between two adjacent minima and is only measured if the vertical distance between the adjacent peaks is greater than or equal to 10% of the Rt of the profile. Fig. 11 shows how to measure this parameter. This parameter can be calculated from the following equation:
+S=1N∑i=1nSi
+where N is the number of local peaks along the profile.
+Download: Download full-size image
+
+Fig. 11. Calculating the mean spacing of adjacent local peaks (S).
+
+3.4. Mean spacing at mean line (Sm)
+This parameter is defined as the mean spacing between profile peaks at the mean line and is denoted as (Sm). The profile peak is the highest point of the profile between upwards and downwards crossing the mean line. Fig. 12 shows how to measure the mean spacing at mean line parameter.
+Download: Download full-size image
+
+Fig. 12. Calculating the mean spacing at mean line (Sm).
+
+This parameter can be calculated from the following equation:
+Sm=1N∑i=1nSi
+where N is the number of profile peaks at the mean line.
+The difference between the two types of mean spacing parameters, S and Sm, is that the first parameter (S) is measured at the highest peaks of the profile, whilst the second parameter (Sm) is measured at the intersection of the profile with the mean line.
+3.5. Number of intersections of the profile at the mean line (n (0))
+This parameter calculates the number of intersections of the profile with the mean line measured for each centimetre length of the profile. As shown in Fig. 13, the number of intersections of the profile at the mean line can be calculated from the following equation:
+n(0)=1L∑i=1nci
+where L is the profile length (in cm).
+Download: Download full-size image
+
+Fig. 13. Calculating the number of intersections of the profile at mean line.
+
+3.6. Number of peaks in the profile (m)
+This parameter calculates the number of peaks of the profile per unit length (centimetre or inch). Peaks are counted only when the distance between the current peak and the preceding one is greater that 10% of the maximum height of the profile (Rt). In Fig. 14 the three little peaks, which follow the peaks m2, m3 and m4 are neglected because the distance between each peak and the preceding one in too small.
+Download: Download full-size image
+
+Fig. 14. Calculating the number of peaks along the profile.
+
+The number of peaks can be calculated from the following equation:
+m=1L∑i=1nmi
+where L is the profile length (in cm).
+3.7. Number of inflection points (g)
+This parameter calculates the number of inflection points of the profile per unit length (centimetre or inch). An inflection point occurs when the profile changes its direction at any point as shown in Fig. 15. This parameter can be calculated from the following equation:
+g=1L∑i=1ngi
+where L is the profile length (in cm).
+Download: Download full-size image
+
+Fig. 15. Calculating the number of inflection points along the profile.
+
+3.8. Mean radius of asperities (rp)
+The mean peak radius of curvature parameter is defined as the average of the principle curvatures of the peaks within the assessment length. This parameter can be calculated by calculating the radius of curvature for each peak along the profile, then calculating the average of these radii of curvatures.
+The radius of curvature for a peak (rpi) can be calculated from the following equation:
+rpi=2yi−yi−1−yi+1l2
+where yi is the height of the peak at which the peak radius of curvature (rpi) is to be calculated, yi−1 the height of the preceding peak, and yi+1 the height of the next peak. The mean peak radius of curvature (r), then can be calculated from the following equation:
+rp=1n−2∑i=1n−21ρpi
+4. The hybrid parameters
+The hybrid property is a combination of amplitude and spacing. Any changes, which occur in either amplitude or spacing, may have effects on the hybrid property. In tribology analysis, surface slope, surface curvature and developed interfacial area are considered to be important factors, which influence the tribological properties of surfaces. The following sections describe the most common hybrid parameters.
+4.1. Profile slope at mean line (γ)
+This parameter represents the profile slope at the mean line. It can be calculated by calculating the individual slopes of the profile at each intersection with mean line, then calculating the average of these slopes as shown in Fig. 16. The numerical equation for calculating the profile slope at the mean line is as follows:
+γ=1n−1∑i=1n−1tan−1δyiδxi
+where n is the total number of intersections of the profile with the mean line along the assessment length.
+Download: Download full-size image
+
+Fig. 16. Calculating the profile slope at mean line.
+
+4.2. Mean slope of the profile (Δa)
+This parameter is defined as the mean absolute profile slope over the assessment length. Many mechanical properties such as friction, elastic contact, reflectance, fatigue crack initiation and hydrodynamic lubrication affect this parameter. This parameter can be calculated by calculating all slopes between each two successive points of the profile, then calculating the average of these slopes. As shown in Fig. 17, the mathematical and numerical formulas of calculating the mean slope parameter are as follows:
+Δa=1L∫0Ldydxdx,
+Δa=1n−1∑i=1n−1δyiδxi
+Download: Download full-size image
+
+Fig. 17. Calculating the mean slope of the profile.
+
+4.3. RMS slope of the profile (Δq)
+This parameter is the root mean square of the mean slope of the profile. The mathematical and numerical formulas for calculating this parameter are as follows:
+Δq=1L∫0L(θ(x)−θ̇)2dx,θ̇=1L∫0Lθ(x)dx
+Δq=1n−1∑i=1n−1δyiδxi−θm2,θm=1n−1∑i=1n−1yi−yi−1xi−xi−1
+4.4. Average wavelength (λa)
+The average wavelength parameter is a measure of the spacing between local peaks and valleys, taking into consideration their relative amplitudes and individual spatial frequencies. This parameter can be calculated from the following equation:
+λa=2πRaΔa
+where Ra is the arithmetic average height and Δa the mean slope of the profile.
+4.5. RMS wave length (λq)
+The RMS wavelength parameter is similar to the average wavelength (λa) parameter. It is defined as the root mean of the measure of the spacing between local peaks and valleys, taking into consideration their relative amplitudes and individual spatial frequencies. It can be calculated from the following equation:
+λq=2πRqΔq
+4.6. Relative length of the profile (lo)
+The relative length of the profile (lo) is estimated by calculating the lengths of the individual parts of the profile then dividing the summation of these lengths by the assessment length as shown in Fig. 18. This parameter can be calculated from the following equation:
+lo=1L∑i=1nli
+where li is the length of line number i in the profile, and it can be calculated from the following equation:
+li=(yi+1−yi)2+δxi2
+where yi is the profile height at point number i, and δx the horizontal distance between each two successive points.
+Download: Download full-size image
+
+Fig. 18. Calculating the relative length the profile (lo).
+
+4.7. Bearing area length (tp) and bearing area curve
+The bearing line length parameter is defined as the percentage of solid material of the profile lying at a certain height. This parameter is a useful indicator of the effective contact area as the surface wear. From Fig. 19, the bearing area length can be calculated from the following equation:
+tp=1L∑i=1nli
+where L is the assessment length of the profile.
+Download: Download full-size image
+
+Fig. 19. Calculating the bearing area length (tp) of the profile.
+
+By calculating the bearing line length at different heights of the profile, the bearing area curve (BAC) can be drawn, as shown in Fig. 20. The horizontal axis represents the bearing area lengths as a percent from the total assessment length of the profile and the vertical axis represents the heights of the profile.
+Download: Download full-size image
+
+Fig. 20. The BAC of a profile.
+
+The interpretation of the BAC is that if the surface worn down to a certain height the appropriate figure would represent the fraction of solid contact at that height. The bearing curve has the S-shape appearance for many surfaces. It represents the cumulative form of the height distribution histogram described in sections 1–17.
+4.8. Stepness factor of the profile (Sf)
+The stepness factor of the profile is defined as the ratio between the arithmetic average height (Ra) and the mean spacing of the profile (Sm). It can be calculated from the following equation:
+Sf=RaSm
+4.9. Waviness factor of the profile (Wf)
+The Waviness factor of the profile is defined as the ratio between the total range of the entire profile and the arithmetic average height (Ra). From Fig. 18 this parameter can be calculated from the following equation:
+Wf=1Ra∑i=1n−1li
+where n is the number of points along the profile.
+4.10. Roughness height uniformity (Hu)
+The roughness height uniformity of a profile (Hu) is defined as the standard deviations of the individual height values of the profile constituting the arithmetic average height (Ra). To calculate this parameter the standard deviation is calculated for the profile heights in each sampling length, then the average of the standard deviations is taken. With reference to Fig. 1, the (Hu) parameter can be calculated from the following equation:
+Hu=1NS∑i=0NS−1S.D.(yi∗NPS+1,yi∗NPS+2,yi∗NPS+3,…,yi∗NPS+NPS)
+where NS is the number of samples along the assessment length, NPS the number of points in each sample,
+Yi∗NPS+#
+ the profile’s height at point number (i∗NPS+#).
+4.11. Roughness height skewness (Hs)
+The roughness height skewness (Hs) of a profile is defined as the median of the histogram height values divided by the arithmetic average height (Ra). To calculate this parameter the median is calculated for the profile heights in each sampling length, then the average of the medians is taken and divided by Ra. With reference to Fig. 1, the (Hs) parameter can be calculated from the following equation:
+Hs=1NSRa∑i=0NS−1median(yi∗NPS+1,yi∗NPS+2,yi∗NPS+3,…,yi∗NPS+NPS)
+where NS, NPS,
+Yi∗NPS+#
+ are defined as in the previous section.
+4.12. Roughness pitch uniformity (Pu)
+The roughness pitch uniformity (Pu) of a profile is defined as the standard deviation of the individual mean spacing values constituting the mean spacing parameter (Sm). With reference to Fig. 12, the roughness pitch uniformity parameter can be calculated from the following equation:
+Pu=S.D.(S1,S2,S3,…,Sn)
+4.13. Roughness pitch skewness (Ps)
+The roughness pitch skewness (Ps) of a profile is defined as the median of the mean spacing values, along the profile, divided by the mean spacing parameter (Sm). With reference to Fig. 12, the roughness pitch skewness parameter can be calculated from the following equation:
+Ps=median(S1,S2,S3,…,Sn)
+5. Results sample
+The proposed vision system SurfVision is divided into two parts, hardware and software. The hardware includes an IBM compatible personal computer with Windows 95 operating system, frame grabber as a capturing board, charge coupled device (CCD) camera, and a microscope. The software was written especially to perform different analysis on the captured images. The proposed software was written using Microsoft Visual C++ version 5.0 and it could run under Windows 95, Windows 98 or Windows NT operating systems.
+The software package was developed totally in-house such that it can be used independently without referring to any other software. The package includes the unique feature of containing a multitude of surface roughness parameters that are not included in any other package hitherto. Also, the software allows the building up of a data base information system during surface inspection. This database was made to allow the future inclusion of artificial intelligence module for automated calibration of the system. The software is fully integrated with AutoCAD and MS Word. The software has the professional look interface that is used by most Windows 95 application.
+Standard surface roughness specimens were used to test the proposed vision system. These specimens are the RUBERT surface roughness scales no. 24 MK II, which has 12 pieces with different values of Ra for different machining operations. Three specimens with the same manufacturing process and different values of Ra were selected as shown in the table below. The values of Ra for the three specimens were given in μin. The corresponding values in μm were calculated by multiplying each value by (0.0254) as shown in the table below.
+Specimen number	Value of Ra (μin.)	Calculated Ra (μm)	Manufacturing process	Accuracy (%)
+1	2	0.0508	Lapping	±10
+2	4	0.1016	Lapping	±10
+3	8	0.2032	Lapping	±10
+After checking the accuracy of the system for calculating the Ra parameter, 59 roughness parameters were calculated for the six sections using both the imperial and the metric units. The above table shows the symbols, the description and the value of the calculated roughness parameters for the 2 μin. specimen.
+6. Conclusion
+Different manufacturing processes produce different surface characteristics. Also, different applications require different surface properties. Surface parameters are therefore different and wide-ranging. Each of these parameters indicates a particular property of the surface and it could be the most important for the particular application. This research presented the definitions and the mathematical formulae for about 59 of the surface roughness parameters. This collection of surface roughness parameter was used in a new software computer vision package called SurfVision developed by the authors. In the package, these definitions were extended to calculate the 3D surface topography of different specimens.
+References
+[1]
+U.B. Abou El-Atta, Surface roughness assessment in three-dimensional machined surfaces for some manufacturing operations, M.Sc. Thesis, Industrial Production Engineering Department, University of Mansoura, Egypt, 1991.
+Google Scholar
+[2]
+E.C. Teague, F.E. Scire, S.M. Baker, S.W. Jensen
+3-Dimensional stylus profilometry
+Wear, 83 (1) (1982), pp. 1-12
+View PDF
+View articleView in ScopusGoogle Scholar
+[3]
+T. Pancewicz, I. Mruk
+Holographic contouring for determination of three-dimensional description of surface roughness
+Wear, 199 (1) (1996), pp. 127-131
+View PDF
+View articleView in ScopusGoogle Scholar
+[4]
+B.G. Rosen
+Representation of 3-dimensional surface topography in CAD-systems and image processing
+Int. J. Mach. Tools Manuf., 33 (3) (1993), pp. 307-320
+View PDF
+View articleView in ScopusGoogle Scholar
+Cited by (1898)
+Nanoscale pore structure and mechanical property analysis of coal: An insight combining AFM and SEM images
+2020, Fuel
+Show abstract
+Effect of roughness, wettability and morphology of engineered titanium surfaces on osteoblast-like cell adhesion
+2010, Colloids and Surfaces A Physicochemical and Engineering Aspects
+Show abstract
+The influence of nano-scale surface roughness on bacterial adhesion to ultrafine-grained titanium
+2010, Biomaterials
+Show abstract
+Influence of surface preparation on roughness parameters, friction and wear
+2009, Wear
+Show abstract
+Advances in engineered surfaces for functional performance
+2008, CIRP Annals Manufacturing Technology
+Show abstract
+Efficient organic solar cells with solution-processed silver nanowire electrodes
+2011, Advanced Materials
+View all citing articles on Scopus
+View Abstract
+Copyright © 2002 Elsevier Science B.V. All rights reserved.
+About ScienceDirect
+Remote access
+Contact and support
+Terms and conditions
+Privacy policy
+
+Cookies are used by this site.Cookie Settings
+
+All content on this site: Copyright © 2025 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply.

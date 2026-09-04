@@ -1,0 +1,459 @@
+sustainability
+Article
+Framework for Life Cycle Sustainability Assessment of Additive Manufacturing
+Inês Ribeiro 1, Florinda Matos 2 , Celeste Jacinto 3 , Hafiz Salman 1, Gonçalo Cardeal 1,* , Helena Carvalho 3 , Radu Godina 3 and Paulo Peças 1
+1 IDMEC, Instituto Superior Técnico, Universidade de Lisboa, 1049-001 Lisboa, Portugal; ines.ribeiro@ist.utl.pt (I.R.); hafiz.salman@tecnico.ulisboa.pt (H.S.); ppecas@tecnico.ulisboa.pt (P.P.) 2 DINÂMIA’CET—IUL—Centre for Socioeconomic Change and Territorial Studies, 1649-026 Lisboa, Portugal; florinda.matos@iscte-iul.pt 3 UNIDEMI, Department of Mechanical and Industrial Engineering, Faculty of Science and Technology (FCT), Universidade NOVA de Lisboa, 2829-516 Caparica, Portugal; mcj@fct.unl.pt (C.J.); hmlc@fct.unl.pt (H.C.); r.godina@fct.unl.pt (R.G.) * Correspondence: goncalo.cardeal@tecnico.ulisboa.pt
+Received: 9 December 2019; Accepted: 24 January 2020; Published: 27 January 2020
+Abstract: Additive manufacturing (AM) is a group of technologies that create objects by adding material layer upon layer, in precise geometric shapes. They are amongst the most disruptive technologies nowadays, potentially changing value chains from the design process to the end-of-life, providing significant advantages over traditional manufacturing processes in terms of flexibility in design and production and waste minimization. Nevertheless, sustainability assessment should also be included in the research agenda as these technologies affect the People, the Planet and the Profit: the three-bottom line (3BL) assessment framework. Moreover, AM sustainability depends on each product and context that strengthens the need for its assessment through the 3BL framework. This paper explores the literature on AM sustainability, and the results are mapped in a framework aiming to support comprehensive assessments of the AM impacts in the 3BL dimensions by companies and researchers. To sustain the coherence of boundaries, three life cycle methods are proposed, each one for a specific dimension of the 3BL analysis, and two illustrative case studies are shown to exemplify the model.
+Keywords: additive manufacturing; sustainability assessment; framework; social; environmental; economic
+1. Introduction
+Industry 4.0 (I4.0) introduces a series of opportunities for sustainable manufacturing, amongst which is the introduction of advanced manufacturing technologies with higher efficiency [1]. However, as with any significant change in paradigm, some risks arise with potential impact on the three pillars of sustainability. The introduction of I4.0 technologies, in particular, advanced manufacturing techniques, is said to result in higher efficiency, particularly from the resource standpoint, however, it will result in significant investments, higher material consumption (to manufacture machines) and changes in the workforce [2]. Often seen as necessary to achieve I4.0 are the additive manufacturing (AM) technologies, that allow the production of three-dimensional objects one layer at a time [3]. AM is one of the most relevant manufacturing technologies that are emerging in a context where the markets are rapidly changing and the consumers are more exigent, demanding for more diversified and customized products. AM can provide many significant advantages over traditional processes, such as design is no
+Sustainability 2020, 12, 929; doi:10.3390/su12030929 www.mdpi.com/journal/sustainability
+
+
+Sustainability 2020, 12, 929 2 of 22
+longer limited by traditional machining constraints, fine-tuned customization can be implemented on small production lots, components which previously had to be constructed from multiple parts may be consolidated, geometries can be optimized and lightweight components can be created, while waste is reduced due to the possibility of creating spare parts on-demand [4–7]. So, this technology becomes a source of product and process innovation, enabling customized and personalized products (e.g. aircraft, dental restorations, medical implants, automobiles, replacement of old spare parts no longer available and even fashion products). It provides a new set of opportunities for developing new ways to create and capture value [8,9]. In addition, it could be applied along the different product life cycle stages (in a cradle-to-grave logic, from the extraction of the raw materials to the product end-of-life) or even for extending the product life through multiple usage cycles in a cradle-to-cradle logic [10]. Hence, AM is a highly flexible technology that enables a responsive process to the market needs at a minimal cost. Because of these benefits, large, small and medium-sized companies, belonging to several manufacturing sectors (e.g. aerospace and biomedical parts), are incorporating AM in their processes [11,12]. The AM technology proposes major challenges to business models because it is a new approach to traditional business models [13], creating new value propositions in what is related to the cost structure (e.g. using economies of scale or small lots) and to the value chain configuration (e.g. local production or distributed production). According to Gebler et al. [14], the adoption of AM and other advanced manufacturing technologies appears in a context where value chains are shorter, smaller, more localized, more collaborative and offer significant sustainability benefits aligned with the triple-bottom-line (3BL), this is, the utilization of resources without environmental and ecological impacts, minimizing the impacts of human activities and generating economic value. To this extent, AM technology promises to reduce material consumption, eliminate waste, eliminate transport by decentralizing production and create value by allowing customization of products and customer engagement [3,15–17]. Garetti and Taisch [18] define sustainable manufacturing as “the ability to smartly use natural resources for manufacturing, by creating products and solutions that, owing to new technology, regulatory measures and coherent social behaviours, are able to satisfy economic, environmental and social objectives, thus preserving the environment, while continuing to improve the quality of human life”. As stressed by Despeisse et al. [19] the AM technology could be a driver for the implementation of sustainability principles. However, its impacts on industrial systems are still to be understood. To this end, it is necessary to consider multiple factors influencing the 3BL and to define proper boundaries for the system under analysis (e.g. using the life-cycle concept). The literature provides ample evidence of the AM impact on sustainability, considering a life cycle analysis [7,14,20,21]. The life cycle analysis covers the entire product’s phases, namely: Design, Material Preparation, Production, Post Processing, Use and End of Life. However, until now, there is a lack of studies integrating the environmental, economic and social dimensions. Previous studies provide some guidance for AM implementation. Holmström et al. [22] consider that by introducing direct digital manufacturing technologies such as AM, companies change their operational practices, which, in the last instance, will develop dynamic capabilities, generating sustainable outcomes. However, they do not disclose which operational practices should be selected, in which activities and how companies could assess their sustainability performance. Mellor et al. [23] for instance, propose a framework composed of strategic, technological, organizational, operational and supply chain factors. Nevertheless, the authors recognize the need to compare different implementation scenarios and map these approaches using the factors suggested in their framework. Ford and Despeisse [7] also referred the necessity to improve knowledge on sustainability impacts of the AM processes. Moreover, as highlighted by Jin et al. [24], the lack of data hampers the development of assessment methodologies, such as the Life Cycle Assessment (LCA), for advanced manufacturing. To overcome these research gaps, this paper intends to answer the main research question: How can companies use AM to improve their sustainability performance? This question, in turn, can be subdivided into the following items: What operational practices can be used in AM context? Which
+
+
+Sustainability 2020, 12, 929 3 of 22
+tools or methods can be used to measure the AM impact on 3BL dimensions (economic, environmental, and social)? What data would assist with such measurement? To address the above research questions, this paper proposes a tool to map the AM impacts in the 3BL dimensions. First, a critical review of the literature of relevant research articles on AM and LCA, Life Cycle Cost (LCC) and Social Life Cycle Assessment (S-LCA) was done. An inductive research approach was used to develop a mapping tool from the literature review. The tool is composed of three main blocks: (i) life cycle stages, (ii) assessment tools or methods, (iii) input data. Furthermore, an assessment framework at an abstract level is presented depicting the three main dimensions considering the integration of the three aspects of sustainability (economic, environmental and social) through the integration of LCA, LCC and S-LCA. This is also a contribution to the need to carry out research on the social aspects of sustainability [20,25]. The paper is organized in a way that following the introduction, a bibliographic review on AM is described and summarized into a table with advantages and limitations found in the literature. A methodological review is then presented regarding research on economic, environmental and social sustainability analysis on AM. These findings are then mapped in matrixes and a framework is presented on the assessment of AM sustainability. Finally, some illustrative applications of the model are presented through case studies and conclusions are drawn.
+2. Additive Manufacturing Background
+AM is a significant technological innovation in the field of advanced manufacturing. A number of benefits of AM have been discussed in the literature, ranging from design flexibility, product customization, and minimum raw material utilization to shortening of supply chains and potential reduction of overall environmental impacts [5,26–31]. A comprehensive definition of AM is given by American Society of Testing and Materials as “A process of joining materials to make objects from a 3D model data, usually layer upon layer, as opposed to subtractive manufacturing technologies” [32]. Therefore, no tools such as moulds and dies are required to manufacture products with this technology, making it economically suitable for customized, high added value and complex products with low to medium production volumes. AM is a disruptive technology which is transforming the landscape of advanced manufacturing and there are numerous industries which are benefiting from this technology. According to the Wohlers Report [33], some of the main target industries include consumer products, aerospace, automotive, electronics, power generation and medical industries. AM is known with many different names in the literature such as rapid manufacturing, solid freeform fabrication, direct digital manufacturing, layered manufacturing or 3D printing [34]. Based upon the state of the printed matter, i.e. liquid, solid and powder, AM can be subdivided into several technologies such as fused deposition modelling (FDM), selective laser sintering (SLS), stereo-lithography (SLA), electron beam melting (EBM) and binder jetting, as shown in Figure 1 [35]. Depending upon the technology, there are different types of materials that can be used in AM including plastics, metals, ceramics and composites. However, there is yet a limited availability of materials prepared in a suitable way to make parts by AM. As in many cases, certain special characteristics are required such as mechanical strength, electrical conductivity, thermal endurance, durability and multi-functionality; therefore, researchers are trying to introduce novel materials and materials prepared/processed to achieve the aforementioned characteristics aiming to fulfil this gap.
+
+
+Sustainability 2020, 12, 929 4 of 22 Sustainability 2019, 11, x FOR PEER REVIEW 4 of 24
+Figure 1. Classification of additive manufacturing processes, adapted from [35].
+However, AM is still in its critical phase where several challenges exist at the same time, forming different knowledge fields including lack of standardization, reliability, intellectual property issues, productivity, process stability, product quality, materials and environmental challenges, etc. In addition, most documented disadvantages or limitations of AM are limited material suitability and poor surface finish and/or quality of the part. Furthermore, some advantages and opportunities may then lead to some challenges, namely regarding supply chain issues. The potential for shorter supply chains with localized production may lead to challenges in previously established supply chains by introducing changes in suppliers. Furthermore, there are some aspects found in the literature that are within other at an upper level, namely, the material optimization and lower energy consumption lead to reduced environmental impact.
+Table 1. Advantages and limitations of additive manufacturing.
+Advantages and opportunities References Design flexibility with complex geometries [5,7,26,29,36–43] Reduced environmental impact [7,27,38–40,42,44–48] Maximum material utilization with lesser waste generation [6,7,27,29,36,41,43,44,46,48,49] Less energy consumption and CO2 emissions [6,14,26,38,39,43–45,48] CAD-to-part in single process without the necessity of tools [6,7,36,41,43,49–51] Design for customization [27,28,36,41,42,44] Shortening of supply chains because of localized produc
+tion [5,26,36,43–45]
+Light weight design and production [6,26,28,29,43,50] Reduced “time-to-market” [14,46] No overproduction in stocks [7] Potential benefits on worker health [5] Equal possibilities to all participants and markets [5] Potentially higher profit due to customer-specific solutions [5] Limitations and challenges
+Limited material suitability [7,36,37,50,52] Poor surface finish [36–38,50,52] Issues of liability and security [7,53] Lack of standardization [7,37] Intellectual property right issues [7,37] Time consumption because of longer manufacturing time [5,37]
+Power Based
+Solid Based
+L iquid Based
+AM Pr ocesses
+Sint er ing
+M elt ing
+Bi ndi ng
+L aminat ion Pr ocess
+Ext r usion Pr ocess
+Polymer izat ion
+Select ive L aser Sint er ing
+Elect r on Beam M elt ing
+L aser Powder For ming
+3D Pr int ing
+Binding Jet t ing
+Ult r asonic AM
+L aminat ed Object M anufact ur ing
+Fused Deposit ion M odelling
+St er eolit hogr aphy
+Digit al L ight Pr ocessing
+Figure 1. Classification of additive manufacturing processes, adapted from [35].
+The potential advantages of AM are listed in Table 1, namely, less energy consumption and CO2 emissions, maximum material utilization with lesser waste generation, lightweight design and production, CAD-to-part production in a single process without the necessity of tools, shortening of supply chains because of localized production, and reduced environmental impact.
+Table 1. Advantages and limitations of additive manufacturing.
+Advantages and Opportunities References
+Design flexibility with complex geometries [5,7,26,29,36–43]
+Reduced environmental impact [7,27,38–40,42,44–48]
+Maximum material utilization with lesser waste generation [6,7,27,29,36,41,43,44,46,48,49]
+Less energy consumption and CO2 emissions [6,14,26,38,39,43–45,48]
+CAD-to-part in single process without the necessity of tools [6,7,36,41,43,49–51]
+Design for customization [27,28,36,41,42,44]
+Shortening of supply chains because of localized production [5,26,36,43–45]
+Light weight design and production [6,26,28,29,43,50]
+Reduced “time-to-market” [14,46]
+No overproduction in stocks [7]
+Potential benefits on worker health [5]
+Equal possibilities to all participants and markets [5]
+Potentially higher profit due to customer-specific solutions [5]
+Limitations and Challenges
+Limited material suitability [7,36,37,50,52]
+Poor surface finish [36–38,50,52]
+Issues of liability and security [7,53]
+Lack of standardization [7,37]
+
+
+Sustainability 2020, 12, 929 5 of 22
+Table 1. Cont.
+Advantages and Opportunities References
+Intellectual property right issues [7,37]
+Time consumption because of longer manufacturing time [5,37]
+Need for quality control [5,50]
+Supply chain management issues [45]
+Need for new regulations [50]
+More raw material consumption and waste due to misuse [50]
+Speed of production [7]
+Higher specific energy consumption [5]
+Less suitable for high volume production [54]
+No clear evidence on the employment situation [5]
+Decline in imports and exports [45]
+However, AM is still in its critical phase where several challenges exist at the same time, forming different knowledge fields including lack of standardization, reliability, intellectual property issues, productivity, process stability, product quality, materials and environmental challenges, etc. In addition, most documented disadvantages or limitations of AM are limited material suitability and poor surface finish and/or quality of the part. Furthermore, some advantages and opportunities may then lead to some challenges, namely regarding supply chain issues. The potential for shorter supply chains with localized production may lead to challenges in previously established supply chains by introducing changes in suppliers. Furthermore, there are some aspects found in the literature that are within other at an upper level, namely, the material optimization and lower energy consumption lead to reduced environmental impact. The increasing awareness about environmental protection among society is causing a growing number of research initiatives in the field of manufacturing to make it more sustainable for society and the environment. One of the most common definitions of sustainability and sustainable development was provided by the Brundtland commission [55]: “Sustainable development is the development that meets the needs of the present without compromising the ability of future generations to meet their own needs”. Being an immature technology, AM imposes numerous implications in terms of economic, environmental and social sustainability. Many authors have done research on energy consumption, cost estimation and environmental and social impacts of several AM technologies [14,46,49,56–58]. However, more research and development in sustainability implications of AM is required to fully integrate AM in modern-day manufacturing industries. As an emerging technology, AM still have high costs and there remain many technical problems that affect the efficiency of the productive system. According to Chen et al. [5], the manufacturing systems are tightly interconnected and this is also true for AM. AM techniques compete with traditional processes, especially for small to medium batch production of metal parts. Machines and materials for AM are still expensive but the cost of these will decrease as AM becomes a more commonly used technology [7]. Also, materials used for AM are not necessarily greener than materials used in traditional manufacturing technique and the process may require high energy consumption [7].
+2.1. Literature Review Methodology
+In this article, three dimensions of sustainability of AM has been explored from the literature which are environmental, economic and societal. For this purpose, a critical review of the literature was performed. According to Grant and Booth [59] critical review goes beyond a mere description of
+
+
+Sustainability 2020, 12, 929 6 of 22
+literature and includes a degree of analysis, typically results in a model comprising the most significant items in the field. In the first step, the criteria for including papers in the review were defined. Candidates for inclusion were published journal articles (not limited to particular journals). Three classes of keywords were selected: (i) keywords related to AM: “additive manufacturing”, “3-D printing”, “3D print”, “solid freeform fabrication”, “direct digital manufacturing”, “laser sintering”, “layer manufacturing”, “laser melting”, “additive layer manufacturing”, “additive laser manufacturing”, “design for sustainable additive manufacturing”, “rapid prototyping”, “rapid manufacturing”, “rapid tooling”; (ii) keywords related to the 3BL: “environmental”, “environmental impacts”, “cost”, “economics”, “social”, and “sustainability”, “environmental assessment”, “cost model”; (iii) keywords related to life cycle approaches: “life cycle”, “life cycle”, “LCA”, “LCC”, and “S-LCA”. Initially, papers on AM were searched and then out of those papers only the ones containing the aforementioned keywords related to the 3BL (such as “environmental impacts”, “LCC”, “S-LCA”, “economics”, or “social”) were selected. The search strategy was to select papers that contain in the title, abstract or keywords various combinations of those keywords, from 1998 to December 2018, in the databases SCOPUS, Emerald Insight, EBSCO and Web of Science. Once papers were identified, the references were reviewed to assist in locating additional papers, resulting in ‘snowball sampling’ effect. It is also important to mention that in the literature there were only found conceptual papers on S-LCA of AM, which did not present any quantitative analysis of social impacts of AM. The selected papers were analysed mainly focusing on five knowledge points which include: life cycle phases, materials utilized, technologies used, methodology and data. Data refers to what input data is required for the methodology or model proposed/applied in each study and output data refers to the type of outputs given by each methodology or model.
+2.2. AM vs. Environmental Sustainability
+The awareness about environmental protection has aroused more concerns about the sustainability of the product manufacturing processes. Governments, corporations and research organization are being pushed to pay more attention to the environmental impacts of any product during its life cycle. Lou et al. [46] were amongst the first few people to investigate the overall environmental performance of SLA by developing an environmental performance assessment model considering material consumption, energy consumption and end-of-life scenarios. Similarly, many authors also worked on environmental impact assessment of different AM technologies [39,40,46,47,49,60]. The papers analysed in the environmental impact assessment are presented in Table 2. It can be seen in Table 2 that many authors only considered the production or manufacturing phase in their research. In terms of technologies used: SLS, EBM, FDM, selective laser melting (SLM), SLA, laser additive manufacturing (LAM), Wire Arc Additive Manufacturing (WAAM) and powder bed fusion were documented in the papers.
+
+
+Sustainability 2020, 12, 929 7 of 22
+Table 2. Environmental impact assessment studies in additive manufacturing (AM).
+Environmental Analysis
+(a) Raw Material (b) Design (c) Material Preparation (d) Production (e) Post Processing (f) Use (g) Maintenance (h) End-of-Life
+Ref.
+Life Cycle
+Phases Methodology 1. Technologies
+2. Materials Data
+a bc de f gh
+[46]
+1
+
+1
+
+1
+
+1
+
+1
+
+1
+ LCA using
+Eco-indicator95
+1. SLS, FDM 2. Epoxy resin, mixed steel, Ni, Al
+Inputs: Material and energy consumption, process parameters and process residues. Outputs: EI (mPts)
+[56]
+1
+ Experimental
+measurement
+1. FDM 2. ABS
+Inputs: Energy and material consumption, process variables. Outputs: Energy consumption (KWh)
+[57]
+1
+
+1
+ LCA using
+Eco-indicator95
+1. SLS 2. Nylon-12
+Inputs: Material and energy consumption, process parameters. Outputs: Total Energy Indicator
+[61]
+1
+ Experimental
+measurement
+1. SLM and EBM 2. Stainless steel and Ti.
+Inputs: Energy and material consumption, process parameters. Outputs: Energy consumption rate (KWh/kg)
+[51]  
+Experimental measurement and literature
+1. SLS, IM 2. Nylon Steel and Al
+Inputs: Energy and material consumption, process parameters. Outputs: EC (MJ)
+[40]   LCA using
+Eco-indicator99
+1. SLS, SLM 2. PA, stainless steel
+Inputs: Time, electric power, process consumables and waste. Outputs: EI (mPts)
+[39]    LCA using Eco
+indicator99
+1. Additive layer distributed manufacturing 2. PLA, ABS
+Inputs: Energy consumed. Outputs: GHG emissions (kg CO2 eq) & CED (MJeq)
+[62]     LCA using
+Eco-indicator99
+1. LAM 2. Metals
+Inputs: Electricity, material and fluid consumption. Outputs: EI (mPts)
+[63]  Mathematical
+model
+1. FDM 2. ABS, PLA
+Inputs: Material and energy consumption. Outputs: Energy demand (Wh)
+[40]     LCA using
+Eco-indicator99
+1. Powder bed fusion 2. Steel
+Inputs: Energy, material and fluid consumption and waste produced Outputs: EI (mPts)
+[43]    Mathematical
+model
+1. FDM 2. ABS
+Inputs: Energy and material consumption, Process parameters, waste. Outputs: E.C (J) and EI (mPts)
+[38]      Process-based
+model
+1. SLM, DMLS, EBM, FDM, 2. Steel, Ti, Ni and Al alloys
+Inputs: Energy, material and fuel consumption, process parameters, waste. Outputs: Primary energy (GJ) and CO2e emissions (million t CO2e)
+[24]  Experimental
+measurement
+1. LAM
+2. Metal powders
+Inputs: Energy and material consumption, process variables. Outputs: ECUDV, in J/mm3
+[47]      
+LCA using the ReCiPe Endpoint H Method
+1. FLM
+2. HIPS and Sodium chloridewith additives
+Inputs: Energy and materials consumption and process parameters. Outputs: Emissions and EI (Pts)
+[64]    
+LCA using the ReCiPe Endpoint H Method
+1. WAAM 2. Stainless steel 308 l
+Inputs: Energy, material and fuel consumption, shielding gas, waste, air emissions Outputs: E.I (Pts)
+[65]     
+LCA using the ReCiPe Endpoint H Method
+1. SLM
+2. Aluminium
+Inputs: Energy and material, waste, process parameters Outputs: EI (Pts), Equivalent CO2 Emissions
+[66]    
+LCA using the ReCiPe Endpoint H Method
+1. FDM 2. PLA
+Inputs: Energy, material and fuel consumption, waste
+Outputs: EI (mPt)
+[67]      LCA 1. SLA
+2. Ti
+Inputs: Energy, material and fuel consumption, process parameters, waste Outputs: E.I (Pts/part)
+
+
+Sustainability 2020, 12, 929 8 of 22
+Materials utilized in different papers to produce AM parts include polyamide (PA), ABS, PLA, stainless steel, polycarbonate, nylon, polyethylene, and metal alloys [40,49]. Moreover, there were authors who also compared the environmental impact of AM and conventional manufacturing technologies [29,47,64,68]. Paris et al. [68] compared the environmental impact of producing an aeronautic turbine composed of 13 blades by EBM and milling. Kafara et al. [47] used the ReCiPe Midpoint H (Europe) for impact assessment in 18 impact categories such as climate change, ozone, water and metal depletion and marine ecotoxicity, etc. The ReCiPe Endpoint H Method was used to normalize, weight and to combine these 18 impact categories to the single score and this single score was used to compare the environmental impact of casting, milling and AM processes. Similarly, Bekker and Verlinden [64] assessed the environmental impact of WAAM compared to Green Sand Casting and CNC milling using the ReCiPe Midpoint H method. The mentioned studies, being the most representative found to date, demonstrate that there is a great lack of information on several life cycle steps. Even though some studies focus on environmental impact assessment, only few studies consider cradle-to-grave scenarios [40,46,47,66, 67,69]. More so, most environmental studies on AM technologies are still based on approximation, estimation and simplifications. Due to the lack of standardized methodologies to assess energy/material consumption and to establish supply-chain environmental impacts, most environmental studies on AM processes/products have significant data gaps in different life cycle stages, from raw material to the end of life [70].
+2.3. AM vs. Economic Sustainability
+Cost is an important factor for decision making to analyse the economic viability of any technology or product. Therefore, an important consideration for the deployment of AM is the cost-effectiveness of this technology in comparison to classical production methods such as injection moulding. In fact, if the future of AM is to compete with traditional manufacturing processes then economic viability will play an important role which makes it necessary to perform a cost comparison of AM with other conventional manufacturing technologies. The oldest work on cost estimation, as found in the literature, was carried out by Alexander et al. [71]. The aim of the work was to determine the best build orientation and minimize the build cost of a part manufactured by layered manufacturing (LM) process. The cost analysis was only limited to the manufacturing phase of the part. It was concluded that the general characteristics of part orientation which affect the final cost of the part include the height of the part in the build direction, the total volume of support material used and total contact area of the part with the support structure. After that Hopkinson and Dicknes [36] developed a model for a cost comparison of AM with conventional manufacturing such as injection moulding. The analysis included labour, material, machine costs and depreciation. Other factors such as power consumption and space rental were also considered but they contributed less than one per cent of the total costs and therefore, were not included in the results. This model was used to calculate the first approximation breakeven analysis between several AM technologies and injection moulding. Stereolithography and FDM both appear to be more suitable methods than injection moulding for volumes up to around 6000 units, with stereolithography as a more viable option than injection moulding for production volumes of up to around 14,000 units. Following these works, many authors carried out their research work on cost calculation of a particular AM technology. Initial cost studies assumed that the same part was produced repeatedly However, one of the benefits of AM is its ability to produce different components simultaneously. Therefore, a “smart mix” of components in the same build might reduce manufacturing costs. In a single part production, the cost per part for a build is obtained by dividing the total cost by the number of parts produced. However, the cost estimation for different parts being built contemporaneously is more complicated which was also calculated by Ruffo and Hague [73].
+
+
+Sustainability 2020, 12, 929 9 of 22
+In relation to economic analysis, it is interesting to note that almost half of the papers only considered the production phase for cost estimation of the additively manufactured part as shown in Table 3.
+Table 3. Economic analysis of several AM technologies.
+Economic Analysis
+(a) Raw Material (b) Design (c) Material Preparation (d) Production (e) Post Processing (f) Use (g) Maintenance (h) End-of-Life
+Ref.
+Life Cycle
+Phases Methodology 1. Technologies
+2. Materials Data a bc de f gh
+[71]
+1
+
+1
+
+1
+ Process-based cost
+model
+1. FDM and SLA 2. Resin
+Inputs: Part design, process parameters Outputs: Cost ($)
+[36]
+1
+ Cost model 1. SLA, FDM
+2. Epoxy, ABS, nylon.
+Inputs: Machine, material and labour costs, process parameters. Output: Cost per part (€)
+[72]     Process-based cost
+model
+1. Laser Sintering 2. Duraform, PA powder
+Inputs: Software, hardware costs, process parameters, material consumption and cost. Outputs: Cost per part (€)
+[58]       LCC using Activity
+Based Costing
+1. MAM 2. Metals
+Inputs: Process parameters Outputs: Cost per part (€)
+[74]  Activity-based cost
+model by Ruffo et al.
+1. DMLS 2. Metals
+Inputs: Process parameters, material and energy consumption and cost. Outputs: Cost (£/cm3) and Energy (MJ/cm3)
+[75]   
+Experimental model based upon Alexander et al. cost model
+1. Selective laser melting 2. Metal powder
+Inputs: Process parameters Output: Cost per part (€)
+[28]  LCEA by developing a
+cost model
+1. FDM
+2. PLA, ABS, HDPE
+Inputs: Process parameters, material and energy consumption Outputs: Cost ($)
+[76]       LCC using
+Activity Based Costing
+1. Metal AM 2. Metals
+Inputs: Process parameters, material and energy consumption
+Outputs: Cost ($ or €)
+[77]  Activity-based cost
+model by Ruffo et al.
+1. SLS
+2. Nylon composite and PA2200
+Inputs: Process parameters, energy and material consumption and costs Outputs: Machine productivity (cm3/h), SEC (MJ/kg), Resource cost rate ($/cm3)
+[78]    Activity-based costing 1. WAAM
+2. Ti6A14V
+Inputs: Process parameters, consumables and costs. Energy and material consumption and costs. Outputs: Unit Cost ($)
+[66]    Activity-based costing 1. FDM
+2. PLA
+Inputs: Process parameters, energy, material and fuel consumption and costs. Machine and Waste management costs. Outputs: Unit Cost ($)
+[67]      Activity-based costing 1. SLA
+2. Ti
+Inputs: Machine and labour costs. Energy, material and fuel consumption and costs. Recycling costs. Outputs: Unit Cost ($)
+[79]   Activity-based costing
+1. FDM and Material jetting 2. ABS
+Inputs: Process parameters, energy and material consumption and costs. Outputs: Unit Cost ($)
+[80]  Data-driven 1. FDM
+2. 
+Inputs: Process parameters and part cost, Outputs: Machine cost ($/prt), material cost ($/prt) and Unit Cost ($)
+Different types of materials utilized for the production of AM parts include polyamide (PA), acrylonitrile butadiene styrene (ABS), PLA, steel, DuraForm, polyethene, nylon, epoxy resin, polycarbonate, metal powder and polypropylene. Moreover, some papers also focused on cost comparison of producing a part by conventional as well as AM processes [28,36,72,76,77]. For example, Lindemann et al. [77] compared the costs of producing a part which is used as an upright of a formula student racing car by milling and metal AM.
+
+
+Sustainability 2020, 12, 929 10 of 22
+Similarly, Hopkinson and Dicknes [36] developed a model to compare the cost of producing a lever by AM and injection moulding.
+2.4. AM vs. Social Sustainability
+From a social perspective, some people predicted the potential social implications of AM [5,14,53,81]. However, using the criteria defined for this literature review, only three publications were found covering both AM and S-LCA [5,20,70]. Yet, these publications do not contain practical applications relating AM with S-LCA, being qualitative, and very generic and theoretical by nature. Huang et al. [20] discussed the work conditions and impact on worker’s long-term health as the social indicators of AM. The authors conducted a review on the societal impacts of AM from a technical perspective, with an emphasis on design optimization and customized production. S-LCA is addressed, in the main, from the health and safety occupational risk perspective. They found that the health benefits of AM, when compared to the conventional processes, are greater. Also, they argued that AM has the potential to change the social and labour structures due to high degrees of automation and an expected shift towards more localized means of production in consumer countries. In a macro-economic perspective, they found that in developed countries with ageing societies, AM can bring some benefits whereas, in developing countries, unemployment and social insecurity might grow. Rejeski et al. [71] discussed research needs and recommendations on the sustainability of additive manufacturing. The authors referred that form a societal perspective, there is an information gap on occupational health issues. They recommend researchers to focus on occupational health issues, particularly in understanding the toxicity of fine powders (metal AM) and the potential risk of nanoparticle emissions. From a societal perspective, Chen et al. [5] analysed the sustainability indicators for Direct Digital Manufacturing (DDM) with the objective to provide a foundation for manufacturers to enhance their manufacturing systems. The authors referred to a limited number of studies that analysed this topic, due to the complexity of the assessment for the social dimension. They considered that the only relevant study relating AM with S-LCA is precisely the study proposed by Huang et al. [20]. The authors explored the sustainability implications of DDM by studying the implications in each of the three pillars of sustainability (environmental, economic and social). They referred to the social dimension of AM in the context of DDM considering the “Working conditions” and “Work impact on worker’s long-term health” and the respective indicators to allow the assessment of these social impacts. Also, they argued that AM permits the democratization of the production, because consumers are no longer passive, they are becoming prosumers. Effectively consumers are no longer passive, instead they have become powerful because they are able to participate in the productive process, producing by themselves and becoming prosumers [5]. This particular study focuses mainly on the Production/ Manufacturing aspects of DDM. So, these three studies, being the most representative found to date, demonstrate that there is a great lack of knowledge about the social and societal impacts of AM. Despite the scarcity of publications linking AM with S-LCA, a few others have emerged from the literature by cross-referencing, which captured attention. The later cover wide LCA studies in the context of AM, rather than S-LCA, but they also discuss some social and/or societal impacts. Some of these are summarized below. AM will change the supply chain structures, requiring adjustments of labour and more qualified workers in digital manufacturing [45]. Gershenfeld [82] argued that the rise of AM will bring changes in patterns and intensity of work, as well as in employment schemes and types of work. Both studies cover essentially design and production aspects of AM. On the other hand, Ford and Despeisse [7], just as Huang et al. [20] did before, referred case studies focused on social issues of work conditions and workers’ health, mentioning several life cycle stages, namely, design, production, use and end-of-life. Within the societal scope, Pearce et al. [83] referred that AM, in association with open-sources of information, could improve living conditions; this study addressed Design and Production. Likewise,
+
+
+Sustainability 2020, 12, 929 11 of 22
+Gebler et al. [14] argued that AM can improve the development of the countries that could produce their own goods, adapted to their local necessities. From the above mentioned social studies on AM, it was established that the most frequently referred cycle phases are Design and Production. From the findings, it can be concluded that the analysis of social impacts is complex due to the intrinsic characteristics of social aspects, often qualitative and difficult to predict and to quantify. As AM is an emergent technology, studies have been more focused on LCA and LCC that have less subjective dimensions and therefore easier to evaluate.
+3. Mapping Relevant Relationships Between AM Sustainability Dimensions Based on Literature Review
+The literature review can be materialized in a mapping tool, in the form of matrices, which allows us to pinpoint all relevant relationships between the three dimensions: Life Cycle, Data, and Methods. Table 4 shows the application of this tool to summarize the results from the literature review carried out in the present study, i.e., it maps the number of relationships found in the publications reviewed, allowing to show the many possible scenarios of AM technology in a life cycle context, the most common sustainability analyses developed for AM and also to identify its gaps. The proposed tool consists of two matrices. Matrix 1 displays the main relationships between the specific life cycle phases that are influenced by the implementation of AM and the corresponding input/output data involved in this technological change. For instance, the number ‘8’ in the first row means that, in this study, the authors found eight publications relating the phase “raw material extraction” with “material consumption” data. Complementarily, Matrix 2 displays the links between methods and data, i.e., the relationships between assessment methodologies used to evaluate the impact of this technological change (within 3BL perspective) and the data needed for the assessment. Using the same analogy, the number ‘11’ of the first column means that 11 publications were found using LCA and “Material consumption” data. The mapping tool with the data from the literature review from Sections 2.2–2.4 illustrates the focus of the literature mainly on production phase, with few studies addressing other life cycle phases. Another main point found with this analysis is the lack of social analyses to real AM applications. Furthermore, this tool serves also as a framework to visualize the assessment methodologies required for comprehensive sustainability analysis in a specific case study, along with the data required and expected results. This is explored in Section 4. Whilst the environmental and economic dimensions are commonly studied, the only publications found on social dimension are purely theoretical, pointing only to possible social benefits and drawbacks, advantages and disadvantages. In addition, no case study was found with a structured social analysis. Therefore, given the definition of sustainability as comprising the three dimensions, no example or case study was found in AM with a comprehensive sustainability assessment. This tool, besides allowing mapping the gaps in the literature, it is also a good support tool to define the required analyses for a particular application or case study. The two matrices are inter-connected, facilitating building and illustrating scenarios because it maps relationships between the different key elements. This ability could be of paramount importance to assist companies who are planning to move into AM technology. Based on this research a sustainability assessment framework for AM is proposed in the next section. Some illustrative examples of applications and analyses are also presented based on the conceptual model and using the mapping tool.
+
+
+Sustainability 2020, 12, 929 12 of 22
+Table 4. Framework for mapping the number of evidence found in the literature about the relationships between AM sustainability dimensions (from literature review).
+Raw material (a) 12 13 13 8 3 9 2 3
+Matrix 1
+Design (b) 5 2 4 1 6 2 2 2 1 5 1
+Material
+preparation (c) 11 2 11 2 11 6 3 4 7 5 3 Production (d) 26 8 25 6 30 9 2 5 9 10 11 4 Post
+processing (e) 8 2 9 2 11 5 3 1 5 4 2 Use (f) 6 1 6 1 5 4 1 1 4 3 1 Maintenance (g) 2 1 2 2 2
+Life cycle Phases
+End of life (h) 7 3 6 2 6 3 2 1 6 2 1
+Data Inputs Material
+Consumption
+Material Unit Cost
+Energy Consumption
+Energy Unit Cost
+Other Process Parameters
+Waste
+Software and Hardware Cost
+Part Geometry
+Energy Consumption Output
+Environmental
+Impact Cost Emissions Data
+Outputs
+LCA using ReCiPe Endpoint H, or Eco-indicator 95 or 99
+11 2 12 2 12 7 1 2 2 10 2 3
+Matrix 2
+Experimental
+measurement 4 1 4 4 4 Mathematical model 2 1 1 1 2 1
+Environmental
+Process-based model 1 2 1 1 1 LCC using TD-ABC 1 1 2 2 Activity based cost model 6 6 6 6 5 2 1 1 2 2 7 Process-based cost model 1 1 1 1 1 1 1 2 Cost model 1 1 1 Experimental model based
+on Alexander et al. [71] 1 1
+Economics
+Data-driven cost model 1 1 Social - - - - - - - - - - - - 
+
+
+Sustainability 2020, 12, 929 13 of 22
+4. Assessment Framework
+This section describes an assessment framework, at an abstract level, which depicts the three main dimensions that companies need for assessing the impacts of AM technologies on their processes’ performance with respect to 3BL perspective, i.e., economic, environmental and social impacts. The three dimensions of the model, as illustrated in Figure 2, are:
+1. Life cycle phases of AM, as found in the literature, 2. Data, i.e., input and output data for each particular phase, and 3. Methods for assessing AM sustainability impacts.
+Sustainability 2019, 11, x; doi: FOR PEER REVIEW www.mdpi.com/journal/sustainability
+14 also presented based on the conceptual model and using the mapping tool.
+15 4. Assessment Framework
+16 This section describes an assessment framework, at an abstract level, which depicts the three 17 main dimensions that companies need for assessing the impacts of AM technologies on their pro18 cesses’ performance with respect to 3BL perspective, i.e., economic, environmental and social im19 pacts. The three dimensions of the model, as illustrated in Figure 2, are: 20 1. Life cycle phases of AM, as found in the literature, 21 2. Data, i.e., input and output data for each particular phase, and 22 3. Methods for assessing AM sustainability impacts. 23 These three elements depend essentially on the activity sector and/or business context, which 24 will influence the choice of each particular item to be included in the assessment. 25 This framework was developed using several subjective and empirical evidence presented in the 26 literature reviewed before. The current proposal follows an inductive approach where theory 27 emerges from data collected on the topic [84,85]. Such methodological approach is useful when the 28 purpose is to learn from available data. The fact that inductive research is open-ended makes it pos29 sible to discover correlations among data [86].
+30
+31 Figure 2. The proposed framework for assessing the impacts of AM technologies.
+Raw M at er ial Cost
+Time
+Ener gy
+Ot her s
+D esi gn
+M at er ial Pr epar at ion
+Pr oduct ion
+Post Pr ocessing
+U se
+M aint enance
+End of L ife
+AM L ife Cycle Phases
+E m i ssi on s
+Ener gy
+Ot her s
+Occupat ional Ri sk
+New Job D esi gn
+I nput Dat a
+Out put Dat a
+Figure 2. The proposed framework for assessing the impacts of AM technologies.
+These three elements depend essentially on the activity sector and/or business context, which will influence the choice of each particular item to be included in the assessment. This framework was developed using several subjective and empirical evidence presented in the literature reviewed before. The current proposal follows an inductive approach where theory emerges from data collected on the topic [84,85]. Such methodological approach is useful when the purpose is to learn from available data. The fact that inductive research is open-ended makes it possible to discover correlations among data [86]. The circular 3BL approach implies the interconnected view of economic, environmental and social perspectives. This model tries to express the balance between them, although their relative contribution can have different weights, depending on the specific product and life cycle phase under evaluation. Based on the literature, the three impacts can be assessed through different methods, of which the so-called LC-based methods (life cycle approaches) are the most preferred for this purpose. In fact, from the authors’ point of view, a life cycle framework should be always taken into account when evaluating the sustainability of a particular application, even though some phases can be left out of the assessment in cases where it is not relevant for the purpose of the study. This fosters the consistency of boundaries throughout the three bottom lines of sustainability. In Section 4.1 are further explained the application and suitability regarding each method proposed in this model.
+
+
+Sustainability 2020, 12, 929 14 of 22
+Regarding the life cycle phases proposed, these are the most common found in literature and are applicable to most applications. However, as previously explained, some of them can be irrelevant or an additional phase, for example, transport, can be added in particular cases. The inputs greatly depend on the tools and methods used for life cycle methods. For example, if an experimental procedure is used, then the inputs are the resources measured. If a mathematical model is used, perhaps the inputs are related to the geometry of the part or other model inputs to calculate resources. The outputs are the necessary data for computing the LCC, LCA and S-LCA of a case. Therefore, it depends on the assumption made regarding the boundaries (life cycle phases included). The use of standardized and/or well-established methods for each pillar assures the validity and benchmarking of results. Based on this framework, two case studies within AM context are illustrated in Section 4.2 with a brief description and discussion of the methods to apply to assess the sustainability of each case. The tool described in Figure 2 is used here to map the life cycle phases to analyse in each case, the resources and other data required and the method to use in each assessment analysis.
+4.1. Methods for Assessing Sustainability
+For a cleaner production, environmental impacts that would occur during the whole life cycle of a product should be assessed with maximum possible accuracy. Most environmental impact assessment models or methods for AM are developed based on the general framework of LCA [40]. The standard ISO 14040 (2006) suggests a protocol with 4 main steps to apply the LCA method. The first step deals with Definition of Goal and Scope, as it happens in many assessment standards. The step of Inventory Analysis implies identifying and analysing the relevant inputs /outputs, of which all flows consumed and outputs released must be listed as exhaustively as possible. The subsequent Impact Assessment aims at evaluating the magnitude and significance of potential environmental impacts of a product/system, throughout its whole life cycle. Finally, Interpretation is the phase of LCA in which the findings of either the inventory analysis or the impact assessment, or both, are evaluated in relation to the defined goal and scope, to reach conclusions and recommendations. The choice of this framework for the proposed framework results mainly from the great unanimity that exists in its use to assess environmental impacts. In fact, during the last decade, the research around LCA application has been growing and the number of scientific publications involving LCA has had an exponential increase. LCA methodologies have been developed and governments encourage the use of LCA [87]. At the same time, research also makes the link between sustainability and value creation, by demonstrating how the application of LCAs can provide useful insights for business decisions. Another important aspect is the recognition of this methodology by ISO 14040 [88] and by the United Nations Environmental Programme (UNEP) and the Society for Environmental Toxicology and Chemistry (SETAC) Life Cycle Initiative, UNEP Setac Life Cycle Initiative, 2009) [89]. Regarding the economic dimension, the correspondent economic life cycle approach selected for the proposed framework is the LCC. It generally refers to the “assessment of all the costs associated with the life cycle of a product that are directly covered by the any one or more of the authors in the product life cycle (supplier, producer, user/consumer, EOL-actor), with complimentary inclusion of externalities that are anticipated to be internalized in the decision-relevant future” [90]. Its objective is to cover the assessments of costs in all steps of the product’s life cycle, including the costs that are not normally expressed in the product market price [91], such as costs incurred during the usage and end-of-life. LCC is essentially an evaluation tool in the sense that it gets on to important metrics for choosing the most cost-effective solution from a series of alternatives [92]. LCC is often based on a widely established investment appraisal method, Net Present Value (NPV). This method assesses the profitability of a project or product based on the required operational cash flows and investments and allows the comparison of different options. The profitability is measured within a time period and the project or product is profitable when the NPV is greater than zero [93]. This allows taking into account different life cycle phases in a determined life span of a product. However, other economic, accounting or investment appraisal methods can be used.
+
+
+Sustainability 2020, 12, 929 15 of 22
+While LCC and LCA are widely established methods, the application of LCA techniques to social impacts is still a field in development. In fact, the UNEP/SETAC, Life Cycle Initiative has recently published the first official set of “Guidelines for Social Life Cycle Assessment of Products” [89]. These guidelines are the standard framework to which S-LCA researchers will seek to harmonize and standardize the S-LCA process. Like LCA, S-LCA is based on four steps of analysis: goal definition, scope definition, inventory analysis and impact assessment. One important difference between LCA and S-LCA is the definition and quantification of the indicator. Given the developing phase of the method and the subjectivity inherent to the social impacts, it is up to the stakeholders to determine the most appropriate indicators. Also, regarding the impact assessment phase, the guidelines for S-LCA do not discuss normalization or valuation of impacts, as assessment methodologies are under development and S-LCA is an open field for future research. Some researchers have proposed other approaches to overcome the current limitations in the S-LCA standardization, namely the Franze and Ciroth [94] approach, with a rating system as the assessment method for the impact categories for each subcategory of each stakeholder. Despite the S-LCA emergent characteristics, this approach was selected for the framework on sustainability due to the standardization attempts and harmonization with LCA following UNEP/SETAC guidelines (2009). Furthermore, the life cycle perspective and consistent boundaries of the 3BL analysis are then assured.
+4.2. Application of the Sustainability Model to Case Studies
+The application of the proposed matrix (Figure 3) is shown here applied on two different components, a motorcycle lever (case A, Figure 3a) and a bellcrank (case B, Figure 3b). Both of these components can be produced by AM as well as conventional manufacturing processes. In the motorcycle lever case, the traditional manufacturing process is die-casting. Changing the production process to FDM using fibre reinforced polymers would allow full customization of the part, which was found to be appealing to a niche market. This would mean a change not only in the production process but also in the type of material used in the product. The second case is a bellcrank used in a prototype racing car. The current process is hand lay-up and it requires a curing process that would not be necessary if this part was produced by FDM.
+88 profitability of a project or product based on the required operational cash flows and in vestments 89 and allows the comparison of different options. The profitability is measured within a time period 90 and the project or product is profitable when the NPV is greater than zero [93]. This allows taking 91 into account different life cycle phases in a determined life span of a product. However, other eco92 nomic, accounting or investment appraisal methods can be used. 93 While LCC and LCA are widely established methods, the application of LCA techniques to social 94 impacts is still a field in development. In fact, the UNEP/SETAC, Life Cycle Initiative has recently 95 published the first official set of “Guidelines for Social Life Cycle Assessment of Products” [89]. These 96 guidelines are the standard framework to which S-LCA researchers will seek to harmonize and stand97 ardize the S-LCA process. Like LCA, S-LCA is based on four steps of analysis: goal definition, scope 98 definition, inventory analysis and impact assessment. 99 One important difference between LCA and S-LCA is the definition and quantification of the 100 indicator. Given the developing phase of the method and the subjectivity inherent to the social im101 pacts, it is up to the stakeholders to determine the most appropriate indicators. Also, regarding the 102 impact assessment phase, the guidelines for S-LCA do not discuss normalization or valuation of im103 pacts, as assessment methodologies are under development and S-LCA is an open field for future 104 research. 105 Some researchers have proposed other approaches to overcome the current limitations in the S106 LCA standardization, namely the Franze and Ciroth [94] approach, with a rating system as the as107 sessment method for the impact categories for each subcategory of each stakeholder. Despite the S108 LCA emergent characteristics, this approach was selected for the framework on sustainability due to 109 the standardization attempts and harmonization with LCA following UNEP/SETAC guidelines 110 (2009). Furthermore, the life cycle perspective and consistent boundaries of the 3BL analysis are then 111 assured.
+112 4.2. Application of the Sustainability Model to Case Studies
+113 The application of the proposed matrix (Figure 3) is shown here applied on two different com114 ponents, a motorcycle lever (case A, Figure 3a) and a bellcrank (case B, Figure 3b). Both of these 115 components can be produced by AM as well as conventional manufacturing processes. In the motor116 cycle lever case, the traditional manufacturing process is die-casting. Changing the production pro117 cess to FDM using fibre reinforced polymers would allow full customization of the part, which was 118 found to be appealing to a niche market. This would mean a change not onl y in the production pro119 cess but also in the type of material used in the product. The second case is a bellcrank used in a 120 prototype racing car. The current process is hand lay-up and it requires a curing process that would 121 not be necessary if this part was produced by FDM.
+122
+123 FFiigguurree33..TThheepprroodduuctctddeevveellooppmmeennttpprroocceessssoofftthheemmoottoorrccyyccllee lleevveerr ((aa)) aanndd bbeellllccrraannkk ((bb))..
+It uses the same type of composite material, carbon fibre reinforced plastic. Therefore, in this case, the difference between the current case and the alternative is only in the production process. In both case studies, the objective is to support the decision of changing a product and/or a production process. The life cycle framework proposed provided the base for the definition of the methods to apply. The mapping of the required life cycle phases to analyse, the data required and the methods to use are shown in Table 5. The differences in the case studies are translated into different analyses required for each. While in the first case, the motorbike lever (A), the material changes and therefore a full life cycle analysis is required. In the bell crankcase (B) the only phases important to analyse for the sake of comparison are the design, production and post-production phases.
+
+
+Sustainability 2020, 12, 929 16 of 22
+Table 5. Mapping tool applied to the case studies motorcycle lever (A) and bellcrank (B).
+Raw material (a) A A A A A A A A A A A A A
+Matrix 1
+Design (b) A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B Material preparation (c) A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B Production (d) A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B Post processing (e) A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B A,B Use (f) A A A A A A A A A A A A A Maintenance (g) A A A A A A A A A A A A A
+Life cycle Phases
+End of life (h) A A A A A A A A A A A A A
+Data Inputs Material Energy Equipment Emissions Process Waste Stakeholders Cost
+Functions Env/Impact Social
+Impact
+Life Cycle Phases Cost
+Life Cycle Phases Env/Impact
+Life Cycle Phases Social Impact
+Data Outputs
+LCA
+Process-based
+model A,B
+Matrix 2
+Experimental method A,B
+Environment
+ReCiPe method
+LCC
+Prcess-based
+model A,B
+Economics
+Experimental method A,B
+S-LCA
+Interviews with
+stakeholders A,B A,B A,B A,B
+Social Data
+mining techniques A,B A,B
+
+
+Sustainability 2020, 12, 929 17 of 22
+The methods to develop the LCA, LCC and S-LCA analysis are defined in the thirds column of Table 5 and are common for both cases. An experimental apparatus is required for the prototypes in AM and to gather data regarding resources and emissions. The data for production processes currently used in each case are determined by process-based cost models and empirical data. All environmental impacts can be assessed by the Recipe method [95]. Given the changes in stakeholders by changing the process, in both cases, a social assessment is required through the S-LCA methodology.
+5. Conclusions
+With the aim of contributing to the area of AM sustainability assessment, the three dimensions of sustainability of AM—environment, economics, and society—have been explored in a literature review. Five key points were considered to analyse the literature: life cycle phases, materials utilized, technologies used, methodology and data collection. The majority of the authors only considered the production phase for energy consumption, cost estimation and environmental impacts assessment without making a comparison with conventional manufacturing and disregarding the social dimension. These findings were mapped in matrixes to better understand the gaps in current research. Results showed clearly the need for systematic analysis considering the three dimensions of sustainability and method(s) to support it. While in the environmental and economic cases there are well-established life cycle methodologies, namely LCC and LCA, this is not the case in the social sphere. A proposal for using the S-LCA was added to a sustainability assessment framework so that the same life cycle boundaries are kept in the different dimensions of analysis. Furthermore, this method follows the same norm of LCA and is the most promising one until now for assessing the social impact of products. Finally, the model was illustrated through two illustrative case studies so that the required phases to analyse, methods and data were defined for each following this sustainability framework. This work contributed for the current knowledge on the sustainability of AM by exposing the existing gaps and by proposing a model and a mapping tool to support companies and researchers on the definition of the problem and required data and methods to assess the sustainability of their products.
+Author Contributions: Conceptualization, I.R. and C.J.; Methodology, H.S. and P.P.; Validation, H.C., I.R. and C.J.; Formal Analysis, F.M.; Investigation, H.S. and G.C.; Resources, I.R. and P.P.; Data Curation, G.C. and H.S.; Writing-Original Draft Preparation, H.S. and G.C.; Writing-Review & Editing, I.R., C.J. and R.G.; Visualization, R.G.; Supervision, P.P.; Project Administration, F.M.; Funding Acquisition, F.M., H.C. and I.R. All authors have read and agreed to the published version of the manuscript.
+Funding: The authors gratefully acknowledge: (a) The funding of Project FIBR3D (ref: POCI-01-0145-FEDER-016414), co-financed by Fundo Europeu de Desenvolvimento Regional (FEDER) and by National Funds through FCT—Fundação para a Ciência e Tecnologia, Portugal; (b) FCT grant (ref: UIDB/00667/2020 (UNIDEMI)); (c) the funding of Project KM3D (PTDC/EME-SIS/32232/2017), supported by Fundação para a Ciência e Tecnologia, Portugal; and (d) the four organizations participating in the case studies.
+Conflicts of Interest: The authors declare no conflict of interest.
+References
+1. Stock, T.; Seliger, G. Opportunities of Sustainable Manufacturing in Industry 4.0. Procedia CIRP 2016, 40, 536–541. [CrossRef] 2. Ghobakhloo, M. Industry 4.0, digitization, and opportunities for sustainability. J. Clean. Prod. 2020, 252, 11869. [CrossRef] 3. Dilberoglu, U.M.; Gharehpapagh, B.; Yaman, U.; Dolen, M. The Role of Additive Manufacturing in the Era of Industry 4.0. Procedia Manuf. 2017, 11, 545–554. [CrossRef] 4. Berman, B. 3-D printing: The new industrial revolution. Bus. Horiz. 2012, 55, 155–162. [CrossRef] 5. Chen, D.; Heyer, S.; Ibbotson, S.; Salonitis, K.; Steingrímsson, J.G.; Thiede, S. Direct digital manufacturing: Definition, evolution, and sustainability implications. J. Clean. Prod. 2015, 107, 615–625. [CrossRef] 6. Mani, M.; Lyons, K.W.; Gupta, S.K. Sustainability characterization for additive manufacturing. J. Res. Natl. Inst. Stand. Technol. 2014, 119, 419–428. [CrossRef]
+
+
+Sustainability 2020, 12, 929 18 of 22
+7. Ford, S.; Despeisse, M. Additive manufacturing and sustainability: An exploratory study of the advantages and challenges. J. Clean. Prod. 2016, 137, 1573–1587. [CrossRef] 8. Piller, F.T.; Weller, C.; Kleer, R. Business Models with Additive Manufacturing: Opportunities and Challenges from the Perspective of Economics and Management. In Advances in Production Technology; Brecher, C., Ed.; Springer International Publishing: Cham, Switzerland, 2015; pp. 39–48. ISBN 978-3-319-12304-2. 9. Ponfoort, O.; Ambrosius, W.; Barten, L.; Duivenvoorde, G.; van den Hurk, L.; Amir, S.; Teunissen, E. Successful Business Models for 3D printing: Seizing Opportunities with a Game Changing Technology; Berenschot: Utrecht, Berenschot, 2014; ISBN 978-94-903142-1-7. 10. Despeisse, M.; Baumers, M.; Brown, P.; Charnley, F.; Ford, S.J.; Garmulewicz, A.; Knowles, S.; Minshall, T.H.W.; Mortara, L.; Reed-Tsochas, F.P.; et al. Unlocking value for a circular economy through 3D printing: A research agenda. Technol. Forecast. Soc. Change 2017, 115, 75–84. [CrossRef]
+11. Schniederjans, D.G. Adoption of 3D-printing technologies in manufacturing: A survey analysis. Int. J. Prod. Econ. 2017, 183, 287–298. [CrossRef] 12. Petrovic, V.; Vicente Haro Gonzalez, J.; Jordá Ferrando, O.; Delgado Gordillo, J.; Ramón Blasco Puchades, J.; Portolés Griñan, L.; Ramon Blasco Puchades, J.; Portoles Grinan, L. Additive layered manufacturing: Sectors of industrial application shown through case studies. Int. J. Prod. Res. 2011, 49, 1061–1079. [CrossRef] 13. Oettmeier, K.; Hofmann, E. Additive manufacturing technology adoption: An empirical analysis of general and supply chain-related determinants. J. Bus. Econ. 2017, 87, 97–124. [CrossRef] 14. Gebler, M.; Uiterkamp, S.A.J.M.; Visser, C. A global sustainability perspective on 3D printing technologies. Energy Policy 2014, 74, 158–167. [CrossRef] 15. Müller, J.M.; Kiel, D.; Voigt, K.-I. What Drives the Implementation of Industry 4.0? The Role of Opportunities and Challenges in the Context of Sustainability. Sustainability 2018, 10, 247. [CrossRef] 16. Turner, C.; Moreno, M.; Mondini, L.; Salonitis, K.; Charnley, F.; Tiwari, A.; Hutabarat, W. Sustainable Production in a Circular Economy: A Business Model for Re-Distributed Manufacturing. Sustainability 2019, 11, 4291. [CrossRef] 17. Ghobadian, A.; Talavera, I.; Bhattacharya, A.; Kumar, V.; Garza-Reyes, J.A.; O’Regan, N. Examining legitimatisation of additive manufacturing in the interplay between innovation, lean manufacturing and sustainability. Int. J. Prod. Econ. 2018. [CrossRef] 18. Garetti, M.; Taisch, M. Sustainable manufacturing: Trends and research challenges. Prod. Plan. Control 2012, 23, 83–104. [CrossRef] 19. Despeisse, M.; Yang, M.; Evans, S.; Ford, S.; Minshall, T. Sustainable Value Roadmapping Framework for Additive Manufacturing. Procedia CIRP 2017, 61, 594–599. [CrossRef] 20. Huang, S.; Liu, P.; Mokasdar, A.; Hou, L. Additive manufacturing and its societal impact: A literature review. Int. J. Adv. Manuf. Technol. 2013, 67, 1191–1203. [CrossRef]
+21. Jiang, R.; Kleer, R.; Piller, F.T. Predicting the future of additive manufacturing: A Delphi study on economic and societal implications of 3D printing for 2030. Technol. Forecast. Soc. Change 2017, 117, 84–97. [CrossRef] 22. Holmström, J.; Liotta, G.; Chaudhuri, A. Sustainability outcomes through direct digital manufacturing-based operational practices: A design theory approach. J. Clean. Prod. 2018, 167, 951–961. [CrossRef] 23. Mellor, S.; Hao, L.; Zhang, D. Additive manufacturing: A framework for implementation. Int. J. Prod. Econ. 2014, 149, 194–201. [CrossRef] 24. Jin, M.; Tang, R.; Ji, Y.; Liu, F.; Gao, L.; Huisingh, D. Impact of advanced manufacturing on sustainability: An overview of the special volume on advanced manufacturing for sustainability and low fossil carbon emissions. J. Clean. Prod. 2017, 161, 69–74. [CrossRef] 25. Kohtala, C.; Hyysalo, S. Anticipated environmental sustainability of personal fabrication. J. Clean. Prod. 2015, 99, 333–344. [CrossRef] 26. Tang, Y.; Mak, K.; Zhao, Y.F. A framework to reduce product environmental impact through design optimization for additive manufacturing. J. Clean. Prod. 2016, 137, 1560–1572. [CrossRef] 27. Kerbrat, O.; Le Bourhis, F.; Mognol, P.; Hascoët, J.-Y.; Kerbrat, O.; Le Bourhis, Á.F.; Mognol, Á.P.; Hascoët, J.-Y. Environmental Impact Assessment Studies in Additive Manufacturing. In Handbook of Sustainability in Additive Manufacturing; Springer: Hongkong, China, 2016; pp. 31–63. 28. Wittbrodt, B.T.; Glover, A.G.; Laureto, J.; Anzalone, G.C.; Oppliger, D.; Irwin, J.L.; Pearce, J.M. Life-cycle economic analysis of distributed manufacturing with open-source 3-D printers. Mechatronics 2013, 23, 713–726. [CrossRef]
+
+
+Sustainability 2020, 12, 929 19 of 22
+29. Priarone, P.C.; Ingarao, G. Towards criteria for sustainable process selection: On the modelling of pure subtractive versus additive/subtractive integrated manufacturing approaches. J. Clean. Prod. 2017, 144, 57–68. [CrossRef] 30. Oros Daraban, A.E.; Negrea, C.S.; Artimon, F.G.P.; Angelescu, D.; Popan, G.; Gheorghe, S.I.; Gheorghe, M. A Deep Look at Metal Additive Manufacturing Recycling and Use Tools for Sustainability Performance. Sustainability 2019, 11, 5494. [CrossRef]
+31. Oettmeier, K.; Hofmann, E. Impact of additive manufacturing technology adoption on supply chain management processes and components. J. Manuf. Technol. Manag. 2016, 27, 944–968. [CrossRef]
+32. ASTM F2792-12a. Standard Terminology for Additive Manufacturing Technologies; ASTM International: West Conshohocken, PA, USA, 2012. [CrossRef]
+33. Wohlers, T. Wohlers Report 2012. 3D Printing and Additive Manufacturing State of the Industry. Available online: http://www.wohlersassociates.com/history2012.pdf (accessed on 22 September 2019). 34. Santos, E.C.; Shiomi, M.; Osakada, K.; Laoui, T. Rapid manufacturing of metal components by laser forming. Int. J. Mach. Tools Manuf. 2006, 46, 1459–1468. [CrossRef]
+35. Kruth, J.-P.; Leu, M.C.; Nakagawa, T. Progress in Additive Manufacturing and Rapid Prototyping. CIRP Ann.-Manuf. Technol. 1998, 47, 525–540. [CrossRef]
+36. Hopkinson, N.; Dicknes, P. Analysis of rapid manufacturing—using layer manufacturing processes for production. Proc. Inst. Mech. Eng. Part C J. Mech. Eng. Sci. 2003, 217, 31–39. [CrossRef]
+37. Gao, W.; Zhang, Y.; Ramanujan, D.; Ramani, K.; Chen, Y.; Williams, C.B.; Wang, C.C.L.; Shin, Y.C.; Zhang, S.; Zavattieri, P.D. The status, challenges, and future of additive manufacturing in engineering. Comput.-Aided Des. 2015, 69, 65–89. [CrossRef] 38. Huang, R.; Riddle, M.; Graziano, D.; Warren, J.; Das, S.; Nimbalkar, S.; Cresko, J.; Masanet, E. Energy and emissions saving potential of additive manufacturing: The case of lightweight aircraft components. J. Clean. Prod. 2016, 135, 1559–1570. [CrossRef] 39. Kreiger, M.; Pearce, J.M. Environmental Impacts of Distributed Manufacturing from 3-D Printing of Polymer Components and Products. MRS Proc. 2013, 1492, 85–90. [CrossRef] 40. Burkhart, M.; Aurich, J.C. Framework to predict the environmental impact of additive manufacturing in the life cycle of a commercial vehicle. Procedia CIRP 2015, 29, 408–413. [CrossRef] 41. Malshe, H.; Nagarajan, H.; Pan, Y.; Haapala, K. Profile of Sustainability in Additive Manufacturing and Environmental Assessment of a Novel Stereolithography Process. Mater. Biomanuf. Prop. Appl. Syst. Sustain. Manuf. 2015, 2, V002T05A012. 42. Zanetti, V.; Cavalieri, S.; Pezzotta, G. Additive Manufacturing and PSS: A Solution Life-Cycle Perspective. IFAC-Pap. 2016, 49, 1573–1578. [CrossRef] 43. Peng, T. Analysis of Energy Utilization in 3D Printing Processes. Procedia CIRP 2016, 40, 62–67. 44. Sreenivasan, R.; Goel, A.; Bourell, D.L. Sustainability issues in laser-based additive manufacturing. Phys. Procedia 2010, 5, 81–90.
+45. Campbell, T.; Williams, C.; Ivanova, O.; Garret, B. Could 3D Printing Change the World? Technologies, Potential, and Implications of Additive Manufacturing. Available online: http://globaltrends.thedialogue.org/wp-content/uploads/2014/11/Could-3D-Printing-Change-the-WorldTechnologies-Potential-and-Implications-of-Additive-Manufacturing.pdf (accessed on 27 January 2020). 46. Luo, Y.; Leu, M.C.; Ji, Z. Assessment of Environmental Performance of Rapid Prototyping and Rapid Tooling Processes. Available online: https://www.tib.eu/en/search/id/BLCP%3ACN034295876/Assessmentof-Environmental-Performance-of-Rapid/ (accessed on 27 January 2020). 47. Kafara, M.; Süchting, M.; Kemnitzer, J.; Westermann, H.H.; Steinhilper, R. Comparative Life Cycle Assessment of Conventional and Additive Manufacturing in Mold Core Making for CFRP Production. Procedia Manuf. 2017, 8, 223–230. [CrossRef] 48. Morrow, W.R.; Qi, H.; Kim, I.; Mazumder, J.; Skerlos, S.J. Environmental aspects of laser-based and conventional tool and die manufacturing. J. Clean. Prod. 2007, 15, 932–943. [CrossRef] 49. Kellens, K.; Yasa, E.; Dewulf, W.; Duflou, J.R. Environmental Assessment of Selective Laser Melting and Selective Laser Sintering. Methodology 2010, 4, 5. 50. Thompson, M.K.; Moroni, G.; Vaneker, T.; Fadel, G.; Campbell, R.I.; Gibson, I.; Bernard, A.; Schulz, J.; Graf, P.; Ahuja, B.; et al. Design for Additive Manufacturing: Trends, opportunities, considerations, and constraints. CIRP Ann.-Manuf. Technol. 2016, 65, 737–760. [CrossRef]
+
+
+Sustainability 2020, 12, 929 20 of 22
+51. Telenko, C.; Seepersad, C.C. A comparative evaluation of energy consumption of selective laser sintering and injection molding of nylon parts. In Proceedings of the 22nd Annual International Solid Freeform Fabrication Symposium—An Additive Manufacturing Conference, Austin, TX, USA, 8–10 August 2011; pp. 41–54. 52. Baumers, M.; Tuck, C.; Wildman, R.; Ashcroft, I.; Rosamond, E.; Hague, R. Transparency built-in: Energy consumption and cost estimation for additive manufacturing. J. Ind. Ecol. 2013, 17, 418–431. [CrossRef] 53. Simon, M. When Copyright Can Kill: How 3D Printers Are Breaking the Barriers Between “Intellectual” Property and the Physical World. Pace Intellect. Prop. Sports Entertain. Law Forum 2013, 3, 60–97. 54. Wohlers, T. Wohlers Report 2014. 3D Printing and Additive Manufacturing State of the Industry. Available online: https://www.wohlersassociates.com/2014report.htm (accessed on 22 September 2019). 55. Brundtland, G.; Khalid, M.; Agnelli, S.; Al-Athel, S.; Chidzero, B.; Fadika, L.; Hauff, V.; Lang, I.; Shijun, M.; Morino de Botero, M.; et al. Our Common Future (‘Brundtland Report’); Oxford University Press: New York, NJ, USA, 1987; ISBN 9780192820808. 56. Mognol, P.; Lepicart, D.; Perry, N. Rapid prototyping: Energy and environment in the spotlight. Rapid Prototyp. J. 2006, 12, 26–34. [CrossRef] 57. Sreenivasan, R.; Bourell, D.L. Sustainability study in selective laser sintering—An energy perspective. In Proceedings of the Solid Freeform Fabrication Symposium, Austin, TX, USA, 3–5 August 2009; pp. 257–265. 58. Lindemann, C.; Jahnke, U.; Moi, M.; Koch, R. Analyzing product lifecycle costs for a better understanding of cost drivers in additive manufacturing. Int. Solid Free. Fabr. Symp. 2012, 23, 177–188. 59. Grant, M.J.; Booth, A. A typology of reviews: An analysis of 14 review types and associated methodologies. Health Inf. Libr. J. 2009, 26, 91–108. [CrossRef] [PubMed] 60. Kellens, K.; Mertens, R.; Paraskevas, D.; Dewulf, W.; Duflou, J.R. Environmental Impact of Additive Manufacturing Processes: Does AM Contribute to a More Sustainable Way of Part Manufacturing? Procedia CIRP 2017, 61, 582–587. [CrossRef] 61. Baumers, M.; Tuck, C.; Hague, R.; Ashcroft, I.; Wildman, R. A comparative study of metallic additive manufacturing power consumption. In Proceedings of the 21st International Solid Freeform Fabrication Symposium, Austin, TX, USA, 8–10 August 2010; pp. 278–288. 62. Le Bourhis, F.; Kerbrat, O.; Dembinski, L.; Hascoet, J.-Y.; Mognol, P. Predictive Model for Environmental Assessment in Additive Manufacturing Process. Procedia CIRP 2014, 15, 26–31. [CrossRef] 63. Balogun, V.A.; Kirkwood, N.D.; Mativenga, P.T. Direct electrical energy demand in fused deposition modelling. Procedia CIRP 2014, 15, 38–43. [CrossRef] 64. Bekker, A.C.M.; Verlinden, J.C. Life cycle assessment of wire + arc additive manufacturing compared to green sand casting and CNC milling in stainless steel. J. Clean. Prod. 2018, 177, 438–447. [CrossRef] 65. Ingarao, G.; Priarone, P.C.; Deng, Y.; Paraskevas, D. Environmental modelling of aluminium based components manufacturing routes: Additive manufacturing versus machining versus forming. J. Clean. Prod. 2018, 176, 261–275. [CrossRef] 66. Ma, J.; Harstvedt, J.D.; Dunaway, D.; Bian, L.; Jaradat, R. An exploratory investigation of Additively Manufactured Product life cycle sustainability assessment. J. Clean. Prod. 2018, 192, 55–70. [CrossRef] 67. Zhang, H.; Nagel, J.K.; Al-Qas, A.; Gibbons, E.; Lee, J.J.-Y. Additive Manufacturing with Bioinspired Sustainable Product Design: A Conceptual Model. Procedia Manuf. 2018, 26, 880–891. [CrossRef] 68. Paris, H.; Mokhtarian, H.; Coatanéa, E.; Museau, M.; Ituarte, I.F. Comparative environmental impacts of additive and subtractive manufacturing technologies. CIRP Ann.-Manuf. Technol. 2016, 65, 29–32. [CrossRef] 69. Faludi, J.; Van Sice, C.M.; Shi, Y.; Bower, J.; Brooks, O.M.K. Novel materials can radically improve whole-system environmental impacts of additive manufacturing. J. Clean. Prod. 2019, 212, 1580–1590. [CrossRef] 70. Rejeski, D.; Zhao, F.; Huang, Y. Research needs and recommendations on environmental implications of additive manufacturing. Addit. Manuf. 2018, 19, 21–28. [CrossRef] 71. Alexander, P.; Allen, S.; Dutta, D. Part orientation and build cost determination in layered manufacturing. Comput.-Aided Des. 1998, 30, 343–358. [CrossRef]
+72. Ruffo, M.; Tuck, C.; Hague, R. Cost estimation for rapid manufacturing—Laser sintering production for low to medium volumes. Proc. Inst. Mech. Eng. Part B J. Eng. Manuf. 2006, 220, 1417–1427. [CrossRef]
+73. Ruffo, M.; Hague, R. Cost estimation for rapid manufacturing’ simultaneous production of mixed components using laser sintering. Proc. Inst. Mech. Eng. Part B J. Eng. Manuf. 2007, 221. [CrossRef]
+74. Baumers, M.; Tuck, C.; Wildman, R.; Ashcroft, I.; Rosamond, E.; Hague, R. Combined build-time, energy consumption and cost estimation for direct metal laser sintering. Solid Free. Fabr. Symp. 2012, 932–944.
+
+
+Sustainability 2020, 12, 929 21 of 22
+75. Rickenbacher, L.; Spierings, A.; Wegener, K. An integrated cost-model for selective laser melting (SLM). Rapid Prototyp. J. 2013, 19, 208–214. [CrossRef] 76. Lindemann, C.; Jahnke, U.; Moi, M.; Koch, R. Impact and Influence Factors of Additive Manufacturing on Product Lifecycle Costs. Available online: https://www.tib.eu/en/search/id/BLCP%3ACN086176683/Impactand-Influence-Factors-of-Additive-Manufacturing/ (accessed on 27 January 2020). 77. Baumers, M.; Tuck, C.; Hague, R. Selective Heat Sintering Versus Laser Sintering: Comparison of Deposition Rate, Process Energy Consumption and Cost Performance. Available online: http://utw10945.utweb.utexas. edu/2015TOC (accessed on 27 January 2020). 78. Cunningham, C.R.; Wikshåland, S.; Xu, F.; Kemakolam, N.; Shokrani, A.; Dhokia, V.; Newman, S.T. Cost Modelling and Sensitivity Analysis of Wire and Arc Additive Manufacturing. Procedia Manuf. 2017, 11, 650–657. [CrossRef] 79. Yosofi, M.; Kerbrat, O.; Mognol, P. Framework to Combine Technical, Economic and Environmental Points of View of Additive Manufacturing Processes. Procedia CIRP 2018, 69, 118–123. [CrossRef] 80. Chan, S.L.; Lu, Y.; Wang, Y. Data-driven cost estimation for additive manufacturing in cybermanufacturing. J. Manuf. Syst. 2018, 46, 115–126. [CrossRef] 81. Matos, F.; Godina, R.; Jacinto, C.; Carvalho, H.; Ribeiro, I.; Peças, P. Additive Manufacturing: Exploring the Social Changes and Impacts. Sustainability 2019, 11, 3757. [CrossRef] 82. Gershenfeld, N. How to Make Almost Anything: The Digital Fabrication Revolution. Foreign Aff. 2012, 91, 43–57. 83. Pearce, J.M.; Blair, C.M.; Laciak, K.J.; Andrews, R.; Nosrat, A.; Zelenika-Zovko, I. 3-D Printing of Open Source Appropriate Technologies for Self-Directed Sustainable Development. J. Sustain. Dev. 2010, 3, 17–29. [CrossRef] 84. Dubois, A.; Gadde, L.-E. Systematic combining: An abductive approache to case research. J. Bus. Res. 2002, 55, 553–560. [CrossRef] 85. Myers, M.D. Qualitative Research in Business & Management; SAGE Publications Ltd.: London, UK, 2013; ISBN 9781412921657. 86. Prince, M.J.; Felder, R.M. Inductive Teaching and Learning Methods: Definitions, Comparisons, and Research Bases. J. Eng. Educ. 2006, 95, 123–138. [CrossRef] 87. Guinée, J.B.; Heijungs, R.; Huppes, G.; Zamagni, A.; Masoni, P.; Buonamici, R.; Ekvall, T.; Rydberg, T. Life cycle assessment: Past, present, and future. Environ. Sci. Technol. 2011, 45, 90–96. [CrossRef] 88. International Organization for Standardization (ISO). ISO 14040:2006—Environmental Management—Life Cycle Assessment—Principles and Framework; International Organization for Standardization: Geneva, Switzerland, 2006. 89. UNEP. Setac Life Cycle Initiative. Guidelines for Social Life Cycle Assessment of Products. Available online: http://www.fao.org/sustainable-food-value-chains/library/details/en/c/266243/// (accessed on 12 August 2019). 90. Rebitzer, G.; Hunkeler, D. Life cycle costing in LCM: Ambitions, opportunities, and limitations. Int. J. Life Cycle Assess. 2003, 8, 253–256. [CrossRef] 91. Krozer, Y. Life cycle costing for innovations in product chains. J. Clean. Prod. 2008, 16, 310–321. [CrossRef] 92. Shtub, J.F.; Bard, S.G. Project Management Processes, Methodologies, and Economics; Pearson Prentice Hall: Upper Saddle River, NJ, USA, 2005; ISBN 9780130413314. 93. Schmidt, A.; Götze, U.; Sygulla, R. Extending the scope of Material Flow Cost Accounting—Methodical refinements and use case. J. Clean. Prod. 2015, 108, 1320–1332. [CrossRef]
+94. Ciroth, A.; Franze, J. Franze LCA of an Ecolabeled Notebook Consideration of Social and Environmental Impacts Along the Entire Life Cycle; lulu.com: Berlin, Germany, 2011; ISBN 10: 1446600874.
+
+
+Sustainability 2020, 12, 929 22 of 22
+95. Goedkoop, M.; Heijungs, R.; De Schryver, A.; Struijs, J.; van Zelm, R. ReCiPe 2008. A LCIA method which comprises harmonised category indicators at the midpoint and the endpoint level. Report 1: Characterisation. Available online: https://www.rivm.nl/sites/default/files/2018-11/ReCiPe%202008_A%20lcia%20method% 20which%20comprises%20harmonised%20category%20indicators%20at%20the%20midpoint%20and% 20the%20endpoint%20level_First%20edition%20Characterisation.pdf (accessed on 27 January 2020).
+© 2020 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (http://creativecommons.org/licenses/by/4.0/).

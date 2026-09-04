@@ -1,0 +1,109 @@
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/239605778
+ANALYSIS OF REGEN COOLING IN ROCKET COMBUSTORS
+Article · January 2004
+CITATIONS
+3
+READS
+153
+3 authors, including:
+C. L. Merkle Purdue University West Lafayette
+323 PUBLICATIONS 6,567 CITATIONS
+SEE PROFILE
+Venkateswaran Sankaran Air Force Research Laboratory
+178 PUBLICATIONS 4,343 CITATIONS
+SEE PROFILE
+All content following this page was uploaded by C. L. Merkle on 16 July 2014.
+The user has requested enhancement of the downloaded file.
+
+
+ANALYSIS OF REGEN COOLING IN ROCKET COMBUSTORS
+C. L. Merkle, D.Li and V. Sankaran
+Purdue University West Lafayette IN
+ABSTRACT
+The use of detailed CFD modeling for the description of cooling in rocket chambers is discussed. The overall analysis includes a complete three-dimensional analysis of the flow in the regenerative cooling passages, conjugate heat transfer in the combustor walls, and the effects of film cooling on the inside chamber. The results in the present paper omit the effects of film cooling and include only regen cooling and the companion conjugate heat transfer. The hot combustion gases are replaced by a constant temperature wall boundary condition. Load balancing for parallel cluster computations is ensured by using singleblock unstructured grids for both fluids and solids, and by using a 'multiple physical zones' to account for differences in the number of equations. Validation of the method is achieved by comparing simple twedimensional solutions with analytical results. Representative results for cooling passages are presents showing the effects of heat conduction in the copper walls with tube aspect ratios of 1.5:l.
+INTRODUCTION
+Wall cooling is an important issue in rocket combustor design. The very high energy release rates that are characteristic of rocket engines place a large thermal load on the walls. It is common practice to use both regenerative cooling inside the walls and some type of cool fluid layer on the hot side of the walls. In cryogenic engines, supercritical hydrogen is generally used for regenerative cooling, and additional fuel is placed near the walls for protection on the hot side. Hydrogen is a very effective coolant, and at the supercritical pressures that are required in the combustor, there is no issue of dryout or boiling. In addition to preventing dryout, the supercritical nature of the coolant provides another important heat transfer benefit. As the fluid near the hot surface of the rectangular passage IS heated, it expands rapidly creating a longitudinal vortex inside the regen passage that effectively sweeps the high temperature fluid away from the wall and brings the remaining cold fluid to the walls. This vortex structure may be enhanced by, or cancelled by wall curvature.
+In the case of hydrocarbons, the cooling issues are considerably different. If a hydrocarbon is used for cooling, the coolant temperature must be kept low enough to preclude fuel cracking. Thus, protecting the coolant from overheating can take precedence over protecting the wall. This generally implies that fuel film cooling must also be used to keep the wall temperature lower. The lower thermal expansion coefficient of the hydrocarbon also reduces the effectiveness of the regenerative cooling, and leads to larger 'front-to-back' temperature gradients that may in turn represent a stronger limitation on fuel heating and result in a very different optimum coolant passage aspect ratio. Another possible heat transfer issue in hydrocarbon engines is the presence of radiation.
+In the present paper we use computational fluid dynamics to investigate the rocket combustor cooling characteristics in detail. The global scope of our investigation involves the regen fluid in the cooling passages, heat conduction in the combustor walls and the hot-side fluid dynamics, including the presence of fuel films from slot injection points (see Fig. 1). A specific issue of interest is the three dimensionalities that are introduced by film cooling slots and finite width coolant passages. Material degradation in the combustor will most likely be initiated at the worst-case conditions produced by these three-dimensional non-uniformities. The results in the present paper are limited to the coupled effects between flow in the regen passages and heat
+
+
+.4
+Figure 1. Sketch of global combustor cooling problem
+conduction in the wall in the presence of a hot combustion stream. In particular, film cooling is not considered and the hot gas is taken as a non-reacting fluid.
+COMPUTATIONAL MODEL
+The computational model is based on our in-house GEMS (General Equation and Mesh Solver) code [I-31. GEMS solves the conservation equations for an arbitrary material using a hybrid structuredlunstructured grid. The code divides the computational domain into one or more physical zones, each of which has a different number or different types of conservation equations. For example, in the present analysis, there are three zones: the regen cooling fluid which is handled as a general compressible fluid with a two equation turbulence model giving a total of seven conservations; the copper walls in which only the heat conduction equation is solved (a single conservation equation); and the hot combustion gases, which are here treated as a perfect gas that is again described by seven conservation equations. Other physics including the representation of the magneiic field and current density in MHD problems [4] have also been treated by the this multiple zone capability using the same code. The diverse physics in the various regions are handled by making the number and type of conservation equations an input quantity for each region. The unstructured grid format and the multiple physical zones allow efficient load balancing on parallel computer systems. The code is routinely run on a PC Cluster. Results in the present paper are based on using two to eight processors. Follow-on computations in progress use twenty to thirty processors.
+In addition to the conservation equations, constitutive relations are needed to close the system. Our equation formulation is based on the primitive variables (pressure, velocity and temperature) and corresponding constitutive relations are also given as general functions of pressure and temperature. Specifically, the knsity, enthalpy, viscosity and thermal conductivity are specified as arbitrary functions of temperature and pressure using algebraic or tabular functions. The effects of turbulence are incorporated through a k , o , twoequation, formulation.
+The code is widely used and has been validated against a variety of classical fluid dynamics solutions and/or measurements [5,6].
+
+
+T=300 I
+Hot Combustion
+1
+Gases
+Figure 2. Rocket combustor and cooling problem formulation. Computation based on 640 rectangular passages with water as cooling fluid, a copper combustor and a perfect gas to represent the hot gases. Left side shows overall geometry. Right side shows closeup of computational domain.
+RESULTS AND DISCUSSION
+The results in the present paper show some preliminary solutions for the conjugate heat transfer problem in a rocket combustor. The primary emphasis is on understanding the local temperature and flow fields and verifying that proper trends are obtained. A generic combustor geometry is shown in Fig. 2 along with the length of the coolant passage that is simulated. Because the present results are preliminary, we consider only a short, straight passage without curvature or turns. The fluid chosen as the working fluid in the regen passage is water. Our interest lies in simulating cooling by RP-1, and the almost incompressible character of the water should give a reasonably qualitative simulation. The problem envisioned involves a total of 640 passages equally spaced around the perimeter of the combustor. Applying symmetry conditions, an axisymmetric sector corresponding to 1/1280thof the combustor was used. A relatively course grid of about 350,000 cells was used in the present simulations. As boundary conditions for the computation, we took the temperature of the entering water as 300K and its velocity as 10 rnls. An adiabatic boundary condition was applied on the outside surface of the combustor. Upstream conditions for the ‘combustion’ gases were taken as 3000K and 500mls. as well as on the intermediate surface
+A three-dimensional schematic of the computational domain and the converged temperature profiles is shown in Fig. 3. In this figure, the flow goes from left to right through the passage. The lower red area represents the hot gas, while the upper blue area is the copper wall. The wall heating by the gas is clearly seen at the bottom of the copper.
+The temperature contours in a series of five slices across the domain at right angles to the passage are given in Fig. 4. The plane at the left
+Figure 3. Three-dimensionalschematic of computational domain and converged pro
+1 ’ shows the temperature contours at the upstream
+
+
+..
+end, x = 0. The succeeding plots (from left to right) correspond to x = 70, 30, 50, and 700 mm downstream. Because of the relatively short length of the tube, the effects of heating are not large, but several interesting phenomena appear. At the upstream end, the temperature in the copper increases rapidly with the maximum temperature being at the symmetry plane between the channels. With distance downstream, the temperature at this symmetry plane first decreases slightly before again starting to increase. This decrease is a direct reflection of the high conductivity of the copper (in relation to the conductivity of the cooling fluid) that conducts heat rapidly away from the copperlhot-gas interface. After this initial decrease, the fluid temperature in the copper walls again starts to increase (compare contours at 50 and 100 mm). The temperature in the thin layer of copper between the coolant and the hot gas also decreases with axial distance, as the boundary layer in the gas thickens. It is emphasized that these results represent conditions only at the entrance to the tube, and that increasing distance downstream will continue to show increased heating as the copper and coolant temperature continue to increase.
+I P l n I x=o : P i a l arx=to
+TEMP
+2W6 1710 1443 1212 1018 855 71B 603 , 506 425 35i 300
+C o w r
+HM CIS
+:Plal at X t l 00
+I
+I
+X=10 mm
+Figure 4. Temperature contours in gas, solid and coolant at five axial locations. Flow is into the plane of the paper. Hot gas is at the bottom,copper with embedded coolant passage at the top.
+Plan views of the same results are shown in Fig. 5 showing the temperature contours along the axial direction at four different spanwise locations. This first plot at the upper left shows the contours on the plane corresponding to the middle of the coolant passage. The plot at the lower left shows conditions on the plane of the coolant wall. The plot at the upper right corresponds to a plane that is halfway between the edge of the passage and the symmetry plane between two passages (.e..one fourth of the way from one passage wall to the next passage wall). The plot at the lower right is on the symmetry plane between two passages. The results in this view help to understand and interpret those from Fig. 4.
+The plot at the upper left (centerline of the passage) shows that the metal between the coolant and the hot gas is hottest at the upstream end, and then gets gradually cooled with downstream distance (as was noted in the cross-stream plots in Fig. 4). followed by the reversal noted above that will persist for longer distances. The temperature in the gas phase is nearly constant, but a thin boundary layer can be seen growing adjacent to the combustor surface. There is also an even thinner boundary layer on the lower surface of the coolant stream, h t
+
+
+overall, little effect of the heating is seen at the in the bulk of the coolant, though one Contour line is present to indicate the expected gradual heat-up in the fluid. Note that this coolant fluid exhibits only weak compressibility effects, and the vortex development that fosters cross-tube mixing is not present for a fluid with these physical characteristics. Finally, we note that the temperature in the copper above the coolant channel is completely insulated from the hot gas and is unaffected.
+The corresponding contour plots on the plane corresponding to the coolant channel I copper wall interface are given in the plot on the lower left. Here, we again see that the metal near the hot gas is slightly hotter than in the previous plane (as noted in the cross-stream planes above). The temperature contours on the wall of the coolant passage show clear indication of the increasing temperature in the downstream direction. The temperature contours inside the metal in the two plots on the right of Fig. 5 demonstrate the axial variation in temperature that was noted earlier. The temperatures are higher at the inlet, decrease with axial distance and then slowly increase again.
+Line plots of the temperature variation across the radial extent of the combustor wall are given in Fig. 6 for each of three different axial positions, x = 0, x = 50, and x = 100 mm. Figure 6a is for conditions at the center of the channel (v = 0). At the channel centerline, the temperature starts at 3000K inside the hot gas, and remains uniform till the metal surface between the hot gas and the coolant. Between the hot gas and the copper surface, the temperature drops discontinuously and then decreases approximately linearly across the copper before stepping nearly discontinuously to the 300K temperature of the fluid. Eyen at this initial location, ther is evidence ot a very thin boundary layer in the coolant. The temperature of the COOlaflt remains at 300K until very near the outer wall of the channel where another nearly discontinuous jump is seen to the 400K temperature of the copper.
+xz PI- .IY.4 a
+Y=O (Passage Center) Y=4 5
+Y=6 (Center of Metal)
+Y=3 (Wail of Passage)
+Figure 5. Temperature contours in the longitudinal plane showing contours at the passage center (upper left). the passage wall (lower left), onefourth of the way between two adjacent passages (upper right) and halfway between two passages (lower right). Coolant flow and hot gas flow are from left to right.
+
+
+The temperature distribution at x = 50 and x = l o 0 mm are also shown on Fig. 6a. At these downstream locations, the temperature distribution is qualitatively similar to that at x = 0, but contains important quantitative differences. The boundary layer in the hot gas is easily seen
+in these two distributions which lie nearly on top of each other. The temperature of the copper section between the hot gas and the wall has nearly disappeared so that this section of the wall is
+at nearly a constant temperature and is nearly 400K colder than at the entrance plane. The boundary layer on the hot side of the coolant still remains very thin (indicative of the very high Reynolds number in the channel), and nearly the entire coolant stream remains at 300K. There remains a thin boundary layer on the outer side of the coolant passage, and the copper temperature remains constant at the same level as at x = 0.
+A similar set of three temperature distributions is given in Fig. 6b which corresponds to
+the y = 3 plane that represents the coolant channel wall. At this y-location, the temperature distribution at the entry plane is nearly identical to that at the center of the passage. There is a very thin boundary layer in the hot gas, followed by a temperature gradient across the copper wall and a drop in temperature when the radial location corresponding to the inner edge of the coolant passage. Because this line profile is on the wall of the cavity, there is now a noticeable gradient across the passage followed by a jump to the original temperature of the copper outside the passage. The temperature contours at the two down-stream axial locations are quite similar to those at the channel symmetry plane although the 'boundary layer' at the inward edge of the coolant passage is considerably thicker.
+Conditions at the symmetry plane between two channels are shown in Fig. 6c. At the u p J L I ~CII~U,~LII~GE~ is now Oniy a Siinyit: juiiip in iiie iernperaiure proiiie at the not-gas i copper wall interface. The temperature profile from this interface to the outer radial extent of the simulation remains continuous, and decreases monotonically. With further distance downstream ( x = 50 and 100 mm) the boundary layer in the gas phase is seen to move slightly deeper into the hot gas, and the interface temperature decreases substantially from its upstream, inlet value. The temperature profile in the solid is some 400K lower at the latter two x-stations than at the upstream end, and the temperature gradient in the copper is much smaller.
+,,..,-.++..-- ^^^I IL^
+Figure 6a Figure 6b
+Figure 6. Temperature profiles across combustor wall for three different axial locations, x = 0, 50 and 100 mm. Figure 6a: Center plane of coolant passage; Figure 6b Plane containing wall of coolant passage; Figure 6c Symmetry plane between coolant passages.
+
+
+..
+SUMMARY AND CONCLUSIONS
+The detailed characteristics of the temperature contours and heat transfer characteristics of a regeneratively cooled combustor wall have been studied by means of CFD solutions. The results are based on a complete turbulent flow analysis of the three-dimensional flow inside the channel, the heat conduction inside the surrounding copper walls, and a perfect gas analysis of the hot gas flow inside the combustion chamber. The results show the local characteristics of the coupled solution in the region near the coolant entrance. In general, the temperature contours are considerably different from those that would be obtained by computing either the hot-gas side, the coolant side or the heat conduction in the solid separately. The results show that the metal temperatures are highest at the inlet plane, then decrease slightly as part of an entry length effect, and then to increase slowly with downstream distance. The corresponding heat transfer is highly three dimensional and there are significant tangential variations in the temperature inside the combustor wall.
+On-going work is addressed toward comparing the effects of highly compressible fluids such as hydrogen with relatively incompressible fluids such as RP-1 to assess the significance of the physical properties of the working fluid on the heat transfer. Additional efforts are under way to couple film cooling inside the chamber with the regen cooling analysis, or to simulate the effects of fuel biasing near the combustor walls.
+_c_ SIC X=lOO
+__cI
+Figure 6c. Caption above.
+E
+ACKNOWLEDGMENTS
+This work was accomplished under NASA Space Act Agreement NCC8-200.Our team thanks Brent Harper the COTR, and Garry Lyles and his staff for their technical inputs and encouragement..
+
+
+REFERENCES
+1. X. Zeng, S. Venkateswaran and C. L. Merkle, “Designing Dual-Time Algorithms for SteadyState Calculations”, AlAA Paper 2003-3707, 16th AlAA Computational Fluid Dynamics Conference
+2. Venkateswaran and C. L. Merkle, ‘Artficial Dissipation Control for Viscous and Unsteady Computations”, AlAA Paper 2003-3695, 16th AlAA Computational Fluid Dynamics Conference
+3. Venkateswaran, D. Li and C. L. Merkle, ‘Influence of Stagnation Regions on Preconditioned Solutions at Low Speeds’: AlAA Paper 2003-435, 41st Aerospace Sciences Meeting and Exhibit
+4. D. Li, D.Keefer, R. Rhodes and C. L. Merkle, “Analysis of MHD Generator Power Generation”, AlAA Paper 20035050, 39th AIAAIASMEISAEIASEE Joint Propulsion Conference and Exhibit, Huntsville, Alabama, July 2@23, 2003
+5. E. Groschel, G. Xia, H. Tsuei, and C. L. Merkle, “Characterization of Thrust Augmentation by Unsteady Ejectors’: AlAA Paper 20033970, 39th AIAAIASMEISAEIASEE Joint Propulsion Conference and Exhibit
+6. D. Li, G. Xia and C. L. Merkle, “Analysis of Real Fluid Flows in Converging Diverging
+Nozzles”, AlAA Paper 2003-4132, 33rd AlAA Fluid Dynamics Conference and Exhibit, Orlando, Florida, June 23-26- 2003
+View publication stats
